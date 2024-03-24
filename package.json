@@ -1,0 +1,22 @@
+{
+  "name": "raccoon-dcm4che-bridge",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["dcm4che", "DICOM"],
+  "files": [
+    "src/**/*"
+  ],
+  "author": "LI, CHIN-LIN",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^10.3.10",
+    "java-bridge": "^2.5.2"
+  },
+  "repository": {
+    "url": "https://github.com/Chinlinlee/raccoon-dcm4che-bridge"
+  }
+}
