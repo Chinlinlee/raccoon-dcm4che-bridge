@@ -1,4 +1,3 @@
-const { java } = require("./java-instance");
 const { File } = require("./wrapper/java/io/File");
 const { ElementDictionary } = require("./wrapper/org/dcm4che3/data/ElementDictionary");
 const { Tag } = require("./wrapper/org/dcm4che3/data/Tag");

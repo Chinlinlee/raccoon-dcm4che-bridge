@@ -1,4 +1,3 @@
-const { java } = require("./java-instance");
 const { File } = require("./wrapper/java/io/File");
 const { FileOutputStream } = require("./wrapper/java/io/FileOutputStream");
 const { TransferSyntaxType } = require("./wrapper/org/dcm4che3/imageio/codec/TransferSyntaxType");
