@@ -2,8 +2,8 @@ import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Option as org_apache_commons_cli_Option } from "./Option";
 import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { OptionGroup as org_apache_commons_cli_OptionGroup } from "./OptionGroup";
-import { List as java_util_List } from "./../../../../java/util/List";
 import { Collection as java_util_Collection } from "./../../../../java/util/Collection";
+import { List as java_util_List } from "./../../../../java/util/List";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
@@ -14,13 +14,23 @@ import { Class as java_lang_Class } from "./../../../../java/lang/Class";
  */
 export declare class OptionsClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Option'
      */
-    toString(): Promise<string>;
+    getOption(var0: string | null): Promise<org_apache_commons_cli_Option | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Option'
+     */
+    getOptionSync(var0: string | null): org_apache_commons_cli_Option | null;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toString(): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toStringAsync(): Promise<string>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -32,6 +42,20 @@ export declare class OptionsClass extends JavaClass {
      */
     hasOptionSync(var0: string | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Options'
+     */
+    addOption(var0: string | null, var1: java_lang_Boolean | boolean, var2: string | null): Promise<Options | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Options'
+     */
+    addOptionSync(var0: string | null, var1: java_lang_Boolean | boolean, var2: string | null): Options | null;
+    /**
      * @param var0 original type: 'org.apache.commons.cli.Option'
      * @return original return type: 'org.apache.commons.cli.Options'
      */
@@ -41,6 +65,18 @@ export declare class OptionsClass extends JavaClass {
      * @return original return type: 'org.apache.commons.cli.Options'
      */
     addOptionSync(var0: org_apache_commons_cli_Option | null): Options | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Options'
+     */
+    addOption(var0: string | null, var1: string | null): Promise<Options | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Options'
+     */
+    addOptionSync(var0: string | null, var1: string | null): Options | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -58,32 +94,6 @@ export declare class OptionsClass extends JavaClass {
      */
     addOptionSync(var0: string | null, var1: string | null, var2: java_lang_Boolean | boolean, var3: string | null): Options | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Options'
-     */
-    addOption(var0: string | null, var1: java_lang_Boolean | boolean, var2: string | null): Promise<Options | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Options'
-     */
-    addOptionSync(var0: string | null, var1: java_lang_Boolean | boolean, var2: string | null): Options | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Options'
-     */
-    addOption(var0: string | null, var1: string | null): Promise<Options | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Options'
-     */
-    addOptionSync(var0: string | null, var1: string | null): Options | null;
-    /**
      * @param var0 original type: 'org.apache.commons.cli.OptionGroup'
      * @return original return type: 'org.apache.commons.cli.Options'
      */
@@ -93,6 +103,14 @@ export declare class OptionsClass extends JavaClass {
      * @return original return type: 'org.apache.commons.cli.Options'
      */
     addOptionGroupSync(var0: org_apache_commons_cli_OptionGroup | null): Options | null;
+    /**
+     * @return original return type: 'java.util.Collection'
+     */
+    getOptions(): Promise<java_util_Collection | null>;
+    /**
+     * @return original return type: 'java.util.Collection'
+     */
+    getOptionsSync(): java_util_Collection | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -105,20 +123,12 @@ export declare class OptionsClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
-    hasShortOption(var0: string | null): Promise<boolean>;
+    hasLongOption(var0: string | null): Promise<boolean>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
-    hasShortOptionSync(var0: string | null): boolean;
-    /**
-     * @return original return type: 'java.util.Collection'
-     */
-    getOptions(): Promise<java_util_Collection | null>;
-    /**
-     * @return original return type: 'java.util.Collection'
-     */
-    getOptionsSync(): java_util_Collection | null;
+    hasLongOptionSync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.util.List'
@@ -129,6 +139,26 @@ export declare class OptionsClass extends JavaClass {
      * @return original return type: 'java.util.List'
      */
     getMatchingOptionsSync(var0: string | null): java_util_List | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    hasShortOption(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    hasShortOptionSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'org.apache.commons.cli.OptionGroup'
+     */
+    getOptionGroup(var0: org_apache_commons_cli_Option | null): Promise<org_apache_commons_cli_OptionGroup | null>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'org.apache.commons.cli.OptionGroup'
+     */
+    getOptionGroupSync(var0: org_apache_commons_cli_Option | null): org_apache_commons_cli_OptionGroup | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -145,36 +175,6 @@ export declare class OptionsClass extends JavaClass {
      * @return original return type: 'org.apache.commons.cli.Options'
      */
     addRequiredOptionSync(var0: string | null, var1: string | null, var2: java_lang_Boolean | boolean, var3: string | null): Options | null;
-    /**
-     * @param var0 original type: 'org.apache.commons.cli.Option'
-     * @return original return type: 'org.apache.commons.cli.OptionGroup'
-     */
-    getOptionGroup(var0: org_apache_commons_cli_Option | null): Promise<org_apache_commons_cli_OptionGroup | null>;
-    /**
-     * @param var0 original type: 'org.apache.commons.cli.Option'
-     * @return original return type: 'org.apache.commons.cli.OptionGroup'
-     */
-    getOptionGroupSync(var0: org_apache_commons_cli_Option | null): org_apache_commons_cli_OptionGroup | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Option'
-     */
-    getOption(var0: string | null): Promise<org_apache_commons_cli_Option | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Option'
-     */
-    getOptionSync(var0: string | null): org_apache_commons_cli_Option | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    hasLongOption(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    hasLongOptionSync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

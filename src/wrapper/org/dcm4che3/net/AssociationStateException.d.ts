@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { PrintStream as java_io_PrintStream } from "./../../../java/io/PrintStream";
 import { PrintWriter as java_io_PrintWriter } from "./../../../java/io/PrintWriter";
-import { Throwable as java_lang_Throwable } from "./../../../java/lang/Throwable";
+import { PrintStream as java_io_PrintStream } from "./../../../java/io/PrintStream";
 import { StackTraceElement as java_lang_StackTraceElement } from "./../../../java/lang/StackTraceElement";
+import { Throwable as java_lang_Throwable } from "./../../../java/lang/Throwable";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -22,6 +22,16 @@ export declare class AssociationStateExceptionClass extends JavaClass {
      */
     printStackTraceSync(): void;
     /**
+     * @param var0 original type: 'java.io.PrintWriter'
+     * @return original return type: 'void'
+     */
+    printStackTrace(var0: java_io_PrintWriter | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.PrintWriter'
+     * @return original return type: 'void'
+     */
+    printStackTraceSync(var0: java_io_PrintWriter | null): void;
+    /**
      * @param var0 original type: 'java.io.PrintStream'
      * @return original return type: 'void'
      */
@@ -32,15 +42,13 @@ export declare class AssociationStateExceptionClass extends JavaClass {
      */
     printStackTraceSync(var0: java_io_PrintStream | null): void;
     /**
-     * @param var0 original type: 'java.io.PrintWriter'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.StackTraceElement[]'
      */
-    printStackTrace(var0: java_io_PrintWriter | null): Promise<void>;
+    getStackTrace(): Promise<(java_lang_StackTraceElement | null)[] | null>;
     /**
-     * @param var0 original type: 'java.io.PrintWriter'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.StackTraceElement[]'
      */
-    printStackTraceSync(var0: java_io_PrintWriter | null): void;
+    getStackTraceSync(): (java_lang_StackTraceElement | null)[] | null;
     /**
      * @return original return type: 'java.lang.Throwable'
      */
@@ -70,11 +78,11 @@ export declare class AssociationStateExceptionClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -99,14 +107,6 @@ export declare class AssociationStateExceptionClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getLocalizedMessageSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.StackTraceElement[]'
-     */
-    getStackTrace(): Promise<(java_lang_StackTraceElement | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.StackTraceElement[]'
-     */
-    getStackTraceSync(): (java_lang_StackTraceElement | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.StackTraceElement[]'
      * @return original return type: 'void'

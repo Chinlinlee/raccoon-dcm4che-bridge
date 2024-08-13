@@ -15,4 +15,3 @@ class Property extends (0, java_bridge_1.importClass)('org.dcm4che3.util.Propert
 }
 exports.Property = Property;
 exports.default = Property;
-//# sourceMappingURL=Property.js.map

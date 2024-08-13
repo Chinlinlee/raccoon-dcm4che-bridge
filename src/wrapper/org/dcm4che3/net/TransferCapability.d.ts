@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
 import { ApplicationEntity as org_dcm4che3_net_ApplicationEntity } from "./ApplicationEntity";
-import { EnumSet as java_util_EnumSet } from "./../../../java/util/EnumSet";
-import { StorageOptions as org_dcm4che3_net_StorageOptions } from "./StorageOptions";
 import { TransferCapability$Role as org_dcm4che3_net_TransferCapability$Role } from "./TransferCapability$Role";
+import { StorageOptions as org_dcm4che3_net_StorageOptions } from "./StorageOptions";
+import { EnumSet as java_util_EnumSet } from "./../../../java/util/EnumSet";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -14,17 +14,31 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class TransferCapabilityClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.StringBuilder'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.String'
      */
-    promptTo(var0: java_lang_StringBuilder | null, var1: string | null): Promise<java_lang_StringBuilder | null>;
+    toString(): string;
     /**
-     * @param var0 original type: 'java.lang.StringBuilder'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.String'
      */
-    promptToSync(var0: java_lang_StringBuilder | null, var1: string | null): java_lang_StringBuilder | null;
+    toStringSync(): string;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getPreferredTransferSyntaxes(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getPreferredTransferSyntaxesSync(): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setPreferredTransferSyntaxes(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setPreferredTransferSyntaxesSync(var0: (string | null)[] | null): void;
     /**
      * @return original return type: 'java.lang.String[]'
      */
@@ -44,31 +58,17 @@ export declare class TransferCapabilityClass extends JavaClass {
      */
     containsTransferSyntaxSync(var0: string | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.StringBuilder'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.StringBuilder'
      */
-    toString(): Promise<string>;
+    promptTo(var0: java_lang_StringBuilder | null, var1: string | null): Promise<java_lang_StringBuilder | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.StringBuilder'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.StringBuilder'
      */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCommonName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCommonNameSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCommonName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCommonNameSync(var0: string | null): void;
+    promptToSync(var0: java_lang_StringBuilder | null, var1: string | null): java_lang_StringBuilder | null;
     /**
      * @param var0 original type: 'org.dcm4che3.net.ApplicationEntity'
      * @return original return type: 'void'
@@ -90,47 +90,23 @@ export declare class TransferCapabilityClass extends JavaClass {
      */
     selectTransferSyntaxSync(var0: (string | null)[] | null): string | null;
     /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getPreferredTransferSyntaxes(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getPreferredTransferSyntaxesSync(): (string | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setPreferredTransferSyntaxes(var0: (string | null)[] | null): Promise<void>;
+    setCommonName(var0: string | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String[]'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setPreferredTransferSyntaxesSync(var0: (string | null)[] | null): void;
-    /**
-     * @return original return type: 'java.util.EnumSet'
-     */
-    getQueryOptions(): Promise<java_util_EnumSet | null>;
-    /**
-     * @return original return type: 'java.util.EnumSet'
-     */
-    getQueryOptionsSync(): java_util_EnumSet | null;
-    /**
-     * @return original return type: 'org.dcm4che3.net.StorageOptions'
-     */
-    getStorageOptions(): Promise<org_dcm4che3_net_StorageOptions | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.StorageOptions'
-     */
-    getStorageOptionsSync(): org_dcm4che3_net_StorageOptions | null;
+    setCommonNameSync(var0: string | null): void;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getSopClass(): Promise<string | null>;
+    getCommonName(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getSopClassSync(): string | null;
+    getCommonNameSync(): string | null;
     /**
      * @return original return type: 'org.dcm4che3.net.TransferCapability$Role'
      */
@@ -140,25 +116,29 @@ export declare class TransferCapabilityClass extends JavaClass {
      */
     getRoleSync(): org_dcm4che3_net_TransferCapability$Role | null;
     /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.net.StorageOptions'
      */
-    setTransferSyntaxes(var0: (string | null)[] | null): Promise<void>;
+    getStorageOptions(): Promise<org_dcm4che3_net_StorageOptions | null>;
     /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.net.StorageOptions'
      */
-    setTransferSyntaxesSync(var0: (string | null)[] | null): void;
+    getStorageOptionsSync(): org_dcm4che3_net_StorageOptions | null;
     /**
-     * @param var0 original type: 'java.util.EnumSet'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.EnumSet'
      */
-    setQueryOptions(var0: java_util_EnumSet | null): Promise<void>;
+    getQueryOptions(): Promise<java_util_EnumSet | null>;
     /**
-     * @param var0 original type: 'java.util.EnumSet'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.EnumSet'
      */
-    setQueryOptionsSync(var0: java_util_EnumSet | null): void;
+    getQueryOptionsSync(): java_util_EnumSet | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSopClass(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSopClassSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -170,6 +150,26 @@ export declare class TransferCapabilityClass extends JavaClass {
      */
     setSopClassSync(var0: string | null): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.net.TransferCapability$Role'
+     * @return original return type: 'void'
+     */
+    setRole(var0: org_dcm4che3_net_TransferCapability$Role | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.TransferCapability$Role'
+     * @return original return type: 'void'
+     */
+    setRoleSync(var0: org_dcm4che3_net_TransferCapability$Role | null): void;
+    /**
+     * @param var0 original type: 'java.util.EnumSet'
+     * @return original return type: 'void'
+     */
+    setQueryOptions(var0: java_util_EnumSet | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.EnumSet'
+     * @return original return type: 'void'
+     */
+    setQueryOptionsSync(var0: java_util_EnumSet | null): void;
+    /**
      * @param var0 original type: 'org.dcm4che3.net.StorageOptions'
      * @return original return type: 'void'
      */
@@ -180,15 +180,15 @@ export declare class TransferCapabilityClass extends JavaClass {
      */
     setStorageOptionsSync(var0: org_dcm4che3_net_StorageOptions | null): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.TransferCapability$Role'
+     * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
      */
-    setRole(var0: org_dcm4che3_net_TransferCapability$Role | null): Promise<void>;
+    setTransferSyntaxes(var0: (string | null)[] | null): Promise<void>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.TransferCapability$Role'
+     * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
      */
-    setRoleSync(var0: org_dcm4che3_net_TransferCapability$Role | null): void;
+    setTransferSyntaxesSync(var0: (string | null)[] | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

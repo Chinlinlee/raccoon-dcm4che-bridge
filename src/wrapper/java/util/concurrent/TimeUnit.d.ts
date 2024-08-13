@@ -236,7 +236,7 @@ export declare class TimeUnitClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

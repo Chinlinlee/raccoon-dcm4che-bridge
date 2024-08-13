@@ -22,4 +22,3 @@ class Rectangle2D extends (0, java_bridge_1.importClass)('java.awt.geom.Rectangl
 }
 exports.Rectangle2D = Rectangle2D;
 exports.default = Rectangle2D;
-//# sourceMappingURL=Rectangle2D.js.map

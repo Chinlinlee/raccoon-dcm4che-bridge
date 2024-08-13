@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { SocketFactory as javax_net_SocketFactory } from "./../SocketFactory";
 import { Socket as java_net_Socket } from "./../../../java/net/Socket";
-import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { InputStream as java_io_InputStream } from "./../../../java/io/InputStream";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
+import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { InetAddress as java_net_InetAddress } from "./../../../java/net/InetAddress";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -13,6 +13,14 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class SSLSocketFactoryClass extends JavaClass {
+    /**
+     * @return original return type: 'javax.net.SocketFactory'
+     */
+    static getDefault(): Promise<javax_net_SocketFactory | null>;
+    /**
+     * @return original return type: 'javax.net.SocketFactory'
+     */
+    static getDefaultSync(): javax_net_SocketFactory | null;
     /**
      * @return original return type: 'java.lang.String[]'
      */
@@ -30,13 +38,19 @@ export declare class SSLSocketFactoryClass extends JavaClass {
      */
     getDefaultCipherSuitesSync(): (string | null)[] | null;
     /**
-     * @return original return type: 'javax.net.SocketFactory'
+     * @param var0 original type: 'java.net.Socket'
+     * @param var1 original type: 'java.io.InputStream'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.net.Socket'
      */
-    static getDefault(): Promise<javax_net_SocketFactory | null>;
+    createSocket(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): Promise<java_net_Socket | null>;
     /**
-     * @return original return type: 'javax.net.SocketFactory'
+     * @param var0 original type: 'java.net.Socket'
+     * @param var1 original type: 'java.io.InputStream'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.net.Socket'
      */
-    static getDefaultSync(): javax_net_SocketFactory | null;
+    createSocketSync(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): java_net_Socket | null;
     /**
      * @param var0 original type: 'java.net.Socket'
      * @param var1 original type: 'java.lang.String'
@@ -53,20 +67,6 @@ export declare class SSLSocketFactoryClass extends JavaClass {
      * @return original return type: 'java.net.Socket'
      */
     createSocketSync(var0: java_net_Socket | null, var1: string | null, var2: java_lang_Integer | number, var3: java_lang_Boolean | boolean): java_net_Socket | null;
-    /**
-     * @param var0 original type: 'java.net.Socket'
-     * @param var1 original type: 'java.io.InputStream'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.net.Socket'
-     */
-    createSocket(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): Promise<java_net_Socket | null>;
-    /**
-     * @param var0 original type: 'java.net.Socket'
-     * @param var1 original type: 'java.io.InputStream'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.net.Socket'
-     */
-    createSocketSync(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): java_net_Socket | null;
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
@@ -174,7 +174,7 @@ export declare class SSLSocketFactoryClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

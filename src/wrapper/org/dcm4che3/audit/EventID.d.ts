@@ -9,14 +9,6 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class EventIDClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDisplayName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDisplayNameSync(): string | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -29,22 +21,6 @@ export declare class EventIDClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    getCodeSystem(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCodeSystemSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCsdCode(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCsdCodeSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
     getCodeSystemName(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
@@ -54,12 +30,20 @@ export declare class EventIDClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setDisplayName(var0: string | null): Promise<void>;
+    setCsdCode(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setDisplayNameSync(var0: string | null): void;
+    setCsdCodeSync(var0: string | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCodeSystem(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCodeSystemSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -79,15 +63,23 @@ export declare class EventIDClass extends JavaClass {
      */
     getOriginalTextSync(): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    setCsdCode(var0: string | null): Promise<void>;
+    getCsdCode(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCsdCodeSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setCsdCodeSync(var0: string | null): void;
+    setDisplayName(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setDisplayNameSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -98,6 +90,14 @@ export declare class EventIDClass extends JavaClass {
      * @return original return type: 'void'
      */
     setOriginalTextSync(var0: string | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayNameSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -141,11 +141,11 @@ export declare class EventIDClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

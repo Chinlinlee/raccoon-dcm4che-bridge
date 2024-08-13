@@ -67,14 +67,6 @@ export declare class MonthClass extends JavaClass {
      */
     static readonly DECEMBER: MonthClass | null;
     /**
-     * @return original return type: 'java.time.Month'
-     */
-    firstMonthOfQuarter(): Promise<Month | null>;
-    /**
-     * @return original return type: 'java.time.Month'
-     */
-    firstMonthOfQuarterSync(): Month | null;
-    /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'int'
      */
@@ -261,6 +253,14 @@ export declare class MonthClass extends JavaClass {
      */
     firstDayOfYearSync(var0: java_lang_Boolean | boolean): number;
     /**
+     * @return original return type: 'java.time.Month'
+     */
+    firstMonthOfQuarter(): Promise<Month | null>;
+    /**
+     * @return original return type: 'java.time.Month'
+     */
+    firstMonthOfQuarterSync(): Month | null;
+    /**
      * @return original return type: 'java.lang.String'
      */
     name(): Promise<string | null>;
@@ -281,7 +281,7 @@ export declare class MonthClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

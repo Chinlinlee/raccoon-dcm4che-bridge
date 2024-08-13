@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { MathContext as java_math_MathContext } from "./MathContext";
-import { Double as java_lang_Double } from "./../lang/Double";
 import { Long as java_lang_Long } from "./../lang/Long";
+import { Double as java_lang_Double } from "./../lang/Double";
 import { RoundingMode as java_math_RoundingMode } from "./RoundingMode";
 import { BigInteger as java_math_BigInteger } from "./BigInteger";
 import { Class as java_lang_Class } from "./../lang/Class";
@@ -58,6 +58,16 @@ export declare class BigDecimalClass extends JavaClass {
     static readonly ROUND_UNNECESSARY: java_lang_Integer | number;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    add(var0: BigDecimalClass | null): Promise<BigDecimal | null>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    addSync(var0: BigDecimalClass | null): BigDecimal | null;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
      * @param var1 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -68,16 +78,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     addSync(var0: BigDecimalClass | null, var1: java_math_MathContext | null): BigDecimal | null;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    add(var0: BigDecimalClass | null): Promise<BigDecimal | null>;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    addSync(var0: BigDecimalClass | null): BigDecimal | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -91,7 +91,7 @@ export declare class BigDecimalClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -105,14 +105,6 @@ export declare class BigDecimalClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    abs(): Promise<BigDecimal | null>;
-    /**
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    absSync(): BigDecimal | null;
-    /**
      * @param var0 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -122,6 +114,14 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     absSync(var0: java_math_MathContext | null): BigDecimal | null;
+    /**
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    abs(): Promise<BigDecimal | null>;
+    /**
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    absSync(): BigDecimal | null;
     /**
      * @param var0 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal'
@@ -134,6 +134,16 @@ export declare class BigDecimalClass extends JavaClass {
     sqrtSync(var0: java_math_MathContext | null): BigDecimal | null;
     /**
      * @param var0 original type: 'int'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    pow(var0: java_lang_Integer | number): Promise<BigDecimal | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    powSync(var0: java_lang_Integer | number): BigDecimal | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -144,16 +154,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     powSync(var0: java_lang_Integer | number, var1: java_math_MathContext | null): BigDecimal | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    pow(var0: java_lang_Integer | number): Promise<BigDecimal | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    powSync(var0: java_lang_Integer | number): BigDecimal | null;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
      * @return original return type: 'java.math.BigDecimal'
@@ -183,16 +183,6 @@ export declare class BigDecimalClass extends JavaClass {
      */
     signumSync(): number;
     /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BigDecimalClass | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BigDecimalClass | null): number;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
@@ -202,6 +192,16 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'int'
      */
     compareToSync(var0: BasicOrJavaType | null): number;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BigDecimalClass | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BigDecimalClass | null): number;
     /**
      * @return original return type: 'int'
      */
@@ -235,16 +235,6 @@ export declare class BigDecimalClass extends JavaClass {
      */
     doubleValueSync(): number;
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    static valueOf(var0: java_lang_Double | number): Promise<BigDecimal | null>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    static valueOfSync(var0: java_lang_Double | number): BigDecimal | null;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -266,6 +256,16 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     static valueOfSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): BigDecimal | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    static valueOf(var0: java_lang_Double | number): Promise<BigDecimal | null>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    static valueOfSync(var0: java_lang_Double | number): BigDecimal | null;
     /**
      * @return original return type: 'int'
      */
@@ -363,6 +363,14 @@ export declare class BigDecimalClass extends JavaClass {
      */
     precisionSync(): number;
     /**
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    plus(): Promise<BigDecimal | null>;
+    /**
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    plusSync(): BigDecimal | null;
+    /**
      * @param var0 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -372,24 +380,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     plusSync(var0: java_math_MathContext | null): BigDecimal | null;
-    /**
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    plus(): Promise<BigDecimal | null>;
-    /**
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    plusSync(): BigDecimal | null;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    divide(var0: BigDecimalClass | null): Promise<BigDecimal | null>;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    divideSync(var0: BigDecimalClass | null): BigDecimal | null;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
      * @param var1 original type: 'java.math.MathContext'
@@ -402,30 +392,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     divideSync(var0: BigDecimalClass | null, var1: java_math_MathContext | null): BigDecimal | null;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    divide(var0: BigDecimalClass | null, var1: java_lang_Integer | number): Promise<BigDecimal | null>;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    divideSync(var0: BigDecimalClass | null, var1: java_lang_Integer | number): BigDecimal | null;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @param var1 original type: 'java.math.RoundingMode'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    divide(var0: BigDecimalClass | null, var1: java_math_RoundingMode | null): Promise<BigDecimal | null>;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @param var1 original type: 'java.math.RoundingMode'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    divideSync(var0: BigDecimalClass | null, var1: java_math_RoundingMode | null): BigDecimal | null;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
      * @param var1 original type: 'int'
@@ -443,6 +409,18 @@ export declare class BigDecimalClass extends JavaClass {
     /**
      * @param var0 original type: 'java.math.BigDecimal'
      * @param var1 original type: 'int'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    divide(var0: BigDecimalClass | null, var1: java_lang_Integer | number): Promise<BigDecimal | null>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    divideSync(var0: BigDecimalClass | null, var1: java_lang_Integer | number): BigDecimal | null;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var1 original type: 'int'
      * @param var2 original type: 'java.math.RoundingMode'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -454,6 +432,28 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     divideSync(var0: BigDecimalClass | null, var1: java_lang_Integer | number, var2: java_math_RoundingMode | null): BigDecimal | null;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    divide(var0: BigDecimalClass | null): Promise<BigDecimal | null>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    divideSync(var0: BigDecimalClass | null): BigDecimal | null;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var1 original type: 'java.math.RoundingMode'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    divide(var0: BigDecimalClass | null, var1: java_math_RoundingMode | null): Promise<BigDecimal | null>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var1 original type: 'java.math.RoundingMode'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    divideSync(var0: BigDecimalClass | null, var1: java_math_RoundingMode | null): BigDecimal | null;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
      * @return original return type: 'java.math.BigDecimal'
@@ -504,6 +504,16 @@ export declare class BigDecimalClass extends JavaClass {
     toBigIntegerExactSync(): java_math_BigInteger | null;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'java.math.BigDecimal[]'
+     */
+    divideAndRemainder(var0: BigDecimalClass | null): Promise<(BigDecimal | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'java.math.BigDecimal[]'
+     */
+    divideAndRemainderSync(var0: BigDecimalClass | null): (BigDecimal | null)[] | null;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
      * @param var1 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal[]'
      */
@@ -514,16 +524,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal[]'
      */
     divideAndRemainderSync(var0: BigDecimalClass | null, var1: java_math_MathContext | null): (BigDecimal | null)[] | null;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'java.math.BigDecimal[]'
-     */
-    divideAndRemainder(var0: BigDecimalClass | null): Promise<(BigDecimal | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.math.BigDecimal'
-     * @return original return type: 'java.math.BigDecimal[]'
-     */
-    divideAndRemainderSync(var0: BigDecimalClass | null): (BigDecimal | null)[] | null;
     /**
      * @param var0 original type: 'java.math.BigDecimal'
      * @return original return type: 'java.math.BigDecimal'
@@ -736,12 +736,6 @@ export declare class BigDecimalClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'java.math.BigInteger'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    static newInstanceAsync(var0: java_math_BigInteger | null, var1: java_lang_Integer | number): Promise<BigDecimal>;
-    /**
-     * @param var0 original type: 'java.math.BigInteger'
      * @param var1 original type: 'java.math.MathContext'
      * @return original return type: 'java.math.BigDecimal'
      */
@@ -751,6 +745,11 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     static newInstanceAsync(var0: java_math_BigInteger | null): Promise<BigDecimal>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    static newInstanceAsync(var0: java_lang_Long | bigint | number): Promise<BigDecimal>;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'java.math.MathContext'
@@ -762,11 +761,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     static newInstanceAsync(var0: java_lang_Double | number): Promise<BigDecimal>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.math.BigDecimal'
-     */
-    static newInstanceAsync(var0: java_lang_Long | bigint | number): Promise<BigDecimal>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.math.MathContext'
@@ -785,6 +779,12 @@ export declare class BigDecimalClass extends JavaClass {
      * @return original return type: 'java.math.BigDecimal'
      */
     static newInstanceAsync(var0: java_math_BigInteger | null, var1: java_lang_Integer | number, var2: java_math_MathContext | null): Promise<BigDecimal>;
+    /**
+     * @param var0 original type: 'java.math.BigInteger'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.math.BigDecimal'
+     */
+    static newInstanceAsync(var0: java_math_BigInteger | null, var1: java_lang_Integer | number): Promise<BigDecimal>;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.math.MathContext'
@@ -830,11 +830,6 @@ export declare class BigDecimalClass extends JavaClass {
     static newInstanceAsync(var0: (string | null)[] | null): Promise<BigDecimal>;
     /**
      * @param var0 original type: 'java.math.BigInteger'
-     * @param var1 original type: 'int'
-     */
-    constructor(var0: java_math_BigInteger | null, var1: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'java.math.BigInteger'
      * @param var1 original type: 'java.math.MathContext'
      */
     constructor(var0: java_math_BigInteger | null, var1: java_math_MathContext | null);
@@ -842,6 +837,10 @@ export declare class BigDecimalClass extends JavaClass {
      * @param var0 original type: 'java.math.BigInteger'
      */
     constructor(var0: java_math_BigInteger | null);
+    /**
+     * @param var0 original type: 'long'
+     */
+    constructor(var0: java_lang_Long | bigint | number);
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'java.math.MathContext'
@@ -851,10 +850,6 @@ export declare class BigDecimalClass extends JavaClass {
      * @param var0 original type: 'double'
      */
     constructor(var0: java_lang_Double | number);
-    /**
-     * @param var0 original type: 'long'
-     */
-    constructor(var0: java_lang_Long | bigint | number);
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.math.MathContext'
@@ -870,6 +865,11 @@ export declare class BigDecimalClass extends JavaClass {
      * @param var2 original type: 'java.math.MathContext'
      */
     constructor(var0: java_math_BigInteger | null, var1: java_lang_Integer | number, var2: java_math_MathContext | null);
+    /**
+     * @param var0 original type: 'java.math.BigInteger'
+     * @param var1 original type: 'int'
+     */
+    constructor(var0: java_math_BigInteger | null, var1: java_lang_Integer | number);
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.math.MathContext'

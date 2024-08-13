@@ -50,6 +50,14 @@ export declare class BasicCEchoSCPClass extends JavaClass {
      */
     onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
     /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSOPClasses(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSOPClassesSync(): (string | null)[] | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
      */
@@ -59,14 +67,6 @@ export declare class BasicCEchoSCPClass extends JavaClass {
      * @return original return type: 'void'
      */
     onCloseSync(var0: org_dcm4che3_net_Association | null): void;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClasses(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClassesSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -110,11 +110,11 @@ export declare class BasicCEchoSCPClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

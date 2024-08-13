@@ -1,11 +1,11 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { Channel as java_nio_channels_Channel } from "./../Channel";
 import { SocketChannel as java_nio_channels_SocketChannel } from "./../SocketChannel";
 import { ProtocolFamily as java_net_ProtocolFamily, ProtocolFamilyInterface as java_net_ProtocolFamilyInterface } from "./../../../net/ProtocolFamily";
 import { DatagramChannel as java_nio_channels_DatagramChannel } from "./../DatagramChannel";
 import { AbstractSelector as java_nio_channels_spi_AbstractSelector } from "./AbstractSelector";
 import { Pipe as java_nio_channels_Pipe } from "./../Pipe";
 import { ServerSocketChannel as java_nio_channels_ServerSocketChannel } from "./../ServerSocketChannel";
-import { Channel as java_nio_channels_Channel } from "./../Channel";
 import { Long as java_lang_Long } from "./../../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../../lang/Integer";
 import { Class as java_lang_Class } from "./../../../lang/Class";
@@ -16,13 +16,21 @@ import { Class as java_lang_Class } from "./../../../lang/Class";
  */
 export declare class SelectorProviderClass extends JavaClass {
     /**
-     * @return original return type: 'java.nio.channels.SocketChannel'
+     * @return original return type: 'java.nio.channels.spi.SelectorProvider'
      */
-    openSocketChannel(): Promise<java_nio_channels_SocketChannel | null>;
+    static provider(): Promise<SelectorProvider | null>;
     /**
-     * @return original return type: 'java.nio.channels.SocketChannel'
+     * @return original return type: 'java.nio.channels.spi.SelectorProvider'
      */
-    openSocketChannelSync(): java_nio_channels_SocketChannel | null;
+    static providerSync(): SelectorProvider | null;
+    /**
+     * @return original return type: 'java.nio.channels.Channel'
+     */
+    inheritedChannel(): Promise<java_nio_channels_Channel | null>;
+    /**
+     * @return original return type: 'java.nio.channels.Channel'
+     */
+    inheritedChannelSync(): java_nio_channels_Channel | null;
     /**
      * @param var0 original type: 'java.net.ProtocolFamily'
      * @return original return type: 'java.nio.channels.SocketChannel'
@@ -33,6 +41,14 @@ export declare class SelectorProviderClass extends JavaClass {
      * @return original return type: 'java.nio.channels.SocketChannel'
      */
     openSocketChannelSync(var0: java_net_ProtocolFamily | JavaInterfaceProxy<java_net_ProtocolFamilyInterface> | null): java_nio_channels_SocketChannel | null;
+    /**
+     * @return original return type: 'java.nio.channels.SocketChannel'
+     */
+    openSocketChannel(): Promise<java_nio_channels_SocketChannel | null>;
+    /**
+     * @return original return type: 'java.nio.channels.SocketChannel'
+     */
+    openSocketChannelSync(): java_nio_channels_SocketChannel | null;
     /**
      * @param var0 original type: 'java.net.ProtocolFamily'
      * @return original return type: 'java.nio.channels.DatagramChannel'
@@ -86,22 +102,6 @@ export declare class SelectorProviderClass extends JavaClass {
      */
     openServerSocketChannelSync(var0: java_net_ProtocolFamily | JavaInterfaceProxy<java_net_ProtocolFamilyInterface> | null): java_nio_channels_ServerSocketChannel | null;
     /**
-     * @return original return type: 'java.nio.channels.spi.SelectorProvider'
-     */
-    static provider(): Promise<SelectorProvider | null>;
-    /**
-     * @return original return type: 'java.nio.channels.spi.SelectorProvider'
-     */
-    static providerSync(): SelectorProvider | null;
-    /**
-     * @return original return type: 'java.nio.channels.Channel'
-     */
-    inheritedChannel(): Promise<java_nio_channels_Channel | null>;
-    /**
-     * @return original return type: 'java.nio.channels.Channel'
-     */
-    inheritedChannelSync(): java_nio_channels_Channel | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -144,7 +144,7 @@ export declare class SelectorProviderClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

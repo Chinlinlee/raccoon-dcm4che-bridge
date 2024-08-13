@@ -11,6 +11,14 @@ import { Class as java_lang_Class } from "./../../java/lang/Class";
  */
 export declare class ServerSocketFactoryClass extends JavaClass {
     /**
+     * @return original return type: 'javax.net.ServerSocketFactory'
+     */
+    static getDefault(): Promise<ServerSocketFactory | null>;
+    /**
+     * @return original return type: 'javax.net.ServerSocketFactory'
+     */
+    static getDefaultSync(): ServerSocketFactory | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.net.ServerSocket'
@@ -37,14 +45,6 @@ export declare class ServerSocketFactoryClass extends JavaClass {
      */
     createServerSocketSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_net_InetAddress | null): java_net_ServerSocket | null;
     /**
-     * @return original return type: 'java.net.ServerSocket'
-     */
-    createServerSocket(): Promise<java_net_ServerSocket | null>;
-    /**
-     * @return original return type: 'java.net.ServerSocket'
-     */
-    createServerSocketSync(): java_net_ServerSocket | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.net.ServerSocket'
      */
@@ -55,13 +55,13 @@ export declare class ServerSocketFactoryClass extends JavaClass {
      */
     createServerSocketSync(var0: java_lang_Integer | number): java_net_ServerSocket | null;
     /**
-     * @return original return type: 'javax.net.ServerSocketFactory'
+     * @return original return type: 'java.net.ServerSocket'
      */
-    static getDefault(): Promise<ServerSocketFactory | null>;
+    createServerSocket(): Promise<java_net_ServerSocket | null>;
     /**
-     * @return original return type: 'javax.net.ServerSocketFactory'
+     * @return original return type: 'java.net.ServerSocket'
      */
-    static getDefaultSync(): ServerSocketFactory | null;
+    createServerSocketSync(): java_net_ServerSocket | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -105,7 +105,7 @@ export declare class ServerSocketFactoryClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

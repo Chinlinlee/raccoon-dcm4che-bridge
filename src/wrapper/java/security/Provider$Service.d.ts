@@ -12,19 +12,9 @@ import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./
  */
 export declare class Provider$ServiceClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    supportsParameter(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    supportsParameterSync(var0: BasicOrJavaType | null): boolean;
-    /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -81,6 +71,16 @@ export declare class Provider$ServiceClass extends JavaClass {
      * @return original return type: 'java.security.Provider'
      */
     getProviderSync(): java_security_Provider | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    supportsParameter(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    supportsParameterSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

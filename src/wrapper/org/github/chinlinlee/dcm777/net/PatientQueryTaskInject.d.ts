@@ -8,11 +8,11 @@ export declare class PatientQueryTaskInjectClass extends JavaClass {
     /**
      * @return original return type: 'void'
      */
-    wrappedFindNextPatient(): Promise<void>;
+    getPatient(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    wrappedFindNextPatientSync(): void;
+    getPatientSync(): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -24,11 +24,11 @@ export declare class PatientQueryTaskInjectClass extends JavaClass {
     /**
      * @return original return type: 'void'
      */
-    getPatient(): Promise<void>;
+    wrappedFindNextPatient(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    getPatientSync(): void;
+    wrappedFindNextPatientSync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -45,7 +45,7 @@ export interface PatientQueryTaskInjectInterface {
     /**
      * @return original return type: 'void'
      */
-    wrappedFindNextPatient(): void;
+    getPatient(): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -53,7 +53,7 @@ export interface PatientQueryTaskInjectInterface {
     /**
      * @return original return type: 'void'
      */
-    getPatient(): void;
+    wrappedFindNextPatient(): void;
 }
 /**
  * Create a proxy for the {@link PatientQueryTaskInject} interface.

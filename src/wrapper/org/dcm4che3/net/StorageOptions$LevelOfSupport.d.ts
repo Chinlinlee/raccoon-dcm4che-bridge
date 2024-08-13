@@ -35,16 +35,6 @@ export declare class StorageOptions$LevelOfSupportClass extends JavaClass {
      */
     static valuesSync(): (StorageOptions$LevelOfSupport | null)[] | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
-     */
-    static valueOf(var0: java_lang_Integer | number): Promise<StorageOptions$LevelOfSupport | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
-     */
-    static valueOfSync(var0: java_lang_Integer | number): StorageOptions$LevelOfSupport | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
      */
@@ -54,6 +44,16 @@ export declare class StorageOptions$LevelOfSupportClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
      */
     static valueOfSync(var0: string | null): StorageOptions$LevelOfSupport | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
+     */
+    static valueOf(var0: java_lang_Integer | number): Promise<StorageOptions$LevelOfSupport | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
+     */
+    static valueOfSync(var0: java_lang_Integer | number): StorageOptions$LevelOfSupport | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.String'
@@ -87,7 +87,7 @@ export declare class StorageOptions$LevelOfSupportClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

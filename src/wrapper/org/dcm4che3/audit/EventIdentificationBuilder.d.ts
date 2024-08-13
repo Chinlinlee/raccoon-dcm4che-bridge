@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { EventIdentification as org_dcm4che3_audit_EventIdentification } from "./EventIdentification";
 import { EventTypeCode as org_dcm4che3_audit_EventTypeCode } from "./EventTypeCode";
+import { EventIdentification as org_dcm4che3_audit_EventIdentification } from "./EventIdentification";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -13,14 +13,6 @@ import { Calendar as java_util_Calendar } from "./../../../java/util/Calendar";
  */
 export declare class EventIdentificationBuilderClass extends JavaClass {
     /**
-     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
-     */
-    build(): Promise<org_dcm4che3_audit_EventIdentification | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
-     */
-    buildSync(): org_dcm4che3_audit_EventIdentification | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.audit.EventTypeCode[]'
      * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
      */
@@ -30,6 +22,14 @@ export declare class EventIdentificationBuilderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
      */
     eventTypeCodeSync(var0: (org_dcm4che3_audit_EventTypeCode | null)[] | null): EventIdentificationBuilder | null;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
+     */
+    build(): Promise<org_dcm4che3_audit_EventIdentification | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
+     */
+    buildSync(): org_dcm4che3_audit_EventIdentification | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
@@ -83,11 +83,11 @@ export declare class EventIdentificationBuilderClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

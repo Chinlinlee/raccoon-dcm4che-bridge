@@ -109,70 +109,6 @@ export declare class DimseClass extends JavaClass {
      */
     static readonly LOG: org_slf4j_Logger | JavaInterfaceProxy<org_slf4j_LoggerInterface> | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isRSP(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRSPSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRetrieveRQ(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRetrieveRQSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCService(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCServiceSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    commandFieldOfRSP(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    commandFieldOfRSPSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    commandField(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    commandFieldSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    tagOfSOPClassUID(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    tagOfSOPClassUIDSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRetrieveRSP(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRetrieveRSPSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    tagOfSOPInstanceUID(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    tagOfSOPInstanceUIDSync(): number;
-    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.lang.String'
@@ -199,7 +135,7 @@ export declare class DimseClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -213,16 +149,6 @@ export declare class DimseClass extends JavaClass {
      */
     static valuesSync(): (Dimse | null)[] | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.Dimse'
-     */
-    static valueOf(var0: string | null): Promise<Dimse | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.Dimse'
-     */
-    static valueOfSync(var0: string | null): Dimse | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.net.Dimse'
      */
@@ -232,6 +158,16 @@ export declare class DimseClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.Dimse'
      */
     static valueOfSync(var0: java_lang_Integer | number): Dimse | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.Dimse'
+     */
+    static valueOf(var0: string | null): Promise<Dimse | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.Dimse'
+     */
+    static valueOfSync(var0: string | null): Dimse | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.String'
@@ -244,6 +180,70 @@ export declare class DimseClass extends JavaClass {
      * @return original return type: 'java.lang.Enum'
      */
     static valueOfSync(var0: java_lang_Class | null, var1: string | null): java_lang_Enum | null;
+    /**
+     * @return original return type: 'int'
+     */
+    tagOfSOPInstanceUID(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    tagOfSOPInstanceUIDSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    commandField(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    commandFieldSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRSP(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRSPSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    tagOfSOPClassUID(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    tagOfSOPClassUIDSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRetrieveRQ(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRetrieveRQSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRetrieveRSP(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRetrieveRSPSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCService(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCServiceSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    commandFieldOfRSP(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    commandFieldOfRSPSync(): number;
     /**
      * @return original return type: 'java.lang.String'
      */

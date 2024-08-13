@@ -153,11 +153,11 @@ export declare class HashSetClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'boolean'

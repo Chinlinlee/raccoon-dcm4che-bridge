@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Iterator as java_util_Iterator } from "./../../../../java/util/Iterator";
-import { Properties as java_util_Properties } from "./../../../../java/util/Properties";
 import { Option as org_apache_commons_cli_Option } from "./Option";
 import { List as java_util_List } from "./../../../../java/util/List";
+import { Properties as java_util_Properties } from "./../../../../java/util/Properties";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
@@ -21,6 +21,16 @@ export declare class CommandLineClass extends JavaClass {
      */
     iteratorSync(): java_util_Iterator | null;
     /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'boolean'
+     */
+    hasOption(var0: org_apache_commons_cli_Option | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'boolean'
+     */
+    hasOptionSync(var0: org_apache_commons_cli_Option | null): boolean;
+    /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
      */
@@ -44,22 +54,54 @@ export declare class CommandLineClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
-    getParsedOptionValue(var0: string | null): Promise<BasicOrJavaType | null>;
+    getOptionObject(var0: string | null): Promise<BasicOrJavaType | null>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
-    getParsedOptionValueSync(var0: string | null): BasicOrJavaType | null;
+    getOptionObjectSync(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Object'
+     */
+    getOptionObject(var0: string | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Object'
+     */
+    getOptionObjectSync(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.lang.String'
+     */
+    getOptionValue(var0: org_apache_commons_cli_Option | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.lang.String'
+     */
+    getOptionValueSync(var0: org_apache_commons_cli_Option | null): string | null;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getOptionValue(var0: org_apache_commons_cli_Option | null, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getOptionValueSync(var0: org_apache_commons_cli_Option | null, var1: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.util.Properties'
+     * @return original return type: 'java.lang.String'
      */
-    getOptionProperties(var0: string | null): Promise<java_util_Properties | null>;
+    getOptionValue(var0: string | null): Promise<string | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.util.Properties'
+     * @return original return type: 'java.lang.String'
      */
-    getOptionPropertiesSync(var0: string | null): java_util_Properties | null;
+    getOptionValueSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -85,16 +127,6 @@ export declare class CommandLineClass extends JavaClass {
      */
     getOptionValueSync(var0: string | null, var1: string | null): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getOptionValue(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getOptionValueSync(var0: string | null): string | null;
-    /**
      * @param var0 original type: 'char'
      * @return original return type: 'java.lang.String'
      */
@@ -115,6 +147,16 @@ export declare class CommandLineClass extends JavaClass {
      */
     getOptionValuesSync(var0: string | null): (string | null)[] | null;
     /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.lang.String[]'
+     */
+    getOptionValues(var0: org_apache_commons_cli_Option | null): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.lang.String[]'
+     */
+    getOptionValuesSync(var0: org_apache_commons_cli_Option | null): (string | null)[] | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String[]'
      */
@@ -124,34 +166,6 @@ export declare class CommandLineClass extends JavaClass {
      * @return original return type: 'java.lang.String[]'
      */
     getOptionValuesSync(var0: string | null): (string | null)[] | null;
-    /**
-     * @return original return type: 'org.apache.commons.cli.Option[]'
-     */
-    getOptions(): Promise<(org_apache_commons_cli_Option | null)[] | null>;
-    /**
-     * @return original return type: 'org.apache.commons.cli.Option[]'
-     */
-    getOptionsSync(): (org_apache_commons_cli_Option | null)[] | null;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.lang.Object'
-     */
-    getOptionObject(var0: string | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.lang.Object'
-     */
-    getOptionObjectSync(var0: string | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Object'
-     */
-    getOptionObject(var0: string | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Object'
-     */
-    getOptionObjectSync(var0: string | null): BasicOrJavaType | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -168,6 +182,64 @@ export declare class CommandLineClass extends JavaClass {
      * @return original return type: 'java.lang.String[]'
      */
     getArgsSync(): (string | null)[] | null;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option[]'
+     */
+    getOptions(): Promise<(org_apache_commons_cli_Option | null)[] | null>;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option[]'
+     */
+    getOptionsSync(): (org_apache_commons_cli_Option | null)[] | null;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.util.Properties'
+     */
+    getOptionProperties(var0: org_apache_commons_cli_Option | null): Promise<java_util_Properties | null>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.util.Properties'
+     */
+    getOptionPropertiesSync(var0: org_apache_commons_cli_Option | null): java_util_Properties | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.util.Properties'
+     */
+    getOptionProperties(var0: string | null): Promise<java_util_Properties | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.util.Properties'
+     */
+    getOptionPropertiesSync(var0: string | null): java_util_Properties | null;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Object'
+     */
+    getParsedOptionValue(var0: string | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Object'
+     */
+    getParsedOptionValueSync(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Object'
+     */
+    getParsedOptionValue(var0: string | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Object'
+     */
+    getParsedOptionValueSync(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.lang.Object'
+     */
+    getParsedOptionValue(var0: org_apache_commons_cli_Option | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'org.apache.commons.cli.Option'
+     * @return original return type: 'java.lang.Object'
+     */
+    getParsedOptionValueSync(var0: org_apache_commons_cli_Option | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -211,11 +283,11 @@ export declare class CommandLineClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

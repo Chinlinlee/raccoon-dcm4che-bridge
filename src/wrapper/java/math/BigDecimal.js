@@ -15,4 +15,3 @@ class BigDecimal extends (0, java_bridge_1.importClass)('java.math.BigDecimal') 
 }
 exports.BigDecimal = BigDecimal;
 exports.default = BigDecimal;
-//# sourceMappingURL=BigDecimal.js.map

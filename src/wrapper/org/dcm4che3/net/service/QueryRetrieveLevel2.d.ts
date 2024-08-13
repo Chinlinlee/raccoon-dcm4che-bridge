@@ -1,10 +1,10 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
+import { VR as org_dcm4che3_data_VR } from "./../../data/VR";
 import { Enum as java_lang_Enum } from "./../../../../java/lang/Enum";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attributes";
 import { EnumSet as java_util_EnumSet } from "./../../../../java/util/EnumSet";
 import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
-import { VR as org_dcm4che3_data_VR } from "./../../data/VR";
 import { Optional as java_util_Optional } from "./../../../../java/util/Optional";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
@@ -30,6 +30,22 @@ export declare class QueryRetrieveLevel2Class extends JavaClass {
      * Original type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
      */
     static readonly IMAGE: QueryRetrieveLevel2Class | null;
+    /**
+     * @return original return type: 'int'
+     */
+    uniqueKey(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    uniqueKeySync(): number;
+    /**
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    vrOfUniqueKey(): Promise<org_dcm4che3_data_VR | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    vrOfUniqueKeySync(): org_dcm4che3_data_VR | null;
     /**
      * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2[]'
      */
@@ -64,16 +80,32 @@ export declare class QueryRetrieveLevel2Class extends JavaClass {
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.util.EnumSet'
      * @param var2 original type: 'boolean'
+     * @param var3 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
      */
-    static validateQueryIdentifier(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): Promise<QueryRetrieveLevel2 | null>;
+    static validateRetrieveIdentifier(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): Promise<QueryRetrieveLevel2 | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.util.EnumSet'
+     * @param var2 original type: 'boolean'
+     * @param var3 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
+     */
+    static validateRetrieveIdentifierSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): QueryRetrieveLevel2 | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.util.EnumSet'
      * @param var2 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
      */
-    static validateQueryIdentifierSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): QueryRetrieveLevel2 | null;
+    static validateRetrieveIdentifier(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): Promise<QueryRetrieveLevel2 | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.util.EnumSet'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
+     */
+    static validateRetrieveIdentifierSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): QueryRetrieveLevel2 | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.util.EnumSet'
@@ -96,46 +128,14 @@ export declare class QueryRetrieveLevel2Class extends JavaClass {
      * @param var2 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
      */
-    static validateRetrieveIdentifier(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): Promise<QueryRetrieveLevel2 | null>;
+    static validateQueryIdentifier(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): Promise<QueryRetrieveLevel2 | null>;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.util.EnumSet'
      * @param var2 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
      */
-    static validateRetrieveIdentifierSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): QueryRetrieveLevel2 | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.util.EnumSet'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
-     */
-    static validateRetrieveIdentifier(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): Promise<QueryRetrieveLevel2 | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.util.EnumSet'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
-     */
-    static validateRetrieveIdentifierSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): QueryRetrieveLevel2 | null;
-    /**
-     * @return original return type: 'int'
-     */
-    uniqueKey(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    uniqueKeySync(): number;
-    /**
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    vrOfUniqueKey(): Promise<org_dcm4che3_data_VR | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    vrOfUniqueKeySync(): org_dcm4che3_data_VR | null;
+    static validateQueryIdentifierSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_EnumSet | null, var2: java_lang_Boolean | boolean): QueryRetrieveLevel2 | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -157,11 +157,11 @@ export declare class QueryRetrieveLevel2Class extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

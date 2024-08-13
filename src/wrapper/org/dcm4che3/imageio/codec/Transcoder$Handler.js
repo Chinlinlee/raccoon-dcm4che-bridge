@@ -34,4 +34,3 @@ class Transcoder$Handler extends (0, java_bridge_1.importClass)('org.dcm4che3.im
 }
 exports.Transcoder$Handler = Transcoder$Handler;
 exports.default = Transcoder$Handler;
-//# sourceMappingURL=Transcoder$Handler.js.map

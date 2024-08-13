@@ -1,6 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { AuditMessage as org_dcm4che3_audit_AuditMessage } from "./../../../../dcm4che3/audit/AuditMessage";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
+import { AuditMessage as org_dcm4che3_audit_AuditMessage } from "./../../../../dcm4che3/audit/AuditMessage";
+import { Map as java_util_Map } from "./../../../../../java/util/Map";
+import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
@@ -12,14 +14,14 @@ import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 export declare class CommonClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static LoadLogConfig(var0: string | null): Promise<void>;
+    static getAttributesFromJsonString(var0: string | null): Promise<org_dcm4che3_data_Attributes | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static LoadLogConfigSync(var0: string | null): void;
+    static getAttributesFromJsonStringSync(var0: string | null): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
      * @return original return type: 'java.lang.String'
@@ -31,15 +33,25 @@ export declare class CommonClass extends JavaClass {
      */
     static convertAuditMessageToJsonStringSync(var0: org_dcm4che3_audit_AuditMessage | null): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'java.util.Map'
      */
-    static getAttributesFromJsonString(var0: string | null): Promise<org_dcm4che3_data_Attributes | null>;
+    static jsonGeneratorFactoryConfig(var0: java_lang_Boolean | boolean): Promise<java_util_Map | null>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'java.util.Map'
+     */
+    static jsonGeneratorFactoryConfigSync(var0: java_lang_Boolean | boolean): java_util_Map | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
      */
-    static getAttributesFromJsonStringSync(var0: string | null): org_dcm4che3_data_Attributes | null;
+    static LoadLogConfig(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    static LoadLogConfigSync(var0: string | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -83,11 +95,11 @@ export declare class CommonClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

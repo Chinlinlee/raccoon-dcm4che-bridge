@@ -22,4 +22,3 @@ class SampleModel extends (0, java_bridge_1.importClass)('java.awt.image.SampleM
 }
 exports.SampleModel = SampleModel;
 exports.default = SampleModel;
-//# sourceMappingURL=SampleModel.js.map

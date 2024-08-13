@@ -9,16 +9,6 @@ export declare class RetrieveAuditInjectClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setEventResult(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setEventResultSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     onDicomInstancesTransferred(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
@@ -35,6 +25,16 @@ export declare class RetrieveAuditInjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     onBeginTransferringDICOMInstancesSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setEventResult(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setEventResultSync(var0: string | null): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -52,17 +52,17 @@ export interface RetrieveAuditInjectInterface {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setEventResult(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     onDicomInstancesTransferred(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     onBeginTransferringDICOMInstances(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setEventResult(var0: string | null): void;
 }
 /**
  * Create a proxy for the {@link RetrieveAuditInject} interface.

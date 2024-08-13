@@ -36,32 +36,22 @@ export declare class AuditMessages$RoleIDCodeClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setOriginalText(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setOriginalTextSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setDisplayName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setDisplayNameSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     setCodeSystem(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     setCodeSystemSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCsdCode(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCsdCodeSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -76,36 +66,22 @@ export declare class AuditMessages$RoleIDCodeClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setCsdCode(var0: string | null): Promise<void>;
+    setDisplayName(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setCsdCodeSync(var0: string | null): void;
+    setDisplayNameSync(var0: string | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getDisplayName(): Promise<string | null>;
+    setOriginalText(var0: string | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getDisplayNameSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCsdCode(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCsdCodeSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getOriginalText(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getOriginalTextSync(): string | null;
+    setOriginalTextSync(var0: string | null): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -122,6 +98,30 @@ export declare class AuditMessages$RoleIDCodeClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getCodeSystemSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getOriginalText(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getOriginalTextSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCsdCode(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCsdCodeSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayNameSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -165,11 +165,11 @@ export declare class AuditMessages$RoleIDCodeClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

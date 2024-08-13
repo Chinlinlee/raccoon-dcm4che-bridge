@@ -1,5 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Attributes as org_dcm4che3_data_Attributes } from "./Attributes";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -20,6 +21,14 @@ export declare class IssuerClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toStringSync(): string;
+    /**
      * @param var0 original type: 'char'
      * @return original return type: 'java.lang.String'
      */
@@ -29,14 +38,6 @@ export declare class IssuerClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     toStringSync(var0: string | null): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): Promise<string>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
     /**
      * @return original return type: 'int'
      */
@@ -67,6 +68,20 @@ export declare class IssuerClass extends JavaClass {
     matchesSync(var0: IssuerClass | null): boolean;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Issuer'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'boolean'
+     */
+    matches(var0: IssuerClass | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Issuer'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'boolean'
+     */
+    matchesSync(var0: IssuerClass | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Issuer'
      * @return original return type: 'boolean'
      */
     merge(var0: IssuerClass | null): Promise<boolean>;
@@ -76,21 +91,13 @@ export declare class IssuerClass extends JavaClass {
      */
     mergeSync(var0: IssuerClass | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    getUniversalEntityID(): Promise<string | null>;
+    toItem(): Promise<org_dcm4che3_data_Attributes | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    getUniversalEntityIDSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUniversalEntityIDType(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUniversalEntityIDTypeSync(): string | null;
+    toItemSync(): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Issuer'
      * @return original return type: 'boolean'
@@ -114,6 +121,22 @@ export declare class IssuerClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
+    getUniversalEntityID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUniversalEntityIDSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUniversalEntityIDType(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUniversalEntityIDTypeSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
     getLocalNamespaceEntityID(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
@@ -129,14 +152,6 @@ export declare class IssuerClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     toIssuerOfPatientIDSync(var0: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    toItem(): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    toItemSync(): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

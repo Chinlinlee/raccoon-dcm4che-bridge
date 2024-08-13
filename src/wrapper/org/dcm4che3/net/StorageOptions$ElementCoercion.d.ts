@@ -31,16 +31,6 @@ export declare class StorageOptions$ElementCoercionClass extends JavaClass {
      */
     static valuesSync(): (StorageOptions$ElementCoercion | null)[] | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
-     */
-    static valueOf(var0: java_lang_Integer | number): Promise<StorageOptions$ElementCoercion | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
-     */
-    static valueOfSync(var0: java_lang_Integer | number): StorageOptions$ElementCoercion | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
      */
@@ -50,6 +40,16 @@ export declare class StorageOptions$ElementCoercionClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
      */
     static valueOfSync(var0: string | null): StorageOptions$ElementCoercion | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
+     */
+    static valueOf(var0: java_lang_Integer | number): Promise<StorageOptions$ElementCoercion | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
+     */
+    static valueOfSync(var0: java_lang_Integer | number): StorageOptions$ElementCoercion | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.String'
@@ -83,7 +83,7 @@ export declare class StorageOptions$ElementCoercionClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

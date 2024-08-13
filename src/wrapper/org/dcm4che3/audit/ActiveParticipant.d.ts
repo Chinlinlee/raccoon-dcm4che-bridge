@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { UserIDTypeCode as org_dcm4che3_audit_UserIDTypeCode } from "./UserIDTypeCode";
 import { MediaType as org_dcm4che3_audit_MediaType } from "./MediaType";
+import { UserIDTypeCode as org_dcm4che3_audit_UserIDTypeCode } from "./UserIDTypeCode";
 import { List as java_util_List } from "./../../../java/util/List";
 import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
@@ -13,121 +13,13 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class ActiveParticipantClass extends JavaClass {
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.UserIDTypeCode'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    setUserIDTypeCode(var0: org_dcm4che3_audit_UserIDTypeCode | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.UserIDTypeCode'
-     * @return original return type: 'void'
-     */
-    setUserIDTypeCodeSync(var0: org_dcm4che3_audit_UserIDTypeCode | null): void;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.UserIDTypeCode'
-     */
-    getUserIDTypeCode(): Promise<org_dcm4che3_audit_UserIDTypeCode | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.UserIDTypeCode'
-     */
-    getUserIDTypeCodeSync(): org_dcm4che3_audit_UserIDTypeCode | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.MediaType'
-     * @return original return type: 'void'
-     */
-    setMediaType(var0: org_dcm4che3_audit_MediaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.MediaType'
-     * @return original return type: 'void'
-     */
-    setMediaTypeSync(var0: org_dcm4che3_audit_MediaType | null): void;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getRoleIDCode(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getRoleIDCodeSync(): java_util_List | null;
+    getAlternativeUserID(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getUserID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserIDSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setUserID(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setUserIDSync(var0: string | null): void;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.MediaType'
-     */
-    getMediaType(): Promise<org_dcm4che3_audit_MediaType | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.MediaType'
-     */
-    getMediaTypeSync(): org_dcm4che3_audit_MediaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setUserTypeCode(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setUserTypeCodeSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setUserIsRequestor(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setUserIsRequestorSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserNameSync(): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isUserIsRequestor(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isUserIsRequestorSync(): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserTypeCode(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserTypeCodeSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setUserName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setUserNameSync(var0: string | null): void;
+    getAlternativeUserIDSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -139,13 +31,15 @@ export declare class ActiveParticipantClass extends JavaClass {
      */
     setAlternativeUserIDSync(var0: string | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getAlternativeUserID(): Promise<string | null>;
+    setNetworkAccessPointTypeCode(var0: string | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getAlternativeUserIDSync(): string | null;
+    setNetworkAccessPointTypeCodeSync(var0: string | null): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -173,15 +67,121 @@ export declare class ActiveParticipantClass extends JavaClass {
      */
     getNetworkAccessPointTypeCodeSync(): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.audit.MediaType'
      * @return original return type: 'void'
      */
-    setNetworkAccessPointTypeCode(var0: string | null): Promise<void>;
+    setMediaType(var0: org_dcm4che3_audit_MediaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.MediaType'
+     * @return original return type: 'void'
+     */
+    setMediaTypeSync(var0: org_dcm4che3_audit_MediaType | null): void;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.MediaType'
+     */
+    getMediaType(): Promise<org_dcm4che3_audit_MediaType | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.MediaType'
+     */
+    getMediaTypeSync(): org_dcm4che3_audit_MediaType | null;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.UserIDTypeCode'
+     */
+    getUserIDTypeCode(): Promise<org_dcm4che3_audit_UserIDTypeCode | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.UserIDTypeCode'
+     */
+    getUserIDTypeCodeSync(): org_dcm4che3_audit_UserIDTypeCode | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getRoleIDCode(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getRoleIDCodeSync(): java_util_List | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.UserIDTypeCode'
+     * @return original return type: 'void'
+     */
+    setUserIDTypeCode(var0: org_dcm4che3_audit_UserIDTypeCode | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.UserIDTypeCode'
+     * @return original return type: 'void'
+     */
+    setUserIDTypeCodeSync(var0: org_dcm4che3_audit_UserIDTypeCode | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserNameSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setNetworkAccessPointTypeCodeSync(var0: string | null): void;
+    setUserName(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setUserNameSync(var0: string | null): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isUserIsRequestor(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isUserIsRequestorSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setUserIsRequestor(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setUserIsRequestorSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserTypeCode(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserTypeCodeSync(): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setUserTypeCode(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setUserTypeCodeSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setUserID(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setUserIDSync(var0: string | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserIDSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -225,11 +225,11 @@ export declare class ActiveParticipantClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

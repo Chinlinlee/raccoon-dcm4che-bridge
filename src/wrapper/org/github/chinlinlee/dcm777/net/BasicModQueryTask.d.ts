@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
-import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
 import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
+import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
@@ -14,14 +14,6 @@ import { QueryTaskInject as org_github_chinlinlee_dcm777_net_QueryTaskInject, Qu
  */
 export declare class BasicModQueryTaskClass extends JavaClass {
     /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    nextMatch(): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    nextMatchSync(): org_dcm4che3_data_Attributes | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasMoreMatches(): Promise<boolean>;
@@ -30,6 +22,14 @@ export declare class BasicModQueryTaskClass extends JavaClass {
      */
     hasMoreMatchesSync(): boolean;
     /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    nextMatch(): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    nextMatchSync(): org_dcm4che3_data_Attributes | null;
+    /**
      * @return original return type: 'void'
      */
     run(): Promise<void>;
@@ -37,6 +37,16 @@ export declare class BasicModQueryTaskClass extends JavaClass {
      * @return original return type: 'void'
      */
     runSync(): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
+     */
+    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
+     */
+    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -55,16 +65,6 @@ export declare class BasicModQueryTaskClass extends JavaClass {
      * @return original return type: 'void'
      */
     setOptionalKeysNotSupportedSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -108,11 +108,11 @@ export declare class BasicModQueryTaskClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

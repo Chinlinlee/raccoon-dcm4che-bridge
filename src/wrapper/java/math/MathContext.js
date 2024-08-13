@@ -15,4 +15,3 @@ class MathContext extends (0, java_bridge_1.importClass)('java.math.MathContext'
 }
 exports.MathContext = MathContext;
 exports.default = MathContext;
-//# sourceMappingURL=MathContext.js.map

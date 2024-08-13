@@ -15,4 +15,3 @@ class Dcm2JpgExecutor extends (0, java_bridge_1.importClass)('org.github.chinlin
 }
 exports.Dcm2JpgExecutor = Dcm2JpgExecutor;
 exports.default = Dcm2JpgExecutor;
-//# sourceMappingURL=Dcm2JpgExecutor.js.map

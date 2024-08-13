@@ -22,4 +22,3 @@ class DataBuffer extends (0, java_bridge_1.importClass)('java.awt.image.DataBuff
 }
 exports.DataBuffer = DataBuffer;
 exports.default = DataBuffer;
-//# sourceMappingURL=DataBuffer.js.map

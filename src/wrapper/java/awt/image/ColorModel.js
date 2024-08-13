@@ -22,4 +22,3 @@ class ColorModel extends (0, java_bridge_1.importClass)('java.awt.image.ColorMod
 }
 exports.ColorModel = ColorModel;
 exports.default = ColorModel;
-//# sourceMappingURL=ColorModel.js.map

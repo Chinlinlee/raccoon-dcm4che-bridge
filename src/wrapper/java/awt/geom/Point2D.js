@@ -22,4 +22,3 @@ class Point2D extends (0, java_bridge_1.importClass)('java.awt.geom.Point2D') {
 }
 exports.Point2D = Point2D;
 exports.default = Point2D;
-//# sourceMappingURL=Point2D.js.map

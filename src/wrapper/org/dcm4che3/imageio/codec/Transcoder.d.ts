@@ -1,16 +1,16 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { ColorSpace as java_awt_color_ColorSpace } from "./../../../../java/awt/color/ColorSpace";
-import { DicomEncodingOptions as org_dcm4che3_io_DicomEncodingOptions } from "./../../io/DicomEncodingOptions";
-import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { DicomInputStream$IncludeBulkData as org_dcm4che3_io_DicomInputStream$IncludeBulkData } from "./../../io/DicomInputStream$IncludeBulkData";
-import { ImageDescriptor as org_dcm4che3_imageio_codec_ImageDescriptor } from "./ImageDescriptor";
 import { List as java_util_List } from "./../../../../java/util/List";
 import { Property as org_dcm4che3_util_Property } from "./../../util/Property";
+import { DicomEncodingOptions as org_dcm4che3_io_DicomEncodingOptions } from "./../../io/DicomEncodingOptions";
 import { Transcoder$Handler as org_dcm4che3_imageio_codec_Transcoder$Handler, Transcoder$HandlerInterface as org_dcm4che3_imageio_codec_Transcoder$HandlerInterface } from "./Transcoder$Handler";
+import { ImageDescriptor as org_dcm4che3_imageio_codec_ImageDescriptor } from "./ImageDescriptor";
+import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { BulkDataDescriptor as org_dcm4che3_io_BulkDataDescriptor, BulkDataDescriptorInterface as org_dcm4che3_io_BulkDataDescriptorInterface } from "./../../io/BulkDataDescriptor";
 import { File as java_io_File } from "./../../../../java/io/File";
-import { TransferSyntaxType as org_dcm4che3_imageio_codec_TransferSyntaxType } from "./TransferSyntaxType";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attributes";
+import { TransferSyntaxType as org_dcm4che3_imageio_codec_TransferSyntaxType } from "./TransferSyntaxType";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
@@ -35,34 +35,6 @@ export declare class TranscoderClass extends JavaClass {
      */
     closeSync(): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
-     * @return original return type: 'void'
-     */
-    setEncodingOptions(var0: org_dcm4che3_io_DicomEncodingOptions | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
-     * @return original return type: 'void'
-     */
-    setEncodingOptionsSync(var0: org_dcm4che3_io_DicomEncodingOptions | null): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setIncludeImplementationVersionName(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setIncludeImplementationVersionNameSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCloseInputStream(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCloseInputStreamSync(): boolean;
-    /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream$IncludeBulkData'
      * @return original return type: 'void'
      */
@@ -72,22 +44,6 @@ export declare class TranscoderClass extends JavaClass {
      * @return original return type: 'void'
      */
     setIncludeBulkDataSync(var0: org_dcm4che3_io_DicomInputStream$IncludeBulkData | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNullifyPixelData(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNullifyPixelDataSync(): boolean;
-    /**
-     * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
-     */
-    getImageDescriptor(): Promise<org_dcm4che3_imageio_codec_ImageDescriptor | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
-     */
-    getImageDescriptorSync(): org_dcm4che3_imageio_codec_ImageDescriptor | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -107,6 +63,32 @@ export declare class TranscoderClass extends JavaClass {
      */
     setCompressParamsSync(var0: (org_dcm4che3_util_Property | null)[] | null): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
+     * @return original return type: 'void'
+     */
+    setEncodingOptions(var0: org_dcm4che3_io_DicomEncodingOptions | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
+     * @return original return type: 'void'
+     */
+    setEncodingOptionsSync(var0: org_dcm4che3_io_DicomEncodingOptions | null): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isNullifyPixelData(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isNullifyPixelDataSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCloseInputStream(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCloseInputStreamSync(): boolean;
+    /**
      * @param var0 original type: 'org.dcm4che3.imageio.codec.Transcoder$Handler'
      * @return original return type: 'void'
      */
@@ -117,33 +99,23 @@ export declare class TranscoderClass extends JavaClass {
      */
     transcodeSync(var0: org_dcm4che3_imageio_codec_Transcoder$Handler | JavaInterfaceProxy<org_dcm4che3_imageio_codec_Transcoder$HandlerInterface> | null): void;
     /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
      */
-    setCloseOutputStream(var0: java_lang_Boolean | boolean): Promise<void>;
+    getImageDescriptor(): Promise<org_dcm4che3_imageio_codec_ImageDescriptor | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
+     */
+    getImageDescriptorSync(): org_dcm4che3_imageio_codec_ImageDescriptor | null;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
-    setCloseOutputStreamSync(var0: java_lang_Boolean | boolean): void;
+    setIncludeImplementationVersionName(var0: java_lang_Boolean | boolean): Promise<void>;
     /**
-     * @param var0 original type: 'org.dcm4che3.io.BulkDataDescriptor'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
-    setBulkDataDescriptor(var0: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.BulkDataDescriptor'
-     * @return original return type: 'void'
-     */
-    setBulkDataDescriptorSync(var0: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDeleteBulkDataFiles(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDeleteBulkDataFilesSync(): boolean;
+    setIncludeImplementationVersionNameSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -155,6 +127,16 @@ export declare class TranscoderClass extends JavaClass {
      */
     setConcatenateBulkDataFilesSync(var0: java_lang_Boolean | boolean): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.io.BulkDataDescriptor'
+     * @return original return type: 'void'
+     */
+    setBulkDataDescriptor(var0: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.BulkDataDescriptor'
+     * @return original return type: 'void'
+     */
+    setBulkDataDescriptorSync(var0: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null): void;
+    /**
      * @param var0 original type: 'java.io.File'
      * @return original return type: 'void'
      */
@@ -164,16 +146,6 @@ export declare class TranscoderClass extends JavaClass {
      * @return original return type: 'void'
      */
     setBulkDataDirectorySync(var0: java_io_File | null): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setCloseInputStream(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setCloseInputStreamSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -186,12 +158,82 @@ export declare class TranscoderClass extends JavaClass {
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
+    setCloseOutputStream(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setCloseOutputStreamSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
     setDeleteBulkDataFiles(var0: java_lang_Boolean | boolean): Promise<void>;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
     setDeleteBulkDataFilesSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setRetainFileMetaInformation(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setRetainFileMetaInformationSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isIncludeImplementationVersionName(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isIncludeImplementationVersionNameSync(): boolean;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getFileMetaInformation(): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getFileMetaInformationSync(): org_dcm4che3_data_Attributes | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDeleteBulkDataFiles(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDeleteBulkDataFilesSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setNullifyPixelData(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setNullifyPixelDataSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSourceTransferSyntax(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSourceTransferSyntaxSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isIncludeFileMetaInformation(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isIncludeFileMetaInformationSync(): boolean;
     /**
      * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
      */
@@ -200,6 +242,24 @@ export declare class TranscoderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
      */
     getSourceTransferSyntaxTypeSync(): org_dcm4che3_imageio_codec_TransferSyntaxType | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDestinationTransferSyntax(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDestinationTransferSyntaxSync(): string | null;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setIncludeFileMetaInformation(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setIncludeFileMetaInformationSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -221,55 +281,11 @@ export declare class TranscoderClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    getSourceTransferSyntax(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSourceTransferSyntaxSync(): string | null;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setNullifyPixelData(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setNullifyPixelDataSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
     getPixelDataBulkDataURI(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
     getPixelDataBulkDataURISync(): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isIncludeFileMetaInformation(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isIncludeFileMetaInformationSync(): boolean;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getFileMetaInformation(): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getFileMetaInformationSync(): org_dcm4che3_data_Attributes | null;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setIncludeFileMetaInformation(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setIncludeFileMetaInformationSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -281,31 +297,15 @@ export declare class TranscoderClass extends JavaClass {
      */
     setPixelDataBulkDataURISync(var0: string | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
      */
-    getDestinationTransferSyntax(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDestinationTransferSyntaxSync(): string | null;
+    setCloseInputStream(var0: java_lang_Boolean | boolean): Promise<void>;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
-    setRetainFileMetaInformation(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRetainFileMetaInformationSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isIncludeImplementationVersionName(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isIncludeImplementationVersionNameSync(): boolean;
+    setCloseInputStreamSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -349,7 +349,7 @@ export declare class TranscoderClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

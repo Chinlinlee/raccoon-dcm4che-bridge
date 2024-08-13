@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../../../java/util/List";
-import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
-import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
+import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
+import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
+import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../../../java/util/List";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
@@ -15,6 +15,66 @@ import { RetrieveAuditInject as org_github_chinlinlee_dcm777_dcmqrscp_RetrieveAu
  * You should probably not edit this.
  */
 export declare class RetrieveTaskImplClass extends JavaClass {
+    /**
+     * @return original return type: 'int'
+     */
+    getStatus(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getStatusSync(): number;
+    /**
+     * @return original return type: 'void'
+     */
+    run(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    runSync(): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSendPendingRSPInterval(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSendPendingRSPIntervalSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getRequestAssociation(): Promise<org_dcm4che3_net_Association | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getRequestAssociationSync(): org_dcm4che3_net_Association | null;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getStoreAssociation(): Promise<org_dcm4che3_net_Association | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getStoreAssociationSync(): org_dcm4che3_net_Association | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCanceled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCanceledSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setSendPendingRSP(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setSendPendingRSPSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @return original return type: 'void'
      */
@@ -42,29 +102,19 @@ export declare class RetrieveTaskImplClass extends JavaClass {
     /**
      * @return original return type: 'java.util.List'
      */
+    getWarning(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getWarningSync(): java_util_List | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
     getFailed(): Promise<java_util_List | null>;
     /**
      * @return original return type: 'java.util.List'
      */
     getFailedSync(): java_util_List | null;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setSendPendingRSP(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setSendPendingRSPSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCanceled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCanceledSync(): boolean;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
@@ -75,56 +125,6 @@ export declare class RetrieveTaskImplClass extends JavaClass {
      * @return original return type: 'void'
      */
     onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getWarning(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getWarningSync(): java_util_List | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getStatus(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getStatusSync(): number;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getRequestAssociation(): Promise<org_dcm4che3_net_Association | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getRequestAssociationSync(): org_dcm4che3_net_Association | null;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getStoreAssociation(): Promise<org_dcm4che3_net_Association | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getStoreAssociationSync(): org_dcm4che3_net_Association | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setSendPendingRSPInterval(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setSendPendingRSPIntervalSync(var0: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'void'
-     */
-    run(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    runSync(): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -168,11 +168,11 @@ export declare class RetrieveTaskImplClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

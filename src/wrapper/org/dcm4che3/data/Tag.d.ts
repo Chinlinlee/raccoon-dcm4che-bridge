@@ -419,6 +419,10 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly SyntheticData: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly StudyDate: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -1039,6 +1043,10 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly ReferencedInstancesBySOPClassSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly ReferencedSeriesSequence: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -1144,6 +1152,10 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly OtherFailuresSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly FailedStudySequence: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -1719,6 +1731,14 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IssuerOfClinicalTrialProtocolID: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly OtherClinicalTrialProtocolIDsSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly ClinicalTrialSiteID: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -1727,11 +1747,23 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IssuerOfClinicalTrialSiteID: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly ClinicalTrialSubjectID: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
+    static readonly IssuerOfClinicalTrialSubjectID: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly ClinicalTrialSubjectReadingID: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IssuerOfClinicalTrialSubjectReadingID: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -1752,6 +1784,10 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly ClinicalTrialTimePointTypeCodeSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IssuerOfClinicalTrialTimePointID: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -1776,6 +1812,10 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly ClinicalTrialSeriesDescription: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IssuerOfClinicalTrialSeriesID: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -3824,6 +3864,14 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly CalibrationDateTime: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly DateOfManufacture: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly DateOfInstallation: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -6295,6 +6343,90 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly PhotoacousticExcitationCharacteristicsSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ExcitationSpectralWidth: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ExcitationEnergy: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ExcitationPulseDuration: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ExcitationWavelengthSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ExcitationWavelength: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IlluminationTranslationFlag: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly AcousticCouplingMediumFlag: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly AcousticCouplingMediumCodeSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly AcousticCouplingMediumTemperature: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly TransducerResponseSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly CenterFrequency: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly FractionalBandwidth: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly LowerCutoffFrequency: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly UpperCutoffFrequency: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly TransducerTechnologySequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly SoundSpeedCorrectionMechanismCodeSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ObjectSoundSpeed: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly AcousticCouplingMediumSoundSpeed: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly PhotoacousticImageFrameTypeSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ImageDataTypeCodeSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly ReferenceLocationLabel: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -7088,6 +7220,10 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly DegreeOfDilation: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly VertexDistance: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -8724,6 +8860,10 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly ModalityLUTSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly VariableModalityLUTSequence: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -11536,6 +11676,22 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly ObjectiveLensNumericalAperture: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ConfocalMode: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly TissueLocation: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ConfocalMicroscopyImageFrameTypeSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ImageAcquisitionDepth: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -15843,6 +15999,14 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly ROIDateTime: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ROIObservationDateTime: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly RTRelatedROISequence: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -15896,6 +16060,26 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly SourcePixelPlanesCharacteristicsSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly SourceSeriesSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly SourceSeriesInformationSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ROICreatorSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ROIInterpreterSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly ROIObservationContextCodeSequence: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -18563,6 +18747,10 @@ export declare class TagClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly DoseValueInterpretation: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly TreatmentSessionUID: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -19028,6 +19216,10 @@ export declare class TagClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly BeamHoldOriginatingDeviceSequence: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly BeamHoldTransitionTriggerSource: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -20695,11 +20887,11 @@ export declare class TagClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

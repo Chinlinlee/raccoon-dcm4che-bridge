@@ -81,6 +81,14 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
+    static readonly PROMETHEUS: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly GRAFANA: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
     static readonly XDS_RS: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
@@ -149,7 +157,7 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

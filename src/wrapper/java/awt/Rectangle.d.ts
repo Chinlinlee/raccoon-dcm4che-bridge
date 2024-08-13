@@ -126,7 +126,7 @@ export declare class RectangleClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -344,22 +344,6 @@ export declare class RectangleClass extends JavaClass {
     /**
      * @return original return type: 'double'
      */
-    getHeight(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getHeightSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
-    getWidth(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getWidthSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
     getX(): Promise<number>;
     /**
      * @return original return type: 'double'
@@ -399,16 +383,6 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'void'
      */
     setRectSync(var0: java_awt_geom_Rectangle2D | null): void;
-    /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    intersection(var0: RectangleClass | null): Promise<Rectangle | null>;
-    /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    intersectionSync(var0: RectangleClass | null): Rectangle | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -452,18 +426,6 @@ export declare class RectangleClass extends JavaClass {
      */
     reshapeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setLocation(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setLocationSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.awt.Point'
      * @return original return type: 'void'
      */
@@ -476,6 +438,18 @@ export declare class RectangleClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setLocation(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setLocationSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @return original return type: 'boolean'
      */
     inside(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<boolean>;
@@ -485,6 +459,16 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     insideSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    intersection(var0: RectangleClass | null): Promise<Rectangle | null>;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    intersectionSync(var0: RectangleClass | null): Rectangle | null;
     /**
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
@@ -583,6 +567,22 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
     createUnionSync(var0: java_awt_geom_Rectangle2D | null): java_awt_geom_Rectangle2D | null;
+    /**
+     * @return original return type: 'double'
+     */
+    getHeight(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getHeightSync(): number;
+    /**
+     * @return original return type: 'double'
+     */
+    getWidth(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getWidthSync(): number;
     /**
      * @return original return type: 'int'
      */

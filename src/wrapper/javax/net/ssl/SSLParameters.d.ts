@@ -271,7 +271,7 @@ export declare class SSLParametersClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -310,6 +310,12 @@ export declare class SSLParametersClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.String[]'
+     * @return original return type: 'javax.net.ssl.SSLParameters'
+     */
+    static newInstanceAsync(var0: (string | null)[] | null, var1: (string | null)[] | null): Promise<SSLParameters>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'javax.net.ssl.SSLParameters'
      */
     static newInstanceAsync(var0: (string | null)[] | null): Promise<SSLParameters>;
@@ -320,19 +326,13 @@ export declare class SSLParametersClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String[]'
      * @param var1 original type: 'java.lang.String[]'
-     * @return original return type: 'javax.net.ssl.SSLParameters'
      */
-    static newInstanceAsync(var0: (string | null)[] | null, var1: (string | null)[] | null): Promise<SSLParameters>;
+    constructor(var0: (string | null)[] | null, var1: (string | null)[] | null);
     /**
      * @param var0 original type: 'java.lang.String[]'
      */
     constructor(var0: (string | null)[] | null);
     constructor();
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @param var1 original type: 'java.lang.String[]'
-     */
-    constructor(var0: (string | null)[] | null, var1: (string | null)[] | null);
 }
 declare const SSLParameters_base: typeof SSLParametersClass;
 /**

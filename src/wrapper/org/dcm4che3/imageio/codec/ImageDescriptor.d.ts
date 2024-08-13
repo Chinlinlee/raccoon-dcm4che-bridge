@@ -29,35 +29,11 @@ export declare class ImageDescriptorClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    getColumns(): Promise<number>;
+    getBitsAllocated(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    getColumnsSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getRows(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getRowsSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isBanded(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isBandedSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getFrameLength(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getFrameLengthSync(): number;
+    getBitsAllocatedSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -69,27 +45,11 @@ export declare class ImageDescriptorClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    getBitsCompressed(): Promise<number>;
+    getFrames(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    getBitsCompressedSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSopClassUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSopClassUIDSync(): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframe(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframeSync(): boolean;
+    getFramesSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -101,11 +61,43 @@ export declare class ImageDescriptorClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    getBitsAllocated(): Promise<number>;
+    getFrameLength(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    getBitsAllocatedSync(): number;
+    getFrameLengthSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getColumns(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getColumnsSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isBanded(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isBandedSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getRows(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getRowsSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getPlanarConfiguration(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getPlanarConfigurationSync(): number;
     /**
      * @return original return type: 'boolean'
      */
@@ -133,19 +125,35 @@ export declare class ImageDescriptorClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
+    getBitsCompressed(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsCompressedSync(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSopClassUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSopClassUIDSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframe(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframeSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
     getPixelRepresentation(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
     getPixelRepresentationSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getBodyPartExamined(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getBodyPartExaminedSync(): string | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -155,21 +163,13 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     isMultiframeWithEmbeddedOverlaysSync(): boolean;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    getFrames(): Promise<number>;
+    getBodyPartExamined(): Promise<string | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    getFramesSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getPlanarConfiguration(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPlanarConfigurationSync(): number;
+    getBodyPartExaminedSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -213,7 +213,7 @@ export declare class ImageDescriptorClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

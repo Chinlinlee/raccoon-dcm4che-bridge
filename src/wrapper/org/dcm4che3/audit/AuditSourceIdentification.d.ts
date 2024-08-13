@@ -28,14 +28,6 @@ export declare class AuditSourceIdentificationClass extends JavaClass {
      */
     getAuditSourceTypeCodeSync(): java_util_List | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getAuditEnterpriseSiteID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getAuditEnterpriseSiteIDSync(): string | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -53,6 +45,14 @@ export declare class AuditSourceIdentificationClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getAuditSourceIDSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getAuditEnterpriseSiteID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getAuditEnterpriseSiteIDSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -96,11 +96,11 @@ export declare class AuditSourceIdentificationClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

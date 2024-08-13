@@ -6,14 +6,6 @@ import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridg
  */
 export declare class StudyQueryTaskInjectClass extends JavaClass {
     /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextStudy(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextStudySync(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextStudy(): Promise<boolean>;
@@ -29,6 +21,14 @@ export declare class StudyQueryTaskInjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     getStudySync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextStudy(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextStudySync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -43,10 +43,6 @@ export declare class StudyQueryTaskInjectClass extends JavaClass {
  */
 export interface StudyQueryTaskInjectInterface {
     /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextStudy(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextStudy(): boolean;
@@ -54,6 +50,10 @@ export interface StudyQueryTaskInjectInterface {
      * @return original return type: 'void'
      */
     getStudy(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextStudy(): void;
 }
 /**
  * Create a proxy for the {@link StudyQueryTaskInject} interface.

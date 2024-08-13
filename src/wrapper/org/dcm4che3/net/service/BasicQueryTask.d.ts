@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { Association as org_dcm4che3_net_Association } from "./../Association";
+import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
@@ -21,6 +21,16 @@ export declare class BasicQueryTaskClass extends JavaClass {
      */
     runSync(): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
+     */
+    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
+     */
+    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
+    /**
      * @return original return type: 'boolean'
      */
     isOptionalKeysNotSupported(): Promise<boolean>;
@@ -38,16 +48,6 @@ export declare class BasicQueryTaskClass extends JavaClass {
      * @return original return type: 'void'
      */
     setOptionalKeysNotSupportedSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -91,11 +91,11 @@ export declare class BasicQueryTaskClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -1,10 +1,10 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
+import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../../../../dcm4che3/net/pdu/PresentationContext";
+import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
 import { PDVInputStream as org_dcm4che3_net_PDVInputStream } from "./../../../../dcm4che3/net/PDVInputStream";
 import { File as java_io_File } from "./../../../../../java/io/File";
-import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../../../../dcm4che3/net/pdu/PresentationContext";
-import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
@@ -15,22 +15,6 @@ import { CStoreSCPInject as org_github_chinlinlee_dcm777_net_CStoreSCPInject, CS
  * You should probably not edit this.
  */
 export declare class SimpleCStoreSCPClass extends JavaClass {
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.net.PDVInputStream'
-     * @param var3 original type: 'java.io.File'
-     * @return original return type: 'void'
-     */
-    storeTo(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_net_PDVInputStream | null, var3: java_io_File | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.net.PDVInputStream'
-     * @param var3 original type: 'java.io.File'
-     * @return original return type: 'void'
-     */
-    storeToSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_net_PDVInputStream | null, var3: java_io_File | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -51,14 +35,20 @@ export declare class SimpleCStoreSCPClass extends JavaClass {
     onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @param var3 original type: 'java.io.File'
      * @return original return type: 'void'
      */
-    onClose(var0: org_dcm4che3_net_Association | null): Promise<void>;
+    storeTo(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_net_PDVInputStream | null, var3: java_io_File | null): Promise<void>;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @param var3 original type: 'java.io.File'
      * @return original return type: 'void'
      */
-    onCloseSync(var0: org_dcm4che3_net_Association | null): void;
+    storeToSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_net_PDVInputStream | null, var3: java_io_File | null): void;
     /**
      * @return original return type: 'java.lang.String[]'
      */
@@ -67,6 +57,16 @@ export declare class SimpleCStoreSCPClass extends JavaClass {
      * @return original return type: 'java.lang.String[]'
      */
     getSOPClassesSync(): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
+     */
+    onClose(var0: org_dcm4che3_net_Association | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
+     */
+    onCloseSync(var0: org_dcm4che3_net_Association | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -110,11 +110,11 @@ export declare class SimpleCStoreSCPClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

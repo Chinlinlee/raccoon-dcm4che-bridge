@@ -22,4 +22,3 @@ class ColorSpace extends (0, java_bridge_1.importClass)('java.awt.color.ColorSpa
 }
 exports.ColorSpace = ColorSpace;
 exports.default = ColorSpace;
-//# sourceMappingURL=ColorSpace.js.map

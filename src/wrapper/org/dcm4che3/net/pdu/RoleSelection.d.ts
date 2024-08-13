@@ -10,6 +10,22 @@ import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
  */
 export declare class RoleSelectionClass extends JavaClass {
     /**
+     * @return original return type: 'int'
+     */
+    length(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    lengthSync(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toStringSync(): string;
+    /**
      * @return original return type: 'boolean'
      */
     isSCU(): Promise<boolean>;
@@ -25,22 +41,6 @@ export declare class RoleSelectionClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSCPSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    length(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    lengthSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): Promise<string>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

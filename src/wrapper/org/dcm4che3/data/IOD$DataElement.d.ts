@@ -38,6 +38,14 @@ export declare class IOD$DataElementClass extends JavaClass {
      */
     readonly valueNumber: java_lang_Integer | number;
     /**
+     * @return original return type: 'int'
+     */
+    getLineNumber(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getLineNumberSync(): number;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     getValues(): Promise<BasicOrJavaType | null>;
@@ -54,61 +62,15 @@ export declare class IOD$DataElementClass extends JavaClass {
      */
     getConditionSync(): org_dcm4che3_data_IOD$Condition | null;
     /**
-     * @return original return type: 'int'
-     */
-    getLineNumber(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getLineNumberSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getValueNumber(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getValueNumberSync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Code[]'
+     * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
-    setValues(var0: (org_dcm4che3_data_Code | null)[] | null): Promise<IOD$DataElement | null>;
+    setLineNumber(var0: java_lang_Integer | number): Promise<IOD$DataElement | null>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Code[]'
+     * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
-    setValuesSync(var0: (org_dcm4che3_data_Code | null)[] | null): IOD$DataElement | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    setValues(var0: (string | null)[] | null): Promise<IOD$DataElement | null>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    setValuesSync(var0: (string | null)[] | null): IOD$DataElement | null;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    setValues(var0: (java_lang_Integer | number)[] | null): Promise<IOD$DataElement | null>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    setValuesSync(var0: (java_lang_Integer | number)[] | null): IOD$DataElement | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    addItemIOD(var0: org_dcm4che3_data_IOD | null): Promise<IOD$DataElement | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    addItemIODSync(var0: org_dcm4che3_data_IOD | null): IOD$DataElement | null;
+    setLineNumberSync(var0: java_lang_Integer | number): IOD$DataElement | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.IOD$Condition'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
@@ -120,15 +82,53 @@ export declare class IOD$DataElementClass extends JavaClass {
      */
     setConditionSync(var0: org_dcm4che3_data_IOD$Condition | null): IOD$DataElement | null;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'int[]'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
-    setLineNumber(var0: java_lang_Integer | number): Promise<IOD$DataElement | null>;
+    setValues(var0: (java_lang_Integer | number)[] | null): Promise<IOD$DataElement | null>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'int[]'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
-    setLineNumberSync(var0: java_lang_Integer | number): IOD$DataElement | null;
+    setValuesSync(var0: (java_lang_Integer | number)[] | null): IOD$DataElement | null;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    setValues(var0: (string | null)[] | null): Promise<IOD$DataElement | null>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    setValuesSync(var0: (string | null)[] | null): IOD$DataElement | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Code[]'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    setValues(var0: (org_dcm4che3_data_Code | null)[] | null): Promise<IOD$DataElement | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Code[]'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    setValuesSync(var0: (org_dcm4che3_data_Code | null)[] | null): IOD$DataElement | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getValueNumber(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getValueNumberSync(): number;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    addItemIOD(var0: org_dcm4che3_data_IOD | null): Promise<IOD$DataElement | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    addItemIODSync(var0: org_dcm4che3_data_IOD | null): IOD$DataElement | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -172,7 +172,7 @@ export declare class IOD$DataElementClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

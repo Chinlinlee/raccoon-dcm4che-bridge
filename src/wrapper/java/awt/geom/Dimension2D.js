@@ -22,4 +22,3 @@ class Dimension2D extends (0, java_bridge_1.importClass)('java.awt.geom.Dimensio
 }
 exports.Dimension2D = Dimension2D;
 exports.default = Dimension2D;
-//# sourceMappingURL=Dimension2D.js.map

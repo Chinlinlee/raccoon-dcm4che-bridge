@@ -60,16 +60,6 @@ export declare class QueryOptionClass extends JavaClass {
      */
     static valueOfSync(var0: java_lang_Class | null, var1: string | null): java_lang_Enum | null;
     /**
-     * @param var0 original type: 'java.util.EnumSet'
-     * @return original return type: 'byte[]'
-     */
-    static toExtendedNegotiationInformation(var0: java_util_EnumSet | null): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'java.util.EnumSet'
-     * @return original return type: 'byte[]'
-     */
-    static toExtendedNegotiationInformationSync(var0: java_util_EnumSet | null): Buffer | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
      * @return original return type: 'java.util.EnumSet'
      */
@@ -79,6 +69,16 @@ export declare class QueryOptionClass extends JavaClass {
      * @return original return type: 'java.util.EnumSet'
      */
     static toOptionsSync(var0: org_dcm4che3_net_pdu_ExtendedNegotiation | null): java_util_EnumSet | null;
+    /**
+     * @param var0 original type: 'java.util.EnumSet'
+     * @return original return type: 'byte[]'
+     */
+    static toExtendedNegotiationInformation(var0: java_util_EnumSet | null): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'java.util.EnumSet'
+     * @return original return type: 'byte[]'
+     */
+    static toExtendedNegotiationInformationSync(var0: java_util_EnumSet | null): Buffer | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -100,11 +100,11 @@ export declare class QueryOptionClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

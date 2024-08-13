@@ -15,4 +15,3 @@ class FileDescriptor extends (0, java_bridge_1.importClass)('java.io.FileDescrip
 }
 exports.FileDescriptor = FileDescriptor;
 exports.default = FileDescriptor;
-//# sourceMappingURL=FileDescriptor.js.map

@@ -26,7 +26,7 @@ export declare class StorageOptionsClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -74,16 +74,6 @@ export declare class StorageOptionsClass extends JavaClass {
      */
     getLevelOfSupportSync(): org_dcm4che3_net_StorageOptions$LevelOfSupport | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
-     * @return original return type: 'void'
-     */
-    setElementCoercion(var0: org_dcm4che3_net_StorageOptions$ElementCoercion | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
-     * @return original return type: 'void'
-     */
-    setElementCoercionSync(var0: org_dcm4che3_net_StorageOptions$ElementCoercion | null): void;
-    /**
      * @param var0 original type: 'org.dcm4che3.net.StorageOptions$LevelOfSupport'
      * @return original return type: 'void'
      */
@@ -93,6 +83,16 @@ export declare class StorageOptionsClass extends JavaClass {
      * @return original return type: 'void'
      */
     setLevelOfSupportSync(var0: org_dcm4che3_net_StorageOptions$LevelOfSupport | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
+     * @return original return type: 'void'
+     */
+    setElementCoercion(var0: org_dcm4che3_net_StorageOptions$ElementCoercion | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.StorageOptions$ElementCoercion'
+     * @return original return type: 'void'
+     */
+    setElementCoercionSync(var0: org_dcm4che3_net_StorageOptions$ElementCoercion | null): void;
     /**
      * @return original return type: 'org.dcm4che3.net.StorageOptions$DigitalSignatureSupport'
      */

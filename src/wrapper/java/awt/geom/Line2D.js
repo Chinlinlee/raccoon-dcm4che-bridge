@@ -22,4 +22,3 @@ class Line2D extends (0, java_bridge_1.importClass)('java.awt.geom.Line2D') {
 }
 exports.Line2D = Line2D;
 exports.default = Line2D;
-//# sourceMappingURL=Line2D.js.map

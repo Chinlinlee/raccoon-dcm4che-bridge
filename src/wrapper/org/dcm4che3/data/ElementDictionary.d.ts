@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { VR as org_dcm4che3_data_VR } from "./VR";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
+import { VR as org_dcm4che3_data_VR } from "./VR";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 /**
@@ -9,46 +9,6 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class ElementDictionaryClass extends JavaClass {
-    /**
-     * @return original return type: 'void'
-     */
-    static reload(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    static reloadSync(): void;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    static vrOf(var0: java_lang_Integer | number, var1: string | null): Promise<org_dcm4che3_data_VR | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    static vrOfSync(var0: java_lang_Integer | number, var1: string | null): org_dcm4che3_data_VR | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    vrOf(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_VR | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    vrOfSync(var0: java_lang_Integer | number): org_dcm4che3_data_VR | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    tmTagOf(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    tmTagOfSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -72,52 +32,6 @@ export declare class ElementDictionaryClass extends JavaClass {
      */
     tagForKeywordSync(var0: string | null): number;
     /**
-     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
-     */
-    static getStandardElementDictionary(): Promise<ElementDictionary | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
-     */
-    static getStandardElementDictionarySync(): ElementDictionary | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    daTagOf(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    daTagOfSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
-     */
-    static getElementDictionary(var0: string | null): Promise<ElementDictionary | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
-     */
-    static getElementDictionarySync(var0: string | null): ElementDictionary | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getPrivateCreator(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getPrivateCreatorSync(): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    keywordOf(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    keywordOfSync(var0: java_lang_Integer | number): string | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -129,6 +43,92 @@ export declare class ElementDictionaryClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     static keywordOfSync(var0: java_lang_Integer | number, var1: string | null): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    keywordOf(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    keywordOfSync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPrivateCreator(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPrivateCreatorSync(): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    vrOf(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_VR | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    vrOfSync(var0: java_lang_Integer | number): org_dcm4che3_data_VR | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    static vrOf(var0: java_lang_Integer | number, var1: string | null): Promise<org_dcm4che3_data_VR | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    static vrOfSync(var0: java_lang_Integer | number, var1: string | null): org_dcm4che3_data_VR | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    daTagOf(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    daTagOfSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    tmTagOf(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    tmTagOfSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
+     */
+    static getElementDictionary(var0: string | null): Promise<ElementDictionary | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
+     */
+    static getElementDictionarySync(var0: string | null): ElementDictionary | null;
+    /**
+     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
+     */
+    static getStandardElementDictionary(): Promise<ElementDictionary | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.ElementDictionary'
+     */
+    static getStandardElementDictionarySync(): ElementDictionary | null;
+    /**
+     * @return original return type: 'void'
+     */
+    static reload(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    static reloadSync(): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -172,11 +172,11 @@ export declare class ElementDictionaryClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -15,4 +15,3 @@ class Dimension extends (0, java_bridge_1.importClass)('java.awt.Dimension') {
 }
 exports.Dimension = Dimension;
 exports.default = Dimension;
-//# sourceMappingURL=Dimension.js.map

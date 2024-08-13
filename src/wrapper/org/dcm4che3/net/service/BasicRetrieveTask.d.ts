@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
+import { Association as org_dcm4che3_net_Association } from "./../Association";
 import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../../java/util/List";
-import { Association as org_dcm4che3_net_Association } from "./../Association";
-import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Dimse as org_dcm4che3_net_Dimse } from "./../Dimse";
@@ -15,14 +15,6 @@ import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attribu
  */
 export declare class BasicRetrieveTaskClass extends JavaClass {
     /**
-     * @return original return type: 'void'
-     */
-    run(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    runSync(): void;
-    /**
      * @return original return type: 'int'
      */
     getStatus(): Promise<number>;
@@ -31,71 +23,13 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
      */
     getStatusSync(): number;
     /**
-     * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
-    setSendPendingRSP(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setSendPendingRSPSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCMove(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCMoveSync(): boolean;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getFailed(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getFailedSync(): java_util_List | null;
+    run(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    writePendingRSP(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    writePendingRSPSync(): void;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getCompleted(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getCompletedSync(): java_util_List | null;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getWarning(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getWarningSync(): java_util_List | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCanceled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCanceledSync(): boolean;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getStoreAssociation(): Promise<org_dcm4che3_net_Association | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getStoreAssociationSync(): org_dcm4che3_net_Association | null;
+    runSync(): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -114,6 +48,72 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.Association'
      */
     getRequestAssociationSync(): org_dcm4che3_net_Association | null;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getStoreAssociation(): Promise<org_dcm4che3_net_Association | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getStoreAssociationSync(): org_dcm4che3_net_Association | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCanceled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCanceledSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setSendPendingRSP(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setSendPendingRSPSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'void'
+     */
+    writePendingRSP(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    writePendingRSPSync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCMove(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCMoveSync(): boolean;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getCompleted(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getCompletedSync(): java_util_List | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getWarning(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getWarningSync(): java_util_List | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getFailed(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getFailedSync(): java_util_List | null;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
@@ -167,11 +167,11 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

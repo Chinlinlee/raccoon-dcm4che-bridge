@@ -15,4 +15,3 @@ class TransferSyntaxType extends (0, java_bridge_1.importClass)('org.dcm4che3.im
 }
 exports.TransferSyntaxType = TransferSyntaxType;
 exports.default = TransferSyntaxType;
-//# sourceMappingURL=TransferSyntaxType.js.map

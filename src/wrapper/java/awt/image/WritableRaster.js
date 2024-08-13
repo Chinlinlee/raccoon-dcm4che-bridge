@@ -15,4 +15,3 @@ class WritableRaster extends (0, java_bridge_1.importClass)('java.awt.image.Writ
 }
 exports.WritableRaster = WritableRaster;
 exports.default = WritableRaster;
-//# sourceMappingURL=WritableRaster.js.map

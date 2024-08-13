@@ -91,19 +91,19 @@ export declare class MarkerClass extends JavaClass {
     /**
      * @return original return type: 'boolean'
      */
-    hasReferences(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasReferencesSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
     hasChildren(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
     hasChildrenSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasReferences(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasReferencesSync(): boolean;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -157,11 +157,11 @@ export interface MarkerInterface {
     /**
      * @return original return type: 'boolean'
      */
-    hasReferences(): boolean;
+    hasChildren(): boolean;
     /**
      * @return original return type: 'boolean'
      */
-    hasChildren(): boolean;
+    hasReferences(): boolean;
 }
 /**
  * Create a proxy for the {@link Marker} interface.

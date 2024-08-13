@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
-import { Option$Builder as org_apache_commons_cli_Option$Builder } from "./Option$Builder";
-import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
-import { List as java_util_List } from "./../../../../java/util/List";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
+import { Option$Builder as org_apache_commons_cli_Option$Builder } from "./Option$Builder";
+import { List as java_util_List } from "./../../../../java/util/List";
+import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 /**
  * This class just defines types, you should import {@link Option} instead of this.
@@ -21,6 +21,34 @@ export declare class OptionClass extends JavaClass {
     static readonly UNLIMITED_VALUES: java_lang_Integer | number;
     /**
      * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setType(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setTypeSync(var0: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'void'
+     */
+    setType(var0: java_lang_Class | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'void'
+     */
+    setTypeSync(var0: java_lang_Class | null): void;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getValues(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getValuesSync(): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
     equals(var0: BasicOrJavaType | null): Promise<boolean>;
@@ -32,11 +60,11 @@ export declare class OptionClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */
@@ -124,47 +152,13 @@ export declare class OptionClass extends JavaClass {
      */
     hasArgSync(): boolean;
     /**
-     * @return original return type: 'java.lang.String[]'
+     * @return original return type: 'boolean'
      */
-    getValues(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getValuesSync(): (string | null)[] | null;
+    hasArgs(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
-    isRequired(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRequiredSync(): boolean;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRequired(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRequiredSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasLongOpt(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasLongOptSync(): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getLongOpt(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getLongOptSync(): string | null;
+    hasArgsSync(): boolean;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -182,6 +176,14 @@ export declare class OptionClass extends JavaClass {
      */
     getOptSync(): string | null;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getLongOpt(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getLongOptSync(): string | null;
+    /**
      * @return original return type: 'int'
      */
     getArgs(): Promise<number>;
@@ -190,53 +192,13 @@ export declare class OptionClass extends JavaClass {
      */
     getArgsSync(): number;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'boolean'
      */
-    getDescription(): Promise<string | null>;
+    hasOptionalArg(): Promise<boolean>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'boolean'
      */
-    getDescriptionSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setDescription(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setDescriptionSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setType(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setTypeSync(var0: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'void'
-     */
-    setType(var0: java_lang_Class | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'void'
-     */
-    setTypeSync(var0: java_lang_Class | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setArgName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setArgNameSync(var0: string | null): void;
+    hasOptionalArgSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -248,6 +210,24 @@ export declare class OptionClass extends JavaClass {
      */
     setLongOptSync(var0: string | null): void;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getArgName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getArgNameSync(): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setArgName(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setArgNameSync(var0: string | null): void;
+    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -257,22 +237,6 @@ export declare class OptionClass extends JavaClass {
      * @return original return type: 'void'
      */
     setOptionalArgSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'char'
-     */
-    getValueSeparator(): Promise<string | null>;
-    /**
-     * @return original return type: 'char'
-     */
-    getValueSeparatorSync(): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasValueSeparator(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasValueSeparatorSync(): boolean;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'void'
@@ -312,29 +276,65 @@ export declare class OptionClass extends JavaClass {
      */
     setArgsSync(var0: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'char'
      */
-    hasArgs(): Promise<boolean>;
+    getValueSeparator(): Promise<string | null>;
+    /**
+     * @return original return type: 'char'
+     */
+    getValueSeparatorSync(): string | null;
     /**
      * @return original return type: 'boolean'
      */
-    hasArgsSync(): boolean;
+    hasValueSeparator(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
-    hasOptionalArg(): Promise<boolean>;
+    hasValueSeparatorSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setRequired(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setRequiredSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @return original return type: 'boolean'
      */
-    hasOptionalArgSync(): boolean;
+    isRequired(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRequiredSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasLongOpt(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasLongOptSync(): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setDescription(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setDescriptionSync(var0: string | null): void;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getArgName(): Promise<string | null>;
+    getDescription(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getArgNameSync(): string | null;
+    getDescriptionSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -392,6 +392,12 @@ export declare class OptionClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Option'
+     */
+    static newInstanceAsync(var0: string | null, var1: string | null): Promise<Option>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'boolean'
      * @param var3 original type: 'java.lang.String'
      * @return original return type: 'org.apache.commons.cli.Option'
@@ -407,9 +413,8 @@ export declare class OptionClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'org.apache.commons.cli.Option'
      */
-    static newInstanceAsync(var0: string | null, var1: string | null): Promise<Option>;
+    constructor(var0: string | null, var1: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -423,11 +428,6 @@ export declare class OptionClass extends JavaClass {
      * @param var2 original type: 'java.lang.String'
      */
     constructor(var0: string | null, var1: java_lang_Boolean | boolean, var2: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null, var1: string | null);
 }
 declare const Option_base: typeof OptionClass;
 /**

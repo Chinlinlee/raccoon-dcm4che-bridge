@@ -11,16 +11,6 @@ import { Class as java_lang_Class } from "./../../../../java/lang/Class";
  */
 export declare class Dcm2JpgExecutorClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    static main(var0: (string | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    static mainSync(var0: (string | null)[] | null): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'org.github.chinlinlee.dcm2jpg.Dcm2JpgExecutor$Dcm2JpgOptions'
@@ -34,6 +24,16 @@ export declare class Dcm2JpgExecutorClass extends JavaClass {
      * @return original return type: 'org.github.chinlinlee.dcm2jpg.Dcm2JpgExecutor$ConvertStatus'
      */
     static convertDcmToJpgFromFilenameSync(var0: string | null, var1: string | null, var2: org_github_chinlinlee_dcm2jpg_Dcm2JpgExecutor$Dcm2JpgOptions | null): org_github_chinlinlee_dcm2jpg_Dcm2JpgExecutor$ConvertStatus | null;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    static main(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    static mainSync(var0: (string | null)[] | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -77,7 +77,7 @@ export declare class Dcm2JpgExecutorClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

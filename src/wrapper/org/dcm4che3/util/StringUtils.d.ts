@@ -1,10 +1,10 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
-import { Collection as java_util_Collection, CollectionInterface as java_util_CollectionInterface } from "./../../../java/util/Collection";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Pattern as java_util_regex_Pattern } from "./../../../java/util/regex/Pattern";
-import { Double as java_lang_Double } from "./../../../java/lang/Double";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { Float as java_lang_Float } from "./../../../java/lang/Float";
+import { Double as java_lang_Double } from "./../../../java/lang/Double";
+import { Collection as java_util_Collection, CollectionInterface as java_util_CollectionInterface } from "./../../../java/util/Collection";
 import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -22,6 +22,112 @@ export declare class StringUtilsClass extends JavaClass {
      * Original type: 'java.lang.String[]'
      */
     static EMPTY_STRING: (string | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static truncate(var0: string | null, var1: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static truncateSync(var0: string | null, var1: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'double'
+     */
+    static parseDS(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'double'
+     */
+    static parseDSSync(var0: string | null): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static containsWildCard(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static containsWildCardSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'java.util.regex.Pattern'
+     */
+    static compilePattern(var0: string | null, var1: java_lang_Boolean | boolean): Promise<java_util_regex_Pattern | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'java.util.regex.Pattern'
+     */
+    static compilePatternSync(var0: string | null, var1: java_lang_Boolean | boolean): java_util_regex_Pattern | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'char'
+     * @return original return type: 'java.lang.Object'
+     */
+    static splitAndTrim(var0: string | null, var1: string | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'char'
+     * @return original return type: 'java.lang.Object'
+     */
+    static splitAndTrimSync(var0: string | null, var1: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static trimTrailing(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static trimTrailingSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.String'
+     */
+    static formatDS(var0: java_lang_Float | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.String'
+     */
+    static formatDSSync(var0: java_lang_Float | number): string | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'java.lang.String'
+     */
+    static formatDS(var0: java_lang_Double | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'java.lang.String'
+     */
+    static formatDSSync(var0: java_lang_Double | number): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseIS(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseISSync(var0: string | null): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseUV(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseUVSync(var0: string | null): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -119,16 +225,6 @@ export declare class StringUtilsClass extends JavaClass {
      */
     static containsSync(var0: (BasicOrJavaType | null)[] | null, var1: BasicOrJavaType | null): boolean;
     /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'java.lang.String[]'
-     */
-    static maskNull(var0: (string | null)[] | null): Promise<(string | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'java.lang.String[]'
-     */
-    static maskNullSync(var0: (string | null)[] | null): (string | null)[] | null;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.Object'
@@ -141,191 +237,27 @@ export declare class StringUtilsClass extends JavaClass {
      */
     static maskNullSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static resourceURL(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static resourceURLSync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'char'
-     * @return original return type: 'java.lang.String'
-     */
-    static cut(var0: string | null, var1: java_lang_Integer | number, var2: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'char'
-     * @return original return type: 'java.lang.String'
-     */
-    static cutSync(var0: string | null, var1: java_lang_Integer | number, var2: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static isIPAddr(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static isIPAddrSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    static nullify(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    static nullifySync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'double'
-     */
-    static parseDS(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'double'
-     */
-    static parseDSSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseIS(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseISSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static containsWildCard(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static containsWildCardSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'java.util.regex.Pattern'
-     */
-    static compilePattern(var0: string | null, var1: java_lang_Boolean | boolean): Promise<java_util_regex_Pattern | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'java.util.regex.Pattern'
-     */
-    static compilePatternSync(var0: string | null, var1: java_lang_Boolean | boolean): java_util_regex_Pattern | null;
-    /**
      * @param var0 original type: 'java.lang.String[]'
-     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String[]'
      */
-    static requireContainsNoEmpty(var0: (string | null)[] | null, var1: string | null): Promise<(string | null)[] | null>;
+    static maskNull(var0: (string | null)[] | null): Promise<(string | null)[] | null>;
     /**
      * @param var0 original type: 'java.lang.String[]'
-     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String[]'
      */
-    static requireContainsNoEmptySync(var0: (string | null)[] | null, var1: string | null): (string | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static replaceSystemProperties(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static replaceSystemPropertiesSync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static truncate(var0: string | null, var1: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static truncateSync(var0: string | null, var1: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static trimTrailing(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static trimTrailingSync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'char'
-     * @return original return type: 'java.lang.Object'
-     */
-    static splitAndTrim(var0: string | null, var1: string | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'char'
-     * @return original return type: 'java.lang.Object'
-     */
-    static splitAndTrimSync(var0: string | null, var1: string | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'java.lang.String'
-     */
-    static formatDS(var0: java_lang_Double | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'java.lang.String'
-     */
-    static formatDSSync(var0: java_lang_Double | number): string | null;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.String'
-     */
-    static formatDS(var0: java_lang_Float | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.String'
-     */
-    static formatDSSync(var0: java_lang_Float | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseUV(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseUVSync(var0: string | null): number;
+    static maskNullSync(var0: (string | null)[] | null): (string | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
-    static maskEmpty(var0: string | null, var1: string | null): Promise<string | null>;
+    static requireNotEmpty(var0: string | null, var1: string | null): Promise<string | null>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
-    static maskEmptySync(var0: string | null, var1: string | null): string | null;
+    static requireNotEmptySync(var0: string | null, var1: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.Object[]'
      * @param var1 original type: 'java.lang.String'
@@ -343,13 +275,25 @@ export declare class StringUtilsClass extends JavaClass {
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
-    static requireNotEmpty(var0: string | null, var1: string | null): Promise<string | null>;
+    static maskEmpty(var0: string | null, var1: string | null): Promise<string | null>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
-    static requireNotEmptySync(var0: string | null, var1: string | null): string | null;
+    static maskEmptySync(var0: string | null, var1: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'char'
+     * @return original return type: 'java.lang.String'
+     */
+    static replaceNonPrintASCII(var0: string | null, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'char'
+     * @return original return type: 'java.lang.String'
+     */
+    static replaceNonPrintASCIISync(var0: string | null, var1: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.StringBuilder'
      * @param var1 original type: 'java.lang.Object[]'
@@ -362,6 +306,74 @@ export declare class StringUtilsClass extends JavaClass {
      * @return original return type: 'java.lang.StringBuilder'
      */
     static appendLineSync(var0: java_lang_StringBuilder | null, var1: (BasicOrJavaType | null)[] | null): java_lang_StringBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static replaceSystemProperties(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static replaceSystemPropertiesSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String[]'
+     */
+    static requireContainsNoEmpty(var0: (string | null)[] | null, var1: string | null): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String[]'
+     */
+    static requireContainsNoEmptySync(var0: (string | null)[] | null, var1: string | null): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static isIPAddr(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static isIPAddrSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'char'
+     * @return original return type: 'java.lang.String'
+     */
+    static cut(var0: string | null, var1: java_lang_Integer | number, var2: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'char'
+     * @return original return type: 'java.lang.String'
+     */
+    static cutSync(var0: string | null, var1: java_lang_Integer | number, var2: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    static nullify(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    static nullifySync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static resourceURL(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static resourceURLSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -395,11 +407,11 @@ export declare class StringUtilsClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

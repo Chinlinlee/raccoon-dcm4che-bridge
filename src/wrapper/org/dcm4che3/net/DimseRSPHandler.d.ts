@@ -11,36 +11,6 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class DimseRSPHandlerClass extends JavaClass {
     /**
-     * @return original return type: 'boolean'
-     */
-    isCanceled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCanceledSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getMessageID(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMessageIDSync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
-     */
-    onDimseRSP(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_data_Attributes | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
-     */
-    onDimseRSPSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_data_Attributes | null): void;
-    /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
      */
@@ -60,6 +30,36 @@ export declare class DimseRSPHandlerClass extends JavaClass {
      * @return original return type: 'void'
      */
     cancelSync(var0: org_dcm4che3_net_Association | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
+     */
+    onDimseRSP(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_data_Attributes | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
+     */
+    onDimseRSPSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_data_Attributes | null): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getMessageID(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getMessageIDSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCanceled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCanceledSync(): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -103,7 +103,7 @@ export declare class DimseRSPHandlerClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

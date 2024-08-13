@@ -1,10 +1,10 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { QueryRetrieveLevel2 as org_dcm4che3_net_service_QueryRetrieveLevel2 } from "./../../../../dcm4che3/net/service/QueryRetrieveLevel2";
 import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
 import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../../../../dcm4che3/net/pdu/PresentationContext";
-import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
+import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
 import { PDVInputStream as org_dcm4che3_net_PDVInputStream } from "./../../../../dcm4che3/net/PDVInputStream";
-import { QueryRetrieveLevel2 as org_dcm4che3_net_service_QueryRetrieveLevel2 } from "./../../../../dcm4che3/net/service/QueryRetrieveLevel2";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
@@ -16,6 +16,22 @@ import { EnumSet as java_util_EnumSet } from "./../../../../../java/util/EnumSet
  * You should probably not edit this.
  */
 export declare class BasicModCFindSCPClass extends JavaClass {
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
+     */
+    getQrLevel(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): Promise<org_dcm4che3_net_service_QueryRetrieveLevel2 | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
+     */
+    getQrLevelSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): org_dcm4che3_net_service_QueryRetrieveLevel2 | null;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -52,22 +68,6 @@ export declare class BasicModCFindSCPClass extends JavaClass {
      * @return original return type: 'void'
      */
     onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
-     */
-    getQrLevel(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): Promise<org_dcm4che3_net_service_QueryRetrieveLevel2 | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.net.service.QueryRetrieveLevel2'
-     */
-    getQrLevelSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): org_dcm4che3_net_service_QueryRetrieveLevel2 | null;
     /**
      * @return original return type: 'java.lang.String[]'
      */
@@ -129,11 +129,11 @@ export declare class BasicModCFindSCPClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */
@@ -173,32 +173,32 @@ export declare class BasicModCFindSCPClass extends JavaClass {
     static newInstanceAsync(var0: (string | null)[] | null): Promise<BasicModCFindSCP>;
     /**
      * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
+     * @param var1 original type: 'java.lang.String[]'
+     * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModCFindSCP'
+     */
+    static newInstanceAsync(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: (string | null)[] | null): Promise<BasicModCFindSCP>;
+    /**
+     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.util.EnumSet'
      * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModCFindSCP'
      */
     static newInstanceAsync(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: string | null, var2: java_util_EnumSet | null): Promise<BasicModCFindSCP>;
     /**
-     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
-     * @param var1 original type: 'java.lang.String[]'
-     * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModCFindSCP'
-     */
-    static newInstanceAsync(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: (string | null)[] | null): Promise<BasicModCFindSCP>;
-    /**
      * @param var0 original type: 'java.lang.String[]'
      */
     constructor(var0: (string | null)[] | null);
+    /**
+     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
+     * @param var1 original type: 'java.lang.String[]'
+     */
+    constructor(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: (string | null)[] | null);
     /**
      * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.util.EnumSet'
      */
     constructor(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: string | null, var2: java_util_EnumSet | null);
-    /**
-     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
-     * @param var1 original type: 'java.lang.String[]'
-     */
-    constructor(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: (string | null)[] | null);
 }
 declare const BasicModCFindSCP_base: typeof BasicModCFindSCPClass;
 /**

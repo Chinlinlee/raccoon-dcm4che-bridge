@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { List as java_util_List } from "./../../../java/util/List";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
+import { List as java_util_List } from "./../../../java/util/List";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 /**
@@ -9,14 +9,6 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class SOPClassClass extends JavaClass {
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getInstance(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getInstanceSync(): java_util_List | null;
     /**
      * @param var0 original type: 'java.lang.Integer'
      * @return original return type: 'void'
@@ -28,14 +20,6 @@ export declare class SOPClassClass extends JavaClass {
      */
     setNumberOfInstancesSync(var0: java_lang_Integer | number | null): void;
     /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    getNumberOfInstances(): Promise<number | null>;
-    /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    getNumberOfInstancesSync(): number | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -46,6 +30,14 @@ export declare class SOPClassClass extends JavaClass {
      */
     setUIDSync(var0: string | null): void;
     /**
+     * @return original return type: 'java.util.List'
+     */
+    getInstance(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getInstanceSync(): java_util_List | null;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getUID(): Promise<string | null>;
@@ -53,6 +45,14 @@ export declare class SOPClassClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getUIDSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    getNumberOfInstances(): Promise<number | null>;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    getNumberOfInstancesSync(): number | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -96,11 +96,11 @@ export declare class SOPClassClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

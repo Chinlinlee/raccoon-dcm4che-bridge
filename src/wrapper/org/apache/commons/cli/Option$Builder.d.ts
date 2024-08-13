@@ -31,6 +31,16 @@ export declare class Option$BuilderClass extends JavaClass {
      */
     descSync(var0: string | null): Option$Builder | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    option(var0: string | null): Promise<Option$Builder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    optionSync(var0: string | null): Option$Builder | null;
+    /**
      * @return original return type: 'org.apache.commons.cli.Option'
      */
     build(): Promise<org_apache_commons_cli_Option | null>;
@@ -49,24 +59,6 @@ export declare class Option$BuilderClass extends JavaClass {
      */
     argNameSync(var0: string | null): Option$Builder | null;
     /**
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    hasArg(): Promise<Option$Builder | null>;
-    /**
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    hasArgSync(): Option$Builder | null;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    hasArg(var0: java_lang_Boolean | boolean): Promise<Option$Builder | null>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    hasArgSync(var0: java_lang_Boolean | boolean): Option$Builder | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
@@ -80,6 +72,32 @@ export declare class Option$BuilderClass extends JavaClass {
      * @param var0 original type: 'boolean'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
+    hasArg(var0: java_lang_Boolean | boolean): Promise<Option$Builder | null>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    hasArgSync(var0: java_lang_Boolean | boolean): Option$Builder | null;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    hasArg(): Promise<Option$Builder | null>;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    hasArgSync(): Option$Builder | null;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    hasArgs(): Promise<Option$Builder | null>;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    hasArgsSync(): Option$Builder | null;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
     optionalArg(var0: java_lang_Boolean | boolean): Promise<Option$Builder | null>;
     /**
      * @param var0 original type: 'boolean'
@@ -87,23 +105,23 @@ export declare class Option$BuilderClass extends JavaClass {
      */
     optionalArgSync(var0: java_lang_Boolean | boolean): Option$Builder | null;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'char'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    required(var0: java_lang_Boolean | boolean): Promise<Option$Builder | null>;
+    valueSeparator(var0: string | null): Promise<Option$Builder | null>;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'char'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    requiredSync(var0: java_lang_Boolean | boolean): Option$Builder | null;
-    /**
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    required(): Promise<Option$Builder | null>;
+    valueSeparatorSync(var0: string | null): Option$Builder | null;
     /**
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    requiredSync(): Option$Builder | null;
+    valueSeparator(): Promise<Option$Builder | null>;
+    /**
+     * @return original return type: 'org.apache.commons.cli.Option$Builder'
+     */
+    valueSeparatorSync(): Option$Builder | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
@@ -117,29 +135,21 @@ export declare class Option$BuilderClass extends JavaClass {
     /**
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    hasArgs(): Promise<Option$Builder | null>;
+    required(): Promise<Option$Builder | null>;
     /**
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    hasArgsSync(): Option$Builder | null;
+    requiredSync(): Option$Builder | null;
     /**
+     * @param var0 original type: 'boolean'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    valueSeparator(): Promise<Option$Builder | null>;
+    required(var0: java_lang_Boolean | boolean): Promise<Option$Builder | null>;
     /**
+     * @param var0 original type: 'boolean'
      * @return original return type: 'org.apache.commons.cli.Option$Builder'
      */
-    valueSeparatorSync(): Option$Builder | null;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    valueSeparator(var0: string | null): Promise<Option$Builder | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'org.apache.commons.cli.Option$Builder'
-     */
-    valueSeparatorSync(var0: string | null): Option$Builder | null;
+    requiredSync(var0: java_lang_Boolean | boolean): Option$Builder | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -183,11 +193,11 @@ export declare class Option$BuilderClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

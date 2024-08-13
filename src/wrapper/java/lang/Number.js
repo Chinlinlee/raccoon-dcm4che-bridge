@@ -22,4 +22,3 @@ class Number extends (0, java_bridge_1.importClass)('java.lang.Number') {
 }
 exports.Number = Number;
 exports.default = Number;
-//# sourceMappingURL=Number.js.map

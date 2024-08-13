@@ -17,13 +17,29 @@ import { SeriesQueryTaskInject as org_github_chinlinlee_dcm777_net_SeriesQueryTa
  */
 export declare class SeriesQueryTaskClass extends JavaClass {
     /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
      */
-    nextMatch(): Promise<org_dcm4che3_data_Attributes | null>;
+    findNextSeries(): Promise<boolean>;
     /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
      */
-    nextMatchSync(): org_dcm4che3_data_Attributes | null;
+    findNextSeriesSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    findNextStudy(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    findNextStudySync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    findNextPatient(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    findNextPatientSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -32,6 +48,14 @@ export declare class SeriesQueryTaskClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasMoreMatchesSync(): boolean;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    nextMatch(): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    nextMatchSync(): org_dcm4che3_data_Attributes | null;
     /**
      * @return original return type: 'void'
      */
@@ -51,6 +75,14 @@ export declare class SeriesQueryTaskClass extends JavaClass {
      */
     onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isOptionalKeysNotSupported(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOptionalKeysNotSupportedSync(): boolean;
+    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -60,14 +92,6 @@ export declare class SeriesQueryTaskClass extends JavaClass {
      * @return original return type: 'void'
      */
     setOptionalKeysNotSupportedSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOptionalKeysNotSupported(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOptionalKeysNotSupportedSync(): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -111,11 +135,11 @@ export declare class SeriesQueryTaskClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -1,11 +1,11 @@
 /// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { UserIdentityRQ as org_dcm4che3_net_pdu_UserIdentityRQ } from "./UserIdentityRQ";
-import { CommonExtendedNegotiation as org_dcm4che3_net_pdu_CommonExtendedNegotiation } from "./CommonExtendedNegotiation";
 import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./PresentationContext";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { RoleSelection as org_dcm4che3_net_pdu_RoleSelection } from "./RoleSelection";
 import { List as java_util_List } from "./../../../../java/util/List";
+import { CommonExtendedNegotiation as org_dcm4che3_net_pdu_CommonExtendedNegotiation } from "./CommonExtendedNegotiation";
 import { ExtendedNegotiation as org_dcm4che3_net_pdu_ExtendedNegotiation } from "./ExtendedNegotiation";
 import { Collection as java_util_Collection } from "./../../../../java/util/Collection";
 import { UserIdentityAC as org_dcm4che3_net_pdu_UserIdentityAC } from "./UserIdentityAC";
@@ -20,7 +20,7 @@ export declare class AAssociateACClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -35,6 +35,78 @@ export declare class AAssociateACClass extends JavaClass {
      * @return original return type: 'void'
      */
     setUserIdentityRQSync(var0: org_dcm4che3_net_pdu_UserIdentityRQ | null): void;
+    /**
+     * @return original return type: 'int'
+     */
+    length(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    lengthSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getProtocolVersion(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getProtocolVersionSync(): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
+     */
+    getPresentationContext(var0: java_lang_Integer | number): Promise<org_dcm4che3_net_pdu_PresentationContext | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
+     */
+    getPresentationContextSync(var0: java_lang_Integer | number): org_dcm4che3_net_pdu_PresentationContext | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
+     */
+    getRoleSelectionFor(var0: string | null): Promise<org_dcm4che3_net_pdu_RoleSelection | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
+     */
+    getRoleSelectionForSync(var0: string | null): org_dcm4che3_net_pdu_RoleSelection | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getPresentationContexts(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getPresentationContextsSync(): java_util_List | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     */
+    getCommonExtendedNegotiationFor(var0: string | null): Promise<org_dcm4che3_net_pdu_CommonExtendedNegotiation | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     */
+    getCommonExtendedNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_CommonExtendedNegotiation | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
+     */
+    getExtNegotiationFor(var0: string | null): Promise<org_dcm4che3_net_pdu_ExtendedNegotiation | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
+     */
+    getExtNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_ExtendedNegotiation | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getImplClassUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getImplClassUIDSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -51,34 +123,6 @@ export declare class AAssociateACClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getCalledAETSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
-     */
-    getCommonExtendedNegotiationFor(var0: string | null): Promise<org_dcm4che3_net_pdu_CommonExtendedNegotiation | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
-     */
-    getCommonExtendedNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_CommonExtendedNegotiation | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
-     */
-    getPresentationContext(var0: java_lang_Integer | number): Promise<org_dcm4che3_net_pdu_PresentationContext | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
-     */
-    getPresentationContextSync(var0: java_lang_Integer | number): org_dcm4che3_net_pdu_PresentationContext | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getImplClassUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getImplClassUIDSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -112,43 +156,51 @@ export declare class AAssociateACClass extends JavaClass {
      */
     getMaxOpsPerformedSync(): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     * @return original return type: 'int'
      */
-    removeCommonExtendedNegotiationFor(var0: string | null): Promise<org_dcm4che3_net_pdu_CommonExtendedNegotiation | null>;
+    getNumberOfPresentationContexts(): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     * @return original return type: 'int'
      */
-    removeCommonExtendedNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_CommonExtendedNegotiation | null;
+    getNumberOfPresentationContextsSync(): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
+     * @return original return type: 'java.util.Collection'
      */
-    getRoleSelectionFor(var0: string | null): Promise<org_dcm4che3_net_pdu_RoleSelection | null>;
+    getExtendedNegotiations(): Promise<java_util_Collection | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
+     * @return original return type: 'java.util.Collection'
      */
-    getRoleSelectionForSync(var0: string | null): org_dcm4che3_net_pdu_RoleSelection | null;
+    getExtendedNegotiationsSync(): java_util_Collection | null;
     /**
-     * @return original return type: 'java.util.List'
+     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @return original return type: 'boolean'
      */
-    getPresentationContexts(): Promise<java_util_List | null>;
+    removePresentationContext(var0: org_dcm4che3_net_pdu_PresentationContext | null): Promise<boolean>;
     /**
-     * @return original return type: 'java.util.List'
+     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @return original return type: 'boolean'
      */
-    getPresentationContextsSync(): java_util_List | null;
+    removePresentationContextSync(var0: org_dcm4che3_net_pdu_PresentationContext | null): boolean;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
      * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
      */
-    getExtNegotiationFor(var0: string | null): Promise<org_dcm4che3_net_pdu_ExtendedNegotiation | null>;
+    addExtendedNegotiation(var0: org_dcm4che3_net_pdu_ExtendedNegotiation | null): Promise<org_dcm4che3_net_pdu_ExtendedNegotiation | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
      * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
      */
-    getExtNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_ExtendedNegotiation | null;
+    addExtendedNegotiationSync(var0: org_dcm4che3_net_pdu_ExtendedNegotiation | null): org_dcm4che3_net_pdu_ExtendedNegotiation | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     */
+    addCommonExtendedNegotiation(var0: org_dcm4che3_net_pdu_CommonExtendedNegotiation | null): Promise<org_dcm4che3_net_pdu_CommonExtendedNegotiation | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     */
+    addCommonExtendedNegotiationSync(var0: org_dcm4che3_net_pdu_CommonExtendedNegotiation | null): org_dcm4che3_net_pdu_CommonExtendedNegotiation | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -178,42 +230,6 @@ export declare class AAssociateACClass extends JavaClass {
      */
     setApplicationContextSync(var0: string | null): void;
     /**
-     * @return original return type: 'int'
-     */
-    getNumberOfPresentationContexts(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getNumberOfPresentationContextsSync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @return original return type: 'boolean'
-     */
-    removePresentationContext(var0: org_dcm4che3_net_pdu_PresentationContext | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @return original return type: 'boolean'
-     */
-    removePresentationContextSync(var0: org_dcm4che3_net_pdu_PresentationContext | null): boolean;
-    /**
-     * @return original return type: 'java.util.Collection'
-     */
-    getExtendedNegotiations(): Promise<java_util_Collection | null>;
-    /**
-     * @return original return type: 'java.util.Collection'
-     */
-    getExtendedNegotiationsSync(): java_util_Collection | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
-     * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
-     */
-    addExtendedNegotiation(var0: org_dcm4che3_net_pdu_ExtendedNegotiation | null): Promise<org_dcm4che3_net_pdu_ExtendedNegotiation | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
-     * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
-     */
-    addExtendedNegotiationSync(var0: org_dcm4che3_net_pdu_ExtendedNegotiation | null): org_dcm4che3_net_pdu_ExtendedNegotiation | null;
-    /**
      * @return original return type: 'java.util.Collection'
      */
     getCommonExtendedNegotiations(): Promise<java_util_Collection | null>;
@@ -221,16 +237,6 @@ export declare class AAssociateACClass extends JavaClass {
      * @return original return type: 'java.util.Collection'
      */
     getCommonExtendedNegotiationsSync(): java_util_Collection | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @return original return type: 'void'
-     */
-    addPresentationContext(var0: org_dcm4che3_net_pdu_PresentationContext | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @return original return type: 'void'
-     */
-    addPresentationContextSync(var0: org_dcm4che3_net_pdu_PresentationContext | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.pdu.ExtendedNegotiation'
@@ -242,87 +248,25 @@ export declare class AAssociateACClass extends JavaClass {
      */
     removeExtendedNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_ExtendedNegotiation | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
      */
-    addCommonExtendedNegotiation(var0: org_dcm4che3_net_pdu_CommonExtendedNegotiation | null): Promise<org_dcm4che3_net_pdu_CommonExtendedNegotiation | null>;
+    removeCommonExtendedNegotiationFor(var0: string | null): Promise<org_dcm4che3_net_pdu_CommonExtendedNegotiation | null>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.pdu.CommonExtendedNegotiation'
      */
-    addCommonExtendedNegotiationSync(var0: org_dcm4che3_net_pdu_CommonExtendedNegotiation | null): org_dcm4che3_net_pdu_CommonExtendedNegotiation | null;
+    removeCommonExtendedNegotiationForSync(var0: string | null): org_dcm4che3_net_pdu_CommonExtendedNegotiation | null;
     /**
-     * @return original return type: 'int'
-     */
-    length(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    lengthSync(): number;
-    /**
-     * @return original return type: 'org.dcm4che3.net.pdu.UserIdentityAC'
-     */
-    getUserIdentityAC(): Promise<org_dcm4che3_net_pdu_UserIdentityAC | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.pdu.UserIdentityAC'
-     */
-    getUserIdentityACSync(): org_dcm4che3_net_pdu_UserIdentityAC | null;
-    /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
      * @return original return type: 'void'
      */
-    setMaxOpsPerformed(var0: java_lang_Integer | number): Promise<void>;
+    addPresentationContext(var0: org_dcm4che3_net_pdu_PresentationContext | null): Promise<void>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'org.dcm4che3.net.pdu.PresentationContext'
      * @return original return type: 'void'
      */
-    setMaxOpsPerformedSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxPDULength(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxPDULengthSync(var0: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'java.util.Collection'
-     */
-    getRoleSelections(): Promise<java_util_Collection | null>;
-    /**
-     * @return original return type: 'java.util.Collection'
-     */
-    getRoleSelectionsSync(): java_util_Collection | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setProtocolVersion(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setProtocolVersionSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.RoleSelection'
-     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
-     */
-    addRoleSelection(var0: org_dcm4che3_net_pdu_RoleSelection | null): Promise<org_dcm4che3_net_pdu_RoleSelection | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.RoleSelection'
-     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
-     */
-    addRoleSelectionSync(var0: org_dcm4che3_net_pdu_RoleSelection | null): org_dcm4che3_net_pdu_RoleSelection | null;
-    /**
-     * @return original return type: 'void'
-     */
-    checkCallingAET(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    checkCallingAETSync(): void;
+    addPresentationContextSync(var0: org_dcm4che3_net_pdu_PresentationContext | null): void;
     /**
      * @return original return type: 'org.dcm4che3.net.pdu.UserIdentityRQ'
      */
@@ -332,15 +276,41 @@ export declare class AAssociateACClass extends JavaClass {
      */
     getUserIdentityRQSync(): org_dcm4che3_net_pdu_UserIdentityRQ | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.UserIdentityAC'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    setUserIdentityAC(var0: org_dcm4che3_net_pdu_UserIdentityAC | null): Promise<void>;
+    isAsyncOps(): Promise<boolean>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.pdu.UserIdentityAC'
+     * @return original return type: 'boolean'
+     */
+    isAsyncOpsSync(): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setUserIdentityACSync(var0: org_dcm4che3_net_pdu_UserIdentityAC | null): void;
+    setCallingAET(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCallingAETSync(var0: string | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    checkCalledAET(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    checkCalledAETSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCalledAET(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCalledAETSync(var0: string | null): void;
     /**
      * @param var0 original type: 'byte[]'
      * @return original return type: 'void'
@@ -355,12 +325,32 @@ export declare class AAssociateACClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
+    setMaxPDULength(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxPDULengthSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
     setMaxOpsInvoked(var0: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
     setMaxOpsInvokedSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setProtocolVersion(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setProtocolVersionSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'byte[]'
      */
@@ -370,31 +360,31 @@ export declare class AAssociateACClass extends JavaClass {
      */
     getReservedBytesSync(): Buffer | null;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    userInfoLength(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    userInfoLengthSync(): number;
+    /**
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setCalledAET(var0: string | null): Promise<void>;
+    setMaxOpsPerformed(var0: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setCalledAETSync(var0: string | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isAsyncOps(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isAsyncOpsSync(): boolean;
-    /**
-     * @return original return type: 'void'
-     */
-    checkCalledAET(): Promise<void>;
+    setMaxOpsPerformedSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'void'
      */
-    checkCalledAETSync(): void;
+    checkCallingAET(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    checkCallingAETSync(): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -409,24 +399,6 @@ export declare class AAssociateACClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setCallingAET(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCallingAETSync(var0: string | null): void;
-    /**
-     * @return original return type: 'int'
-     */
-    getProtocolVersion(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getProtocolVersionSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     setImplVersionName(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
@@ -434,13 +406,41 @@ export declare class AAssociateACClass extends JavaClass {
      */
     setImplVersionNameSync(var0: string | null): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'org.dcm4che3.net.pdu.UserIdentityAC'
      */
-    userInfoLength(): Promise<number>;
+    getUserIdentityAC(): Promise<org_dcm4che3_net_pdu_UserIdentityAC | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'org.dcm4che3.net.pdu.UserIdentityAC'
      */
-    userInfoLengthSync(): number;
+    getUserIdentityACSync(): org_dcm4che3_net_pdu_UserIdentityAC | null;
+    /**
+     * @return original return type: 'java.util.Collection'
+     */
+    getRoleSelections(): Promise<java_util_Collection | null>;
+    /**
+     * @return original return type: 'java.util.Collection'
+     */
+    getRoleSelectionsSync(): java_util_Collection | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.pdu.RoleSelection'
+     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
+     */
+    addRoleSelection(var0: org_dcm4che3_net_pdu_RoleSelection | null): Promise<org_dcm4che3_net_pdu_RoleSelection | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.pdu.RoleSelection'
+     * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
+     */
+    addRoleSelectionSync(var0: org_dcm4che3_net_pdu_RoleSelection | null): org_dcm4che3_net_pdu_RoleSelection | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.pdu.UserIdentityAC'
+     * @return original return type: 'void'
+     */
+    setUserIdentityAC(var0: org_dcm4che3_net_pdu_UserIdentityAC | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.pdu.UserIdentityAC'
+     * @return original return type: 'void'
+     */
+    setUserIdentityACSync(var0: org_dcm4che3_net_pdu_UserIdentityAC | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

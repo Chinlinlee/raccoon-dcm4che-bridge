@@ -34,4 +34,3 @@ class Shape extends (0, java_bridge_1.importClass)('java.awt.Shape') {
 }
 exports.Shape = Shape;
 exports.default = Shape;
-//# sourceMappingURL=Shape.js.map

@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { ActiveParticipant as org_dcm4che3_audit_ActiveParticipant } from "./ActiveParticipant";
-import { AuditMessages$UserIDTypeCode as org_dcm4che3_audit_AuditMessages$UserIDTypeCode } from "./AuditMessages$UserIDTypeCode";
 import { AuditMessages$MediaType as org_dcm4che3_audit_AuditMessages$MediaType } from "./AuditMessages$MediaType";
+import { AuditMessages$UserIDTypeCode as org_dcm4che3_audit_AuditMessages$UserIDTypeCode } from "./AuditMessages$UserIDTypeCode";
 import { AuditMessages$RoleIDCode as org_dcm4che3_audit_AuditMessages$RoleIDCode } from "./AuditMessages$RoleIDCode";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
@@ -31,23 +31,15 @@ export declare class ActiveParticipantBuilderClass extends JavaClass {
      */
     userNameSync(var0: string | null): ActiveParticipantBuilder | null;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$MediaType'
      * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
      */
-    altUserID(var0: string | null): Promise<ActiveParticipantBuilder | null>;
+    mediaType(var0: org_dcm4che3_audit_AuditMessages$MediaType | null): Promise<ActiveParticipantBuilder | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$MediaType'
      * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
      */
-    altUserIDSync(var0: string | null): ActiveParticipantBuilder | null;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
-     */
-    isRequester(): Promise<ActiveParticipantBuilder | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
-     */
-    isRequesterSync(): ActiveParticipantBuilder | null;
+    mediaTypeSync(var0: org_dcm4che3_audit_AuditMessages$MediaType | null): ActiveParticipantBuilder | null;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$UserIDTypeCode'
      * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
@@ -59,16 +51,6 @@ export declare class ActiveParticipantBuilderClass extends JavaClass {
      */
     userIDTypeCodeSync(var0: org_dcm4che3_audit_AuditMessages$UserIDTypeCode | null): ActiveParticipantBuilder | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$MediaType'
-     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
-     */
-    mediaType(var0: org_dcm4che3_audit_AuditMessages$MediaType | null): Promise<ActiveParticipantBuilder | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$MediaType'
-     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
-     */
-    mediaTypeSync(var0: org_dcm4che3_audit_AuditMessages$MediaType | null): ActiveParticipantBuilder | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$RoleIDCode[]'
      * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
      */
@@ -78,6 +60,24 @@ export declare class ActiveParticipantBuilderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
      */
     roleIDCodeSync(var0: (org_dcm4che3_audit_AuditMessages$RoleIDCode | null)[] | null): ActiveParticipantBuilder | null;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
+     */
+    isRequester(): Promise<ActiveParticipantBuilder | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
+     */
+    isRequesterSync(): ActiveParticipantBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
+     */
+    altUserID(var0: string | null): Promise<ActiveParticipantBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ActiveParticipantBuilder'
+     */
+    altUserIDSync(var0: string | null): ActiveParticipantBuilder | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -121,11 +121,11 @@ export declare class ActiveParticipantBuilderClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -1,12 +1,12 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { SSLEngineResult as javax_net_ssl_SSLEngineResult } from "./SSLEngineResult";
+import { ByteBuffer as java_nio_ByteBuffer } from "./../../../java/nio/ByteBuffer";
+import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { SSLSession as javax_net_ssl_SSLSession } from "./SSLSession";
 import { BiFunction as java_util_function_BiFunction, BiFunctionInterface as java_util_function_BiFunctionInterface } from "./../../../java/util/function/BiFunction";
 import { Runnable as java_lang_Runnable } from "./../../../java/lang/Runnable";
 import { SSLEngineResult$HandshakeStatus as javax_net_ssl_SSLEngineResult$HandshakeStatus } from "./SSLEngineResult$HandshakeStatus";
-import { SSLEngineResult as javax_net_ssl_SSLEngineResult } from "./SSLEngineResult";
-import { ByteBuffer as java_nio_ByteBuffer } from "./../../../java/nio/ByteBuffer";
-import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { SSLParameters as javax_net_ssl_SSLParameters } from "./SSLParameters";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -16,6 +16,86 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class SSLEngineClass extends JavaClass {
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer[]'
+     * @param var1 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    wrap(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer[]'
+     * @param var1 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    wrapSync(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    wrap(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    wrapSync(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    wrap(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    wrapSync(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer[]'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    unwrap(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null): Promise<javax_net_ssl_SSLEngineResult | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer[]'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    unwrapSync(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null): javax_net_ssl_SSLEngineResult | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    unwrap(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<javax_net_ssl_SSLEngineResult | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    unwrapSync(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): javax_net_ssl_SSLEngineResult | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    unwrap(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'javax.net.ssl.SSLEngineResult'
+     */
+    unwrapSync(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
     /**
      * @return original return type: 'java.lang.String[]'
      */
@@ -263,86 +343,6 @@ export declare class SSLEngineClass extends JavaClass {
      */
     setEnabledProtocolsSync(var0: (string | null)[] | null): void;
     /**
-     * @param var0 original type: 'java.nio.ByteBuffer[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    wrap(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    wrapSync(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    wrap(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    wrapSync(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer[]'
-     * @param var1 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    wrap(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer[]'
-     * @param var1 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    wrapSync(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    unwrap(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): Promise<javax_net_ssl_SSLEngineResult | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    unwrapSync(var0: java_nio_ByteBuffer | null, var1: java_nio_ByteBuffer | null): javax_net_ssl_SSLEngineResult | null;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    unwrap(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<javax_net_ssl_SSLEngineResult | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    unwrapSync(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): javax_net_ssl_SSLEngineResult | null;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer[]'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    unwrap(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null): Promise<javax_net_ssl_SSLEngineResult | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'java.nio.ByteBuffer[]'
-     * @return original return type: 'javax.net.ssl.SSLEngineResult'
-     */
-    unwrapSync(var0: java_nio_ByteBuffer | null, var1: (java_nio_ByteBuffer | null)[] | null): javax_net_ssl_SSLEngineResult | null;
-    /**
      * @param var0 original type: 'javax.net.ssl.SSLParameters'
      * @return original return type: 'void'
      */
@@ -403,7 +403,7 @@ export declare class SSLEngineClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

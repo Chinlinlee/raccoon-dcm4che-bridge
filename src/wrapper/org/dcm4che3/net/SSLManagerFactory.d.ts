@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { KeyStore as java_security_KeyStore } from "./../../../java/security/KeyStore";
-import { KeyManager as javax_net_ssl_KeyManager } from "./../../../javax/net/ssl/KeyManager";
-import { X509Certificate as java_security_cert_X509Certificate } from "./../../../java/security/cert/X509Certificate";
 import { TrustManager as javax_net_ssl_TrustManager } from "./../../../javax/net/ssl/TrustManager";
+import { KeyStore as java_security_KeyStore } from "./../../../java/security/KeyStore";
+import { X509Certificate as java_security_cert_X509Certificate } from "./../../../java/security/cert/X509Certificate";
+import { KeyManager as javax_net_ssl_KeyManager } from "./../../../javax/net/ssl/KeyManager";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -12,6 +12,120 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class SSLManagerFactoryClass extends JavaClass {
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManager(var0: string | null, var1: string | null, var2: string | null): Promise<javax_net_ssl_TrustManager | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManagerSync(var0: string | null, var1: string | null, var2: string | null): javax_net_ssl_TrustManager | null;
+    /**
+     * @param var0 original type: 'java.security.KeyStore'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManager(var0: java_security_KeyStore | null): Promise<javax_net_ssl_TrustManager | null>;
+    /**
+     * @param var0 original type: 'java.security.KeyStore'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManagerSync(var0: java_security_KeyStore | null): javax_net_ssl_TrustManager | null;
+    /**
+     * @param var0 original type: 'java.security.cert.X509Certificate[]'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManager(var0: (java_security_cert_X509Certificate | null)[] | null): Promise<javax_net_ssl_TrustManager | null>;
+    /**
+     * @param var0 original type: 'java.security.cert.X509Certificate[]'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManagerSync(var0: (java_security_cert_X509Certificate | null)[] | null): javax_net_ssl_TrustManager | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'char[]'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManager(var0: string | null, var1: string | null, var2: (string | null)[] | null): Promise<javax_net_ssl_TrustManager | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'char[]'
+     * @return original return type: 'javax.net.ssl.TrustManager'
+     */
+    static createTrustManagerSync(var0: string | null, var1: string | null, var2: (string | null)[] | null): javax_net_ssl_TrustManager | null;
+    /**
+     * @param var0 original type: 'java.security.KeyStore'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManager(var0: java_security_KeyStore | null, var1: string | null): Promise<javax_net_ssl_KeyManager | null>;
+    /**
+     * @param var0 original type: 'java.security.KeyStore'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManagerSync(var0: java_security_KeyStore | null, var1: string | null): javax_net_ssl_KeyManager | null;
+    /**
+     * @param var0 original type: 'java.security.KeyStore'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManager(var0: java_security_KeyStore | null, var1: (string | null)[] | null): Promise<javax_net_ssl_KeyManager | null>;
+    /**
+     * @param var0 original type: 'java.security.KeyStore'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManagerSync(var0: java_security_KeyStore | null, var1: (string | null)[] | null): javax_net_ssl_KeyManager | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'char[]'
+     * @param var3 original type: 'char[]'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManager(var0: string | null, var1: string | null, var2: (string | null)[] | null, var3: (string | null)[] | null): Promise<javax_net_ssl_KeyManager | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'char[]'
+     * @param var3 original type: 'char[]'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManagerSync(var0: string | null, var1: string | null, var2: (string | null)[] | null, var3: (string | null)[] | null): javax_net_ssl_KeyManager | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManager(var0: string | null, var1: string | null, var2: string | null, var3: string | null): Promise<javax_net_ssl_KeyManager | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'javax.net.ssl.KeyManager'
+     */
+    static createKeyManagerSync(var0: string | null, var1: string | null, var2: string | null, var3: string | null): javax_net_ssl_KeyManager | null;
+    /**
+     * @param var0 original type: 'java.security.cert.X509Certificate[]'
+     * @return original return type: 'java.security.KeyStore'
+     */
+    static createKeyStore(var0: (java_security_cert_X509Certificate | null)[] | null): Promise<java_security_KeyStore | null>;
+    /**
+     * @param var0 original type: 'java.security.cert.X509Certificate[]'
+     * @return original return type: 'java.security.KeyStore'
+     */
+    static createKeyStoreSync(var0: (java_security_cert_X509Certificate | null)[] | null): java_security_KeyStore | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -40,120 +154,6 @@ export declare class SSLManagerFactoryClass extends JavaClass {
      * @return original return type: 'java.security.KeyStore'
      */
     static loadKeyStoreSync(var0: string | null, var1: string | null, var2: string | null): java_security_KeyStore | null;
-    /**
-     * @param var0 original type: 'java.security.KeyStore'
-     * @param var1 original type: 'char[]'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManager(var0: java_security_KeyStore | null, var1: (string | null)[] | null): Promise<javax_net_ssl_KeyManager | null>;
-    /**
-     * @param var0 original type: 'java.security.KeyStore'
-     * @param var1 original type: 'char[]'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManagerSync(var0: java_security_KeyStore | null, var1: (string | null)[] | null): javax_net_ssl_KeyManager | null;
-    /**
-     * @param var0 original type: 'java.security.KeyStore'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManager(var0: java_security_KeyStore | null, var1: string | null): Promise<javax_net_ssl_KeyManager | null>;
-    /**
-     * @param var0 original type: 'java.security.KeyStore'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManagerSync(var0: java_security_KeyStore | null, var1: string | null): javax_net_ssl_KeyManager | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManager(var0: string | null, var1: string | null, var2: string | null, var3: string | null): Promise<javax_net_ssl_KeyManager | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManagerSync(var0: string | null, var1: string | null, var2: string | null, var3: string | null): javax_net_ssl_KeyManager | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'char[]'
-     * @param var3 original type: 'char[]'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManager(var0: string | null, var1: string | null, var2: (string | null)[] | null, var3: (string | null)[] | null): Promise<javax_net_ssl_KeyManager | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'char[]'
-     * @param var3 original type: 'char[]'
-     * @return original return type: 'javax.net.ssl.KeyManager'
-     */
-    static createKeyManagerSync(var0: string | null, var1: string | null, var2: (string | null)[] | null, var3: (string | null)[] | null): javax_net_ssl_KeyManager | null;
-    /**
-     * @param var0 original type: 'java.security.cert.X509Certificate[]'
-     * @return original return type: 'java.security.KeyStore'
-     */
-    static createKeyStore(var0: (java_security_cert_X509Certificate | null)[] | null): Promise<java_security_KeyStore | null>;
-    /**
-     * @param var0 original type: 'java.security.cert.X509Certificate[]'
-     * @return original return type: 'java.security.KeyStore'
-     */
-    static createKeyStoreSync(var0: (java_security_cert_X509Certificate | null)[] | null): java_security_KeyStore | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'char[]'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManager(var0: string | null, var1: string | null, var2: (string | null)[] | null): Promise<javax_net_ssl_TrustManager | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'char[]'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManagerSync(var0: string | null, var1: string | null, var2: (string | null)[] | null): javax_net_ssl_TrustManager | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManager(var0: string | null, var1: string | null, var2: string | null): Promise<javax_net_ssl_TrustManager | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManagerSync(var0: string | null, var1: string | null, var2: string | null): javax_net_ssl_TrustManager | null;
-    /**
-     * @param var0 original type: 'java.security.cert.X509Certificate[]'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManager(var0: (java_security_cert_X509Certificate | null)[] | null): Promise<javax_net_ssl_TrustManager | null>;
-    /**
-     * @param var0 original type: 'java.security.cert.X509Certificate[]'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManagerSync(var0: (java_security_cert_X509Certificate | null)[] | null): javax_net_ssl_TrustManager | null;
-    /**
-     * @param var0 original type: 'java.security.KeyStore'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManager(var0: java_security_KeyStore | null): Promise<javax_net_ssl_TrustManager | null>;
-    /**
-     * @param var0 original type: 'java.security.KeyStore'
-     * @return original return type: 'javax.net.ssl.TrustManager'
-     */
-    static createTrustManagerSync(var0: java_security_KeyStore | null): javax_net_ssl_TrustManager | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -197,11 +197,11 @@ export declare class SSLManagerFactoryClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

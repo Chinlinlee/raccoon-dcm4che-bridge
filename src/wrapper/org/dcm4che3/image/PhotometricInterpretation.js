@@ -22,4 +22,3 @@ class PhotometricInterpretation extends (0, java_bridge_1.importClass)('org.dcm4
 }
 exports.PhotometricInterpretation = PhotometricInterpretation;
 exports.default = PhotometricInterpretation;
-//# sourceMappingURL=PhotometricInterpretation.js.map

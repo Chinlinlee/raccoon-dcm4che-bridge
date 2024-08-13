@@ -58,6 +58,26 @@ export declare class AuditMessages$AuditSourceTypeCodeClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
+    setCsdCode(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCsdCodeSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCodeSystemName(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCodeSystemNameSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
     setDisplayName(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
@@ -75,34 +95,6 @@ export declare class AuditMessages$AuditSourceTypeCodeClass extends JavaClass {
      */
     setOriginalTextSync(var0: string | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCodeSystemName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCodeSystemNameSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCsdCode(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCsdCodeSync(var0: string | null): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDisplayName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDisplayNameSync(): string | null;
-    /**
      * @return original return type: 'java.lang.String'
      */
     getCodeSystemName(): Promise<string | null>;
@@ -110,6 +102,14 @@ export declare class AuditMessages$AuditSourceTypeCodeClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getCodeSystemNameSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCodeSystem(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getCodeSystemSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -129,11 +129,11 @@ export declare class AuditMessages$AuditSourceTypeCodeClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    getCodeSystem(): Promise<string | null>;
+    getDisplayName(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getCodeSystemSync(): string | null;
+    getDisplayNameSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -177,11 +177,11 @@ export declare class AuditMessages$AuditSourceTypeCodeClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

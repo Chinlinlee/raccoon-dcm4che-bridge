@@ -1,8 +1,8 @@
 /// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { ParticipantObjectIDTypeCode as org_dcm4che3_audit_ParticipantObjectIDTypeCode } from "./ParticipantObjectIDTypeCode";
-import { ParticipantObjectDescription as org_dcm4che3_audit_ParticipantObjectDescription } from "./ParticipantObjectDescription";
 import { List as java_util_List } from "./../../../java/util/List";
+import { ParticipantObjectDescription as org_dcm4che3_audit_ParticipantObjectDescription } from "./ParticipantObjectDescription";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -12,40 +12,6 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class ParticipantObjectIdentificationClass extends JavaClass {
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
-     */
-    getParticipantObjectIDTypeCode(): Promise<org_dcm4che3_audit_ParticipantObjectIDTypeCode | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
-     */
-    getParticipantObjectIDTypeCodeSync(): org_dcm4che3_audit_ParticipantObjectIDTypeCode | null;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectDescription'
-     */
-    getParticipantObjectDescription(): Promise<org_dcm4che3_audit_ParticipantObjectDescription | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectDescription'
-     */
-    getParticipantObjectDescriptionSync(): org_dcm4che3_audit_ParticipantObjectDescription | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParticipantObjectID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParticipantObjectIDSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectTypeCodeRole(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectTypeCodeRoleSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -57,33 +23,13 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      */
     setParticipantObjectNameSync(var0: string | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    setParticipantObjectDataLifeCycle(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectDataLifeCycleSync(var0: string | null): void;
+    getParticipantObjectDataLifeCycle(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getParticipantObjectName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParticipantObjectNameSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectID(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectIDSync(var0: string | null): void;
+    getParticipantObjectDataLifeCycleSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -95,21 +41,23 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      */
     setParticipantObjectTypeCodeSync(var0: string | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getParticipantObjectTypeCodeRole(): Promise<string | null>;
+    setParticipantObjectDataLifeCycle(var0: string | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getParticipantObjectTypeCodeRoleSync(): string | null;
+    setParticipantObjectDataLifeCycleSync(var0: string | null): void;
     /**
-     * @return original return type: 'byte[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
      */
-    getParticipantObjectQuery(): Promise<Buffer | null>;
+    getParticipantObjectIDTypeCode(): Promise<org_dcm4che3_audit_ParticipantObjectIDTypeCode | null>;
     /**
-     * @return original return type: 'byte[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
      */
-    getParticipantObjectQuerySync(): Buffer | null;
+    getParticipantObjectIDTypeCodeSync(): org_dcm4che3_audit_ParticipantObjectIDTypeCode | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -119,15 +67,13 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      */
     getParticipantObjectDetailSync(): java_util_List | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    setParticipantObjectIDTypeCode(var0: org_dcm4che3_audit_ParticipantObjectIDTypeCode | null): Promise<void>;
+    getParticipantObjectID(): Promise<string | null>;
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    setParticipantObjectIDTypeCodeSync(var0: org_dcm4che3_audit_ParticipantObjectIDTypeCode | null): void;
+    getParticipantObjectIDSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -136,24 +82,6 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getParticipantObjectSensitivitySync(): string | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectQuery(var0: Buffer | null): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    setParticipantObjectQuerySync(var0: Buffer | null): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParticipantObjectTypeCode(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParticipantObjectTypeCodeSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -165,13 +93,21 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      */
     setParticipantObjectSensitivitySync(var0: string | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'byte[]'
      */
-    getParticipantObjectDataLifeCycle(): Promise<string | null>;
+    getParticipantObjectQuery(): Promise<Buffer | null>;
+    /**
+     * @return original return type: 'byte[]'
+     */
+    getParticipantObjectQuerySync(): Buffer | null;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getParticipantObjectDataLifeCycleSync(): string | null;
+    getParticipantObjectTypeCodeRole(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParticipantObjectTypeCodeRoleSync(): string | null;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDescription'
      * @return original return type: 'void'
@@ -182,6 +118,70 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      * @return original return type: 'void'
      */
     setParticipantObjectDescriptionSync(var0: org_dcm4che3_audit_ParticipantObjectDescription | null): void;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectDescription'
+     */
+    getParticipantObjectDescription(): Promise<org_dcm4che3_audit_ParticipantObjectDescription | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectDescription'
+     */
+    getParticipantObjectDescriptionSync(): org_dcm4che3_audit_ParticipantObjectDescription | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectID(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectIDSync(var0: string | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParticipantObjectTypeCode(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParticipantObjectTypeCodeSync(): string | null;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectQuery(var0: Buffer | null): Promise<void>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectQuerySync(var0: Buffer | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectIDTypeCode(var0: org_dcm4che3_audit_ParticipantObjectIDTypeCode | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectIDTypeCode'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectIDTypeCodeSync(var0: org_dcm4che3_audit_ParticipantObjectIDTypeCode | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectTypeCodeRole(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setParticipantObjectTypeCodeRoleSync(var0: string | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParticipantObjectName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParticipantObjectNameSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -225,11 +225,11 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

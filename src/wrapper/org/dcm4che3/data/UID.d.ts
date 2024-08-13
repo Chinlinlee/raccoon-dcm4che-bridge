@@ -203,6 +203,26 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly HTJ2KLossless: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly HTJ2KLosslessRPCL: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly HTJ2K: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly JPIPHTJ2KReferenced: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly JPIPHTJ2KReferencedDeflate: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly RLELossless: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -623,6 +643,10 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly PhotoacousticImageStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly SecondaryCaptureImageStorage: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -664,6 +688,10 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly AmbulatoryECGWaveformStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly General32bitECGWaveformStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -764,6 +792,10 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly MultipleVolumeRenderingVolumetricPresentationStateStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly VariableModalityLUTSoftcopyPresentationStateStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -944,6 +976,14 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly DermoscopicPhotographyImageStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly ConfocalMicroscopyImageStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly ConfocalMicroscopyTiledPyramidalImageStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -1787,6 +1827,14 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly PrivateDcm4cheEncapsulatedBzip2VCFStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly PrivateDcm4cheEncapsulatedBzip2DocumentStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly PrivateAgfaBasicAttributePresentationState: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -2079,11 +2127,11 @@ export declare class UIDClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

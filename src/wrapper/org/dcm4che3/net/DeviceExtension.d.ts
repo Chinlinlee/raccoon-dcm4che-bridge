@@ -19,16 +19,6 @@ export declare class DeviceExtensionClass extends JavaClass {
      */
     getDeviceSync(): org_dcm4che3_net_Device | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
-     * @return original return type: 'void'
-     */
-    verifyNotUsed(var0: org_dcm4che3_net_Connection | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
-     * @return original return type: 'void'
-     */
-    verifyNotUsedSync(var0: org_dcm4che3_net_Connection | null): void;
-    /**
      * @param var0 original type: 'org.dcm4che3.net.DeviceExtension'
      * @return original return type: 'void'
      */
@@ -38,6 +28,16 @@ export declare class DeviceExtensionClass extends JavaClass {
      * @return original return type: 'void'
      */
     reconfigureSync(var0: DeviceExtensionClass | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @return original return type: 'void'
+     */
+    verifyNotUsed(var0: org_dcm4che3_net_Connection | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @return original return type: 'void'
+     */
+    verifyNotUsedSync(var0: org_dcm4che3_net_Connection | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -81,7 +81,7 @@ export declare class DeviceExtensionClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

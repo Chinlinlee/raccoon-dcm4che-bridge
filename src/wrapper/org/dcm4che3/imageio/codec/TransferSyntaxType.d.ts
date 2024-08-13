@@ -94,23 +94,51 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      */
     static valueOfSync(var0: java_lang_Class | null, var1: string | null): java_lang_Enum | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
+     */
+    static forUID(var0: string | null): Promise<TransferSyntaxType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
+     */
+    static forUIDSync(var0: string | null): TransferSyntaxType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
-    mayFrameSpanMultipleFragments(): Promise<boolean>;
+    static isLossyCompression(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static isLossyCompressionSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static isYBRCompression(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    static isYBRCompressionSync(var0: string | null): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getMaxBitsStored(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getMaxBitsStoredSync(): number;
     /**
      * @return original return type: 'boolean'
      */
-    mayFrameSpanMultipleFragmentsSync(): boolean;
+    canEncodeSigned(): Promise<boolean>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'boolean'
      */
-    adjustBitsStoredTo12(var0: org_dcm4che3_data_Attributes | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    adjustBitsStoredTo12Sync(var0: org_dcm4che3_data_Attributes | null): boolean;
+    canEncodeSignedSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -128,51 +156,23 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      */
     getPlanarConfigurationSync(): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
      */
-    static forUID(var0: string | null): Promise<TransferSyntaxType | null>;
+    adjustBitsStoredTo12(var0: org_dcm4che3_data_Attributes | null): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
      */
-    static forUIDSync(var0: string | null): TransferSyntaxType | null;
+    adjustBitsStoredTo12Sync(var0: org_dcm4che3_data_Attributes | null): boolean;
     /**
      * @return original return type: 'boolean'
      */
-    canEncodeSigned(): Promise<boolean>;
+    mayFrameSpanMultipleFragments(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
-    canEncodeSignedSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxBitsStored(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxBitsStoredSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static isYBRCompression(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static isYBRCompressionSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static isLossyCompression(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    static isLossyCompressionSync(var0: string | null): boolean;
+    mayFrameSpanMultipleFragmentsSync(): boolean;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -194,7 +194,7 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

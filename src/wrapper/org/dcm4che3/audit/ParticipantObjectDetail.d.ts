@@ -10,6 +10,16 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class ParticipantObjectDetailClass extends JavaClass {
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setType(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setTypeSync(var0: string | null): void;
+    /**
      * @return original return type: 'byte[]'
      */
     getValue(): Promise<Buffer | null>;
@@ -35,16 +45,6 @@ export declare class ParticipantObjectDetailClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getTypeSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setType(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setTypeSync(var0: string | null): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -88,11 +88,11 @@ export declare class ParticipantObjectDetailClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -17,6 +17,26 @@ export declare class ParticipantObjectIdentificationBuilderClass extends JavaCla
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
+    sensitivity(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     */
+    sensitivitySync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     */
+    lifeCycle(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     */
+    lifeCycleSync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     */
     name(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
     /**
      * @param var0 original type: 'java.lang.String'
@@ -62,26 +82,6 @@ export declare class ParticipantObjectIdentificationBuilderClass extends JavaCla
      */
     detailSync(var0: (org_dcm4che3_audit_ParticipantObjectDetail | null)[] | null): ParticipantObjectIdentificationBuilder | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    lifeCycle(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    lifeCycleSync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    sensitivity(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    sensitivitySync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -124,11 +124,11 @@ export declare class ParticipantObjectIdentificationBuilderClass extends JavaCla
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

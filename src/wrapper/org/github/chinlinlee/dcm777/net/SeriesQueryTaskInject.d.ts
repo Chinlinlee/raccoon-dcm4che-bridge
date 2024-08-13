@@ -6,14 +6,6 @@ import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridg
  */
 export declare class SeriesQueryTaskInjectClass extends JavaClass {
     /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextSeries(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextSeriesSync(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextSeries(): Promise<boolean>;
@@ -29,6 +21,14 @@ export declare class SeriesQueryTaskInjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     getSeriesSync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextSeries(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextSeriesSync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -43,10 +43,6 @@ export declare class SeriesQueryTaskInjectClass extends JavaClass {
  */
 export interface SeriesQueryTaskInjectInterface {
     /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextSeries(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextSeries(): boolean;
@@ -54,6 +50,10 @@ export interface SeriesQueryTaskInjectInterface {
      * @return original return type: 'void'
      */
     getSeries(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextSeries(): void;
 }
 /**
  * Create a proxy for the {@link SeriesQueryTaskInject} interface.

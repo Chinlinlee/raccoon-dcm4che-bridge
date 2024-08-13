@@ -3,8 +3,8 @@ import { BulkDataDescriptor as org_dcm4che3_io_BulkDataDescriptor, BulkDataDescr
 import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../java/util/List";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { VR as org_dcm4che3_data_VR } from "./../data/VR";
-import { AttributeSelector as org_dcm4che3_data_AttributeSelector } from "./../data/AttributeSelector";
 import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
+import { AttributeSelector as org_dcm4che3_data_AttributeSelector } from "./../data/AttributeSelector";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 /**
@@ -39,82 +39,6 @@ export declare class BasicBulkDataDescriptorClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isBulkDataSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var1: string | null, var2: java_lang_Integer | number, var3: org_dcm4che3_data_VR | null, var4: java_lang_Integer | number): boolean;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getLengthsThresholdsAsStrings(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getLengthsThresholdsAsStringsSync(): (string | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getBulkDataDescriptorID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getBulkDataDescriptorIDSync(): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR[]'
-     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
-     */
-    addLengthsThreshold(var0: java_lang_Integer | number, var1: (org_dcm4che3_data_VR | null)[] | null): Promise<BasicBulkDataDescriptor | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR[]'
-     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
-     */
-    addLengthsThresholdSync(var0: java_lang_Integer | number, var1: (org_dcm4che3_data_VR | null)[] | null): BasicBulkDataDescriptor | null;
-    /**
-     * @return original return type: 'org.dcm4che3.data.AttributeSelector[]'
-     */
-    getAttributeSelectors(): Promise<(org_dcm4che3_data_AttributeSelector | null)[] | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.AttributeSelector[]'
-     */
-    getAttributeSelectorsSync(): (org_dcm4che3_data_AttributeSelector | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setLengthsThresholdsFromStrings(var0: (string | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setLengthsThresholdsFromStringsSync(var0: (string | null)[] | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setBulkDataDescriptorID(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setBulkDataDescriptorIDSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.AttributeSelector[]'
-     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
-     */
-    addAttributeSelector(var0: (org_dcm4che3_data_AttributeSelector | null)[] | null): Promise<BasicBulkDataDescriptor | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.AttributeSelector[]'
-     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
-     */
-    addAttributeSelectorSync(var0: (org_dcm4che3_data_AttributeSelector | null)[] | null): BasicBulkDataDescriptor | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setAttributeSelectorsFromStrings(var0: (string | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setAttributeSelectorsFromStringsSync(var0: (string | null)[] | null): void;
     /**
      * @param var0 original type: 'int[]'
      * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
@@ -162,6 +86,82 @@ export declare class BasicBulkDataDescriptorClass extends JavaClass {
      */
     addTagSync(var0: (java_lang_Integer | number)[] | null): BasicBulkDataDescriptor | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR[]'
+     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
+     */
+    addLengthsThreshold(var0: java_lang_Integer | number, var1: (org_dcm4che3_data_VR | null)[] | null): Promise<BasicBulkDataDescriptor | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR[]'
+     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
+     */
+    addLengthsThresholdSync(var0: java_lang_Integer | number, var1: (org_dcm4che3_data_VR | null)[] | null): BasicBulkDataDescriptor | null;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getLengthsThresholdsAsStrings(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getLengthsThresholdsAsStringsSync(): (string | null)[] | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getBulkDataDescriptorID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getBulkDataDescriptorIDSync(): string | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.AttributeSelector[]'
+     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
+     */
+    addAttributeSelector(var0: (org_dcm4che3_data_AttributeSelector | null)[] | null): Promise<BasicBulkDataDescriptor | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.AttributeSelector[]'
+     * @return original return type: 'org.dcm4che3.io.BasicBulkDataDescriptor'
+     */
+    addAttributeSelectorSync(var0: (org_dcm4che3_data_AttributeSelector | null)[] | null): BasicBulkDataDescriptor | null;
+    /**
+     * @return original return type: 'org.dcm4che3.data.AttributeSelector[]'
+     */
+    getAttributeSelectors(): Promise<(org_dcm4che3_data_AttributeSelector | null)[] | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.AttributeSelector[]'
+     */
+    getAttributeSelectorsSync(): (org_dcm4che3_data_AttributeSelector | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setAttributeSelectorsFromStrings(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setAttributeSelectorsFromStringsSync(var0: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setBulkDataDescriptorID(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setBulkDataDescriptorIDSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setLengthsThresholdsFromStrings(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setLengthsThresholdsFromStringsSync(var0: (string | null)[] | null): void;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -204,11 +204,11 @@ export declare class BasicBulkDataDescriptorClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

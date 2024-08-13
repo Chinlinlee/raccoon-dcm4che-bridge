@@ -26,15 +26,15 @@ export declare class DicomServiceRegistryClass extends JavaClass {
      */
     onCloseSync(var0: org_dcm4che3_net_Association | null): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.service.DicomService'
+     * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
      */
-    addDicomService(var0: org_dcm4che3_net_service_DicomService | JavaInterfaceProxy<org_dcm4che3_net_service_DicomServiceInterface> | null): Promise<void>;
+    removeDimseRQHandler(var0: (string | null)[] | null): Promise<void>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.service.DicomService'
+     * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
      */
-    addDicomServiceSync(var0: org_dcm4che3_net_service_DicomService | JavaInterfaceProxy<org_dcm4che3_net_service_DicomServiceInterface> | null): void;
+    removeDimseRQHandlerSync(var0: (string | null)[] | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.net.service.DicomService'
      * @return original return type: 'void'
@@ -58,15 +58,15 @@ export declare class DicomServiceRegistryClass extends JavaClass {
      */
     addDimseRQHandlerSync(var0: org_dcm4che3_net_DimseRQHandler | JavaInterfaceProxy<org_dcm4che3_net_DimseRQHandlerInterface> | null, var1: (string | null)[] | null): void;
     /**
-     * @param var0 original type: 'java.lang.String[]'
+     * @param var0 original type: 'org.dcm4che3.net.service.DicomService'
      * @return original return type: 'void'
      */
-    removeDimseRQHandler(var0: (string | null)[] | null): Promise<void>;
+    addDicomService(var0: org_dcm4che3_net_service_DicomService | JavaInterfaceProxy<org_dcm4che3_net_service_DicomServiceInterface> | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String[]'
+     * @param var0 original type: 'org.dcm4che3.net.service.DicomService'
      * @return original return type: 'void'
      */
-    removeDimseRQHandlerSync(var0: (string | null)[] | null): void;
+    addDicomServiceSync(var0: org_dcm4che3_net_service_DicomService | JavaInterfaceProxy<org_dcm4che3_net_service_DicomServiceInterface> | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -128,11 +128,11 @@ export declare class DicomServiceRegistryClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -83,7 +83,7 @@ export declare class AuditMessages$ParticipantObjectIDTypeCodeClass extends Java
     /**
      * Original type: 'org.dcm4che3.audit.AuditMessages$ParticipantObjectIDTypeCode'
      */
-    static readonly QIDO_QUERY: AuditMessages$ParticipantObjectIDTypeCodeClass | null;
+    static readonly REST: AuditMessages$ParticipantObjectIDTypeCodeClass | null;
     /**
      * Original type: 'org.dcm4che3.audit.AuditMessages$ParticipantObjectIDTypeCode'
      */
@@ -100,6 +100,16 @@ export declare class AuditMessages$ParticipantObjectIDTypeCodeClass extends Java
      * Original type: 'org.dcm4che3.audit.AuditMessages$ParticipantObjectIDTypeCode'
      */
     static readonly DeviceName: AuditMessages$ParticipantObjectIDTypeCodeClass | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCodeSystem(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCodeSystemSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -134,16 +144,6 @@ export declare class AuditMessages$ParticipantObjectIDTypeCodeClass extends Java
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setCodeSystem(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCodeSystemSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     setOriginalText(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
@@ -153,19 +153,11 @@ export declare class AuditMessages$ParticipantObjectIDTypeCodeClass extends Java
     /**
      * @return original return type: 'java.lang.String'
      */
-    getDisplayName(): Promise<string | null>;
+    getCodeSystemName(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getDisplayNameSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCsdCode(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCsdCodeSync(): string | null;
+    getCodeSystemNameSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -185,11 +177,19 @@ export declare class AuditMessages$ParticipantObjectIDTypeCodeClass extends Java
     /**
      * @return original return type: 'java.lang.String'
      */
-    getCodeSystemName(): Promise<string | null>;
+    getCsdCode(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getCodeSystemNameSync(): string | null;
+    getCsdCodeSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayNameSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -233,11 +233,11 @@ export declare class AuditMessages$ParticipantObjectIDTypeCodeClass extends Java
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

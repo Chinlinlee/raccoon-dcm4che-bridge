@@ -372,22 +372,6 @@ export declare class Rectangle2DClass extends JavaClass {
     /**
      * @return original return type: 'double'
      */
-    getHeight(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getHeightSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
-    getWidth(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getWidthSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
     getMinX(): Promise<number>;
     /**
      * @return original return type: 'double'
@@ -514,6 +498,22 @@ export declare class Rectangle2DClass extends JavaClass {
      */
     getFrameSync(): Rectangle2D | null;
     /**
+     * @return original return type: 'double'
+     */
+    getHeight(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getHeightSync(): number;
+    /**
+     * @return original return type: 'double'
+     */
+    getWidth(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getWidthSync(): number;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -546,7 +546,7 @@ export declare class Rectangle2DClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

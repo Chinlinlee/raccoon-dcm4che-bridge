@@ -155,6 +155,16 @@ export declare class RecordTypeClass extends JavaClass {
      */
     static readonly PRIVATE: RecordTypeClass | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.media.RecordType'
+     */
+    static forCode(var0: string | null): Promise<RecordType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.media.RecordType'
+     */
+    static forCodeSync(var0: string | null): RecordType | null;
+    /**
      * @return original return type: 'org.dcm4che3.media.RecordType[]'
      */
     static values(): Promise<(RecordType | null)[] | null>;
@@ -193,16 +203,6 @@ export declare class RecordTypeClass extends JavaClass {
      */
     codeSync(): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.media.RecordType'
-     */
-    static forCode(var0: string | null): Promise<RecordType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.media.RecordType'
-     */
-    static forCodeSync(var0: string | null): RecordType | null;
-    /**
      * @return original return type: 'java.lang.String'
      */
     name(): Promise<string | null>;
@@ -223,11 +223,11 @@ export declare class RecordTypeClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

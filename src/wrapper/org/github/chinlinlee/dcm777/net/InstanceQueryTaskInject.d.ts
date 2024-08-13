@@ -14,14 +14,6 @@ export declare class InstanceQueryTaskInjectClass extends JavaClass {
      */
     getInstanceSync(): void;
     /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextInstance(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextInstanceSync(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextInstance(): Promise<boolean>;
@@ -29,6 +21,14 @@ export declare class InstanceQueryTaskInjectClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     findNextInstanceSync(): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextInstance(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextInstanceSync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -47,13 +47,13 @@ export interface InstanceQueryTaskInjectInterface {
      */
     getInstance(): void;
     /**
-     * @return original return type: 'void'
-     */
-    wrappedFindNextInstance(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextInstance(): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    wrappedFindNextInstance(): void;
 }
 /**
  * Create a proxy for the {@link InstanceQueryTaskInject} interface.

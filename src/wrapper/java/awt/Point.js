@@ -15,4 +15,3 @@ class Point extends (0, java_bridge_1.importClass)('java.awt.Point') {
 }
 exports.Point = Point;
 exports.default = Point;
-//# sourceMappingURL=Point.js.map

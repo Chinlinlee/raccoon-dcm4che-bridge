@@ -15,4 +15,3 @@ class AffineTransform extends (0, java_bridge_1.importClass)('java.awt.geom.Affi
 }
 exports.AffineTransform = AffineTransform;
 exports.default = AffineTransform;
-//# sourceMappingURL=AffineTransform.js.map

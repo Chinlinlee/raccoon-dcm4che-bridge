@@ -2,11 +2,11 @@ import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Enum as java_lang_Enum } from "./../../../java/lang/Enum";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { SampleModel as java_awt_image_SampleModel } from "./../../../java/awt/image/SampleModel";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { ColorModel as java_awt_image_ColorModel } from "./../../../java/awt/image/ColorModel";
 import { ColorSpace as java_awt_color_ColorSpace } from "./../../../java/awt/color/ColorSpace";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../data/Attributes";
+import { SampleModel as java_awt_image_SampleModel } from "./../../../java/awt/image/SampleModel";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { Optional as java_util_Optional } from "./../../../java/util/Optional";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 /**
@@ -112,23 +112,21 @@ export declare class PhotometricInterpretationClass extends JavaClass {
      */
     frameLengthSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'boolean'
-     * @return original return type: 'java.awt.image.SampleModel'
+     * @return original return type: 'boolean'
      */
-    createSampleModel(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean): Promise<java_awt_image_SampleModel | null>;
+    isYBR(): Promise<boolean>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'boolean'
-     * @return original return type: 'java.awt.image.SampleModel'
+     * @return original return type: 'boolean'
      */
-    createSampleModelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean): java_awt_image_SampleModel | null;
+    isYBRSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isSubSampled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isSubSampledSync(): boolean;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -146,21 +144,23 @@ export declare class PhotometricInterpretationClass extends JavaClass {
      */
     createColorModelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_color_ColorSpace | null, var3: org_dcm4che3_data_Attributes | null): java_awt_image_ColorModel | null;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'boolean'
+     * @return original return type: 'java.awt.image.SampleModel'
      */
-    isSubSampled(): Promise<boolean>;
+    createSampleModel(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean): Promise<java_awt_image_SampleModel | null>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'boolean'
+     * @return original return type: 'java.awt.image.SampleModel'
      */
-    isSubSampledSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isYBR(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isYBRSync(): boolean;
+    createSampleModelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean): java_awt_image_SampleModel | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.image.PhotometricInterpretation'
@@ -208,7 +208,7 @@ export declare class PhotometricInterpretationClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

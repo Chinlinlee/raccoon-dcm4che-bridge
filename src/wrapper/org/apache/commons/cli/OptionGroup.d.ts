@@ -14,11 +14,11 @@ export declare class OptionGroupClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @param var0 original type: 'org.apache.commons.cli.Option'
      * @return original return type: 'org.apache.commons.cli.OptionGroup'
@@ -38,23 +38,13 @@ export declare class OptionGroupClass extends JavaClass {
      */
     getOptionsSync(): java_util_Collection | null;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.Collection'
      */
-    isRequired(): Promise<boolean>;
+    getNames(): Promise<java_util_Collection | null>;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.Collection'
      */
-    isRequiredSync(): boolean;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRequired(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRequiredSync(var0: java_lang_Boolean | boolean): void;
+    getNamesSync(): java_util_Collection | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -74,13 +64,23 @@ export declare class OptionGroupClass extends JavaClass {
      */
     setSelectedSync(var0: org_apache_commons_cli_Option | null): void;
     /**
-     * @return original return type: 'java.util.Collection'
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
      */
-    getNames(): Promise<java_util_Collection | null>;
+    setRequired(var0: java_lang_Boolean | boolean): Promise<void>;
     /**
-     * @return original return type: 'java.util.Collection'
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
      */
-    getNamesSync(): java_util_Collection | null;
+    setRequiredSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRequired(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRequiredSync(): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

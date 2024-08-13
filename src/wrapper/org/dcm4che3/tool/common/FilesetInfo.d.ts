@@ -20,6 +20,30 @@ export declare class FilesetInfoClass extends JavaClass {
      */
     setDescriptorFileCharsetSync(var0: string | null): void;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDescriptorFileCharset(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDescriptorFileCharsetSync(): string | null;
+    /**
+     * @return original return type: 'java.io.File'
+     */
+    getDescriptorFile(): Promise<java_io_File | null>;
+    /**
+     * @return original return type: 'java.io.File'
+     */
+    getDescriptorFileSync(): java_io_File | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFilesetID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFilesetIDSync(): string | null;
+    /**
      * @param var0 original type: 'java.io.File'
      * @return original return type: 'void'
      */
@@ -33,16 +57,6 @@ export declare class FilesetInfoClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setFilesetID(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setFilesetIDSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     setFilesetUID(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
@@ -50,13 +64,15 @@ export declare class FilesetInfoClass extends JavaClass {
      */
     setFilesetUIDSync(var0: string | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getDescriptorFileCharset(): Promise<string | null>;
+    setFilesetID(var0: string | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    getDescriptorFileCharsetSync(): string | null;
+    setFilesetIDSync(var0: string | null): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -65,22 +81,6 @@ export declare class FilesetInfoClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getFilesetUIDSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFilesetID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFilesetIDSync(): string | null;
-    /**
-     * @return original return type: 'java.io.File'
-     */
-    getDescriptorFile(): Promise<java_io_File | null>;
-    /**
-     * @return original return type: 'java.io.File'
-     */
-    getDescriptorFileSync(): java_io_File | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -124,11 +124,11 @@ export declare class FilesetInfoClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

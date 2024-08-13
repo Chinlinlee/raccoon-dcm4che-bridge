@@ -26,6 +26,16 @@ export declare class InstanceLocatorClass extends JavaClass {
      */
     readonly uri: string | null;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'org.dcm4che3.net.service.InstanceLocator'
+     */
+    setObject(var0: BasicOrJavaType | null): Promise<InstanceLocator | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'org.dcm4che3.net.service.InstanceLocator'
+     */
+    setObjectSync(var0: BasicOrJavaType | null): InstanceLocator | null;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     getObject(): Promise<BasicOrJavaType | null>;
@@ -41,16 +51,6 @@ export declare class InstanceLocatorClass extends JavaClass {
      * @return original return type: 'java.io.File'
      */
     getFileSync(): java_io_File | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'org.dcm4che3.net.service.InstanceLocator'
-     */
-    setObject(var0: BasicOrJavaType | null): Promise<InstanceLocator | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'org.dcm4che3.net.service.InstanceLocator'
-     */
-    setObjectSync(var0: BasicOrJavaType | null): InstanceLocator | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -94,7 +94,7 @@ export declare class InstanceLocatorClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

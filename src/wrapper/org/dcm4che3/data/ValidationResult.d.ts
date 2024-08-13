@@ -13,35 +13,61 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class ValidationResultClass extends JavaClass {
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    addMissingAttributeValue(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
+    toString(): string;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    addMissingAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
+    toStringSync(): string;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    addMissingAttribute(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
+    isValid(): Promise<boolean>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    addMissingAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
+    isValidSync(): boolean;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    addNotAllowedAttribute(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
+    hasMissingAttributeValues(): Promise<boolean>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    addNotAllowedAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
+    hasMissingAttributeValuesSync(): boolean;
+    /**
+     * @return original return type: 'int[]'
+     */
+    tagsOfMissingAttributes(): Promise<(number)[] | null>;
+    /**
+     * @return original return type: 'int[]'
+     */
+    tagsOfMissingAttributesSync(): (number)[] | null;
+    /**
+     * @return original return type: 'int[]'
+     */
+    tagsOfMissingAttributeValues(): Promise<(number)[] | null>;
+    /**
+     * @return original return type: 'int[]'
+     */
+    tagsOfMissingAttributeValuesSync(): (number)[] | null;
+    /**
+     * @return original return type: 'int[]'
+     */
+    tagsOfInvalidAttributeValues(): Promise<(number)[] | null>;
+    /**
+     * @return original return type: 'int[]'
+     */
+    tagsOfInvalidAttributeValuesSync(): (number)[] | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasInvalidAttributeValues(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasInvalidAttributeValuesSync(): boolean;
     /**
      * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
      * @param var1 original type: 'org.dcm4che3.data.ValidationResult$Invalid'
@@ -71,95 +97,35 @@ export declare class ValidationResultClass extends JavaClass {
      */
     addInvalidAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult$Invalid | null, var2: (ValidationResultClass | null)[] | null, var3: (org_dcm4che3_data_IOD | null)[] | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
      */
-    toString(): Promise<string>;
+    addMissingAttribute(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
      */
-    toStringSync(): string;
+    addMissingAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
      */
-    isValid(): Promise<boolean>;
+    addMissingAttributeValue(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
      */
-    isValidSync(): boolean;
+    addMissingAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
      */
-    asText(var0: org_dcm4che3_data_Attributes | null): Promise<string | null>;
+    addNotAllowedAttribute(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
      */
-    asTextSync(var0: org_dcm4che3_data_Attributes | null): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getErrorComment(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getErrorCommentSync(): string | null;
-    /**
-     * @return original return type: 'int[]'
-     */
-    tagsOfNotAllowedAttributes(): Promise<(number)[] | null>;
-    /**
-     * @return original return type: 'int[]'
-     */
-    tagsOfNotAllowedAttributesSync(): (number)[] | null;
-    /**
-     * @return original return type: 'int[]'
-     */
-    tagsOfInvalidAttributeValues(): Promise<(number)[] | null>;
-    /**
-     * @return original return type: 'int[]'
-     */
-    tagsOfInvalidAttributeValuesSync(): (number)[] | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasMissingAttributes(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasMissingAttributesSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasInvalidAttributeValues(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasInvalidAttributeValuesSync(): boolean;
-    /**
-     * @return original return type: 'int[]'
-     */
-    tagsOfMissingAttributes(): Promise<(number)[] | null>;
-    /**
-     * @return original return type: 'int[]'
-     */
-    tagsOfMissingAttributesSync(): (number)[] | null;
-    /**
-     * @return original return type: 'int[]'
-     */
-    getOffendingElements(): Promise<(number)[] | null>;
-    /**
-     * @return original return type: 'int[]'
-     */
-    getOffendingElementsSync(): (number)[] | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasMissingAttributeValues(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasMissingAttributeValuesSync(): boolean;
+    addNotAllowedAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -171,11 +137,45 @@ export declare class ValidationResultClass extends JavaClass {
     /**
      * @return original return type: 'int[]'
      */
-    tagsOfMissingAttributeValues(): Promise<(number)[] | null>;
+    tagsOfNotAllowedAttributes(): Promise<(number)[] | null>;
     /**
      * @return original return type: 'int[]'
      */
-    tagsOfMissingAttributeValuesSync(): (number)[] | null;
+    tagsOfNotAllowedAttributesSync(): (number)[] | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasMissingAttributes(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasMissingAttributesSync(): boolean;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getErrorComment(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getErrorCommentSync(): string | null;
+    /**
+     * @return original return type: 'int[]'
+     */
+    getOffendingElements(): Promise<(number)[] | null>;
+    /**
+     * @return original return type: 'int[]'
+     */
+    getOffendingElementsSync(): (number)[] | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'java.lang.String'
+     */
+    asText(var0: org_dcm4che3_data_Attributes | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'java.lang.String'
+     */
+    asTextSync(var0: org_dcm4che3_data_Attributes | null): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'

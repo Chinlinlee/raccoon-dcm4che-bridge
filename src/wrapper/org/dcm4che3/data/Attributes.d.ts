@@ -1,31 +1,31 @@
 /// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { VR as org_dcm4che3_data_VR } from "./VR";
-import { ItemPointer as org_dcm4che3_data_ItemPointer } from "./ItemPointer";
-import { Sequence as org_dcm4che3_data_Sequence } from "./Sequence";
-import { Long as java_lang_Long } from "./../../../java/lang/Long";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
-import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../java/util/List";
-import { SpecificCharacterSet as org_dcm4che3_data_SpecificCharacterSet } from "./SpecificCharacterSet";
-import { DicomOutputStream as org_dcm4che3_io_DicomOutputStream } from "./../io/DicomOutputStream";
-import { Date as java_util_Date } from "./../../../java/util/Date";
 import { Attributes$UpdatePolicy as org_dcm4che3_data_Attributes$UpdatePolicy } from "./Attributes$UpdatePolicy";
-import { DatePrecisions as org_dcm4che3_data_DatePrecisions } from "./DatePrecisions";
-import { TimeZone as java_util_TimeZone } from "./../../../java/util/TimeZone";
-import { DateRange as org_dcm4che3_data_DateRange } from "./DateRange";
-import { Fragments as org_dcm4che3_data_Fragments } from "./Fragments";
-import { DatePrecision as org_dcm4che3_data_DatePrecision } from "./DatePrecision";
-import { DicomEncodingOptions as org_dcm4che3_io_DicomEncodingOptions } from "./../io/DicomEncodingOptions";
-import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
+import { VR as org_dcm4che3_data_VR } from "./VR";
+import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Float as java_lang_Float } from "./../../../java/lang/Float";
 import { Double as java_lang_Double } from "./../../../java/lang/Double";
 import { VR$Holder as org_dcm4che3_data_VR$Holder } from "./VR$Holder";
-import { IOD$DataElement as org_dcm4che3_data_IOD$DataElement } from "./IOD$DataElement";
 import { ValidationResult as org_dcm4che3_data_ValidationResult } from "./ValidationResult";
 import { IOD as org_dcm4che3_data_IOD } from "./IOD";
+import { IOD$DataElement as org_dcm4che3_data_IOD$DataElement } from "./IOD$DataElement";
 import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../../../java/util/Map";
 import { Attributes$Visitor as org_dcm4che3_data_Attributes$Visitor, Attributes$VisitorInterface as org_dcm4che3_data_Attributes$VisitorInterface } from "./Attributes$Visitor";
+import { DicomOutputStream as org_dcm4che3_io_DicomOutputStream } from "./../io/DicomOutputStream";
+import { TimeZone as java_util_TimeZone } from "./../../../java/util/TimeZone";
+import { Date as java_util_Date } from "./../../../java/util/Date";
+import { DatePrecision as org_dcm4che3_data_DatePrecision } from "./DatePrecision";
+import { ItemPointer as org_dcm4che3_data_ItemPointer } from "./ItemPointer";
+import { SpecificCharacterSet as org_dcm4che3_data_SpecificCharacterSet } from "./SpecificCharacterSet";
+import { Sequence as org_dcm4che3_data_Sequence } from "./Sequence";
+import { DatePrecisions as org_dcm4che3_data_DatePrecisions } from "./DatePrecisions";
+import { DateRange as org_dcm4che3_data_DateRange } from "./DateRange";
+import { Fragments as org_dcm4che3_data_Fragments } from "./Fragments";
+import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../java/util/List";
+import { DicomEncodingOptions as org_dcm4che3_io_DicomEncodingOptions } from "./../io/DicomEncodingOptions";
+import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 /**
  * This class just defines types, you should import {@link Attributes} instead of this.
@@ -41,1448 +41,6 @@ export declare class AttributesClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly CORRECT: string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'java.lang.String[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (string | null)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'java.lang.String[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (string | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'java.lang.String[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setString(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (string | null)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'java.lang.String[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setStringSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (string | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Object'
-     */
-    setString(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: string | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Object'
-     */
-    setStringSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: string | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Object'
-     */
-    setString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: string | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Object'
-     */
-    setStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: string | null): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'org.dcm4che3.data.ItemPointer[]'
-     */
-    itemPointers(): Promise<(org_dcm4che3_data_ItemPointer | null)[] | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.ItemPointer[]'
-     */
-    itemPointersSync(): (org_dcm4che3_data_ItemPointer | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.lang.Object'
-     */
-    setNull(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.lang.Object'
-     */
-    setNullSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.lang.Object'
-     */
-    setNull(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.lang.Object'
-     */
-    setNullSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'byte[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setBytes(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: Buffer | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'byte[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setBytesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: Buffer | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'byte[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setBytes(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: Buffer | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'byte[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setBytesSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: Buffer | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getPrivateCreator(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getPrivateCreatorSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    newSequence(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    newSequenceSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    newSequence(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    newSequenceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    setItemPosition(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    setItemPositionSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'float[]'
-     */
-    getFloats(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'float[]'
-     */
-    getFloatsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float[]'
-     */
-    getFloats(var0: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float[]'
-     */
-    getFloatsSync(var0: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'float[]'
-     */
-    getFloats(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'float[]'
-     */
-    getFloatsSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    createFileMetaInformation(var0: string | null, var1: java_lang_Boolean | boolean): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    createFileMetaInformationSync(var0: string | null, var1: java_lang_Boolean | boolean): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static createFileMetaInformation(var0: string | null, var1: string | null, var2: string | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static createFileMetaInformationSync(var0: string | null, var1: string | null, var2: string | null): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static createFileMetaInformation(var0: string | null, var1: string | null, var2: string | null, var3: java_lang_Boolean | boolean): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static createFileMetaInformationSync(var0: string | null, var1: string | null, var2: string | null, var3: java_lang_Boolean | boolean): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    createFileMetaInformation(var0: string | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    createFileMetaInformationSync(var0: string | null): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int[]'
-     */
-    getInts(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int[]'
-     */
-    getIntsSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'int[]'
-     */
-    getInts(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'int[]'
-     */
-    getIntsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int[]'
-     */
-    getInts(var0: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int[]'
-     */
-    getIntsSync(var0: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDataset(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDatasetSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Attributes | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDataset(var0: java_lang_Integer | number): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDatasetSync(var0: java_lang_Integer | number): Attributes | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDataset(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDatasetSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Attributes | null;
-    /**
-     * @param var0 original type: 'java.util.List'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDataset(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.util.List'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDatasetSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Attributes | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.ItemPointer[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDataset(var0: (org_dcm4che3_data_ItemPointer | null)[] | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.ItemPointer[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDatasetSync(var0: (org_dcm4che3_data_ItemPointer | null)[] | null): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDataset(var0: string | null, var1: java_lang_Integer | number): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getNestedDatasetSync(var0: string | null, var1: java_lang_Integer | number): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    tagOf(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    tagOfSync(var0: string | null, var1: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getFunctionGroup(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getFunctionGroupSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Attributes | null;
-    /**
-     * @return original return type: 'long'
-     */
-    getItemPosition(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getItemPositionSync(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    privateCreatorOf(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    privateCreatorOfSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    getSequence(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    getSequenceSync(var0: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    getSequence(var0: string | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    getSequenceSync(var0: string | null, var1: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    getSafeBytes(var0: string | null, var1: java_lang_Integer | number): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    getSafeBytesSync(var0: string | null, var1: java_lang_Integer | number): Buffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    getSafeBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    getSafeBytesSync(var0: java_lang_Integer | number): Buffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    getVR(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_VR | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    getVRSync(var0: java_lang_Integer | number): org_dcm4che3_data_VR | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    getVR(var0: string | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_VR | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.VR'
-     */
-    getVRSync(var0: string | null, var1: java_lang_Integer | number): org_dcm4che3_data_VR | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    containsTagInRange(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    containsTagInRangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'long[]'
-     */
-    getLongs(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'long[]'
-     */
-    getLongsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'long[]'
-     */
-    getLongs(var0: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'long[]'
-     */
-    getLongsSync(var0: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long[]'
-     */
-    getLongs(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long[]'
-     */
-    getLongsSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    internalizeStringValues(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    internalizeStringValuesSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    getSpecificCharacterSet(): Promise<org_dcm4che3_data_SpecificCharacterSet | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    getSpecificCharacterSetSync(): org_dcm4che3_data_SpecificCharacterSet | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    getSpecificCharacterSet(var0: org_dcm4che3_data_VR | null): Promise<org_dcm4che3_data_SpecificCharacterSet | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    getSpecificCharacterSetSync(var0: org_dcm4che3_data_VR | null): org_dcm4che3_data_SpecificCharacterSet | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    containsTimezoneOffsetFromUTC(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    containsTimezoneOffsetFromUTCSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getParentSequenceTag(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getParentSequenceTagSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParentSequencePrivateCreator(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getParentSequencePrivateCreatorSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setSpecificCharacterSet(var0: (string | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setSpecificCharacterSetSync(var0: (string | null)[] | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setTimezoneOffsetFromUTC(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setTimezoneOffsetFromUTCSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
-     * @return original return type: 'void'
-     */
-    writePostPixelDataTo(var0: org_dcm4che3_io_DicomOutputStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
-     * @return original return type: 'void'
-     */
-    writePostPixelDataToSync(var0: org_dcm4che3_io_DicomOutputStream | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.Date'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String'
-     * @param var4 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    addOriginalAttributes(var0: string | null, var1: java_util_Date | null, var2: string | null, var3: string | null, var4: AttributesClass | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.Date'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String'
-     * @param var4 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    addOriginalAttributesSync(var0: string | null, var1: java_util_Date | null, var2: string | null, var3: string | null, var4: AttributesClass | null): Attributes | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    testUpdateNotSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    testUpdateNotSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    removePrivateAttributes(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    removePrivateAttributesSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    removePrivateAttributes(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    removePrivateAttributesSync(var0: string | null, var1: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getRemovedOrModified(var0: AttributesClass | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getRemovedOrModifiedSync(var0: AttributesClass | null): Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: string | null, var1: java_lang_Integer | number): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: string | null, var1: java_lang_Integer | number): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: string | null, var1: java_lang_Long | bigint | number): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: string | null, var1: java_lang_Long | bigint | number): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: java_lang_Long | bigint | number): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: java_lang_Long | bigint | number): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: java_lang_Integer | number): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: java_lang_Integer | number): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecisions'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDates(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(java_util_Date | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.util.Date[]'
-     */
-    getDatesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (java_util_Date | null)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'double[]'
-     */
-    getDoubles(var0: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'double[]'
-     */
-    getDoublesSync(var0: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'double[]'
-     */
-    getDoubles(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'double[]'
-     */
-    getDoublesSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'double[]'
-     */
-    getDoubles(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'double[]'
-     */
-    getDoublesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
-    /**
-     * @return original return type: 'java.util.TimeZone'
-     */
-    getDefaultTimeZone(): Promise<java_util_TimeZone | null>;
-    /**
-     * @return original return type: 'java.util.TimeZone'
-     */
-    getDefaultTimeZoneSync(): java_util_TimeZone | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: java_lang_Long | bigint | number): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: java_lang_Long | bigint | number): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: string | null, var1: java_lang_Long | bigint | number): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: string | null, var1: java_lang_Long | bigint | number): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: java_lang_Integer | number): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRange(var0: string | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_DateRange | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.DateRange'
-     */
-    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number): org_dcm4che3_data_DateRange | null;
-    /**
-     * @param var0 original type: 'java.util.TimeZone'
-     * @return original return type: 'void'
-     */
-    setTimezone(var0: java_util_TimeZone | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.util.TimeZone'
-     * @return original return type: 'void'
-     */
-    setTimezoneSync(var0: java_util_TimeZone | null): void;
-    /**
-     * @param var0 original type: 'java.util.TimeZone'
-     * @return original return type: 'void'
-     */
-    setDefaultTimeZone(var0: java_util_TimeZone | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.util.TimeZone'
-     * @return original return type: 'void'
-     */
-    setDefaultTimeZoneSync(var0: java_util_TimeZone | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    addSelected(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    addSelectedSync(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    addSelected(var0: AttributesClass | null, var1: AttributesClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    addSelectedSync(var0: AttributesClass | null, var1: AttributesClass | null): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    addSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    addSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    addSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    addSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Fragments'
-     */
-    newFragments(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): Promise<org_dcm4che3_data_Fragments | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Fragments'
-     */
-    newFragmentsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): org_dcm4che3_data_Fragments | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Fragments'
-     */
-    newFragments(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Fragments | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Fragments'
-     */
-    newFragmentsSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: java_lang_Integer | number): org_dcm4che3_data_Fragments | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRange(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRangeSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'void'
-     */
-    setDateRange(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'void'
-     */
-    setDateRangeSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'void'
-     */
-    setDateRange(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'void'
-     */
-    setDateRangeSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): void;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var3 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRange(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var3 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRangeSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var4 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var4 original type: 'org.dcm4che3.data.DateRange'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    addNotSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    addNotSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    addNotSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    addNotSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    ensureSequence(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    ensureSequenceSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    ensureSequence(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Sequence'
-     */
-    ensureSequenceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
-     */
-    supplementEmpty(var0: AttributesClass | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
-     */
-    supplementEmptySync(var0: AttributesClass | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    updateSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    updateSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    updateNotSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    updateNotSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    testUpdate(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    testUpdateSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    testUpdateSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'int[]'
-     * @return original return type: 'boolean'
-     */
-    testUpdateSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    equalValues(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    equalValuesSync(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    equalValues(var0: AttributesClass | null, var1: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    equalValuesSync(var0: AttributesClass | null, var1: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'int'
-     */
-    calcLength(var0: org_dcm4che3_io_DicomEncodingOptions | null, var1: java_lang_Boolean | boolean): Promise<number>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'int'
-     */
-    calcLengthSync(var0: org_dcm4che3_io_DicomEncodingOptions | null, var1: java_lang_Boolean | boolean): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.StringBuilder'
-     * @return original return type: 'java.lang.StringBuilder'
-     */
-    toStringBuilder(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_StringBuilder | null): Promise<java_lang_StringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.StringBuilder'
-     * @return original return type: 'java.lang.StringBuilder'
-     */
-    toStringBuilderSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_StringBuilder | null): java_lang_StringBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.StringBuilder'
-     * @return original return type: 'java.lang.StringBuilder'
-     */
-    toStringBuilder(var0: java_lang_StringBuilder | null): Promise<java_lang_StringBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.StringBuilder'
-     * @return original return type: 'java.lang.StringBuilder'
-     */
-    toStringBuilderSync(var0: java_lang_StringBuilder | null): java_lang_StringBuilder | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
-     * @return original return type: 'void'
-     */
-    writeItemTo(var0: org_dcm4che3_io_DicomOutputStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
-     * @return original return type: 'void'
-     */
-    writeItemToSync(var0: org_dcm4che3_io_DicomOutputStream | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    writeGroupTo(var0: org_dcm4che3_io_DicomOutputStream | null, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    writeGroupToSync(var0: org_dcm4che3_io_DicomOutputStream | null, var1: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getModified(var0: AttributesClass | null, var1: AttributesClass | null): Promise<Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    getModifiedSync(var0: AttributesClass | null, var1: AttributesClass | null): Attributes | null;
-    /**
-     * @return original return type: 'int'
-     */
-    removeAllBulkData(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    removeAllBulkDataSync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes[]'
-     * @return original return type: 'void'
-     */
-    static unifyCharacterSets(var0: (AttributesClass | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes[]'
-     * @return original return type: 'void'
-     */
-    static unifyCharacterSetsSync(var0: (AttributesClass | null)[] | null): void;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'void'
-     */
-    replaceUIDSelected(var0: (java_lang_Integer | number)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'void'
-     */
-    replaceUIDSelectedSync(var0: (java_lang_Integer | number)[] | null): void;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'void'
-     */
-    removeSelected(var0: (java_lang_Integer | number)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'void'
-     */
-    removeSelectedSync(var0: (java_lang_Integer | number)[] | null): void;
-    /**
-     * @return original return type: 'int'
-     */
-    removeCurveData(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    removeCurveDataSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    removeOverlayData(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    removeOverlayDataSync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'void'
-     */
-    replaceSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'void'
-     */
-    replaceSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -1528,14 +86,6 @@ export declare class AttributesClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): Promise<string>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.lang.String'
@@ -1547,6 +97,14 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     toStringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toStringSync(): string;
     /**
      * @return original return type: 'int'
      */
@@ -1565,6 +123,20 @@ export declare class AttributesClass extends JavaClass {
     getLengthSync(): number;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    update(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    updateSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
      * @param var1 original type: 'boolean'
      * @param var2 original type: 'org.dcm4che3.data.Attributes'
      * @param var3 original type: 'org.dcm4che3.data.Attributes'
@@ -1580,20 +152,6 @@ export declare class AttributesClass extends JavaClass {
      */
     updateSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: java_lang_Boolean | boolean, var2: AttributesClass | null, var3: AttributesClass | null): boolean;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    update(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    updateSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): boolean;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
@@ -1605,38 +163,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'int'
      */
     getIntSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getInt(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getIntSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getInt(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getIntSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -1684,6 +210,66 @@ export declare class AttributesClass extends JavaClass {
      */
     getIntSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getInt(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getIntSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getInt(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getIntSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'long'
+     * @return original return type: 'long'
+     */
+    getLong(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'long'
+     * @return original return type: 'long'
+     */
+    getLongSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    getLong(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    getLongSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): number;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'org.dcm4che3.data.VR'
@@ -1702,21 +288,19 @@ export declare class AttributesClass extends JavaClass {
      */
     getLongSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Long | bigint | number): number;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'long'
+     * @param var2 original type: 'long'
      * @return original return type: 'long'
      */
-    getLong(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Long | bigint | number): Promise<number>;
+    getLong(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'long'
+     * @param var2 original type: 'long'
      * @return original return type: 'long'
      */
-    getLongSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Long | bigint | number): number;
+    getLongSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -1732,47 +316,21 @@ export declare class AttributesClass extends JavaClass {
      */
     getLongSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number): number;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'long'
-     * @return original return type: 'long'
-     */
-    getLong(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'long'
-     * @return original return type: 'long'
-     */
-    getLongSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    getLong(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    getLongSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): number;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
      * @param var3 original type: 'long'
      * @return original return type: 'long'
      */
-    getLong(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number): Promise<number>;
+    getLong(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Long | bigint | number): Promise<number>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
      * @param var3 original type: 'long'
      * @return original return type: 'long'
      */
-    getLongSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number): number;
+    getLongSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Long | bigint | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -1825,6 +383,20 @@ export declare class AttributesClass extends JavaClass {
     getFloatSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Float | number): number;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'float'
+     * @return original return type: 'float'
+     */
+    getFloat(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Float | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'float'
+     * @return original return type: 'float'
+     */
+    getFloatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Float | number): number;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'float'
      * @return original return type: 'float'
      */
@@ -1850,19 +422,21 @@ export declare class AttributesClass extends JavaClass {
      */
     getFloatSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Float | number): number;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'float'
-     * @return original return type: 'float'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'double'
+     * @return original return type: 'double'
      */
-    getFloat(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Float | number): Promise<number>;
+    getDouble(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Double | number): Promise<number>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'float'
-     * @return original return type: 'float'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'double'
+     * @return original return type: 'double'
      */
-    getFloatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Float | number): number;
+    getDoubleSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Double | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -1894,21 +468,31 @@ export declare class AttributesClass extends JavaClass {
      */
     getDoubleSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Double | number): number;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'double'
+     * @param var2 original type: 'double'
      * @return original return type: 'double'
      */
-    getDouble(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Double | number): Promise<number>;
+    getDouble(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Double | number): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'double'
+     * @param var2 original type: 'double'
      * @return original return type: 'double'
      */
-    getDoubleSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Double | number): number;
+    getDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Double | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'double'
+     * @return original return type: 'double'
+     */
+    getDouble(var0: java_lang_Integer | number, var1: java_lang_Double | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'double'
+     * @return original return type: 'double'
+     */
+    getDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -1927,32 +511,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'double'
      */
     getDoubleSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
-     * @return original return type: 'double'
-     */
-    getDouble(var0: java_lang_Integer | number, var1: java_lang_Double | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
-     * @return original return type: 'double'
-     */
-    getDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'double'
-     * @return original return type: 'double'
-     */
-    getDouble(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Double | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'double'
-     * @return original return type: 'double'
-     */
-    getDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Double | number): number;
     /**
      * @return original return type: 'void'
      */
@@ -1984,16 +542,6 @@ export declare class AttributesClass extends JavaClass {
      */
     getBytesSync(var0: string | null, var1: java_lang_Integer | number): Buffer | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.Object'
-     */
-    getValue(var0: java_lang_Integer | number): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.Object'
-     */
-    getValueSync(var0: java_lang_Integer | number): BasicOrJavaType | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'java.lang.Object'
@@ -2005,18 +553,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     getValueSync(var0: string | null, var1: java_lang_Integer | number): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR$Holder'
-     * @return original return type: 'java.lang.Object'
-     */
-    getValue(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR$Holder | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR$Holder'
-     * @return original return type: 'java.lang.Object'
-     */
-    getValueSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR$Holder | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -2031,6 +567,28 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     getValueSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR$Holder | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR$Holder'
+     * @return original return type: 'java.lang.Object'
+     */
+    getValue(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR$Holder | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR$Holder'
+     * @return original return type: 'java.lang.Object'
+     */
+    getValueSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR$Holder | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.Object'
+     */
+    getValue(var0: java_lang_Integer | number): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.Object'
+     */
+    getValueSync(var0: java_lang_Integer | number): BasicOrJavaType | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -2062,16 +620,6 @@ export declare class AttributesClass extends JavaClass {
      */
     sizeSync(): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'boolean'
@@ -2083,6 +631,26 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: string | null, var1: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD'
+     * @return original return type: 'org.dcm4che3.data.ValidationResult'
+     */
+    validate(var0: org_dcm4che3_data_IOD | null): Promise<org_dcm4che3_data_ValidationResult | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD'
+     * @return original return type: 'org.dcm4che3.data.ValidationResult'
+     */
+    validateSync(var0: org_dcm4che3_data_IOD | null): org_dcm4che3_data_ValidationResult | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
      * @param var1 original type: 'org.dcm4che3.data.ValidationResult'
@@ -2096,26 +664,6 @@ export declare class AttributesClass extends JavaClass {
      */
     validateSync(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult | null): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD'
-     * @return original return type: 'org.dcm4che3.data.ValidationResult'
-     */
-    validate(var0: org_dcm4che3_data_IOD | null): Promise<org_dcm4che3_data_ValidationResult | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD'
-     * @return original return type: 'org.dcm4che3.data.ValidationResult'
-     */
-    validateSync(var0: org_dcm4che3_data_IOD | null): org_dcm4che3_data_ValidationResult | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    addAll(var0: AttributesClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    addAllSync(var0: AttributesClass | null): boolean;
-    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'boolean'
      * @return original return type: 'boolean'
@@ -2127,6 +675,16 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     addAllSync(var0: AttributesClass | null, var1: java_lang_Boolean | boolean): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    addAll(var0: AttributesClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    addAllSync(var0: AttributesClass | null): boolean;
     /**
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
@@ -2218,6 +776,20 @@ export declare class AttributesClass extends JavaClass {
      */
     containsValueSync(var0: java_lang_Integer | number): boolean;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    setValue(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    setValueSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'org.dcm4che3.data.VR'
@@ -2233,20 +805,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     setValueSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    setValue(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    setValueSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
@@ -2286,20 +844,6 @@ export declare class AttributesClass extends JavaClass {
      */
     setIntSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Integer | number)[] | null): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'long[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setLong(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Long | bigint | number)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'long[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setLongSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Long | bigint | number)[] | null): BasicOrJavaType | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'org.dcm4che3.data.VR'
@@ -2315,6 +859,20 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     setLongSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (java_lang_Long | bigint | number)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'long[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setLong(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Long | bigint | number)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'long[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setLongSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Long | bigint | number)[] | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -2346,6 +904,20 @@ export declare class AttributesClass extends JavaClass {
      */
     setFloatSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Float | number)[] | null): BasicOrJavaType | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'double[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDouble(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Double | number)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'double[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDoubleSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Double | number)[] | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'org.dcm4che3.data.VR'
@@ -2362,28 +934,6 @@ export declare class AttributesClass extends JavaClass {
      */
     setDoubleSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (java_lang_Double | number)[] | null): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'double[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDouble(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Double | number)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'double[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDoubleSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_lang_Double | number)[] | null): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'void'
-     */
-    trimToSize(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    trimToSizeSync(): void;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -2393,6 +943,14 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     trimToSizeSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'void'
+     */
+    trimToSize(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    trimToSizeSync(): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -2482,84 +1040,6 @@ export declare class AttributesClass extends JavaClass {
      */
     getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: string | null): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: string | null): string | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
@@ -2569,30 +1049,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getStringSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: java_lang_Integer | number, var1: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: java_lang_Integer | number, var1: string | null): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getString(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getStringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -2624,6 +1080,82 @@ export declare class AttributesClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
     getString(var0: string | null, var1: java_lang_Integer | number): Promise<string | null>;
@@ -2634,6 +1166,32 @@ export declare class AttributesClass extends JavaClass {
      */
     getStringSync(var0: string | null, var1: java_lang_Integer | number): string | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: java_lang_Integer | number, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: java_lang_Integer | number, var1: string | null): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getString(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getStringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): string | null;
+    /**
      * @return original return type: 'int'
      */
     getLevel(): Promise<number>;
@@ -2641,16 +1199,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'int'
      */
     getLevelSync(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String[]'
-     */
-    getStrings(var0: java_lang_Integer | number): Promise<(string | null)[] | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String[]'
-     */
-    getStringsSync(var0: java_lang_Integer | number): (string | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -2677,6 +1225,16 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.String[]'
      */
     getStringsSync(var0: string | null, var1: java_lang_Integer | number): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    getStrings(var0: java_lang_Integer | number): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    getStringsSync(var0: java_lang_Integer | number): (string | null)[] | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -2707,6 +1265,56 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     setDateSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (java_util_Date | null)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var3 original type: 'java.util.Date[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDate(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: (java_util_Date | null)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var3 original type: 'java.util.Date[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: (java_util_Date | null)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'java.util.Date[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (java_util_Date | null)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'java.util.Date[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (java_util_Date | null)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var4 original type: 'java.util.Date[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: (java_util_Date | null)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var4 original type: 'java.util.Date[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: (java_util_Date | null)[] | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'org.dcm4che3.data.VR'
@@ -2743,6 +1351,50 @@ export declare class AttributesClass extends JavaClass {
     setDateSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: java_lang_Boolean | boolean, var3: org_dcm4che3_data_DatePrecision | null, var4: (java_util_Date | null)[] | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var3 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
+     */
+    setDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecision | null, var3: (java_util_Date | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var3 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
+     */
+    setDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecision | null, var3: (java_util_Date | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
+     */
+    setDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: (java_util_Date | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
+     */
+    setDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: (java_util_Date | null)[] | null): void;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var2 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
+     */
+    setDate(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecision | null, var2: (java_util_Date | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var2 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
+     */
+    setDateSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecision | null, var2: (java_util_Date | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'org.dcm4che3.data.VR'
      * @param var3 original type: 'boolean'
@@ -2759,112 +1411,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     setDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Boolean | boolean, var4: (java_util_Date | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var4 original type: 'java.util.Date[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: (java_util_Date | null)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var4 original type: 'java.util.Date[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: (java_util_Date | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'java.util.Date[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (java_util_Date | null)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'java.util.Date[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (java_util_Date | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var3 original type: 'java.util.Date[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDate(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: (java_util_Date | null)[] | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'org.dcm4che3.data.VR'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var3 original type: 'java.util.Date[]'
-     * @return original return type: 'java.lang.Object'
-     */
-    setDateSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: (java_util_Date | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var3 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecision | null, var3: java_util_Date | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var3 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecision | null, var3: java_util_Date | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null): void;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var2 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDate(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecision | null, var2: java_util_Date | null): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'org.dcm4che3.data.DatePrecision'
-     * @param var2 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDateSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecision | null, var2: java_util_Date | null): void;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDate(var0: java_lang_Long | bigint | number, var1: java_util_Date | null): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.Date'
-     * @return original return type: 'void'
-     */
-    setDateSync(var0: java_lang_Long | bigint | number, var1: java_util_Date | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -2886,77 +1432,17 @@ export declare class AttributesClass extends JavaClass {
      */
     setDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Boolean | boolean, var4: org_dcm4che3_data_DatePrecision | null, var5: (java_util_Date | null)[] | null): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.Date'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
      */
-    getDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.Date'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'java.util.Date'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_util_Date | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'java.util.Date'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_util_Date | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.Date'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.Date'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null): java_util_Date | null;
+    setDate(var0: java_lang_Long | bigint | number, var1: (java_util_Date | null)[] | null): Promise<void>;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'java.util.Date'
+     * @param var1 original type: 'java.util.Date[]'
+     * @return original return type: 'void'
      */
-    getDate(var0: java_lang_Long | bigint | number): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: java_lang_Long | bigint | number): java_util_Date | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.Date'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: java_lang_Long | bigint | number, var1: java_util_Date | null, var2: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.Date'
-     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: java_lang_Long | bigint | number, var1: java_util_Date | null, var2: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    setDateSync(var0: java_lang_Long | bigint | number, var1: (java_util_Date | null)[] | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -2979,16 +1465,14 @@ export declare class AttributesClass extends JavaClass {
     getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_util_Date | null, var5: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
     /**
      * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.Date'
      * @return original return type: 'java.util.Date'
      */
-    getDate(var0: java_lang_Long | bigint | number, var1: java_util_Date | null): Promise<java_util_Date | null>;
+    getDate(var0: java_lang_Long | bigint | number): Promise<java_util_Date | null>;
     /**
      * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.Date'
      * @return original return type: 'java.util.Date'
      */
-    getDateSync(var0: java_lang_Long | bigint | number, var1: java_util_Date | null): java_util_Date | null;
+    getDateSync(var0: java_lang_Long | bigint | number): java_util_Date | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'org.dcm4che3.data.DatePrecision'
@@ -3003,16 +1487,86 @@ export declare class AttributesClass extends JavaClass {
     getDateSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'java.util.Date'
      * @return original return type: 'java.util.Date'
      */
-    getDate(var0: string | null, var1: java_lang_Long | bigint | number): Promise<java_util_Date | null>;
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_util_Date | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: java_util_Date | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): java_util_Date | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.Date'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
      * @return original return type: 'java.util.Date'
      */
-    getDateSync(var0: string | null, var1: java_lang_Long | bigint | number): java_util_Date | null;
+    getDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.Date'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_util_Date | null): java_util_Date | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'long'
@@ -3028,6 +1582,44 @@ export declare class AttributesClass extends JavaClass {
      */
     getDateSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Long | bigint | number): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Long | bigint | number): java_util_Date | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.Date'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: java_lang_Long | bigint | number, var1: java_util_Date | null, var2: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.Date'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: java_lang_Long | bigint | number, var1: java_util_Date | null, var2: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: java_lang_Long | bigint | number, var1: java_util_Date | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: java_lang_Long | bigint | number, var1: java_util_Date | null): java_util_Date | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.util.Date'
@@ -3041,6 +1633,18 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.util.Date'
      */
     getDateSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_util_Date | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: java_lang_Integer | number, var1: java_util_Date | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.util.Date'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: java_lang_Integer | number, var1: java_util_Date | null): java_util_Date | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -3084,36 +1688,6 @@ export declare class AttributesClass extends JavaClass {
      */
     getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.util.Date'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.util.Date'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): java_util_Date | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'org.dcm4che3.data.DatePrecision'
      * @return original return type: 'java.util.Date'
@@ -3125,16 +1699,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.util.Date'
      */
     getDateSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: java_lang_Integer | number): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: java_lang_Integer | number): java_util_Date | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.util.Date'
@@ -3149,6 +1713,16 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.util.Date'
      */
     getDateSync(var0: java_lang_Integer | number, var1: java_util_Date | null, var2: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: java_lang_Integer | number): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: java_lang_Integer | number): java_util_Date | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -3179,22 +1753,6 @@ export declare class AttributesClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
      * @param var3 original type: 'java.util.Date'
      * @return original return type: 'java.util.Date'
      */
@@ -3207,74 +1765,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.util.Date'
      */
     getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_util_Date | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.util.Date'
-     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_util_Date | null, var4: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.util.Date'
-     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_util_Date | null, var4: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number, var4: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'org.dcm4che3.data.VR'
-     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -3291,18 +1781,6 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.util.Date'
      */
     getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_util_Date | null): java_util_Date | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.util.Date'
-     * @return original return type: 'java.util.Date'
-     */
-    getDate(var0: java_lang_Integer | number, var1: java_util_Date | null): Promise<java_util_Date | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.util.Date'
-     * @return original return type: 'java.util.Date'
-     */
-    getDateSync(var0: java_lang_Integer | number, var1: java_util_Date | null): java_util_Date | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -3325,6 +1803,22 @@ export declare class AttributesClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'java.util.Date'
      */
     getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_util_Date | null>;
@@ -3335,6 +1829,1512 @@ export declare class AttributesClass extends JavaClass {
      * @return original return type: 'java.util.Date'
      */
     getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.util.Date'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.util.Date'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_util_Date | null, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.util.Date'
+     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDate(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_util_Date | null, var4: org_dcm4che3_data_DatePrecision | null): Promise<java_util_Date | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.util.Date'
+     * @param var4 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.util.Date'
+     */
+    getDateSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_util_Date | null, var4: org_dcm4che3_data_DatePrecision | null): java_util_Date | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    removePrivateAttributes(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    removePrivateAttributesSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'int'
+     */
+    removePrivateAttributes(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    removePrivateAttributesSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    removeCurveData(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    removeCurveDataSync(): number;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'void'
+     */
+    replaceSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'void'
+     */
+    replaceSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): void;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'void'
+     */
+    replaceUIDSelected(var0: (java_lang_Integer | number)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'void'
+     */
+    replaceUIDSelectedSync(var0: (java_lang_Integer | number)[] | null): void;
+    /**
+     * @return original return type: 'int'
+     */
+    removeOverlayData(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    removeOverlayDataSync(): number;
+    /**
+     * @return original return type: 'org.dcm4che3.data.ItemPointer[]'
+     */
+    itemPointers(): Promise<(org_dcm4che3_data_ItemPointer | null)[] | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.ItemPointer[]'
+     */
+    itemPointersSync(): (org_dcm4che3_data_ItemPointer | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setSpecificCharacterSet(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setSpecificCharacterSetSync(var0: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    testUpdateNotSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    testUpdateNotSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getRemovedOrModified(var0: AttributesClass | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getRemovedOrModifiedSync(var0: AttributesClass | null): Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
+     * @return original return type: 'void'
+     */
+    writePostPixelDataTo(var0: org_dcm4che3_io_DicomOutputStream | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
+     * @return original return type: 'void'
+     */
+    writePostPixelDataToSync(var0: org_dcm4che3_io_DicomOutputStream | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParentSequencePrivateCreator(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getParentSequencePrivateCreatorSync(): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setTimezoneOffsetFromUTC(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setTimezoneOffsetFromUTCSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.Date'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String'
+     * @param var4 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    addOriginalAttributes(var0: string | null, var1: java_util_Date | null, var2: string | null, var3: string | null, var4: AttributesClass | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.Date'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String'
+     * @param var4 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    addOriginalAttributesSync(var0: string | null, var1: java_util_Date | null, var2: string | null, var3: string | null, var4: AttributesClass | null): Attributes | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getParentSequenceTag(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getParentSequenceTagSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    containsTimezoneOffsetFromUTC(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    containsTimezoneOffsetFromUTCSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    internalizeStringValues(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    internalizeStringValuesSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    getSpecificCharacterSet(var0: org_dcm4che3_data_VR | null): Promise<org_dcm4che3_data_SpecificCharacterSet | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    getSpecificCharacterSetSync(var0: org_dcm4che3_data_VR | null): org_dcm4che3_data_SpecificCharacterSet | null;
+    /**
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    getSpecificCharacterSet(): Promise<org_dcm4che3_data_SpecificCharacterSet | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    getSpecificCharacterSetSync(): org_dcm4che3_data_SpecificCharacterSet | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static createFileMetaInformation(var0: string | null, var1: string | null, var2: string | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static createFileMetaInformationSync(var0: string | null, var1: string | null, var2: string | null): Attributes | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    createFileMetaInformation(var0: string | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    createFileMetaInformationSync(var0: string | null): Attributes | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    createFileMetaInformation(var0: string | null, var1: java_lang_Boolean | boolean): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    createFileMetaInformationSync(var0: string | null, var1: java_lang_Boolean | boolean): Attributes | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static createFileMetaInformation(var0: string | null, var1: string | null, var2: string | null, var3: java_lang_Boolean | boolean): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static createFileMetaInformationSync(var0: string | null, var1: string | null, var2: string | null, var3: java_lang_Boolean | boolean): Attributes | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    getSequence(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    getSequenceSync(var0: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    getSequence(var0: string | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    getSequenceSync(var0: string | null, var1: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'long[]'
+     */
+    getLongs(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'long[]'
+     */
+    getLongsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long[]'
+     */
+    getLongs(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long[]'
+     */
+    getLongsSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'long[]'
+     */
+    getLongs(var0: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'long[]'
+     */
+    getLongsSync(var0: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    getVR(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_VR | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    getVRSync(var0: java_lang_Integer | number): org_dcm4che3_data_VR | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    getVR(var0: string | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_VR | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.VR'
+     */
+    getVRSync(var0: string | null, var1: java_lang_Integer | number): org_dcm4che3_data_VR | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    getSafeBytes(var0: string | null, var1: java_lang_Integer | number): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    getSafeBytesSync(var0: string | null, var1: java_lang_Integer | number): Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    getSafeBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    getSafeBytesSync(var0: java_lang_Integer | number): Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int[]'
+     */
+    getInts(var0: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int[]'
+     */
+    getIntsSync(var0: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'int[]'
+     */
+    getInts(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'int[]'
+     */
+    getIntsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int[]'
+     */
+    getInts(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int[]'
+     */
+    getIntsSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'double[]'
+     */
+    getDoubles(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'double[]'
+     */
+    getDoublesSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'double[]'
+     */
+    getDoubles(var0: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'double[]'
+     */
+    getDoublesSync(var0: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'double[]'
+     */
+    getDoubles(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'double[]'
+     */
+    getDoublesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: java_lang_Long | bigint | number): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: java_lang_Long | bigint | number): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: string | null, var1: java_lang_Long | bigint | number): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: string | null, var1: java_lang_Long | bigint | number): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: java_lang_Integer | number): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: java_lang_Integer | number): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: string | null, var1: java_lang_Integer | number): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: string | null, var1: java_lang_Integer | number): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecisions | null): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecisions'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDates(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(java_util_Date | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.util.Date[]'
+     */
+    getDatesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: java_lang_Long | bigint | number): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: java_lang_Long | bigint | number): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: string | null, var1: java_lang_Long | bigint | number): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: string | null, var1: java_lang_Long | bigint | number): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: string | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: java_lang_Integer | number): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DateRange | null): Promise<org_dcm4che3_data_DateRange | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'org.dcm4che3.data.DateRange'
+     */
+    getDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DateRange | null): org_dcm4che3_data_DateRange | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'float[]'
+     */
+    getFloats(var0: string | null, var1: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'float[]'
+     */
+    getFloatsSync(var0: string | null, var1: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'float[]'
+     */
+    getFloats(var0: java_lang_Integer | number): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'float[]'
+     */
+    getFloatsSync(var0: java_lang_Integer | number): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'float[]'
+     */
+    getFloats(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'float[]'
+     */
+    getFloatsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.lang.Object'
+     */
+    setNull(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.lang.Object'
+     */
+    setNullSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.lang.Object'
+     */
+    setNull(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @return original return type: 'java.lang.Object'
+     */
+    setNullSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'byte[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setBytes(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: Buffer | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'byte[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setBytesSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: Buffer | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'byte[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setBytes(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: Buffer | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'byte[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setBytesSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: Buffer | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.util.TimeZone'
+     * @return original return type: 'void'
+     */
+    setDefaultTimeZone(var0: java_util_TimeZone | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.TimeZone'
+     * @return original return type: 'void'
+     */
+    setDefaultTimeZoneSync(var0: java_util_TimeZone | null): void;
+    /**
+     * @return original return type: 'java.util.TimeZone'
+     */
+    getDefaultTimeZone(): Promise<java_util_TimeZone | null>;
+    /**
+     * @return original return type: 'java.util.TimeZone'
+     */
+    getDefaultTimeZoneSync(): java_util_TimeZone | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    privateCreatorOf(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    privateCreatorOfSync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    newSequence(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    newSequenceSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    newSequence(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    newSequenceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Fragments'
+     */
+    newFragments(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Fragments | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Fragments'
+     */
+    newFragmentsSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: java_lang_Integer | number): org_dcm4che3_data_Fragments | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Fragments'
+     */
+    newFragments(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): Promise<org_dcm4che3_data_Fragments | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Fragments'
+     */
+    newFragmentsSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: java_lang_Integer | number): org_dcm4che3_data_Fragments | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'void'
+     */
+    setDateRange(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'void'
+     */
+    setDateRangeSync(var0: java_lang_Long | bigint | number, var1: org_dcm4che3_data_DateRange | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var4 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRange(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var4 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRangeSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: org_dcm4che3_data_DatePrecision | null, var4: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'void'
+     */
+    setDateRange(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'void'
+     */
+    setDateRangeSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: org_dcm4che3_data_DateRange | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRange(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRangeSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var3 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRange(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: org_dcm4che3_data_DateRange | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @param var3 original type: 'org.dcm4che3.data.DateRange'
+     * @return original return type: 'java.lang.Object'
+     */
+    setDateRangeSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: org_dcm4che3_data_DatePrecision | null, var3: org_dcm4che3_data_DateRange | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    ensureSequence(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    ensureSequenceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    ensureSequence(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Sequence | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Sequence'
+     */
+    ensureSequenceSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_dcm4che3_data_Sequence | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Object'
+     */
+    setString(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: string | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Object'
+     */
+    setStringSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'java.lang.String[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setString(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (string | null)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.data.VR'
+     * @param var2 original type: 'java.lang.String[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setStringSync(var0: java_lang_Integer | number, var1: org_dcm4che3_data_VR | null, var2: (string | null)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Object'
+     */
+    setString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: string | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Object'
+     */
+    setStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'java.lang.String[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setString(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (string | null)[] | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.VR'
+     * @param var3 original type: 'java.lang.String[]'
+     * @return original return type: 'java.lang.Object'
+     */
+    setStringSync(var0: string | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_VR | null, var3: (string | null)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    addSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    addSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    addSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    addSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    addSelected(var0: AttributesClass | null, var1: AttributesClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    addSelectedSync(var0: AttributesClass | null, var1: AttributesClass | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    addSelected(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    addSelectedSync(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
+     */
+    supplementEmpty(var0: AttributesClass | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
+     */
+    supplementEmptySync(var0: AttributesClass | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDataset(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDatasetSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Attributes | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDataset(var0: string | null, var1: java_lang_Integer | number): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDatasetSync(var0: string | null, var1: java_lang_Integer | number): Attributes | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDataset(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDatasetSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Attributes | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDataset(var0: java_lang_Integer | number): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDatasetSync(var0: java_lang_Integer | number): Attributes | null;
+    /**
+     * @param var0 original type: 'java.util.List'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDataset(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'java.util.List'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDatasetSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.ItemPointer[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDataset(var0: (org_dcm4che3_data_ItemPointer | null)[] | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.ItemPointer[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getNestedDatasetSync(var0: (org_dcm4che3_data_ItemPointer | null)[] | null): Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'int'
+     */
+    calcLength(var0: org_dcm4che3_io_DicomEncodingOptions | null, var1: java_lang_Boolean | boolean): Promise<number>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'int'
+     */
+    calcLengthSync(var0: org_dcm4che3_io_DicomEncodingOptions | null, var1: java_lang_Boolean | boolean): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.StringBuilder'
+     */
+    toStringBuilder(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_StringBuilder | null): Promise<java_lang_StringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.StringBuilder'
+     */
+    toStringBuilderSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_StringBuilder | null): java_lang_StringBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.StringBuilder'
+     */
+    toStringBuilder(var0: java_lang_StringBuilder | null): Promise<java_lang_StringBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.StringBuilder'
+     */
+    toStringBuilderSync(var0: java_lang_StringBuilder | null): java_lang_StringBuilder | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    equalValues(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    equalValuesSync(var0: AttributesClass | null, var1: string | null, var2: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    equalValues(var0: AttributesClass | null, var1: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    equalValuesSync(var0: AttributesClass | null, var1: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    addNotSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    addNotSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    addNotSelected(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    addNotSelectedSync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    removeAllBulkData(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    removeAllBulkDataSync(): number;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getModified(var0: AttributesClass | null, var1: AttributesClass | null): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getModifiedSync(var0: AttributesClass | null, var1: AttributesClass | null): Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes[]'
+     * @return original return type: 'void'
+     */
+    static unifyCharacterSets(var0: (AttributesClass | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes[]'
+     * @return original return type: 'void'
+     */
+    static unifyCharacterSetsSync(var0: (AttributesClass | null)[] | null): void;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'void'
+     */
+    removeSelected(var0: (java_lang_Integer | number)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'void'
+     */
+    removeSelectedSync(var0: (java_lang_Integer | number)[] | null): void;
+    /**
+     * @param var0 original type: 'java.util.TimeZone'
+     * @return original return type: 'void'
+     */
+    setTimezone(var0: java_util_TimeZone | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.TimeZone'
+     * @return original return type: 'void'
+     */
+    setTimezoneSync(var0: java_util_TimeZone | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrivateCreator(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrivateCreatorSync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    updateSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    updateSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    testUpdate(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    testUpdateSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    updateNotSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    updateNotSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    testUpdateSelected(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'int[]'
+     * @return original return type: 'boolean'
+     */
+    testUpdateSelectedSync(var0: org_dcm4che3_data_Attributes$UpdatePolicy | null, var1: AttributesClass | null, var2: AttributesClass | null, var3: (java_lang_Integer | number)[] | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    writeGroupTo(var0: org_dcm4che3_io_DicomOutputStream | null, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    writeGroupToSync(var0: org_dcm4che3_io_DicomOutputStream | null, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
+     * @return original return type: 'void'
+     */
+    writeItemTo(var0: org_dcm4che3_io_DicomOutputStream | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.io.DicomOutputStream'
+     * @return original return type: 'void'
+     */
+    writeItemToSync(var0: org_dcm4che3_io_DicomOutputStream | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    tagOf(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    tagOfSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'long'
+     */
+    getItemPosition(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getItemPositionSync(): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getFunctionGroup(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<Attributes | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    getFunctionGroupSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Attributes | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    containsTagInRange(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    containsTagInRangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    setItemPosition(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    setItemPositionSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -3390,9 +3390,12 @@ export declare class AttributesClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static newInstanceAsync(): Promise<Attributes>;
+    static newInstanceAsync(var0: AttributesClass | null, var1: java_lang_Boolean | boolean, var2: AttributesClass | null): Promise<Attributes>;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -3406,11 +3409,10 @@ export declare class AttributesClass extends JavaClass {
     static newInstanceAsync(var0: AttributesClass | null, var1: java_lang_Boolean | boolean): Promise<Attributes>;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static newInstanceAsync(var0: AttributesClass | null, var1: java_lang_Boolean | boolean, var2: AttributesClass | null): Promise<Attributes>;
+    static newInstanceAsync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<Attributes>;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'boolean'
@@ -3419,28 +3421,31 @@ export declare class AttributesClass extends JavaClass {
      */
     static newInstanceAsync(var0: AttributesClass | null, var1: java_lang_Boolean | boolean, var2: (java_lang_Integer | number)[] | null): Promise<Attributes>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static newInstanceAsync(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null): Promise<Attributes>;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     static newInstanceAsync(var0: java_lang_Boolean | boolean): Promise<Attributes>;
     /**
-     * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number): Promise<Attributes>;
+    static newInstanceAsync(): Promise<Attributes>;
     /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     static newInstanceAsync(var0: java_lang_Boolean | boolean, var1: java_lang_Integer | number): Promise<Attributes>;
-    constructor();
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number): Promise<Attributes>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     */
+    constructor(var0: AttributesClass | null, var1: java_lang_Boolean | boolean, var2: AttributesClass | null);
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      */
@@ -3452,10 +3457,9 @@ export declare class AttributesClass extends JavaClass {
     constructor(var0: AttributesClass | null, var1: java_lang_Boolean | boolean);
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int[]'
      */
-    constructor(var0: AttributesClass | null, var1: java_lang_Boolean | boolean, var2: AttributesClass | null);
+    constructor(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null);
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'boolean'
@@ -3463,23 +3467,19 @@ export declare class AttributesClass extends JavaClass {
      */
     constructor(var0: AttributesClass | null, var1: java_lang_Boolean | boolean, var2: (java_lang_Integer | number)[] | null);
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int[]'
-     */
-    constructor(var0: AttributesClass | null, var1: (java_lang_Integer | number)[] | null);
-    /**
      * @param var0 original type: 'boolean'
      */
     constructor(var0: java_lang_Boolean | boolean);
-    /**
-     * @param var0 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number);
+    constructor();
     /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'int'
      */
     constructor(var0: java_lang_Boolean | boolean, var1: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'int'
+     */
+    constructor(var0: java_lang_Integer | number);
 }
 declare const Attributes_base: typeof AttributesClass;
 /**

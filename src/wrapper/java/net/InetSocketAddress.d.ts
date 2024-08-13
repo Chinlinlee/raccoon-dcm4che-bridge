@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { InetAddress as java_net_InetAddress } from "./InetAddress";
+import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Class as java_lang_Class } from "./../lang/Class";
 /**
@@ -9,26 +9,6 @@ import { Class as java_lang_Class } from "./../lang/Class";
  * You should probably not edit this.
  */
 export declare class InetSocketAddressClass extends JavaClass {
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getHostString(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getHostStringSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    static createUnresolved(var0: string | null, var1: java_lang_Integer | number): Promise<InetSocketAddress | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    static createUnresolvedSync(var0: string | null, var1: java_lang_Integer | number): InetSocketAddress | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -42,7 +22,7 @@ export declare class InetSocketAddressClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -87,6 +67,26 @@ export declare class InetSocketAddressClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getHostNameSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getHostString(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getHostStringSync(): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    static createUnresolved(var0: string | null, var1: java_lang_Integer | number): Promise<InetSocketAddress | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    static createUnresolvedSync(var0: string | null, var1: java_lang_Integer | number): InetSocketAddress | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -142,12 +142,6 @@ export declare class InetSocketAddressClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    static newInstanceAsync(var0: string | null, var1: java_lang_Integer | number): Promise<InetSocketAddress>;
-    /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
      * @return original return type: 'java.net.InetSocketAddress'
@@ -161,8 +155,9 @@ export declare class InetSocketAddressClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
+     * @return original return type: 'java.net.InetSocketAddress'
      */
-    constructor(var0: string | null, var1: java_lang_Integer | number);
+    static newInstanceAsync(var0: string | null, var1: java_lang_Integer | number): Promise<InetSocketAddress>;
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
@@ -172,6 +167,11 @@ export declare class InetSocketAddressClass extends JavaClass {
      * @param var0 original type: 'int'
      */
     constructor(var0: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     */
+    constructor(var0: string | null, var1: java_lang_Integer | number);
 }
 declare const InetSocketAddress_base: typeof InetSocketAddressClass;
 /**

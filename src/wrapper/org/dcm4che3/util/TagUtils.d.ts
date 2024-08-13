@@ -10,53 +10,15 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class TagUtilsClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
      */
-    static forName(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    static forNameSync(var0: string | null): number;
+    static isPrivateGroup(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'boolean'
      */
-    static toString(var0: java_lang_Integer | number): Promise<string>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static toStringSync(var0: java_lang_Integer | number): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): Promise<string>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexString(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexStringSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexString(var0: Buffer | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexStringSync(var0: Buffer | null): string | null;
+    static isPrivateGroupSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -67,16 +29,6 @@ export declare class TagUtilsClass extends JavaClass {
      * @return original return type: 'int'
      */
     static creatorTagOfSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static groupNumber(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static groupNumberSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -103,22 +55,22 @@ export declare class TagUtilsClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isPrivateGroup(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isPrivateGroupSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
     static isGroupLength(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
     static isGroupLengthSync(var0: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isPrivateCreator(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isPrivateCreatorSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -131,14 +83,14 @@ export declare class TagUtilsClass extends JavaClass {
     static groupLengthTagOfSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    static isPrivateCreator(var0: java_lang_Integer | number): Promise<boolean>;
+    static groupNumber(var0: java_lang_Integer | number): Promise<number>;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    static isPrivateCreatorSync(var0: java_lang_Integer | number): boolean;
+    static groupNumberSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
@@ -153,64 +105,60 @@ export declare class TagUtilsClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'int'
      */
-    static intFromHexString(var0: string | null): Promise<number>;
+    static forName(var0: string | null): Promise<number>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'int'
      */
-    static intFromHexStringSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.lang.String[]'
-     */
-    static toHexStrings(var0: (java_lang_Integer | number)[] | null): Promise<(string | null)[] | null>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.lang.String[]'
-     */
-    static toHexStringsSync(var0: (java_lang_Integer | number)[] | null): (string | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'byte[]'
-     */
-    static fromHexString(var0: string | null): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'byte[]'
-     */
-    static fromHexStringSync(var0: string | null): Buffer | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'int[]'
-     */
-    static fromHexStrings(var0: (string | null)[] | null): Promise<(number)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'int[]'
-     */
-    static fromHexStringsSync(var0: (string | null)[] | null): (number)[] | null;
+    static forNameSync(var0: string | null): number;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    static toTag(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<number>;
+    static toString(var0: java_lang_Integer | number): Promise<string>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    static toTagSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    static toStringSync(var0: java_lang_Integer | number): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toStringAsync(): Promise<string>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexString(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexStringSync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexString(var0: Buffer | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexStringSync(var0: Buffer | null): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isFileMetaInformation(var0: java_lang_Integer | number): Promise<boolean>;
+    static isItem(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isFileMetaInformationSync(var0: java_lang_Integer | number): boolean;
+    static isItemSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -233,14 +181,66 @@ export declare class TagUtilsClass extends JavaClass {
     static parseTagPathSync(var0: string | null): (number)[] | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
      */
-    static isItem(var0: java_lang_Integer | number): Promise<boolean>;
+    static toTag(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static toTagSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.lang.String[]'
+     */
+    static toHexStrings(var0: (java_lang_Integer | number)[] | null): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.lang.String[]'
+     */
+    static toHexStringsSync(var0: (java_lang_Integer | number)[] | null): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    static intFromHexString(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    static intFromHexStringSync(var0: string | null): number;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'int[]'
+     */
+    static fromHexStrings(var0: (string | null)[] | null): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'int[]'
+     */
+    static fromHexStringsSync(var0: (string | null)[] | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'byte[]'
+     */
+    static fromHexString(var0: string | null): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'byte[]'
+     */
+    static fromHexStringSync(var0: string | null): Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isItemSync(var0: java_lang_Integer | number): boolean;
+    static isFileMetaInformation(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isFileMetaInformationSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'

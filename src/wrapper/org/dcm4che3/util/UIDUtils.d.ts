@@ -1,8 +1,8 @@
 /// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../data/Attributes";
 import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../../../java/util/Map";
-import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -72,68 +72,16 @@ export declare class UIDUtilsClass extends JavaClass {
     static createUIDSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.StringBuilder'
      */
-    static findUIDs(var0: string | null): Promise<(string | null)[] | null>;
+    static promptTo(var0: string | null, var1: java_lang_StringBuilder | null): Promise<java_lang_StringBuilder | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.StringBuilder'
+     * @return original return type: 'java.lang.StringBuilder'
      */
-    static findUIDsSync(var0: string | null): (string | null)[] | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static createNameBasedUID(var0: Buffer | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static createNameBasedUIDSync(var0: Buffer | null): string | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static createNameBasedUID(var0: Buffer | null, var1: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static createNameBasedUIDSync(var0: Buffer | null, var1: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static createUIDIfNull(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static createUIDIfNullSync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static createUIDIfNull(var0: string | null, var1: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static createUIDIfNullSync(var0: string | null, var1: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    static setRoot(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    static setRootSync(var0: string | null): void;
+    static promptToSync(var0: string | null, var1: java_lang_StringBuilder | null): java_lang_StringBuilder | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.util.Map'
@@ -161,17 +109,69 @@ export declare class UIDUtilsClass extends JavaClass {
      */
     static remapUIDsSync(var0: org_dcm4che3_data_Attributes | null, var1: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.StringBuilder'
-     * @return original return type: 'java.lang.StringBuilder'
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
      */
-    static promptTo(var0: string | null, var1: java_lang_StringBuilder | null): Promise<java_lang_StringBuilder | null>;
+    static createNameBasedUID(var0: Buffer | null, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createNameBasedUIDSync(var0: Buffer | null, var1: string | null): string | null;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static createNameBasedUID(var0: Buffer | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static createNameBasedUIDSync(var0: Buffer | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.StringBuilder'
-     * @return original return type: 'java.lang.StringBuilder'
+     * @return original return type: 'void'
      */
-    static promptToSync(var0: string | null, var1: java_lang_StringBuilder | null): java_lang_StringBuilder | null;
+    static setRoot(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    static setRootSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createUIDIfNull(var0: string | null, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createUIDIfNullSync(var0: string | null, var1: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createUIDIfNull(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createUIDIfNullSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String[]'
+     */
+    static findUIDs(var0: string | null): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String[]'
+     */
+    static findUIDsSync(var0: string | null): (string | null)[] | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -215,11 +215,11 @@ export declare class UIDUtilsClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

@@ -15,4 +15,3 @@ class ImageDescriptor extends (0, java_bridge_1.importClass)('org.dcm4che3.image
 }
 exports.ImageDescriptor = ImageDescriptor;
 exports.default = ImageDescriptor;
-//# sourceMappingURL=ImageDescriptor.js.map

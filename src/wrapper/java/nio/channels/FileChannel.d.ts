@@ -1,9 +1,8 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Long as java_lang_Long } from "./../../lang/Long";
-import { SeekableByteChannel as java_nio_channels_SeekableByteChannel } from "./SeekableByteChannel";
-import { ReadableByteChannel as java_nio_channels_ReadableByteChannel, ReadableByteChannelInterface as java_nio_channels_ReadableByteChannelInterface } from "./ReadableByteChannel";
 import { FileLock as java_nio_channels_FileLock } from "./FileLock";
+import { Long as java_lang_Long } from "./../../lang/Long";
 import { Boolean as java_lang_Boolean } from "./../../lang/Boolean";
+import { SeekableByteChannel as java_nio_channels_SeekableByteChannel } from "./SeekableByteChannel";
 import { MappedByteBuffer as java_nio_MappedByteBuffer } from "./../MappedByteBuffer";
 import { FileChannel$MapMode as java_nio_channels_FileChannel$MapMode } from "./FileChannel$MapMode";
 import { ByteBuffer as java_nio_ByteBuffer } from "./../ByteBuffer";
@@ -13,6 +12,7 @@ import { Set as java_util_Set, SetInterface as java_util_SetInterface } from "./
 import { FileAttribute as java_nio_file_attribute_FileAttribute, FileAttributeInterface as java_nio_file_attribute_FileAttributeInterface } from "./../file/attribute/FileAttribute";
 import { OpenOption as java_nio_file_OpenOption, OpenOptionInterface as java_nio_file_OpenOptionInterface } from "./../file/OpenOption";
 import { WritableByteChannel as java_nio_channels_WritableByteChannel, WritableByteChannelInterface as java_nio_channels_WritableByteChannelInterface } from "./WritableByteChannel";
+import { ReadableByteChannel as java_nio_channels_ReadableByteChannel, ReadableByteChannelInterface as java_nio_channels_ReadableByteChannelInterface } from "./ReadableByteChannel";
 import { Class as java_lang_Class } from "./../../lang/Class";
 /**
  * This class just defines types, you should import {@link FileChannel} instead of this.
@@ -21,39 +21,13 @@ import { Class as java_lang_Class } from "./../../lang/Class";
  */
 export declare class FileChannelClass extends JavaClass {
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.channels.FileChannel'
+     * @return original return type: 'java.nio.channels.FileLock'
      */
-    truncate(var0: java_lang_Long | bigint | number): Promise<FileChannel | null>;
+    lock(): Promise<java_nio_channels_FileLock | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.channels.FileChannel'
+     * @return original return type: 'java.nio.channels.FileLock'
      */
-    truncateSync(var0: java_lang_Long | bigint | number): FileChannel | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.channels.SeekableByteChannel'
-     */
-    truncate(var0: java_lang_Long | bigint | number): Promise<java_nio_channels_SeekableByteChannel | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.channels.SeekableByteChannel'
-     */
-    truncateSync(var0: java_lang_Long | bigint | number): java_nio_channels_SeekableByteChannel | null;
-    /**
-     * @param var0 original type: 'java.nio.channels.ReadableByteChannel'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'long'
-     * @return original return type: 'long'
-     */
-    transferFrom(var0: java_nio_channels_ReadableByteChannel | JavaInterfaceProxy<java_nio_channels_ReadableByteChannelInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.nio.channels.ReadableByteChannel'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'long'
-     * @return original return type: 'long'
-     */
-    transferFromSync(var0: java_nio_channels_ReadableByteChannel | JavaInterfaceProxy<java_nio_channels_ReadableByteChannelInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number): number;
+    lockSync(): java_nio_channels_FileLock | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
@@ -69,21 +43,15 @@ export declare class FileChannelClass extends JavaClass {
      */
     lockSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Boolean | boolean): java_nio_channels_FileLock | null;
     /**
-     * @return original return type: 'java.nio.channels.FileLock'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
-    lock(): Promise<java_nio_channels_FileLock | null>;
+    position(var0: java_lang_Long | bigint | number): Promise<java_nio_channels_SeekableByteChannel | null>;
     /**
-     * @return original return type: 'java.nio.channels.FileLock'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
-    lockSync(): java_nio_channels_FileLock | null;
-    /**
-     * @return original return type: 'long'
-     */
-    position(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    positionSync(): number;
+    positionSync(var0: java_lang_Long | bigint | number): java_nio_channels_SeekableByteChannel | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.FileChannel'
@@ -95,15 +63,13 @@ export declare class FileChannelClass extends JavaClass {
      */
     positionSync(var0: java_lang_Long | bigint | number): FileChannel | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.channels.SeekableByteChannel'
+     * @return original return type: 'long'
      */
-    position(var0: java_lang_Long | bigint | number): Promise<java_nio_channels_SeekableByteChannel | null>;
+    position(): Promise<number>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.channels.SeekableByteChannel'
+     * @return original return type: 'long'
      */
-    positionSync(var0: java_lang_Long | bigint | number): java_nio_channels_SeekableByteChannel | null;
+    positionSync(): number;
     /**
      * @return original return type: 'long'
      */
@@ -173,6 +139,28 @@ export declare class FileChannelClass extends JavaClass {
      */
     writeSync(var0: (java_nio_ByteBuffer | null)[] | null): number;
     /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'int'
+     */
+    read(var0: java_nio_ByteBuffer | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'int'
+     */
+    readSync(var0: java_nio_ByteBuffer | null): number;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'long'
+     * @return original return type: 'int'
+     */
+    read(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'long'
+     * @return original return type: 'int'
+     */
+    readSync(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): number;
+    /**
      * @param var0 original type: 'java.nio.ByteBuffer[]'
      * @return original return type: 'long'
      */
@@ -196,28 +184,6 @@ export declare class FileChannelClass extends JavaClass {
      * @return original return type: 'long'
      */
     readSync(var0: (java_nio_ByteBuffer | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'int'
-     */
-    read(var0: java_nio_ByteBuffer | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'int'
-     */
-    readSync(var0: java_nio_ByteBuffer | null): number;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'long'
-     * @return original return type: 'int'
-     */
-    read(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'long'
-     * @return original return type: 'int'
-     */
-    readSync(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): number;
     /**
      * @param var0 original type: 'java.nio.file.Path'
      * @param var1 original type: 'java.util.Set'
@@ -291,6 +257,40 @@ export declare class FileChannelClass extends JavaClass {
      */
     forceSync(var0: java_lang_Boolean | boolean): void;
     /**
+     * @param var0 original type: 'java.nio.channels.ReadableByteChannel'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'long'
+     * @return original return type: 'long'
+     */
+    transferFrom(var0: java_nio_channels_ReadableByteChannel | JavaInterfaceProxy<java_nio_channels_ReadableByteChannelInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.nio.channels.ReadableByteChannel'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'long'
+     * @return original return type: 'long'
+     */
+    transferFromSync(var0: java_nio_channels_ReadableByteChannel | JavaInterfaceProxy<java_nio_channels_ReadableByteChannelInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.channels.FileChannel'
+     */
+    truncate(var0: java_lang_Long | bigint | number): Promise<FileChannel | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.channels.FileChannel'
+     */
+    truncateSync(var0: java_lang_Long | bigint | number): FileChannel | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.channels.SeekableByteChannel'
+     */
+    truncate(var0: java_lang_Long | bigint | number): Promise<java_nio_channels_SeekableByteChannel | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.channels.SeekableByteChannel'
+     */
+    truncateSync(var0: java_lang_Long | bigint | number): java_nio_channels_SeekableByteChannel | null;
+    /**
      * @return original return type: 'boolean'
      */
     isOpen(): Promise<boolean>;
@@ -349,7 +349,7 @@ export declare class FileChannelClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

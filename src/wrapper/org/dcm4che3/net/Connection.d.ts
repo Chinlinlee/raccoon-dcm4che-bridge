@@ -1,18 +1,18 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Logger as org_slf4j_Logger, LoggerInterface as org_slf4j_LoggerInterface } from "./../../slf4j/Logger";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
+import { Socket as java_net_Socket } from "./../../../java/net/Socket";
+import { Connection$Protocol as org_dcm4che3_net_Connection$Protocol } from "./Connection$Protocol";
 import { Device as org_dcm4che3_net_Device } from "./Device";
 import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
-import { TCPProtocolHandler as org_dcm4che3_net_TCPProtocolHandler, TCPProtocolHandlerInterface as org_dcm4che3_net_TCPProtocolHandlerInterface } from "./TCPProtocolHandler";
-import { Connection$Protocol as org_dcm4che3_net_Connection$Protocol } from "./Connection$Protocol";
-import { UDPProtocolHandler as org_dcm4che3_net_UDPProtocolHandler, UDPProtocolHandlerInterface as org_dcm4che3_net_UDPProtocolHandlerInterface } from "./UDPProtocolHandler";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { DatagramSocket as java_net_DatagramSocket } from "./../../../java/net/DatagramSocket";
-import { Socket as java_net_Socket } from "./../../../java/net/Socket";
-import { InetSocketAddress as java_net_InetSocketAddress } from "./../../../java/net/InetSocketAddress";
-import { Listener as org_dcm4che3_net_Listener } from "./Listener";
-import { InetAddress as java_net_InetAddress } from "./../../../java/net/InetAddress";
+import { TCPProtocolHandler as org_dcm4che3_net_TCPProtocolHandler, TCPProtocolHandlerInterface as org_dcm4che3_net_TCPProtocolHandlerInterface } from "./TCPProtocolHandler";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
+import { UDPProtocolHandler as org_dcm4che3_net_UDPProtocolHandler, UDPProtocolHandlerInterface as org_dcm4che3_net_UDPProtocolHandlerInterface } from "./UDPProtocolHandler";
 import { Connection$EndpointIdentificationAlgorithm as org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm } from "./Connection$EndpointIdentificationAlgorithm";
+import { InetSocketAddress as java_net_InetSocketAddress } from "./../../../java/net/InetSocketAddress";
+import { InetAddress as java_net_InetAddress } from "./../../../java/net/InetAddress";
+import { Listener as org_dcm4che3_net_Listener } from "./Listener";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 /**
@@ -74,305 +74,9 @@ export declare class ConnectionClass extends JavaClass {
      */
     static readonly DEFAULT_TLS_PROTOCOLS: (string | null)[] | null;
     /**
-     * @return original return type: 'org.dcm4che3.net.Device'
-     */
-    getDevice(): Promise<org_dcm4che3_net_Device | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Device'
-     */
-    getDeviceSync(): org_dcm4che3_net_Device | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isPackPDV(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isPackPDVSync(): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setConnectTimeout(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setConnectTimeoutSync(var0: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'int'
-     */
-    getConnectTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getConnectTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getRequestTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getRequestTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getIdleTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getIdleTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getAcceptTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getAcceptTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getSendPDULength(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSendPDULengthSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxOpsInvoked(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxOpsInvokedSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxOpsPerformed(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxOpsPerformedSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getReleaseTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getReleaseTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getRetrieveTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getRetrieveTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getSendTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSendTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getStoreTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getStoreTimeoutSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getResponseTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getResponseTimeoutSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.StringBuilder'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.StringBuilder'
-     */
-    promptTo(var0: java_lang_StringBuilder | null, var1: string | null): Promise<java_lang_StringBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.StringBuilder'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.StringBuilder'
-     */
-    promptToSync(var0: java_lang_StringBuilder | null, var1: string | null): java_lang_StringBuilder | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRetrieveTimeoutTotal(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRetrieveTimeoutTotalSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getSocketCloseDelay(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSocketCloseDelaySync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
-     */
-    static unregisterTCPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null): Promise<org_dcm4che3_net_TCPProtocolHandler | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
-     */
-    static unregisterTCPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null): org_dcm4che3_net_TCPProtocolHandler | null;
-    /**
      * @return original return type: 'java.lang.String'
      */
-    getClientBindAddress(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getClientBindAddressSync(): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTlsNeedClientAuth(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTlsNeedClientAuthSync(): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @param var1 original type: 'org.dcm4che3.net.TCPProtocolHandler'
-     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
-     */
-    static registerTCPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_TCPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_TCPProtocolHandlerInterface> | null): Promise<org_dcm4che3_net_TCPProtocolHandler | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @param var1 original type: 'org.dcm4che3.net.TCPProtocolHandler'
-     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
-     */
-    static registerTCPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_TCPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_TCPProtocolHandlerInterface> | null): org_dcm4che3_net_TCPProtocolHandler | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
-     */
-    static unregisterUDPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null): Promise<org_dcm4che3_net_UDPProtocolHandler | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
-     */
-    static unregisterUDPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null): org_dcm4che3_net_UDPProtocolHandler | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setClientBindAddress(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setClientBindAddressSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @param var1 original type: 'org.dcm4che3.net.UDPProtocolHandler'
-     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
-     */
-    static registerUDPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_UDPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_UDPProtocolHandlerInterface> | null): Promise<org_dcm4che3_net_UDPProtocolHandler | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
-     * @param var1 original type: 'org.dcm4che3.net.UDPProtocolHandler'
-     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
-     */
-    static registerUDPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_UDPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_UDPProtocolHandlerInterface> | null): org_dcm4che3_net_UDPProtocolHandler | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setSocketCloseDelay(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setSocketCloseDelaySync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRetrieveTimeoutTotal(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setRetrieveTimeoutTotalSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'int'
-     */
-    getReceiveBufferSize(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getReceiveBufferSizeSync(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setReceiveBufferSize(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setReceiveBufferSizeSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.net.DatagramSocket'
-     * @return original return type: 'void'
-     */
-    setReceiveBufferSize(var0: java_net_DatagramSocket | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.net.DatagramSocket'
-     * @return original return type: 'void'
-     */
-    setReceiveBufferSizeSync(var0: java_net_DatagramSocket | null): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setReceivePDULength(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setReceivePDULengthSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setTlsNeedClientAuth(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setTlsNeedClientAuthSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'java.net.DatagramSocket'
-     */
-    createDatagramSocket(): Promise<java_net_DatagramSocket | null>;
-    /**
-     * @return original return type: 'java.net.DatagramSocket'
-     */
-    createDatagramSocketSync(): java_net_DatagramSocket | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -422,13 +126,363 @@ export declare class ConnectionClass extends JavaClass {
      */
     bindSync(): boolean;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
      */
-    isTls(): Promise<boolean>;
+    setConnectTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setConnectTimeoutSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getConnectTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getConnectTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getSocketCloseDelay(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSocketCloseDelaySync(): number;
     /**
      * @return original return type: 'boolean'
      */
-    isTlsSync(): boolean;
+    isRetrieveTimeoutTotal(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRetrieveTimeoutTotalSync(): boolean;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Device'
+     */
+    getDevice(): Promise<org_dcm4che3_net_Device | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Device'
+     */
+    getDeviceSync(): org_dcm4che3_net_Device | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isPackPDV(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isPackPDVSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getRequestTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getRequestTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getAcceptTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getAcceptTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getReleaseTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getReleaseTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getIdleTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getIdleTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getMaxOpsInvoked(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getMaxOpsInvokedSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getSendPDULength(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSendPDULengthSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getMaxOpsPerformed(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getMaxOpsPerformedSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getRetrieveTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getRetrieveTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getStoreTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getStoreTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getSendTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSendTimeoutSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getResponseTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getResponseTimeoutSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.StringBuilder'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.StringBuilder'
+     */
+    promptTo(var0: java_lang_StringBuilder | null, var1: string | null): Promise<java_lang_StringBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.StringBuilder'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.StringBuilder'
+     */
+    promptToSync(var0: java_lang_StringBuilder | null, var1: string | null): java_lang_StringBuilder | null;
+    /**
+     * @return original return type: 'java.net.DatagramSocket'
+     */
+    createDatagramSocket(): Promise<java_net_DatagramSocket | null>;
+    /**
+     * @return original return type: 'java.net.DatagramSocket'
+     */
+    createDatagramSocketSync(): java_net_DatagramSocket | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getReceiveBufferSize(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getReceiveBufferSizeSync(): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setReceiveBufferSize(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setReceiveBufferSizeSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.net.DatagramSocket'
+     * @return original return type: 'void'
+     */
+    setReceiveBufferSize(var0: java_net_DatagramSocket | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.net.DatagramSocket'
+     * @return original return type: 'void'
+     */
+    setReceiveBufferSizeSync(var0: java_net_DatagramSocket | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @param var1 original type: 'org.dcm4che3.net.TCPProtocolHandler'
+     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
+     */
+    static registerTCPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_TCPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_TCPProtocolHandlerInterface> | null): Promise<org_dcm4che3_net_TCPProtocolHandler | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @param var1 original type: 'org.dcm4che3.net.TCPProtocolHandler'
+     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
+     */
+    static registerTCPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_TCPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_TCPProtocolHandlerInterface> | null): org_dcm4che3_net_TCPProtocolHandler | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTlsNeedClientAuth(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTlsNeedClientAuthSync(): boolean;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setTlsNeedClientAuth(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setTlsNeedClientAuthSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getClientBindAddress(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getClientBindAddressSync(): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getReceivePDULength(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getReceivePDULengthSync(): number;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setRetrieveTimeoutTotal(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setRetrieveTimeoutTotalSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setClientBindAddress(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setClientBindAddressSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setReceivePDULength(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setReceivePDULengthSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
+     */
+    static unregisterUDPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null): Promise<org_dcm4che3_net_UDPProtocolHandler | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
+     */
+    static unregisterUDPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null): org_dcm4che3_net_UDPProtocolHandler | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
+     */
+    static unregisterTCPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null): Promise<org_dcm4che3_net_TCPProtocolHandler | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @return original return type: 'org.dcm4che3.net.TCPProtocolHandler'
+     */
+    static unregisterTCPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null): org_dcm4che3_net_TCPProtocolHandler | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @param var1 original type: 'org.dcm4che3.net.UDPProtocolHandler'
+     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
+     */
+    static registerUDPProtocolHandler(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_UDPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_UDPProtocolHandlerInterface> | null): Promise<org_dcm4che3_net_UDPProtocolHandler | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
+     * @param var1 original type: 'org.dcm4che3.net.UDPProtocolHandler'
+     * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
+     */
+    static registerUDPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_UDPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_UDPProtocolHandlerInterface> | null): org_dcm4che3_net_UDPProtocolHandler | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSocketCloseDelay(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSocketCloseDelaySync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
+     */
+    getTlsEndpointIdentificationAlgorithm(): Promise<org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
+     */
+    getTlsEndpointIdentificationAlgorithmSync(): org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
+     * @return original return type: 'void'
+     */
+    setTlsEndpointIdentificationAlgorithm(var0: org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
+     * @return original return type: 'void'
+     */
+    setTlsEndpointIdentificationAlgorithmSync(var0: org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxOpsInvoked(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxOpsInvokedSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxOpsPerformed(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxOpsPerformedSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInstalled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInstalledSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getSendBufferSize(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSendBufferSizeSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -438,13 +492,99 @@ export declare class ConnectionClass extends JavaClass {
      */
     unbindSync(): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.lang.Boolean'
      */
-    getBindAddress(): Promise<string | null>;
+    getInstalled(): Promise<boolean | null>;
+    /**
+     * @return original return type: 'java.lang.Boolean'
+     */
+    getInstalledSync(): boolean | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSendBufferSize(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSendBufferSizeSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setTcpNoDelay(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setTcpNoDelaySync(var0: java_lang_Boolean | boolean): void;
     /**
      * @return original return type: 'java.lang.String'
      */
-    getBindAddressSync(): string | null;
+    getHttpProxy(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getHttpProxySync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTls(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTlsSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isListening(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isListeningSync(): boolean;
+    /**
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    getEndPoint(): Promise<java_net_InetSocketAddress | null>;
+    /**
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    getEndPointSync(): java_net_InetSocketAddress | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @return original return type: 'boolean'
+     */
+    isCompatible(var0: ConnectionClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @return original return type: 'boolean'
+     */
+    isCompatibleSync(var0: ConnectionClass | null): boolean;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getHostname(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getHostnameSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isServer(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isServerSync(): boolean;
+    /**
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    getClientBindPoint(): Promise<java_net_InetSocketAddress | null>;
+    /**
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    getClientBindPointSync(): java_net_InetSocketAddress | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -466,33 +606,13 @@ export declare class ConnectionClass extends JavaClass {
      */
     setProtocolSync(var0: org_dcm4che3_net_Connection$Protocol | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String[]'
      */
-    setHostname(var0: string | null): Promise<void>;
+    getTlsProtocols(): Promise<(string | null)[] | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String[]'
      */
-    setHostnameSync(var0: string | null): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getHostname(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getHostnameSync(): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setSendBufferSize(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setSendBufferSizeSync(var0: java_lang_Integer | number): void;
+    getTlsProtocolsSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -507,12 +627,22 @@ export declare class ConnectionClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setAcceptTimeout(var0: java_lang_Integer | number): Promise<void>;
+    setBacklog(var0: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setAcceptTimeoutSync(var0: java_lang_Integer | number): void;
+    setBacklogSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setRequestTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setRequestTimeoutSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -524,25 +654,33 @@ export declare class ConnectionClass extends JavaClass {
      */
     setPortSync(var0: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setAbortTimeout(var0: java_lang_Integer | number): Promise<void>;
+    setCommonName(var0: string | null): Promise<void>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setAbortTimeoutSync(var0: java_lang_Integer | number): void;
+    setCommonNameSync(var0: string | null): void;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String[]'
      */
-    setRetrieveTimeout(var0: java_lang_Integer | number): Promise<void>;
+    getTlsCipherSuites(): Promise<(string | null)[] | null>;
     /**
-     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    getTlsCipherSuitesSync(): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setRetrieveTimeoutSync(var0: java_lang_Integer | number): void;
+    setHostname(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setHostnameSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
@@ -554,13 +692,75 @@ export declare class ConnectionClass extends JavaClass {
      */
     setTlsCipherSuitesSync(var0: (string | null)[] | null): void;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
      */
-    getAbortTimeout(): Promise<number>;
+    setTlsProtocols(var0: (string | null)[] | null): Promise<void>;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
      */
-    getAbortTimeoutSync(): number;
+    setTlsProtocolsSync(var0: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setReleaseTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setReleaseTimeoutSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setAcceptTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setAcceptTimeoutSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setBlacklist(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setBlacklistSync(var0: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSendPDULength(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setSendPDULengthSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setResponseTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setResponseTimeoutSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setRetrieveTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setRetrieveTimeoutSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -575,22 +775,32 @@ export declare class ConnectionClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setReleaseTimeout(var0: java_lang_Integer | number): Promise<void>;
+    setStoreTimeout(var0: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setReleaseTimeoutSync(var0: java_lang_Integer | number): void;
+    setStoreTimeoutSync(var0: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.lang.String[]'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setTlsProtocols(var0: (string | null)[] | null): Promise<void>;
+    setIdleTimeout(var0: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String[]'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setTlsProtocolsSync(var0: (string | null)[] | null): void;
+    setIdleTimeoutSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setAbortTimeout(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setAbortTimeoutSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -602,15 +812,31 @@ export declare class ConnectionClass extends JavaClass {
      */
     setPackPDVSync(var0: java_lang_Boolean | boolean): void;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.Boolean'
      * @return original return type: 'void'
      */
-    setSendPDULength(var0: java_lang_Integer | number): Promise<void>;
+    setInstalled(var0: java_lang_Boolean | boolean | null): Promise<void>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.Boolean'
      * @return original return type: 'void'
      */
-    setSendPDULengthSync(var0: java_lang_Integer | number): void;
+    setInstalledSync(var0: java_lang_Boolean | boolean | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getBindAddress(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getBindAddressSync(): string | null;
+    /**
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    getBindPoint(): Promise<java_net_InetSocketAddress | null>;
+    /**
+     * @return original return type: 'java.net.InetSocketAddress'
+     */
+    getBindPointSync(): java_net_InetSocketAddress | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -628,33 +854,13 @@ export declare class ConnectionClass extends JavaClass {
      */
     getBacklogSync(): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String[]'
      */
-    setIdleTimeout(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setIdleTimeoutSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setRequestTimeout(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setRequestTimeoutSync(var0: java_lang_Integer | number): void;
+    getBlacklist(): Promise<(string | null)[] | null>;
     /**
      * @return original return type: 'java.lang.String[]'
      */
-    getTlsProtocols(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getTlsProtocolsSync(): (string | null)[] | null;
+    getBlacklistSync(): (string | null)[] | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -664,119 +870,13 @@ export declare class ConnectionClass extends JavaClass {
      */
     useHttpProxySync(): boolean;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    setBacklog(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setBacklogSync(var0: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getTlsCipherSuites(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getTlsCipherSuitesSync(): (string | null)[] | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setResponseTimeout(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setResponseTimeoutSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCommonName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCommonNameSync(var0: string | null): void;
+    getAbortTimeout(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    getSendBufferSize(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSendBufferSizeSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getHttpProxy(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getHttpProxySync(): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setStoreTimeout(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setStoreTimeoutSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setTcpNoDelay(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setTcpNoDelaySync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    getBindPoint(): Promise<java_net_InetSocketAddress | null>;
-    /**
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    getBindPointSync(): java_net_InetSocketAddress | null;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getBlacklist(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getBlacklistSync(): (string | null)[] | null;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Listener'
-     */
-    getListener(): Promise<org_dcm4che3_net_Listener | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Listener'
-     */
-    getListenerSync(): org_dcm4che3_net_Listener | null;
-    /**
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    getEndPoint(): Promise<java_net_InetSocketAddress | null>;
-    /**
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    getEndPointSync(): java_net_InetSocketAddress | null;
-    /**
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    getClientBindPoint(): Promise<java_net_InetSocketAddress | null>;
-    /**
-     * @return original return type: 'java.net.InetSocketAddress'
-     */
-    getClientBindPointSync(): java_net_InetSocketAddress | null;
+    getAbortTimeoutSync(): number;
     /**
      * @return original return type: 'boolean'
      */
@@ -796,113 +896,13 @@ export declare class ConnectionClass extends JavaClass {
      */
     isBlackListedSync(var0: java_net_InetAddress | null): boolean;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'org.dcm4che3.net.Listener'
      */
-    isListening(): Promise<boolean>;
+    getListener(): Promise<org_dcm4che3_net_Listener | null>;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'org.dcm4che3.net.Listener'
      */
-    isListeningSync(): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setBlacklist(var0: (string | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'void'
-     */
-    setBlacklistSync(var0: (string | null)[] | null): void;
-    /**
-     * @return original return type: 'int'
-     */
-    getReceivePDULength(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getReceivePDULengthSync(): number;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
-     * @return original return type: 'void'
-     */
-    setTlsEndpointIdentificationAlgorithm(var0: org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
-     * @return original return type: 'void'
-     */
-    setTlsEndpointIdentificationAlgorithmSync(var0: org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null): void;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
-     */
-    getTlsEndpointIdentificationAlgorithm(): Promise<org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Connection$EndpointIdentificationAlgorithm'
-     */
-    getTlsEndpointIdentificationAlgorithmSync(): org_dcm4che3_net_Connection$EndpointIdentificationAlgorithm | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxOpsPerformed(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxOpsPerformedSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxOpsInvoked(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxOpsInvokedSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.lang.Boolean'
-     * @return original return type: 'void'
-     */
-    setInstalled(var0: java_lang_Boolean | boolean | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Boolean'
-     * @return original return type: 'void'
-     */
-    setInstalledSync(var0: java_lang_Boolean | boolean | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInstalled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInstalledSync(): boolean;
-    /**
-     * @return original return type: 'java.lang.Boolean'
-     */
-    getInstalled(): Promise<boolean | null>;
-    /**
-     * @return original return type: 'java.lang.Boolean'
-     */
-    getInstalledSync(): boolean | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isServer(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isServerSync(): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
-     * @return original return type: 'boolean'
-     */
-    isCompatible(var0: ConnectionClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
-     * @return original return type: 'boolean'
-     */
-    isCompatibleSync(var0: ConnectionClass | null): boolean;
+    getListenerSync(): org_dcm4che3_net_Listener | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -976,11 +976,10 @@ export declare class ConnectionClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
      * @return original return type: 'org.dcm4che3.net.Connection'
      */
-    static newInstanceAsync(var0: string | null, var1: string | null): Promise<Connection>;
+    static newInstanceAsync(var0: ConnectionClass | null): Promise<Connection>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -989,19 +988,19 @@ export declare class ConnectionClass extends JavaClass {
      */
     static newInstanceAsync(var0: string | null, var1: string | null, var2: java_lang_Integer | number): Promise<Connection>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.Connection'
      */
-    static newInstanceAsync(var0: ConnectionClass | null): Promise<Connection>;
+    static newInstanceAsync(var0: string | null, var1: string | null): Promise<Connection>;
     /**
      * @return original return type: 'org.dcm4che3.net.Connection'
      */
     static newInstanceAsync(): Promise<Connection>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
      */
-    constructor(var0: string | null, var1: string | null);
+    constructor(var0: ConnectionClass | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -1009,9 +1008,10 @@ export declare class ConnectionClass extends JavaClass {
      */
     constructor(var0: string | null, var1: string | null, var2: java_lang_Integer | number);
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      */
-    constructor(var0: ConnectionClass | null);
+    constructor(var0: string | null, var1: string | null);
     constructor();
 }
 declare const Connection_base: typeof ConnectionClass;

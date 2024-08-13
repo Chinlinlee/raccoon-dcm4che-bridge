@@ -15,4 +15,3 @@ class Rectangle extends (0, java_bridge_1.importClass)('java.awt.Rectangle') {
 }
 exports.Rectangle = Rectangle;
 exports.default = Rectangle;
-//# sourceMappingURL=Rectangle.js.map

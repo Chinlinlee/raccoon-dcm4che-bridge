@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
+import { EventID as org_dcm4che3_audit_EventID } from "./EventID";
 import { List as java_util_List } from "./../../../java/util/List";
 import { Calendar as java_util_Calendar } from "./../../../java/util/Calendar";
-import { EventID as org_dcm4che3_audit_EventID } from "./EventID";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
@@ -11,6 +11,14 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  * You should probably not edit this.
  */
 export declare class EventIdentificationClass extends JavaClass {
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getEventOutcomeIndicator(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getEventOutcomeIndicatorSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -22,6 +30,14 @@ export declare class EventIdentificationClass extends JavaClass {
      */
     setEventOutcomeIndicatorSync(var0: string | null): void;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getEventOutcomeDescription(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getEventOutcomeDescriptionSync(): string | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -31,58 +47,6 @@ export declare class EventIdentificationClass extends JavaClass {
      * @return original return type: 'void'
      */
     setEventOutcomeDescriptionSync(var0: string | null): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getEventOutcomeIndicator(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getEventOutcomeIndicatorSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getEventOutcomeDescription(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getEventOutcomeDescriptionSync(): string | null;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getEventTypeCode(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getEventTypeCodeSync(): java_util_List | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setEventActionCode(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setEventActionCodeSync(var0: string | null): void;
-    /**
-     * @return original return type: 'java.util.Calendar'
-     */
-    getEventDateTime(): Promise<java_util_Calendar | null>;
-    /**
-     * @return original return type: 'java.util.Calendar'
-     */
-    getEventDateTimeSync(): java_util_Calendar | null;
-    /**
-     * @param var0 original type: 'java.util.Calendar'
-     * @return original return type: 'void'
-     */
-    setEventDateTime(var0: java_util_Calendar | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.util.Calendar'
-     * @return original return type: 'void'
-     */
-    setEventDateTimeSync(var0: java_util_Calendar | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.EventID'
      * @return original return type: 'void'
@@ -94,13 +58,13 @@ export declare class EventIdentificationClass extends JavaClass {
      */
     setEventIDSync(var0: org_dcm4che3_audit_EventID | null): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.util.List'
      */
-    getEventActionCode(): Promise<string | null>;
+    getEventTypeCode(): Promise<java_util_List | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.util.List'
      */
-    getEventActionCodeSync(): string | null;
+    getEventTypeCodeSync(): java_util_List | null;
     /**
      * @return original return type: 'org.dcm4che3.audit.EventID'
      */
@@ -109,6 +73,42 @@ export declare class EventIdentificationClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.audit.EventID'
      */
     getEventIDSync(): org_dcm4che3_audit_EventID | null;
+    /**
+     * @return original return type: 'java.util.Calendar'
+     */
+    getEventDateTime(): Promise<java_util_Calendar | null>;
+    /**
+     * @return original return type: 'java.util.Calendar'
+     */
+    getEventDateTimeSync(): java_util_Calendar | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setEventActionCode(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setEventActionCodeSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.util.Calendar'
+     * @return original return type: 'void'
+     */
+    setEventDateTime(var0: java_util_Calendar | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.Calendar'
+     * @return original return type: 'void'
+     */
+    setEventDateTimeSync(var0: java_util_Calendar | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getEventActionCode(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getEventActionCodeSync(): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -152,11 +152,11 @@ export declare class EventIdentificationClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */

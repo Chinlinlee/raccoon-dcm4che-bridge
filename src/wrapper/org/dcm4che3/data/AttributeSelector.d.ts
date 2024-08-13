@@ -12,6 +12,14 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class AttributeSelectorClass extends JavaClass {
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    privateCreator(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    privateCreatorSync(): string | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -24,11 +32,11 @@ export declare class AttributeSelectorClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toStringSync(): string;
+    toStringAsync(): Promise<string>;
     /**
      * @return original return type: 'int'
      */
@@ -77,14 +85,6 @@ export declare class AttributeSelectorClass extends JavaClass {
      * @return original return type: 'int'
      */
     levelSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    privateCreator(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    privateCreatorSync(): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.ItemPointer'
@@ -165,11 +165,15 @@ export declare class AttributeSelectorClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.util.List'
      * @return original return type: 'org.dcm4che3.data.AttributeSelector'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<AttributeSelector>;
+    static newInstanceAsync(var0: java_lang_Integer | number): Promise<AttributeSelector>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.AttributeSelector'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null): Promise<AttributeSelector>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -180,20 +184,19 @@ export declare class AttributeSelectorClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.util.List'
      * @return original return type: 'org.dcm4che3.data.AttributeSelector'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null): Promise<AttributeSelector>;
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<AttributeSelector>;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.AttributeSelector'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number): Promise<AttributeSelector>;
+    constructor(var0: java_lang_Integer | number);
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.util.List'
      */
-    constructor(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null);
+    constructor(var0: java_lang_Integer | number, var1: string | null);
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -203,12 +206,9 @@ export declare class AttributeSelectorClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.util.List'
      */
-    constructor(var0: java_lang_Integer | number, var1: string | null);
-    /**
-     * @param var0 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number);
+    constructor(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null);
 }
 declare const AttributeSelector_base: typeof AttributeSelectorClass;
 /**

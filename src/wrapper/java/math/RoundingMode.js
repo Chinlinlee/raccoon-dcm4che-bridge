@@ -15,4 +15,3 @@ class RoundingMode extends (0, java_bridge_1.importClass)('java.math.RoundingMod
 }
 exports.RoundingMode = RoundingMode;
 exports.default = RoundingMode;
-//# sourceMappingURL=RoundingMode.js.map

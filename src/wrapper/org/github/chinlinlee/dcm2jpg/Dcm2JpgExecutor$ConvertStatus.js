@@ -15,4 +15,3 @@ class Dcm2JpgExecutor$ConvertStatus extends (0, java_bridge_1.importClass)('org.
 }
 exports.Dcm2JpgExecutor$ConvertStatus = Dcm2JpgExecutor$ConvertStatus;
 exports.default = Dcm2JpgExecutor$ConvertStatus;
-//# sourceMappingURL=Dcm2JpgExecutor$ConvertStatus.js.map

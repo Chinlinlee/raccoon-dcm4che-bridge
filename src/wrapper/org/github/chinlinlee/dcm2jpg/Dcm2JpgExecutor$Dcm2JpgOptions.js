@@ -15,4 +15,3 @@ class Dcm2JpgExecutor$Dcm2JpgOptions extends (0, java_bridge_1.importClass)('org
 }
 exports.Dcm2JpgExecutor$Dcm2JpgOptions = Dcm2JpgExecutor$Dcm2JpgOptions;
 exports.default = Dcm2JpgExecutor$Dcm2JpgOptions;
-//# sourceMappingURL=Dcm2JpgExecutor$Dcm2JpgOptions.js.map

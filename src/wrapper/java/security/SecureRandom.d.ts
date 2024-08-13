@@ -1,9 +1,9 @@
 /// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { SecureRandomParameters as java_security_SecureRandomParameters, SecureRandomParametersInterface as java_security_SecureRandomParametersInterface } from "./SecureRandomParameters";
 import { Provider as java_security_Provider } from "./Provider";
 import { Long as java_lang_Long } from "./../lang/Long";
+import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Double as java_lang_Double } from "./../lang/Double";
 import { DoubleStream as java_util_stream_DoubleStream } from "./../util/stream/DoubleStream";
 import { IntStream as java_util_stream_IntStream } from "./../util/stream/IntStream";
@@ -17,49 +17,63 @@ import { Class as java_lang_Class } from "./../lang/Class";
  */
 export declare class SecureRandomClass extends JavaClass {
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    generateSeed(var0: java_lang_Integer | number): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    generateSeedSync(var0: java_lang_Integer | number): Buffer | null;
-    /**
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceStrong(): Promise<SecureRandom | null>;
-    /**
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceStrongSync(): SecureRandom | null;
-    /**
-     * @param var0 original type: 'java.security.SecureRandomParameters'
-     * @return original return type: 'void'
-     */
-    reseed(var0: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.security.SecureRandomParameters'
-     * @return original return type: 'void'
-     */
-    reseedSync(var0: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): void;
-    /**
-     * @return original return type: 'void'
-     */
-    reseed(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    reseedSync(): void;
-    /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
     toStringSync(): string;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: string | null): Promise<SecureRandom | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: string | null): SecureRandom | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): Promise<SecureRandom | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): SecureRandom | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @param var2 original type: 'java.security.Provider'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): Promise<SecureRandom | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @param var2 original type: 'java.security.Provider'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): SecureRandom | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstance(var0: string | null): Promise<SecureRandom | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceSync(var0: string | null): SecureRandom | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -84,56 +98,6 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'java.security.SecureRandom'
      */
     static getInstanceSync(var0: string | null, var1: java_security_Provider | null): SecureRandom | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): SecureRandom | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: string | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: string | null): SecureRandom | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstance(var0: string | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null): SecureRandom | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @param var2 original type: 'java.security.Provider'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @param var2 original type: 'java.security.Provider'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): SecureRandom | null;
     /**
      * @return original return type: 'java.security.SecureRandomParameters'
      */
@@ -181,16 +145,6 @@ export declare class SecureRandomClass extends JavaClass {
      */
     nextBytesSync(var0: Buffer | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): void;
     /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    setSeed(var0: Buffer | null): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    setSeedSync(var0: Buffer | null): void;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'void'
      */
@@ -201,6 +155,16 @@ export declare class SecureRandomClass extends JavaClass {
      */
     setSeedSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    setSeed(var0: Buffer | null): Promise<void>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    setSeedSync(var0: Buffer | null): void;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'byte[]'
      */
@@ -210,6 +174,42 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'byte[]'
      */
     static getSeedSync(var0: java_lang_Integer | number): Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    generateSeed(var0: java_lang_Integer | number): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    generateSeedSync(var0: java_lang_Integer | number): Buffer | null;
+    /**
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceStrong(): Promise<SecureRandom | null>;
+    /**
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceStrongSync(): SecureRandom | null;
+    /**
+     * @return original return type: 'void'
+     */
+    reseed(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    reseedSync(): void;
+    /**
+     * @param var0 original type: 'java.security.SecureRandomParameters'
+     * @return original return type: 'void'
+     */
+    reseed(var0: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.security.SecureRandomParameters'
+     * @return original return type: 'void'
+     */
+    reseedSync(var0: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): void;
     /**
      * @return original return type: 'double'
      */

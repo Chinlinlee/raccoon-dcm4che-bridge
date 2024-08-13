@@ -10,22 +10,6 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
  */
 export declare class DateRangeClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.Date'
-     */
-    getEndDate(): Promise<java_util_Date | null>;
-    /**
-     * @return original return type: 'java.util.Date'
-     */
-    getEndDateSync(): java_util_Date | null;
-    /**
-     * @return original return type: 'java.util.Date'
-     */
-    getStartDate(): Promise<java_util_Date | null>;
-    /**
-     * @return original return type: 'java.util.Date'
-     */
-    getStartDateSync(): java_util_Date | null;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -38,7 +22,7 @@ export declare class DateRangeClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -61,6 +45,22 @@ export declare class DateRangeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: java_util_Date | null): boolean;
+    /**
+     * @return original return type: 'java.util.Date'
+     */
+    getStartDate(): Promise<java_util_Date | null>;
+    /**
+     * @return original return type: 'java.util.Date'
+     */
+    getStartDateSync(): java_util_Date | null;
+    /**
+     * @return original return type: 'java.util.Date'
+     */
+    getEndDate(): Promise<java_util_Date | null>;
+    /**
+     * @return original return type: 'java.util.Date'
+     */
+    getEndDateSync(): java_util_Date | null;
     /**
      * @return original return type: 'boolean'
      */

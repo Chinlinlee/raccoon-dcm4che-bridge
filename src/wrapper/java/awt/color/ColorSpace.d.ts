@@ -166,25 +166,13 @@ export declare class ColorSpaceClass extends JavaClass {
      */
     getNumComponentsSync(): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float'
+     * @return original return type: 'boolean'
      */
-    getMinValue(var0: java_lang_Integer | number): Promise<number>;
+    isCS_sRGB(): Promise<boolean>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float'
+     * @return original return type: 'boolean'
      */
-    getMinValueSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float'
-     */
-    getMaxValue(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float'
-     */
-    getMaxValueSync(var0: java_lang_Integer | number): number;
+    isCS_sRGBSync(): boolean;
     /**
      * @param var0 original type: 'float[]'
      * @return original return type: 'float[]'
@@ -226,13 +214,25 @@ export declare class ColorSpaceClass extends JavaClass {
      */
     fromCIEXYZSync(var0: (java_lang_Float | number)[] | null): (number)[] | null;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @return original return type: 'float'
      */
-    isCS_sRGB(): Promise<boolean>;
+    getMinValue(var0: java_lang_Integer | number): Promise<number>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @return original return type: 'float'
      */
-    isCS_sRGBSync(): boolean;
+    getMinValueSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'float'
+     */
+    getMaxValue(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'float'
+     */
+    getMaxValueSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -276,7 +276,7 @@ export declare class ColorSpaceClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): Promise<string>;
+    toString(): string;
     /**
      * @return original return type: 'java.lang.String'
      */

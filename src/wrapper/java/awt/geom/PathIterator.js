@@ -34,4 +34,3 @@ class PathIterator extends (0, java_bridge_1.importClass)('java.awt.geom.PathIte
 }
 exports.PathIterator = PathIterator;
 exports.default = PathIterator;
-//# sourceMappingURL=PathIterator.js.map

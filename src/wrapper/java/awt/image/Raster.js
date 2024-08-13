@@ -15,4 +15,3 @@ class Raster extends (0, java_bridge_1.importClass)('java.awt.image.Raster') {
 }
 exports.Raster = Raster;
 exports.default = Raster;
-//# sourceMappingURL=Raster.js.map
