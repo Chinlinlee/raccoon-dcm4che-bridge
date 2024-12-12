@@ -28,13 +28,15 @@ class Dcm2imageWrapper {
         let destPath = await Paths.get(dest, []);
 
         let inputStream;
+        let map;
+        let img;
         try {
             inputStream = new DicomFileInputStream(srcPath);
-            let map = await format.equals(Transcoder$Format.JPEG) ? new MatOfInt([Imgcodecs.IMWRITE_JPEG_QUALITY, await this.#getCompressionRatio(params)]) : null;
+            map = await format.equals(Transcoder$Format.JPEG) ? new MatOfInt([Imgcodecs.IMWRITE_JPEG_QUALITY, await this.#getCompressionRatio(params)]) : null;
 
             await reader.setInput(inputStream);
 
-            let img = await reader.getPlanarImage(frameNumber - 1, await params.getReadParam());
+            img = await reader.getPlanarImage(frameNumber - 1, await params.getReadParam());
             let rawImage = await this.#isPreserveRawImage(params, format, await img.type());
             if (rawImage) {
                 img = await ImageRendering.getRawRenderedImage(
@@ -50,7 +52,13 @@ class Dcm2imageWrapper {
         } catch (e) {
             throw e;
         } finally {
-            await reader.dispose();
+            if (reader) await reader.dispose();
+            if (inputStream) await inputStream.close();
+            if (map) {
+                await DicomImageReader.closeMat(map);
+                await map.release();
+            }
+            if (img) await img.release();
         }
     }
 
@@ -96,7 +104,7 @@ class Dcm2imageWrapper {
 
     /**
      * 
-     * @param {import('./wrapper/org/weasis/opencv/data/PlanarImage')} img 
+     * @param {import('./wrapper/org/weasis/opencv/data/PlanarImage').PlanarImage} img 
      * @param {import('./wrapper/java/nio/file/Path')} dest 
      * @param {string} ext 
      * @param {MatOfInt} map 
@@ -104,12 +112,14 @@ class Dcm2imageWrapper {
      */
     static async #writeImage(img, dest, ext, map) {
         if (map === null) {
-            if (!await ImageProcessor.writeImage(await img.toMat(), await dest.toFile())) {
+            let imgMat = await img.toMat();
+            if (!await ImageProcessor.writeImage(imgMat, await dest.toFile())) {
                 console.error(`Cannot Transform to ${ext} ${img}`);
                 await FileUtil.delete(dest);
             }
         } else {
-            if (!await ImageProcessor.writeImage(await img.toMat(), await dest.toFile(), map)) {
+            let imgMat = await img.toMat();
+            if (!await ImageProcessor.writeImage(imgMat, await dest.toFile(), map)) {
                 console.error(`Cannot Transform to ${ext} ${img}`);
                 await FileUtil.delete(dest);
             }
