@@ -9,6 +9,14 @@ import { TimeUnit as java_util_concurrent_TimeUnit } from "./../../util/concurre
  */
 export declare class WatchServiceClass extends JavaClass {
     /**
+     * @return original return type: 'java.nio.file.WatchKey'
+     */
+    take(): Promise<java_nio_file_WatchKey | null>;
+    /**
+     * @return original return type: 'java.nio.file.WatchKey'
+     */
+    takeSync(): java_nio_file_WatchKey | null;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'java.nio.file.WatchKey'
@@ -36,14 +44,6 @@ export declare class WatchServiceClass extends JavaClass {
      * @return original return type: 'void'
      */
     closeSync(): void;
-    /**
-     * @return original return type: 'java.nio.file.WatchKey'
-     */
-    take(): Promise<java_nio_file_WatchKey | null>;
-    /**
-     * @return original return type: 'java.nio.file.WatchKey'
-     */
-    takeSync(): java_nio_file_WatchKey | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -58,6 +58,10 @@ export declare class WatchServiceClass extends JavaClass {
  */
 export interface WatchServiceInterface {
     /**
+     * @return original return type: 'java.nio.file.WatchKey'
+     */
+    take(): java_nio_file_WatchKey | null;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'java.nio.file.WatchKey'
@@ -71,10 +75,6 @@ export interface WatchServiceInterface {
      * @return original return type: 'void'
      */
     close(): void;
-    /**
-     * @return original return type: 'java.nio.file.WatchKey'
-     */
-    take(): java_nio_file_WatchKey | null;
 }
 /**
  * Create a proxy for the {@link WatchService} interface.

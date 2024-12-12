@@ -10,6 +10,16 @@ import { Type as java_lang_reflect_Type } from "./Type";
 export declare class AnnotatedTypeClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.lang.annotation.Annotation[]'
+     */
+    getAnnotationsByType(var0: java_lang_Class | null): Promise<(java_lang_annotation_Annotation | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.lang.annotation.Annotation[]'
+     */
+    getAnnotationsByTypeSync(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation'
      */
     getAnnotation(var0: java_lang_Class | null): Promise<java_lang_annotation_Annotation | null>;
@@ -18,22 +28,6 @@ export declare class AnnotatedTypeClass extends JavaClass {
      * @return original return type: 'java.lang.annotation.Annotation'
      */
     getAnnotationSync(var0: java_lang_Class | null): java_lang_annotation_Annotation | null;
-    /**
-     * @return original return type: 'java.lang.annotation.Annotation[]'
-     */
-    getAnnotations(): Promise<(java_lang_annotation_Annotation | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.annotation.Annotation[]'
-     */
-    getAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.annotation.Annotation[]'
-     */
-    getDeclaredAnnotations(): Promise<(java_lang_annotation_Annotation | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.annotation.Annotation[]'
-     */
-    getDeclaredAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
     /**
      * @return original return type: 'java.lang.reflect.Type'
      */
@@ -64,12 +58,12 @@ export declare class AnnotatedTypeClass extends JavaClass {
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
-    getAnnotationsByType(var0: java_lang_Class | null): Promise<(java_lang_annotation_Annotation | null)[] | null>;
+    getDeclaredAnnotationsByType(var0: java_lang_Class | null): Promise<(java_lang_annotation_Annotation | null)[] | null>;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
-    getAnnotationsByTypeSync(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
+    getDeclaredAnnotationsByTypeSync(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation'
@@ -81,15 +75,21 @@ export declare class AnnotatedTypeClass extends JavaClass {
      */
     getDeclaredAnnotationSync(var0: java_lang_Class | null): java_lang_annotation_Annotation | null;
     /**
-     * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
-    getDeclaredAnnotationsByType(var0: java_lang_Class | null): Promise<(java_lang_annotation_Annotation | null)[] | null>;
+    getAnnotations(): Promise<(java_lang_annotation_Annotation | null)[] | null>;
     /**
-     * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
-    getDeclaredAnnotationsByTypeSync(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
+    getAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
+    /**
+     * @return original return type: 'java.lang.annotation.Annotation[]'
+     */
+    getDeclaredAnnotations(): Promise<(java_lang_annotation_Annotation | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.annotation.Annotation[]'
+     */
+    getDeclaredAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -105,17 +105,14 @@ export declare class AnnotatedTypeClass extends JavaClass {
 export interface AnnotatedTypeInterface {
     /**
      * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.lang.annotation.Annotation[]'
+     */
+    getAnnotationsByType?(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation'
      */
     getAnnotation(var0: java_lang_Class | null): java_lang_annotation_Annotation | null;
-    /**
-     * @return original return type: 'java.lang.annotation.Annotation[]'
-     */
-    getAnnotations(): (java_lang_annotation_Annotation | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.annotation.Annotation[]'
-     */
-    getDeclaredAnnotations(): (java_lang_annotation_Annotation | null)[] | null;
     /**
      * @return original return type: 'java.lang.reflect.Type'
      */
@@ -133,17 +130,20 @@ export interface AnnotatedTypeInterface {
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
-    getAnnotationsByType?(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
+    getDeclaredAnnotationsByType?(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation'
      */
     getDeclaredAnnotation?(var0: java_lang_Class | null): java_lang_annotation_Annotation | null;
     /**
-     * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
-    getDeclaredAnnotationsByType?(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
+    getAnnotations(): (java_lang_annotation_Annotation | null)[] | null;
+    /**
+     * @return original return type: 'java.lang.annotation.Annotation[]'
+     */
+    getDeclaredAnnotations(): (java_lang_annotation_Annotation | null)[] | null;
 }
 /**
  * Create a proxy for the {@link AnnotatedType} interface.

@@ -7,6 +7,14 @@ import { ByteBuffer as java_nio_ByteBuffer } from "./../ByteBuffer";
  */
 export declare class WritableByteChannelClass extends JavaClass {
     /**
+     * @return original return type: 'boolean'
+     */
+    isOpen(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOpenSync(): boolean;
+    /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @return original return type: 'int'
      */
@@ -16,14 +24,6 @@ export declare class WritableByteChannelClass extends JavaClass {
      * @return original return type: 'int'
      */
     writeSync(var0: java_nio_ByteBuffer | null): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOpen(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOpenSync(): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -46,14 +46,14 @@ export declare class WritableByteChannelClass extends JavaClass {
  */
 export interface WritableByteChannelInterface {
     /**
+     * @return original return type: 'boolean'
+     */
+    isOpen(): boolean;
+    /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @return original return type: 'int'
      */
     write(var0: java_nio_ByteBuffer | null): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOpen(): boolean;
     /**
      * @return original return type: 'void'
      */

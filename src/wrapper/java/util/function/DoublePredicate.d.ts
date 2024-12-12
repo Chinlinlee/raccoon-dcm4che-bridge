@@ -7,16 +7,6 @@ import { Double as java_lang_Double } from "./../../lang/Double";
  */
 export declare class DoublePredicateClass extends JavaClass {
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    test(var0: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    testSync(var0: java_lang_Double | number): boolean;
-    /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
      * @return original return type: 'java.util.function.DoublePredicate'
      */
@@ -26,6 +16,16 @@ export declare class DoublePredicateClass extends JavaClass {
      * @return original return type: 'java.util.function.DoublePredicate'
      */
     orSync(var0: DoublePredicateClass | JavaInterfaceProxy<DoublePredicateInterface> | null): DoublePredicate | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    test(var0: java_lang_Double | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    testSync(var0: java_lang_Double | number): boolean;
     /**
      * @return original return type: 'java.util.function.DoublePredicate'
      */
@@ -58,15 +58,15 @@ export declare class DoublePredicateClass extends JavaClass {
  */
 export interface DoublePredicateInterface {
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    test(var0: java_lang_Double | number): boolean;
-    /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
      * @return original return type: 'java.util.function.DoublePredicate'
      */
     or?(var0: DoublePredicateClass | JavaInterfaceProxy<DoublePredicateInterface> | null): DoublePredicate | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    test(var0: java_lang_Double | number): boolean;
     /**
      * @return original return type: 'java.util.function.DoublePredicate'
      */

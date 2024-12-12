@@ -7,16 +7,6 @@ import { Long as java_lang_Long } from "./../../lang/Long";
  */
 export declare class LongPredicateClass extends JavaClass {
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'boolean'
-     */
-    test(var0: java_lang_Long | bigint | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'boolean'
-     */
-    testSync(var0: java_lang_Long | bigint | number): boolean;
-    /**
      * @param var0 original type: 'java.util.function.LongPredicate'
      * @return original return type: 'java.util.function.LongPredicate'
      */
@@ -26,6 +16,16 @@ export declare class LongPredicateClass extends JavaClass {
      * @return original return type: 'java.util.function.LongPredicate'
      */
     orSync(var0: LongPredicateClass | JavaInterfaceProxy<LongPredicateInterface> | null): LongPredicate | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'boolean'
+     */
+    test(var0: java_lang_Long | bigint | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'boolean'
+     */
+    testSync(var0: java_lang_Long | bigint | number): boolean;
     /**
      * @return original return type: 'java.util.function.LongPredicate'
      */
@@ -58,15 +58,15 @@ export declare class LongPredicateClass extends JavaClass {
  */
 export interface LongPredicateInterface {
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'boolean'
-     */
-    test(var0: java_lang_Long | bigint | number): boolean;
-    /**
      * @param var0 original type: 'java.util.function.LongPredicate'
      * @return original return type: 'java.util.function.LongPredicate'
      */
     or?(var0: LongPredicateClass | JavaInterfaceProxy<LongPredicateInterface> | null): LongPredicate | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'boolean'
+     */
+    test(var0: java_lang_Long | bigint | number): boolean;
     /**
      * @return original return type: 'java.util.function.LongPredicate'
      */

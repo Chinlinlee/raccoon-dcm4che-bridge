@@ -1,11 +1,11 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Set as java_util_Set, SetInterface as java_util_SetInterface } from "./../../../java/util/Set";
-import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { AccessControlContext as java_security_AccessControlContext } from "./../../../java/security/AccessControlContext";
-import { PrivilegedAction as java_security_PrivilegedAction, PrivilegedActionInterface as java_security_PrivilegedActionInterface } from "./../../../java/security/PrivilegedAction";
-import { PrivilegedExceptionAction as java_security_PrivilegedExceptionAction, PrivilegedExceptionActionInterface as java_security_PrivilegedExceptionActionInterface } from "./../../../java/security/PrivilegedExceptionAction";
+import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
+import { Set as java_util_Set, SetInterface as java_util_SetInterface } from "./../../../java/util/Set";
+import { PrivilegedAction as java_security_PrivilegedAction, PrivilegedActionInterface as java_security_PrivilegedActionInterface } from "./../../../java/security/PrivilegedAction";
+import { PrivilegedExceptionAction as java_security_PrivilegedExceptionAction, PrivilegedExceptionActionInterface as java_security_PrivilegedExceptionActionInterface } from "./../../../java/security/PrivilegedExceptionAction";
 import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 /**
  * This class just defines types, you should import {@link Subject} instead of this.
@@ -13,66 +13,6 @@ import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
  * You should probably not edit this.
  */
 export declare class SubjectClass extends JavaClass {
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @return original return type: 'void'
-     */
-    setReadOnly(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    setReadOnlySync(): void;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPrincipals(): Promise<java_util_Set | null>;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPrincipalsSync(): java_util_Set | null;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Set'
-     */
-    getPrincipals(var0: java_lang_Class | null): Promise<java_util_Set | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Set'
-     */
-    getPrincipalsSync(var0: java_lang_Class | null): java_util_Set | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isReadOnly(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isReadOnlySync(): boolean;
     /**
      * @param var0 original type: 'java.security.AccessControlContext'
      * @return original return type: 'javax.security.auth.Subject'
@@ -84,93 +24,13 @@ export declare class SubjectClass extends JavaClass {
      */
     static getSubjectSync(var0: java_security_AccessControlContext | null): Subject | null;
     /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedAction'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Class'
      */
-    static doAs(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null): Promise<BasicOrJavaType | null>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedAction'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Class'
      */
-    static doAsSync(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAs(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsSync(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedAction'
-     * @param var2 original type: 'java.security.AccessControlContext'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsPrivileged(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedAction'
-     * @param var2 original type: 'java.security.AccessControlContext'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
-     * @param var2 original type: 'java.security.AccessControlContext'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsPrivileged(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null, var2: java_security_AccessControlContext | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
-     * @param var2 original type: 'java.security.AccessControlContext'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPublicCredentials(): Promise<java_util_Set | null>;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPublicCredentialsSync(): java_util_Set | null;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Set'
-     */
-    getPublicCredentials(var0: java_lang_Class | null): Promise<java_util_Set | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Set'
-     */
-    getPublicCredentialsSync(var0: java_lang_Class | null): java_util_Set | null;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Set'
-     */
-    getPrivateCredentials(var0: java_lang_Class | null): Promise<java_util_Set | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Set'
-     */
-    getPrivateCredentialsSync(var0: java_lang_Class | null): java_util_Set | null;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPrivateCredentials(): Promise<java_util_Set | null>;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPrivateCredentialsSync(): java_util_Set | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -202,21 +62,23 @@ export declare class SubjectClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Set'
      */
-    getClass(): Promise<java_lang_Class>;
+    getPrivateCredentials(var0: java_lang_Class | null): Promise<java_util_Set | null>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Set'
      */
-    getClassSync(): java_lang_Class;
+    getPrivateCredentialsSync(var0: java_lang_Class | null): java_util_Set | null;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.Set'
      */
-    notify(): Promise<void>;
+    getPrivateCredentials(): Promise<java_util_Set | null>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.Set'
      */
-    notifySync(): void;
+    getPrivateCredentialsSync(): java_util_Set | null;
     /**
      * @return original return type: 'void'
      */
@@ -226,6 +88,137 @@ export declare class SubjectClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @return original return type: 'java.util.Set'
+     */
+    getPrincipals(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    getPrincipalsSync(): java_util_Set | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Set'
+     */
+    getPrincipals(var0: java_lang_Class | null): Promise<java_util_Set | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Set'
+     */
+    getPrincipalsSync(var0: java_lang_Class | null): java_util_Set | null;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    getPublicCredentials(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    getPublicCredentialsSync(): java_util_Set | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Set'
+     */
+    getPublicCredentials(var0: java_lang_Class | null): Promise<java_util_Set | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Set'
+     */
+    getPublicCredentialsSync(var0: java_lang_Class | null): java_util_Set | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedAction'
+     * @param var2 original type: 'java.security.AccessControlContext'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAsPrivileged(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedAction'
+     * @param var2 original type: 'java.security.AccessControlContext'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
+     * @param var2 original type: 'java.security.AccessControlContext'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAsPrivileged(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null, var2: java_security_AccessControlContext | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
+     * @param var2 original type: 'java.security.AccessControlContext'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedAction'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAs(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedAction'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAsSync(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAs(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedExceptionAction'
+     * @return original return type: 'java.lang.Object'
+     */
+    static doAsSync(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isReadOnly(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isReadOnlySync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    setReadOnly(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    setReadOnlySync(): void;
+    constructor();
+    /**
      * @return original return type: 'javax.security.auth.Subject'
      */
     static newInstanceAsync(): Promise<Subject>;
@@ -234,17 +227,16 @@ export declare class SubjectClass extends JavaClass {
      * @param var1 original type: 'java.util.Set'
      * @param var2 original type: 'java.util.Set'
      * @param var3 original type: 'java.util.Set'
-     * @return original return type: 'javax.security.auth.Subject'
      */
-    static newInstanceAsync(var0: java_lang_Boolean | boolean, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var2: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var3: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null): Promise<Subject>;
-    constructor();
+    constructor(var0: java_lang_Boolean | boolean, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var2: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var3: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null);
     /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'java.util.Set'
      * @param var2 original type: 'java.util.Set'
      * @param var3 original type: 'java.util.Set'
+     * @return original return type: 'javax.security.auth.Subject'
      */
-    constructor(var0: java_lang_Boolean | boolean, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var2: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var3: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null);
+    static newInstanceAsync(var0: java_lang_Boolean | boolean, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var2: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var3: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null): Promise<Subject>;
 }
 declare const Subject_base: typeof SubjectClass;
 /**

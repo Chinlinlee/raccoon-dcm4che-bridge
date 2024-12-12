@@ -19,16 +19,6 @@ export declare class IntStream$BuilderClass extends JavaClass {
      */
     addSync(var0: java_lang_Integer | number): IntStream$Builder | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Integer | number): void;
-    /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     build(): Promise<java_util_stream_IntStream | null>;
@@ -46,6 +36,16 @@ export declare class IntStream$BuilderClass extends JavaClass {
      * @return original return type: 'java.util.function.IntConsumer'
      */
     andThenSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): java_util_function_IntConsumer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Integer | number): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -65,11 +65,6 @@ export interface IntStream$BuilderInterface {
      */
     add?(var0: java_lang_Integer | number): IntStream$Builder | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Integer | number): void;
-    /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     build(): java_util_stream_IntStream | null;
@@ -78,6 +73,11 @@ export interface IntStream$BuilderInterface {
      * @return original return type: 'java.util.function.IntConsumer'
      */
     andThen?(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): java_util_function_IntConsumer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Integer | number): void;
 }
 /**
  * Create a proxy for the {@link IntStream$Builder} interface.

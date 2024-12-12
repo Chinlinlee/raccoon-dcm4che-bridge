@@ -9,14 +9,6 @@ import { List as java_util_List } from "./../../util/List";
  */
 export declare class TypeDescriptor$OfMethodClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
-     */
-    returnType(): Promise<java_lang_invoke_TypeDescriptor$OfField | null>;
-    /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
-     */
-    returnTypeSync(): java_lang_invoke_TypeDescriptor$OfField | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
@@ -26,28 +18,6 @@ export declare class TypeDescriptor$OfMethodClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
     parameterTypeSync(var0: java_lang_Integer | number): java_lang_invoke_TypeDescriptor$OfField | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    insertParameterTypes(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): Promise<TypeDescriptor$OfMethod | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    insertParameterTypesSync(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): TypeDescriptor$OfMethod | null;
-    /**
-     * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    changeReturnType(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): Promise<TypeDescriptor$OfMethod | null>;
-    /**
-     * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    changeReturnTypeSync(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): TypeDescriptor$OfMethod | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -61,6 +31,24 @@ export declare class TypeDescriptor$OfMethodClass extends JavaClass {
      */
     dropParameterTypesSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): TypeDescriptor$OfMethod | null;
     /**
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     */
+    parameterArray(): Promise<(java_lang_invoke_TypeDescriptor$OfField | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     */
+    parameterArraySync(): (java_lang_invoke_TypeDescriptor$OfField | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    changeReturnType(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): Promise<TypeDescriptor$OfMethod | null>;
+    /**
+     * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    changeReturnTypeSync(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): TypeDescriptor$OfMethod | null;
+    /**
      * @return original return type: 'int'
      */
     parameterCount(): Promise<number>;
@@ -68,6 +56,26 @@ export declare class TypeDescriptor$OfMethodClass extends JavaClass {
      * @return original return type: 'int'
      */
     parameterCountSync(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    descriptorString(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    descriptorStringSync(): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    insertParameterTypes(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): Promise<TypeDescriptor$OfMethod | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    insertParameterTypesSync(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): TypeDescriptor$OfMethod | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -77,13 +85,13 @@ export declare class TypeDescriptor$OfMethodClass extends JavaClass {
      */
     parameterListSync(): java_util_List | null;
     /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
-    parameterArray(): Promise<(java_lang_invoke_TypeDescriptor$OfField | null)[] | null>;
+    returnType(): Promise<java_lang_invoke_TypeDescriptor$OfField | null>;
     /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
-    parameterArraySync(): (java_lang_invoke_TypeDescriptor$OfField | null)[] | null;
+    returnTypeSync(): java_lang_invoke_TypeDescriptor$OfField | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField'
@@ -96,14 +104,6 @@ export declare class TypeDescriptor$OfMethodClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
      */
     changeParameterTypeSync(var0: java_lang_Integer | number, var1: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): TypeDescriptor$OfMethod | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    descriptorString(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    descriptorStringSync(): string | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -118,25 +118,10 @@ export declare class TypeDescriptor$OfMethodClass extends JavaClass {
  */
 export interface TypeDescriptor$OfMethodInterface {
     /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
-     */
-    returnType(): java_lang_invoke_TypeDescriptor$OfField | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
     parameterType(var0: java_lang_Integer | number): java_lang_invoke_TypeDescriptor$OfField | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    insertParameterTypes(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): TypeDescriptor$OfMethod | null;
-    /**
-     * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    changeReturnType(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): TypeDescriptor$OfMethod | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -144,27 +129,42 @@ export interface TypeDescriptor$OfMethodInterface {
      */
     dropParameterTypes(var0: java_lang_Integer | number, var1: java_lang_Integer | number): TypeDescriptor$OfMethod | null;
     /**
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     */
+    parameterArray(): (java_lang_invoke_TypeDescriptor$OfField | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    changeReturnType(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): TypeDescriptor$OfMethod | null;
+    /**
      * @return original return type: 'int'
      */
     parameterCount(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    descriptorString(): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    insertParameterTypes(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): TypeDescriptor$OfMethod | null;
     /**
      * @return original return type: 'java.util.List'
      */
     parameterList(): java_util_List | null;
     /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField[]'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
-    parameterArray(): (java_lang_invoke_TypeDescriptor$OfField | null)[] | null;
+    returnType(): java_lang_invoke_TypeDescriptor$OfField | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField'
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
      */
     changeParameterType(var0: java_lang_Integer | number, var1: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): TypeDescriptor$OfMethod | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    descriptorString(): string | null;
 }
 /**
  * Create a proxy for the {@link TypeDescriptor$OfMethod} interface.

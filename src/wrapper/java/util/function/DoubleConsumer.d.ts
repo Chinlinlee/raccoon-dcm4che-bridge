@@ -7,16 +7,6 @@ import { Double as java_lang_Double } from "./../../lang/Double";
  */
 export declare class DoubleConsumerClass extends JavaClass {
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Double | number): Promise<void>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Double | number): void;
-    /**
      * @param var0 original type: 'java.util.function.DoubleConsumer'
      * @return original return type: 'java.util.function.DoubleConsumer'
      */
@@ -26,6 +16,16 @@ export declare class DoubleConsumerClass extends JavaClass {
      * @return original return type: 'java.util.function.DoubleConsumer'
      */
     andThenSync(var0: DoubleConsumerClass | JavaInterfaceProxy<DoubleConsumerInterface> | null): DoubleConsumer | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Double | number): Promise<void>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Double | number): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -40,15 +40,15 @@ export declare class DoubleConsumerClass extends JavaClass {
  */
 export interface DoubleConsumerInterface {
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Double | number): void;
-    /**
      * @param var0 original type: 'java.util.function.DoubleConsumer'
      * @return original return type: 'java.util.function.DoubleConsumer'
      */
     andThen?(var0: DoubleConsumerClass | JavaInterfaceProxy<DoubleConsumerInterface> | null): DoubleConsumer | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Double | number): void;
 }
 /**
  * Create a proxy for the {@link DoubleConsumer} interface.

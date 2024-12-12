@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { Integer as java_lang_Integer } from "./Integer";
 import { Class as java_lang_Class } from "./Class";
+import { Long as java_lang_Long } from "./Long";
+import { Integer as java_lang_Integer } from "./Integer";
 import { MethodHandles$Lookup as java_lang_invoke_MethodHandles$Lookup } from "./invoke/MethodHandles$Lookup";
 import { Optional as java_util_Optional } from "./../util/Optional";
-import { Long as java_lang_Long } from "./Long";
 import { Double as java_lang_Double } from "./Double";
 /**
  * This class just defines types, you should import {@link Float} instead of this.
@@ -12,169 +12,23 @@ import { Double as java_lang_Double } from "./Double";
  */
 export declare class FloatClass extends JavaClass {
     /**
-     * Original type: 'float'
-     */
-    static readonly POSITIVE_INFINITY: FloatClass | number;
-    /**
-     * Original type: 'float'
-     */
-    static readonly NEGATIVE_INFINITY: FloatClass | number;
-    /**
-     * Original type: 'float'
-     */
-    static readonly NaN: FloatClass | number;
-    /**
-     * Original type: 'float'
-     */
-    static readonly MAX_VALUE: FloatClass | number;
-    /**
-     * Original type: 'float'
-     */
-    static readonly MIN_NORMAL: FloatClass | number;
-    /**
-     * Original type: 'float'
-     */
-    static readonly MIN_VALUE: FloatClass | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly MAX_EXPONENT: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly MIN_EXPONENT: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly SIZE: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly BYTES: java_lang_Integer | number;
-    /**
-     * Original type: 'java.lang.Class'
-     */
-    static readonly TYPE: java_lang_Class | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.String'
-     */
-    static toString(var0: FloatClass | number): Promise<string>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.String'
-     */
-    static toStringSync(var0: FloatClass | number): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'int'
-     */
-    static hashCode(var0: FloatClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'int'
-     */
-    static hashCodeSync(var0: FloatClass | number): number;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'float'
      */
-    static min(var0: FloatClass | number, var1: FloatClass | number): Promise<number>;
+    static parseFloat(var0: string | null): Promise<number>;
     /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'float'
      */
-    static minSync(var0: FloatClass | number, var1: FloatClass | number): number;
+    static parseFloatSync(var0: string | null): number;
     /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
-     * @return original return type: 'float'
+     * @return original return type: 'java.lang.Class'
      */
-    static max(var0: FloatClass | number, var1: FloatClass | number): Promise<number>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
-     * @return original return type: 'float'
+     * @return original return type: 'java.lang.Class'
      */
-    static maxSync(var0: FloatClass | number, var1: FloatClass | number): number;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'int'
-     */
-    static floatToRawIntBits(var0: FloatClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'int'
-     */
-    static floatToRawIntBitsSync(var0: FloatClass | number): number;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'int'
-     */
-    static floatToIntBits(var0: FloatClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'int'
-     */
-    static floatToIntBitsSync(var0: FloatClass | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float'
-     */
-    static intBitsToFloat(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'float'
-     */
-    static intBitsToFloatSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.Float'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: FloatClass | number | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Float'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: FloatClass | number | null): number;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BasicOrJavaType | null): number;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'float'
      * @param var1 original type: 'float'
@@ -187,180 +41,6 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'int'
      */
     static compareSync(var0: FloatClass | number, var1: FloatClass | number): number;
-    /**
-     * @return original return type: 'byte'
-     */
-    byteValue(): Promise<number>;
-    /**
-     * @return original return type: 'byte'
-     */
-    byteValueSync(): number;
-    /**
-     * @return original return type: 'short'
-     */
-    shortValue(): Promise<number>;
-    /**
-     * @return original return type: 'short'
-     */
-    shortValueSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    intValue(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    intValueSync(): number;
-    /**
-     * @return original return type: 'long'
-     */
-    longValue(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    longValueSync(): number;
-    /**
-     * @return original return type: 'float'
-     */
-    floatValue(): Promise<number>;
-    /**
-     * @return original return type: 'float'
-     */
-    floatValueSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
-    doubleValue(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    doubleValueSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Float'
-     */
-    static valueOf(var0: string | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Float'
-     */
-    static valueOfSync(var0: string | null): number | null;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.Float'
-     */
-    static valueOf(var0: FloatClass | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.Float'
-     */
-    static valueOfSync(var0: FloatClass | number): number | null;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexString(var0: FloatClass | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexStringSync(var0: FloatClass | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Object'
-     */
-    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Object'
-     */
-    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Float'
-     */
-    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Float'
-     */
-    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
-    /**
-     * @return original return type: 'java.util.Optional'
-     */
-    describeConstable(): Promise<java_util_Optional | null>;
-    /**
-     * @return original return type: 'java.util.Optional'
-     */
-    describeConstableSync(): java_util_Optional | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNaN(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNaNSync(): boolean;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'boolean'
-     */
-    static isNaN(var0: FloatClass | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'boolean'
-     */
-    static isNaNSync(var0: FloatClass | number): boolean;
-    /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
-     * @return original return type: 'float'
-     */
-    static sum(var0: FloatClass | number, var1: FloatClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
-     * @return original return type: 'float'
-     */
-    static sumSync(var0: FloatClass | number, var1: FloatClass | number): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'float'
-     */
-    static parseFloat(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'float'
-     */
-    static parseFloatSync(var0: string | null): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInfinite(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInfiniteSync(): boolean;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'boolean'
-     */
-    static isInfinite(var0: FloatClass | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'boolean'
-     */
-    static isInfiniteSync(var0: FloatClass | number): boolean;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'boolean'
-     */
-    static isFinite(var0: FloatClass | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'boolean'
-     */
-    static isFiniteSync(var0: FloatClass | number): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -392,13 +72,109 @@ export declare class FloatClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'void'
      */
-    getClass(): Promise<java_lang_Class>;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'void'
      */
-    getClassSync(): java_lang_Class;
+    notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'float'
+     */
+    static intBitsToFloat(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'float'
+     */
+    static intBitsToFloatSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @return original return type: 'float'
+     */
+    static sum(var0: FloatClass | number, var1: FloatClass | number): Promise<number>;
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @return original return type: 'float'
+     */
+    static sumSync(var0: FloatClass | number, var1: FloatClass | number): number;
+    /**
+     * @param var0 original type: 'java.lang.Float'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: FloatClass | number | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Float'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: FloatClass | number | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BasicOrJavaType | null): number;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Object'
+     */
+    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Object'
+     */
+    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Float'
+     */
+    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Float'
+     */
+    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isNaN(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isNaNSync(): boolean;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'boolean'
+     */
+    static isNaN(var0: FloatClass | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'boolean'
+     */
+    static isNaNSync(var0: FloatClass | number): boolean;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    describeConstable(): Promise<java_util_Optional | null>;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    describeConstableSync(): java_util_Optional | null;
+    /**
+     * @return original return type: 'long'
+     */
+    longValue(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    longValueSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -408,13 +184,223 @@ export declare class FloatClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'float'
+     * @return original return type: 'boolean'
      */
-    notifyAll(): Promise<void>;
+    static isFinite(var0: FloatClass | number): Promise<boolean>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'float'
+     * @return original return type: 'boolean'
      */
-    notifyAllSync(): void;
+    static isFiniteSync(var0: FloatClass | number): boolean;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'int'
+     */
+    static floatToRawIntBits(var0: FloatClass | number): Promise<number>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'int'
+     */
+    static floatToRawIntBitsSync(var0: FloatClass | number): number;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'int'
+     */
+    static floatToIntBits(var0: FloatClass | number): Promise<number>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'int'
+     */
+    static floatToIntBitsSync(var0: FloatClass | number): number;
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @return original return type: 'float'
+     */
+    static min(var0: FloatClass | number, var1: FloatClass | number): Promise<number>;
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @return original return type: 'float'
+     */
+    static minSync(var0: FloatClass | number, var1: FloatClass | number): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInfinite(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInfiniteSync(): boolean;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'boolean'
+     */
+    static isInfinite(var0: FloatClass | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'boolean'
+     */
+    static isInfiniteSync(var0: FloatClass | number): boolean;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'int'
+     */
+    static hashCode(var0: FloatClass | number): Promise<number>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'int'
+     */
+    static hashCodeSync(var0: FloatClass | number): number;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @return original return type: 'short'
+     */
+    shortValue(): Promise<number>;
+    /**
+     * @return original return type: 'short'
+     */
+    shortValueSync(): number;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexString(var0: FloatClass | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexStringSync(var0: FloatClass | number): string | null;
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @return original return type: 'float'
+     */
+    static max(var0: FloatClass | number, var1: FloatClass | number): Promise<number>;
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @return original return type: 'float'
+     */
+    static maxSync(var0: FloatClass | number, var1: FloatClass | number): number;
+    /**
+     * @return original return type: 'int'
+     */
+    intValue(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    intValueSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Float'
+     */
+    static valueOf(var0: string | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Float'
+     */
+    static valueOfSync(var0: string | null): number | null;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.Float'
+     */
+    static valueOf(var0: FloatClass | number): Promise<number | null>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.Float'
+     */
+    static valueOfSync(var0: FloatClass | number): number | null;
+    /**
+     * @return original return type: 'float'
+     */
+    floatValue(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    floatValueSync(): number;
+    /**
+     * @return original return type: 'double'
+     */
+    doubleValue(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    doubleValueSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'byte'
+     */
+    byteValue(): Promise<number>;
+    /**
+     * @return original return type: 'byte'
+     */
+    byteValueSync(): number;
+    /**
+     * Original type: 'float'
+     */
+    static readonly POSITIVE_INFINITY: FloatClass | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly BYTES: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly MAX_EXPONENT: java_lang_Integer | number;
+    /**
+     * Original type: 'float'
+     */
+    static readonly NEGATIVE_INFINITY: FloatClass | number;
+    /**
+     * Original type: 'float'
+     */
+    static readonly MIN_NORMAL: FloatClass | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly SIZE: java_lang_Integer | number;
+    /**
+     * Original type: 'float'
+     */
+    static readonly NaN: FloatClass | number;
+    /**
+     * Original type: 'float'
+     */
+    static readonly MAX_VALUE: FloatClass | number;
+    /**
+     * Original type: 'float'
+     */
+    static readonly MIN_VALUE: FloatClass | number;
+    /**
+     * Original type: 'java.lang.Class'
+     */
+    static readonly TYPE: java_lang_Class | null;
+    /**
+     * Original type: 'int'
+     */
+    static readonly MIN_EXPONENT: java_lang_Integer | number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Float'
@@ -422,26 +408,22 @@ export declare class FloatClass extends JavaClass {
     static newInstanceAsync(var0: string | null): Promise<number>;
     /**
      * @param var0 original type: 'double'
+     */
+    constructor(var0: java_lang_Double | number);
+    /**
+     * @param var0 original type: 'double'
      * @return original return type: 'java.lang.Float'
      */
     static newInstanceAsync(var0: java_lang_Double | number): Promise<number>;
     /**
      * @param var0 original type: 'float'
+     */
+    constructor(var0: FloatClass | number);
+    /**
+     * @param var0 original type: 'float'
      * @return original return type: 'java.lang.Float'
      */
     static newInstanceAsync(var0: FloatClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'double'
-     */
-    constructor(var0: java_lang_Double | number);
-    /**
-     * @param var0 original type: 'float'
-     */
-    constructor(var0: FloatClass | number);
 }
 declare const Float_base: typeof FloatClass;
 /**

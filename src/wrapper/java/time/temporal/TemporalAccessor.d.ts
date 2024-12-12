@@ -10,16 +10,6 @@ import { ValueRange as java_time_temporal_ValueRange } from "./ValueRange";
 export declare class TemporalAccessorClass extends JavaClass {
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'int'
-     */
-    get(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'int'
-     */
-    getSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'long'
      */
     getLong(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
@@ -28,6 +18,16 @@ export declare class TemporalAccessorClass extends JavaClass {
      * @return original return type: 'long'
      */
     getLongSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'int'
+     */
+    get(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'int'
+     */
+    getSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalQuery'
      * @return original return type: 'java.lang.Object'
@@ -73,14 +73,14 @@ export declare class TemporalAccessorClass extends JavaClass {
 export interface TemporalAccessorInterface {
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'int'
-     */
-    get?(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'long'
      */
     getLong(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'int'
+     */
+    get?(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalQuery'
      * @return original return type: 'java.lang.Object'

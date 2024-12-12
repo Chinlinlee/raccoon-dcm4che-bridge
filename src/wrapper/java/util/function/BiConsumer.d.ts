@@ -6,6 +6,16 @@ import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy }
  */
 export declare class BiConsumerClass extends JavaClass {
     /**
+     * @param var0 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.util.function.BiConsumer'
+     */
+    andThen(var0: BiConsumerClass | JavaInterfaceProxy<BiConsumerInterface> | null): Promise<BiConsumer | null>;
+    /**
+     * @param var0 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.util.function.BiConsumer'
+     */
+    andThenSync(var0: BiConsumerClass | JavaInterfaceProxy<BiConsumerInterface> | null): BiConsumer | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'void'
@@ -17,16 +27,6 @@ export declare class BiConsumerClass extends JavaClass {
      * @return original return type: 'void'
      */
     acceptSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.util.function.BiConsumer'
-     */
-    andThen(var0: BiConsumerClass | JavaInterfaceProxy<BiConsumerInterface> | null): Promise<BiConsumer | null>;
-    /**
-     * @param var0 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.util.function.BiConsumer'
-     */
-    andThenSync(var0: BiConsumerClass | JavaInterfaceProxy<BiConsumerInterface> | null): BiConsumer | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -41,16 +41,16 @@ export declare class BiConsumerClass extends JavaClass {
  */
 export interface BiConsumerInterface {
     /**
+     * @param var0 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.util.function.BiConsumer'
+     */
+    andThen?(var0: BiConsumerClass | JavaInterfaceProxy<BiConsumerInterface> | null): BiConsumer | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
     accept(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.util.function.BiConsumer'
-     */
-    andThen?(var0: BiConsumerClass | JavaInterfaceProxy<BiConsumerInterface> | null): BiConsumer | null;
 }
 /**
  * Create a proxy for the {@link BiConsumer} interface.

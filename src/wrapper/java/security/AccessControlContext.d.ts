@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Permission as java_security_Permission } from "./Permission";
-import { DomainCombiner as java_security_DomainCombiner, DomainCombinerInterface as java_security_DomainCombinerInterface } from "./DomainCombiner";
+import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { Class as java_lang_Class } from "./../lang/Class";
+import { DomainCombiner as java_security_DomainCombiner, DomainCombinerInterface as java_security_DomainCombinerInterface } from "./DomainCombiner";
 import { ProtectionDomain as java_security_ProtectionDomain } from "./ProtectionDomain";
 /**
  * This class just defines types, you should import {@link AccessControlContext} instead of this.
@@ -11,24 +11,6 @@ import { ProtectionDomain as java_security_ProtectionDomain } from "./Protection
  * You should probably not edit this.
  */
 export declare class AccessControlContextClass extends JavaClass {
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @param var0 original type: 'java.security.Permission'
      * @return original return type: 'void'
@@ -40,13 +22,13 @@ export declare class AccessControlContextClass extends JavaClass {
      */
     checkPermissionSync(var0: java_security_Permission | null): void;
     /**
-     * @return original return type: 'java.security.DomainCombiner'
+     * @return original return type: 'java.lang.Class'
      */
-    getDomainCombiner(): Promise<java_security_DomainCombiner | null>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'java.security.DomainCombiner'
+     * @return original return type: 'java.lang.Class'
      */
-    getDomainCombinerSync(): java_security_DomainCombiner | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -78,29 +60,23 @@ export declare class AccessControlContextClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    toString(): string;
+    hashCode(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    toStringSync(): string;
+    hashCodeSync(): number;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
      */
-    getClass(): Promise<java_lang_Class>;
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
      */
-    getClassSync(): java_lang_Class;
-    /**
-     * @return original return type: 'void'
-     */
-    notify(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifySync(): void;
+    equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -110,6 +86,27 @@ export declare class AccessControlContextClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @return original return type: 'java.security.DomainCombiner'
+     */
+    getDomainCombiner(): Promise<java_security_DomainCombiner | null>;
+    /**
+     * @return original return type: 'java.security.DomainCombiner'
+     */
+    getDomainCombinerSync(): java_security_DomainCombiner | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @param var0 original type: 'java.security.AccessControlContext'
+     * @param var1 original type: 'java.security.DomainCombiner'
+     */
+    constructor(var0: AccessControlContextClass | null, var1: java_security_DomainCombiner | JavaInterfaceProxy<java_security_DomainCombinerInterface> | null);
+    /**
      * @param var0 original type: 'java.security.AccessControlContext'
      * @param var1 original type: 'java.security.DomainCombiner'
      * @return original return type: 'java.security.AccessControlContext'
@@ -117,18 +114,13 @@ export declare class AccessControlContextClass extends JavaClass {
     static newInstanceAsync(var0: AccessControlContextClass | null, var1: java_security_DomainCombiner | JavaInterfaceProxy<java_security_DomainCombinerInterface> | null): Promise<AccessControlContext>;
     /**
      * @param var0 original type: 'java.security.ProtectionDomain[]'
+     */
+    constructor(var0: (java_security_ProtectionDomain | null)[] | null);
+    /**
+     * @param var0 original type: 'java.security.ProtectionDomain[]'
      * @return original return type: 'java.security.AccessControlContext'
      */
     static newInstanceAsync(var0: (java_security_ProtectionDomain | null)[] | null): Promise<AccessControlContext>;
-    /**
-     * @param var0 original type: 'java.security.AccessControlContext'
-     * @param var1 original type: 'java.security.DomainCombiner'
-     */
-    constructor(var0: AccessControlContextClass | null, var1: java_security_DomainCombiner | JavaInterfaceProxy<java_security_DomainCombinerInterface> | null);
-    /**
-     * @param var0 original type: 'java.security.ProtectionDomain[]'
-     */
-    constructor(var0: (java_security_ProtectionDomain | null)[] | null);
 }
 declare const AccessControlContext_base: typeof AccessControlContextClass;
 /**

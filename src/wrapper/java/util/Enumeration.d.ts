@@ -7,14 +7,6 @@ import { Iterator as java_util_Iterator } from "./Iterator";
  */
 export declare class EnumerationClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.Iterator'
-     */
-    asIterator(): Promise<java_util_Iterator | null>;
-    /**
-     * @return original return type: 'java.util.Iterator'
-     */
-    asIteratorSync(): java_util_Iterator | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasMoreElements(): Promise<boolean>;
@@ -22,6 +14,14 @@ export declare class EnumerationClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasMoreElementsSync(): boolean;
+    /**
+     * @return original return type: 'java.util.Iterator'
+     */
+    asIterator(): Promise<java_util_Iterator | null>;
+    /**
+     * @return original return type: 'java.util.Iterator'
+     */
+    asIteratorSync(): java_util_Iterator | null;
     /**
      * @return original return type: 'java.lang.Object'
      */
@@ -44,13 +44,13 @@ export declare class EnumerationClass extends JavaClass {
  */
 export interface EnumerationInterface {
     /**
-     * @return original return type: 'java.util.Iterator'
-     */
-    asIterator?(): java_util_Iterator | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasMoreElements(): boolean;
+    /**
+     * @return original return type: 'java.util.Iterator'
+     */
+    asIterator?(): java_util_Iterator | null;
     /**
      * @return original return type: 'java.lang.Object'
      */

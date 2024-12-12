@@ -8,6 +8,30 @@ import { Consumer as java_util_function_Consumer, ConsumerInterface as java_util
  */
 export declare class PrimitiveIterator$OfIntClass extends JavaClass {
     /**
+     * @return original return type: 'java.lang.Object'
+     */
+    next(): Promise<BasicOrJavaType | null>;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    nextSync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    next(): Promise<number | null>;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    nextSync(): number | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNextSync(): boolean;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
@@ -38,22 +62,6 @@ export declare class PrimitiveIterator$OfIntClass extends JavaClass {
      */
     forEachRemainingSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
-     * @return original return type: 'java.lang.Object'
-     */
-    next(): Promise<BasicOrJavaType | null>;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    nextSync(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    next(): Promise<number | null>;
-    /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    nextSync(): number | null;
-    /**
      * @return original return type: 'int'
      */
     nextInt(): Promise<number>;
@@ -69,14 +77,6 @@ export declare class PrimitiveIterator$OfIntClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNextSync(): boolean;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -90,6 +90,18 @@ export declare class PrimitiveIterator$OfIntClass extends JavaClass {
  * You should probably not edit this.
  */
 export interface PrimitiveIterator$OfIntInterface {
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    next?(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    next?(): number | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'void'
@@ -106,14 +118,6 @@ export interface PrimitiveIterator$OfIntInterface {
      */
     forEachRemaining?(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
-     * @return original return type: 'java.lang.Object'
-     */
-    next?(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    next?(): number | null;
-    /**
      * @return original return type: 'int'
      */
     nextInt(): number;
@@ -121,10 +125,6 @@ export interface PrimitiveIterator$OfIntInterface {
      * @return original return type: 'void'
      */
     remove?(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): boolean;
 }
 /**
  * Create a proxy for the {@link PrimitiveIterator$OfInt} interface.

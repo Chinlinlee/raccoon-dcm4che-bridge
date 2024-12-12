@@ -7,6 +7,14 @@ import { Class as java_lang_Class } from "./../Class";
  */
 export declare class AnnotationClass extends JavaClass {
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -16,22 +24,6 @@ export declare class AnnotationClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -54,22 +46,22 @@ export declare class AnnotationClass extends JavaClass {
  */
 export interface AnnotationInterface {
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
     equals(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): number;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     annotationType(): java_lang_Class | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
 }
 /**
  * Create a proxy for the {@link Annotation} interface.

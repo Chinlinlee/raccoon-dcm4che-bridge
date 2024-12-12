@@ -7,14 +7,6 @@ import { Integer as java_lang_Integer } from "./../../lang/Integer";
  */
 export declare class IntUnaryOperatorClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.function.IntUnaryOperator'
-     */
-    static identity(): Promise<IntUnaryOperator | null>;
-    /**
-     * @return original return type: 'java.util.function.IntUnaryOperator'
-     */
-    static identitySync(): IntUnaryOperator | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -34,6 +26,14 @@ export declare class IntUnaryOperatorClass extends JavaClass {
      * @return original return type: 'java.util.function.IntUnaryOperator'
      */
     composeSync(var0: IntUnaryOperatorClass | JavaInterfaceProxy<IntUnaryOperatorInterface> | null): IntUnaryOperator | null;
+    /**
+     * @return original return type: 'java.util.function.IntUnaryOperator'
+     */
+    static identity(): Promise<IntUnaryOperator | null>;
+    /**
+     * @return original return type: 'java.util.function.IntUnaryOperator'
+     */
+    static identitySync(): IntUnaryOperator | null;
     /**
      * @param var0 original type: 'java.util.function.IntUnaryOperator'
      * @return original return type: 'java.util.function.IntUnaryOperator'

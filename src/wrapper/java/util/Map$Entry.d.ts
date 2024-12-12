@@ -7,34 +7,6 @@ import { Comparator as java_util_Comparator, ComparatorInterface as java_util_Co
  */
 export declare class Map$EntryClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @param var0 original type: 'java.util.Map$Entry'
-     * @return original return type: 'java.util.Map$Entry'
-     */
-    static copyOf(var0: Map$EntryClass | JavaInterfaceProxy<Map$EntryInterface> | null): Promise<Map$Entry | null>;
-    /**
-     * @param var0 original type: 'java.util.Map$Entry'
-     * @return original return type: 'java.util.Map$Entry'
-     */
-    static copyOfSync(var0: Map$EntryClass | JavaInterfaceProxy<Map$EntryInterface> | null): Map$Entry | null;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     getValue(): Promise<BasicOrJavaType | null>;
@@ -51,6 +23,24 @@ export declare class Map$EntryClass extends JavaClass {
      */
     getKeySync(): BasicOrJavaType | null;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.Object'
      */
@@ -61,23 +51,15 @@ export declare class Map$EntryClass extends JavaClass {
      */
     setValueSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'java.util.Comparator'
-     * @return original return type: 'java.util.Comparator'
+     * @param var0 original type: 'java.util.Map$Entry'
+     * @return original return type: 'java.util.Map$Entry'
      */
-    static comparingByKey(var0: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null): Promise<java_util_Comparator | null>;
+    static copyOf(var0: Map$EntryClass | JavaInterfaceProxy<Map$EntryInterface> | null): Promise<Map$Entry | null>;
     /**
-     * @param var0 original type: 'java.util.Comparator'
-     * @return original return type: 'java.util.Comparator'
+     * @param var0 original type: 'java.util.Map$Entry'
+     * @return original return type: 'java.util.Map$Entry'
      */
-    static comparingByKeySync(var0: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null): java_util_Comparator | null;
-    /**
-     * @return original return type: 'java.util.Comparator'
-     */
-    static comparingByKey(): Promise<java_util_Comparator | null>;
-    /**
-     * @return original return type: 'java.util.Comparator'
-     */
-    static comparingByKeySync(): java_util_Comparator | null;
+    static copyOfSync(var0: Map$EntryClass | JavaInterfaceProxy<Map$EntryInterface> | null): Map$Entry | null;
     /**
      * @return original return type: 'java.util.Comparator'
      */
@@ -96,6 +78,24 @@ export declare class Map$EntryClass extends JavaClass {
      * @return original return type: 'java.util.Comparator'
      */
     static comparingByValueSync(var0: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null): java_util_Comparator | null;
+    /**
+     * @param var0 original type: 'java.util.Comparator'
+     * @return original return type: 'java.util.Comparator'
+     */
+    static comparingByKey(var0: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null): Promise<java_util_Comparator | null>;
+    /**
+     * @param var0 original type: 'java.util.Comparator'
+     * @return original return type: 'java.util.Comparator'
+     */
+    static comparingByKeySync(var0: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null): java_util_Comparator | null;
+    /**
+     * @return original return type: 'java.util.Comparator'
+     */
+    static comparingByKey(): Promise<java_util_Comparator | null>;
+    /**
+     * @return original return type: 'java.util.Comparator'
+     */
+    static comparingByKeySync(): java_util_Comparator | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -110,15 +110,6 @@ export declare class Map$EntryClass extends JavaClass {
  */
 export interface Map$EntryInterface {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): number;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     getValue(): BasicOrJavaType | null;
@@ -126,6 +117,15 @@ export interface Map$EntryInterface {
      * @return original return type: 'java.lang.Object'
      */
     getKey(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.Object'

@@ -17,22 +17,6 @@ export declare class ListIteratorClass extends JavaClass {
      */
     addSync(var0: BasicOrJavaType | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    remove(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    removeSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNextSync(): boolean;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     next(): Promise<BasicOrJavaType | null>;
@@ -51,21 +35,13 @@ export declare class ListIteratorClass extends JavaClass {
      */
     setSync(var0: BasicOrJavaType | null): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Object'
      */
-    nextIndex(): Promise<number>;
+    previous(): Promise<BasicOrJavaType | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Object'
      */
-    nextIndexSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    previousIndex(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    previousIndexSync(): number;
+    previousSync(): BasicOrJavaType | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -75,13 +51,21 @@ export declare class ListIteratorClass extends JavaClass {
      */
     hasPreviousSync(): boolean;
     /**
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'boolean'
      */
-    previous(): Promise<BasicOrJavaType | null>;
+    hasNext(): Promise<boolean>;
     /**
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'boolean'
      */
-    previousSync(): BasicOrJavaType | null;
+    hasNextSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    nextIndex(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    nextIndexSync(): number;
     /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'void'
@@ -92,6 +76,22 @@ export declare class ListIteratorClass extends JavaClass {
      * @return original return type: 'void'
      */
     forEachRemainingSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    remove(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    removeSync(): void;
+    /**
+     * @return original return type: 'int'
+     */
+    previousIndex(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    previousIndexSync(): number;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -111,14 +111,6 @@ export interface ListIteratorInterface {
      */
     add(var0: BasicOrJavaType | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    remove(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): boolean;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     next(): BasicOrJavaType | null;
@@ -128,26 +120,34 @@ export interface ListIteratorInterface {
      */
     set(var0: BasicOrJavaType | null): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Object'
      */
-    nextIndex(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    previousIndex(): number;
+    previous(): BasicOrJavaType | null;
     /**
      * @return original return type: 'boolean'
      */
     hasPrevious(): boolean;
     /**
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'boolean'
      */
-    previous(): BasicOrJavaType | null;
+    hasNext(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    nextIndex(): number;
     /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'void'
      */
     forEachRemaining?(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    remove(): void;
+    /**
+     * @return original return type: 'int'
+     */
+    previousIndex(): number;
 }
 /**
  * Create a proxy for the {@link ListIterator} interface.

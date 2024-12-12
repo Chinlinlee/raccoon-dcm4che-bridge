@@ -7,14 +7,6 @@ import { Function as java_util_function_Function, FunctionInterface as java_util
  */
 export declare class UnaryOperatorClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.function.UnaryOperator'
-     */
-    static identity(): Promise<UnaryOperator | null>;
-    /**
-     * @return original return type: 'java.util.function.UnaryOperator'
-     */
-    static identitySync(): UnaryOperator | null;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.Object'
      */
@@ -34,6 +26,14 @@ export declare class UnaryOperatorClass extends JavaClass {
      * @return original return type: 'java.util.function.Function'
      */
     composeSync(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null): java_util_function_Function | null;
+    /**
+     * @return original return type: 'java.util.function.UnaryOperator'
+     */
+    static identity(): Promise<UnaryOperator | null>;
+    /**
+     * @return original return type: 'java.util.function.UnaryOperator'
+     */
+    static identitySync(): UnaryOperator | null;
     /**
      * @param var0 original type: 'java.util.function.Function'
      * @return original return type: 'java.util.function.Function'

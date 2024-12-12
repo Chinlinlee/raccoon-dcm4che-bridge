@@ -2,8 +2,8 @@ import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridg
 import { TemporalAccessor as java_time_temporal_TemporalAccessor, TemporalAccessorInterface as java_time_temporal_TemporalAccessorInterface } from "./TemporalAccessor";
 import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../../util/Map";
 import { ResolverStyle as java_time_format_ResolverStyle } from "./../format/ResolverStyle";
-import { ValueRange as java_time_temporal_ValueRange } from "./ValueRange";
 import { Locale as java_util_Locale } from "./../../util/Locale";
+import { ValueRange as java_time_temporal_ValueRange } from "./ValueRange";
 import { TemporalUnit as java_time_temporal_TemporalUnit } from "./TemporalUnit";
 import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./Temporal";
 import { Long as java_lang_Long } from "./../../lang/Long";
@@ -13,14 +13,6 @@ import { Long as java_lang_Long } from "./../../lang/Long";
  * You should probably not edit this.
  */
 export declare class TemporalFieldClass extends JavaClass {
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
     /**
      * @param var0 original type: 'java.util.Map'
      * @param var1 original type: 'java.time.temporal.TemporalAccessor'
@@ -35,14 +27,6 @@ export declare class TemporalFieldClass extends JavaClass {
      * @return original return type: 'java.time.temporal.TemporalAccessor'
      */
     resolveSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null, var2: java_time_format_ResolverStyle | null): java_time_temporal_TemporalAccessor | null;
-    /**
-     * @return original return type: 'java.time.temporal.ValueRange'
-     */
-    range(): Promise<java_time_temporal_ValueRange | null>;
-    /**
-     * @return original return type: 'java.time.temporal.ValueRange'
-     */
-    rangeSync(): java_time_temporal_ValueRange | null;
     /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'java.lang.String'
@@ -72,6 +56,34 @@ export declare class TemporalFieldClass extends JavaClass {
      */
     getBaseUnitSync(): java_time_temporal_TemporalUnit | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isTimeBased(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTimeBasedSync(): boolean;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    adjustInto(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    adjustIntoSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    range(): Promise<java_time_temporal_ValueRange | null>;
+    /**
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    rangeSync(): java_time_temporal_ValueRange | null;
+    /**
      * @return original return type: 'java.time.temporal.TemporalUnit'
      */
     getRangeUnit(): Promise<java_time_temporal_TemporalUnit | null>;
@@ -87,14 +99,6 @@ export declare class TemporalFieldClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isDateBasedSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTimeBased(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTimeBasedSync(): boolean;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAccessor'
      * @return original return type: 'boolean'
@@ -115,18 +119,6 @@ export declare class TemporalFieldClass extends JavaClass {
      * @return original return type: 'long'
      */
     getFromSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    adjustInto(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    adjustIntoSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -141,20 +133,12 @@ export declare class TemporalFieldClass extends JavaClass {
  */
 export interface TemporalFieldInterface {
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
      * @param var0 original type: 'java.util.Map'
      * @param var1 original type: 'java.time.temporal.TemporalAccessor'
      * @param var2 original type: 'java.time.format.ResolverStyle'
      * @return original return type: 'java.time.temporal.TemporalAccessor'
      */
     resolve?(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null, var2: java_time_format_ResolverStyle | null): java_time_temporal_TemporalAccessor | null;
-    /**
-     * @return original return type: 'java.time.temporal.ValueRange'
-     */
-    range(): java_time_temporal_ValueRange | null;
     /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'java.lang.String'
@@ -170,6 +154,24 @@ export interface TemporalFieldInterface {
      */
     getBaseUnit(): java_time_temporal_TemporalUnit | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isTimeBased(): boolean;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    adjustInto(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    range(): java_time_temporal_ValueRange | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
      * @return original return type: 'java.time.temporal.TemporalUnit'
      */
     getRangeUnit(): java_time_temporal_TemporalUnit | null;
@@ -177,10 +179,6 @@ export interface TemporalFieldInterface {
      * @return original return type: 'boolean'
      */
     isDateBased(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTimeBased(): boolean;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAccessor'
      * @return original return type: 'boolean'
@@ -191,12 +189,6 @@ export interface TemporalFieldInterface {
      * @return original return type: 'long'
      */
     getFrom(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    adjustInto(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
 }
 /**
  * Create a proxy for the {@link TemporalField} interface.

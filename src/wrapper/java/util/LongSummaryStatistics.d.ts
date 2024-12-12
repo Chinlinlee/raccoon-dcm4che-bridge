@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { Long as java_lang_Long } from "./../lang/Long";
 import { Class as java_lang_Class } from "./../lang/Class";
+import { Long as java_lang_Long } from "./../lang/Long";
+import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { LongConsumer as java_util_function_LongConsumer, LongConsumerInterface as java_util_function_LongConsumerInterface } from "./function/LongConsumer";
 import { IntConsumer as java_util_function_IntConsumer, IntConsumerInterface as java_util_function_IntConsumerInterface } from "./function/IntConsumer";
 /**
@@ -11,83 +11,13 @@ import { IntConsumer as java_util_function_IntConsumer, IntConsumerInterface as 
  */
 export declare class LongSummaryStatisticsClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.lang.Class'
      */
-    toString(): string;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.lang.Class'
      */
-    toStringSync(): string;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'java.util.LongSummaryStatistics'
-     * @return original return type: 'void'
-     */
-    combine(var0: LongSummaryStatisticsClass | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.util.LongSummaryStatistics'
-     * @return original return type: 'void'
-     */
-    combineSync(var0: LongSummaryStatisticsClass | null): void;
-    /**
-     * @return original return type: 'long'
-     */
-    getCount(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getCountSync(): number;
-    /**
-     * @return original return type: 'long'
-     */
-    getSum(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getSumSync(): number;
-    /**
-     * @return original return type: 'long'
-     */
-    getMin(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getMinSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
-    getAverage(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getAverageSync(): number;
-    /**
-     * @return original return type: 'long'
-     */
-    getMax(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getMaxSync(): number;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -119,39 +49,13 @@ export declare class LongSummaryStatisticsClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'long'
      */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    getMax(): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'long'
      */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClass(): Promise<java_lang_Class>;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClassSync(): java_lang_Class;
-    /**
-     * @return original return type: 'void'
-     */
-    notify(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifySync(): void;
+    getMaxSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -160,6 +64,22 @@ export declare class LongSummaryStatisticsClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @return original return type: 'double'
+     */
+    getAverage(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getAverageSync(): number;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
     /**
      * @param var0 original type: 'java.util.function.LongConsumer'
      * @return original return type: 'java.util.function.LongConsumer'
@@ -181,6 +101,79 @@ export declare class LongSummaryStatisticsClass extends JavaClass {
      */
     andThenSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): java_util_function_IntConsumer | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @return original return type: 'long'
+     */
+    getMin(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getMinSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'long'
+     */
+    getCount(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getCountSync(): number;
+    /**
+     * @return original return type: 'long'
+     */
+    getSum(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getSumSync(): number;
+    /**
+     * @param var0 original type: 'java.util.LongSummaryStatistics'
+     * @return original return type: 'void'
+     */
+    combine(var0: LongSummaryStatisticsClass | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.LongSummaryStatistics'
+     * @return original return type: 'void'
+     */
+    combineSync(var0: LongSummaryStatisticsClass | null): void;
+    constructor();
+    /**
      * @return original return type: 'java.util.LongSummaryStatistics'
      */
     static newInstanceAsync(): Promise<LongSummaryStatistics>;
@@ -189,17 +182,16 @@ export declare class LongSummaryStatisticsClass extends JavaClass {
      * @param var1 original type: 'long'
      * @param var2 original type: 'long'
      * @param var3 original type: 'long'
-     * @return original return type: 'java.util.LongSummaryStatistics'
      */
-    static newInstanceAsync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_lang_Long | bigint | number): Promise<LongSummaryStatistics>;
-    constructor();
+    constructor(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_lang_Long | bigint | number);
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
      * @param var2 original type: 'long'
      * @param var3 original type: 'long'
+     * @return original return type: 'java.util.LongSummaryStatistics'
      */
-    constructor(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_lang_Long | bigint | number);
+    static newInstanceAsync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_lang_Long | bigint | number): Promise<LongSummaryStatistics>;
 }
 declare const LongSummaryStatistics_base: typeof LongSummaryStatisticsClass;
 /**

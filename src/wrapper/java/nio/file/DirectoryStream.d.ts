@@ -17,14 +17,6 @@ export declare class DirectoryStreamClass extends JavaClass {
      */
     iteratorSync(): java_util_Iterator | null;
     /**
-     * @return original return type: 'void'
-     */
-    close(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    closeSync(): void;
-    /**
      * @return original return type: 'java.util.Spliterator'
      */
     spliterator(): Promise<java_util_Spliterator | null>;
@@ -42,6 +34,14 @@ export declare class DirectoryStreamClass extends JavaClass {
      * @return original return type: 'void'
      */
     forEachSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    close(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    closeSync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -60,10 +60,6 @@ export interface DirectoryStreamInterface {
      */
     iterator(): java_util_Iterator | null;
     /**
-     * @return original return type: 'void'
-     */
-    close(): void;
-    /**
      * @return original return type: 'java.util.Spliterator'
      */
     spliterator?(): java_util_Spliterator | null;
@@ -72,6 +68,10 @@ export interface DirectoryStreamInterface {
      * @return original return type: 'void'
      */
     forEach?(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    close(): void;
 }
 /**
  * Create a proxy for the {@link DirectoryStream} interface.

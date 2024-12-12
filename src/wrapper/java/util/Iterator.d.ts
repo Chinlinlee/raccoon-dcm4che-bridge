@@ -7,13 +7,21 @@ import { Consumer as java_util_function_Consumer, ConsumerInterface as java_util
  */
 export declare class IteratorClass extends JavaClass {
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Object'
      */
-    remove(): Promise<void>;
+    next(): Promise<BasicOrJavaType | null>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Object'
      */
-    removeSync(): void;
+    nextSync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNextSync(): boolean;
     /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'void'
@@ -25,21 +33,13 @@ export declare class IteratorClass extends JavaClass {
      */
     forEachRemainingSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'void'
      */
-    hasNext(): Promise<boolean>;
+    remove(): Promise<void>;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'void'
      */
-    hasNextSync(): boolean;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    next(): Promise<BasicOrJavaType | null>;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    nextSync(): BasicOrJavaType | null;
+    removeSync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -54,22 +54,22 @@ export declare class IteratorClass extends JavaClass {
  */
 export interface IteratorInterface {
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Object'
      */
-    remove?(): void;
+    next(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): boolean;
     /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'void'
      */
     forEachRemaining?(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'void'
      */
-    hasNext(): boolean;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    next(): BasicOrJavaType | null;
+    remove?(): void;
 }
 /**
  * Create a proxy for the {@link Iterator} interface.

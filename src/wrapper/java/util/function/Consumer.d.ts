@@ -6,16 +6,6 @@ import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy }
  */
 export declare class ConsumerClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    accept(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: BasicOrJavaType | null): void;
-    /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'java.util.function.Consumer'
      */
@@ -25,6 +15,16 @@ export declare class ConsumerClass extends JavaClass {
      * @return original return type: 'java.util.function.Consumer'
      */
     andThenSync(var0: ConsumerClass | JavaInterfaceProxy<ConsumerInterface> | null): Consumer | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    accept(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: BasicOrJavaType | null): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -39,15 +39,15 @@ export declare class ConsumerClass extends JavaClass {
  */
 export interface ConsumerInterface {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    accept(var0: BasicOrJavaType | null): void;
-    /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'java.util.function.Consumer'
      */
     andThen?(var0: ConsumerClass | JavaInterfaceProxy<ConsumerInterface> | null): Consumer | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    accept(var0: BasicOrJavaType | null): void;
 }
 /**
  * Create a proxy for the {@link Consumer} interface.

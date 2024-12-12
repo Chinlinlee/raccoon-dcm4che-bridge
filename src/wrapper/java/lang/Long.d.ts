@@ -11,157 +11,87 @@ import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_l
  */
 export declare class LongClass extends JavaClass {
     /**
-     * Original type: 'long'
+     * @return original return type: 'java.lang.Class'
      */
-    static readonly MIN_VALUE: LongClass | bigint | number;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * Original type: 'long'
+     * @return original return type: 'java.lang.Class'
      */
-    static readonly MAX_VALUE: LongClass | bigint | number;
-    /**
-     * Original type: 'java.lang.Class'
-     */
-    static readonly TYPE: java_lang_Class | null;
-    /**
-     * Original type: 'int'
-     */
-    static readonly SIZE: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly BYTES: java_lang_Integer | number;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
      * @return original return type: 'int'
      */
-    static numberOfLeadingZeros(var0: LongClass | bigint | number): Promise<number>;
+    static compare(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
     /**
      * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
      * @return original return type: 'int'
      */
-    static numberOfLeadingZerosSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static numberOfTrailingZeros(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static numberOfTrailingZerosSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static bitCount(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static bitCountSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
-     */
-    static toString(var0: LongClass | bigint | number): Promise<string>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
-     */
-    static toStringSync(var0: LongClass | bigint | number): string;
+    static compareSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static toString(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<string>;
+    wait(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static toStringSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): string;
+    waitSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    wait(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
+    waitSync(): void;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    static hashCode(var0: LongClass | bigint | number): Promise<number>;
+    wait(var0: LongClass | bigint | number): Promise<void>;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    static hashCodeSync(var0: LongClass | bigint | number): number;
+    waitSync(var0: LongClass | bigint | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static rotateLeft(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static rotateLeftSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
      * @return original return type: 'long'
      */
-    static min(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
+    static sum(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
      * @return original return type: 'long'
      */
-    static minSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static max(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static maxSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static signum(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static signumSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static reverseBytes(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static reverseBytesSync(var0: LongClass | bigint | number): number;
+    static sumSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
@@ -183,152 +113,6 @@ export declare class LongClass extends JavaClass {
      */
     compareToSync(var0: LongClass | bigint | number | null): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.Long'
-     */
-    static getLong(var0: string | null, var1: LongClass | bigint | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.Long'
-     */
-    static getLongSync(var0: string | null, var1: LongClass | bigint | number): number | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static getLong(var0: string | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static getLongSync(var0: string | null): number | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Long'
-     * @return original return type: 'java.lang.Long'
-     */
-    static getLong(var0: string | null, var1: LongClass | bigint | number | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Long'
-     * @return original return type: 'java.lang.Long'
-     */
-    static getLongSync(var0: string | null, var1: LongClass | bigint | number | null): number | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static compare(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static compareSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @return original return type: 'byte'
-     */
-    byteValue(): Promise<number>;
-    /**
-     * @return original return type: 'byte'
-     */
-    byteValueSync(): number;
-    /**
-     * @return original return type: 'short'
-     */
-    shortValue(): Promise<number>;
-    /**
-     * @return original return type: 'short'
-     */
-    shortValueSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    intValue(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    intValueSync(): number;
-    /**
-     * @return original return type: 'long'
-     */
-    longValue(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    longValueSync(): number;
-    /**
-     * @return original return type: 'float'
-     */
-    floatValue(): Promise<number>;
-    /**
-     * @return original return type: 'float'
-     */
-    floatValueSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
-    doubleValue(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    doubleValueSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOf(var0: string | null, var1: java_lang_Integer | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOfSync(var0: string | null, var1: java_lang_Integer | number): number | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOf(var0: LongClass | bigint | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOfSync(var0: LongClass | bigint | number): number | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOf(var0: string | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOfSync(var0: string | null): number | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexString(var0: LongClass | bigint | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
-     */
-    static toHexStringSync(var0: LongClass | bigint | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static decode(var0: string | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static decodeSync(var0: string | null): number | null;
-    /**
      * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
      * @return original return type: 'java.lang.Object'
      */
@@ -349,6 +133,16 @@ export declare class LongClass extends JavaClass {
      */
     resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static decode(var0: string | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static decodeSync(var0: string | null): number | null;
+    /**
      * @return original return type: 'java.util.Optional'
      */
     describeConstable(): Promise<java_util_Optional | null>;
@@ -357,99 +151,13 @@ export declare class LongClass extends JavaClass {
      */
     describeConstableSync(): java_util_Optional | null;
     /**
-     * @param var0 original type: 'long'
      * @return original return type: 'long'
      */
-    static reverse(var0: LongClass | bigint | number): Promise<number>;
+    longValue(): Promise<number>;
     /**
-     * @param var0 original type: 'long'
      * @return original return type: 'long'
      */
-    static reverseSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static sum(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static sumSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static compareUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'int'
-     */
-    static compareUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static toUnsignedString(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    static toUnsignedStringSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
-     */
-    static toUnsignedString(var0: LongClass | bigint | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
-     */
-    static toUnsignedStringSync(var0: LongClass | bigint | number): string | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static parseLong(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static parseLongSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static parseLong(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static parseLongSync(var0: string | null, var1: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseLong(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseLongSync(var0: string | null): number;
+    longValueSync(): number;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.lang.String'
@@ -461,83 +169,13 @@ export declare class LongClass extends JavaClass {
      */
     static toOctalStringSync(var0: LongClass | bigint | number): string | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static toBinaryString(var0: LongClass | bigint | number): Promise<string | null>;
+    notify(): Promise<void>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static toBinaryStringSync(var0: LongClass | bigint | number): string | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static divideUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static divideUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static remainderUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static remainderUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static highestOneBit(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static highestOneBitSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static lowestOneBit(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static lowestOneBitSync(var0: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static rotateLeft(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static rotateLeftSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static rotateRight(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static rotateRightSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): number;
+    notifySync(): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -578,58 +216,394 @@ export declare class LongClass extends JavaClass {
     static parseUnsignedLongSync(var0: string | null): number;
     /**
      * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
      */
-    wait(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<void>;
+    static min(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static minSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static remainderUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static remainderUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static hashCode(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static hashCodeSync(var0: LongClass | bigint | number): number;
+    /**
+     * @return original return type: 'short'
+     */
+    shortValue(): Promise<number>;
+    /**
+     * @return original return type: 'short'
+     */
+    shortValueSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static lowestOneBit(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static lowestOneBitSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static signum(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static signumSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexString(var0: LongClass | bigint | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.String'
+     */
+    static toHexStringSync(var0: LongClass | bigint | number): string | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'long'
      */
-    waitSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'void'
-     */
-    wait(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    waitSync(): void;
+    static rotateRight(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<number>;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
      */
-    wait(var0: LongClass | bigint | number): Promise<void>;
+    static rotateRightSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
      */
-    waitSync(var0: LongClass | bigint | number): void;
+    static max(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
      */
-    getClass(): Promise<java_lang_Class>;
+    static maxSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'int'
      */
-    getClassSync(): java_lang_Class;
+    intValue(): Promise<number>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    notify(): Promise<void>;
+    intValueSync(): number;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.Long'
      */
-    notifySync(): void;
+    static valueOf(var0: string | null, var1: java_lang_Integer | number): Promise<number | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.Long'
      */
-    notifyAll(): Promise<void>;
+    static valueOfSync(var0: string | null, var1: java_lang_Integer | number): number | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.Long'
      */
-    notifyAllSync(): void;
+    static valueOf(var0: LongClass | bigint | number): Promise<number | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.Long'
+     */
+    static valueOfSync(var0: LongClass | bigint | number): number | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static valueOf(var0: string | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static valueOfSync(var0: string | null): number | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static divideUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static divideUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
+    /**
+     * @return original return type: 'float'
+     */
+    floatValue(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    floatValueSync(): number;
+    /**
+     * @return original return type: 'double'
+     */
+    doubleValue(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    doubleValueSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static reverse(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static reverseSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static numberOfLeadingZeros(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static numberOfLeadingZerosSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.lang.Long'
+     */
+    static getLong(var0: string | null, var1: LongClass | bigint | number): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.lang.Long'
+     */
+    static getLongSync(var0: string | null, var1: LongClass | bigint | number): number | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static getLong(var0: string | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static getLongSync(var0: string | null): number | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Long'
+     * @return original return type: 'java.lang.Long'
+     */
+    static getLong(var0: string | null, var1: LongClass | bigint | number | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Long'
+     * @return original return type: 'java.lang.Long'
+     */
+    static getLongSync(var0: string | null, var1: LongClass | bigint | number | null): number | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static compareUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static compareUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.String'
+     */
+    static toBinaryString(var0: LongClass | bigint | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.String'
+     */
+    static toBinaryStringSync(var0: LongClass | bigint | number): string | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static parseLong(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static parseLongSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static parseLong(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static parseLongSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseLong(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseLongSync(var0: string | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static bitCount(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static bitCountSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static toUnsignedString(var0: LongClass | bigint | number, var1: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static toUnsignedStringSync(var0: LongClass | bigint | number, var1: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.String'
+     */
+    static toUnsignedString(var0: LongClass | bigint | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.lang.String'
+     */
+    static toUnsignedStringSync(var0: LongClass | bigint | number): string | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static highestOneBit(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static highestOneBitSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static numberOfTrailingZeros(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'int'
+     */
+    static numberOfTrailingZerosSync(var0: LongClass | bigint | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static reverseBytes(var0: LongClass | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    static reverseBytesSync(var0: LongClass | bigint | number): number;
+    /**
+     * @return original return type: 'byte'
+     */
+    byteValue(): Promise<number>;
+    /**
+     * @return original return type: 'byte'
+     */
+    byteValueSync(): number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly BYTES: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly SIZE: java_lang_Integer | number;
+    /**
+     * Original type: 'long'
+     */
+    static readonly MAX_VALUE: LongClass | bigint | number;
+    /**
+     * Original type: 'long'
+     */
+    static readonly MIN_VALUE: LongClass | bigint | number;
+    /**
+     * Original type: 'java.lang.Class'
+     */
+    static readonly TYPE: java_lang_Class | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Long'
@@ -637,17 +611,13 @@ export declare class LongClass extends JavaClass {
     static newInstanceAsync(var0: string | null): Promise<number>;
     /**
      * @param var0 original type: 'long'
+     */
+    constructor(var0: LongClass | bigint | number);
+    /**
+     * @param var0 original type: 'long'
      * @return original return type: 'java.lang.Long'
      */
     static newInstanceAsync(var0: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'long'
-     */
-    constructor(var0: LongClass | bigint | number);
 }
 declare const Long_base: typeof LongClass;
 /**

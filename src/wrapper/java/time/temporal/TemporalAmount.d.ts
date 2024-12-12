@@ -1,6 +1,6 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./TemporalUnit";
 import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./Temporal";
+import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./TemporalUnit";
 import { List as java_util_List } from "./../../util/List";
 /**
  * This class just defines types, you should import {@link TemporalAmount} instead of this.
@@ -8,6 +8,16 @@ import { List as java_util_List } from "./../../util/List";
  * You should probably not edit this.
  */
 export declare class TemporalAmountClass extends JavaClass {
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    subtractFrom(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    subtractFromSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'long'
@@ -18,16 +28,6 @@ export declare class TemporalAmountClass extends JavaClass {
      * @return original return type: 'long'
      */
     getSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    addToSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -40,12 +40,12 @@ export declare class TemporalAmountClass extends JavaClass {
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @return original return type: 'java.time.temporal.Temporal'
      */
-    subtractFrom(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): Promise<java_time_temporal_Temporal | null>;
     /**
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @return original return type: 'java.time.temporal.Temporal'
      */
-    subtractFromSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
+    addToSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -60,15 +60,15 @@ export declare class TemporalAmountClass extends JavaClass {
  */
 export interface TemporalAmountInterface {
     /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    subtractFrom(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
+    /**
      * @param var0 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'long'
      */
     get(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -77,7 +77,7 @@ export interface TemporalAmountInterface {
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @return original return type: 'java.time.temporal.Temporal'
      */
-    subtractFrom(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
+    addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
 }
 /**
  * Create a proxy for the {@link TemporalAmount} interface.

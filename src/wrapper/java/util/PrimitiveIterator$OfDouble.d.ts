@@ -8,6 +8,30 @@ import { Consumer as java_util_function_Consumer, ConsumerInterface as java_util
  */
 export declare class PrimitiveIterator$OfDoubleClass extends JavaClass {
     /**
+     * @return original return type: 'java.lang.Object'
+     */
+    next(): Promise<BasicOrJavaType | null>;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    nextSync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.lang.Double'
+     */
+    next(): Promise<number | null>;
+    /**
+     * @return original return type: 'java.lang.Double'
+     */
+    nextSync(): number | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNextSync(): boolean;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
@@ -38,22 +62,6 @@ export declare class PrimitiveIterator$OfDoubleClass extends JavaClass {
      */
     forEachRemainingSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
-     * @return original return type: 'java.lang.Object'
-     */
-    next(): Promise<BasicOrJavaType | null>;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    nextSync(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.lang.Double'
-     */
-    next(): Promise<number | null>;
-    /**
-     * @return original return type: 'java.lang.Double'
-     */
-    nextSync(): number | null;
-    /**
      * @return original return type: 'double'
      */
     nextDouble(): Promise<number>;
@@ -69,14 +77,6 @@ export declare class PrimitiveIterator$OfDoubleClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNextSync(): boolean;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -90,6 +90,18 @@ export declare class PrimitiveIterator$OfDoubleClass extends JavaClass {
  * You should probably not edit this.
  */
 export interface PrimitiveIterator$OfDoubleInterface {
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    next?(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.lang.Double'
+     */
+    next?(): number | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'void'
@@ -106,14 +118,6 @@ export interface PrimitiveIterator$OfDoubleInterface {
      */
     forEachRemaining?(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
-     * @return original return type: 'java.lang.Object'
-     */
-    next?(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.lang.Double'
-     */
-    next?(): number | null;
-    /**
      * @return original return type: 'double'
      */
     nextDouble(): number;
@@ -121,10 +125,6 @@ export interface PrimitiveIterator$OfDoubleInterface {
      * @return original return type: 'void'
      */
     remove?(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): boolean;
 }
 /**
  * Create a proxy for the {@link PrimitiveIterator$OfDouble} interface.

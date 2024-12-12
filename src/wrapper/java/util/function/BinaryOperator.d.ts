@@ -9,6 +9,18 @@ import { Function as java_util_function_Function, FunctionInterface as java_util
  */
 export declare class BinaryOperatorClass extends JavaClass {
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    apply(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    applySync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.util.Comparator'
      * @return original return type: 'java.util.function.BinaryOperator'
      */
@@ -28,18 +40,6 @@ export declare class BinaryOperatorClass extends JavaClass {
      * @return original return type: 'java.util.function.BinaryOperator'
      */
     static minBySync(var0: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null): BinaryOperator | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    apply(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    applySync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.util.function.Function'
      * @return original return type: 'java.util.function.BiFunction'

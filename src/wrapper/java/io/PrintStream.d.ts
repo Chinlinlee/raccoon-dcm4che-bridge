@@ -1,15 +1,16 @@
 /// <reference types="node" />
+/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { Class as java_lang_Class } from "./../lang/Class";
+import { Long as java_lang_Long } from "./../lang/Long";
+import { Integer as java_lang_Integer } from "./../lang/Integer";
+import { Locale as java_util_Locale } from "./../util/Locale";
 import { Float as java_lang_Float } from "./../lang/Float";
 import { Double as java_lang_Double } from "./../lang/Double";
 import { Boolean as java_lang_Boolean } from "./../lang/Boolean";
-import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { Long as java_lang_Long } from "./../lang/Long";
+import { OutputStream as java_io_OutputStream } from "./OutputStream";
 import { Appendable as java_lang_Appendable } from "./../lang/Appendable";
 import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./../lang/CharSequence";
-import { Locale as java_util_Locale } from "./../util/Locale";
-import { OutputStream as java_io_OutputStream } from "./OutputStream";
-import { Class as java_lang_Class } from "./../lang/Class";
 import { Charset as java_nio_charset_Charset } from "./../nio/charset/Charset";
 import { File as java_io_File } from "./File";
 /**
@@ -18,6 +19,120 @@ import { File as java_io_File } from "./File";
  * You should probably not edit this.
  */
 export declare class PrintStreamClass extends JavaClass {
+    /**
+     * @return original return type: 'java.lang.Class'
+     */
+    getClass(): Promise<java_lang_Class>;
+    /**
+     * @return original return type: 'java.lang.Class'
+     */
+    getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wait(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    format(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    formatSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): PrintStream | null;
+    /**
+     * @param var0 original type: 'java.util.Locale'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    format(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'java.util.Locale'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    formatSync(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): PrintStream | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    checkError(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    checkErrorSync(): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @param var0 original type: 'java.util.Locale'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    printf(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'java.util.Locale'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    printfSync(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): PrintStream | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    printf(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    printfSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): PrintStream | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -117,168 +232,6 @@ export declare class PrintStreamClass extends JavaClass {
      */
     printlnSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<java_lang_Appendable | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_lang_Appendable | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): PrintStream | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_lang_Appendable | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_lang_Appendable | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): PrintStream | null;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    append(var0: string | null): Promise<java_lang_Appendable | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    appendSync(var0: string | null): java_lang_Appendable | null;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    append(var0: string | null): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    appendSync(var0: string | null): PrintStream | null;
-    /**
-     * @return original return type: 'void'
-     */
-    flush(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    flushSync(): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    format(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    formatSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): PrintStream | null;
-    /**
-     * @param var0 original type: 'java.util.Locale'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    format(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'java.util.Locale'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    formatSync(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): PrintStream | null;
-    /**
-     * @param var0 original type: 'java.util.Locale'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    printf(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'java.util.Locale'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    printfSync(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): PrintStream | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    printf(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<PrintStream | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintStream'
-     */
-    printfSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): PrintStream | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    write(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    writeSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    write(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    writeSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    write(var0: Buffer | null): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    writeSync(var0: Buffer | null): void;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -369,14 +322,6 @@ export declare class PrintStreamClass extends JavaClass {
      */
     printSync(var0: BasicOrJavaType | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    close(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    closeSync(): void;
-    /**
      * @param var0 original type: 'byte[]'
      * @return original return type: 'void'
      */
@@ -387,51 +332,21 @@ export declare class PrintStreamClass extends JavaClass {
      */
     writeBytesSync(var0: Buffer | null): void;
     /**
-     * @return original return type: 'boolean'
-     */
-    checkError(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    checkErrorSync(): boolean;
-    /**
-     * @return original return type: 'java.io.OutputStream'
-     */
-    static nullOutputStream(): Promise<java_io_OutputStream | null>;
-    /**
-     * @return original return type: 'java.io.OutputStream'
-     */
-    static nullOutputStreamSync(): java_io_OutputStream | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
-    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    flush(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    wait(): Promise<void>;
+    flushSync(): void;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    waitSync(): void;
+    hashCode(): Promise<number>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    hashCodeSync(): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -443,45 +358,128 @@ export declare class PrintStreamClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.io.OutputStream'
      */
-    toString(): string;
+    static nullOutputStream(): Promise<java_io_OutputStream | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.io.OutputStream'
      */
-    toStringSync(): string;
+    static nullOutputStreamSync(): java_io_OutputStream | null;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
      */
-    hashCode(): Promise<number>;
+    write(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
      */
-    hashCodeSync(): number;
+    writeSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
      */
-    getClass(): Promise<java_lang_Class>;
+    write(var0: java_lang_Integer | number): Promise<void>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
      */
-    getClassSync(): java_lang_Class;
+    writeSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    write(var0: Buffer | null): Promise<void>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    writeSync(var0: Buffer | null): void;
     /**
      * @return original return type: 'void'
      */
-    notify(): Promise<void>;
+    close(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    notifySync(): void;
+    closeSync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.lang.Appendable'
      */
-    notifyAll(): Promise<void>;
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<java_lang_Appendable | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.lang.Appendable'
      */
-    notifyAllSync(): void;
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_lang_Appendable | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): PrintStream | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_lang_Appendable | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_lang_Appendable | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): PrintStream | null;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    append(var0: string | null): Promise<java_lang_Appendable | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    appendSync(var0: string | null): java_lang_Appendable | null;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    append(var0: string | null): Promise<PrintStream | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.io.PrintStream'
+     */
+    appendSync(var0: string | null): PrintStream | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null, var1: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -490,9 +488,19 @@ export declare class PrintStreamClass extends JavaClass {
     static newInstanceAsync(var0: string | null, var1: string | null): Promise<PrintStream>;
     /**
      * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.io.PrintStream'
      */
     static newInstanceAsync(var0: string | null): Promise<PrintStream>;
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.nio.charset.Charset'
+     */
+    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: java_nio_charset_Charset | null);
     /**
      * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'boolean'
@@ -504,9 +512,20 @@ export declare class PrintStreamClass extends JavaClass {
      * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'boolean'
      * @param var2 original type: 'java.lang.String'
+     */
+    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: string | null);
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.lang.String'
      * @return original return type: 'java.io.PrintStream'
      */
     static newInstanceAsync(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: string | null): Promise<PrintStream>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.nio.charset.Charset'
+     */
+    constructor(var0: string | null, var1: java_nio_charset_Charset | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.nio.charset.Charset'
@@ -516,9 +535,19 @@ export declare class PrintStreamClass extends JavaClass {
     /**
      * @param var0 original type: 'java.io.File'
      * @param var1 original type: 'java.lang.String'
+     */
+    constructor(var0: java_io_File | null, var1: string | null);
+    /**
+     * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.io.PrintStream'
      */
     static newInstanceAsync(var0: java_io_File | null, var1: string | null): Promise<PrintStream>;
+    /**
+     * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'java.nio.charset.Charset'
+     */
+    constructor(var0: java_io_File | null, var1: java_nio_charset_Charset | null);
     /**
      * @param var0 original type: 'java.io.File'
      * @param var1 original type: 'java.nio.charset.Charset'
@@ -527,9 +556,17 @@ export declare class PrintStreamClass extends JavaClass {
     static newInstanceAsync(var0: java_io_File | null, var1: java_nio_charset_Charset | null): Promise<PrintStream>;
     /**
      * @param var0 original type: 'java.io.File'
+     */
+    constructor(var0: java_io_File | null);
+    /**
+     * @param var0 original type: 'java.io.File'
      * @return original return type: 'java.io.PrintStream'
      */
     static newInstanceAsync(var0: java_io_File | null): Promise<PrintStream>;
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     */
+    constructor(var0: java_io_OutputStream | null);
     /**
      * @param var0 original type: 'java.io.OutputStream'
      * @return original return type: 'java.io.PrintStream'
@@ -538,58 +575,14 @@ export declare class PrintStreamClass extends JavaClass {
     /**
      * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'boolean'
+     */
+    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean);
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'java.io.PrintStream'
      */
     static newInstanceAsync(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean): Promise<PrintStream>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null, var1: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.nio.charset.Charset'
-     */
-    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: java_nio_charset_Charset | null);
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.lang.String'
-     */
-    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.nio.charset.Charset'
-     */
-    constructor(var0: string | null, var1: java_nio_charset_Charset | null);
-    /**
-     * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: java_io_File | null, var1: string | null);
-    /**
-     * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'java.nio.charset.Charset'
-     */
-    constructor(var0: java_io_File | null, var1: java_nio_charset_Charset | null);
-    /**
-     * @param var0 original type: 'java.io.File'
-     */
-    constructor(var0: java_io_File | null);
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     */
-    constructor(var0: java_io_OutputStream | null);
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'boolean'
-     */
-    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean);
 }
 declare const PrintStream_base: typeof PrintStreamClass;
 /**

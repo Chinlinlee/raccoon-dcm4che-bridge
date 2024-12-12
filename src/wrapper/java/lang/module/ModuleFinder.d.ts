@@ -1,6 +1,6 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { Path as java_nio_file_Path, PathInterface as java_nio_file_PathInterface } from "./../../nio/file/Path";
 import { Optional as java_util_Optional } from "./../../util/Optional";
+import { Path as java_nio_file_Path, PathInterface as java_nio_file_PathInterface } from "./../../nio/file/Path";
 import { Set as java_util_Set } from "./../../util/Set";
 /**
  * This class just defines types, you should import {@link ModuleFinder} instead of this.
@@ -9,15 +9,15 @@ import { Set as java_util_Set } from "./../../util/Set";
  */
 export declare class ModuleFinderClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.nio.file.Path[]'
+     * @param var0 original type: 'java.lang.module.ModuleFinder[]'
      * @return original return type: 'java.lang.module.ModuleFinder'
      */
-    static of(var0: (java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null)[] | null): Promise<ModuleFinder | null>;
+    static compose(var0: (ModuleFinderClass | JavaInterfaceProxy<ModuleFinderInterface> | null)[] | null): Promise<ModuleFinder | null>;
     /**
-     * @param var0 original type: 'java.nio.file.Path[]'
+     * @param var0 original type: 'java.lang.module.ModuleFinder[]'
      * @return original return type: 'java.lang.module.ModuleFinder'
      */
-    static ofSync(var0: (java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null)[] | null): ModuleFinder | null;
+    static composeSync(var0: (ModuleFinderClass | JavaInterfaceProxy<ModuleFinderInterface> | null)[] | null): ModuleFinder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.util.Optional'
@@ -29,6 +29,16 @@ export declare class ModuleFinderClass extends JavaClass {
      */
     findSync(var0: string | null): java_util_Optional | null;
     /**
+     * @param var0 original type: 'java.nio.file.Path[]'
+     * @return original return type: 'java.lang.module.ModuleFinder'
+     */
+    static of(var0: (java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null)[] | null): Promise<ModuleFinder | null>;
+    /**
+     * @param var0 original type: 'java.nio.file.Path[]'
+     * @return original return type: 'java.lang.module.ModuleFinder'
+     */
+    static ofSync(var0: (java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null)[] | null): ModuleFinder | null;
+    /**
      * @return original return type: 'java.lang.module.ModuleFinder'
      */
     static ofSystem(): Promise<ModuleFinder | null>;
@@ -36,16 +46,6 @@ export declare class ModuleFinderClass extends JavaClass {
      * @return original return type: 'java.lang.module.ModuleFinder'
      */
     static ofSystemSync(): ModuleFinder | null;
-    /**
-     * @param var0 original type: 'java.lang.module.ModuleFinder[]'
-     * @return original return type: 'java.lang.module.ModuleFinder'
-     */
-    static compose(var0: (ModuleFinderClass | JavaInterfaceProxy<ModuleFinderInterface> | null)[] | null): Promise<ModuleFinder | null>;
-    /**
-     * @param var0 original type: 'java.lang.module.ModuleFinder[]'
-     * @return original return type: 'java.lang.module.ModuleFinder'
-     */
-    static composeSync(var0: (ModuleFinderClass | JavaInterfaceProxy<ModuleFinderInterface> | null)[] | null): ModuleFinder | null;
     /**
      * @return original return type: 'java.util.Set'
      */

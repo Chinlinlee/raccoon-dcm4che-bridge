@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { Long as java_lang_Long } from "./../lang/Long";
 import { Class as java_lang_Class } from "./../lang/Class";
+import { Long as java_lang_Long } from "./../lang/Long";
+import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { IntConsumer as java_util_function_IntConsumer, IntConsumerInterface as java_util_function_IntConsumerInterface } from "./function/IntConsumer";
 /**
  * This class just defines types, you should import {@link IntSummaryStatistics} instead of this.
@@ -10,73 +10,13 @@ import { IntConsumer as java_util_function_IntConsumer, IntConsumerInterface as 
  */
 export declare class IntSummaryStatisticsClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.lang.Class'
      */
-    toString(): string;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'java.lang.Class'
      */
-    toStringSync(): string;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.util.IntSummaryStatistics'
-     * @return original return type: 'void'
-     */
-    combine(var0: IntSummaryStatisticsClass | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.util.IntSummaryStatistics'
-     * @return original return type: 'void'
-     */
-    combineSync(var0: IntSummaryStatisticsClass | null): void;
-    /**
-     * @return original return type: 'long'
-     */
-    getCount(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getCountSync(): number;
-    /**
-     * @return original return type: 'long'
-     */
-    getSum(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getSumSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getMin(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMinSync(): number;
-    /**
-     * @return original return type: 'double'
-     */
-    getAverage(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getAverageSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getMax(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMaxSync(): number;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -108,39 +48,13 @@ export declare class IntSummaryStatisticsClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
+    getMax(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClass(): Promise<java_lang_Class>;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClassSync(): java_lang_Class;
-    /**
-     * @return original return type: 'void'
-     */
-    notify(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifySync(): void;
+    getMaxSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -149,6 +63,22 @@ export declare class IntSummaryStatisticsClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @return original return type: 'double'
+     */
+    getAverage(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getAverageSync(): number;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
     /**
      * @param var0 original type: 'java.util.function.IntConsumer'
      * @return original return type: 'java.util.function.IntConsumer'
@@ -160,6 +90,69 @@ export declare class IntSummaryStatisticsClass extends JavaClass {
      */
     andThenSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): java_util_function_IntConsumer | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getMin(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getMinSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'long'
+     */
+    getCount(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getCountSync(): number;
+    /**
+     * @return original return type: 'long'
+     */
+    getSum(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getSumSync(): number;
+    /**
+     * @param var0 original type: 'java.util.IntSummaryStatistics'
+     * @return original return type: 'void'
+     */
+    combine(var0: IntSummaryStatisticsClass | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.IntSummaryStatistics'
+     * @return original return type: 'void'
+     */
+    combineSync(var0: IntSummaryStatisticsClass | null): void;
+    constructor();
+    /**
      * @return original return type: 'java.util.IntSummaryStatistics'
      */
     static newInstanceAsync(): Promise<IntSummaryStatistics>;
@@ -168,17 +161,16 @@ export declare class IntSummaryStatisticsClass extends JavaClass {
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'long'
-     * @return original return type: 'java.util.IntSummaryStatistics'
      */
-    static newInstanceAsync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number): Promise<IntSummaryStatistics>;
-    constructor();
+    constructor(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number);
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'long'
+     * @return original return type: 'java.util.IntSummaryStatistics'
      */
-    constructor(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number);
+    static newInstanceAsync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Long | bigint | number): Promise<IntSummaryStatistics>;
 }
 declare const IntSummaryStatistics_base: typeof IntSummaryStatisticsClass;
 /**

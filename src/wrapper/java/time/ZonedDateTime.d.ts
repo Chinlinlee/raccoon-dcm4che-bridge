@@ -1,31 +1,31 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { TemporalField as java_time_temporal_TemporalField, TemporalFieldInterface as java_time_temporal_TemporalFieldInterface } from "./temporal/TemporalField";
-import { DateTimeFormatter as java_time_format_DateTimeFormatter } from "./format/DateTimeFormatter";
-import { LocalDate as java_time_LocalDate } from "./LocalDate";
-import { LocalTime as java_time_LocalTime } from "./LocalTime";
-import { ZoneId as java_time_ZoneId } from "./ZoneId";
-import { LocalDateTime as java_time_LocalDateTime } from "./LocalDateTime";
-import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { TemporalAccessor as java_time_temporal_TemporalAccessor, TemporalAccessorInterface as java_time_temporal_TemporalAccessorInterface } from "./temporal/TemporalAccessor";
-import { TemporalQuery as java_time_temporal_TemporalQuery, TemporalQueryInterface as java_time_temporal_TemporalQueryInterface } from "./temporal/TemporalQuery";
-import { ZoneOffset as java_time_ZoneOffset } from "./ZoneOffset";
-import { ValueRange as java_time_temporal_ValueRange } from "./temporal/ValueRange";
-import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./temporal/TemporalUnit";
-import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./../lang/CharSequence";
-import { Instant as java_time_Instant } from "./Instant";
-import { Clock as java_time_Clock } from "./Clock";
-import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./temporal/Temporal";
-import { TemporalAdjuster as java_time_temporal_TemporalAdjuster, TemporalAdjusterInterface as java_time_temporal_TemporalAdjusterInterface } from "./temporal/TemporalAdjuster";
-import { ChronoZonedDateTime as java_time_chrono_ChronoZonedDateTime, ChronoZonedDateTimeInterface as java_time_chrono_ChronoZonedDateTimeInterface } from "./chrono/ChronoZonedDateTime";
+import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
-import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./temporal/TemporalAmount";
+import { ChronoZonedDateTime as java_time_chrono_ChronoZonedDateTime, ChronoZonedDateTimeInterface as java_time_chrono_ChronoZonedDateTimeInterface } from "./chrono/ChronoZonedDateTime";
+import { LocalTime as java_time_LocalTime } from "./LocalTime";
+import { LocalDateTime as java_time_LocalDateTime } from "./LocalDateTime";
+import { ZoneId as java_time_ZoneId } from "./ZoneId";
+import { ZoneOffset as java_time_ZoneOffset } from "./ZoneOffset";
 import { DayOfWeek as java_time_DayOfWeek } from "./DayOfWeek";
+import { TemporalAccessor as java_time_temporal_TemporalAccessor, TemporalAccessorInterface as java_time_temporal_TemporalAccessorInterface } from "./temporal/TemporalAccessor";
 import { Month as java_time_Month } from "./Month";
-import { ChronoLocalDate as java_time_chrono_ChronoLocalDate } from "./chrono/ChronoLocalDate";
+import { Integer as java_lang_Integer } from "./../lang/Integer";
+import { TemporalQuery as java_time_temporal_TemporalQuery, TemporalQueryInterface as java_time_temporal_TemporalQueryInterface } from "./temporal/TemporalQuery";
+import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./temporal/TemporalUnit";
+import { DateTimeFormatter as java_time_format_DateTimeFormatter } from "./format/DateTimeFormatter";
+import { TemporalField as java_time_temporal_TemporalField, TemporalFieldInterface as java_time_temporal_TemporalFieldInterface } from "./temporal/TemporalField";
+import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./temporal/Temporal";
+import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./temporal/TemporalAmount";
 import { ChronoLocalDateTime as java_time_chrono_ChronoLocalDateTime } from "./chrono/ChronoLocalDateTime";
 import { OffsetDateTime as java_time_OffsetDateTime } from "./OffsetDateTime";
-import { Class as java_lang_Class } from "./../lang/Class";
+import { Instant as java_time_Instant } from "./Instant";
+import { ValueRange as java_time_temporal_ValueRange } from "./temporal/ValueRange";
+import { LocalDate as java_time_LocalDate } from "./LocalDate";
+import { Clock as java_time_Clock } from "./Clock";
 import { Chronology as java_time_chrono_Chronology } from "./chrono/Chronology";
+import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./../lang/CharSequence";
+import { TemporalAdjuster as java_time_temporal_TemporalAdjuster, TemporalAdjusterInterface as java_time_temporal_TemporalAdjusterInterface } from "./temporal/TemporalAdjuster";
+import { ChronoLocalDate as java_time_chrono_ChronoLocalDate } from "./chrono/ChronoLocalDate";
 /**
  * This class just defines types, you should import {@link ZonedDateTime} instead of this.
  * This was generated by java-bridge.
@@ -33,111 +33,115 @@ import { Chronology as java_time_chrono_Chronology } from "./chrono/Chronology";
  */
 export declare class ZonedDateTimeClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    get(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    getSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
+    getClassSync(): java_lang_Class;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'long'
-     */
-    getLong(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'long'
-     */
-    getLongSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.format.DateTimeFormatter'
-     * @return original return type: 'java.lang.String'
-     */
-    format(var0: java_time_format_DateTimeFormatter | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.time.format.DateTimeFormatter'
-     * @return original return type: 'java.lang.String'
-     */
-    formatSync(var0: java_time_format_DateTimeFormatter | null): string | null;
-    /**
-     * @param var0 original type: 'java.time.LocalDate'
-     * @param var1 original type: 'java.time.LocalTime'
-     * @param var2 original type: 'java.time.ZoneId'
+     * @param var0 original type: 'long'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    static of(var0: java_time_LocalDate | null, var1: java_time_LocalTime | null, var2: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    plusHours(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'java.time.LocalDate'
-     * @param var1 original type: 'java.time.LocalTime'
-     * @param var2 original type: 'java.time.ZoneId'
+     * @param var0 original type: 'long'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    static ofSync(var0: java_time_LocalDate | null, var1: java_time_LocalTime | null, var2: java_time_ZoneId | null): ZonedDateTime | null;
+    plusHoursSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @return original return type: 'boolean'
+     */
+    isEqual(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @return original return type: 'boolean'
+     */
+    isEqualSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): boolean;
+    /**
+     * @return original return type: 'java.time.LocalTime'
+     */
+    toLocalTime(): Promise<java_time_LocalTime | null>;
+    /**
+     * @return original return type: 'java.time.LocalTime'
+     */
+    toLocalTimeSync(): java_time_LocalTime | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BasicOrJavaType | null): number;
+    /**
+     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): number;
     /**
      * @param var0 original type: 'java.time.LocalDateTime'
      * @param var1 original type: 'java.time.ZoneId'
+     * @param var2 original type: 'java.time.ZoneOffset'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    static of(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    static ofLocal(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null, var2: java_time_ZoneOffset | null): Promise<ZonedDateTime | null>;
     /**
      * @param var0 original type: 'java.time.LocalDateTime'
      * @param var1 original type: 'java.time.ZoneId'
+     * @param var2 original type: 'java.time.ZoneOffset'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    static ofSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null): ZonedDateTime | null;
+    static ofLocalSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null, var2: java_time_ZoneOffset | null): ZonedDateTime | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'int'
-     * @param var6 original type: 'int'
-     * @param var7 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
+     * @return original return type: 'java.time.DayOfWeek'
      */
-    static of(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number, var7: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    getDayOfWeek(): Promise<java_time_DayOfWeek | null>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'int'
-     * @param var6 original type: 'int'
-     * @param var7 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.DayOfWeek'
+     */
+    getDayOfWeekSync(): java_time_DayOfWeek | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getMinute(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getMinuteSync(): number;
+    /**
+     * @param var0 original type: 'long'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    static ofSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number, var7: java_time_ZoneId | null): ZonedDateTime | null;
+    plusSeconds(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusSecondsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.LocalDateTime'
+     * @param var1 original type: 'java.time.ZoneOffset'
+     * @param var2 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static ofStrict(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.LocalDateTime'
+     * @param var1 original type: 'java.time.ZoneOffset'
+     * @param var2 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static ofStrictSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): ZonedDateTime | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAccessor'
      * @return original return type: 'java.time.ZonedDateTime'
@@ -149,6 +153,44 @@ export declare class ZonedDateTimeClass extends JavaClass {
      */
     static fromSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): ZonedDateTime | null;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusNanos(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusNanosSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.Month'
+     */
+    getMonth(): Promise<java_time_Month | null>;
+    /**
+     * @return original return type: 'java.time.Month'
+     */
+    getMonthSync(): java_time_Month | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withHour(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withHourSync(var0: java_lang_Integer | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusMonths(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusMonthsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
      * @param var0 original type: 'java.time.temporal.TemporalQuery'
      * @return original return type: 'java.lang.Object'
      */
@@ -159,23 +201,61 @@ export declare class ZonedDateTimeClass extends JavaClass {
      */
     querySync(var0: java_time_temporal_TemporalQuery | JavaInterfaceProxy<java_time_temporal_TemporalQueryInterface> | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.time.ZoneOffset'
+     * @param var0 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    getOffset(): Promise<java_time_ZoneOffset | null>;
+    truncatedTo(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<ZonedDateTime | null>;
     /**
-     * @return original return type: 'java.time.ZoneOffset'
+     * @param var0 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    getOffsetSync(): java_time_ZoneOffset | null;
+    truncatedToSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ZonedDateTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'java.time.temporal.ValueRange'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    range(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<java_time_temporal_ValueRange | null>;
+    plusYears(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'java.time.temporal.ValueRange'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    rangeSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): java_time_temporal_ValueRange | null;
+    plusYearsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.format.DateTimeFormatter'
+     * @return original return type: 'java.lang.String'
+     */
+    format(var0: java_time_format_DateTimeFormatter | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.time.format.DateTimeFormatter'
+     * @return original return type: 'java.lang.String'
+     */
+    formatSync(var0: java_time_format_DateTimeFormatter | null): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getNano(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getNanoSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusNanos(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusNanosSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.ZoneId'
+     */
+    getZone(): Promise<java_time_ZoneId | null>;
+    /**
+     * @return original return type: 'java.time.ZoneId'
+     */
+    getZoneSync(): java_time_ZoneId | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'boolean'
@@ -196,212 +276,6 @@ export declare class ZonedDateTimeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSupportedSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'java.time.format.DateTimeFormatter'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_time_format_DateTimeFormatter | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'java.time.format.DateTimeFormatter'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_time_format_DateTimeFormatter | null): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): ZonedDateTime | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getYear(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getYearSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getMonthValue(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMonthValueSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getDayOfMonth(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getDayOfMonthSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getHour(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getHourSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getMinute(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getMinuteSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getSecond(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSecondSync(): number;
-    /**
-     * @param var0 original type: 'java.time.LocalDateTime'
-     * @param var1 original type: 'java.time.ZoneOffset'
-     * @param var2 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofInstant(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.LocalDateTime'
-     * @param var1 original type: 'java.time.ZoneOffset'
-     * @param var2 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofInstantSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.Instant'
-     * @param var1 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofInstant(var0: java_time_Instant | null, var1: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.Instant'
-     * @param var1 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofInstantSync(var0: java_time_Instant | null, var1: java_time_ZoneId | null): ZonedDateTime | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getNano(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getNanoSync(): number;
-    /**
-     * @param var0 original type: 'java.time.Clock'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static now(var0: java_time_Clock | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.Clock'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static nowSync(var0: java_time_Clock | null): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static now(var0: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static nowSync(var0: java_time_ZoneId | null): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static now(): Promise<ZonedDateTime | null>;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static nowSync(): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.ZoneId'
-     */
-    getZone(): Promise<java_time_ZoneId | null>;
-    /**
-     * @return original return type: 'java.time.ZoneId'
-     */
-    getZoneSync(): java_time_ZoneId | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_chrono_ChronoZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_chrono_ChronoZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_chrono_ChronoZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_chrono_ChronoZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.temporal.Temporal'
@@ -469,67 +343,101 @@ export declare class ZonedDateTimeClass extends JavaClass {
      */
     plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_chrono_ChronoZonedDateTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'int'
+     */
+    getYear(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getYearSync(): number;
+    /**
      * @return original return type: 'long'
      */
-    until(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<number>;
+    toEpochSecond(): Promise<number>;
     /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'long'
      */
-    untilSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): number;
+    toEpochSecondSync(): number;
     /**
-     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    toLocalDateTime(): Promise<java_time_chrono_ChronoLocalDateTime | null>;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    toLocalDateTimeSync(): java_time_chrono_ChronoLocalDateTime | null;
+    /**
+     * @return original return type: 'java.time.LocalDateTime'
+     */
+    toLocalDateTime(): Promise<java_time_LocalDateTime | null>;
+    /**
+     * @return original return type: 'java.time.LocalDateTime'
+     */
+    toLocalDateTimeSync(): java_time_LocalDateTime | null;
+    /**
+     * @param var0 original type: 'int'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusNanos(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    withDayOfMonth(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'int'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusNanosSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    withDayOfMonthSync(var0: java_lang_Integer | number): ZonedDateTime | null;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'int'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusSeconds(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    withMonth(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'int'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusSecondsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    withMonthSync(var0: java_lang_Integer | number): ZonedDateTime | null;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @return original return type: 'boolean'
+     */
+    isAfter(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @return original return type: 'boolean'
+     */
+    isAfterSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): boolean;
+    /**
+     * @return original return type: 'java.time.OffsetDateTime'
+     */
+    toOffsetDateTime(): Promise<java_time_OffsetDateTime | null>;
+    /**
+     * @return original return type: 'java.time.OffsetDateTime'
+     */
+    toOffsetDateTimeSync(): java_time_OffsetDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.LocalDateTime'
+     * @param var1 original type: 'java.time.ZoneOffset'
+     * @param var2 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusDays(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    static ofInstant(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.time.LocalDateTime'
+     * @param var1 original type: 'java.time.ZoneOffset'
+     * @param var2 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusDaysSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    static ofInstantSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): ZonedDateTime | null;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.time.Instant'
+     * @param var1 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusHours(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    static ofInstant(var0: java_time_Instant | null, var1: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.time.Instant'
+     * @param var1 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.ZonedDateTime'
      */
-    plusHoursSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusMinutes(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusMinutesSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    static ofInstantSync(var0: java_time_Instant | null, var1: java_time_ZoneId | null): ZonedDateTime | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
@@ -598,386 +506,6 @@ export declare class ZonedDateTimeClass extends JavaClass {
     minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): ZonedDateTime | null;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusDays(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusDaysSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusHours(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusHoursSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusMinutes(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusMinutesSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusSeconds(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusSecondsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusNanos(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusNanosSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    truncatedTo(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    truncatedToSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.DayOfWeek'
-     */
-    getDayOfWeek(): Promise<java_time_DayOfWeek | null>;
-    /**
-     * @return original return type: 'java.time.DayOfWeek'
-     */
-    getDayOfWeekSync(): java_time_DayOfWeek | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getDayOfYear(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getDayOfYearSync(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withDayOfYear(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withDayOfYearSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusYears(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusYearsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusMonths(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusMonthsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusWeeks(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusWeeksSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusYears(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    plusYearsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusMonths(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusMonthsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.Month'
-     */
-    getMonth(): Promise<java_time_Month | null>;
-    /**
-     * @return original return type: 'java.time.Month'
-     */
-    getMonthSync(): java_time_Month | null;
-    /**
-     * @return original return type: 'java.time.LocalDate'
-     */
-    toLocalDate(): Promise<java_time_LocalDate | null>;
-    /**
-     * @return original return type: 'java.time.LocalDate'
-     */
-    toLocalDateSync(): java_time_LocalDate | null;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    toLocalDate(): Promise<java_time_chrono_ChronoLocalDate | null>;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    toLocalDateSync(): java_time_chrono_ChronoLocalDate | null;
-    /**
-     * @return original return type: 'java.time.LocalTime'
-     */
-    toLocalTime(): Promise<java_time_LocalTime | null>;
-    /**
-     * @return original return type: 'java.time.LocalTime'
-     */
-    toLocalTimeSync(): java_time_LocalTime | null;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    toLocalDateTime(): Promise<java_time_chrono_ChronoLocalDateTime | null>;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    toLocalDateTimeSync(): java_time_chrono_ChronoLocalDateTime | null;
-    /**
-     * @return original return type: 'java.time.LocalDateTime'
-     */
-    toLocalDateTime(): Promise<java_time_LocalDateTime | null>;
-    /**
-     * @return original return type: 'java.time.LocalDateTime'
-     */
-    toLocalDateTimeSync(): java_time_LocalDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withYear(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withYearSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withMonth(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withMonthSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withDayOfMonth(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withDayOfMonthSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withHour(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withHourSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withMinute(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withMinuteSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withSecond(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withSecondSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withNano(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withNanoSync(var0: java_lang_Integer | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusWeeks(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    minusWeeksSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.LocalDateTime'
-     * @param var1 original type: 'java.time.ZoneId'
-     * @param var2 original type: 'java.time.ZoneOffset'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofLocal(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null, var2: java_time_ZoneOffset | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.LocalDateTime'
-     * @param var1 original type: 'java.time.ZoneId'
-     * @param var2 original type: 'java.time.ZoneOffset'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofLocalSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null, var2: java_time_ZoneOffset | null): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withZoneSameInstant(var0: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withZoneSameInstantSync(var0: java_time_ZoneId | null): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withZoneSameInstant(var0: java_time_ZoneId | null): Promise<java_time_chrono_ChronoZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withZoneSameInstantSync(var0: java_time_ZoneId | null): java_time_chrono_ChronoZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.OffsetDateTime'
-     */
-    toOffsetDateTime(): Promise<java_time_OffsetDateTime | null>;
-    /**
-     * @return original return type: 'java.time.OffsetDateTime'
-     */
-    toOffsetDateTimeSync(): java_time_OffsetDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withZoneSameLocal(var0: java_time_ZoneId | null): Promise<java_time_chrono_ChronoZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withZoneSameLocalSync(var0: java_time_ZoneId | null): java_time_chrono_ChronoZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withZoneSameLocal(var0: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withZoneSameLocalSync(var0: java_time_ZoneId | null): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withLaterOffsetAtOverlap(): Promise<java_time_chrono_ChronoZonedDateTime | null>;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withLaterOffsetAtOverlapSync(): java_time_chrono_ChronoZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withLaterOffsetAtOverlap(): Promise<ZonedDateTime | null>;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withLaterOffsetAtOverlapSync(): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withEarlierOffsetAtOverlap(): Promise<ZonedDateTime | null>;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withEarlierOffsetAtOverlapSync(): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withEarlierOffsetAtOverlap(): Promise<java_time_chrono_ChronoZonedDateTime | null>;
-    /**
-     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
-     */
-    withEarlierOffsetAtOverlapSync(): java_time_chrono_ChronoZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.LocalDateTime'
-     * @param var1 original type: 'java.time.ZoneOffset'
-     * @param var2 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofStrict(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.LocalDateTime'
-     * @param var1 original type: 'java.time.ZoneOffset'
-     * @param var2 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    static ofStrictSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneOffset | null, var2: java_time_ZoneId | null): ZonedDateTime | null;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withFixedOffsetZone(): Promise<ZonedDateTime | null>;
-    /**
-     * @return original return type: 'java.time.ZonedDateTime'
-     */
-    withFixedOffsetZoneSync(): ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -1007,21 +535,31 @@ export declare class ZonedDateTimeClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    getClass(): Promise<java_lang_Class>;
+    minusHours(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    getClassSync(): java_lang_Class;
+    minusHoursSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    notify(): Promise<void>;
+    withFixedOffsetZone(): Promise<ZonedDateTime | null>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    notifySync(): void;
+    withFixedOffsetZoneSync(): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.ZoneOffset'
+     */
+    getOffset(): Promise<java_time_ZoneOffset | null>;
+    /**
+     * @return original return type: 'java.time.ZoneOffset'
+     */
+    getOffsetSync(): java_time_ZoneOffset | null;
     /**
      * @return original return type: 'void'
      */
@@ -1031,51 +569,247 @@ export declare class ZonedDateTimeClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @param var0 original type: 'java.lang.Object'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    range(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<java_time_temporal_ValueRange | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    rangeSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): java_time_temporal_ValueRange | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusMinutes(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusMinutesSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withYear(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withYearSync(var0: java_lang_Integer | number): ZonedDateTime | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusDays(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusDaysSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusMinutes(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusMinutesSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withLaterOffsetAtOverlap(): Promise<java_time_chrono_ChronoZonedDateTime | null>;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withLaterOffsetAtOverlapSync(): java_time_chrono_ChronoZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withLaterOffsetAtOverlap(): Promise<ZonedDateTime | null>;
+    /**
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withLaterOffsetAtOverlapSync(): ZonedDateTime | null;
+    /**
      * @return original return type: 'int'
      */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    hashCode(): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
-    compareToSync(var0: BasicOrJavaType | null): number;
+    hashCodeSync(): number;
     /**
-     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'int'
      */
-    compareTo(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): Promise<number>;
+    get(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
     /**
-     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'int'
      */
-    compareToSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): number;
+    getSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
     /**
-     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.time.LocalDate'
+     * @param var1 original type: 'java.time.LocalTime'
+     * @param var2 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    isEqual(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): Promise<boolean>;
+    static of(var0: java_time_LocalDate | null, var1: java_time_LocalTime | null, var2: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
     /**
-     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.time.LocalDate'
+     * @param var1 original type: 'java.time.LocalTime'
+     * @param var2 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    isEqualSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): boolean;
+    static ofSync(var0: java_time_LocalDate | null, var1: java_time_LocalTime | null, var2: java_time_ZoneId | null): ZonedDateTime | null;
     /**
-     * @return original return type: 'long'
+     * @param var0 original type: 'java.time.LocalDateTime'
+     * @param var1 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    toEpochSecond(): Promise<number>;
+    static of(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
     /**
-     * @return original return type: 'long'
+     * @param var0 original type: 'java.time.LocalDateTime'
+     * @param var1 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    toEpochSecondSync(): number;
+    static ofSync(var0: java_time_LocalDateTime | null, var1: java_time_ZoneId | null): ZonedDateTime | null;
     /**
-     * @return original return type: 'java.time.Instant'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'int'
+     * @param var6 original type: 'int'
+     * @param var7 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    toInstant(): Promise<java_time_Instant | null>;
+    static of(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number, var7: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
     /**
-     * @return original return type: 'java.time.Instant'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'int'
+     * @param var6 original type: 'int'
+     * @param var7 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
      */
-    toInstantSync(): java_time_Instant | null;
+    static ofSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number, var7: java_time_ZoneId | null): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.Clock'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static now(var0: java_time_Clock | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.Clock'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static nowSync(var0: java_time_Clock | null): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static now(var0: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static nowSync(var0: java_time_ZoneId | null): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static now(): Promise<ZonedDateTime | null>;
+    /**
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static nowSync(): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withZoneSameLocal(var0: java_time_ZoneId | null): Promise<java_time_chrono_ChronoZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withZoneSameLocalSync(var0: java_time_ZoneId | null): java_time_chrono_ChronoZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withZoneSameLocal(var0: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withZoneSameLocalSync(var0: java_time_ZoneId | null): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withEarlierOffsetAtOverlap(): Promise<ZonedDateTime | null>;
+    /**
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withEarlierOffsetAtOverlapSync(): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withEarlierOffsetAtOverlap(): Promise<java_time_chrono_ChronoZonedDateTime | null>;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withEarlierOffsetAtOverlapSync(): java_time_chrono_ChronoZonedDateTime | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getDayOfYear(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getDayOfYearSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getHour(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getHourSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusWeeks(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    plusWeeksSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withMinute(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withMinuteSync(var0: java_lang_Integer | number): ZonedDateTime | null;
     /**
      * @return original return type: 'java.time.chrono.Chronology'
      */
@@ -1085,15 +819,93 @@ export declare class ZonedDateTimeClass extends JavaClass {
      */
     getChronologySync(): java_time_chrono_Chronology | null;
     /**
-     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    isAfter(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): Promise<boolean>;
+    getMonthValue(): Promise<number>;
     /**
-     * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    isAfterSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): boolean;
+    getMonthValueSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusYears(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusYearsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withZoneSameInstant(var0: java_time_ZoneId | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withZoneSameInstantSync(var0: java_time_ZoneId | null): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withZoneSameInstant(var0: java_time_ZoneId | null): Promise<java_time_chrono_ChronoZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withZoneSameInstantSync(var0: java_time_ZoneId | null): java_time_chrono_ChronoZonedDateTime | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusWeeks(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusWeeksSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withDayOfYear(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withDayOfYearSync(var0: java_lang_Integer | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'java.time.format.DateTimeFormatter'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_time_format_DateTimeFormatter | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'java.time.format.DateTimeFormatter'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_time_format_DateTimeFormatter | null): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.Instant'
+     */
+    toInstant(): Promise<java_time_Instant | null>;
+    /**
+     * @return original return type: 'java.time.Instant'
+     */
+    toInstantSync(): java_time_Instant | null;
     /**
      * @param var0 original type: 'java.time.chrono.ChronoZonedDateTime'
      * @return original return type: 'boolean'
@@ -1104,6 +916,186 @@ export declare class ZonedDateTimeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isBeforeSync(var0: java_time_chrono_ChronoZonedDateTime | JavaInterfaceProxy<java_time_chrono_ChronoZonedDateTimeInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusDays(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusDaysSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'long'
+     */
+    getLong(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'long'
+     */
+    getLongSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withNano(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withNanoSync(var0: java_lang_Integer | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_chrono_ChronoZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_chrono_ChronoZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_chrono_ChronoZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
+     */
+    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_chrono_ChronoZonedDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusMonths(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusMonthsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @return original return type: 'java.time.LocalDate'
+     */
+    toLocalDate(): Promise<java_time_LocalDate | null>;
+    /**
+     * @return original return type: 'java.time.LocalDate'
+     */
+    toLocalDateSync(): java_time_LocalDate | null;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     */
+    toLocalDate(): Promise<java_time_chrono_ChronoLocalDate | null>;
+    /**
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     */
+    toLocalDateSync(): java_time_chrono_ChronoLocalDate | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getSecond(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSecondSync(): number;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'long'
+     */
+    until(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'long'
+     */
+    untilSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getDayOfMonth(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getDayOfMonthSync(): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusSeconds(var0: java_lang_Long | bigint | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    minusSecondsSync(var0: java_lang_Long | bigint | number): ZonedDateTime | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withSecond(var0: java_lang_Integer | number): Promise<ZonedDateTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.ZonedDateTime'
+     */
+    withSecondSync(var0: java_lang_Integer | number): ZonedDateTime | null;
 }
 declare const ZonedDateTime_base: typeof ZonedDateTimeClass;
 /**

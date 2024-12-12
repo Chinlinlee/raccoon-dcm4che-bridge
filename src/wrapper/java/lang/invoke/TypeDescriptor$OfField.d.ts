@@ -6,22 +6,6 @@ import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridg
  */
 export declare class TypeDescriptor$OfFieldClass extends JavaClass {
     /**
-     * @return original return type: 'boolean'
-     */
-    isArray(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isArraySync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isPrimitive(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isPrimitiveSync(): boolean;
-    /**
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
     componentType(): Promise<TypeDescriptor$OfField | null>;
@@ -45,6 +29,22 @@ export declare class TypeDescriptor$OfFieldClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     descriptorStringSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isArray(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isArraySync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isPrimitive(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isPrimitiveSync(): boolean;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -59,14 +59,6 @@ export declare class TypeDescriptor$OfFieldClass extends JavaClass {
  */
 export interface TypeDescriptor$OfFieldInterface {
     /**
-     * @return original return type: 'boolean'
-     */
-    isArray(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isPrimitive(): boolean;
-    /**
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
      */
     componentType(): TypeDescriptor$OfField | null;
@@ -78,6 +70,14 @@ export interface TypeDescriptor$OfFieldInterface {
      * @return original return type: 'java.lang.String'
      */
     descriptorString(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isArray(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isPrimitive(): boolean;
 }
 /**
  * Create a proxy for the {@link TypeDescriptor$OfField} interface.

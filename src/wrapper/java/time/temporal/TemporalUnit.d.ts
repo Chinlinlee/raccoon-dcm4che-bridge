@@ -1,6 +1,6 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./Temporal";
 import { Duration as java_time_Duration } from "./../Duration";
+import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./Temporal";
 import { Long as java_lang_Long } from "./../../lang/Long";
 /**
  * This class just defines types, you should import {@link TemporalUnit} instead of this.
@@ -9,13 +9,49 @@ import { Long as java_lang_Long } from "./../../lang/Long";
  */
 export declare class TemporalUnitClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'boolean'
      */
-    toString(): string;
+    isDurationEstimated(): Promise<boolean>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'boolean'
      */
-    toStringSync(): string;
+    isDurationEstimatedSync(): boolean;
+    /**
+     * @return original return type: 'java.time.Duration'
+     */
+    getDuration(): Promise<java_time_Duration | null>;
+    /**
+     * @return original return type: 'java.time.Duration'
+     */
+    getDurationSync(): java_time_Duration | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTimeBased(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTimeBasedSync(): boolean;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    addToSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDateBased(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDateBasedSync(): boolean;
     /**
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @param var1 original type: 'java.time.temporal.Temporal'
@@ -29,22 +65,6 @@ export declare class TemporalUnitClass extends JavaClass {
      */
     betweenSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): number;
     /**
-     * @return original return type: 'boolean'
-     */
-    isDateBased(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDateBasedSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTimeBased(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTimeBasedSync(): boolean;
-    /**
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @return original return type: 'boolean'
      */
@@ -54,34 +74,6 @@ export declare class TemporalUnitClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSupportedBySync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): boolean;
-    /**
-     * @return original return type: 'java.time.Duration'
-     */
-    getDuration(): Promise<java_time_Duration | null>;
-    /**
-     * @return original return type: 'java.time.Duration'
-     */
-    getDurationSync(): java_time_Duration | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDurationEstimated(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDurationEstimatedSync(): boolean;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    addToSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -96,28 +88,9 @@ export declare class TemporalUnitClass extends JavaClass {
  */
 export interface TemporalUnitInterface {
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @param var1 original type: 'java.time.temporal.Temporal'
-     * @return original return type: 'long'
-     */
-    between(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): number;
-    /**
      * @return original return type: 'boolean'
      */
-    isDateBased(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTimeBased(): boolean;
-    /**
-     * @param var0 original type: 'java.time.temporal.Temporal'
-     * @return original return type: 'boolean'
-     */
-    isSupportedBy?(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): boolean;
+    isDurationEstimated(): boolean;
     /**
      * @return original return type: 'java.time.Duration'
      */
@@ -125,13 +98,32 @@ export interface TemporalUnitInterface {
     /**
      * @return original return type: 'boolean'
      */
-    isDurationEstimated(): boolean;
+    isTimeBased(): boolean;
     /**
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @param var1 original type: 'long'
      * @return original return type: 'java.time.temporal.Temporal'
      */
     addTo(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDateBased(): boolean;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @param var1 original type: 'java.time.temporal.Temporal'
+     * @return original return type: 'long'
+     */
+    between(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null, var1: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): number;
+    /**
+     * @param var0 original type: 'java.time.temporal.Temporal'
+     * @return original return type: 'boolean'
+     */
+    isSupportedBy?(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): boolean;
 }
 /**
  * Create a proxy for the {@link TemporalUnit} interface.

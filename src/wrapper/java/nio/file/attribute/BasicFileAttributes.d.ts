@@ -7,38 +7,6 @@ import { FileTime as java_nio_file_attribute_FileTime } from "./FileTime";
  */
 export declare class BasicFileAttributesClass extends JavaClass {
     /**
-     * @return original return type: 'long'
-     */
-    size(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    sizeSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDirectory(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDirectorySync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRegularFile(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRegularFileSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOther(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOtherSync(): boolean;
-    /**
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
     lastModifiedTime(): Promise<java_nio_file_attribute_FileTime | null>;
@@ -54,6 +22,14 @@ export declare class BasicFileAttributesClass extends JavaClass {
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
     lastAccessTimeSync(): java_nio_file_attribute_FileTime | null;
+    /**
+     * @return original return type: 'long'
+     */
+    size(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    sizeSync(): number;
     /**
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
@@ -71,6 +47,14 @@ export declare class BasicFileAttributesClass extends JavaClass {
      */
     isSymbolicLinkSync(): boolean;
     /**
+     * @return original return type: 'boolean'
+     */
+    isRegularFile(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRegularFileSync(): boolean;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     fileKey(): Promise<BasicOrJavaType | null>;
@@ -78,6 +62,22 @@ export declare class BasicFileAttributesClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     fileKeySync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOther(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOtherSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDirectory(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDirectorySync(): boolean;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -92,22 +92,6 @@ export declare class BasicFileAttributesClass extends JavaClass {
  */
 export interface BasicFileAttributesInterface {
     /**
-     * @return original return type: 'long'
-     */
-    size(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDirectory(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRegularFile(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOther(): boolean;
-    /**
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
     lastModifiedTime(): java_nio_file_attribute_FileTime | null;
@@ -115,6 +99,10 @@ export interface BasicFileAttributesInterface {
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
     lastAccessTime(): java_nio_file_attribute_FileTime | null;
+    /**
+     * @return original return type: 'long'
+     */
+    size(): number;
     /**
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
@@ -124,9 +112,21 @@ export interface BasicFileAttributesInterface {
      */
     isSymbolicLink(): boolean;
     /**
+     * @return original return type: 'boolean'
+     */
+    isRegularFile(): boolean;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     fileKey(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOther(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDirectory(): boolean;
 }
 /**
  * Create a proxy for the {@link BasicFileAttributes} interface.

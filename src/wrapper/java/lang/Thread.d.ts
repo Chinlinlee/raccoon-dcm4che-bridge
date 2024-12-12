@@ -1,14 +1,14 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Integer as java_lang_Integer } from "./Integer";
-import { StackTraceElement as java_lang_StackTraceElement } from "./StackTraceElement";
-import { Long as java_lang_Long } from "./Long";
-import { ThreadGroup as java_lang_ThreadGroup } from "./ThreadGroup";
-import { ClassLoader as java_lang_ClassLoader } from "./ClassLoader";
-import { Boolean as java_lang_Boolean } from "./Boolean";
-import { Thread$UncaughtExceptionHandler as java_lang_Thread$UncaughtExceptionHandler, Thread$UncaughtExceptionHandlerInterface as java_lang_Thread$UncaughtExceptionHandlerInterface } from "./Thread$UncaughtExceptionHandler";
-import { Map as java_util_Map } from "./../util/Map";
-import { Thread$State as java_lang_Thread$State } from "./Thread$State";
 import { Class as java_lang_Class } from "./Class";
+import { Long as java_lang_Long } from "./Long";
+import { Integer as java_lang_Integer } from "./Integer";
+import { ThreadGroup as java_lang_ThreadGroup } from "./ThreadGroup";
+import { Map as java_util_Map } from "./../util/Map";
+import { ClassLoader as java_lang_ClassLoader } from "./ClassLoader";
+import { StackTraceElement as java_lang_StackTraceElement } from "./StackTraceElement";
+import { Thread$UncaughtExceptionHandler as java_lang_Thread$UncaughtExceptionHandler, Thread$UncaughtExceptionHandlerInterface as java_lang_Thread$UncaughtExceptionHandlerInterface } from "./Thread$UncaughtExceptionHandler";
+import { Boolean as java_lang_Boolean } from "./Boolean";
+import { Thread$State as java_lang_Thread$State } from "./Thread$State";
 import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_RunnableInterface } from "./Runnable";
 /**
  * This class just defines types, you should import {@link Thread} instead of this.
@@ -17,17 +17,53 @@ import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_Runnable
  */
 export declare class ThreadClass extends JavaClass {
     /**
-     * Original type: 'int'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static readonly MIN_PRIORITY: java_lang_Integer | number;
+    setName(var0: string | null): Promise<void>;
     /**
-     * Original type: 'int'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static readonly NORM_PRIORITY: java_lang_Integer | number;
+    setNameSync(var0: string | null): void;
     /**
-     * Original type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    static readonly MAX_PRIORITY: java_lang_Integer | number;
+    getClass(): Promise<java_lang_Class>;
+    /**
+     * @return original return type: 'java.lang.Class'
+     */
+    getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wait(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -37,13 +73,37 @@ export declare class ThreadClass extends JavaClass {
      */
     getNameSync(): string | null;
     /**
-     * @return original return type: 'java.lang.StackTraceElement[]'
+     * @return original return type: 'java.lang.ThreadGroup'
      */
-    getStackTrace(): Promise<(java_lang_StackTraceElement | null)[] | null>;
+    getThreadGroup(): Promise<java_lang_ThreadGroup | null>;
     /**
-     * @return original return type: 'java.lang.StackTraceElement[]'
+     * @return original return type: 'java.lang.ThreadGroup'
      */
-    getStackTraceSync(): (java_lang_StackTraceElement | null)[] | null;
+    getThreadGroupSync(): java_lang_ThreadGroup | null;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    static getAllStackTraces(): Promise<java_util_Map | null>;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    static getAllStackTracesSync(): java_util_Map | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    static onSpinWait(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    static onSpinWaitSync(): void;
     /**
      * @return original return type: 'void'
      */
@@ -53,29 +113,103 @@ export declare class ThreadClass extends JavaClass {
      */
     runSync(): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'long'
      */
-    toString(): string;
+    getId(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'long'
      */
-    toStringSync(): string;
+    getIdSync(): number;
     /**
-     * @return original return type: 'java.lang.Thread'
+     * @param var0 original type: 'java.lang.ClassLoader'
+     * @return original return type: 'void'
      */
-    static currentThread(): Promise<Thread | null>;
+    setContextClassLoader(var0: java_lang_ClassLoader | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.Thread'
+     * @param var0 original type: 'java.lang.ClassLoader'
+     * @return original return type: 'void'
      */
-    static currentThreadSync(): Thread | null;
+    setContextClassLoaderSync(var0: java_lang_ClassLoader | null): void;
     /**
      * @return original return type: 'void'
      */
-    static onSpinWait(): Promise<void>;
+    notify(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    static onSpinWaitSync(): void;
+    notifySync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    static sleep(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    static sleepSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    static sleep(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    static sleepSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @return original return type: 'java.lang.StackTraceElement[]'
+     */
+    getStackTrace(): Promise<(java_lang_StackTraceElement | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.StackTraceElement[]'
+     */
+    getStackTraceSync(): (java_lang_StackTraceElement | null)[] | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDaemon(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDaemonSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @return original return type: 'void'
+     */
+    static yield(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    static yieldSync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    interrupt(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    interruptSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.Thread[]'
+     * @return original return type: 'int'
+     */
+    static enumerate(var0: (ThreadClass | null)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Thread[]'
+     * @return original return type: 'int'
+     */
+    static enumerateSync(var0: (ThreadClass | null)[] | null): number;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'void'
@@ -109,145 +243,11 @@ export declare class ThreadClass extends JavaClass {
     /**
      * @return original return type: 'void'
      */
-    start(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    startSync(): void;
-    /**
-     * @return original return type: 'java.lang.ThreadGroup'
-     */
-    getThreadGroup(): Promise<java_lang_ThreadGroup | null>;
-    /**
-     * @return original return type: 'java.lang.ThreadGroup'
-     */
-    getThreadGroupSync(): java_lang_ThreadGroup | null;
-    /**
-     * @param var0 original type: 'java.lang.ClassLoader'
-     * @return original return type: 'void'
-     */
-    setContextClassLoader(var0: java_lang_ClassLoader | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.ClassLoader'
-     * @return original return type: 'void'
-     */
-    setContextClassLoaderSync(var0: java_lang_ClassLoader | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    static holdsLock(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    static holdsLockSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'void'
-     */
-    checkAccess(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    checkAccessSync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    static dumpStack(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    static dumpStackSync(): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPriority(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPrioritySync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setDaemon(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setDaemonSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    static sleep(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    static sleepSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    static sleep(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    static sleepSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDaemon(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isDaemonSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getPriority(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPrioritySync(): number;
-    /**
-     * @return original return type: 'java.lang.ClassLoader'
-     */
-    getContextClassLoader(): Promise<java_lang_ClassLoader | null>;
-    /**
-     * @return original return type: 'java.lang.ClassLoader'
-     */
-    getContextClassLoaderSync(): java_lang_ClassLoader | null;
-    /**
-     * @return original return type: 'void'
-     */
     resume(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
     resumeSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    static interrupted(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    static interruptedSync(): boolean;
-    /**
-     * @return original return type: 'void'
-     */
-    interrupt(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    interruptSync(): void;
     /**
      * @return original return type: 'int'
      */
@@ -257,66 +257,6 @@ export declare class ThreadClass extends JavaClass {
      */
     static activeCountSync(): number;
     /**
-     * @param var0 original type: 'java.lang.Thread[]'
-     * @return original return type: 'int'
-     */
-    static enumerate(var0: (ThreadClass | null)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Thread[]'
-     * @return original return type: 'int'
-     */
-    static enumerateSync(var0: (ThreadClass | null)[] | null): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isAlive(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isAliveSync(): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Thread$UncaughtExceptionHandler'
-     * @return original return type: 'void'
-     */
-    static setDefaultUncaughtExceptionHandler(var0: java_lang_Thread$UncaughtExceptionHandler | JavaInterfaceProxy<java_lang_Thread$UncaughtExceptionHandlerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Thread$UncaughtExceptionHandler'
-     * @return original return type: 'void'
-     */
-    static setDefaultUncaughtExceptionHandlerSync(var0: java_lang_Thread$UncaughtExceptionHandler | JavaInterfaceProxy<java_lang_Thread$UncaughtExceptionHandlerInterface> | null): void;
-    /**
-     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
-     */
-    getUncaughtExceptionHandler(): Promise<java_lang_Thread$UncaughtExceptionHandler | null>;
-    /**
-     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
-     */
-    getUncaughtExceptionHandlerSync(): java_lang_Thread$UncaughtExceptionHandler | null;
-    /**
-     * @return original return type: 'void'
-     */
-    static yield(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    static yieldSync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    stop(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    stopSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInterrupted(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInterruptedSync(): boolean;
-    /**
      * @return original return type: 'void'
      */
     suspend(): Promise<void>;
@@ -325,55 +265,21 @@ export declare class ThreadClass extends JavaClass {
      */
     suspendSync(): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Thread'
      */
-    setName(var0: string | null): Promise<void>;
+    static currentThread(): Promise<Thread | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Thread'
      */
-    setNameSync(var0: string | null): void;
+    static currentThreadSync(): Thread | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    countStackFrames(): Promise<number>;
+    isInterrupted(): Promise<boolean>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    countStackFramesSync(): number;
-    /**
-     * @return original return type: 'java.util.Map'
-     */
-    static getAllStackTraces(): Promise<java_util_Map | null>;
-    /**
-     * @return original return type: 'java.util.Map'
-     */
-    static getAllStackTracesSync(): java_util_Map | null;
-    /**
-     * @return original return type: 'long'
-     */
-    getId(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getIdSync(): number;
-    /**
-     * @return original return type: 'java.lang.Thread$State'
-     */
-    getState(): Promise<java_lang_Thread$State | null>;
-    /**
-     * @return original return type: 'java.lang.Thread$State'
-     */
-    getStateSync(): java_lang_Thread$State | null;
-    /**
-     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
-     */
-    static getDefaultUncaughtExceptionHandler(): Promise<java_lang_Thread$UncaughtExceptionHandler | null>;
-    /**
-     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
-     */
-    static getDefaultUncaughtExceptionHandlerSync(): java_lang_Thread$UncaughtExceptionHandler | null;
+    isInterruptedSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.Thread$UncaughtExceptionHandler'
      * @return original return type: 'void'
@@ -385,35 +291,115 @@ export declare class ThreadClass extends JavaClass {
      */
     setUncaughtExceptionHandlerSync(var0: java_lang_Thread$UncaughtExceptionHandler | JavaInterfaceProxy<java_lang_Thread$UncaughtExceptionHandlerInterface> | null): void;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
-    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    static dumpStack(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
-    wait(): Promise<void>;
+    static dumpStackSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.Thread$UncaughtExceptionHandler'
+     * @return original return type: 'void'
+     */
+    static setDefaultUncaughtExceptionHandler(var0: java_lang_Thread$UncaughtExceptionHandler | JavaInterfaceProxy<java_lang_Thread$UncaughtExceptionHandlerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Thread$UncaughtExceptionHandler'
+     * @return original return type: 'void'
+     */
+    static setDefaultUncaughtExceptionHandlerSync(var0: java_lang_Thread$UncaughtExceptionHandler | JavaInterfaceProxy<java_lang_Thread$UncaughtExceptionHandlerInterface> | null): void;
     /**
      * @return original return type: 'void'
      */
-    waitSync(): void;
+    start(): Promise<void>;
     /**
-     * @param var0 original type: 'long'
      * @return original return type: 'void'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    startSync(): void;
     /**
-     * @param var0 original type: 'long'
+     * @return original return type: 'boolean'
+     */
+    static interrupted(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    static interruptedSync(): boolean;
+    /**
+     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
+     */
+    getUncaughtExceptionHandler(): Promise<java_lang_Thread$UncaughtExceptionHandler | null>;
+    /**
+     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
+     */
+    getUncaughtExceptionHandlerSync(): java_lang_Thread$UncaughtExceptionHandler | null;
+    /**
      * @return original return type: 'void'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    checkAccess(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    checkAccessSync(): void;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setDaemon(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setDaemonSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isAlive(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isAliveSync(): boolean;
+    /**
+     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
+     */
+    static getDefaultUncaughtExceptionHandler(): Promise<java_lang_Thread$UncaughtExceptionHandler | null>;
+    /**
+     * @return original return type: 'java.lang.Thread$UncaughtExceptionHandler'
+     */
+    static getDefaultUncaughtExceptionHandlerSync(): java_lang_Thread$UncaughtExceptionHandler | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    static holdsLock(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    static holdsLockSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'java.lang.Thread$State'
+     */
+    getState(): Promise<java_lang_Thread$State | null>;
+    /**
+     * @return original return type: 'java.lang.Thread$State'
+     */
+    getStateSync(): java_lang_Thread$State | null;
+    /**
+     * @return original return type: 'void'
+     */
+    stop(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    stopSync(): void;
+    /**
+     * @return original return type: 'java.lang.ClassLoader'
+     */
+    getContextClassLoader(): Promise<java_lang_ClassLoader | null>;
+    /**
+     * @return original return type: 'java.lang.ClassLoader'
+     */
+    getContextClassLoaderSync(): java_lang_ClassLoader | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -427,35 +413,46 @@ export declare class ThreadClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    hashCode(): Promise<number>;
+    getPriority(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    hashCodeSync(): number;
+    getPrioritySync(): number;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'int'
      */
-    getClass(): Promise<java_lang_Class>;
+    countStackFrames(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'int'
      */
-    getClassSync(): java_lang_Class;
+    countStackFramesSync(): number;
     /**
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    notify(): Promise<void>;
+    setPriority(var0: java_lang_Integer | number): Promise<void>;
     /**
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    notifySync(): void;
+    setPrioritySync(var0: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'void'
+     * Original type: 'int'
      */
-    notifyAll(): Promise<void>;
+    static readonly MIN_PRIORITY: java_lang_Integer | number;
     /**
-     * @return original return type: 'void'
+     * Original type: 'int'
      */
-    notifyAllSync(): void;
+    static readonly MAX_PRIORITY: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly NORM_PRIORITY: java_lang_Integer | number;
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup'
+     * @param var1 original type: 'java.lang.Runnable'
+     */
+    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null);
     /**
      * @param var0 original type: 'java.lang.ThreadGroup'
      * @param var1 original type: 'java.lang.Runnable'
@@ -464,18 +461,35 @@ export declare class ThreadClass extends JavaClass {
     static newInstanceAsync(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): Promise<Thread>;
     /**
      * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Thread'
      */
     static newInstanceAsync(var0: string | null): Promise<Thread>;
     /**
      * @param var0 original type: 'java.lang.Runnable'
+     */
+    constructor(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null);
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'java.lang.Thread'
      */
     static newInstanceAsync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): Promise<Thread>;
+    constructor();
     /**
      * @return original return type: 'java.lang.Thread'
      */
     static newInstanceAsync(): Promise<Thread>;
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup'
+     * @param var1 original type: 'java.lang.Runnable'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'long'
+     * @param var4 original type: 'boolean'
+     */
+    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null, var3: java_lang_Long | bigint | number, var4: java_lang_Boolean | boolean);
     /**
      * @param var0 original type: 'java.lang.ThreadGroup'
      * @param var1 original type: 'java.lang.Runnable'
@@ -490,9 +504,22 @@ export declare class ThreadClass extends JavaClass {
      * @param var1 original type: 'java.lang.Runnable'
      * @param var2 original type: 'java.lang.String'
      * @param var3 original type: 'long'
+     */
+    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null, var3: java_lang_Long | bigint | number);
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup'
+     * @param var1 original type: 'java.lang.Runnable'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'long'
      * @return original return type: 'java.lang.Thread'
      */
     static newInstanceAsync(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null, var3: java_lang_Long | bigint | number): Promise<Thread>;
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup'
+     * @param var1 original type: 'java.lang.Runnable'
+     * @param var2 original type: 'java.lang.String'
+     */
+    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null);
     /**
      * @param var0 original type: 'java.lang.ThreadGroup'
      * @param var1 original type: 'java.lang.Runnable'
@@ -503,60 +530,25 @@ export declare class ThreadClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @param var1 original type: 'java.lang.String'
+     */
+    constructor(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: string | null);
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Thread'
      */
     static newInstanceAsync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: string | null): Promise<Thread>;
     /**
      * @param var0 original type: 'java.lang.ThreadGroup'
      * @param var1 original type: 'java.lang.String'
+     */
+    constructor(var0: java_lang_ThreadGroup | null, var1: string | null);
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Thread'
      */
     static newInstanceAsync(var0: java_lang_ThreadGroup | null, var1: string | null): Promise<Thread>;
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup'
-     * @param var1 original type: 'java.lang.Runnable'
-     */
-    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     */
-    constructor(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null);
-    constructor();
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup'
-     * @param var1 original type: 'java.lang.Runnable'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'long'
-     * @param var4 original type: 'boolean'
-     */
-    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null, var3: java_lang_Long | bigint | number, var4: java_lang_Boolean | boolean);
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup'
-     * @param var1 original type: 'java.lang.Runnable'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'long'
-     */
-    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null, var3: java_lang_Long | bigint | number);
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup'
-     * @param var1 original type: 'java.lang.Runnable'
-     * @param var2 original type: 'java.lang.String'
-     */
-    constructor(var0: java_lang_ThreadGroup | null, var1: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var2: string | null);
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: string | null);
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: java_lang_ThreadGroup | null, var1: string | null);
 }
 declare const Thread_base: typeof ThreadClass;
 /**

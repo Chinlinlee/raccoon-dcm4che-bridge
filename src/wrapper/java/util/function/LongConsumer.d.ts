@@ -7,16 +7,6 @@ import { Long as java_lang_Long } from "./../../lang/Long";
  */
 export declare class LongConsumerClass extends JavaClass {
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @param var0 original type: 'java.util.function.LongConsumer'
      * @return original return type: 'java.util.function.LongConsumer'
      */
@@ -26,6 +16,16 @@ export declare class LongConsumerClass extends JavaClass {
      * @return original return type: 'java.util.function.LongConsumer'
      */
     andThenSync(var0: LongConsumerClass | JavaInterfaceProxy<LongConsumerInterface> | null): LongConsumer | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Long | bigint | number): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -40,15 +40,15 @@ export declare class LongConsumerClass extends JavaClass {
  */
 export interface LongConsumerInterface {
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Long | bigint | number): void;
-    /**
      * @param var0 original type: 'java.util.function.LongConsumer'
      * @return original return type: 'java.util.function.LongConsumer'
      */
     andThen?(var0: LongConsumerClass | JavaInterfaceProxy<LongConsumerInterface> | null): LongConsumer | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Long | bigint | number): void;
 }
 /**
  * Create a proxy for the {@link LongConsumer} interface.

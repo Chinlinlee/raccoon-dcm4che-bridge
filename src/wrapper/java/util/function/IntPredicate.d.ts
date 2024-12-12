@@ -7,16 +7,6 @@ import { Integer as java_lang_Integer } from "./../../lang/Integer";
  */
 export declare class IntPredicateClass extends JavaClass {
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    test(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    testSync(var0: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'java.util.function.IntPredicate'
      * @return original return type: 'java.util.function.IntPredicate'
      */
@@ -26,6 +16,16 @@ export declare class IntPredicateClass extends JavaClass {
      * @return original return type: 'java.util.function.IntPredicate'
      */
     orSync(var0: IntPredicateClass | JavaInterfaceProxy<IntPredicateInterface> | null): IntPredicate | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    test(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    testSync(var0: java_lang_Integer | number): boolean;
     /**
      * @return original return type: 'java.util.function.IntPredicate'
      */
@@ -58,15 +58,15 @@ export declare class IntPredicateClass extends JavaClass {
  */
 export interface IntPredicateInterface {
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    test(var0: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'java.util.function.IntPredicate'
      * @return original return type: 'java.util.function.IntPredicate'
      */
     or?(var0: IntPredicateClass | JavaInterfaceProxy<IntPredicateInterface> | null): IntPredicate | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    test(var0: java_lang_Integer | number): boolean;
     /**
      * @return original return type: 'java.util.function.IntPredicate'
      */

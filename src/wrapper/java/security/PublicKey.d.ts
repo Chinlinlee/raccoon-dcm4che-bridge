@@ -1,4 +1,5 @@
 /// <reference types="node" />
+/// <reference types="node" />
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { Long as java_lang_Long } from "./../lang/Long";
 /**
@@ -7,10 +8,6 @@ import { Long as java_lang_Long } from "./../lang/Long";
  * You should probably not edit this.
  */
 export declare class PublicKeyClass extends JavaClass {
-    /**
-     * Original type: 'long'
-     */
-    static readonly serialVersionUID: java_lang_Long | bigint | number;
     /**
      * @return original return type: 'byte[]'
      */
@@ -35,6 +32,10 @@ export declare class PublicKeyClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getFormatSync(): string | null;
+    /**
+     * Original type: 'long'
+     */
+    static readonly serialVersionUID: java_lang_Long | bigint | number;
 }
 /**
  * This interface just defines types for creating proxies,

@@ -8,22 +8,6 @@ import { IntStream as java_util_stream_IntStream } from "./../util/stream/IntStr
  */
 export declare class CharSequenceClass extends JavaClass {
     /**
-     * @return original return type: 'int'
-     */
-    length(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    lengthSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'java.lang.CharSequence'
      * @return original return type: 'int'
@@ -36,15 +20,13 @@ export declare class CharSequenceClass extends JavaClass {
      */
     static compareSync(var0: CharSequenceClass | JavaInterfaceProxy<CharSequenceInterface> | null, var1: CharSequenceClass | JavaInterfaceProxy<CharSequenceInterface> | null): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'char'
+     * @return original return type: 'int'
      */
-    charAt(var0: java_lang_Integer | number): Promise<string | null>;
+    length(): Promise<number>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'char'
+     * @return original return type: 'int'
      */
-    charAtSync(var0: java_lang_Integer | number): string | null;
+    lengthSync(): number;
     /**
      * @return original return type: 'boolean'
      */
@@ -53,14 +35,6 @@ export declare class CharSequenceClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isEmptySync(): boolean;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    codePoints(): Promise<java_util_stream_IntStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    codePointsSync(): java_util_stream_IntStream | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -74,6 +48,16 @@ export declare class CharSequenceClass extends JavaClass {
      */
     subSequenceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): CharSequence | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'char'
+     */
+    charAt(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'char'
+     */
+    charAtSync(var0: java_lang_Integer | number): string | null;
+    /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     chars(): Promise<java_util_stream_IntStream | null>;
@@ -81,6 +65,14 @@ export declare class CharSequenceClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     charsSync(): java_util_stream_IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    codePoints(): Promise<java_util_stream_IntStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    codePointsSync(): java_util_stream_IntStream | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -99,22 +91,13 @@ export interface CharSequenceInterface {
      */
     length(): number;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'char'
-     */
-    charAt(var0: java_lang_Integer | number): string | null;
-    /**
      * @return original return type: 'boolean'
      */
     isEmpty?(): boolean;
     /**
-     * @return original return type: 'java.util.stream.IntStream'
+     * @return original return type: 'java.lang.String'
      */
-    codePoints?(): java_util_stream_IntStream | null;
+    toString(): string;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -122,9 +105,18 @@ export interface CharSequenceInterface {
      */
     subSequence(var0: java_lang_Integer | number, var1: java_lang_Integer | number): CharSequence | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'char'
+     */
+    charAt(var0: java_lang_Integer | number): string | null;
+    /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     chars?(): java_util_stream_IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    codePoints?(): java_util_stream_IntStream | null;
 }
 /**
  * Create a proxy for the {@link CharSequence} interface.

@@ -15,6 +15,14 @@ export declare class GroupPrincipalClass extends JavaClass {
      */
     getNameSync(): string | null;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -24,22 +32,6 @@ export declare class GroupPrincipalClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @param var0 original type: 'javax.security.auth.Subject'
      * @return original return type: 'boolean'
@@ -68,6 +60,10 @@ export interface GroupPrincipalInterface {
      */
     getName(): string | null;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -76,10 +72,6 @@ export interface GroupPrincipalInterface {
      * @return original return type: 'java.lang.String'
      */
     toString(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): number;
     /**
      * @param var0 original type: 'javax.security.auth.Subject'
      * @return original return type: 'boolean'

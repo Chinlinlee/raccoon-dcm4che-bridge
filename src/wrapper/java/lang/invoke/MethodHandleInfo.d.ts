@@ -11,73 +11,15 @@ import { MethodHandles$Lookup as java_lang_invoke_MethodHandles$Lookup } from ".
  */
 export declare class MethodHandleInfoClass extends JavaClass {
     /**
-     * Original type: 'int'
-     */
-    static readonly REF_getField: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_getStatic: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_putField: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_putStatic: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_invokeVirtual: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_invokeStatic: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_invokeSpecial: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_newInvokeSpecial: java_lang_Integer | number;
-    /**
-     * Original type: 'int'
-     */
-    static readonly REF_invokeInterface: java_lang_Integer | number;
-    /**
+     * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
-    getName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getNameSync(): string | null;
+    static referenceKindToString(var0: java_lang_Integer | number): Promise<string | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Class'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.invoke.MethodType'
      * @return original return type: 'java.lang.String'
      */
-    static toString(var0: java_lang_Integer | number, var1: java_lang_Class | null, var2: string | null, var3: java_lang_invoke_MethodType | null): Promise<string>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Class'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.invoke.MethodType'
-     * @return original return type: 'java.lang.String'
-     */
-    static toStringSync(var0: java_lang_Integer | number, var1: java_lang_Class | null, var2: string | null, var3: java_lang_invoke_MethodType | null): string;
-    /**
-     * @return original return type: 'int'
-     */
-    getModifiers(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getModifiersSync(): number;
+    static referenceKindToStringSync(var0: java_lang_Integer | number): string | null;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -87,14 +29,6 @@ export declare class MethodHandleInfoClass extends JavaClass {
      */
     getDeclaringClassSync(): java_lang_Class | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isVarArgs(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isVarArgsSync(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getReferenceKind(): Promise<number>;
@@ -102,6 +36,22 @@ export declare class MethodHandleInfoClass extends JavaClass {
      * @return original return type: 'int'
      */
     getReferenceKindSync(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getNameSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isVarArgs(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isVarArgsSync(): boolean;
     /**
      * @return original return type: 'java.lang.invoke.MethodType'
      */
@@ -123,15 +73,49 @@ export declare class MethodHandleInfoClass extends JavaClass {
      */
     reflectAsSync(var0: java_lang_Class | null, var1: java_lang_invoke_MethodHandles$Lookup | null): java_lang_reflect_Member | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    static referenceKindToString(var0: java_lang_Integer | number): Promise<string | null>;
+    getModifiers(): Promise<number>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    static referenceKindToStringSync(var0: java_lang_Integer | number): string | null;
+    getModifiersSync(): number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_getStatic: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_getField: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_putStatic: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_newInvokeSpecial: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_putField: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_invokeVirtual: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_invokeSpecial: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_invokeStatic: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly REF_invokeInterface: java_lang_Integer | number;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -146,25 +130,21 @@ export declare class MethodHandleInfoClass extends JavaClass {
  */
 export interface MethodHandleInfoInterface {
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getName(): string | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getModifiers(): number;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     getDeclaringClass(): java_lang_Class | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isVarArgs?(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getReferenceKind(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getName(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isVarArgs?(): boolean;
     /**
      * @return original return type: 'java.lang.invoke.MethodType'
      */
@@ -175,6 +155,10 @@ export interface MethodHandleInfoInterface {
      * @return original return type: 'java.lang.reflect.Member'
      */
     reflectAs(var0: java_lang_Class | null, var1: java_lang_invoke_MethodHandles$Lookup | null): java_lang_reflect_Member | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getModifiers(): number;
 }
 /**
  * Create a proxy for the {@link MethodHandleInfo} interface.

@@ -7,14 +7,6 @@ import { Long as java_lang_Long } from "./../../lang/Long";
  */
 export declare class LongUnaryOperatorClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.function.LongUnaryOperator'
-     */
-    static identity(): Promise<LongUnaryOperator | null>;
-    /**
-     * @return original return type: 'java.util.function.LongUnaryOperator'
-     */
-    static identitySync(): LongUnaryOperator | null;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'long'
      */
@@ -34,6 +26,14 @@ export declare class LongUnaryOperatorClass extends JavaClass {
      * @return original return type: 'java.util.function.LongUnaryOperator'
      */
     composeSync(var0: LongUnaryOperatorClass | JavaInterfaceProxy<LongUnaryOperatorInterface> | null): LongUnaryOperator | null;
+    /**
+     * @return original return type: 'java.util.function.LongUnaryOperator'
+     */
+    static identity(): Promise<LongUnaryOperator | null>;
+    /**
+     * @return original return type: 'java.util.function.LongUnaryOperator'
+     */
+    static identitySync(): LongUnaryOperator | null;
     /**
      * @param var0 original type: 'java.util.function.LongUnaryOperator'
      * @return original return type: 'java.util.function.LongUnaryOperator'

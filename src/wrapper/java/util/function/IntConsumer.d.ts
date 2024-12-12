@@ -7,16 +7,6 @@ import { Integer as java_lang_Integer } from "./../../lang/Integer";
  */
 export declare class IntConsumerClass extends JavaClass {
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.util.function.IntConsumer'
      * @return original return type: 'java.util.function.IntConsumer'
      */
@@ -26,6 +16,16 @@ export declare class IntConsumerClass extends JavaClass {
      * @return original return type: 'java.util.function.IntConsumer'
      */
     andThenSync(var0: IntConsumerClass | JavaInterfaceProxy<IntConsumerInterface> | null): IntConsumer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Integer | number): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -40,15 +40,15 @@ export declare class IntConsumerClass extends JavaClass {
  */
 export interface IntConsumerInterface {
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.util.function.IntConsumer'
      * @return original return type: 'java.util.function.IntConsumer'
      */
     andThen?(var0: IntConsumerClass | JavaInterfaceProxy<IntConsumerInterface> | null): IntConsumer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Integer | number): void;
 }
 /**
  * Create a proxy for the {@link IntConsumer} interface.

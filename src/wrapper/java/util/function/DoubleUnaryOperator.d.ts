@@ -7,14 +7,6 @@ import { Double as java_lang_Double } from "./../../lang/Double";
  */
 export declare class DoubleUnaryOperatorClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.function.DoubleUnaryOperator'
-     */
-    static identity(): Promise<DoubleUnaryOperator | null>;
-    /**
-     * @return original return type: 'java.util.function.DoubleUnaryOperator'
-     */
-    static identitySync(): DoubleUnaryOperator | null;
-    /**
      * @param var0 original type: 'double'
      * @return original return type: 'double'
      */
@@ -34,6 +26,14 @@ export declare class DoubleUnaryOperatorClass extends JavaClass {
      * @return original return type: 'java.util.function.DoubleUnaryOperator'
      */
     composeSync(var0: DoubleUnaryOperatorClass | JavaInterfaceProxy<DoubleUnaryOperatorInterface> | null): DoubleUnaryOperator | null;
+    /**
+     * @return original return type: 'java.util.function.DoubleUnaryOperator'
+     */
+    static identity(): Promise<DoubleUnaryOperator | null>;
+    /**
+     * @return original return type: 'java.util.function.DoubleUnaryOperator'
+     */
+    static identitySync(): DoubleUnaryOperator | null;
     /**
      * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
      * @return original return type: 'java.util.function.DoubleUnaryOperator'

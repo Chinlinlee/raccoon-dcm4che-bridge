@@ -1,12 +1,12 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { InputStream as java_io_InputStream } from "./../io/InputStream";
-import { URLConnection as java_net_URLConnection } from "./URLConnection";
-import { Proxy as java_net_Proxy } from "./Proxy";
 import { Class as java_lang_Class } from "./../lang/Class";
-import { URI as java_net_URI } from "./URI";
-import { URLStreamHandlerFactory as java_net_URLStreamHandlerFactory, URLStreamHandlerFactoryInterface as java_net_URLStreamHandlerFactoryInterface } from "./URLStreamHandlerFactory";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
+import { URLStreamHandlerFactory as java_net_URLStreamHandlerFactory, URLStreamHandlerFactoryInterface as java_net_URLStreamHandlerFactoryInterface } from "./URLStreamHandlerFactory";
+import { URLConnection as java_net_URLConnection } from "./URLConnection";
+import { Proxy as java_net_Proxy } from "./Proxy";
+import { URI as java_net_URI } from "./URI";
+import { InputStream as java_io_InputStream } from "./../io/InputStream";
 import { URLStreamHandler as java_net_URLStreamHandler } from "./URLStreamHandler";
 /**
  * This class just defines types, you should import {@link URL} instead of this.
@@ -15,55 +15,53 @@ import { URLStreamHandler as java_net_URLStreamHandler } from "./URLStreamHandle
  */
 export declare class URLClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.Class'
      */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.Class'
      */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
+    getClassSync(): java_lang_Class;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
      */
-    toStringSync(): string;
+    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCode(): Promise<number>;
+    wait(): Promise<void>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCodeSync(): number;
+    waitSync(): void;
     /**
-     * @return original return type: 'java.io.InputStream'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    openStream(): Promise<java_io_InputStream | null>;
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
     /**
-     * @return original return type: 'java.io.InputStream'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    openStreamSync(): java_io_InputStream | null;
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.net.URLStreamHandlerFactory'
+     * @return original return type: 'void'
      */
-    getHost(): Promise<string | null>;
+    static setURLStreamHandlerFactory(var0: java_net_URLStreamHandlerFactory | JavaInterfaceProxy<java_net_URLStreamHandlerFactoryInterface> | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.net.URLStreamHandlerFactory'
+     * @return original return type: 'void'
      */
-    getHostSync(): string | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getPort(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPortSync(): number;
+    static setURLStreamHandlerFactorySync(var0: java_net_URLStreamHandlerFactory | JavaInterfaceProxy<java_net_URLStreamHandlerFactoryInterface> | null): void;
     /**
      * @return original return type: 'int'
      */
@@ -72,24 +70,6 @@ export declare class URLClass extends JavaClass {
      * @return original return type: 'int'
      */
     getDefaultPortSync(): number;
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @return original return type: 'boolean'
-     */
-    sameFile(var0: URLClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @return original return type: 'boolean'
-     */
-    sameFileSync(var0: URLClass | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toExternalForm(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toExternalFormSync(): string | null;
     /**
      * @return original return type: 'java.net.URLConnection'
      */
@@ -127,6 +107,22 @@ export declare class URLClass extends JavaClass {
      */
     getContentSync(var0: (java_lang_Class | null)[] | null): BasicOrJavaType | null;
     /**
+     * @return original return type: 'java.net.URI'
+     */
+    toURI(): Promise<java_net_URI | null>;
+    /**
+     * @return original return type: 'java.net.URI'
+     */
+    toURISync(): java_net_URI | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getProtocol(): Promise<string | null>;
@@ -143,6 +139,14 @@ export declare class URLClass extends JavaClass {
      */
     getAuthoritySync(): string | null;
     /**
+     * @return original return type: 'java.io.InputStream'
+     */
+    openStream(): Promise<java_io_InputStream | null>;
+    /**
+     * @return original return type: 'java.io.InputStream'
+     */
+    openStreamSync(): java_io_InputStream | null;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getFile(): Promise<string | null>;
@@ -150,6 +154,30 @@ export declare class URLClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getFileSync(): string | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toExternalForm(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toExternalFormSync(): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getPort(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getPortSync(): number;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -159,13 +187,33 @@ export declare class URLClass extends JavaClass {
      */
     getRefSync(): string | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    getQuery(): Promise<string | null>;
+    hashCode(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    getQuerySync(): string | null;
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @return original return type: 'boolean'
+     */
+    sameFile(var0: URLClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @return original return type: 'boolean'
+     */
+    sameFileSync(var0: URLClass | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -183,77 +231,27 @@ export declare class URLClass extends JavaClass {
      */
     getUserInfoSync(): string | null;
     /**
-     * @return original return type: 'java.net.URI'
+     * @return original return type: 'java.lang.String'
      */
-    toURI(): Promise<java_net_URI | null>;
+    getHost(): Promise<string | null>;
     /**
-     * @return original return type: 'java.net.URI'
+     * @return original return type: 'java.lang.String'
      */
-    toURISync(): java_net_URI | null;
+    getHostSync(): string | null;
     /**
-     * @param var0 original type: 'java.net.URLStreamHandlerFactory'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    static setURLStreamHandlerFactory(var0: java_net_URLStreamHandlerFactory | JavaInterfaceProxy<java_net_URLStreamHandlerFactoryInterface> | null): Promise<void>;
+    getQuery(): Promise<string | null>;
     /**
-     * @param var0 original type: 'java.net.URLStreamHandlerFactory'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.String'
      */
-    static setURLStreamHandlerFactorySync(var0: java_net_URLStreamHandlerFactory | JavaInterfaceProxy<java_net_URLStreamHandlerFactoryInterface> | null): void;
+    getQuerySync(): string | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.net.URL'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.net.URLStreamHandler'
      */
-    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'void'
-     */
-    wait(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClass(): Promise<java_lang_Class>;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClassSync(): java_lang_Class;
-    /**
-     * @return original return type: 'void'
-     */
-    notify(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifySync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: URLClass | null, var1: string | null, var2: java_net_URLStreamHandler | null);
     /**
      * @param var0 original type: 'java.net.URL'
      * @param var1 original type: 'java.lang.String'
@@ -264,9 +262,18 @@ export declare class URLClass extends JavaClass {
     /**
      * @param var0 original type: 'java.net.URL'
      * @param var1 original type: 'java.lang.String'
+     */
+    constructor(var0: URLClass | null, var1: string | null);
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.net.URL'
      */
     static newInstanceAsync(var0: URLClass | null, var1: string | null): Promise<URL>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.net.URL'
@@ -277,9 +284,22 @@ export declare class URLClass extends JavaClass {
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.lang.String'
      * @return original return type: 'java.net.URL'
      */
     static newInstanceAsync(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null): Promise<URL>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null, var1: string | null, var2: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -293,45 +313,17 @@ export declare class URLClass extends JavaClass {
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.lang.String'
      * @param var4 original type: 'java.net.URLStreamHandler'
-     * @return original return type: 'java.net.URL'
      */
-    static newInstanceAsync(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null, var4: java_net_URLStreamHandler | null): Promise<URL>;
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.net.URLStreamHandler'
-     */
-    constructor(var0: URLClass | null, var1: string | null, var2: java_net_URLStreamHandler | null);
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: URLClass | null, var1: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null, var1: string | null, var2: string | null);
+    constructor(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null, var4: java_net_URLStreamHandler | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.lang.String'
      * @param var4 original type: 'java.net.URLStreamHandler'
+     * @return original return type: 'java.net.URL'
      */
-    constructor(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null, var4: java_net_URLStreamHandler | null);
+    static newInstanceAsync(var0: string | null, var1: string | null, var2: java_lang_Integer | number, var3: string | null, var4: java_net_URLStreamHandler | null): Promise<URL>;
 }
 declare const URL_base: typeof URLClass;
 /**

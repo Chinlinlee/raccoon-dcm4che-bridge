@@ -1,30 +1,30 @@
 import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { OptionalDouble as java_util_OptionalDouble } from "./../OptionalDouble";
+import { BaseStream as java_util_stream_BaseStream } from "./BaseStream";
+import { DoublePredicate as java_util_function_DoublePredicate, DoublePredicateInterface as java_util_function_DoublePredicateInterface } from "./../function/DoublePredicate";
+import { Long as java_lang_Long } from "./../../lang/Long";
+import { Stream as java_util_stream_Stream } from "./Stream";
+import { DoubleFunction as java_util_function_DoubleFunction, DoubleFunctionInterface as java_util_function_DoubleFunctionInterface } from "./../function/DoubleFunction";
 import { PrimitiveIterator$OfDouble as java_util_PrimitiveIterator$OfDouble } from "./../PrimitiveIterator$OfDouble";
 import { Iterator as java_util_Iterator } from "./../Iterator";
+import { DoubleStream$DoubleMapMultiConsumer as java_util_stream_DoubleStream$DoubleMapMultiConsumer, DoubleStream$DoubleMapMultiConsumerInterface as java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface } from "./DoubleStream$DoubleMapMultiConsumer";
+import { LongStream as java_util_stream_LongStream } from "./LongStream";
+import { DoubleToLongFunction as java_util_function_DoubleToLongFunction, DoubleToLongFunctionInterface as java_util_function_DoubleToLongFunctionInterface } from "./../function/DoubleToLongFunction";
+import { Double as java_lang_Double } from "./../../lang/Double";
+import { DoubleStream$Builder as java_util_stream_DoubleStream$Builder } from "./DoubleStream$Builder";
+import { DoubleConsumer as java_util_function_DoubleConsumer, DoubleConsumerInterface as java_util_function_DoubleConsumerInterface } from "./../function/DoubleConsumer";
 import { DoubleUnaryOperator as java_util_function_DoubleUnaryOperator, DoubleUnaryOperatorInterface as java_util_function_DoubleUnaryOperatorInterface } from "./../function/DoubleUnaryOperator";
+import { DoubleSupplier as java_util_function_DoubleSupplier, DoubleSupplierInterface as java_util_function_DoubleSupplierInterface } from "./../function/DoubleSupplier";
+import { DoubleBinaryOperator as java_util_function_DoubleBinaryOperator, DoubleBinaryOperatorInterface as java_util_function_DoubleBinaryOperatorInterface } from "./../function/DoubleBinaryOperator";
+import { Spliterator as java_util_Spliterator } from "./../Spliterator";
+import { Spliterator$OfDouble as java_util_Spliterator$OfDouble } from "./../Spliterator$OfDouble";
+import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_RunnableInterface } from "./../../lang/Runnable";
+import { DoubleSummaryStatistics as java_util_DoubleSummaryStatistics } from "./../DoubleSummaryStatistics";
+import { IntStream as java_util_stream_IntStream } from "./IntStream";
+import { DoubleToIntFunction as java_util_function_DoubleToIntFunction, DoubleToIntFunctionInterface as java_util_function_DoubleToIntFunctionInterface } from "./../function/DoubleToIntFunction";
 import { Supplier as java_util_function_Supplier, SupplierInterface as java_util_function_SupplierInterface } from "./../function/Supplier";
 import { ObjDoubleConsumer as java_util_function_ObjDoubleConsumer, ObjDoubleConsumerInterface as java_util_function_ObjDoubleConsumerInterface } from "./../function/ObjDoubleConsumer";
 import { BiConsumer as java_util_function_BiConsumer, BiConsumerInterface as java_util_function_BiConsumerInterface } from "./../function/BiConsumer";
-import { Double as java_lang_Double } from "./../../lang/Double";
-import { DoubleStream$Builder as java_util_stream_DoubleStream$Builder } from "./DoubleStream$Builder";
-import { Long as java_lang_Long } from "./../../lang/Long";
-import { Spliterator as java_util_Spliterator } from "./../Spliterator";
-import { Spliterator$OfDouble as java_util_Spliterator$OfDouble } from "./../Spliterator$OfDouble";
-import { DoublePredicate as java_util_function_DoublePredicate, DoublePredicateInterface as java_util_function_DoublePredicateInterface } from "./../function/DoublePredicate";
-import { DoubleFunction as java_util_function_DoubleFunction, DoubleFunctionInterface as java_util_function_DoubleFunctionInterface } from "./../function/DoubleFunction";
-import { DoubleConsumer as java_util_function_DoubleConsumer, DoubleConsumerInterface as java_util_function_DoubleConsumerInterface } from "./../function/DoubleConsumer";
-import { DoubleBinaryOperator as java_util_function_DoubleBinaryOperator, DoubleBinaryOperatorInterface as java_util_function_DoubleBinaryOperatorInterface } from "./../function/DoubleBinaryOperator";
-import { BaseStream as java_util_stream_BaseStream } from "./BaseStream";
-import { Stream as java_util_stream_Stream } from "./Stream";
-import { DoubleSupplier as java_util_function_DoubleSupplier, DoubleSupplierInterface as java_util_function_DoubleSupplierInterface } from "./../function/DoubleSupplier";
-import { IntStream as java_util_stream_IntStream } from "./IntStream";
-import { DoubleToIntFunction as java_util_function_DoubleToIntFunction, DoubleToIntFunctionInterface as java_util_function_DoubleToIntFunctionInterface } from "./../function/DoubleToIntFunction";
-import { LongStream as java_util_stream_LongStream } from "./LongStream";
-import { DoubleToLongFunction as java_util_function_DoubleToLongFunction, DoubleToLongFunctionInterface as java_util_function_DoubleToLongFunctionInterface } from "./../function/DoubleToLongFunction";
-import { DoubleStream$DoubleMapMultiConsumer as java_util_stream_DoubleStream$DoubleMapMultiConsumer, DoubleStream$DoubleMapMultiConsumerInterface as java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface } from "./DoubleStream$DoubleMapMultiConsumer";
-import { DoubleSummaryStatistics as java_util_DoubleSummaryStatistics } from "./../DoubleSummaryStatistics";
-import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_RunnableInterface } from "./../../lang/Runnable";
 /**
  * This class just defines types, you should import {@link DoubleStream} instead of this.
  * This was generated by java-bridge.
@@ -34,27 +34,99 @@ export declare class DoubleStreamClass extends JavaClass {
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    min(): Promise<java_util_OptionalDouble | null>;
+    average(): Promise<java_util_OptionalDouble | null>;
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    minSync(): java_util_OptionalDouble | null;
+    averageSync(): java_util_OptionalDouble | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    sequential(): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    sequentialSync(): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    sequential(): Promise<DoubleStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    sequentialSync(): DoubleStream | null;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    distinct(): Promise<DoubleStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    distinctSync(): DoubleStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    takeWhile(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<DoubleStream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    takeWhileSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    skip(var0: java_lang_Long | bigint | number): Promise<DoubleStream | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    skipSync(var0: java_lang_Long | bigint | number): DoubleStream | null;
+    /**
+     * @return original return type: 'double'
+     */
+    sum(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    sumSync(): number;
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    max(): Promise<java_util_OptionalDouble | null>;
+    findFirst(): Promise<java_util_OptionalDouble | null>;
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    maxSync(): java_util_OptionalDouble | null;
+    findFirstSync(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'double[]'
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'boolean'
      */
-    toArray(): Promise<(number)[] | null>;
+    allMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<boolean>;
     /**
-     * @return original return type: 'double[]'
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'boolean'
      */
-    toArraySync(): (number)[] | null;
+    allMatchSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    mapToObj(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): Promise<java_util_stream_Stream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    mapToObjSync(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    static empty(): Promise<DoubleStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    static emptySync(): DoubleStream | null;
     /**
      * @return original return type: 'java.util.PrimitiveIterator$OfDouble'
      */
@@ -72,29 +144,67 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     iteratorSync(): java_util_Iterator | null;
     /**
-     * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
+     * @param var0 original type: 'java.util.stream.DoubleStream$DoubleMapMultiConsumer'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    map(var0: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): Promise<DoubleStream | null>;
+    mapMulti(var0: java_util_stream_DoubleStream$DoubleMapMultiConsumer | JavaInterfaceProxy<java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface> | null): Promise<DoubleStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
+     * @param var0 original type: 'java.util.stream.DoubleStream$DoubleMapMultiConsumer'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    mapSync(var0: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
+    mapMultiSync(var0: java_util_stream_DoubleStream$DoubleMapMultiConsumer | JavaInterfaceProxy<java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface> | null): DoubleStream | null;
     /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @param var1 original type: 'java.util.function.ObjDoubleConsumer'
-     * @param var2 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.util.OptionalDouble'
      */
-    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjDoubleConsumer | JavaInterfaceProxy<java_util_function_ObjDoubleConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): Promise<BasicOrJavaType | null>;
+    min(): Promise<java_util_OptionalDouble | null>;
     /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @param var1 original type: 'java.util.function.ObjDoubleConsumer'
-     * @param var2 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.util.OptionalDouble'
      */
-    collectSync(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjDoubleConsumer | JavaInterfaceProxy<java_util_function_ObjDoubleConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
+    minSync(): java_util_OptionalDouble | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallel(): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallelSync(): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    parallel(): Promise<DoubleStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    parallelSync(): DoubleStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleToLongFunction'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    mapToLong(var0: java_util_function_DoubleToLongFunction | JavaInterfaceProxy<java_util_function_DoubleToLongFunctionInterface> | null): Promise<java_util_stream_LongStream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleToLongFunction'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    mapToLongSync(var0: java_util_function_DoubleToLongFunction | JavaInterfaceProxy<java_util_function_DoubleToLongFunctionInterface> | null): java_util_stream_LongStream | null;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    findAny(): Promise<java_util_OptionalDouble | null>;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    findAnySync(): java_util_OptionalDouble | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'boolean'
+     */
+    noneMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'boolean'
+     */
+    noneMatchSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
     /**
      * @param var0 original type: 'double[]'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -116,13 +226,13 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     static ofSync(var0: java_lang_Double | number): DoubleStream | null;
     /**
-     * @return original return type: 'long'
+     * @return original return type: 'double[]'
      */
-    count(): Promise<number>;
+    toArray(): Promise<(number)[] | null>;
     /**
-     * @return original return type: 'long'
+     * @return original return type: 'double[]'
      */
-    countSync(): number;
+    toArraySync(): (number)[] | null;
     /**
      * @return original return type: 'java.util.stream.DoubleStream$Builder'
      */
@@ -131,18 +241,6 @@ export declare class DoubleStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.DoubleStream$Builder'
      */
     static builderSync(): java_util_stream_DoubleStream$Builder | null;
-    /**
-     * @param var0 original type: 'java.util.stream.DoubleStream'
-     * @param var1 original type: 'java.util.stream.DoubleStream'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static concat(var0: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null, var1: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'java.util.stream.DoubleStream'
-     * @param var1 original type: 'java.util.stream.DoubleStream'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static concatSync(var0: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null, var1: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -154,39 +252,33 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     limitSync(var0: java_lang_Long | bigint | number): DoubleStream | null;
     /**
-     * @return original return type: 'java.util.Spliterator'
+     * @return original return type: 'boolean'
      */
-    spliterator(): Promise<java_util_Spliterator | null>;
+    isParallel(): Promise<boolean>;
     /**
-     * @return original return type: 'java.util.Spliterator'
+     * @return original return type: 'boolean'
      */
-    spliteratorSync(): java_util_Spliterator | null;
+    isParallelSync(): boolean;
     /**
-     * @return original return type: 'java.util.Spliterator$OfDouble'
+     * @param var0 original type: 'java.util.function.DoubleConsumer'
+     * @return original return type: 'void'
      */
-    spliterator(): Promise<java_util_Spliterator$OfDouble | null>;
+    forEachOrdered(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): Promise<void>;
     /**
-     * @return original return type: 'java.util.Spliterator$OfDouble'
+     * @param var0 original type: 'java.util.function.DoubleConsumer'
+     * @return original return type: 'void'
      */
-    spliteratorSync(): java_util_Spliterator$OfDouble | null;
+    forEachOrderedSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
     /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    filter(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<DoubleStream | null>;
+    map(var0: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): Promise<DoubleStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    filterSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static empty(): Promise<DoubleStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static emptySync(): DoubleStream | null;
+    mapSync(var0: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
      * @return original return type: 'boolean'
@@ -198,125 +290,23 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     anyMatchSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @param var0 original type: 'java.util.function.DoubleSupplier'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    flatMap(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): Promise<DoubleStream | null>;
+    static generate(var0: java_util_function_DoubleSupplier | JavaInterfaceProxy<java_util_function_DoubleSupplierInterface> | null): Promise<DoubleStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @param var0 original type: 'java.util.function.DoubleSupplier'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    flatMapSync(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): DoubleStream | null;
+    static generateSync(var0: java_util_function_DoubleSupplier | JavaInterfaceProxy<java_util_function_DoubleSupplierInterface> | null): DoubleStream | null;
     /**
-     * @param var0 original type: 'java.util.function.DoubleConsumer'
      * @return original return type: 'void'
      */
-    forEach(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): Promise<void>;
+    close(): Promise<void>;
     /**
-     * @param var0 original type: 'java.util.function.DoubleConsumer'
      * @return original return type: 'void'
      */
-    forEachSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    findAny(): Promise<java_util_OptionalDouble | null>;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    findAnySync(): java_util_OptionalDouble | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    skip(var0: java_lang_Long | bigint | number): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    skipSync(var0: java_lang_Long | bigint | number): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleConsumer'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    peek(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleConsumer'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    peekSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): DoubleStream | null;
-    /**
-     * @return original return type: 'double'
-     */
-    sum(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    sumSync(): number;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'java.util.function.DoubleBinaryOperator'
-     * @return original return type: 'double'
-     */
-    reduce(var0: java_lang_Double | number, var1: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'java.util.function.DoubleBinaryOperator'
-     * @return original return type: 'double'
-     */
-    reduceSync(var0: java_lang_Double | number, var1: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleBinaryOperator'
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    reduce(var0: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): Promise<java_util_OptionalDouble | null>;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleBinaryOperator'
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    reduceSync(var0: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): java_util_OptionalDouble | null;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    distinct(): Promise<DoubleStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    distinctSync(): DoubleStream | null;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    findFirst(): Promise<java_util_OptionalDouble | null>;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    findFirstSync(): java_util_OptionalDouble | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'boolean'
-     */
-    allMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'boolean'
-     */
-    allMatchSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallel(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallelSync(): java_util_stream_BaseStream | null;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    parallel(): Promise<DoubleStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    parallelSync(): DoubleStream | null;
+    closeSync(): void;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'java.util.function.DoublePredicate'
@@ -344,89 +334,89 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     static iterateSync(var0: java_lang_Double | number, var1: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
     /**
-     * @param var0 original type: 'java.util.function.DoubleFunction'
-     * @return original return type: 'java.util.stream.Stream'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'java.util.function.DoubleBinaryOperator'
+     * @return original return type: 'double'
      */
-    mapToObj(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): Promise<java_util_stream_Stream | null>;
+    reduce(var0: java_lang_Double | number, var1: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): Promise<number>;
     /**
-     * @param var0 original type: 'java.util.function.DoubleFunction'
-     * @return original return type: 'java.util.stream.Stream'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'java.util.function.DoubleBinaryOperator'
+     * @return original return type: 'double'
      */
-    mapToObjSync(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): java_util_stream_Stream | null;
+    reduceSync(var0: java_lang_Double | number, var1: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): number;
     /**
-     * @return original return type: 'java.util.stream.DoubleStream'
+     * @param var0 original type: 'java.util.function.DoubleBinaryOperator'
+     * @return original return type: 'java.util.OptionalDouble'
      */
-    sorted(): Promise<DoubleStream | null>;
+    reduce(var0: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): Promise<java_util_OptionalDouble | null>;
     /**
-     * @return original return type: 'java.util.stream.DoubleStream'
+     * @param var0 original type: 'java.util.function.DoubleBinaryOperator'
+     * @return original return type: 'java.util.OptionalDouble'
      */
-    sortedSync(): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleSupplier'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static generate(var0: java_util_function_DoubleSupplier | JavaInterfaceProxy<java_util_function_DoubleSupplierInterface> | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleSupplier'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static generateSync(var0: java_util_function_DoubleSupplier | JavaInterfaceProxy<java_util_function_DoubleSupplierInterface> | null): DoubleStream | null;
+    reduceSync(var0: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): java_util_OptionalDouble | null;
     /**
      * @return original return type: 'java.util.stream.BaseStream'
      */
-    sequential(): Promise<java_util_stream_BaseStream | null>;
+    unordered(): Promise<java_util_stream_BaseStream | null>;
     /**
      * @return original return type: 'java.util.stream.BaseStream'
      */
-    sequentialSync(): java_util_stream_BaseStream | null;
+    unorderedSync(): java_util_stream_BaseStream | null;
     /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    max(): Promise<java_util_OptionalDouble | null>;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    maxSync(): java_util_OptionalDouble | null;
+    /**
+     * @return original return type: 'java.util.Spliterator'
+     */
+    spliterator(): Promise<java_util_Spliterator | null>;
+    /**
+     * @return original return type: 'java.util.Spliterator'
+     */
+    spliteratorSync(): java_util_Spliterator | null;
+    /**
+     * @return original return type: 'java.util.Spliterator$OfDouble'
+     */
+    spliterator(): Promise<java_util_Spliterator$OfDouble | null>;
+    /**
+     * @return original return type: 'java.util.Spliterator$OfDouble'
+     */
+    spliteratorSync(): java_util_Spliterator$OfDouble | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleConsumer'
+     * @return original return type: 'void'
+     */
+    forEach(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleConsumer'
+     * @return original return type: 'void'
+     */
+    forEachSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
+    /**
+     * @return original return type: 'long'
+     */
+    count(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    countSync(): number;
+    /**
+     * @param var0 original type: 'java.util.stream.DoubleStream'
+     * @param var1 original type: 'java.util.stream.DoubleStream'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    sequential(): Promise<DoubleStream | null>;
+    static concat(var0: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null, var1: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null): Promise<DoubleStream | null>;
     /**
+     * @param var0 original type: 'java.util.stream.DoubleStream'
+     * @param var1 original type: 'java.util.stream.DoubleStream'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    sequentialSync(): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleToIntFunction'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    mapToInt(var0: java_util_function_DoubleToIntFunction | JavaInterfaceProxy<java_util_function_DoubleToIntFunctionInterface> | null): Promise<java_util_stream_IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleToIntFunction'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    mapToIntSync(var0: java_util_function_DoubleToIntFunction | JavaInterfaceProxy<java_util_function_DoubleToIntFunctionInterface> | null): java_util_stream_IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleToLongFunction'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    mapToLong(var0: java_util_function_DoubleToLongFunction | JavaInterfaceProxy<java_util_function_DoubleToLongFunctionInterface> | null): Promise<java_util_stream_LongStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleToLongFunction'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    mapToLongSync(var0: java_util_function_DoubleToLongFunction | JavaInterfaceProxy<java_util_function_DoubleToLongFunctionInterface> | null): java_util_stream_LongStream | null;
-    /**
-     * @param var0 original type: 'java.util.stream.DoubleStream$DoubleMapMultiConsumer'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    mapMulti(var0: java_util_stream_DoubleStream$DoubleMapMultiConsumer | JavaInterfaceProxy<java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface> | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'java.util.stream.DoubleStream$DoubleMapMultiConsumer'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    mapMultiSync(var0: java_util_stream_DoubleStream$DoubleMapMultiConsumer | JavaInterfaceProxy<java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface> | null): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    takeWhile(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    takeWhileSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
+    static concatSync(var0: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null, var1: DoubleStreamClass | JavaInterfaceProxy<DoubleStreamInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -439,72 +429,42 @@ export declare class DoubleStreamClass extends JavaClass {
     dropWhileSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoubleConsumer'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    forEachOrdered(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): Promise<void>;
+    peek(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): Promise<DoubleStream | null>;
     /**
      * @param var0 original type: 'java.util.function.DoubleConsumer'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    forEachOrderedSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
+    peekSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    noneMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<boolean>;
+    filter(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): Promise<DoubleStream | null>;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    noneMatchSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
+    filterSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
     /**
-     * @return original return type: 'java.util.OptionalDouble'
+     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    average(): Promise<java_util_OptionalDouble | null>;
+    flatMap(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): Promise<DoubleStream | null>;
     /**
-     * @return original return type: 'java.util.OptionalDouble'
+     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    averageSync(): java_util_OptionalDouble | null;
+    flatMapSync(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): DoubleStream | null;
     /**
-     * @return original return type: 'java.util.DoubleSummaryStatistics'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    summaryStatistics(): Promise<java_util_DoubleSummaryStatistics | null>;
+    sorted(): Promise<DoubleStream | null>;
     /**
-     * @return original return type: 'java.util.DoubleSummaryStatistics'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    summaryStatisticsSync(): java_util_DoubleSummaryStatistics | null;
-    /**
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    boxed(): Promise<java_util_stream_Stream | null>;
-    /**
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    boxedSync(): java_util_stream_Stream | null;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    closeSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isParallel(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isParallelSync(): boolean;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    unordered(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    unorderedSync(): java_util_stream_BaseStream | null;
+    sortedSync(): DoubleStream | null;
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'java.util.stream.BaseStream'
@@ -515,6 +475,46 @@ export declare class DoubleStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.BaseStream'
      */
     onCloseSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    boxed(): Promise<java_util_stream_Stream | null>;
+    /**
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    boxedSync(): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.DoubleSummaryStatistics'
+     */
+    summaryStatistics(): Promise<java_util_DoubleSummaryStatistics | null>;
+    /**
+     * @return original return type: 'java.util.DoubleSummaryStatistics'
+     */
+    summaryStatisticsSync(): java_util_DoubleSummaryStatistics | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleToIntFunction'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    mapToInt(var0: java_util_function_DoubleToIntFunction | JavaInterfaceProxy<java_util_function_DoubleToIntFunctionInterface> | null): Promise<java_util_stream_IntStream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleToIntFunction'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    mapToIntSync(var0: java_util_function_DoubleToIntFunction | JavaInterfaceProxy<java_util_function_DoubleToIntFunctionInterface> | null): java_util_stream_IntStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @param var1 original type: 'java.util.function.ObjDoubleConsumer'
+     * @param var2 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.lang.Object'
+     */
+    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjDoubleConsumer | JavaInterfaceProxy<java_util_function_ObjDoubleConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @param var1 original type: 'java.util.function.ObjDoubleConsumer'
+     * @param var2 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.lang.Object'
+     */
+    collectSync(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjDoubleConsumer | JavaInterfaceProxy<java_util_function_ObjDoubleConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -531,15 +531,49 @@ export interface DoubleStreamInterface {
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    min(): java_util_OptionalDouble | null;
+    average(): java_util_OptionalDouble | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    sequential?(): java_util_stream_BaseStream | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    sequential?(): DoubleStream | null;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    distinct(): DoubleStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    takeWhile?(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    skip(var0: java_lang_Long | bigint | number): DoubleStream | null;
+    /**
+     * @return original return type: 'double'
+     */
+    sum(): number;
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    max(): java_util_OptionalDouble | null;
+    findFirst(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'double[]'
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'boolean'
      */
-    toArray(): (number)[] | null;
+    allMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    mapToObj(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): java_util_stream_Stream | null;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
@@ -551,74 +585,70 @@ export interface DoubleStreamInterface {
      */
     iterator?(): java_util_Iterator | null;
     /**
-     * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
+     * @param var0 original type: 'java.util.stream.DoubleStream$DoubleMapMultiConsumer'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    map(var0: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
+    mapMulti?(var0: java_util_stream_DoubleStream$DoubleMapMultiConsumer | JavaInterfaceProxy<java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface> | null): DoubleStream | null;
     /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @param var1 original type: 'java.util.function.ObjDoubleConsumer'
-     * @param var2 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.util.OptionalDouble'
      */
-    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjDoubleConsumer | JavaInterfaceProxy<java_util_function_ObjDoubleConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
+    min(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'long'
+     * @return original return type: 'java.util.stream.BaseStream'
      */
-    count(): number;
+    parallel?(): java_util_stream_BaseStream | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    parallel?(): DoubleStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleToLongFunction'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    mapToLong(var0: java_util_function_DoubleToLongFunction | JavaInterfaceProxy<java_util_function_DoubleToLongFunctionInterface> | null): java_util_stream_LongStream | null;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    findAny(): java_util_OptionalDouble | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @return original return type: 'boolean'
+     */
+    noneMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
+    /**
+     * @return original return type: 'double[]'
+     */
+    toArray(): (number)[] | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     limit(var0: java_lang_Long | bigint | number): DoubleStream | null;
     /**
-     * @return original return type: 'java.util.Spliterator'
+     * @return original return type: 'boolean'
      */
-    spliterator?(): java_util_Spliterator | null;
+    isParallel(): boolean;
     /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @return original return type: 'java.util.Spliterator$OfDouble'
+     * @param var0 original type: 'java.util.function.DoubleConsumer'
+     * @return original return type: 'void'
      */
-    spliterator?(): java_util_Spliterator$OfDouble | null;
+    forEachOrdered(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
     /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
+     * @param var0 original type: 'java.util.function.DoubleUnaryOperator'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
-    filter(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
+    map(var0: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
      * @return original return type: 'boolean'
      */
     anyMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.util.function.DoubleFunction'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    flatMap(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleConsumer'
      * @return original return type: 'void'
      */
-    forEach(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    findAny(): java_util_OptionalDouble | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    skip(var0: java_lang_Long | bigint | number): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleConsumer'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    peek(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): DoubleStream | null;
-    /**
-     * @return original return type: 'double'
-     */
-    sum(): number;
+    close(): void;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'java.util.function.DoubleBinaryOperator'
@@ -631,67 +661,32 @@ export interface DoubleStreamInterface {
      */
     reduce(var0: java_util_function_DoubleBinaryOperator | JavaInterfaceProxy<java_util_function_DoubleBinaryOperatorInterface> | null): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'java.util.stream.DoubleStream'
+     * @return original return type: 'java.util.stream.BaseStream'
      */
-    distinct(): DoubleStream | null;
+    unordered(): java_util_stream_BaseStream | null;
     /**
      * @return original return type: 'java.util.OptionalDouble'
      */
-    findFirst(): java_util_OptionalDouble | null;
+    max(): java_util_OptionalDouble | null;
     /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.Spliterator'
      */
-    allMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallel?(): java_util_stream_BaseStream | null;
+    spliterator?(): java_util_Spliterator | null;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
-     * @return original return type: 'java.util.stream.DoubleStream'
+     * @return original return type: 'java.util.Spliterator$OfDouble'
      */
-    parallel?(): DoubleStream | null;
+    spliterator?(): java_util_Spliterator$OfDouble | null;
     /**
-     * @param var0 original type: 'java.util.function.DoubleFunction'
-     * @return original return type: 'java.util.stream.Stream'
+     * @param var0 original type: 'java.util.function.DoubleConsumer'
+     * @return original return type: 'void'
      */
-    mapToObj(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): java_util_stream_Stream | null;
+    forEach(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
     /**
-     * @return original return type: 'java.util.stream.DoubleStream'
+     * @return original return type: 'long'
      */
-    sorted(): DoubleStream | null;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    sequential?(): java_util_stream_BaseStream | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    sequential?(): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleToIntFunction'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    mapToInt(var0: java_util_function_DoubleToIntFunction | JavaInterfaceProxy<java_util_function_DoubleToIntFunctionInterface> | null): java_util_stream_IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoubleToLongFunction'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    mapToLong(var0: java_util_function_DoubleToLongFunction | JavaInterfaceProxy<java_util_function_DoubleToLongFunctionInterface> | null): java_util_stream_LongStream | null;
-    /**
-     * @param var0 original type: 'java.util.stream.DoubleStream$DoubleMapMultiConsumer'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    mapMulti?(var0: java_util_stream_DoubleStream$DoubleMapMultiConsumer | JavaInterfaceProxy<java_util_stream_DoubleStream$DoubleMapMultiConsumerInterface> | null): DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    takeWhile?(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
+    count(): number;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -699,43 +694,48 @@ export interface DoubleStreamInterface {
     dropWhile?(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoubleConsumer'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    forEachOrdered(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): void;
+    peek(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoublePredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    noneMatch(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
+    filter(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): DoubleStream | null;
     /**
-     * @return original return type: 'java.util.OptionalDouble'
+     * @param var0 original type: 'java.util.function.DoubleFunction'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    average(): java_util_OptionalDouble | null;
+    flatMap(var0: java_util_function_DoubleFunction | JavaInterfaceProxy<java_util_function_DoubleFunctionInterface> | null): DoubleStream | null;
     /**
-     * @return original return type: 'java.util.DoubleSummaryStatistics'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    summaryStatistics(): java_util_DoubleSummaryStatistics | null;
-    /**
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    boxed(): java_util_stream_Stream | null;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isParallel(): boolean;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    unordered(): java_util_stream_BaseStream | null;
+    sorted(): DoubleStream | null;
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'java.util.stream.BaseStream'
      */
     onClose(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    boxed(): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.DoubleSummaryStatistics'
+     */
+    summaryStatistics(): java_util_DoubleSummaryStatistics | null;
+    /**
+     * @param var0 original type: 'java.util.function.DoubleToIntFunction'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    mapToInt(var0: java_util_function_DoubleToIntFunction | JavaInterfaceProxy<java_util_function_DoubleToIntFunctionInterface> | null): java_util_stream_IntStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @param var1 original type: 'java.util.function.ObjDoubleConsumer'
+     * @param var2 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.lang.Object'
+     */
+    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjDoubleConsumer | JavaInterfaceProxy<java_util_function_ObjDoubleConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
 }
 /**
  * Create a proxy for the {@link DoubleStream} interface.

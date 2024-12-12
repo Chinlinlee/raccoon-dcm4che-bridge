@@ -6,15 +6,15 @@ import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy }
  */
 export declare class PredicateClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.util.function.Predicate'
+     * @return original return type: 'java.util.function.Predicate'
      */
-    test(var0: BasicOrJavaType | null): Promise<boolean>;
+    static not(var0: PredicateClass | JavaInterfaceProxy<PredicateInterface> | null): Promise<Predicate | null>;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.util.function.Predicate'
+     * @return original return type: 'java.util.function.Predicate'
      */
-    testSync(var0: BasicOrJavaType | null): boolean;
+    static notSync(var0: PredicateClass | JavaInterfaceProxy<PredicateInterface> | null): Predicate | null;
     /**
      * @param var0 original type: 'java.util.function.Predicate'
      * @return original return type: 'java.util.function.Predicate'
@@ -25,6 +25,16 @@ export declare class PredicateClass extends JavaClass {
      * @return original return type: 'java.util.function.Predicate'
      */
     orSync(var0: PredicateClass | JavaInterfaceProxy<PredicateInterface> | null): Predicate | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    test(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    testSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'java.util.function.Predicate'
      */
@@ -53,16 +63,6 @@ export declare class PredicateClass extends JavaClass {
      * @return original return type: 'java.util.function.Predicate'
      */
     static isEqualSync(var0: BasicOrJavaType | null): Predicate | null;
-    /**
-     * @param var0 original type: 'java.util.function.Predicate'
-     * @return original return type: 'java.util.function.Predicate'
-     */
-    static not(var0: PredicateClass | JavaInterfaceProxy<PredicateInterface> | null): Promise<Predicate | null>;
-    /**
-     * @param var0 original type: 'java.util.function.Predicate'
-     * @return original return type: 'java.util.function.Predicate'
-     */
-    static notSync(var0: PredicateClass | JavaInterfaceProxy<PredicateInterface> | null): Predicate | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -77,15 +77,15 @@ export declare class PredicateClass extends JavaClass {
  */
 export interface PredicateInterface {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    test(var0: BasicOrJavaType | null): boolean;
-    /**
      * @param var0 original type: 'java.util.function.Predicate'
      * @return original return type: 'java.util.function.Predicate'
      */
     or?(var0: PredicateClass | JavaInterfaceProxy<PredicateInterface> | null): Predicate | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    test(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'java.util.function.Predicate'
      */

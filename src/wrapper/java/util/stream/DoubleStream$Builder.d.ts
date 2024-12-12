@@ -19,16 +19,6 @@ export declare class DoubleStream$BuilderClass extends JavaClass {
      */
     addSync(var0: java_lang_Double | number): DoubleStream$Builder | null;
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Double | number): Promise<void>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Double | number): void;
-    /**
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     build(): Promise<java_util_stream_DoubleStream | null>;
@@ -46,6 +36,16 @@ export declare class DoubleStream$BuilderClass extends JavaClass {
      * @return original return type: 'java.util.function.DoubleConsumer'
      */
     andThenSync(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): java_util_function_DoubleConsumer | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Double | number): Promise<void>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Double | number): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -65,11 +65,6 @@ export interface DoubleStream$BuilderInterface {
      */
     add?(var0: java_lang_Double | number): DoubleStream$Builder | null;
     /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Double | number): void;
-    /**
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     build(): java_util_stream_DoubleStream | null;
@@ -78,6 +73,11 @@ export interface DoubleStream$BuilderInterface {
      * @return original return type: 'java.util.function.DoubleConsumer'
      */
     andThen?(var0: java_util_function_DoubleConsumer | JavaInterfaceProxy<java_util_function_DoubleConsumerInterface> | null): java_util_function_DoubleConsumer | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Double | number): void;
 }
 /**
  * Create a proxy for the {@link DoubleStream$Builder} interface.

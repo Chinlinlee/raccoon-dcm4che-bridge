@@ -16,14 +16,6 @@ export declare class FunctionClass extends JavaClass {
      */
     applySync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.util.function.Function'
-     */
-    static identity(): Promise<Function | null>;
-    /**
-     * @return original return type: 'java.util.function.Function'
-     */
-    static identitySync(): Function | null;
-    /**
      * @param var0 original type: 'java.util.function.Function'
      * @return original return type: 'java.util.function.Function'
      */
@@ -33,6 +25,14 @@ export declare class FunctionClass extends JavaClass {
      * @return original return type: 'java.util.function.Function'
      */
     composeSync(var0: FunctionClass | JavaInterfaceProxy<FunctionInterface> | null): Function | null;
+    /**
+     * @return original return type: 'java.util.function.Function'
+     */
+    static identity(): Promise<Function | null>;
+    /**
+     * @return original return type: 'java.util.function.Function'
+     */
+    static identitySync(): Function | null;
     /**
      * @param var0 original type: 'java.util.function.Function'
      * @return original return type: 'java.util.function.Function'

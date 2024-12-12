@@ -1,28 +1,28 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { ValueRange as java_time_temporal_ValueRange } from "./../temporal/ValueRange";
-import { ChronoField as java_time_temporal_ChronoField } from "./../temporal/ChronoField";
-import { Long as java_lang_Long } from "./../../lang/Long";
 import { LocalDate as java_time_LocalDate } from "./../LocalDate";
 import { TemporalAccessor as java_time_temporal_TemporalAccessor, TemporalAccessorInterface as java_time_temporal_TemporalAccessorInterface } from "./../temporal/TemporalAccessor";
 import { ChronoLocalDate as java_time_chrono_ChronoLocalDate } from "./ChronoLocalDate";
 import { Era as java_time_chrono_Era, EraInterface as java_time_chrono_EraInterface } from "./Era";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
+import { LocalDateTime as java_time_LocalDateTime } from "./../LocalDateTime";
+import { ChronoLocalDateTime as java_time_chrono_ChronoLocalDateTime } from "./ChronoLocalDateTime";
+import { Class as java_lang_Class } from "./../../lang/Class";
+import { Long as java_lang_Long } from "./../../lang/Long";
+import { ValueRange as java_time_temporal_ValueRange } from "./../temporal/ValueRange";
+import { ChronoField as java_time_temporal_ChronoField } from "./../temporal/ChronoField";
+import { Chronology as java_time_chrono_Chronology, ChronologyInterface as java_time_chrono_ChronologyInterface } from "./Chronology";
 import { ZoneId as java_time_ZoneId } from "./../ZoneId";
 import { Clock as java_time_Clock } from "./../Clock";
+import { IsoEra as java_time_chrono_IsoEra } from "./IsoEra";
 import { ChronoZonedDateTime as java_time_chrono_ChronoZonedDateTime } from "./ChronoZonedDateTime";
 import { Instant as java_time_Instant } from "./../Instant";
 import { ZonedDateTime as java_time_ZonedDateTime } from "./../ZonedDateTime";
-import { LocalDateTime as java_time_LocalDateTime } from "./../LocalDateTime";
-import { ChronoLocalDateTime as java_time_chrono_ChronoLocalDateTime } from "./ChronoLocalDateTime";
 import { ZoneOffset as java_time_ZoneOffset } from "./../ZoneOffset";
-import { IsoEra as java_time_chrono_IsoEra } from "./IsoEra";
-import { List as java_util_List } from "./../../util/List";
-import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../../util/Map";
-import { ResolverStyle as java_time_format_ResolverStyle } from "./../format/ResolverStyle";
 import { ChronoPeriod as java_time_chrono_ChronoPeriod } from "./ChronoPeriod";
 import { Period as java_time_Period } from "./../Period";
-import { Chronology as java_time_chrono_Chronology, ChronologyInterface as java_time_chrono_ChronologyInterface } from "./Chronology";
-import { Class as java_lang_Class } from "./../../lang/Class";
+import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../../util/Map";
+import { ResolverStyle as java_time_format_ResolverStyle } from "./../format/ResolverStyle";
+import { List as java_util_List } from "./../../util/List";
 import { TextStyle as java_time_format_TextStyle } from "./../format/TextStyle";
 import { Locale as java_util_Locale } from "./../../util/Locale";
 /**
@@ -31,46 +31,6 @@ import { Locale as java_util_Locale } from "./../../util/Locale";
  * You should probably not edit this.
  */
 export declare class IsoChronologyClass extends JavaClass {
-    /**
-     * Original type: 'java.time.chrono.IsoChronology'
-     */
-    static readonly INSTANCE: IsoChronologyClass | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getId(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getIdSync(): string | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.ChronoField'
-     * @return original return type: 'java.time.temporal.ValueRange'
-     */
-    range(var0: java_time_temporal_ChronoField | null): Promise<java_time_temporal_ValueRange | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.ChronoField'
-     * @return original return type: 'java.time.temporal.ValueRange'
-     */
-    rangeSync(var0: java_time_temporal_ChronoField | null): java_time_temporal_ValueRange | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCalendarType(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getCalendarTypeSync(): string | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'boolean'
-     */
-    isLeapYear(var0: java_lang_Long | bigint | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'boolean'
-     */
-    isLeapYearSync(var0: java_lang_Long | bigint | number): boolean;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAccessor'
      * @return original return type: 'java.time.LocalDate'
@@ -152,89 +112,109 @@ export declare class IsoChronologyClass extends JavaClass {
      */
     dateSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_time_LocalDate | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
+     * @return original return type: 'java.time.LocalDateTime'
      */
-    dateEpochDay(var0: java_lang_Long | bigint | number): Promise<java_time_chrono_ChronoLocalDate | null>;
+    localDateTime(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): Promise<java_time_LocalDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
+     * @return original return type: 'java.time.LocalDateTime'
+     */
+    localDateTimeSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): java_time_LocalDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    localDateTime(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): Promise<java_time_chrono_ChronoLocalDateTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    localDateTimeSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): java_time_chrono_ChronoLocalDateTime | null;
+    /**
+     * @return original return type: 'java.lang.Class'
+     */
+    getClass(): Promise<java_lang_Class>;
+    /**
+     * @return original return type: 'java.lang.Class'
+     */
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    dateEpochDaySync(var0: java_lang_Long | bigint | number): java_time_chrono_ChronoLocalDate | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.LocalDate'
-     */
-    dateEpochDay(var0: java_lang_Long | bigint | number): Promise<java_time_LocalDate | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.LocalDate'
-     */
-    dateEpochDaySync(var0: java_lang_Long | bigint | number): java_time_LocalDate | null;
-    /**
-     * @param var0 original type: 'java.time.chrono.Era'
      * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    wait(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.time.temporal.ChronoField'
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    range(var0: java_time_temporal_ChronoField | null): Promise<java_time_temporal_ValueRange | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.ChronoField'
+     * @return original return type: 'java.time.temporal.ValueRange'
+     */
+    rangeSync(var0: java_time_temporal_ChronoField | null): java_time_temporal_ValueRange | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getId(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getIdSync(): string | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
-    prolepticYear(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number): Promise<number>;
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
     /**
-     * @param var0 original type: 'java.time.chrono.Era'
-     * @param var1 original type: 'int'
+     * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
-    prolepticYearSync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number): number;
+    compareToSync(var0: BasicOrJavaType | null): number;
     /**
-     * @param var0 original type: 'java.time.chrono.Era'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.time.LocalDate'
+     * @param var0 original type: 'java.time.chrono.Chronology'
+     * @return original return type: 'int'
      */
-    dateYearDay(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_time_LocalDate | null>;
+    compareTo(var0: java_time_chrono_Chronology | JavaInterfaceProxy<java_time_chrono_ChronologyInterface> | null): Promise<number>;
     /**
-     * @param var0 original type: 'java.time.chrono.Era'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.time.LocalDate'
+     * @param var0 original type: 'java.time.chrono.Chronology'
+     * @return original return type: 'int'
      */
-    dateYearDaySync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_time_LocalDate | null;
-    /**
-     * @param var0 original type: 'java.time.chrono.Era'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    dateYearDay(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_time_chrono_ChronoLocalDate | null>;
-    /**
-     * @param var0 original type: 'java.time.chrono.Era'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    dateYearDaySync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_time_chrono_ChronoLocalDate | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    dateYearDay(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_time_chrono_ChronoLocalDate | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    dateYearDaySync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_time_chrono_ChronoLocalDate | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.time.LocalDate'
-     */
-    dateYearDay(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_time_LocalDate | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.time.LocalDate'
-     */
-    dateYearDaySync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_time_LocalDate | null;
+    compareToSync(var0: java_time_chrono_Chronology | JavaInterfaceProxy<java_time_chrono_ChronologyInterface> | null): number;
     /**
      * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
@@ -292,6 +272,46 @@ export declare class IsoChronologyClass extends JavaClass {
      */
     dateNowSync(var0: java_time_Clock | null): java_time_LocalDate | null;
     /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.chrono.IsoEra'
+     */
+    eraOf(var0: java_lang_Integer | number): Promise<java_time_chrono_IsoEra | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.chrono.IsoEra'
+     */
+    eraOfSync(var0: java_lang_Integer | number): java_time_chrono_IsoEra | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.chrono.Era'
+     */
+    eraOf(var0: java_lang_Integer | number): Promise<java_time_chrono_Era | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.time.chrono.Era'
+     */
+    eraOfSync(var0: java_lang_Integer | number): java_time_chrono_Era | null;
+    /**
+     * @param var0 original type: 'java.time.chrono.Era'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    prolepticYear(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.time.chrono.Era'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    prolepticYearSync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number): number;
+    /**
      * @param var0 original type: 'java.time.Instant'
      * @param var1 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
@@ -336,25 +356,13 @@ export declare class IsoChronologyClass extends JavaClass {
      */
     zonedDateTimeSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): java_time_ZonedDateTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
-     * @return original return type: 'java.time.LocalDateTime'
+     * @return original return type: 'int'
      */
-    localDateTime(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): Promise<java_time_LocalDateTime | null>;
+    hashCode(): Promise<number>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
-     * @return original return type: 'java.time.LocalDateTime'
+     * @return original return type: 'int'
      */
-    localDateTimeSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): java_time_LocalDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    localDateTime(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): Promise<java_time_chrono_ChronoLocalDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAccessor'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    localDateTimeSync(var0: java_time_temporal_TemporalAccessor | JavaInterfaceProxy<java_time_temporal_TemporalAccessorInterface> | null): java_time_chrono_ChronoLocalDateTime | null;
+    hashCodeSync(): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -403,58 +411,6 @@ export declare class IsoChronologyClass extends JavaClass {
     epochSecondSync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number, var7: java_time_ZoneOffset | null): number;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.time.chrono.IsoEra'
-     */
-    eraOf(var0: java_lang_Integer | number): Promise<java_time_chrono_IsoEra | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.chrono.IsoEra'
-     */
-    eraOfSync(var0: java_lang_Integer | number): java_time_chrono_IsoEra | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.chrono.Era'
-     */
-    eraOf(var0: java_lang_Integer | number): Promise<java_time_chrono_Era | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.time.chrono.Era'
-     */
-    eraOfSync(var0: java_lang_Integer | number): java_time_chrono_Era | null;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    eras(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    erasSync(): java_util_List | null;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @param var1 original type: 'java.time.format.ResolverStyle'
-     * @return original return type: 'java.time.LocalDate'
-     */
-    resolveDate(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): Promise<java_time_LocalDate | null>;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @param var1 original type: 'java.time.format.ResolverStyle'
-     * @return original return type: 'java.time.LocalDate'
-     */
-    resolveDateSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): java_time_LocalDate | null;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @param var1 original type: 'java.time.format.ResolverStyle'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    resolveDate(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): Promise<java_time_chrono_ChronoLocalDate | null>;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @param var1 original type: 'java.time.format.ResolverStyle'
-     * @return original return type: 'java.time.chrono.ChronoLocalDate'
-     */
-    resolveDateSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): java_time_chrono_ChronoLocalDate | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.time.chrono.ChronoPeriod'
@@ -482,105 +438,127 @@ export declare class IsoChronologyClass extends JavaClass {
      */
     periodSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_time_Period | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.String'
      */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
+    getCalendarType(): Promise<string | null>;
     /**
      * @return original return type: 'java.lang.String'
      */
-    toString(): string;
+    getCalendarTypeSync(): string | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BasicOrJavaType | null): number;
-    /**
-     * @param var0 original type: 'java.time.chrono.Chronology'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: java_time_chrono_Chronology | JavaInterfaceProxy<java_time_chrono_ChronologyInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.time.chrono.Chronology'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: java_time_chrono_Chronology | JavaInterfaceProxy<java_time_chrono_ChronologyInterface> | null): number;
-    /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.time.chrono.Era'
      * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.time.LocalDate'
      */
-    wait(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): Promise<void>;
+    dateYearDay(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_time_LocalDate | null>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.time.chrono.Era'
      * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.time.LocalDate'
      */
-    waitSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number): void;
+    dateYearDaySync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_time_LocalDate | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.time.chrono.Era'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
-    wait(): Promise<void>;
+    dateYearDay(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_time_chrono_ChronoLocalDate | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.time.chrono.Era'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
-    waitSync(): void;
+    dateYearDaySync(var0: java_time_chrono_Era | JavaInterfaceProxy<java_time_chrono_EraInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_time_chrono_ChronoLocalDate | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     */
+    dateYearDay(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_time_chrono_ChronoLocalDate | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     */
+    dateYearDaySync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_time_chrono_ChronoLocalDate | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.time.LocalDate'
+     */
+    dateYearDay(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_time_LocalDate | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.time.LocalDate'
+     */
+    dateYearDaySync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_time_LocalDate | null;
+    /**
+     * @param var0 original type: 'java.util.Map'
+     * @param var1 original type: 'java.time.format.ResolverStyle'
+     * @return original return type: 'java.time.LocalDate'
+     */
+    resolveDate(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): Promise<java_time_LocalDate | null>;
+    /**
+     * @param var0 original type: 'java.util.Map'
+     * @param var1 original type: 'java.time.format.ResolverStyle'
+     * @return original return type: 'java.time.LocalDate'
+     */
+    resolveDateSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): java_time_LocalDate | null;
+    /**
+     * @param var0 original type: 'java.util.Map'
+     * @param var1 original type: 'java.time.format.ResolverStyle'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     */
+    resolveDate(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): Promise<java_time_chrono_ChronoLocalDate | null>;
+    /**
+     * @param var0 original type: 'java.util.Map'
+     * @param var1 original type: 'java.time.format.ResolverStyle'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
+     */
+    resolveDateSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null, var1: java_time_format_ResolverStyle | null): java_time_chrono_ChronoLocalDate | null;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    isLeapYear(var0: java_lang_Long | bigint | number): Promise<boolean>;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    isLeapYearSync(var0: java_lang_Long | bigint | number): boolean;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
-    getClass(): Promise<java_lang_Class>;
+    dateEpochDay(var0: java_lang_Long | bigint | number): Promise<java_time_chrono_ChronoLocalDate | null>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
-    getClassSync(): java_lang_Class;
+    dateEpochDaySync(var0: java_lang_Long | bigint | number): java_time_chrono_ChronoLocalDate | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.LocalDate'
      */
-    notify(): Promise<void>;
+    dateEpochDay(var0: java_lang_Long | bigint | number): Promise<java_time_LocalDate | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.LocalDate'
      */
-    notifySync(): void;
+    dateEpochDaySync(var0: java_lang_Long | bigint | number): java_time_LocalDate | null;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.List'
      */
-    notifyAll(): Promise<void>;
+    eras(): Promise<java_util_List | null>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.List'
      */
-    notifyAllSync(): void;
+    erasSync(): java_util_List | null;
     /**
      * @param var0 original type: 'java.time.format.TextStyle'
      * @param var1 original type: 'java.util.Locale'
@@ -593,6 +571,20 @@ export declare class IsoChronologyClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getDisplayNameSync(var0: java_time_format_TextStyle | null, var1: java_util_Locale | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * Original type: 'java.time.chrono.IsoChronology'
+     */
+    static readonly INSTANCE: IsoChronologyClass | null;
 }
 declare const IsoChronology_base: typeof IsoChronologyClass;
 /**

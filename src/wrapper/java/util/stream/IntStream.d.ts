@@ -1,31 +1,31 @@
 import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { OptionalInt as java_util_OptionalInt } from "./../OptionalInt";
+import { IntPredicate as java_util_function_IntPredicate, IntPredicateInterface as java_util_function_IntPredicateInterface } from "./../function/IntPredicate";
+import { Stream as java_util_stream_Stream } from "./Stream";
+import { IntFunction as java_util_function_IntFunction, IntFunctionInterface as java_util_function_IntFunctionInterface } from "./../function/IntFunction";
 import { Iterator as java_util_Iterator } from "./../Iterator";
 import { PrimitiveIterator$OfInt as java_util_PrimitiveIterator$OfInt } from "./../PrimitiveIterator$OfInt";
-import { IntUnaryOperator as java_util_function_IntUnaryOperator, IntUnaryOperatorInterface as java_util_function_IntUnaryOperatorInterface } from "./../function/IntUnaryOperator";
+import { IntStream$IntMapMultiConsumer as java_util_stream_IntStream$IntMapMultiConsumer, IntStream$IntMapMultiConsumerInterface as java_util_stream_IntStream$IntMapMultiConsumerInterface } from "./IntStream$IntMapMultiConsumer";
+import { DoubleStream as java_util_stream_DoubleStream } from "./DoubleStream";
+import { Long as java_lang_Long } from "./../../lang/Long";
+import { IntSupplier as java_util_function_IntSupplier, IntSupplierInterface as java_util_function_IntSupplierInterface } from "./../function/IntSupplier";
+import { IntToDoubleFunction as java_util_function_IntToDoubleFunction, IntToDoubleFunctionInterface as java_util_function_IntToDoubleFunctionInterface } from "./../function/IntToDoubleFunction";
+import { Integer as java_lang_Integer } from "./../../lang/Integer";
+import { IntBinaryOperator as java_util_function_IntBinaryOperator, IntBinaryOperatorInterface as java_util_function_IntBinaryOperatorInterface } from "./../function/IntBinaryOperator";
+import { OptionalInt as java_util_OptionalInt } from "./../OptionalInt";
+import { BaseStream as java_util_stream_BaseStream } from "./BaseStream";
+import { Spliterator$OfInt as java_util_Spliterator$OfInt } from "./../Spliterator$OfInt";
+import { Spliterator as java_util_Spliterator } from "./../Spliterator";
+import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_RunnableInterface } from "./../../lang/Runnable";
+import { IntSummaryStatistics as java_util_IntSummaryStatistics } from "./../IntSummaryStatistics";
 import { Supplier as java_util_function_Supplier, SupplierInterface as java_util_function_SupplierInterface } from "./../function/Supplier";
 import { ObjIntConsumer as java_util_function_ObjIntConsumer, ObjIntConsumerInterface as java_util_function_ObjIntConsumerInterface } from "./../function/ObjIntConsumer";
 import { BiConsumer as java_util_function_BiConsumer, BiConsumerInterface as java_util_function_BiConsumerInterface } from "./../function/BiConsumer";
-import { Integer as java_lang_Integer } from "./../../lang/Integer";
-import { IntStream$Builder as java_util_stream_IntStream$Builder } from "./IntStream$Builder";
-import { Long as java_lang_Long } from "./../../lang/Long";
-import { Spliterator$OfInt as java_util_Spliterator$OfInt } from "./../Spliterator$OfInt";
-import { Spliterator as java_util_Spliterator } from "./../Spliterator";
-import { IntPredicate as java_util_function_IntPredicate, IntPredicateInterface as java_util_function_IntPredicateInterface } from "./../function/IntPredicate";
-import { IntFunction as java_util_function_IntFunction, IntFunctionInterface as java_util_function_IntFunctionInterface } from "./../function/IntFunction";
-import { IntConsumer as java_util_function_IntConsumer, IntConsumerInterface as java_util_function_IntConsumerInterface } from "./../function/IntConsumer";
-import { IntBinaryOperator as java_util_function_IntBinaryOperator, IntBinaryOperatorInterface as java_util_function_IntBinaryOperatorInterface } from "./../function/IntBinaryOperator";
-import { BaseStream as java_util_stream_BaseStream } from "./BaseStream";
-import { Stream as java_util_stream_Stream } from "./Stream";
-import { IntSupplier as java_util_function_IntSupplier, IntSupplierInterface as java_util_function_IntSupplierInterface } from "./../function/IntSupplier";
+import { OptionalDouble as java_util_OptionalDouble } from "./../OptionalDouble";
 import { LongStream as java_util_stream_LongStream } from "./LongStream";
 import { IntToLongFunction as java_util_function_IntToLongFunction, IntToLongFunctionInterface as java_util_function_IntToLongFunctionInterface } from "./../function/IntToLongFunction";
-import { DoubleStream as java_util_stream_DoubleStream } from "./DoubleStream";
-import { IntToDoubleFunction as java_util_function_IntToDoubleFunction, IntToDoubleFunctionInterface as java_util_function_IntToDoubleFunctionInterface } from "./../function/IntToDoubleFunction";
-import { IntStream$IntMapMultiConsumer as java_util_stream_IntStream$IntMapMultiConsumer, IntStream$IntMapMultiConsumerInterface as java_util_stream_IntStream$IntMapMultiConsumerInterface } from "./IntStream$IntMapMultiConsumer";
-import { OptionalDouble as java_util_OptionalDouble } from "./../OptionalDouble";
-import { IntSummaryStatistics as java_util_IntSummaryStatistics } from "./../IntSummaryStatistics";
-import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_RunnableInterface } from "./../../lang/Runnable";
+import { IntStream$Builder as java_util_stream_IntStream$Builder } from "./IntStream$Builder";
+import { IntConsumer as java_util_function_IntConsumer, IntConsumerInterface as java_util_function_IntConsumerInterface } from "./../function/IntConsumer";
+import { IntUnaryOperator as java_util_function_IntUnaryOperator, IntUnaryOperatorInterface as java_util_function_IntUnaryOperatorInterface } from "./../function/IntUnaryOperator";
 /**
  * This class just defines types, you should import {@link IntStream} instead of this.
  * This was generated by java-bridge.
@@ -33,29 +33,43 @@ import { Runnable as java_lang_Runnable, RunnableInterface as java_lang_Runnable
  */
 export declare class IntStreamClass extends JavaClass {
     /**
-     * @return original return type: 'java.util.OptionalInt'
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    min(): Promise<java_util_OptionalInt | null>;
+    takeWhile(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<IntStream | null>;
     /**
-     * @return original return type: 'java.util.OptionalInt'
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    minSync(): java_util_OptionalInt | null;
+    takeWhileSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
     /**
-     * @return original return type: 'java.util.OptionalInt'
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'boolean'
      */
-    max(): Promise<java_util_OptionalInt | null>;
+    allMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<boolean>;
     /**
-     * @return original return type: 'java.util.OptionalInt'
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'boolean'
      */
-    maxSync(): java_util_OptionalInt | null;
+    allMatchSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
     /**
-     * @return original return type: 'int[]'
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.util.stream.Stream'
      */
-    toArray(): Promise<(number)[] | null>;
+    mapToObj(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): Promise<java_util_stream_Stream | null>;
     /**
-     * @return original return type: 'int[]'
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.util.stream.Stream'
      */
-    toArraySync(): (number)[] | null;
+    mapToObjSync(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static empty(): Promise<IntStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static emptySync(): IntStream | null;
     /**
      * @return original return type: 'java.util.Iterator'
      */
@@ -73,77 +87,31 @@ export declare class IntStreamClass extends JavaClass {
      */
     iteratorSync(): java_util_PrimitiveIterator$OfInt | null;
     /**
-     * @param var0 original type: 'java.util.function.IntUnaryOperator'
+     * @param var0 original type: 'java.util.stream.IntStream$IntMapMultiConsumer'
      * @return original return type: 'java.util.stream.IntStream'
      */
-    map(var0: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): Promise<IntStream | null>;
+    mapMulti(var0: java_util_stream_IntStream$IntMapMultiConsumer | JavaInterfaceProxy<java_util_stream_IntStream$IntMapMultiConsumerInterface> | null): Promise<IntStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.IntUnaryOperator'
+     * @param var0 original type: 'java.util.stream.IntStream$IntMapMultiConsumer'
      * @return original return type: 'java.util.stream.IntStream'
      */
-    mapSync(var0: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): IntStream | null;
+    mapMultiSync(var0: java_util_stream_IntStream$IntMapMultiConsumer | JavaInterfaceProxy<java_util_stream_IntStream$IntMapMultiConsumerInterface> | null): IntStream | null;
     /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @param var1 original type: 'java.util.function.ObjIntConsumer'
-     * @param var2 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjIntConsumer | JavaInterfaceProxy<java_util_function_ObjIntConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): Promise<BasicOrJavaType | null>;
+    asDoubleStream(): Promise<java_util_stream_DoubleStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @param var1 original type: 'java.util.function.ObjIntConsumer'
-     * @param var2 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    collectSync(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjIntConsumer | JavaInterfaceProxy<java_util_function_ObjIntConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
+    asDoubleStreamSync(): java_util_stream_DoubleStream | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.stream.IntStream'
+     * @return original return type: 'int[]'
      */
-    static of(var0: java_lang_Integer | number): Promise<IntStream | null>;
+    toArray(): Promise<(number)[] | null>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.stream.IntStream'
+     * @return original return type: 'int[]'
      */
-    static ofSync(var0: java_lang_Integer | number): IntStream | null;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static of(var0: (java_lang_Integer | number)[] | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static ofSync(var0: (java_lang_Integer | number)[] | null): IntStream | null;
-    /**
-     * @return original return type: 'long'
-     */
-    count(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    countSync(): number;
-    /**
-     * @return original return type: 'java.util.stream.IntStream$Builder'
-     */
-    static builder(): Promise<java_util_stream_IntStream$Builder | null>;
-    /**
-     * @return original return type: 'java.util.stream.IntStream$Builder'
-     */
-    static builderSync(): java_util_stream_IntStream$Builder | null;
-    /**
-     * @param var0 original type: 'java.util.stream.IntStream'
-     * @param var1 original type: 'java.util.stream.IntStream'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static concat(var0: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null, var1: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.stream.IntStream'
-     * @param var1 original type: 'java.util.stream.IntStream'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static concatSync(var0: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null, var1: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null): IntStream | null;
+    toArraySync(): (number)[] | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.util.stream.IntStream'
@@ -155,40 +123,6 @@ export declare class IntStreamClass extends JavaClass {
      */
     limitSync(var0: java_lang_Long | bigint | number): IntStream | null;
     /**
-     * @return original return type: 'java.util.Spliterator$OfInt'
-     */
-    spliterator(): Promise<java_util_Spliterator$OfInt | null>;
-    /**
-     * @return original return type: 'java.util.Spliterator$OfInt'
-     */
-    spliteratorSync(): java_util_Spliterator$OfInt | null;
-    /**
-     * @return original return type: 'java.util.Spliterator'
-     */
-    spliterator(): Promise<java_util_Spliterator | null>;
-    /**
-     * @return original return type: 'java.util.Spliterator'
-     */
-    spliteratorSync(): java_util_Spliterator | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    filter(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    filterSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static empty(): Promise<IntStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static emptySync(): IntStream | null;
-    /**
      * @param var0 original type: 'java.util.function.IntPredicate'
      * @return original return type: 'boolean'
      */
@@ -199,61 +133,25 @@ export declare class IntStreamClass extends JavaClass {
      */
     anyMatchSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.util.function.IntFunction'
+     * @param var0 original type: 'java.util.function.IntSupplier'
      * @return original return type: 'java.util.stream.IntStream'
      */
-    flatMap(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): Promise<IntStream | null>;
+    static generate(var0: java_util_function_IntSupplier | JavaInterfaceProxy<java_util_function_IntSupplierInterface> | null): Promise<IntStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.IntFunction'
+     * @param var0 original type: 'java.util.function.IntSupplier'
      * @return original return type: 'java.util.stream.IntStream'
      */
-    flatMapSync(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): IntStream | null;
+    static generateSync(var0: java_util_function_IntSupplier | JavaInterfaceProxy<java_util_function_IntSupplierInterface> | null): IntStream | null;
     /**
-     * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.util.function.IntToDoubleFunction'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    forEach(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): Promise<void>;
+    mapToDouble(var0: java_util_function_IntToDoubleFunction | JavaInterfaceProxy<java_util_function_IntToDoubleFunctionInterface> | null): Promise<java_util_stream_DoubleStream | null>;
     /**
-     * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.util.function.IntToDoubleFunction'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    forEachSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
-    /**
-     * @return original return type: 'java.util.OptionalInt'
-     */
-    findAny(): Promise<java_util_OptionalInt | null>;
-    /**
-     * @return original return type: 'java.util.OptionalInt'
-     */
-    findAnySync(): java_util_OptionalInt | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    skip(var0: java_lang_Long | bigint | number): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    skipSync(var0: java_lang_Long | bigint | number): IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    peek(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    peekSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): IntStream | null;
-    /**
-     * @return original return type: 'int'
-     */
-    sum(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    sumSync(): number;
+    mapToDoubleSync(var0: java_util_function_IntToDoubleFunction | JavaInterfaceProxy<java_util_function_IntToDoubleFunctionInterface> | null): java_util_stream_DoubleStream | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.util.function.IntBinaryOperator'
@@ -277,6 +175,132 @@ export declare class IntStreamClass extends JavaClass {
      */
     reduceSync(var0: java_util_function_IntBinaryOperator | JavaInterfaceProxy<java_util_function_IntBinaryOperatorInterface> | null): java_util_OptionalInt | null;
     /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    unordered(): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    unorderedSync(): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.Spliterator$OfInt'
+     */
+    spliterator(): Promise<java_util_Spliterator$OfInt | null>;
+    /**
+     * @return original return type: 'java.util.Spliterator$OfInt'
+     */
+    spliteratorSync(): java_util_Spliterator$OfInt | null;
+    /**
+     * @return original return type: 'java.util.Spliterator'
+     */
+    spliterator(): Promise<java_util_Spliterator | null>;
+    /**
+     * @return original return type: 'java.util.Spliterator'
+     */
+    spliteratorSync(): java_util_Spliterator | null;
+    /**
+     * @return original return type: 'long'
+     */
+    count(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    countSync(): number;
+    /**
+     * @param var0 original type: 'java.util.stream.IntStream'
+     * @param var1 original type: 'java.util.stream.IntStream'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static concat(var0: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null, var1: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null): Promise<IntStream | null>;
+    /**
+     * @param var0 original type: 'java.util.stream.IntStream'
+     * @param var1 original type: 'java.util.stream.IntStream'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static concatSync(var0: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null, var1: IntStreamClass | JavaInterfaceProxy<IntStreamInterface> | null): IntStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    flatMap(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): Promise<IntStream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    flatMapSync(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    sorted(): Promise<IntStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    sortedSync(): IntStream | null;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    onClose(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    onCloseSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    boxed(): Promise<java_util_stream_Stream | null>;
+    /**
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    boxedSync(): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.IntSummaryStatistics'
+     */
+    summaryStatistics(): Promise<java_util_IntSummaryStatistics | null>;
+    /**
+     * @return original return type: 'java.util.IntSummaryStatistics'
+     */
+    summaryStatisticsSync(): java_util_IntSummaryStatistics | null;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @param var1 original type: 'java.util.function.ObjIntConsumer'
+     * @param var2 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.lang.Object'
+     */
+    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjIntConsumer | JavaInterfaceProxy<java_util_function_ObjIntConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @param var1 original type: 'java.util.function.ObjIntConsumer'
+     * @param var2 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.lang.Object'
+     */
+    collectSync(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjIntConsumer | JavaInterfaceProxy<java_util_function_ObjIntConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    average(): Promise<java_util_OptionalDouble | null>;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    averageSync(): java_util_OptionalDouble | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    sequential(): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    sequentialSync(): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    sequential(): Promise<IntStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    sequentialSync(): IntStream | null;
+    /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     distinct(): Promise<IntStream | null>;
@@ -284,24 +308,6 @@ export declare class IntStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     distinctSync(): IntStream | null;
-    /**
-     * @return original return type: 'java.util.OptionalInt'
-     */
-    findFirst(): Promise<java_util_OptionalInt | null>;
-    /**
-     * @return original return type: 'java.util.OptionalInt'
-     */
-    findFirstSync(): java_util_OptionalInt | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'boolean'
-     */
-    allMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'boolean'
-     */
-    allMatchSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -314,6 +320,48 @@ export declare class IntStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     static rangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): IntStream | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    skip(var0: java_lang_Long | bigint | number): Promise<IntStream | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    skipSync(var0: java_lang_Long | bigint | number): IntStream | null;
+    /**
+     * @return original return type: 'int'
+     */
+    sum(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    sumSync(): number;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    findFirst(): Promise<java_util_OptionalInt | null>;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    findFirstSync(): java_util_OptionalInt | null;
+    /**
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    asLongStream(): Promise<java_util_stream_LongStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    asLongStreamSync(): java_util_stream_LongStream | null;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    min(): Promise<java_util_OptionalInt | null>;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    minSync(): java_util_OptionalInt | null;
     /**
      * @return original return type: 'java.util.stream.IntStream'
      */
@@ -330,6 +378,98 @@ export declare class IntStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.BaseStream'
      */
     parallelSync(): java_util_stream_BaseStream | null;
+    /**
+     * @param var0 original type: 'java.util.function.IntToLongFunction'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    mapToLong(var0: java_util_function_IntToLongFunction | JavaInterfaceProxy<java_util_function_IntToLongFunctionInterface> | null): Promise<java_util_stream_LongStream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.IntToLongFunction'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    mapToLongSync(var0: java_util_function_IntToLongFunction | JavaInterfaceProxy<java_util_function_IntToLongFunctionInterface> | null): java_util_stream_LongStream | null;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    findAny(): Promise<java_util_OptionalInt | null>;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    findAnySync(): java_util_OptionalInt | null;
+    /**
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'boolean'
+     */
+    noneMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'boolean'
+     */
+    noneMatchSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static of(var0: java_lang_Integer | number): Promise<IntStream | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static ofSync(var0: java_lang_Integer | number): IntStream | null;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static of(var0: (java_lang_Integer | number)[] | null): Promise<IntStream | null>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    static ofSync(var0: (java_lang_Integer | number)[] | null): IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.IntStream$Builder'
+     */
+    static builder(): Promise<java_util_stream_IntStream$Builder | null>;
+    /**
+     * @return original return type: 'java.util.stream.IntStream$Builder'
+     */
+    static builderSync(): java_util_stream_IntStream$Builder | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isParallel(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isParallelSync(): boolean;
+    /**
+     * @param var0 original type: 'java.util.function.IntConsumer'
+     * @return original return type: 'void'
+     */
+    forEachOrdered(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.util.function.IntConsumer'
+     * @return original return type: 'void'
+     */
+    forEachOrderedSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.util.function.IntUnaryOperator'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    map(var0: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): Promise<IntStream | null>;
+    /**
+     * @param var0 original type: 'java.util.function.IntUnaryOperator'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    mapSync(var0: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): IntStream | null;
+    /**
+     * @return original return type: 'void'
+     */
+    close(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    closeSync(): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.util.function.IntPredicate'
@@ -357,89 +497,23 @@ export declare class IntStreamClass extends JavaClass {
      */
     static iterateSync(var0: java_lang_Integer | number, var1: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): IntStream | null;
     /**
-     * @param var0 original type: 'java.util.function.IntFunction'
-     * @return original return type: 'java.util.stream.Stream'
+     * @return original return type: 'java.util.OptionalInt'
      */
-    mapToObj(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): Promise<java_util_stream_Stream | null>;
+    max(): Promise<java_util_OptionalInt | null>;
     /**
-     * @param var0 original type: 'java.util.function.IntFunction'
-     * @return original return type: 'java.util.stream.Stream'
+     * @return original return type: 'java.util.OptionalInt'
      */
-    mapToObjSync(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): java_util_stream_Stream | null;
+    maxSync(): java_util_OptionalInt | null;
     /**
-     * @return original return type: 'java.util.stream.IntStream'
+     * @param var0 original type: 'java.util.function.IntConsumer'
+     * @return original return type: 'void'
      */
-    sorted(): Promise<IntStream | null>;
+    forEach(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): Promise<void>;
     /**
-     * @return original return type: 'java.util.stream.IntStream'
+     * @param var0 original type: 'java.util.function.IntConsumer'
+     * @return original return type: 'void'
      */
-    sortedSync(): IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntSupplier'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static generate(var0: java_util_function_IntSupplier | JavaInterfaceProxy<java_util_function_IntSupplierInterface> | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntSupplier'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    static generateSync(var0: java_util_function_IntSupplier | JavaInterfaceProxy<java_util_function_IntSupplierInterface> | null): IntStream | null;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    sequential(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    sequentialSync(): java_util_stream_BaseStream | null;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    sequential(): Promise<IntStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    sequentialSync(): IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntToLongFunction'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    mapToLong(var0: java_util_function_IntToLongFunction | JavaInterfaceProxy<java_util_function_IntToLongFunctionInterface> | null): Promise<java_util_stream_LongStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntToLongFunction'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    mapToLongSync(var0: java_util_function_IntToLongFunction | JavaInterfaceProxy<java_util_function_IntToLongFunctionInterface> | null): java_util_stream_LongStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntToDoubleFunction'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    mapToDouble(var0: java_util_function_IntToDoubleFunction | JavaInterfaceProxy<java_util_function_IntToDoubleFunctionInterface> | null): Promise<java_util_stream_DoubleStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntToDoubleFunction'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    mapToDoubleSync(var0: java_util_function_IntToDoubleFunction | JavaInterfaceProxy<java_util_function_IntToDoubleFunctionInterface> | null): java_util_stream_DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.stream.IntStream$IntMapMultiConsumer'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    mapMulti(var0: java_util_stream_IntStream$IntMapMultiConsumer | JavaInterfaceProxy<java_util_stream_IntStream$IntMapMultiConsumerInterface> | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.stream.IntStream$IntMapMultiConsumer'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    mapMultiSync(var0: java_util_stream_IntStream$IntMapMultiConsumer | JavaInterfaceProxy<java_util_stream_IntStream$IntMapMultiConsumerInterface> | null): IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    takeWhile(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<IntStream | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    takeWhileSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
+    forEachSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
     /**
      * @param var0 original type: 'java.util.function.IntPredicate'
      * @return original return type: 'java.util.stream.IntStream'
@@ -452,24 +526,24 @@ export declare class IntStreamClass extends JavaClass {
     dropWhileSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
     /**
      * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    forEachOrdered(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): Promise<void>;
+    peek(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): Promise<IntStream | null>;
     /**
      * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    forEachOrderedSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
+    peekSync(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): IntStream | null;
     /**
      * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    noneMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<boolean>;
+    filter(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): Promise<IntStream | null>;
     /**
      * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    noneMatchSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
+    filterSync(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -482,80 +556,6 @@ export declare class IntStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     static rangeClosedSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): IntStream | null;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    average(): Promise<java_util_OptionalDouble | null>;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    averageSync(): java_util_OptionalDouble | null;
-    /**
-     * @return original return type: 'java.util.IntSummaryStatistics'
-     */
-    summaryStatistics(): Promise<java_util_IntSummaryStatistics | null>;
-    /**
-     * @return original return type: 'java.util.IntSummaryStatistics'
-     */
-    summaryStatisticsSync(): java_util_IntSummaryStatistics | null;
-    /**
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    asLongStream(): Promise<java_util_stream_LongStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    asLongStreamSync(): java_util_stream_LongStream | null;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    asDoubleStream(): Promise<java_util_stream_DoubleStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    asDoubleStreamSync(): java_util_stream_DoubleStream | null;
-    /**
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    boxed(): Promise<java_util_stream_Stream | null>;
-    /**
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    boxedSync(): java_util_stream_Stream | null;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    closeSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isParallel(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isParallelSync(): boolean;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    unordered(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    unorderedSync(): java_util_stream_BaseStream | null;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    onClose(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    onCloseSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_stream_BaseStream | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -570,17 +570,20 @@ export declare class IntStreamClass extends JavaClass {
  */
 export interface IntStreamInterface {
     /**
-     * @return original return type: 'java.util.OptionalInt'
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    min(): java_util_OptionalInt | null;
+    takeWhile?(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
     /**
-     * @return original return type: 'java.util.OptionalInt'
+     * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'boolean'
      */
-    max(): java_util_OptionalInt | null;
+    allMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
     /**
-     * @return original return type: 'int[]'
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.util.stream.Stream'
      */
-    toArray(): (number)[] | null;
+    mapToObj(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): java_util_stream_Stream | null;
     /**
      * @return original return type: 'java.util.Iterator'
      */
@@ -592,74 +595,33 @@ export interface IntStreamInterface {
      */
     iterator?(): java_util_PrimitiveIterator$OfInt | null;
     /**
-     * @param var0 original type: 'java.util.function.IntUnaryOperator'
+     * @param var0 original type: 'java.util.stream.IntStream$IntMapMultiConsumer'
      * @return original return type: 'java.util.stream.IntStream'
      */
-    map(var0: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): IntStream | null;
+    mapMulti?(var0: java_util_stream_IntStream$IntMapMultiConsumer | JavaInterfaceProxy<java_util_stream_IntStream$IntMapMultiConsumerInterface> | null): IntStream | null;
     /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @param var1 original type: 'java.util.function.ObjIntConsumer'
-     * @param var2 original type: 'java.util.function.BiConsumer'
-     * @return original return type: 'java.lang.Object'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjIntConsumer | JavaInterfaceProxy<java_util_function_ObjIntConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
+    asDoubleStream(): java_util_stream_DoubleStream | null;
     /**
-     * @return original return type: 'long'
+     * @return original return type: 'int[]'
      */
-    count(): number;
+    toArray(): (number)[] | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.util.stream.IntStream'
      */
     limit(var0: java_lang_Long | bigint | number): IntStream | null;
     /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @return original return type: 'java.util.Spliterator$OfInt'
-     */
-    spliterator?(): java_util_Spliterator$OfInt | null;
-    /**
-     * @return original return type: 'java.util.Spliterator'
-     */
-    spliterator?(): java_util_Spliterator | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    filter(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
-    /**
      * @param var0 original type: 'java.util.function.IntPredicate'
      * @return original return type: 'boolean'
      */
     anyMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.util.function.IntFunction'
-     * @return original return type: 'java.util.stream.IntStream'
+     * @param var0 original type: 'java.util.function.IntToDoubleFunction'
+     * @return original return type: 'java.util.stream.DoubleStream'
      */
-    flatMap(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'void'
-     */
-    forEach(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
-    /**
-     * @return original return type: 'java.util.OptionalInt'
-     */
-    findAny(): java_util_OptionalInt | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    skip(var0: java_lang_Long | bigint | number): IntStream | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    peek(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): IntStream | null;
-    /**
-     * @return original return type: 'int'
-     */
-    sum(): number;
+    mapToDouble(var0: java_util_function_IntToDoubleFunction | JavaInterfaceProxy<java_util_function_IntToDoubleFunctionInterface> | null): java_util_stream_DoubleStream | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.util.function.IntBinaryOperator'
@@ -672,37 +634,56 @@ export interface IntStreamInterface {
      */
     reduce(var0: java_util_function_IntBinaryOperator | JavaInterfaceProxy<java_util_function_IntBinaryOperatorInterface> | null): java_util_OptionalInt | null;
     /**
-     * @return original return type: 'java.util.stream.IntStream'
+     * @return original return type: 'java.util.stream.BaseStream'
      */
-    distinct(): IntStream | null;
-    /**
-     * @return original return type: 'java.util.OptionalInt'
-     */
-    findFirst(): java_util_OptionalInt | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'boolean'
-     */
-    allMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
+    unordered(): java_util_stream_BaseStream | null;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
-     * @return original return type: 'java.util.stream.IntStream'
+     * @return original return type: 'java.util.Spliterator$OfInt'
      */
-    parallel?(): IntStream | null;
+    spliterator?(): java_util_Spliterator$OfInt | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
+     * @return original return type: 'java.util.Spliterator'
      */
-    parallel?(): java_util_stream_BaseStream | null;
+    spliterator?(): java_util_Spliterator | null;
+    /**
+     * @return original return type: 'long'
+     */
+    count(): number;
     /**
      * @param var0 original type: 'java.util.function.IntFunction'
-     * @return original return type: 'java.util.stream.Stream'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    mapToObj(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): java_util_stream_Stream | null;
+    flatMap(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): IntStream | null;
     /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     sorted(): IntStream | null;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    onClose(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_stream_BaseStream | null;
+    /**
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    boxed(): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.IntSummaryStatistics'
+     */
+    summaryStatistics(): java_util_IntSummaryStatistics | null;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @param var1 original type: 'java.util.function.ObjIntConsumer'
+     * @param var2 original type: 'java.util.function.BiConsumer'
+     * @return original return type: 'java.lang.Object'
+     */
+    collect(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null, var1: java_util_function_ObjIntConsumer | JavaInterfaceProxy<java_util_function_ObjIntConsumerInterface> | null, var2: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    average(): java_util_OptionalDouble | null;
     /**
      * @return original return type: 'java.util.stream.BaseStream'
      */
@@ -714,25 +695,81 @@ export interface IntStreamInterface {
      */
     sequential?(): IntStream | null;
     /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    distinct(): IntStream | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    skip(var0: java_lang_Long | bigint | number): IntStream | null;
+    /**
+     * @return original return type: 'int'
+     */
+    sum(): number;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    findFirst(): java_util_OptionalInt | null;
+    /**
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    asLongStream(): java_util_stream_LongStream | null;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    min(): java_util_OptionalInt | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    parallel?(): IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallel?(): java_util_stream_BaseStream | null;
+    /**
      * @param var0 original type: 'java.util.function.IntToLongFunction'
      * @return original return type: 'java.util.stream.LongStream'
      */
     mapToLong(var0: java_util_function_IntToLongFunction | JavaInterfaceProxy<java_util_function_IntToLongFunctionInterface> | null): java_util_stream_LongStream | null;
     /**
-     * @param var0 original type: 'java.util.function.IntToDoubleFunction'
-     * @return original return type: 'java.util.stream.DoubleStream'
+     * @return original return type: 'java.util.OptionalInt'
      */
-    mapToDouble(var0: java_util_function_IntToDoubleFunction | JavaInterfaceProxy<java_util_function_IntToDoubleFunctionInterface> | null): java_util_stream_DoubleStream | null;
-    /**
-     * @param var0 original type: 'java.util.stream.IntStream$IntMapMultiConsumer'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    mapMulti?(var0: java_util_stream_IntStream$IntMapMultiConsumer | JavaInterfaceProxy<java_util_stream_IntStream$IntMapMultiConsumerInterface> | null): IntStream | null;
+    findAny(): java_util_OptionalInt | null;
     /**
      * @param var0 original type: 'java.util.function.IntPredicate'
+     * @return original return type: 'boolean'
+     */
+    noneMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isParallel(): boolean;
+    /**
+     * @param var0 original type: 'java.util.function.IntConsumer'
+     * @return original return type: 'void'
+     */
+    forEachOrdered(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.util.function.IntUnaryOperator'
      * @return original return type: 'java.util.stream.IntStream'
      */
-    takeWhile?(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
+    map(var0: java_util_function_IntUnaryOperator | JavaInterfaceProxy<java_util_function_IntUnaryOperatorInterface> | null): IntStream | null;
+    /**
+     * @return original return type: 'void'
+     */
+    close(): void;
+    /**
+     * @return original return type: 'java.util.OptionalInt'
+     */
+    max(): java_util_OptionalInt | null;
+    /**
+     * @param var0 original type: 'java.util.function.IntConsumer'
+     * @return original return type: 'void'
+     */
+    forEach(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
     /**
      * @param var0 original type: 'java.util.function.IntPredicate'
      * @return original return type: 'java.util.stream.IntStream'
@@ -740,51 +777,14 @@ export interface IntStreamInterface {
     dropWhile?(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
     /**
      * @param var0 original type: 'java.util.function.IntConsumer'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    forEachOrdered(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): void;
+    peek(var0: java_util_function_IntConsumer | JavaInterfaceProxy<java_util_function_IntConsumerInterface> | null): IntStream | null;
     /**
      * @param var0 original type: 'java.util.function.IntPredicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.util.stream.IntStream'
      */
-    noneMatch(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): boolean;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    average(): java_util_OptionalDouble | null;
-    /**
-     * @return original return type: 'java.util.IntSummaryStatistics'
-     */
-    summaryStatistics(): java_util_IntSummaryStatistics | null;
-    /**
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    asLongStream(): java_util_stream_LongStream | null;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    asDoubleStream(): java_util_stream_DoubleStream | null;
-    /**
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    boxed(): java_util_stream_Stream | null;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isParallel(): boolean;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    unordered(): java_util_stream_BaseStream | null;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    onClose(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_stream_BaseStream | null;
+    filter(var0: java_util_function_IntPredicate | JavaInterfaceProxy<java_util_function_IntPredicateInterface> | null): IntStream | null;
 }
 /**
  * Create a proxy for the {@link IntStream} interface.

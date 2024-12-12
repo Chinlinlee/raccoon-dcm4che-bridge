@@ -18,16 +18,6 @@ export declare class Stream$BuilderClass extends JavaClass {
      */
     addSync(var0: BasicOrJavaType | null): Stream$Builder | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    accept(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: BasicOrJavaType | null): void;
-    /**
      * @return original return type: 'java.util.stream.Stream'
      */
     build(): Promise<java_util_stream_Stream | null>;
@@ -45,6 +35,16 @@ export declare class Stream$BuilderClass extends JavaClass {
      * @return original return type: 'java.util.function.Consumer'
      */
     andThenSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): java_util_function_Consumer | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    accept(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: BasicOrJavaType | null): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -64,11 +64,6 @@ export interface Stream$BuilderInterface {
      */
     add?(var0: BasicOrJavaType | null): Stream$Builder | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    accept(var0: BasicOrJavaType | null): void;
-    /**
      * @return original return type: 'java.util.stream.Stream'
      */
     build(): java_util_stream_Stream | null;
@@ -77,6 +72,11 @@ export interface Stream$BuilderInterface {
      * @return original return type: 'java.util.function.Consumer'
      */
     andThen?(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): java_util_function_Consumer | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    accept(var0: BasicOrJavaType | null): void;
 }
 /**
  * Create a proxy for the {@link Stream$Builder} interface.

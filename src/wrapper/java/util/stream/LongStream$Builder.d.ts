@@ -19,16 +19,6 @@ export declare class LongStream$BuilderClass extends JavaClass {
      */
     addSync(var0: java_lang_Long | bigint | number): LongStream$Builder | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    acceptSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'java.util.stream.LongStream'
      */
     build(): Promise<java_util_stream_LongStream | null>;
@@ -46,6 +36,16 @@ export declare class LongStream$BuilderClass extends JavaClass {
      * @return original return type: 'java.util.function.LongConsumer'
      */
     andThenSync(var0: java_util_function_LongConsumer | JavaInterfaceProxy<java_util_function_LongConsumerInterface> | null): java_util_function_LongConsumer | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    acceptSync(var0: java_lang_Long | bigint | number): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -65,11 +65,6 @@ export interface LongStream$BuilderInterface {
      */
     add?(var0: java_lang_Long | bigint | number): LongStream$Builder | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    accept(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'java.util.stream.LongStream'
      */
     build(): java_util_stream_LongStream | null;
@@ -78,6 +73,11 @@ export interface LongStream$BuilderInterface {
      * @return original return type: 'java.util.function.LongConsumer'
      */
     andThen?(var0: java_util_function_LongConsumer | JavaInterfaceProxy<java_util_function_LongConsumerInterface> | null): java_util_function_LongConsumer | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    accept(var0: java_lang_Long | bigint | number): void;
 }
 /**
  * Create a proxy for the {@link LongStream$Builder} interface.

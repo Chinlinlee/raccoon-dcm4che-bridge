@@ -9,14 +9,6 @@ import { VR as org_dcm4che3_data_VR } from "./../data/VR";
  */
 export declare class BulkDataDescriptorClass extends JavaClass {
     /**
-     * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
-     */
-    static readonly DEFAULT: BulkDataDescriptorClass | JavaInterfaceProxy<BulkDataDescriptorInterface> | null;
-    /**
-     * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
-     */
-    static readonly PIXELDATA: BulkDataDescriptorClass | JavaInterfaceProxy<BulkDataDescriptorInterface> | null;
-    /**
      * @param var0 original type: 'java.util.List'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'int'
@@ -34,6 +26,14 @@ export declare class BulkDataDescriptorClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isBulkDataSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var1: string | null, var2: java_lang_Integer | number, var3: org_dcm4che3_data_VR | null, var4: java_lang_Integer | number): boolean;
+    /**
+     * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
+     */
+    static readonly PIXELDATA: BulkDataDescriptorClass | JavaInterfaceProxy<BulkDataDescriptorInterface> | null;
+    /**
+     * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
+     */
+    static readonly DEFAULT: BulkDataDescriptorClass | JavaInterfaceProxy<BulkDataDescriptorInterface> | null;
 }
 /**
  * This interface just defines types for creating proxies,
