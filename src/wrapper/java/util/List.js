@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.List = exports.createListProxy = void 0;
+exports.List = void 0;
+exports.createListProxy = createListProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link List} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createListProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.List', methods, opts);
 }
-exports.createListProxy = createListProxy;
 /**
  * Class java.util.List.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BulkDataDescriptor = exports.createBulkDataDescriptorProxy = void 0;
+exports.BulkDataDescriptor = void 0;
+exports.createBulkDataDescriptorProxy = createBulkDataDescriptorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link BulkDataDescriptor} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createBulkDataDescriptorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.io.BulkDataDescriptor', methods, opts);
 }
-exports.createBulkDataDescriptorProxy = createBulkDataDescriptorProxy;
 /**
  * Class org.dcm4che3.io.BulkDataDescriptor.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Thread$UncaughtExceptionHandler = exports.createThread$UncaughtExceptionHandlerProxy = void 0;
+exports.Thread$UncaughtExceptionHandler = void 0;
+exports.createThread$UncaughtExceptionHandlerProxy = createThread$UncaughtExceptionHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Thread$UncaughtExceptionHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createThread$UncaughtExceptionHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.Thread$UncaughtExceptionHandler', methods, opts);
 }
-exports.createThread$UncaughtExceptionHandlerProxy = createThread$UncaughtExceptionHandlerProxy;
 /**
  * Class java.lang.Thread$UncaughtExceptionHandler.
  *

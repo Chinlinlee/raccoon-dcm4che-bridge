@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongBinaryOperator = exports.createLongBinaryOperatorProxy = void 0;
+exports.LongBinaryOperator = void 0;
+exports.createLongBinaryOperatorProxy = createLongBinaryOperatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongBinaryOperator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongBinaryOperatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.LongBinaryOperator', methods, opts);
 }
-exports.createLongBinaryOperatorProxy = createLongBinaryOperatorProxy;
 /**
  * Class java.util.function.LongBinaryOperator.
  *

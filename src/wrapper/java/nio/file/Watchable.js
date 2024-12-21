@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Watchable = exports.createWatchableProxy = void 0;
+exports.Watchable = void 0;
+exports.createWatchableProxy = createWatchableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Watchable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWatchableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.Watchable', methods, opts);
 }
-exports.createWatchableProxy = createWatchableProxy;
 /**
  * Class java.nio.file.Watchable.
  *

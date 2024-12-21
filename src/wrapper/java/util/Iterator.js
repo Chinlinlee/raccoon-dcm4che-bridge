@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Iterator = exports.createIteratorProxy = void 0;
+exports.Iterator = void 0;
+exports.createIteratorProxy = createIteratorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Iterator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIteratorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Iterator', methods, opts);
 }
-exports.createIteratorProxy = createIteratorProxy;
 /**
  * Class java.util.Iterator.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GroupPrincipal = exports.createGroupPrincipalProxy = void 0;
+exports.GroupPrincipal = void 0;
+exports.createGroupPrincipalProxy = createGroupPrincipalProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link GroupPrincipal} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createGroupPrincipalProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.attribute.GroupPrincipal', methods, opts);
 }
-exports.createGroupPrincipalProxy = createGroupPrincipalProxy;
 /**
  * Class java.nio.file.attribute.GroupPrincipal.
  *

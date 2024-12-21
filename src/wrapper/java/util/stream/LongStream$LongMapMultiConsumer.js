@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongStream$LongMapMultiConsumer = exports.createLongStream$LongMapMultiConsumerProxy = void 0;
+exports.LongStream$LongMapMultiConsumer = void 0;
+exports.createLongStream$LongMapMultiConsumerProxy = createLongStream$LongMapMultiConsumerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongStream$LongMapMultiConsumer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongStream$LongMapMultiConsumerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.LongStream$LongMapMultiConsumer', methods, opts);
 }
-exports.createLongStream$LongMapMultiConsumerProxy = createLongStream$LongMapMultiConsumerProxy;
 /**
  * Class java.util.stream.LongStream$LongMapMultiConsumer.
  *

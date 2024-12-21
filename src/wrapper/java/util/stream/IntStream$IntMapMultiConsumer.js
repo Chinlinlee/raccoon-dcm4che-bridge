@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntStream$IntMapMultiConsumer = exports.createIntStream$IntMapMultiConsumerProxy = void 0;
+exports.IntStream$IntMapMultiConsumer = void 0;
+exports.createIntStream$IntMapMultiConsumerProxy = createIntStream$IntMapMultiConsumerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IntStream$IntMapMultiConsumer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIntStream$IntMapMultiConsumerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.IntStream$IntMapMultiConsumer', methods, opts);
 }
-exports.createIntStream$IntMapMultiConsumerProxy = createIntStream$IntMapMultiConsumerProxy;
 /**
  * Class java.util.stream.IntStream$IntMapMultiConsumer.
  *

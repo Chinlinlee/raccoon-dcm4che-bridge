@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./Class";
 import { Integer as java_lang_Integer } from "./Integer";
@@ -14,8 +12,8 @@ import { Long as java_lang_Long } from "./Long";
 import { Boolean as java_lang_Boolean } from "./Boolean";
 import { Function as java_util_function_Function, FunctionInterface as java_util_function_FunctionInterface } from "./../util/function/Function";
 import { Stream as java_util_stream_Stream } from "./../util/stream/Stream";
-import { Double as java_lang_Double } from "./Double";
 import { Float as java_lang_Float } from "./Float";
+import { Double as java_lang_Double } from "./Double";
 import { StringBuffer as java_lang_StringBuffer } from "./StringBuffer";
 import { Comparator as java_util_Comparator, ComparatorInterface as java_util_ComparatorInterface } from "./../util/Comparator";
 import { StringBuilder as java_lang_StringBuilder } from "./StringBuilder";
@@ -84,16 +82,6 @@ export declare class StringClass extends JavaClass {
      */
     replaceSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: string | null): number;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
@@ -103,6 +91,16 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'int'
      */
     compareToSync(var0: BasicOrJavaType | null): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: string | null): number;
     /**
      * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
      * @return original return type: 'java.lang.Object'
@@ -132,25 +130,13 @@ export declare class StringClass extends JavaClass {
      */
     describeConstableSync(): java_util_Optional | null;
     /**
-     * @param var0 original type: 'java.nio.charset.Charset'
      * @return original return type: 'byte[]'
      */
-    getBytes(var0: java_nio_charset_Charset | null): Promise<Buffer | null>;
+    getBytes(): Promise<Buffer | null>;
     /**
-     * @param var0 original type: 'java.nio.charset.Charset'
      * @return original return type: 'byte[]'
      */
-    getBytesSync(var0: java_nio_charset_Charset | null): Buffer | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'byte[]'
-     */
-    getBytes(var0: string | null): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'byte[]'
-     */
-    getBytesSync(var0: string | null): Buffer | null;
+    getBytesSync(): Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -168,13 +154,25 @@ export declare class StringClass extends JavaClass {
      */
     getBytesSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null, var3: java_lang_Integer | number): void;
     /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'byte[]'
      */
-    getBytes(): Promise<Buffer | null>;
+    getBytes(var0: string | null): Promise<Buffer | null>;
     /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'byte[]'
      */
-    getBytesSync(): Buffer | null;
+    getBytesSync(var0: string | null): Buffer | null;
+    /**
+     * @param var0 original type: 'java.nio.charset.Charset'
+     * @return original return type: 'byte[]'
+     */
+    getBytes(var0: java_nio_charset_Charset | null): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'java.nio.charset.Charset'
+     * @return original return type: 'byte[]'
+     */
+    getBytesSync(var0: java_nio_charset_Charset | null): Buffer | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String[]'
@@ -233,18 +231,6 @@ export declare class StringClass extends JavaClass {
     toUpperCaseSync(var0: java_util_Locale | null): string | null;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'java.lang.CharSequence[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static join(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: (java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null)[] | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'java.lang.CharSequence[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static joinSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: (java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null)[] | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'java.lang.Iterable'
      * @return original return type: 'java.lang.String'
      */
@@ -255,6 +241,18 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     static joinSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Iterable | JavaInterfaceProxy<java_lang_IterableInterface> | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'java.lang.CharSequence[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static join(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: (java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null)[] | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'java.lang.CharSequence[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static joinSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: (java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null)[] | null): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -276,25 +274,19 @@ export declare class StringClass extends JavaClass {
      */
     equalsIgnoreCaseSync(var0: string | null): boolean;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'int'
      */
-    indexOf(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    indexOfSync(var0: java_lang_Integer | number): number;
+    indexOf(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'int'
      */
-    indexOf(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    indexOfSync(var0: string | null): number;
+    indexOfSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -309,6 +301,16 @@ export declare class StringClass extends JavaClass {
     indexOfSync(var0: string | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    indexOf(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    indexOfSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
@@ -319,6 +321,30 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'int'
      */
     indexOfSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    indexOf(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    indexOfSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    indexOf(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    indexOfSync(var0: string | null): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'int'
@@ -356,18 +382,6 @@ export declare class StringClass extends JavaClass {
      */
     toLowerCaseSync(var0: java_util_Locale | null): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static format(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.lang.String'
-     */
-    static formatSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): string | null;
-    /**
      * @param var0 original type: 'java.util.Locale'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object[]'
@@ -381,6 +395,18 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     static formatSync(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static format(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.lang.String'
+     */
+    static formatSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -431,6 +457,16 @@ export declare class StringClass extends JavaClass {
     stripLeadingSync(): string | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -449,16 +485,6 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
@@ -488,6 +514,22 @@ export declare class StringClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    regionMatches(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    regionMatchesSync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
+    /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.lang.String'
@@ -505,22 +547,6 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     regionMatchesSync(var0: java_lang_Boolean | boolean, var1: java_lang_Integer | number, var2: string | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    regionMatches(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    regionMatchesSync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -593,6 +619,18 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     transformSync(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    splitWithDelimiters(var0: string | null, var1: java_lang_Integer | number): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    splitWithDelimitersSync(var0: string | null, var1: java_lang_Integer | number): (string | null)[] | null;
     /**
      * @return original return type: 'int'
      */
@@ -688,15 +726,15 @@ export declare class StringClass extends JavaClass {
      */
     getCharsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (string | null)[] | null, var3: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'long'
      * @return original return type: 'java.lang.String'
      */
-    static valueOf(var0: java_lang_Integer | number): Promise<string | null>;
+    static valueOf(var0: java_lang_Long | bigint | number): Promise<string | null>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'long'
      * @return original return type: 'java.lang.String'
      */
-    static valueOfSync(var0: java_lang_Integer | number): string | null;
+    static valueOfSync(var0: java_lang_Long | bigint | number): string | null;
     /**
      * @param var0 original type: 'char[]'
      * @return original return type: 'java.lang.String'
@@ -718,16 +756,6 @@ export declare class StringClass extends JavaClass {
      */
     static valueOfSync(var0: BasicOrJavaType | null): string | null;
     /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'java.lang.String'
-     */
-    static valueOf(var0: java_lang_Boolean | boolean): Promise<string | null>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'java.lang.String'
-     */
-    static valueOfSync(var0: java_lang_Boolean | boolean): string | null;
-    /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -742,15 +770,15 @@ export declare class StringClass extends JavaClass {
      */
     static valueOfSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): string | null;
     /**
-     * @param var0 original type: 'char'
+     * @param var0 original type: 'float'
      * @return original return type: 'java.lang.String'
      */
-    static valueOf(var0: string | null): Promise<string | null>;
+    static valueOf(var0: java_lang_Float | number): Promise<string | null>;
     /**
-     * @param var0 original type: 'char'
+     * @param var0 original type: 'float'
      * @return original return type: 'java.lang.String'
      */
-    static valueOfSync(var0: string | null): string | null;
+    static valueOfSync(var0: java_lang_Float | number): string | null;
     /**
      * @param var0 original type: 'double'
      * @return original return type: 'java.lang.String'
@@ -762,25 +790,35 @@ export declare class StringClass extends JavaClass {
      */
     static valueOfSync(var0: java_lang_Double | number): string | null;
     /**
-     * @param var0 original type: 'float'
+     * @param var0 original type: 'char'
      * @return original return type: 'java.lang.String'
      */
-    static valueOf(var0: java_lang_Float | number): Promise<string | null>;
+    static valueOf(var0: string | null): Promise<string | null>;
     /**
-     * @param var0 original type: 'float'
+     * @param var0 original type: 'char'
      * @return original return type: 'java.lang.String'
      */
-    static valueOfSync(var0: java_lang_Float | number): string | null;
+    static valueOfSync(var0: string | null): string | null;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'java.lang.String'
      */
-    static valueOf(var0: java_lang_Long | bigint | number): Promise<string | null>;
+    static valueOf(var0: java_lang_Boolean | boolean): Promise<string | null>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'java.lang.String'
      */
-    static valueOfSync(var0: java_lang_Long | bigint | number): string | null;
+    static valueOfSync(var0: java_lang_Boolean | boolean): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static valueOf(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    static valueOfSync(var0: java_lang_Integer | number): string | null;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @return original return type: 'boolean'
@@ -830,6 +868,16 @@ export declare class StringClass extends JavaClass {
      */
     subSequenceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_lang_CharSequence | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    lastIndexOf(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    lastIndexOfSync(var0: java_lang_Integer | number): number;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'int'
      */
@@ -839,18 +887,6 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'int'
      */
     lastIndexOfSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    lastIndexOf(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    lastIndexOfSync(var0: string | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -864,15 +900,17 @@ export declare class StringClass extends JavaClass {
      */
     lastIndexOfSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    lastIndexOf(var0: java_lang_Integer | number): Promise<number>;
+    lastIndexOf(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    lastIndexOfSync(var0: java_lang_Integer | number): number;
+    lastIndexOfSync(var0: string | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -915,6 +953,16 @@ export declare class StringClass extends JavaClass {
     charsSync(): java_util_stream_IntStream | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    startsWith(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    startsWithSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'boolean'
      */
@@ -925,16 +973,6 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     startsWithSync(var0: string | null, var1: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    startsWith(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    startsWithSync(var0: string | null): boolean;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -947,15 +985,6 @@ export declare class StringClass extends JavaClass {
      * Original type: 'java.util.Comparator'
      */
     static readonly CASE_INSENSITIVE_ORDER: java_util_Comparator | JavaInterfaceProxy<java_util_ComparatorInterface> | null;
-    /**
-     * @param var0 original type: 'java.lang.StringBuffer'
-     */
-    constructor(var0: java_lang_StringBuffer | null);
-    /**
-     * @param var0 original type: 'java.lang.StringBuffer'
-     * @return original return type: 'java.lang.String'
-     */
-    static newInstanceAsync(var0: java_lang_StringBuffer | null): Promise<string>;
     /**
      * @param var0 original type: 'java.lang.StringBuilder'
      */
@@ -1024,6 +1053,15 @@ export declare class StringClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     static newInstanceAsync(var0: Buffer | null): Promise<string>;
+    /**
+     * @param var0 original type: 'java.lang.StringBuffer'
+     */
+    constructor(var0: java_lang_StringBuffer | null);
+    /**
+     * @param var0 original type: 'java.lang.StringBuffer'
+     * @return original return type: 'java.lang.String'
+     */
+    static newInstanceAsync(var0: java_lang_StringBuffer | null): Promise<string>;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'

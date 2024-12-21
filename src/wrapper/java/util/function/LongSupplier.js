@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongSupplier = exports.createLongSupplierProxy = void 0;
+exports.LongSupplier = void 0;
+exports.createLongSupplierProxy = createLongSupplierProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongSupplier} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongSupplierProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.LongSupplier', methods, opts);
 }
-exports.createLongSupplierProxy = createLongSupplierProxy;
 /**
  * Class java.util.function.LongSupplier.
  *

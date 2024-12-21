@@ -40,15 +40,13 @@ export declare class DurationClass extends JavaClass {
      */
     plusHoursSync(var0: java_lang_Long | bigint | number): Duration | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    isPositive(): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    compareToSync(var0: BasicOrJavaType | null): number;
+    isPositiveSync(): boolean;
     /**
      * @param var0 original type: 'java.time.Duration'
      * @return original return type: 'int'
@@ -59,6 +57,16 @@ export declare class DurationClass extends JavaClass {
      * @return original return type: 'int'
      */
     compareToSync(var0: DurationClass | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BasicOrJavaType | null): number;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.time.Duration'
@@ -188,16 +196,6 @@ export declare class DurationClass extends JavaClass {
      */
     toMillisPartSync(): number;
     /**
-     * @param var0 original type: 'java.time.Duration'
-     * @return original return type: 'java.time.Duration'
-     */
-    plus(var0: DurationClass | null): Promise<Duration | null>;
-    /**
-     * @param var0 original type: 'java.time.Duration'
-     * @return original return type: 'java.time.Duration'
-     */
-    plusSync(var0: DurationClass | null): Duration | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'java.time.Duration'
@@ -209,6 +207,16 @@ export declare class DurationClass extends JavaClass {
      * @return original return type: 'java.time.Duration'
      */
     plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Duration | null;
+    /**
+     * @param var0 original type: 'java.time.Duration'
+     * @return original return type: 'java.time.Duration'
+     */
+    plus(var0: DurationClass | null): Promise<Duration | null>;
+    /**
+     * @param var0 original type: 'java.time.Duration'
+     * @return original return type: 'java.time.Duration'
+     */
+    plusSync(var0: DurationClass | null): Duration | null;
     /**
      * @return original return type: 'long'
      */
@@ -280,16 +288,6 @@ export declare class DurationClass extends JavaClass {
      */
     static ofMillisSync(var0: java_lang_Long | bigint | number): Duration | null;
     /**
-     * @param var0 original type: 'java.time.Duration'
-     * @return original return type: 'java.time.Duration'
-     */
-    minus(var0: DurationClass | null): Promise<Duration | null>;
-    /**
-     * @param var0 original type: 'java.time.Duration'
-     * @return original return type: 'java.time.Duration'
-     */
-    minusSync(var0: DurationClass | null): Duration | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'java.time.Duration'
@@ -301,6 +299,26 @@ export declare class DurationClass extends JavaClass {
      * @return original return type: 'java.time.Duration'
      */
     minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Duration | null;
+    /**
+     * @param var0 original type: 'java.time.Duration'
+     * @return original return type: 'java.time.Duration'
+     */
+    minus(var0: DurationClass | null): Promise<Duration | null>;
+    /**
+     * @param var0 original type: 'java.time.Duration'
+     * @return original return type: 'java.time.Duration'
+     */
+    minusSync(var0: DurationClass | null): Duration | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -321,16 +339,6 @@ export declare class DurationClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.time.Duration'

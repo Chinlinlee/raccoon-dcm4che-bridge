@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Principal = exports.createPrincipalProxy = void 0;
+exports.Principal = void 0;
+exports.createPrincipalProxy = createPrincipalProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Principal} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPrincipalProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.Principal', methods, opts);
 }
-exports.createPrincipalProxy = createPrincipalProxy;
 /**
  * Class java.security.Principal.
  *

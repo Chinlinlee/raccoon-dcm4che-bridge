@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FileAttribute = exports.createFileAttributeProxy = void 0;
+exports.FileAttribute = void 0;
+exports.createFileAttributeProxy = createFileAttributeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link FileAttribute} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFileAttributeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.attribute.FileAttribute', methods, opts);
 }
-exports.createFileAttributeProxy = createFileAttributeProxy;
 /**
  * Class java.nio.file.attribute.FileAttribute.
  *

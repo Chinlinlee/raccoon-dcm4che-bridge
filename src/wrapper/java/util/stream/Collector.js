@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Collector = exports.createCollectorProxy = void 0;
+exports.Collector = void 0;
+exports.createCollectorProxy = createCollectorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Collector} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCollectorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.Collector', methods, opts);
 }
-exports.createCollectorProxy = createCollectorProxy;
 /**
  * Class java.util.stream.Collector.
  *

@@ -20,6 +20,16 @@ export declare class IntBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.nio.IntBuffer'
      */
@@ -85,16 +85,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     compareToSync(var0: IntBufferClass | null): number;
     /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    put(var0: (java_lang_Integer | number)[] | null): Promise<IntBuffer | null>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null): IntBuffer | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int[]'
      * @param var2 original type: 'int'
@@ -123,20 +113,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null): IntBuffer | null;
     /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    put(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<IntBuffer | null>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): IntBuffer | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.IntBuffer'
      * @param var2 original type: 'int'
@@ -153,6 +129,16 @@ export declare class IntBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: IntBufferClass | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): IntBuffer | null;
     /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    put(var0: (java_lang_Integer | number)[] | null): Promise<IntBuffer | null>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null): IntBuffer | null;
+    /**
      * @param var0 original type: 'java.nio.IntBuffer'
      * @return original return type: 'java.nio.IntBuffer'
      */
@@ -162,6 +148,30 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.IntBuffer'
      */
     putSync(var0: IntBufferClass | null): IntBuffer | null;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    put(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<IntBuffer | null>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): IntBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    put(var0: java_lang_Integer | number): Promise<IntBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    putSync(var0: java_lang_Integer | number): IntBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -174,16 +184,6 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.IntBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): IntBuffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    put(var0: java_lang_Integer | number): Promise<IntBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    putSync(var0: java_lang_Integer | number): IntBuffer | null;
     /**
      * @return original return type: 'java.nio.IntBuffer'
      */
@@ -233,14 +233,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     arraySync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    slice(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    sliceSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.IntBuffer'
      */
     slice(): Promise<IntBuffer | null>;
@@ -248,6 +240,14 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.IntBuffer'
      */
     sliceSync(): IntBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    slice(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    sliceSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -281,14 +281,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @return original return type: 'int'
-     */
-    get(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSync(): number;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int[]'
      * @return original return type: 'java.nio.IntBuffer'
@@ -310,22 +302,6 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     getSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    get(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<IntBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    getSync(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): IntBuffer | null;
     /**
      * @param var0 original type: 'int[]'
      * @param var1 original type: 'int'
@@ -352,14 +328,28 @@ export declare class IntBufferClass extends JavaClass {
     getSync(var0: (java_lang_Integer | number)[] | null): IntBuffer | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.IntBuffer'
      */
-    limit(var0: java_lang_Integer | number): Promise<IntBuffer | null>;
+    get(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<IntBuffer | null>;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.IntBuffer'
      */
-    limitSync(var0: java_lang_Integer | number): IntBuffer | null;
+    getSync(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): IntBuffer | null;
+    /**
+     * @return original return type: 'int'
+     */
+    get(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -370,6 +360,16 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    limit(var0: java_lang_Integer | number): Promise<IntBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    limitSync(var0: java_lang_Integer | number): IntBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -427,14 +427,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     hasRemainingSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clear(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clearSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.IntBuffer'
      */
     clear(): Promise<IntBuffer | null>;
@@ -442,6 +434,14 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.IntBuffer'
      */
     clearSync(): IntBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clear(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clearSync(): java_nio_Buffer | null;
     /**
      * @return original return type: 'java.nio.IntBuffer'
      */
@@ -467,14 +467,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     remainingSync(): number;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    rewind(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    rewindSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.IntBuffer'
      */
     rewind(): Promise<IntBuffer | null>;
@@ -482,6 +474,14 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.IntBuffer'
      */
     rewindSync(): IntBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    rewind(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    rewindSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.IntBuffer'
@@ -558,16 +558,6 @@ export declare class IntBufferClass extends JavaClass {
     positionSync(): number;
     /**
      * @param var0 original type: 'int[]'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    static wrap(var0: (java_lang_Integer | number)[] | null): Promise<IntBuffer | null>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @return original return type: 'java.nio.IntBuffer'
-     */
-    static wrapSync(var0: (java_lang_Integer | number)[] | null): IntBuffer | null;
-    /**
-     * @param var0 original type: 'int[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.nio.IntBuffer'
@@ -581,6 +571,16 @@ export declare class IntBufferClass extends JavaClass {
      */
     static wrapSync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): IntBuffer | null;
     /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    static wrap(var0: (java_lang_Integer | number)[] | null): Promise<IntBuffer | null>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @return original return type: 'java.nio.IntBuffer'
+     */
+    static wrapSync(var0: (java_lang_Integer | number)[] | null): IntBuffer | null;
+    /**
      * @return original return type: 'boolean'
      */
     isDirect(): Promise<boolean>;
@@ -589,14 +589,6 @@ export declare class IntBufferClass extends JavaClass {
      */
     isDirectSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    mark(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    markSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.IntBuffer'
      */
     mark(): Promise<IntBuffer | null>;
@@ -604,6 +596,14 @@ export declare class IntBufferClass extends JavaClass {
      * @return original return type: 'java.nio.IntBuffer'
      */
     markSync(): IntBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    mark(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    markSync(): java_nio_Buffer | null;
 }
 declare const IntBuffer_base: typeof IntBufferClass;
 /**

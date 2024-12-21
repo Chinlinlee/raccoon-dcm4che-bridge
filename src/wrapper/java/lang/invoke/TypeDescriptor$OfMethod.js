@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TypeDescriptor$OfMethod = exports.createTypeDescriptor$OfMethodProxy = void 0;
+exports.TypeDescriptor$OfMethod = void 0;
+exports.createTypeDescriptor$OfMethodProxy = createTypeDescriptor$OfMethodProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TypeDescriptor$OfMethod} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTypeDescriptor$OfMethodProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.invoke.TypeDescriptor$OfMethod', methods, opts);
 }
-exports.createTypeDescriptor$OfMethodProxy = createTypeDescriptor$OfMethodProxy;
 /**
  * Class java.lang.invoke.TypeDescriptor$OfMethod.
  *

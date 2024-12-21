@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DicomInputHandler = exports.createDicomInputHandlerProxy = void 0;
+exports.DicomInputHandler = void 0;
+exports.createDicomInputHandlerProxy = createDicomInputHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DicomInputHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDicomInputHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.io.DicomInputHandler', methods, opts);
 }
-exports.createDicomInputHandlerProxy = createDicomInputHandlerProxy;
 /**
  * Class org.dcm4che3.io.DicomInputHandler.
  *

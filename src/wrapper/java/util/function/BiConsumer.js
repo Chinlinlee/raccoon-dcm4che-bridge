@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BiConsumer = exports.createBiConsumerProxy = void 0;
+exports.BiConsumer = void 0;
+exports.createBiConsumerProxy = createBiConsumerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link BiConsumer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createBiConsumerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.BiConsumer', methods, opts);
 }
-exports.createBiConsumerProxy = createBiConsumerProxy;
 /**
  * Class java.util.function.BiConsumer.
  *

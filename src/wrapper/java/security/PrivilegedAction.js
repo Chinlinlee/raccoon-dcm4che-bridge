@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PrivilegedAction = exports.createPrivilegedActionProxy = void 0;
+exports.PrivilegedAction = void 0;
+exports.createPrivilegedActionProxy = createPrivilegedActionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PrivilegedAction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPrivilegedActionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.PrivilegedAction', methods, opts);
 }
-exports.createPrivilegedActionProxy = createPrivilegedActionProxy;
 /**
  * Class java.security.PrivilegedAction.
  *

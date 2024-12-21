@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BulkDataCreator = exports.createBulkDataCreatorProxy = void 0;
+exports.BulkDataCreator = void 0;
+exports.createBulkDataCreatorProxy = createBulkDataCreatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link BulkDataCreator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createBulkDataCreatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.io.BulkDataCreator', methods, opts);
 }
-exports.createBulkDataCreatorProxy = createBulkDataCreatorProxy;
 /**
  * Class org.dcm4che3.io.BulkDataCreator.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OpenOption = exports.createOpenOptionProxy = void 0;
+exports.OpenOption = void 0;
+exports.createOpenOptionProxy = createOpenOptionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link OpenOption} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createOpenOptionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.OpenOption', methods, opts);
 }
-exports.createOpenOptionProxy = createOpenOptionProxy;
 /**
  * Class java.nio.file.OpenOption.
  *

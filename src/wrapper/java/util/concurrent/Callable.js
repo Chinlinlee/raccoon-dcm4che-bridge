@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Callable = exports.createCallableProxy = void 0;
+exports.Callable = void 0;
+exports.createCallableProxy = createCallableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Callable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCallableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.concurrent.Callable', methods, opts);
 }
-exports.createCallableProxy = createCallableProxy;
 /**
  * Class java.util.concurrent.Callable.
  *

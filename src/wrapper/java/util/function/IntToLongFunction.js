@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntToLongFunction = exports.createIntToLongFunctionProxy = void 0;
+exports.IntToLongFunction = void 0;
+exports.createIntToLongFunctionProxy = createIntToLongFunctionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IntToLongFunction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIntToLongFunctionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.IntToLongFunction', methods, opts);
 }
-exports.createIntToLongFunctionProxy = createIntToLongFunctionProxy;
 /**
  * Class java.util.function.IntToLongFunction.
  *

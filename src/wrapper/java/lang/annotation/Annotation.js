@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Annotation = exports.createAnnotationProxy = void 0;
+exports.Annotation = void 0;
+exports.createAnnotationProxy = createAnnotationProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Annotation} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAnnotationProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.annotation.Annotation', methods, opts);
 }
-exports.createAnnotationProxy = createAnnotationProxy;
 /**
  * Class java.lang.annotation.Annotation.
  *

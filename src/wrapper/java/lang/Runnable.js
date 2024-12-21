@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Runnable = exports.createRunnableProxy = void 0;
+exports.Runnable = void 0;
+exports.createRunnableProxy = createRunnableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Runnable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createRunnableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.Runnable', methods, opts);
 }
-exports.createRunnableProxy = createRunnableProxy;
 /**
  * Class java.lang.Runnable.
  *

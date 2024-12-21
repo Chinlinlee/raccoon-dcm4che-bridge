@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContentHandlerFactory = exports.createContentHandlerFactoryProxy = void 0;
+exports.ContentHandlerFactory = void 0;
+exports.createContentHandlerFactoryProxy = createContentHandlerFactoryProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ContentHandlerFactory} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createContentHandlerFactoryProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.net.ContentHandlerFactory', methods, opts);
 }
-exports.createContentHandlerFactoryProxy = createContentHandlerFactoryProxy;
 /**
  * Class java.net.ContentHandlerFactory.
  *

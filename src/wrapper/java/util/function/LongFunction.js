@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongFunction = exports.createLongFunctionProxy = void 0;
+exports.LongFunction = void 0;
+exports.createLongFunctionProxy = createLongFunctionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongFunction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongFunctionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.LongFunction', methods, opts);
 }
-exports.createLongFunctionProxy = createLongFunctionProxy;
 /**
  * Class java.util.function.LongFunction.
  *

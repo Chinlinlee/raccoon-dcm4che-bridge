@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntStream = exports.createIntStreamProxy = void 0;
+exports.IntStream = void 0;
+exports.createIntStreamProxy = createIntStreamProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IntStream} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIntStreamProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.IntStream', methods, opts);
 }
-exports.createIntStreamProxy = createIntStreamProxy;
 /**
  * Class java.util.stream.IntStream.
  *

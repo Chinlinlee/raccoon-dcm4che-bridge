@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GenericDeclaration = exports.createGenericDeclarationProxy = void 0;
+exports.GenericDeclaration = void 0;
+exports.createGenericDeclarationProxy = createGenericDeclarationProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link GenericDeclaration} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createGenericDeclarationProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.reflect.GenericDeclaration', methods, opts);
 }
-exports.createGenericDeclarationProxy = createGenericDeclarationProxy;
 /**
  * Class java.lang.reflect.GenericDeclaration.
  *

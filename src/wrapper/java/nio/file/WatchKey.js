@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WatchKey = exports.createWatchKeyProxy = void 0;
+exports.WatchKey = void 0;
+exports.createWatchKeyProxy = createWatchKeyProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link WatchKey} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWatchKeyProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.WatchKey', methods, opts);
 }
-exports.createWatchKeyProxy = createWatchKeyProxy;
 /**
  * Class java.nio.file.WatchKey.
  *

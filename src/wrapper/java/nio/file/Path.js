@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Path = exports.createPathProxy = void 0;
+exports.Path = void 0;
+exports.createPathProxy = createPathProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Path} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPathProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.Path', methods, opts);
 }
-exports.createPathProxy = createPathProxy;
 /**
  * Class java.nio.file.Path.
  *

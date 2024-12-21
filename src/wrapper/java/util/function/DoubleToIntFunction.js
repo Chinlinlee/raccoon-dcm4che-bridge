@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DoubleToIntFunction = exports.createDoubleToIntFunctionProxy = void 0;
+exports.DoubleToIntFunction = void 0;
+exports.createDoubleToIntFunctionProxy = createDoubleToIntFunctionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DoubleToIntFunction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDoubleToIntFunctionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.DoubleToIntFunction', methods, opts);
 }
-exports.createDoubleToIntFunctionProxy = createDoubleToIntFunctionProxy;
 /**
  * Class java.util.function.DoubleToIntFunction.
  *

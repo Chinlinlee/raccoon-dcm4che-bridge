@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Stream$Builder = exports.createStream$BuilderProxy = void 0;
+exports.Stream$Builder = void 0;
+exports.createStream$BuilderProxy = createStream$BuilderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Stream$Builder} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createStream$BuilderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.Stream$Builder', methods, opts);
 }
-exports.createStream$BuilderProxy = createStream$BuilderProxy;
 /**
  * Class java.util.stream.Stream$Builder.
  *

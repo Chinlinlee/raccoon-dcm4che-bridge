@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SortedMap = exports.createSortedMapProxy = void 0;
+exports.SortedMap = void 0;
+exports.createSortedMapProxy = createSortedMapProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SortedMap} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSortedMapProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.SortedMap', methods, opts);
 }
-exports.createSortedMapProxy = createSortedMapProxy;
 /**
  * Class java.util.SortedMap.
  *

@@ -3,8 +3,8 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { IOD$Condition as org_dcm4che3_data_IOD$Condition } from "./IOD$Condition";
-import { Code as org_dcm4che3_data_Code } from "./Code";
 import { IOD as org_dcm4che3_data_IOD } from "./IOD";
+import { Code as org_dcm4che3_data_Code } from "./Code";
 import { VR as org_dcm4che3_data_VR } from "./VR";
 import { IOD$DataElementType as org_dcm4che3_data_IOD$DataElementType } from "./IOD$DataElementType";
 /**
@@ -21,6 +21,16 @@ export declare class IOD$DataElementClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -41,16 +51,6 @@ export declare class IOD$DataElementClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.Object'
      */
@@ -110,6 +110,16 @@ export declare class IOD$DataElementClass extends JavaClass {
      */
     getValueNumberSync(): number;
     /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    addItemIOD(var0: org_dcm4che3_data_IOD | null): Promise<IOD$DataElement | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    addItemIODSync(var0: org_dcm4che3_data_IOD | null): IOD$DataElement | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.data.Code[]'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
@@ -139,16 +149,6 @@ export declare class IOD$DataElementClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
     setValuesSync(var0: (string | null)[] | null): IOD$DataElement | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    addItemIOD(var0: org_dcm4che3_data_IOD | null): Promise<IOD$DataElement | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    addItemIODSync(var0: org_dcm4che3_data_IOD | null): IOD$DataElement | null;
     /**
      * @return original return type: 'int'
      */

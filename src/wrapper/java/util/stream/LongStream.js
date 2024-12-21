@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongStream = exports.createLongStreamProxy = void 0;
+exports.LongStream = void 0;
+exports.createLongStreamProxy = createLongStreamProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongStream} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongStreamProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.LongStream', methods, opts);
 }
-exports.createLongStreamProxy = createLongStreamProxy;
 /**
  * Class java.util.stream.LongStream.
  *

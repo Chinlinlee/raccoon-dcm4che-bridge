@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TemporalField = exports.createTemporalFieldProxy = void 0;
+exports.TemporalField = void 0;
+exports.createTemporalFieldProxy = createTemporalFieldProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TemporalField} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTemporalFieldProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.temporal.TemporalField', methods, opts);
 }
-exports.createTemporalFieldProxy = createTemporalFieldProxy;
 /**
  * Class java.time.temporal.TemporalField.
  *

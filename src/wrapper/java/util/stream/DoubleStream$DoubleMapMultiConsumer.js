@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DoubleStream$DoubleMapMultiConsumer = exports.createDoubleStream$DoubleMapMultiConsumerProxy = void 0;
+exports.DoubleStream$DoubleMapMultiConsumer = void 0;
+exports.createDoubleStream$DoubleMapMultiConsumerProxy = createDoubleStream$DoubleMapMultiConsumerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DoubleStream$DoubleMapMultiConsumer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDoubleStream$DoubleMapMultiConsumerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.stream.DoubleStream$DoubleMapMultiConsumer', methods, opts);
 }
-exports.createDoubleStream$DoubleMapMultiConsumerProxy = createDoubleStream$DoubleMapMultiConsumerProxy;
 /**
  * Class java.util.stream.DoubleStream$DoubleMapMultiConsumer.
  *

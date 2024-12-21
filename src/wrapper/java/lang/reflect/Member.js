@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Member = exports.createMemberProxy = void 0;
+exports.Member = void 0;
+exports.createMemberProxy = createMemberProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Member} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMemberProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.reflect.Member', methods, opts);
 }
-exports.createMemberProxy = createMemberProxy;
 /**
  * Class java.lang.reflect.Member.
  *

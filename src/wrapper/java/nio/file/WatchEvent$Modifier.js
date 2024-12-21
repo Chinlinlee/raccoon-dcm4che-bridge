@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WatchEvent$Modifier = exports.createWatchEvent$ModifierProxy = void 0;
+exports.WatchEvent$Modifier = void 0;
+exports.createWatchEvent$ModifierProxy = createWatchEvent$ModifierProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link WatchEvent$Modifier} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWatchEvent$ModifierProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.WatchEvent$Modifier', methods, opts);
 }
-exports.createWatchEvent$ModifierProxy = createWatchEvent$ModifierProxy;
 /**
  * Class java.nio.file.WatchEvent$Modifier.
  *

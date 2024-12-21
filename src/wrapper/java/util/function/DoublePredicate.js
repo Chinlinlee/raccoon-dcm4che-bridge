@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DoublePredicate = exports.createDoublePredicateProxy = void 0;
+exports.DoublePredicate = void 0;
+exports.createDoublePredicateProxy = createDoublePredicateProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DoublePredicate} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDoublePredicateProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.DoublePredicate', methods, opts);
 }
-exports.createDoublePredicateProxy = createDoublePredicateProxy;
 /**
  * Class java.util.function.DoublePredicate.
  *

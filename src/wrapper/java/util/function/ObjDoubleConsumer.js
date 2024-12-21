@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObjDoubleConsumer = exports.createObjDoubleConsumerProxy = void 0;
+exports.ObjDoubleConsumer = void 0;
+exports.createObjDoubleConsumerProxy = createObjDoubleConsumerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ObjDoubleConsumer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createObjDoubleConsumerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.ObjDoubleConsumer', methods, opts);
 }
-exports.createObjDoubleConsumerProxy = createObjDoubleConsumerProxy;
 /**
  * Class java.util.function.ObjDoubleConsumer.
  *

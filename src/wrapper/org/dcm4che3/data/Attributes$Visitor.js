@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Attributes$Visitor = exports.createAttributes$VisitorProxy = void 0;
+exports.Attributes$Visitor = void 0;
+exports.createAttributes$VisitorProxy = createAttributes$VisitorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Attributes$Visitor} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAttributes$VisitorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.data.Attributes$Visitor', methods, opts);
 }
-exports.createAttributes$VisitorProxy = createAttributes$VisitorProxy;
 /**
  * Class org.dcm4che3.data.Attributes$Visitor.
  *

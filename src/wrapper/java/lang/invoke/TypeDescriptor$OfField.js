@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TypeDescriptor$OfField = exports.createTypeDescriptor$OfFieldProxy = void 0;
+exports.TypeDescriptor$OfField = void 0;
+exports.createTypeDescriptor$OfFieldProxy = createTypeDescriptor$OfFieldProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TypeDescriptor$OfField} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTypeDescriptor$OfFieldProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.invoke.TypeDescriptor$OfField', methods, opts);
 }
-exports.createTypeDescriptor$OfFieldProxy = createTypeDescriptor$OfFieldProxy;
 /**
  * Class java.lang.invoke.TypeDescriptor$OfField.
  *

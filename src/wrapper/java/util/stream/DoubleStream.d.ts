@@ -162,14 +162,6 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     minSync(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallel(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallelSync(): java_util_stream_BaseStream | null;
-    /**
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     parallel(): Promise<DoubleStream | null>;
@@ -177,6 +169,14 @@ export declare class DoubleStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     parallelSync(): DoubleStream | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallel(): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallelSync(): java_util_stream_BaseStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoubleToLongFunction'
      * @return original return type: 'java.util.stream.LongStream'
@@ -206,16 +206,6 @@ export declare class DoubleStreamClass extends JavaClass {
      */
     noneMatchSync(var0: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null): boolean;
     /**
-     * @param var0 original type: 'double[]'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static of(var0: (java_lang_Double | number)[] | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'double[]'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static ofSync(var0: (java_lang_Double | number)[] | null): DoubleStream | null;
-    /**
      * @param var0 original type: 'double'
      * @return original return type: 'java.util.stream.DoubleStream'
      */
@@ -225,6 +215,16 @@ export declare class DoubleStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     static ofSync(var0: java_lang_Double | number): DoubleStream | null;
+    /**
+     * @param var0 original type: 'double[]'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    static of(var0: (java_lang_Double | number)[] | null): Promise<DoubleStream | null>;
+    /**
+     * @param var0 original type: 'double[]'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    static ofSync(var0: (java_lang_Double | number)[] | null): DoubleStream | null;
     /**
      * @return original return type: 'double[]'
      */
@@ -309,6 +309,18 @@ export declare class DoubleStreamClass extends JavaClass {
     closeSync(): void;
     /**
      * @param var0 original type: 'double'
+     * @param var1 original type: 'java.util.function.DoubleUnaryOperator'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    static iterate(var0: java_lang_Double | number, var1: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): Promise<DoubleStream | null>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'java.util.function.DoubleUnaryOperator'
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    static iterateSync(var0: java_lang_Double | number, var1: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
+    /**
+     * @param var0 original type: 'double'
      * @param var1 original type: 'java.util.function.DoublePredicate'
      * @param var2 original type: 'java.util.function.DoubleUnaryOperator'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -321,18 +333,6 @@ export declare class DoubleStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     static iterateSync(var0: java_lang_Double | number, var1: java_util_function_DoublePredicate | JavaInterfaceProxy<java_util_function_DoublePredicateInterface> | null, var2: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'java.util.function.DoubleUnaryOperator'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static iterate(var0: java_lang_Double | number, var1: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): Promise<DoubleStream | null>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'java.util.function.DoubleUnaryOperator'
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    static iterateSync(var0: java_lang_Double | number, var1: java_util_function_DoubleUnaryOperator | JavaInterfaceProxy<java_util_function_DoubleUnaryOperatorInterface> | null): DoubleStream | null;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'java.util.function.DoubleBinaryOperator'
@@ -594,15 +594,15 @@ export interface DoubleStreamInterface {
      */
     min(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallel?(): java_util_stream_BaseStream | null;
-    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     parallel?(): DoubleStream | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallel?(): java_util_stream_BaseStream | null;
     /**
      * @param var0 original type: 'java.util.function.DoubleToLongFunction'
      * @return original return type: 'java.util.stream.LongStream'

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.URLStreamHandlerFactory = exports.createURLStreamHandlerFactoryProxy = void 0;
+exports.URLStreamHandlerFactory = void 0;
+exports.createURLStreamHandlerFactoryProxy = createURLStreamHandlerFactoryProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link URLStreamHandlerFactory} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createURLStreamHandlerFactoryProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.net.URLStreamHandlerFactory', methods, opts);
 }
-exports.createURLStreamHandlerFactoryProxy = createURLStreamHandlerFactoryProxy;
 /**
  * Class java.net.URLStreamHandlerFactory.
  *
