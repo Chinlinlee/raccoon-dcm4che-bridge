@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Future = exports.createFutureProxy = void 0;
+exports.Future = void 0;
+exports.createFutureProxy = createFutureProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Future} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFutureProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.concurrent.Future', methods, opts);
 }
-exports.createFutureProxy = createFutureProxy;
 /**
  * Class java.util.concurrent.Future.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongPredicate = exports.createLongPredicateProxy = void 0;
+exports.LongPredicate = void 0;
+exports.createLongPredicateProxy = createLongPredicateProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongPredicate} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongPredicateProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.LongPredicate', methods, opts);
 }
-exports.createLongPredicateProxy = createLongPredicateProxy;
 /**
  * Class java.util.function.LongPredicate.
  *

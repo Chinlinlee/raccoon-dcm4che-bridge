@@ -5,8 +5,8 @@ import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./temporal/TemporalUnit";
-import { IsoChronology as java_time_chrono_IsoChronology } from "./chrono/IsoChronology";
 import { Chronology as java_time_chrono_Chronology } from "./chrono/Chronology";
+import { IsoChronology as java_time_chrono_IsoChronology } from "./chrono/IsoChronology";
 import { LocalDate as java_time_LocalDate } from "./LocalDate";
 import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./../lang/CharSequence";
 import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./temporal/Temporal";
@@ -63,6 +63,16 @@ export declare class PeriodClass extends JavaClass {
     negatedSync(): java_time_chrono_ChronoPeriod | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -81,16 +91,6 @@ export declare class PeriodClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.time.chrono.ChronoPeriod'
      */
@@ -240,14 +240,6 @@ export declare class PeriodClass extends JavaClass {
      */
     withDaysSync(var0: java_lang_Integer | number): Period | null;
     /**
-     * @return original return type: 'java.time.chrono.IsoChronology'
-     */
-    getChronology(): Promise<java_time_chrono_IsoChronology | null>;
-    /**
-     * @return original return type: 'java.time.chrono.IsoChronology'
-     */
-    getChronologySync(): java_time_chrono_IsoChronology | null;
-    /**
      * @return original return type: 'java.time.chrono.Chronology'
      */
     getChronology(): Promise<java_time_chrono_Chronology | null>;
@@ -255,6 +247,14 @@ export declare class PeriodClass extends JavaClass {
      * @return original return type: 'java.time.chrono.Chronology'
      */
     getChronologySync(): java_time_chrono_Chronology | null;
+    /**
+     * @return original return type: 'java.time.chrono.IsoChronology'
+     */
+    getChronology(): Promise<java_time_chrono_IsoChronology | null>;
+    /**
+     * @return original return type: 'java.time.chrono.IsoChronology'
+     */
+    getChronologySync(): java_time_chrono_IsoChronology | null;
     /**
      * @param var0 original type: 'java.time.LocalDate'
      * @param var1 original type: 'java.time.LocalDate'

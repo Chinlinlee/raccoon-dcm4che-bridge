@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
@@ -27,6 +25,16 @@ export declare class BulkDataClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -45,16 +53,6 @@ export declare class BulkDataClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -88,14 +86,6 @@ export declare class BulkDataClass extends JavaClass {
      */
     bigEndianSync(): boolean;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUUIDSync(): string | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.io.DicomEncodingOptions'
      * @param var1 original type: 'boolean'
      * @param var2 original type: 'org.dcm4che3.data.VR'
@@ -109,6 +99,14 @@ export declare class BulkDataClass extends JavaClass {
      * @return original return type: 'int'
      */
     calcLengthSync(var0: org_dcm4che3_io_DicomEncodingOptions | null, var1: java_lang_Boolean | boolean, var2: org_dcm4che3_data_VR | null): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUUIDSync(): string | null;
     /**
      * @return original return type: 'int'
      */

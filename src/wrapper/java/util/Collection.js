@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Collection = exports.createCollectionProxy = void 0;
+exports.Collection = void 0;
+exports.createCollectionProxy = createCollectionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Collection} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCollectionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Collection', methods, opts);
 }
-exports.createCollectionProxy = createCollectionProxy;
 /**
  * Class java.util.Collection.
  *

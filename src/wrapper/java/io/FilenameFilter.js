@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FilenameFilter = exports.createFilenameFilterProxy = void 0;
+exports.FilenameFilter = void 0;
+exports.createFilenameFilterProxy = createFilenameFilterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link FilenameFilter} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFilenameFilterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.io.FilenameFilter', methods, opts);
 }
-exports.createFilenameFilterProxy = createFilenameFilterProxy;
 /**
  * Class java.io.FilenameFilter.
  *

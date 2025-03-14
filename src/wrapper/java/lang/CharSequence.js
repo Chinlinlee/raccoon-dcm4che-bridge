@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CharSequence = exports.createCharSequenceProxy = void 0;
+exports.CharSequence = void 0;
+exports.createCharSequenceProxy = createCharSequenceProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CharSequence} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCharSequenceProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.CharSequence', methods, opts);
 }
-exports.createCharSequenceProxy = createCharSequenceProxy;
 /**
  * Class java.lang.CharSequence.
  *

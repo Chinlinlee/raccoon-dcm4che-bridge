@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FileNameMap = exports.createFileNameMapProxy = void 0;
+exports.FileNameMap = void 0;
+exports.createFileNameMapProxy = createFileNameMapProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link FileNameMap} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFileNameMapProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.net.FileNameMap', methods, opts);
 }
-exports.createFileNameMapProxy = createFileNameMapProxy;
 /**
  * Class java.net.FileNameMap.
  *

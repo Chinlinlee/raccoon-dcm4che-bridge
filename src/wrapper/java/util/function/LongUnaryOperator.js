@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongUnaryOperator = exports.createLongUnaryOperatorProxy = void 0;
+exports.LongUnaryOperator = void 0;
+exports.createLongUnaryOperatorProxy = createLongUnaryOperatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LongUnaryOperator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLongUnaryOperatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.LongUnaryOperator', methods, opts);
 }
-exports.createLongUnaryOperatorProxy = createLongUnaryOperatorProxy;
 /**
  * Class java.util.function.LongUnaryOperator.
  *

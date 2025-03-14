@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WritableByteChannel = exports.createWritableByteChannelProxy = void 0;
+exports.WritableByteChannel = void 0;
+exports.createWritableByteChannelProxy = createWritableByteChannelProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link WritableByteChannel} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWritableByteChannelProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.channels.WritableByteChannel', methods, opts);
 }
-exports.createWritableByteChannelProxy = createWritableByteChannelProxy;
 /**
  * Class java.nio.channels.WritableByteChannel.
  *

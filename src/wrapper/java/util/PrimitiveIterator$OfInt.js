@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PrimitiveIterator$OfInt = exports.createPrimitiveIterator$OfIntProxy = void 0;
+exports.PrimitiveIterator$OfInt = void 0;
+exports.createPrimitiveIterator$OfIntProxy = createPrimitiveIterator$OfIntProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PrimitiveIterator$OfInt} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPrimitiveIterator$OfIntProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.PrimitiveIterator$OfInt', methods, opts);
 }
-exports.createPrimitiveIterator$OfIntProxy = createPrimitiveIterator$OfIntProxy;
 /**
  * Class java.util.PrimitiveIterator$OfInt.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DoubleUnaryOperator = exports.createDoubleUnaryOperatorProxy = void 0;
+exports.DoubleUnaryOperator = void 0;
+exports.createDoubleUnaryOperatorProxy = createDoubleUnaryOperatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DoubleUnaryOperator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDoubleUnaryOperatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.DoubleUnaryOperator', methods, opts);
 }
-exports.createDoubleUnaryOperatorProxy = createDoubleUnaryOperatorProxy;
 /**
  * Class java.util.function.DoubleUnaryOperator.
  *

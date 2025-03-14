@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TemporalAdjuster = exports.createTemporalAdjusterProxy = void 0;
+exports.TemporalAdjuster = void 0;
+exports.createTemporalAdjusterProxy = createTemporalAdjusterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TemporalAdjuster} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTemporalAdjusterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.temporal.TemporalAdjuster', methods, opts);
 }
-exports.createTemporalAdjusterProxy = createTemporalAdjusterProxy;
 /**
  * Class java.time.temporal.TemporalAdjuster.
  *

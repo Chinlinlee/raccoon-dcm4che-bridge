@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ThreadFactory = exports.createThreadFactoryProxy = void 0;
+exports.ThreadFactory = void 0;
+exports.createThreadFactoryProxy = createThreadFactoryProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ThreadFactory} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createThreadFactoryProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.concurrent.ThreadFactory', methods, opts);
 }
-exports.createThreadFactoryProxy = createThreadFactoryProxy;
 /**
  * Class java.util.concurrent.ThreadFactory.
  *

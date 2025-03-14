@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Set = exports.createSetProxy = void 0;
+exports.Set = void 0;
+exports.createSetProxy = createSetProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Set} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSetProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Set', methods, opts);
 }
-exports.createSetProxy = createSetProxy;
 /**
  * Class java.util.Set.
  *

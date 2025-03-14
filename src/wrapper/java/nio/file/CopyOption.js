@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CopyOption = exports.createCopyOptionProxy = void 0;
+exports.CopyOption = void 0;
+exports.createCopyOptionProxy = createCopyOptionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CopyOption} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCopyOptionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.CopyOption', methods, opts);
 }
-exports.createCopyOptionProxy = createCopyOptionProxy;
 /**
  * Class java.nio.file.CopyOption.
  *

@@ -19,6 +19,16 @@ export declare class ValueRangeClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -37,16 +47,6 @@ export declare class ValueRangeClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -176,18 +176,6 @@ export declare class ValueRangeClass extends JavaClass {
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'long'
-     */
-    checkValidValue(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'long'
-     */
-    checkValidValueSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'int'
      */
     checkValidIntValue(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
@@ -197,6 +185,18 @@ export declare class ValueRangeClass extends JavaClass {
      * @return original return type: 'int'
      */
     checkValidIntValueSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'long'
+     */
+    checkValidValue(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'long'
+     */
+    checkValidValueSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'boolean'

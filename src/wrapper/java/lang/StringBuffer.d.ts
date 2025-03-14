@@ -4,9 +4,9 @@ import { AbstractStringBuilder as java_lang_AbstractStringBuilder } from "./Abst
 import { Class as java_lang_Class } from "./Class";
 import { Long as java_lang_Long } from "./Long";
 import { Boolean as java_lang_Boolean } from "./Boolean";
-import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./CharSequence";
 import { Float as java_lang_Float } from "./Float";
 import { Double as java_lang_Double } from "./Double";
+import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./CharSequence";
 import { IntStream as java_util_stream_IntStream } from "./../util/stream/IntStream";
 import { Appendable as java_lang_Appendable } from "./Appendable";
 /**
@@ -45,6 +45,16 @@ export declare class StringBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -63,16 +73,6 @@ export declare class StringBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -95,20 +95,6 @@ export declare class StringBufferClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    replace(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): Promise<java_lang_AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    replaceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): java_lang_AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.String'
      * @return original return type: 'java.lang.StringBuffer'
      */
     replace(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): Promise<StringBuffer | null>;
@@ -121,6 +107,20 @@ export declare class StringBufferClass extends JavaClass {
     replaceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    replace(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): Promise<java_lang_AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    replaceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null): java_lang_AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'char'
      * @return original return type: 'void'
      */
@@ -131,6 +131,30 @@ export declare class StringBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     setCharAtSync(var0: java_lang_Integer | number, var1: string | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insert(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<java_lang_AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): java_lang_AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insert(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<StringBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -205,62 +229,6 @@ export declare class StringBufferClass extends JavaClass {
     insertSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.CharSequence'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<java_lang_AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.CharSequence'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): java_lang_AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.CharSequence'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.StringBuffer'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<StringBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.CharSequence'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.StringBuffer'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): StringBuffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<java_lang_AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): java_lang_AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.StringBuffer'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<StringBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.StringBuffer'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): StringBuffer | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'float'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
@@ -310,6 +278,18 @@ export declare class StringBufferClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insert(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): Promise<StringBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): StringBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
     insert(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): Promise<java_lang_AbstractStringBuilder | null>;
@@ -321,16 +301,28 @@ export declare class StringBufferClass extends JavaClass {
     insertSync(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): java_lang_AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.StringBuffer'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
      */
-    insert(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): Promise<StringBuffer | null>;
+    insert(var0: java_lang_Integer | number, var1: string | null): Promise<java_lang_AbstractStringBuilder | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: string | null): java_lang_AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.StringBuffer'
      */
-    insertSync(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): StringBuffer | null;
+    insert(var0: java_lang_Integer | number, var1: string | null): Promise<StringBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: string | null): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'char[]'
@@ -363,30 +355,6 @@ export declare class StringBufferClass extends JavaClass {
      * @return original return type: 'java.lang.StringBuffer'
      */
     insertSync(var0: java_lang_Integer | number, var1: (string | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): StringBuffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: string | null): Promise<java_lang_AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: string | null): java_lang_AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.StringBuffer'
-     */
-    insert(var0: java_lang_Integer | number, var1: string | null): Promise<StringBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.StringBuffer'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: string | null): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'char[]'
@@ -436,6 +404,38 @@ export declare class StringBufferClass extends JavaClass {
      */
     insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): StringBuffer | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.CharSequence'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insert(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<java_lang_AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.CharSequence'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): java_lang_AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.CharSequence'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insert(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<StringBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.CharSequence'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): StringBuffer | null;
+    /**
      * @param var0 original type: 'java.lang.StringBuffer'
      * @return original return type: 'int'
      */
@@ -481,6 +481,16 @@ export declare class StringBufferClass extends JavaClass {
     deleteSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    substring(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    substringSync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
@@ -491,16 +501,6 @@ export declare class StringBufferClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     substringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    substring(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    substringSync(var0: java_lang_Integer | number): string | null;
     /**
      * @return original return type: 'void'
      */
@@ -519,16 +519,6 @@ export declare class StringBufferClass extends JavaClass {
     capacitySync(): number;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    appendCodePoint(var0: java_lang_Integer | number): Promise<java_lang_AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    appendCodePointSync(var0: java_lang_Integer | number): java_lang_AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
      * @return original return type: 'java.lang.StringBuffer'
      */
     appendCodePoint(var0: java_lang_Integer | number): Promise<StringBuffer | null>;
@@ -538,6 +528,16 @@ export declare class StringBufferClass extends JavaClass {
      */
     appendCodePointSync(var0: java_lang_Integer | number): StringBuffer | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    appendCodePoint(var0: java_lang_Integer | number): Promise<java_lang_AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    appendCodePointSync(var0: java_lang_Integer | number): java_lang_AbstractStringBuilder | null;
+    /**
      * @return original return type: 'int'
      */
     hashCode(): Promise<number>;
@@ -545,6 +545,54 @@ export declare class StringBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeat(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): Promise<java_lang_AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeatSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): java_lang_AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    repeat(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): Promise<StringBuffer | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    repeatSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): StringBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeat(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_lang_AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_lang_AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    repeat(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<StringBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.StringBuffer'
+     */
+    repeatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): StringBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -557,16 +605,6 @@ export declare class StringBufferClass extends JavaClass {
     codePointBeforeSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    indexOf(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    indexOfSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
@@ -577,6 +615,16 @@ export declare class StringBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     indexOfSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    indexOf(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    indexOfSync(var0: string | null): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'

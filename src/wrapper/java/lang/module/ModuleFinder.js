@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModuleFinder = exports.createModuleFinderProxy = void 0;
+exports.ModuleFinder = void 0;
+exports.createModuleFinderProxy = createModuleFinderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ModuleFinder} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createModuleFinderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.module.ModuleFinder', methods, opts);
 }
-exports.createModuleFinderProxy = createModuleFinderProxy;
 /**
  * Class java.lang.module.ModuleFinder.
  *

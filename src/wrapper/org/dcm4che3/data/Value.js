@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Value = exports.createValueProxy = void 0;
+exports.Value = void 0;
+exports.createValueProxy = createValueProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Value} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createValueProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.data.Value', methods, opts);
 }
-exports.createValueProxy = createValueProxy;
 /**
  * Class org.dcm4che3.data.Value.
  *

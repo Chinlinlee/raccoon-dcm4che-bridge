@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PathMatcher = exports.createPathMatcherProxy = void 0;
+exports.PathMatcher = void 0;
+exports.createPathMatcherProxy = createPathMatcherProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PathMatcher} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPathMatcherProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.PathMatcher', methods, opts);
 }
-exports.createPathMatcherProxy = createPathMatcherProxy;
 /**
  * Class java.nio.file.PathMatcher.
  *

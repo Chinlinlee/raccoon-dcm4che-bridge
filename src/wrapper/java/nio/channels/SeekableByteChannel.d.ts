@@ -44,14 +44,6 @@ export declare class SeekableByteChannelClass extends JavaClass {
      */
     truncateSync(var0: java_lang_Long | bigint | number): SeekableByteChannel | null;
     /**
-     * @return original return type: 'long'
-     */
-    position(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    positionSync(): number;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
@@ -61,6 +53,14 @@ export declare class SeekableByteChannelClass extends JavaClass {
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
     positionSync(var0: java_lang_Long | bigint | number): SeekableByteChannel | null;
+    /**
+     * @return original return type: 'long'
+     */
+    position(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    positionSync(): number;
     /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @return original return type: 'int'
@@ -111,14 +111,14 @@ export interface SeekableByteChannelInterface {
      */
     truncate(var0: java_lang_Long | bigint | number): SeekableByteChannel | null;
     /**
-     * @return original return type: 'long'
-     */
-    position(): number;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
     position(var0: java_lang_Long | bigint | number): SeekableByteChannel | null;
+    /**
+     * @return original return type: 'long'
+     */
+    position(): number;
     /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @return original return type: 'int'

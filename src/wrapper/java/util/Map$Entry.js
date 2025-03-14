@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Map$Entry = exports.createMap$EntryProxy = void 0;
+exports.Map$Entry = void 0;
+exports.createMap$EntryProxy = createMap$EntryProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Map$Entry} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMap$EntryProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Map$Entry', methods, opts);
 }
-exports.createMap$EntryProxy = createMap$EntryProxy;
 /**
  * Class java.util.Map$Entry.
  *

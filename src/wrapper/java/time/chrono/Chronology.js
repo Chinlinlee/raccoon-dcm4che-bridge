@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Chronology = exports.createChronologyProxy = void 0;
+exports.Chronology = void 0;
+exports.createChronologyProxy = createChronologyProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Chronology} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createChronologyProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.chrono.Chronology', methods, opts);
 }
-exports.createChronologyProxy = createChronologyProxy;
 /**
  * Class java.time.chrono.Chronology.
  *

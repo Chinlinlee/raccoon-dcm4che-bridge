@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MethodHandleInfo = exports.createMethodHandleInfoProxy = void 0;
+exports.MethodHandleInfo = void 0;
+exports.createMethodHandleInfoProxy = createMethodHandleInfoProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link MethodHandleInfo} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMethodHandleInfoProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.invoke.MethodHandleInfo', methods, opts);
 }
-exports.createMethodHandleInfoProxy = createMethodHandleInfoProxy;
 /**
  * Class java.lang.invoke.MethodHandleInfo.
  *

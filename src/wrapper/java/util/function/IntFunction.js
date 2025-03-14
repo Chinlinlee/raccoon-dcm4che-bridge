@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntFunction = exports.createIntFunctionProxy = void 0;
+exports.IntFunction = void 0;
+exports.createIntFunctionProxy = createIntFunctionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IntFunction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIntFunctionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.IntFunction', methods, opts);
 }
-exports.createIntFunctionProxy = createIntFunctionProxy;
 /**
  * Class java.util.function.IntFunction.
  *

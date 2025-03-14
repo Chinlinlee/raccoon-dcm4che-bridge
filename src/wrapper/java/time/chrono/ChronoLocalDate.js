@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChronoLocalDate = exports.createChronoLocalDateProxy = void 0;
+exports.ChronoLocalDate = void 0;
+exports.createChronoLocalDateProxy = createChronoLocalDateProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ChronoLocalDate} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createChronoLocalDateProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.chrono.ChronoLocalDate', methods, opts);
 }
-exports.createChronoLocalDateProxy = createChronoLocalDateProxy;
 /**
  * Class java.time.chrono.ChronoLocalDate.
  *

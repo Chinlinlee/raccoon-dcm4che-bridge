@@ -24,6 +24,16 @@ export declare class ModuleDescriptorClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -42,16 +52,6 @@ export declare class ModuleDescriptorClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.util.Optional'
      */
@@ -121,6 +121,14 @@ export declare class ModuleDescriptorClass extends JavaClass {
      */
     notifySync(): void;
     /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlags(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlagsSync(): java_util_Set | null;
+    /**
      * @return original return type: 'int'
      */
     hashCode(): Promise<number>;
@@ -178,16 +186,6 @@ export declare class ModuleDescriptorClass extends JavaClass {
     isAutomaticSync(): boolean;
     /**
      * @param var0 original type: 'java.io.InputStream'
-     * @return original return type: 'java.lang.module.ModuleDescriptor'
-     */
-    static read(var0: java_io_InputStream | null): Promise<ModuleDescriptor | null>;
-    /**
-     * @param var0 original type: 'java.io.InputStream'
-     * @return original return type: 'java.lang.module.ModuleDescriptor'
-     */
-    static readSync(var0: java_io_InputStream | null): ModuleDescriptor | null;
-    /**
-     * @param var0 original type: 'java.io.InputStream'
      * @param var1 original type: 'java.util.function.Supplier'
      * @return original return type: 'java.lang.module.ModuleDescriptor'
      */
@@ -199,15 +197,15 @@ export declare class ModuleDescriptorClass extends JavaClass {
      */
     static readSync(var0: java_io_InputStream | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): ModuleDescriptor | null;
     /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var0 original type: 'java.io.InputStream'
      * @return original return type: 'java.lang.module.ModuleDescriptor'
      */
-    static read(var0: java_nio_ByteBuffer | null): Promise<ModuleDescriptor | null>;
+    static read(var0: java_io_InputStream | null): Promise<ModuleDescriptor | null>;
     /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var0 original type: 'java.io.InputStream'
      * @return original return type: 'java.lang.module.ModuleDescriptor'
      */
-    static readSync(var0: java_nio_ByteBuffer | null): ModuleDescriptor | null;
+    static readSync(var0: java_io_InputStream | null): ModuleDescriptor | null;
     /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @param var1 original type: 'java.util.function.Supplier'
@@ -220,6 +218,16 @@ export declare class ModuleDescriptorClass extends JavaClass {
      * @return original return type: 'java.lang.module.ModuleDescriptor'
      */
     static readSync(var0: java_nio_ByteBuffer | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): ModuleDescriptor | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'java.lang.module.ModuleDescriptor'
+     */
+    static read(var0: java_nio_ByteBuffer | null): Promise<ModuleDescriptor | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'java.lang.module.ModuleDescriptor'
+     */
+    static readSync(var0: java_nio_ByteBuffer | null): ModuleDescriptor | null;
     /**
      * @return original return type: 'java.util.Optional'
      */

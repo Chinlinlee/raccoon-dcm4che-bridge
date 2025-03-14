@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { DicomOutputStream as org_dcm4che3_io_DicomOutputStream } from "./../io/DicomOutputStream";
 import { VR as org_dcm4che3_data_VR } from "./VR";

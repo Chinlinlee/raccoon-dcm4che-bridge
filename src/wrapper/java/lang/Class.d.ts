@@ -3,6 +3,7 @@ import { Module as java_lang_Module } from "./Module";
 import { URL as java_net_URL } from "./../net/URL";
 import { Method as java_lang_reflect_Method } from "./reflect/Method";
 import { Optional as java_util_Optional } from "./../util/Optional";
+import { Set as java_util_Set } from "./../util/Set";
 import { Field as java_lang_reflect_Field } from "./reflect/Field";
 import { TypeVariable as java_lang_reflect_TypeVariable } from "./reflect/TypeVariable";
 import { TypeDescriptor$OfField as java_lang_invoke_TypeDescriptor$OfField } from "./invoke/TypeDescriptor$OfField";
@@ -111,6 +112,14 @@ export declare class ClassClass extends JavaClass {
      */
     describeConstableSync(): java_util_Optional | null;
     /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlags(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlagsSync(): java_util_Set | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -187,14 +196,6 @@ export declare class ClassClass extends JavaClass {
      */
     isInterfaceSync(): boolean;
     /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
-     */
-    arrayType(): Promise<java_lang_invoke_TypeDescriptor$OfField | null>;
-    /**
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
-     */
-    arrayTypeSync(): java_lang_invoke_TypeDescriptor$OfField | null;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     arrayType(): Promise<Class | null>;
@@ -202,6 +203,14 @@ export declare class ClassClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     arrayTypeSync(): Class | null;
+    /**
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
+     */
+    arrayType(): Promise<java_lang_invoke_TypeDescriptor$OfField | null>;
+    /**
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfField'
+     */
+    arrayTypeSync(): java_lang_invoke_TypeDescriptor$OfField | null;
     /**
      * @return original return type: 'java.lang.Package'
      */
@@ -270,6 +279,14 @@ export declare class ClassClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     newInstanceSync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isUnnamedClass(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isUnnamedClassSync(): boolean;
     /**
      * @return original return type: 'java.lang.reflect.Field[]'
      */
@@ -356,6 +373,16 @@ export declare class ClassClass extends JavaClass {
     getMethodsSync(): (java_lang_reflect_Method | null)[] | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -374,16 +401,6 @@ export declare class ClassClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.security.ProtectionDomain'
      */
@@ -633,16 +650,6 @@ export declare class ClassClass extends JavaClass {
      */
     static forNameSync(var0: string | null, var1: java_lang_Boolean | boolean, var2: java_lang_ClassLoader | null): Class | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Class'
-     */
-    static forName(var0: string | null): Promise<Class | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Class'
-     */
-    static forNameSync(var0: string | null): Class | null;
-    /**
      * @param var0 original type: 'java.lang.Module'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Class'
@@ -654,6 +661,16 @@ export declare class ClassClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     static forNameSync(var0: java_lang_Module | null, var1: string | null): Class | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Class'
+     */
+    static forName(var0: string | null): Promise<Class | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Class'
+     */
+    static forNameSync(var0: string | null): Class | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.io.InputStream'

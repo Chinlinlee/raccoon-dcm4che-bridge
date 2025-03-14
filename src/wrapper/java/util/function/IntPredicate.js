@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntPredicate = exports.createIntPredicateProxy = void 0;
+exports.IntPredicate = void 0;
+exports.createIntPredicateProxy = createIntPredicateProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IntPredicate} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIntPredicateProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.IntPredicate', methods, opts);
 }
-exports.createIntPredicateProxy = createIntPredicateProxy;
 /**
  * Class java.util.function.IntPredicate.
  *

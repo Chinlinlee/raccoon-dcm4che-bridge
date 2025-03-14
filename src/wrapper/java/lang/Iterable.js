@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Iterable = exports.createIterableProxy = void 0;
+exports.Iterable = void 0;
+exports.createIterableProxy = createIterableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Iterable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIterableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.Iterable', methods, opts);
 }
-exports.createIterableProxy = createIterableProxy;
 /**
  * Class java.lang.Iterable.
  *

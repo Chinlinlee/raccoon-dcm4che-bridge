@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Appendable = exports.createAppendableProxy = void 0;
+exports.Appendable = void 0;
+exports.createAppendableProxy = createAppendableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Appendable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAppendableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.Appendable', methods, opts);
 }
-exports.createAppendableProxy = createAppendableProxy;
 /**
  * Class java.lang.Appendable.
  *

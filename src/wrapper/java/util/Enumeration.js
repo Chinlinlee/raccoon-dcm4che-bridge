@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Enumeration = exports.createEnumerationProxy = void 0;
+exports.Enumeration = void 0;
+exports.createEnumerationProxy = createEnumerationProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Enumeration} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createEnumerationProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Enumeration', methods, opts);
 }
-exports.createEnumerationProxy = createEnumerationProxy;
 /**
  * Class java.util.Enumeration.
  *

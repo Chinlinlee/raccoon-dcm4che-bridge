@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DomainCombiner = exports.createDomainCombinerProxy = void 0;
+exports.DomainCombiner = void 0;
+exports.createDomainCombinerProxy = createDomainCombinerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DomainCombiner} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDomainCombinerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.DomainCombiner', methods, opts);
 }
-exports.createDomainCombinerProxy = createDomainCombinerProxy;
 /**
  * Class java.security.DomainCombiner.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChronoPeriod = exports.createChronoPeriodProxy = void 0;
+exports.ChronoPeriod = void 0;
+exports.createChronoPeriodProxy = createChronoPeriodProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ChronoPeriod} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createChronoPeriodProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.chrono.ChronoPeriod', methods, opts);
 }
-exports.createChronoPeriodProxy = createChronoPeriodProxy;
 /**
  * Class java.time.chrono.ChronoPeriod.
  *

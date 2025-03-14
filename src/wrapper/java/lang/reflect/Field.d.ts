@@ -5,6 +5,7 @@ import { Long as java_lang_Long } from "./../Long";
 import { Integer as java_lang_Integer } from "./../Integer";
 import { Short as java_lang_Short } from "./../Short";
 import { Annotation as java_lang_annotation_Annotation } from "./../annotation/Annotation";
+import { Set as java_util_Set } from "./../../util/Set";
 import { Double as java_lang_Double } from "./../Double";
 import { Type as java_lang_reflect_Type } from "./Type";
 import { AnnotatedType as java_lang_reflect_AnnotatedType } from "./AnnotatedType";
@@ -39,6 +40,16 @@ export declare class FieldClass extends JavaClass {
     setByteSync(var0: BasicOrJavaType | null, var1: java_lang_Byte | number): void;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -57,16 +68,6 @@ export declare class FieldClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -159,6 +160,14 @@ export declare class FieldClass extends JavaClass {
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
     getDeclaredAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlags(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlagsSync(): java_util_Set | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'char'

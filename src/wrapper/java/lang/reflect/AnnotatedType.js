@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AnnotatedType = exports.createAnnotatedTypeProxy = void 0;
+exports.AnnotatedType = void 0;
+exports.createAnnotatedTypeProxy = createAnnotatedTypeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AnnotatedType} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAnnotatedTypeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.reflect.AnnotatedType', methods, opts);
 }
-exports.createAnnotatedTypeProxy = createAnnotatedTypeProxy;
 /**
  * Class java.lang.reflect.AnnotatedType.
  *

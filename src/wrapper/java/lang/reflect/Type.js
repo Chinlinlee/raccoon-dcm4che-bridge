@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Type = exports.createTypeProxy = void 0;
+exports.Type = void 0;
+exports.createTypeProxy = createTypeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Type} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTypeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.reflect.Type', methods, opts);
 }
-exports.createTypeProxy = createTypeProxy;
 /**
  * Class java.lang.reflect.Type.
  *

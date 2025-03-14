@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChronoZonedDateTime = exports.createChronoZonedDateTimeProxy = void 0;
+exports.ChronoZonedDateTime = void 0;
+exports.createChronoZonedDateTimeProxy = createChronoZonedDateTimeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ChronoZonedDateTime} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createChronoZonedDateTimeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.chrono.ChronoZonedDateTime', methods, opts);
 }
-exports.createChronoZonedDateTimeProxy = createChronoZonedDateTimeProxy;
 /**
  * Class java.time.chrono.ChronoZonedDateTime.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TemporalQuery = exports.createTemporalQueryProxy = void 0;
+exports.TemporalQuery = void 0;
+exports.createTemporalQueryProxy = createTemporalQueryProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TemporalQuery} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTemporalQueryProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.time.temporal.TemporalQuery', methods, opts);
 }
-exports.createTemporalQueryProxy = createTemporalQueryProxy;
 /**
  * Class java.time.temporal.TemporalQuery.
  *

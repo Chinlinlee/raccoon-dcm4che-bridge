@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Spliterator$OfPrimitive = exports.createSpliterator$OfPrimitiveProxy = void 0;
+exports.Spliterator$OfPrimitive = void 0;
+exports.createSpliterator$OfPrimitiveProxy = createSpliterator$OfPrimitiveProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Spliterator$OfPrimitive} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSpliterator$OfPrimitiveProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Spliterator$OfPrimitive', methods, opts);
 }
-exports.createSpliterator$OfPrimitiveProxy = createSpliterator$OfPrimitiveProxy;
 /**
  * Class java.util.Spliterator$OfPrimitive.
  *

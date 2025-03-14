@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CompletionHandler = exports.createCompletionHandlerProxy = void 0;
+exports.CompletionHandler = void 0;
+exports.createCompletionHandlerProxy = createCompletionHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CompletionHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCompletionHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.channels.CompletionHandler', methods, opts);
 }
-exports.createCompletionHandlerProxy = createCompletionHandlerProxy;
 /**
  * Class java.nio.channels.CompletionHandler.
  *

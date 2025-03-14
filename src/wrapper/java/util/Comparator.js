@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Comparator = exports.createComparatorProxy = void 0;
+exports.Comparator = void 0;
+exports.createComparatorProxy = createComparatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Comparator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createComparatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.Comparator', methods, opts);
 }
-exports.createComparatorProxy = createComparatorProxy;
 /**
  * Class java.util.Comparator.
  *

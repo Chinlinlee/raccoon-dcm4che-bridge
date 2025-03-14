@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReadableByteChannel = exports.createReadableByteChannelProxy = void 0;
+exports.ReadableByteChannel = void 0;
+exports.createReadableByteChannelProxy = createReadableByteChannelProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ReadableByteChannel} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createReadableByteChannelProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.channels.ReadableByteChannel', methods, opts);
 }
-exports.createReadableByteChannelProxy = createReadableByteChannelProxy;
 /**
  * Class java.nio.channels.ReadableByteChannel.
  *

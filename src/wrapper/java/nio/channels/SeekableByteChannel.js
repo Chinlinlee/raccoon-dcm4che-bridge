@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SeekableByteChannel = exports.createSeekableByteChannelProxy = void 0;
+exports.SeekableByteChannel = void 0;
+exports.createSeekableByteChannelProxy = createSeekableByteChannelProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SeekableByteChannel} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSeekableByteChannelProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.channels.SeekableByteChannel', methods, opts);
 }
-exports.createSeekableByteChannelProxy = createSeekableByteChannelProxy;
 /**
  * Class java.nio.channels.SeekableByteChannel.
  *

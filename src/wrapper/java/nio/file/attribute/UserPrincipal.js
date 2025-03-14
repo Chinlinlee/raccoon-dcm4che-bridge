@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserPrincipal = exports.createUserPrincipalProxy = void 0;
+exports.UserPrincipal = void 0;
+exports.createUserPrincipalProxy = createUserPrincipalProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link UserPrincipal} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createUserPrincipalProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.attribute.UserPrincipal', methods, opts);
 }
-exports.createUserPrincipalProxy = createUserPrincipalProxy;
 /**
  * Class java.nio.file.attribute.UserPrincipal.
  *

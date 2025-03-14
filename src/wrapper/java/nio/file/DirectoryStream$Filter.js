@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DirectoryStream$Filter = exports.createDirectoryStream$FilterProxy = void 0;
+exports.DirectoryStream$Filter = void 0;
+exports.createDirectoryStream$FilterProxy = createDirectoryStream$FilterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DirectoryStream$Filter} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDirectoryStream$FilterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.file.DirectoryStream$Filter', methods, opts);
 }
-exports.createDirectoryStream$FilterProxy = createDirectoryStream$FilterProxy;
 /**
  * Class java.nio.file.DirectoryStream$Filter.
  *

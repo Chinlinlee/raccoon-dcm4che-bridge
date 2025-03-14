@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntSupplier = exports.createIntSupplierProxy = void 0;
+exports.IntSupplier = void 0;
+exports.createIntSupplierProxy = createIntSupplierProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IntSupplier} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIntSupplierProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.IntSupplier', methods, opts);
 }
-exports.createIntSupplierProxy = createIntSupplierProxy;
 /**
  * Class java.util.function.IntSupplier.
  *

@@ -22,6 +22,16 @@ export declare class ZoneOffsetTransitionClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -40,16 +50,6 @@ export declare class ZoneOffsetTransitionClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.time.LocalDateTime'
      */
@@ -77,19 +77,19 @@ export declare class ZoneOffsetTransitionClass extends JavaClass {
     /**
      * @return original return type: 'java.time.ZoneOffset'
      */
-    getOffsetAfter(): Promise<java_time_ZoneOffset | null>;
-    /**
-     * @return original return type: 'java.time.ZoneOffset'
-     */
-    getOffsetAfterSync(): java_time_ZoneOffset | null;
-    /**
-     * @return original return type: 'java.time.ZoneOffset'
-     */
     getOffsetBefore(): Promise<java_time_ZoneOffset | null>;
     /**
      * @return original return type: 'java.time.ZoneOffset'
      */
     getOffsetBeforeSync(): java_time_ZoneOffset | null;
+    /**
+     * @return original return type: 'java.time.ZoneOffset'
+     */
+    getOffsetAfter(): Promise<java_time_ZoneOffset | null>;
+    /**
+     * @return original return type: 'java.time.ZoneOffset'
+     */
+    getOffsetAfterSync(): java_time_ZoneOffset | null;
     /**
      * @param var0 original type: 'java.time.zone.ZoneOffsetTransition'
      * @return original return type: 'int'

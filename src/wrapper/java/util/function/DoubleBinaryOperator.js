@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DoubleBinaryOperator = exports.createDoubleBinaryOperatorProxy = void 0;
+exports.DoubleBinaryOperator = void 0;
+exports.createDoubleBinaryOperatorProxy = createDoubleBinaryOperatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DoubleBinaryOperator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDoubleBinaryOperatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.DoubleBinaryOperator', methods, opts);
 }
-exports.createDoubleBinaryOperatorProxy = createDoubleBinaryOperatorProxy;
 /**
  * Class java.util.function.DoubleBinaryOperator.
  *

@@ -40,14 +40,6 @@ export declare class LongStreamClass extends JavaClass {
      */
     averageSync(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    sequential(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    sequentialSync(): java_util_stream_BaseStream | null;
-    /**
      * @return original return type: 'java.util.stream.LongStream'
      */
     sequential(): Promise<LongStream | null>;
@@ -56,13 +48,13 @@ export declare class LongStreamClass extends JavaClass {
      */
     sequentialSync(): LongStream | null;
     /**
-     * @return original return type: 'java.util.stream.LongStream'
+     * @return original return type: 'java.util.stream.BaseStream'
      */
-    distinct(): Promise<LongStream | null>;
+    sequential(): Promise<java_util_stream_BaseStream | null>;
     /**
-     * @return original return type: 'java.util.stream.LongStream'
+     * @return original return type: 'java.util.stream.BaseStream'
      */
-    distinctSync(): LongStream | null;
+    sequentialSync(): java_util_stream_BaseStream | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
@@ -75,6 +67,14 @@ export declare class LongStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.LongStream'
      */
     static rangeSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number): LongStream | null;
+    /**
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    distinct(): Promise<LongStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    distinctSync(): LongStream | null;
     /**
      * @param var0 original type: 'java.util.function.LongPredicate'
      * @return original return type: 'java.util.stream.LongStream'
@@ -319,6 +319,18 @@ export declare class LongStreamClass extends JavaClass {
     closeSync(): void;
     /**
      * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.function.LongUnaryOperator'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    static iterate(var0: java_lang_Long | bigint | number, var1: java_util_function_LongUnaryOperator | JavaInterfaceProxy<java_util_function_LongUnaryOperatorInterface> | null): Promise<LongStream | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.function.LongUnaryOperator'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    static iterateSync(var0: java_lang_Long | bigint | number, var1: java_util_function_LongUnaryOperator | JavaInterfaceProxy<java_util_function_LongUnaryOperatorInterface> | null): LongStream | null;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.function.LongPredicate'
      * @param var2 original type: 'java.util.function.LongUnaryOperator'
      * @return original return type: 'java.util.stream.LongStream'
@@ -331,18 +343,6 @@ export declare class LongStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.LongStream'
      */
     static iterateSync(var0: java_lang_Long | bigint | number, var1: java_util_function_LongPredicate | JavaInterfaceProxy<java_util_function_LongPredicateInterface> | null, var2: java_util_function_LongUnaryOperator | JavaInterfaceProxy<java_util_function_LongUnaryOperatorInterface> | null): LongStream | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.function.LongUnaryOperator'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    static iterate(var0: java_lang_Long | bigint | number, var1: java_util_function_LongUnaryOperator | JavaInterfaceProxy<java_util_function_LongUnaryOperatorInterface> | null): Promise<LongStream | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.function.LongUnaryOperator'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    static iterateSync(var0: java_lang_Long | bigint | number, var1: java_util_function_LongUnaryOperator | JavaInterfaceProxy<java_util_function_LongUnaryOperatorInterface> | null): LongStream | null;
     /**
      * @param var0 original type: 'java.util.function.LongToDoubleFunction'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -565,15 +565,15 @@ export interface LongStreamInterface {
      */
     average(): java_util_OptionalDouble | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    sequential?(): java_util_stream_BaseStream | null;
-    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @return original return type: 'java.util.stream.LongStream'
      */
     sequential?(): LongStream | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    sequential?(): java_util_stream_BaseStream | null;
     /**
      * @return original return type: 'java.util.stream.LongStream'
      */

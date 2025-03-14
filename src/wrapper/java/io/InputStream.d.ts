@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
@@ -21,6 +19,16 @@ export declare class InputStreamClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -40,15 +48,15 @@ export declare class InputStreamClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'int'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    read(var0: Buffer | null): Promise<number>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'int'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    readSync(var0: Buffer | null): number;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -63,16 +71,6 @@ export declare class InputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    read(var0: Buffer | null): Promise<number>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    readSync(var0: Buffer | null): number;
     /**
      * @return original return type: 'int'
      */
@@ -168,15 +166,13 @@ export declare class InputStreamClass extends JavaClass {
      */
     readAllBytesSync(): Buffer | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
+     * @return original return type: 'void'
      */
-    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
+    reset(): Promise<void>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
+     * @return original return type: 'void'
      */
-    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
+    resetSync(): void;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -192,13 +188,15 @@ export declare class InputStreamClass extends JavaClass {
      */
     readNBytesSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
      */
-    reset(): Promise<void>;
+    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
      */
-    resetSync(): void;
+    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
     /**
      * @return original return type: 'void'
      */

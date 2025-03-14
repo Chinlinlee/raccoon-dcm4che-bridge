@@ -21,6 +21,16 @@ export declare class ShortBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -39,16 +49,6 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
@@ -86,16 +86,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     compareToSync(var0: ShortBufferClass | null): number;
     /**
-     * @param var0 original type: 'short[]'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    put(var0: (java_lang_Short | number)[] | null): Promise<ShortBuffer | null>;
-    /**
-     * @param var0 original type: 'short[]'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    putSync(var0: (java_lang_Short | number)[] | null): ShortBuffer | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'short[]'
      * @param var2 original type: 'int'
@@ -124,20 +114,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: (java_lang_Short | number)[] | null): ShortBuffer | null;
     /**
-     * @param var0 original type: 'short[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    put(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<ShortBuffer | null>;
-    /**
-     * @param var0 original type: 'short[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    putSync(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): ShortBuffer | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.ShortBuffer'
      * @param var2 original type: 'int'
@@ -154,6 +130,16 @@ export declare class ShortBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: ShortBufferClass | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): ShortBuffer | null;
     /**
+     * @param var0 original type: 'short[]'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    put(var0: (java_lang_Short | number)[] | null): Promise<ShortBuffer | null>;
+    /**
+     * @param var0 original type: 'short[]'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    putSync(var0: (java_lang_Short | number)[] | null): ShortBuffer | null;
+    /**
      * @param var0 original type: 'java.nio.ShortBuffer'
      * @return original return type: 'java.nio.ShortBuffer'
      */
@@ -163,6 +149,30 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     putSync(var0: ShortBufferClass | null): ShortBuffer | null;
+    /**
+     * @param var0 original type: 'short[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    put(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<ShortBuffer | null>;
+    /**
+     * @param var0 original type: 'short[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    putSync(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): ShortBuffer | null;
+    /**
+     * @param var0 original type: 'short'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    put(var0: java_lang_Short | number): Promise<ShortBuffer | null>;
+    /**
+     * @param var0 original type: 'short'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    putSync(var0: java_lang_Short | number): ShortBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'short'
@@ -175,16 +185,6 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Short | number): ShortBuffer | null;
-    /**
-     * @param var0 original type: 'short'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    put(var0: java_lang_Short | number): Promise<ShortBuffer | null>;
-    /**
-     * @param var0 original type: 'short'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    putSync(var0: java_lang_Short | number): ShortBuffer | null;
     /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
@@ -234,14 +234,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     arraySync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    slice(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    sliceSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
     slice(): Promise<ShortBuffer | null>;
@@ -249,6 +241,14 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     sliceSync(): ShortBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    slice(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    sliceSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -282,14 +282,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @return original return type: 'short'
-     */
-    get(): Promise<number>;
-    /**
-     * @return original return type: 'short'
-     */
-    getSync(): number;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'short[]'
      * @return original return type: 'java.nio.ShortBuffer'
@@ -311,22 +303,6 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'short'
      */
     getSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'short[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    get(var0: java_lang_Integer | number, var1: (java_lang_Short | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<ShortBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'short[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    getSync(var0: java_lang_Integer | number, var1: (java_lang_Short | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): ShortBuffer | null;
     /**
      * @param var0 original type: 'short[]'
      * @param var1 original type: 'int'
@@ -353,14 +329,28 @@ export declare class ShortBufferClass extends JavaClass {
     getSync(var0: (java_lang_Short | number)[] | null): ShortBuffer | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'short[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.ShortBuffer'
      */
-    limit(var0: java_lang_Integer | number): Promise<ShortBuffer | null>;
+    get(var0: java_lang_Integer | number, var1: (java_lang_Short | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<ShortBuffer | null>;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'short[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.ShortBuffer'
      */
-    limitSync(var0: java_lang_Integer | number): ShortBuffer | null;
+    getSync(var0: java_lang_Integer | number, var1: (java_lang_Short | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): ShortBuffer | null;
+    /**
+     * @return original return type: 'short'
+     */
+    get(): Promise<number>;
+    /**
+     * @return original return type: 'short'
+     */
+    getSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -371,6 +361,16 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    limit(var0: java_lang_Integer | number): Promise<ShortBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    limitSync(var0: java_lang_Integer | number): ShortBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -428,14 +428,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     hasRemainingSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clear(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clearSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
     clear(): Promise<ShortBuffer | null>;
@@ -443,6 +435,14 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     clearSync(): ShortBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clear(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clearSync(): java_nio_Buffer | null;
     /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
@@ -468,14 +468,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     remainingSync(): number;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    rewind(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    rewindSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
     rewind(): Promise<ShortBuffer | null>;
@@ -483,6 +475,14 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     rewindSync(): ShortBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    rewind(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    rewindSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.ShortBuffer'
@@ -559,16 +559,6 @@ export declare class ShortBufferClass extends JavaClass {
     positionSync(): number;
     /**
      * @param var0 original type: 'short[]'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    static wrap(var0: (java_lang_Short | number)[] | null): Promise<ShortBuffer | null>;
-    /**
-     * @param var0 original type: 'short[]'
-     * @return original return type: 'java.nio.ShortBuffer'
-     */
-    static wrapSync(var0: (java_lang_Short | number)[] | null): ShortBuffer | null;
-    /**
-     * @param var0 original type: 'short[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.nio.ShortBuffer'
@@ -582,6 +572,16 @@ export declare class ShortBufferClass extends JavaClass {
      */
     static wrapSync(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): ShortBuffer | null;
     /**
+     * @param var0 original type: 'short[]'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    static wrap(var0: (java_lang_Short | number)[] | null): Promise<ShortBuffer | null>;
+    /**
+     * @param var0 original type: 'short[]'
+     * @return original return type: 'java.nio.ShortBuffer'
+     */
+    static wrapSync(var0: (java_lang_Short | number)[] | null): ShortBuffer | null;
+    /**
      * @return original return type: 'boolean'
      */
     isDirect(): Promise<boolean>;
@@ -590,14 +590,6 @@ export declare class ShortBufferClass extends JavaClass {
      */
     isDirectSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    mark(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    markSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.ShortBuffer'
      */
     mark(): Promise<ShortBuffer | null>;
@@ -605,6 +597,14 @@ export declare class ShortBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     markSync(): ShortBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    mark(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    markSync(): java_nio_Buffer | null;
 }
 declare const ShortBuffer_base: typeof ShortBufferClass;
 /**

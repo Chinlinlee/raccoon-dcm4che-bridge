@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DoubleToLongFunction = exports.createDoubleToLongFunctionProxy = void 0;
+exports.DoubleToLongFunction = void 0;
+exports.createDoubleToLongFunctionProxy = createDoubleToLongFunctionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DoubleToLongFunction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDoubleToLongFunctionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.function.DoubleToLongFunction', methods, opts);
 }
-exports.createDoubleToLongFunctionProxy = createDoubleToLongFunctionProxy;
 /**
  * Class java.util.function.DoubleToLongFunction.
  *
