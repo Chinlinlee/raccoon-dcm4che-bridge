@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AnatomicItem = exports.createAnatomicItemProxy = void 0;
+exports.AnatomicItem = void 0;
+exports.createAnatomicItemProxy = createAnatomicItemProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AnatomicItem} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAnatomicItemProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.weasis.dicom.ref.AnatomicItem', methods, opts);
 }
-exports.createAnatomicItemProxy = createAnatomicItemProxy;
 /**
  * Class org.weasis.dicom.ref.AnatomicItem.
  *

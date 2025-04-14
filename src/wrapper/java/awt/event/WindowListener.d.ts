@@ -152,4 +152,3 @@ export declare class WindowListener extends WindowListener_base {
     private constructor();
 }
 export default WindowListener;
-//# sourceMappingURL=WindowListener.d.ts.map

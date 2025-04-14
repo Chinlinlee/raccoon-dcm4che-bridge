@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Executor = exports.createExecutorProxy = void 0;
+exports.Executor = void 0;
+exports.createExecutorProxy = createExecutorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Executor} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createExecutorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.concurrent.Executor', methods, opts);
 }
-exports.createExecutorProxy = createExecutorProxy;
 /**
  * Class java.util.concurrent.Executor.
  *

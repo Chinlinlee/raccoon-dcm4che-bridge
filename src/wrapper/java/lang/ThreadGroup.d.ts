@@ -31,16 +31,6 @@ export declare class ThreadGroupClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,6 +49,16 @@ export declare class ThreadGroupClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -117,16 +117,6 @@ export declare class ThreadGroupClass extends JavaClass {
     activeGroupCountSync(): number;
     /**
      * @param var0 original type: 'java.lang.ThreadGroup[]'
-     * @return original return type: 'int'
-     */
-    enumerate(var0: (ThreadGroupClass | null)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup[]'
-     * @return original return type: 'int'
-     */
-    enumerateSync(var0: (ThreadGroupClass | null)[] | null): number;
-    /**
-     * @param var0 original type: 'java.lang.ThreadGroup[]'
      * @param var1 original type: 'boolean'
      * @return original return type: 'int'
      */
@@ -137,6 +127,16 @@ export declare class ThreadGroupClass extends JavaClass {
      * @return original return type: 'int'
      */
     enumerateSync(var0: (ThreadGroupClass | null)[] | null, var1: java_lang_Boolean | boolean): number;
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup[]'
+     * @return original return type: 'int'
+     */
+    enumerate(var0: (ThreadGroupClass | null)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.ThreadGroup[]'
+     * @return original return type: 'int'
+     */
+    enumerateSync(var0: (ThreadGroupClass | null)[] | null): number;
     /**
      * @param var0 original type: 'java.lang.Thread[]'
      * @return original return type: 'int'
@@ -160,6 +160,14 @@ export declare class ThreadGroupClass extends JavaClass {
      */
     enumerateSync(var0: (java_lang_Thread | null)[] | null, var1: java_lang_Boolean | boolean): number;
     /**
+     * @return original return type: 'void'
+     */
+    resume(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    resumeSync(): void;
+    /**
      * @return original return type: 'int'
      */
     activeCount(): Promise<number>;
@@ -175,14 +183,6 @@ export declare class ThreadGroupClass extends JavaClass {
      * @return original return type: 'void'
      */
     suspendSync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    resume(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    resumeSync(): void;
     /**
      * @return original return type: 'java.lang.ThreadGroup'
      */
@@ -252,6 +252,16 @@ export declare class ThreadGroupClass extends JavaClass {
      */
     getMaxPrioritySync(): number;
     /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'boolean'
+     */
+    allowThreadSuspension(var0: java_lang_Boolean | boolean): Promise<boolean>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'boolean'
+     */
+    allowThreadSuspensionSync(var0: java_lang_Boolean | boolean): boolean;
+    /**
      * @return original return type: 'void'
      */
     stop(): Promise<void>;
@@ -315,4 +325,3 @@ declare const ThreadGroup_base: typeof ThreadGroupClass;
 export declare class ThreadGroup extends ThreadGroup_base {
 }
 export default ThreadGroup;
-//# sourceMappingURL=ThreadGroup.d.ts.map

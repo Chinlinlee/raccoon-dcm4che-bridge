@@ -3,8 +3,8 @@ import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Boolean as java_lang_Boolean } from "./../lang/Boolean";
-import { FileFilter as java_io_FileFilter, FileFilterInterface as java_io_FileFilterInterface } from "./FileFilter";
 import { FilenameFilter as java_io_FilenameFilter, FilenameFilterInterface as java_io_FilenameFilterInterface } from "./FilenameFilter";
+import { FileFilter as java_io_FileFilter, FileFilterInterface as java_io_FileFilterInterface } from "./FileFilter";
 import { URL as java_net_URL } from "./../net/URL";
 import { URI as java_net_URI } from "./../net/URI";
 import { Path as java_nio_file_Path } from "./../nio/file/Path";
@@ -22,16 +22,6 @@ export declare class FileClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -52,6 +42,16 @@ export declare class FileClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -170,6 +170,16 @@ export declare class FileClass extends JavaClass {
     notifySync(): void;
     /**
      * @param var0 original type: 'boolean'
+     * @return original return type: 'boolean'
+     */
+    setReadable(var0: java_lang_Boolean | boolean): Promise<boolean>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'boolean'
+     */
+    setReadableSync(var0: java_lang_Boolean | boolean): boolean;
+    /**
+     * @param var0 original type: 'boolean'
      * @param var1 original type: 'boolean'
      * @return original return type: 'boolean'
      */
@@ -180,16 +190,6 @@ export declare class FileClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     setReadableSync(var0: java_lang_Boolean | boolean, var1: java_lang_Boolean | boolean): boolean;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'boolean'
-     */
-    setReadable(var0: java_lang_Boolean | boolean): Promise<boolean>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'boolean'
-     */
-    setReadableSync(var0: java_lang_Boolean | boolean): boolean;
     /**
      * @return original return type: 'long'
      */
@@ -239,16 +239,6 @@ export declare class FileClass extends JavaClass {
      */
     mkdirSync(): boolean;
     /**
-     * @param var0 original type: 'java.io.FileFilter'
-     * @return original return type: 'java.io.File[]'
-     */
-    listFiles(var0: java_io_FileFilter | JavaInterfaceProxy<java_io_FileFilterInterface> | null): Promise<(File | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.io.FileFilter'
-     * @return original return type: 'java.io.File[]'
-     */
-    listFilesSync(var0: java_io_FileFilter | JavaInterfaceProxy<java_io_FileFilterInterface> | null): (File | null)[] | null;
-    /**
      * @param var0 original type: 'java.io.FilenameFilter'
      * @return original return type: 'java.io.File[]'
      */
@@ -258,6 +248,16 @@ export declare class FileClass extends JavaClass {
      * @return original return type: 'java.io.File[]'
      */
     listFilesSync(var0: java_io_FilenameFilter | JavaInterfaceProxy<java_io_FilenameFilterInterface> | null): (File | null)[] | null;
+    /**
+     * @param var0 original type: 'java.io.FileFilter'
+     * @return original return type: 'java.io.File[]'
+     */
+    listFiles(var0: java_io_FileFilter | JavaInterfaceProxy<java_io_FileFilterInterface> | null): Promise<(File | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.io.FileFilter'
+     * @return original return type: 'java.io.File[]'
+     */
+    listFilesSync(var0: java_io_FileFilter | JavaInterfaceProxy<java_io_FileFilterInterface> | null): (File | null)[] | null;
     /**
      * @return original return type: 'java.io.File[]'
      */
@@ -371,18 +371,6 @@ export declare class FileClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.io.File'
-     */
-    static createTempFile(var0: string | null, var1: string | null): Promise<File | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.io.File'
-     */
-    static createTempFileSync(var0: string | null, var1: string | null): File | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.io.File'
      * @return original return type: 'java.io.File'
      */
@@ -394,6 +382,18 @@ export declare class FileClass extends JavaClass {
      * @return original return type: 'java.io.File'
      */
     static createTempFileSync(var0: string | null, var1: string | null, var2: FileClass | null): File | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.io.File'
+     */
+    static createTempFile(var0: string | null, var1: string | null): Promise<File | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.io.File'
+     */
+    static createTempFileSync(var0: string | null, var1: string | null): File | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -582,4 +582,3 @@ declare const File_base: typeof FileClass;
 export declare class File extends File_base {
 }
 export default File;
-//# sourceMappingURL=File.d.ts.map

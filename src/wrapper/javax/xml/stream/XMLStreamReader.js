@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.XMLStreamReader = exports.createXMLStreamReaderProxy = void 0;
+exports.XMLStreamReader = void 0;
+exports.createXMLStreamReaderProxy = createXMLStreamReaderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link XMLStreamReader} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createXMLStreamReaderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.xml.stream.XMLStreamReader', methods, opts);
 }
-exports.createXMLStreamReaderProxy = createXMLStreamReaderProxy;
 /**
  * Class javax.xml.stream.XMLStreamReader.
  *

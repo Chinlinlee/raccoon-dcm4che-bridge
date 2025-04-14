@@ -79,4 +79,3 @@ export declare class BiConsumer extends BiConsumer_base {
     private constructor();
 }
 export default BiConsumer;
-//# sourceMappingURL=BiConsumer.d.ts.map

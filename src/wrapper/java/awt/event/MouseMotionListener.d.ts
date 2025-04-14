@@ -77,4 +77,3 @@ export declare class MouseMotionListener extends MouseMotionListener_base {
     private constructor();
 }
 export default MouseMotionListener;
-//# sourceMappingURL=MouseMotionListener.d.ts.map

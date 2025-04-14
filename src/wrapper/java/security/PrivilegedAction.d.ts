@@ -58,4 +58,3 @@ export declare class PrivilegedAction extends PrivilegedAction_base {
     private constructor();
 }
 export default PrivilegedAction;
-//# sourceMappingURL=PrivilegedAction.d.ts.map

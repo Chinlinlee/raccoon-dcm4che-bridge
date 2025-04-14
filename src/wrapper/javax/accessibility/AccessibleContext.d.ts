@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { AccessibleStateSet as javax_accessibility_AccessibleStateSet } from "./AccessibleStateSet";
 import { AccessibleRelationSet as javax_accessibility_AccessibleRelationSet } from "./AccessibleRelationSet";
+import { AccessibleStateSet as javax_accessibility_AccessibleStateSet } from "./AccessibleStateSet";
 import { Class as java_lang_Class } from "./../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../java/lang/Integer";
@@ -12,8 +12,8 @@ import { Accessible as javax_accessibility_Accessible, AccessibleInterface as ja
 import { PropertyChangeListener as java_beans_PropertyChangeListener, PropertyChangeListenerInterface as java_beans_PropertyChangeListenerInterface } from "./../../java/beans/PropertyChangeListener";
 import { AccessibleAction as javax_accessibility_AccessibleAction } from "./AccessibleAction";
 import { AccessibleIcon as javax_accessibility_AccessibleIcon } from "./AccessibleIcon";
-import { AccessibleSelection as javax_accessibility_AccessibleSelection } from "./AccessibleSelection";
 import { AccessibleRole as javax_accessibility_AccessibleRole } from "./AccessibleRole";
+import { AccessibleSelection as javax_accessibility_AccessibleSelection } from "./AccessibleSelection";
 import { Locale as java_util_Locale } from "./../../java/util/Locale";
 import { AccessibleComponent as javax_accessibility_AccessibleComponent } from "./AccessibleComponent";
 /**
@@ -23,14 +23,6 @@ import { AccessibleComponent as javax_accessibility_AccessibleComponent } from "
  */
 export declare class AccessibleContextClass extends JavaClass {
     /**
-     * @return original return type: 'javax.accessibility.AccessibleStateSet'
-     */
-    getAccessibleStateSet(): Promise<javax_accessibility_AccessibleStateSet | null>;
-    /**
-     * @return original return type: 'javax.accessibility.AccessibleStateSet'
-     */
-    getAccessibleStateSetSync(): javax_accessibility_AccessibleStateSet | null;
-    /**
      * @return original return type: 'javax.accessibility.AccessibleRelationSet'
      */
     getAccessibleRelationSet(): Promise<javax_accessibility_AccessibleRelationSet | null>;
@@ -38,6 +30,14 @@ export declare class AccessibleContextClass extends JavaClass {
      * @return original return type: 'javax.accessibility.AccessibleRelationSet'
      */
     getAccessibleRelationSetSync(): javax_accessibility_AccessibleRelationSet | null;
+    /**
+     * @return original return type: 'javax.accessibility.AccessibleStateSet'
+     */
+    getAccessibleStateSet(): Promise<javax_accessibility_AccessibleStateSet | null>;
+    /**
+     * @return original return type: 'javax.accessibility.AccessibleStateSet'
+     */
+    getAccessibleStateSetSync(): javax_accessibility_AccessibleStateSet | null;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -263,14 +263,6 @@ export declare class AccessibleContextClass extends JavaClass {
      */
     getAccessibleChildSync(var0: java_lang_Integer | number): javax_accessibility_Accessible | null;
     /**
-     * @return original return type: 'javax.accessibility.AccessibleSelection'
-     */
-    getAccessibleSelection(): Promise<javax_accessibility_AccessibleSelection | null>;
-    /**
-     * @return original return type: 'javax.accessibility.AccessibleSelection'
-     */
-    getAccessibleSelectionSync(): javax_accessibility_AccessibleSelection | null;
-    /**
      * @return original return type: 'javax.accessibility.AccessibleRole'
      */
     getAccessibleRole(): Promise<javax_accessibility_AccessibleRole | null>;
@@ -278,6 +270,14 @@ export declare class AccessibleContextClass extends JavaClass {
      * @return original return type: 'javax.accessibility.AccessibleRole'
      */
     getAccessibleRoleSync(): javax_accessibility_AccessibleRole | null;
+    /**
+     * @return original return type: 'javax.accessibility.AccessibleSelection'
+     */
+    getAccessibleSelection(): Promise<javax_accessibility_AccessibleSelection | null>;
+    /**
+     * @return original return type: 'javax.accessibility.AccessibleSelection'
+     */
+    getAccessibleSelectionSync(): javax_accessibility_AccessibleSelection | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -411,4 +411,3 @@ export declare class AccessibleContext extends AccessibleContext_base {
     private constructor();
 }
 export default AccessibleContext;
-//# sourceMappingURL=AccessibleContext.d.ts.map

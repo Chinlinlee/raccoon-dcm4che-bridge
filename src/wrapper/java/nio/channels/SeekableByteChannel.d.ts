@@ -26,14 +26,6 @@ export declare class SeekableByteChannelClass extends JavaClass {
      */
     isOpenSync(): boolean;
     /**
-     * @return original return type: 'long'
-     */
-    size(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    sizeSync(): number;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
@@ -43,6 +35,14 @@ export declare class SeekableByteChannelClass extends JavaClass {
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
     truncateSync(var0: java_lang_Long | bigint | number): SeekableByteChannel | null;
+    /**
+     * @return original return type: 'long'
+     */
+    size(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    sizeSync(): number;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
@@ -102,14 +102,14 @@ export interface SeekableByteChannelInterface {
      */
     isOpen(): boolean;
     /**
-     * @return original return type: 'long'
-     */
-    size(): number;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
      */
     truncate(var0: java_lang_Long | bigint | number): SeekableByteChannel | null;
+    /**
+     * @return original return type: 'long'
+     */
+    size(): number;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.SeekableByteChannel'
@@ -156,4 +156,3 @@ export declare class SeekableByteChannel extends SeekableByteChannel_base {
     private constructor();
 }
 export default SeekableByteChannel;
-//# sourceMappingURL=SeekableByteChannel.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Key = exports.createKeyProxy = void 0;
+exports.Key = void 0;
+exports.createKeyProxy = createKeyProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Key} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createKeyProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.Key', methods, opts);
 }
-exports.createKeyProxy = createKeyProxy;
 /**
  * Class java.security.Key.
  *

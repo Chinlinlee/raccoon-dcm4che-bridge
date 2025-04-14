@@ -30,22 +30,6 @@ export declare class ScheduledExecutorServiceClass extends JavaClass {
      */
     scheduleAtFixedRateSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
     /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'long'
-     * @param var3 original type: 'java.util.concurrent.TimeUnit'
-     * @return original return type: 'java.util.concurrent.ScheduledFuture'
-     */
-    scheduleWithFixedDelay(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): Promise<java_util_concurrent_ScheduledFuture | null>;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'long'
-     * @param var3 original type: 'java.util.concurrent.TimeUnit'
-     * @return original return type: 'java.util.concurrent.ScheduledFuture'
-     */
-    scheduleWithFixedDelaySync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
-    /**
      * @param var0 original type: 'java.util.concurrent.Callable'
      * @param var1 original type: 'long'
      * @param var2 original type: 'java.util.concurrent.TimeUnit'
@@ -73,22 +57,6 @@ export declare class ScheduledExecutorServiceClass extends JavaClass {
      * @return original return type: 'java.util.concurrent.ScheduledFuture'
      */
     scheduleSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
-    /**
-     * @return original return type: 'void'
-     */
-    shutdown(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    shutdownSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isShutdown(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isShutdownSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'java.util.concurrent.Future'
@@ -122,6 +90,30 @@ export declare class ScheduledExecutorServiceClass extends JavaClass {
      */
     submitSync(var0: java_util_concurrent_Callable | JavaInterfaceProxy<java_util_concurrent_CallableInterface> | null): java_util_concurrent_Future | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isTerminated(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTerminatedSync(): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'long'
+     * @param var3 original type: 'java.util.concurrent.TimeUnit'
+     * @return original return type: 'java.util.concurrent.ScheduledFuture'
+     */
+    scheduleWithFixedDelay(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): Promise<java_util_concurrent_ScheduledFuture | null>;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'long'
+     * @param var3 original type: 'java.util.concurrent.TimeUnit'
+     * @return original return type: 'java.util.concurrent.ScheduledFuture'
+     */
+    scheduleWithFixedDelaySync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
+    /**
      * @param var0 original type: 'java.util.Collection'
      * @param var1 original type: 'long'
      * @param var2 original type: 'java.util.concurrent.TimeUnit'
@@ -146,22 +138,6 @@ export declare class ScheduledExecutorServiceClass extends JavaClass {
      */
     invokeAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): java_util_List | null;
     /**
-     * @return original return type: 'java.util.List'
-     */
-    shutdownNow(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    shutdownNowSync(): java_util_List | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTerminated(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTerminatedSync(): boolean;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'boolean'
@@ -173,6 +149,14 @@ export declare class ScheduledExecutorServiceClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     awaitTerminationSync(var0: java_lang_Long | bigint | number, var1: java_util_concurrent_TimeUnit | null): boolean;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    shutdownNow(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    shutdownNowSync(): java_util_List | null;
     /**
      * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'java.lang.Object'
@@ -207,6 +191,22 @@ export declare class ScheduledExecutorServiceClass extends JavaClass {
      * @return original return type: 'void'
      */
     executeSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    shutdown(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    shutdownSync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isShutdown(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isShutdownSync(): boolean;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -229,14 +229,6 @@ export interface ScheduledExecutorServiceInterface {
      */
     scheduleAtFixedRate(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
     /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'long'
-     * @param var3 original type: 'java.util.concurrent.TimeUnit'
-     * @return original return type: 'java.util.concurrent.ScheduledFuture'
-     */
-    scheduleWithFixedDelay(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
-    /**
      * @param var0 original type: 'java.util.concurrent.Callable'
      * @param var1 original type: 'long'
      * @param var2 original type: 'java.util.concurrent.TimeUnit'
@@ -250,14 +242,6 @@ export interface ScheduledExecutorServiceInterface {
      * @return original return type: 'java.util.concurrent.ScheduledFuture'
      */
     schedule(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
-    /**
-     * @return original return type: 'void'
-     */
-    shutdown(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isShutdown(): boolean;
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'java.util.concurrent.Future'
@@ -275,6 +259,18 @@ export interface ScheduledExecutorServiceInterface {
      */
     submit(var0: java_util_concurrent_Callable | JavaInterfaceProxy<java_util_concurrent_CallableInterface> | null): java_util_concurrent_Future | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isTerminated(): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'long'
+     * @param var3 original type: 'java.util.concurrent.TimeUnit'
+     * @return original return type: 'java.util.concurrent.ScheduledFuture'
+     */
+    scheduleWithFixedDelay(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number, var3: java_util_concurrent_TimeUnit | null): java_util_concurrent_ScheduledFuture | null;
+    /**
      * @param var0 original type: 'java.util.Collection'
      * @param var1 original type: 'long'
      * @param var2 original type: 'java.util.concurrent.TimeUnit'
@@ -287,19 +283,15 @@ export interface ScheduledExecutorServiceInterface {
      */
     invokeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): java_util_List | null;
     /**
-     * @return original return type: 'java.util.List'
-     */
-    shutdownNow(): java_util_List | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isTerminated(): boolean;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'boolean'
      */
     awaitTermination(var0: java_lang_Long | bigint | number, var1: java_util_concurrent_TimeUnit | null): boolean;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    shutdownNow(): java_util_List | null;
     /**
      * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'java.lang.Object'
@@ -317,6 +309,14 @@ export interface ScheduledExecutorServiceInterface {
      * @return original return type: 'void'
      */
     execute(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    shutdown(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isShutdown(): boolean;
 }
 /**
  * Create a proxy for the {@link ScheduledExecutorService} interface.
@@ -345,4 +345,3 @@ export declare class ScheduledExecutorService extends ScheduledExecutorService_b
     private constructor();
 }
 export default ScheduledExecutorService;
-//# sourceMappingURL=ScheduledExecutorService.d.ts.map

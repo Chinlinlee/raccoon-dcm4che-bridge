@@ -106,4 +106,3 @@ declare const JobAttributes$DialogType_base: typeof JobAttributes$DialogTypeClas
 export declare class JobAttributes$DialogType extends JobAttributes$DialogType_base {
 }
 export default JobAttributes$DialogType;
-//# sourceMappingURL=JobAttributes$DialogType.d.ts.map

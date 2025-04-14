@@ -1,12 +1,10 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Mat as org_opencv_core_Mat } from "./../../../opencv/core/Mat";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
-import { Double as java_lang_Double } from "./../../../../java/lang/Double";
 import { Short as java_lang_Short } from "./../../../../java/lang/Short";
+import { Double as java_lang_Double } from "./../../../../java/lang/Double";
 import { Float as java_lang_Float } from "./../../../../java/lang/Float";
 import { Size as org_opencv_core_Size } from "./../../../opencv/core/Size";
 import { Mat$Atable as org_opencv_core_Mat$Atable } from "./../../../opencv/core/Mat$Atable";
@@ -76,19 +74,85 @@ export declare class ImageCVClass extends JavaClass {
      */
     setReleasedAfterProcessingSync(var0: java_lang_Boolean | boolean): void;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'double[]'
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'byte[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'int'
      */
-    put(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): Promise<number>;
+    put(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'byte[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'int'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'int'
+     */
+    put(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'int'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'double[]'
+     * @param var2 original type: 'short[]'
      * @return original return type: 'int'
      */
-    putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): number;
+    put(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Short | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'short[]'
+     * @return original return type: 'int'
+     */
+    putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Short | number)[] | null): number;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'short[]'
+     * @return original return type: 'int'
+     */
+    put(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Short | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'short[]'
+     * @return original return type: 'int'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Short | number)[] | null): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    put(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): number;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    put(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -108,59 +172,31 @@ export declare class ImageCVClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'byte[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'double[]'
      * @return original return type: 'int'
      */
-    put(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'byte[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'int'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'short[]'
-     * @return original return type: 'int'
-     */
-    put(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Short | number)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'short[]'
-     * @return original return type: 'int'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Short | number)[] | null): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    put(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): number;
+    put(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): Promise<number>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'byte[]'
+     * @param var2 original type: 'double[]'
      * @return original return type: 'int'
      */
-    put(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): Promise<number>;
+    putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): number;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'byte[]'
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'double[]'
      * @return original return type: 'int'
      */
-    putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): number;
+    put(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Double | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'double[]'
+     * @return original return type: 'int'
+     */
+    putSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Double | number)[] | null): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -201,44 +237,6 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'int'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Integer | number)[] | null): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'int'
-     */
-    put(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'int'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'double[]'
-     * @return original return type: 'int'
-     */
-    put(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Double | number)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'double[]'
-     * @return original return type: 'int'
-     */
-    putSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Double | number)[] | null): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'short[]'
-     * @return original return type: 'int'
-     */
-    put(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Short | number)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'short[]'
-     * @return original return type: 'int'
-     */
-    putSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Short | number)[] | null): number;
     /**
      * @return original return type: 'boolean'
      */
@@ -290,18 +288,6 @@ export declare class ImageCVClass extends JavaClass {
      */
     createSync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'org.opencv.core.Size'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    create(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Size'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    createSync(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -315,6 +301,18 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'void'
      */
     createSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'org.opencv.core.Size'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    create(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Size'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    createSync(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -331,6 +329,22 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'long'
      */
     dataAddrSync(): number;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'void'
+     */
+    convertTo(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Double | number, var3: java_lang_Double | number): Promise<void>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'void'
+     */
+    convertToSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Double | number, var3: java_lang_Double | number): void;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'int'
@@ -358,21 +372,17 @@ export declare class ImageCVClass extends JavaClass {
      */
     convertToSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'org.opencv.core.Mat'
      */
-    convertTo(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Double | number, var3: java_lang_Double | number): Promise<void>;
+    reshape(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null): Promise<org_opencv_core_Mat | null>;
     /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'org.opencv.core.Mat'
      */
-    convertToSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Double | number, var3: java_lang_Double | number): void;
+    reshapeSync(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat'
@@ -396,17 +406,17 @@ export declare class ImageCVClass extends JavaClass {
      */
     reshapeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int[]'
+     * @param var0 original type: 'org.opencv.core.Size'
+     * @param var1 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat'
      */
-    reshape(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null): Promise<org_opencv_core_Mat | null>;
+    static zeros(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int[]'
+     * @param var0 original type: 'org.opencv.core.Size'
+     * @param var1 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat'
      */
-    reshapeSync(var0: java_lang_Integer | number, var1: (java_lang_Integer | number)[] | null): org_opencv_core_Mat | null;
+    static zerosSync(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -433,18 +443,6 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     static zerosSync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Size'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static zeros(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Size'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static zerosSync(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -473,6 +471,18 @@ export declare class ImageCVClass extends JavaClass {
     static eyeSync(var0: org_opencv_core_Size | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'org.opencv.core.Mat$Atable'
+     */
+    at(var0: java_lang_Class | null, var1: (java_lang_Integer | number)[] | null): Promise<org_opencv_core_Mat$Atable | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'org.opencv.core.Mat$Atable'
+     */
+    atSync(var0: java_lang_Class | null, var1: (java_lang_Integer | number)[] | null): org_opencv_core_Mat$Atable | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat$Atable'
@@ -486,26 +496,6 @@ export declare class ImageCVClass extends JavaClass {
      */
     atSync(var0: java_lang_Class | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_opencv_core_Mat$Atable | null;
     /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'org.opencv.core.Mat$Atable'
-     */
-    at(var0: java_lang_Class | null, var1: (java_lang_Integer | number)[] | null): Promise<org_opencv_core_Mat$Atable | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'org.opencv.core.Mat$Atable'
-     */
-    atSync(var0: java_lang_Class | null, var1: (java_lang_Integer | number)[] | null): org_opencv_core_Mat$Atable | null;
-    /**
-     * @return original return type: 'org.opencv.core.Size'
-     */
-    size(): Promise<org_opencv_core_Size | null>;
-    /**
-     * @return original return type: 'org.opencv.core.Size'
-     */
-    sizeSync(): org_opencv_core_Size | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -515,6 +505,14 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'int'
      */
     sizeSync(var0: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'org.opencv.core.Size'
+     */
+    size(): Promise<org_opencv_core_Size | null>;
+    /**
+     * @return original return type: 'org.opencv.core.Size'
+     */
+    sizeSync(): org_opencv_core_Size | null;
     /**
      * @return original return type: 'int'
      */
@@ -624,6 +622,16 @@ export declare class ImageCVClass extends JavaClass {
      */
     dimsSync(): number;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    diag(var0: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    diagSync(var0: java_lang_Integer | number): org_opencv_core_Mat | null;
+    /**
      * @return original return type: 'org.opencv.core.Mat'
      */
     diag(): Promise<org_opencv_core_Mat | null>;
@@ -642,26 +650,6 @@ export declare class ImageCVClass extends JavaClass {
      */
     static diagSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    diag(var0: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    diagSync(var0: java_lang_Integer | number): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    mul(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    mulSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
-    /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'double'
      * @return original return type: 'org.opencv.core.Mat'
@@ -673,6 +661,16 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     mulSync(var0: org_opencv_core_Mat | null, var1: java_lang_Double | number): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    mul(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    mulSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
     /**
      * @return original return type: 'void'
      */
@@ -768,6 +766,18 @@ export declare class ImageCVClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'int'
+     */
+    get(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'int'
+     */
+    getSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): number;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'float[]'
@@ -783,16 +793,30 @@ export declare class ImageCVClass extends JavaClass {
     getSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Float | number)[] | null): number;
     /**
      * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int[]'
+     * @param var1 original type: 'float[]'
      * @return original return type: 'int'
      */
-    get(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): Promise<number>;
+    get(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Float | number)[] | null): Promise<number>;
     /**
      * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int[]'
+     * @param var1 original type: 'float[]'
      * @return original return type: 'int'
      */
-    getSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null): number;
+    getSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Float | number)[] | null): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'double[]'
+     * @return original return type: 'int'
+     */
+    get(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'double[]'
+     * @return original return type: 'int'
+     */
+    getSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -835,6 +859,32 @@ export declare class ImageCVClass extends JavaClass {
     getSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Short | number)[] | null): number;
     /**
      * @param var0 original type: 'int[]'
+     * @param var1 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    get(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int[]'
+     * @param var1 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    getSync(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    get(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    getSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): number;
+    /**
+     * @param var0 original type: 'int[]'
      * @return original return type: 'double[]'
      */
     get(var0: (java_lang_Integer | number)[] | null): Promise<(number)[] | null>;
@@ -870,55 +920,15 @@ export declare class ImageCVClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'double[]'
-     * @return original return type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
      */
-    get(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): Promise<number>;
+    rowRange(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'double[]'
-     * @return original return type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
      */
-    getSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Double | number)[] | null): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'float[]'
-     * @return original return type: 'int'
-     */
-    get(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Float | number)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'float[]'
-     * @return original return type: 'int'
-     */
-    getSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Float | number)[] | null): number;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    get(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    getSync(var0: (java_lang_Integer | number)[] | null, var1: Buffer | null): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    get(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    getSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: Buffer | null): number;
+    rowRangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'org.opencv.core.Range'
      * @return original return type: 'org.opencv.core.Mat'
@@ -929,18 +939,6 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     rowRangeSync(var0: org_opencv_core_Range | null): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    rowRange(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    rowRangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -1018,14 +1016,6 @@ export declare class ImageCVClass extends JavaClass {
      */
     rowsSync(): number;
     /**
-     * @return original return type: 'long'
-     */
-    step1(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    step1Sync(): number;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'long'
      */
@@ -1036,13 +1026,13 @@ export declare class ImageCVClass extends JavaClass {
      */
     step1Sync(var0: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'org.opencv.core.Mat'
+     * @return original return type: 'long'
      */
-    inv(): Promise<org_opencv_core_Mat | null>;
+    step1(): Promise<number>;
     /**
-     * @return original return type: 'org.opencv.core.Mat'
+     * @return original return type: 'long'
      */
-    invSync(): org_opencv_core_Mat | null;
+    step1Sync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat'
@@ -1053,6 +1043,14 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     invSync(var0: java_lang_Integer | number): org_opencv_core_Mat | null;
+    /**
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    inv(): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    invSync(): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @return original return type: 'org.opencv.core.Mat'
@@ -1152,50 +1150,6 @@ export declare class ImageCVClass extends JavaClass {
      */
     colRangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'org.opencv.core.Scalar'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setTo(var0: org_opencv_core_Scalar | null, var1: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Scalar'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setToSync(var0: org_opencv_core_Scalar | null, var1: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Scalar'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setTo(var0: org_opencv_core_Scalar | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Scalar'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setToSync(var0: org_opencv_core_Scalar | null): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setTo(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setToSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setTo(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    setToSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
-    /**
      * @param var0 original type: 'int[]'
      * @param var1 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat'
@@ -1234,27 +1188,49 @@ export declare class ImageCVClass extends JavaClass {
      */
     static onesSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'org.opencv.core.Range[]'
+     * @param var0 original type: 'org.opencv.core.Mat'
      * @return original return type: 'org.opencv.core.Mat'
      */
-    submat(var0: (org_opencv_core_Range | null)[] | null): Promise<org_opencv_core_Mat | null>;
+    setTo(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
     /**
-     * @param var0 original type: 'org.opencv.core.Range[]'
+     * @param var0 original type: 'org.opencv.core.Mat'
      * @return original return type: 'org.opencv.core.Mat'
      */
-    submatSync(var0: (org_opencv_core_Range | null)[] | null): org_opencv_core_Mat | null;
+    setToSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'org.opencv.core.Range'
-     * @param var1 original type: 'org.opencv.core.Range'
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.Mat'
      * @return original return type: 'org.opencv.core.Mat'
      */
-    submat(var0: org_opencv_core_Range | null, var1: org_opencv_core_Range | null): Promise<org_opencv_core_Mat | null>;
+    setTo(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
     /**
-     * @param var0 original type: 'org.opencv.core.Range'
-     * @param var1 original type: 'org.opencv.core.Range'
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.Mat'
      * @return original return type: 'org.opencv.core.Mat'
      */
-    submatSync(var0: org_opencv_core_Range | null, var1: org_opencv_core_Range | null): org_opencv_core_Mat | null;
+    setToSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Scalar'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    setTo(var0: org_opencv_core_Scalar | null, var1: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Scalar'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    setToSync(var0: org_opencv_core_Scalar | null, var1: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Scalar'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    setTo(var0: org_opencv_core_Scalar | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Scalar'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    setToSync(var0: org_opencv_core_Scalar | null): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -1272,6 +1248,18 @@ export declare class ImageCVClass extends JavaClass {
      */
     submatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
+     * @param var0 original type: 'org.opencv.core.Range'
+     * @param var1 original type: 'org.opencv.core.Range'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    submat(var0: org_opencv_core_Range | null, var1: org_opencv_core_Range | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Range'
+     * @param var1 original type: 'org.opencv.core.Range'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    submatSync(var0: org_opencv_core_Range | null, var1: org_opencv_core_Range | null): org_opencv_core_Mat | null;
+    /**
      * @param var0 original type: 'org.opencv.core.Rect'
      * @return original return type: 'org.opencv.core.Mat'
      */
@@ -1282,19 +1270,15 @@ export declare class ImageCVClass extends JavaClass {
      */
     submatSync(var0: org_opencv_core_Rect | null): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'int'
+     * @param var0 original type: 'org.opencv.core.Range[]'
+     * @return original return type: 'org.opencv.core.Mat'
      */
-    checkVector(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<number>;
+    submat(var0: (org_opencv_core_Range | null)[] | null): Promise<org_opencv_core_Mat | null>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'int'
+     * @param var0 original type: 'org.opencv.core.Range[]'
+     * @return original return type: 'org.opencv.core.Mat'
      */
-    checkVectorSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): number;
+    submatSync(var0: (org_opencv_core_Range | null)[] | null): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -1317,6 +1301,20 @@ export declare class ImageCVClass extends JavaClass {
      * @return original return type: 'int'
      */
     checkVectorSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'int'
+     */
+    checkVector(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'int'
+     */
+    checkVectorSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): number;
     /**
      * Original type: 'java.lang.ref.Cleaner'
      */
@@ -1431,4 +1429,3 @@ declare const ImageCV_base: typeof ImageCVClass;
 export declare class ImageCV extends ImageCV_base {
 }
 export default ImageCV;
-//# sourceMappingURL=ImageCV.d.ts.map

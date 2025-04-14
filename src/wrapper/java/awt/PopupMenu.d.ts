@@ -125,18 +125,6 @@ export declare class PopupMenuClass extends JavaClass {
      */
     showSync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.awt.MenuItem'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    insert(var0: java_awt_MenuItem | null, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.MenuItem'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    insertSync(var0: java_awt_MenuItem | null, var1: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -148,6 +136,18 @@ export declare class PopupMenuClass extends JavaClass {
      * @return original return type: 'void'
      */
     insertSync(var0: string | null, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.MenuItem'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    insert(var0: java_awt_MenuItem | null, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.MenuItem'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    insertSync(var0: java_awt_MenuItem | null, var1: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.awt.MenuItem'
@@ -175,16 +175,6 @@ export declare class PopupMenuClass extends JavaClass {
      */
     getShortcutSync(): java_awt_MenuShortcut | null;
     /**
-     * @param var0 original type: 'java.awt.MenuComponent'
-     * @return original return type: 'void'
-     */
-    remove(var0: java_awt_MenuComponent | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.MenuComponent'
-     * @return original return type: 'void'
-     */
-    removeSync(var0: java_awt_MenuComponent | null): void;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -194,6 +184,16 @@ export declare class PopupMenuClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.MenuComponent'
+     * @return original return type: 'void'
+     */
+    remove(var0: java_awt_MenuComponent | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.MenuComponent'
+     * @return original return type: 'void'
+     */
+    removeSync(var0: java_awt_MenuComponent | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -237,14 +237,6 @@ export declare class PopupMenuClass extends JavaClass {
      */
     removeActionListenerSync(var0: java_awt_event_ActionListener | JavaInterfaceProxy<java_awt_event_ActionListenerInterface> | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    enable(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    enableSync(): void;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -254,6 +246,14 @@ export declare class PopupMenuClass extends JavaClass {
      * @return original return type: 'void'
      */
     enableSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'void'
+     */
+    enable(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    enableSync(): void;
     /**
      * @return original return type: 'int'
      */
@@ -273,16 +273,6 @@ export declare class PopupMenuClass extends JavaClass {
      */
     setFontSync(var0: java_awt_Font | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    add(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    addSync(var0: string | null): void;
-    /**
      * @param var0 original type: 'java.awt.MenuItem'
      * @return original return type: 'java.awt.MenuItem'
      */
@@ -292,6 +282,16 @@ export declare class PopupMenuClass extends JavaClass {
      * @return original return type: 'java.awt.MenuItem'
      */
     addSync(var0: java_awt_MenuItem | null): java_awt_MenuItem | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    add(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    addSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.awt.MenuShortcut'
      * @return original return type: 'void'
@@ -498,4 +498,3 @@ declare const PopupMenu_base: typeof PopupMenuClass;
 export declare class PopupMenu extends PopupMenu_base {
 }
 export default PopupMenu;
-//# sourceMappingURL=PopupMenu.d.ts.map

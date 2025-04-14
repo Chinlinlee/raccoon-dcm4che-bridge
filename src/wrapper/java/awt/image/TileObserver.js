@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TileObserver = exports.createTileObserverProxy = void 0;
+exports.TileObserver = void 0;
+exports.createTileObserverProxy = createTileObserverProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TileObserver} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTileObserverProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.image.TileObserver', methods, opts);
 }
-exports.createTileObserverProxy = createTileObserverProxy;
 /**
  * Class java.awt.image.TileObserver.
  *

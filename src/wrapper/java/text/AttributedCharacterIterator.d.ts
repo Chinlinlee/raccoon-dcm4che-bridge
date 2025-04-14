@@ -104,14 +104,6 @@ export declare class AttributedCharacterIteratorClass extends JavaClass {
      */
     getAttributeSync(var0: java_text_AttributedCharacterIterator$Attribute | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'int'
-     */
-    getEndIndex(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getEndIndexSync(): number;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
      */
@@ -122,6 +114,14 @@ export declare class AttributedCharacterIteratorClass extends JavaClass {
      */
     setIndexSync(var0: java_lang_Integer | number): string | null;
     /**
+     * @return original return type: 'int'
+     */
+    getEndIndex(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getEndIndexSync(): number;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     clone(): Promise<BasicOrJavaType | null>;
@@ -129,14 +129,6 @@ export declare class AttributedCharacterIteratorClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     cloneSync(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getRunStart(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getRunStartSync(): number;
     /**
      * @param var0 original type: 'java.util.Set'
      * @return original return type: 'int'
@@ -157,6 +149,14 @@ export declare class AttributedCharacterIteratorClass extends JavaClass {
      * @return original return type: 'int'
      */
     getRunStartSync(var0: java_text_AttributedCharacterIterator$Attribute | null): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getRunStart(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getRunStartSync(): number;
     /**
      * @return original return type: 'java.util.Set'
      */
@@ -238,22 +238,18 @@ export interface AttributedCharacterIteratorInterface {
      */
     getAttribute(var0: java_text_AttributedCharacterIterator$Attribute | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'int'
-     */
-    getEndIndex(): number;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
      */
     setIndex(var0: java_lang_Integer | number): string | null;
     /**
+     * @return original return type: 'int'
+     */
+    getEndIndex(): number;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     clone(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getRunStart(): number;
     /**
      * @param var0 original type: 'java.util.Set'
      * @return original return type: 'int'
@@ -264,6 +260,10 @@ export interface AttributedCharacterIteratorInterface {
      * @return original return type: 'int'
      */
     getRunStart(var0: java_text_AttributedCharacterIterator$Attribute | null): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getRunStart(): number;
     /**
      * @return original return type: 'java.util.Set'
      */
@@ -300,4 +300,3 @@ export declare class AttributedCharacterIterator extends AttributedCharacterIter
     private constructor();
 }
 export default AttributedCharacterIterator;
-//# sourceMappingURL=AttributedCharacterIterator.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IIOReadWarningListener = exports.createIIOReadWarningListenerProxy = void 0;
+exports.IIOReadWarningListener = void 0;
+exports.createIIOReadWarningListenerProxy = createIIOReadWarningListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IIOReadWarningListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIIOReadWarningListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.imageio.event.IIOReadWarningListener', methods, opts);
 }
-exports.createIIOReadWarningListenerProxy = createIIOReadWarningListenerProxy;
 /**
  * Class javax.imageio.event.IIOReadWarningListener.
  *

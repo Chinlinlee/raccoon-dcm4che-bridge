@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        /* Basic Options */
+        "target": "es2022",
+        "module": "commonjs",
+        "outDir": "./wrapper",
+        "rootDir": ".//java-wrapper",
+        "declaration": true,
+        "esModuleInterop": true,
+        /* Strict Type-Checking Options */
+        "strict": true,
+        /* Module Resolution Options */
+        "moduleResolution": "node",
+        /* Advanced Options */
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["./java-wrapper/**/*.ts"],
+    "exclude": ["node_modules"]
+}

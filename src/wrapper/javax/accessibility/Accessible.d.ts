@@ -59,4 +59,3 @@ export declare class Accessible extends Accessible_base {
     private constructor();
 }
 export default Accessible;
-//# sourceMappingURL=Accessible.d.ts.map

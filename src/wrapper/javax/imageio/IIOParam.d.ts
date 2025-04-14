@@ -265,4 +265,3 @@ export declare class IIOParam extends IIOParam_base {
     private constructor();
 }
 export default IIOParam;
-//# sourceMappingURL=IIOParam.d.ts.map

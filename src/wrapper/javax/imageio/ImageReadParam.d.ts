@@ -365,4 +365,3 @@ declare const ImageReadParam_base: typeof ImageReadParamClass;
 export declare class ImageReadParam extends ImageReadParam_base {
 }
 export default ImageReadParam;
-//# sourceMappingURL=ImageReadParam.d.ts.map

@@ -4,7 +4,6 @@ import { Long as java_lang_Long } from "./Long";
 import { Integer as java_lang_Integer } from "./Integer";
 import { MethodHandles$Lookup as java_lang_invoke_MethodHandles$Lookup } from "./invoke/MethodHandles$Lookup";
 import { Optional as java_util_Optional } from "./../util/Optional";
-import { Short as java_lang_Short } from "./Short";
 import { Double as java_lang_Double } from "./Double";
 /**
  * This class just defines types, you should import {@link Float} instead of this.
@@ -44,16 +43,6 @@ export declare class FloatClass extends JavaClass {
     static compareSync(var0: FloatClass | number, var1: FloatClass | number): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -72,6 +61,16 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -103,16 +102,6 @@ export declare class FloatClass extends JavaClass {
      */
     static sumSync(var0: FloatClass | number, var1: FloatClass | number): number;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BasicOrJavaType | null): number;
-    /**
      * @param var0 original type: 'java.lang.Float'
      * @return original return type: 'int'
      */
@@ -123,15 +112,15 @@ export declare class FloatClass extends JavaClass {
      */
     compareToSync(var0: FloatClass | number | null): number;
     /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Float'
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
      */
-    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Float'
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
      */
-    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
+    compareToSync(var0: BasicOrJavaType | null): number;
     /**
      * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
      * @return original return type: 'java.lang.Object'
@@ -143,6 +132,24 @@ export declare class FloatClass extends JavaClass {
      */
     resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): BasicOrJavaType | null;
     /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Float'
+     */
+    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Float'
+     */
+    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isNaN(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isNaNSync(): boolean;
+    /**
      * @param var0 original type: 'float'
      * @return original return type: 'boolean'
      */
@@ -152,14 +159,6 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isNaNSync(var0: FloatClass | number): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNaN(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNaNSync(): boolean;
     /**
      * @return original return type: 'java.util.Optional'
      */
@@ -227,6 +226,14 @@ export declare class FloatClass extends JavaClass {
      */
     static minSync(var0: FloatClass | number, var1: FloatClass | number): number;
     /**
+     * @return original return type: 'boolean'
+     */
+    isInfinite(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInfiniteSync(): boolean;
+    /**
      * @param var0 original type: 'float'
      * @return original return type: 'boolean'
      */
@@ -236,14 +243,6 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isInfiniteSync(var0: FloatClass | number): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInfinite(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInfiniteSync(): boolean;
     /**
      * @param var0 original type: 'float'
      * @return original return type: 'int'
@@ -262,16 +261,6 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'int'
      */
     hashCodeSync(): number;
-    /**
-     * @param var0 original type: 'short'
-     * @return original return type: 'float'
-     */
-    static float16ToFloat(var0: java_lang_Short | number): Promise<number>;
-    /**
-     * @param var0 original type: 'short'
-     * @return original return type: 'float'
-     */
-    static float16ToFloatSync(var0: java_lang_Short | number): number;
     /**
      * @return original return type: 'short'
      */
@@ -311,16 +300,6 @@ export declare class FloatClass extends JavaClass {
      */
     intValueSync(): number;
     /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.Float'
-     */
-    static valueOf(var0: FloatClass | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.lang.Float'
-     */
-    static valueOfSync(var0: FloatClass | number): number | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Float'
      */
@@ -330,6 +309,16 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'java.lang.Float'
      */
     static valueOfSync(var0: string | null): number | null;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.Float'
+     */
+    static valueOf(var0: FloatClass | number): Promise<number | null>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.lang.Float'
+     */
+    static valueOfSync(var0: FloatClass | number): number | null;
     /**
      * @return original return type: 'float'
      */
@@ -346,16 +335,6 @@ export declare class FloatClass extends JavaClass {
      * @return original return type: 'double'
      */
     doubleValueSync(): number;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'short'
-     */
-    static floatToFloat16(var0: FloatClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'short'
-     */
-    static floatToFloat16Sync(var0: FloatClass | number): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -419,10 +398,6 @@ export declare class FloatClass extends JavaClass {
      */
     static readonly MIN_EXPONENT: java_lang_Integer | number;
     /**
-     * Original type: 'int'
-     */
-    static readonly PRECISION: java_lang_Integer | number;
-    /**
      * @param var0 original type: 'java.lang.String'
      */
     constructor(var0: string | null);
@@ -463,4 +438,3 @@ declare const Float_base: typeof FloatClass;
 export declare class Float extends Float_base {
 }
 export default Float;
-//# sourceMappingURL=Float.d.ts.map

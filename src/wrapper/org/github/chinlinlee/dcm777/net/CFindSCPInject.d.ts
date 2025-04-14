@@ -102,4 +102,3 @@ export declare class CFindSCPInject extends CFindSCPInject_base {
     private constructor();
 }
 export default CFindSCPInject;
-//# sourceMappingURL=CFindSCPInject.d.ts.map

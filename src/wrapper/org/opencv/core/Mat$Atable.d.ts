@@ -17,16 +17,6 @@ export declare class Mat$AtableClass extends JavaClass {
      */
     getVSync(): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setV(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setVSync(var0: BasicOrJavaType | null): void;
-    /**
      * @param var0 original type: 'org.opencv.core.Mat$Tuple4'
      * @return original return type: 'void'
      */
@@ -36,6 +26,16 @@ export declare class Mat$AtableClass extends JavaClass {
      * @return original return type: 'void'
      */
     setV4cSync(var0: org_opencv_core_Mat$Tuple4 | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setV(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setVSync(var0: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.opencv.core.Mat$Tuple3'
      * @return original return type: 'void'
@@ -98,15 +98,15 @@ export interface Mat$AtableInterface {
      */
     getV(): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setV(var0: BasicOrJavaType | null): void;
-    /**
      * @param var0 original type: 'org.opencv.core.Mat$Tuple4'
      * @return original return type: 'void'
      */
     setV4c(var0: org_opencv_core_Mat$Tuple4 | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setV(var0: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.opencv.core.Mat$Tuple3'
      * @return original return type: 'void'
@@ -157,4 +157,3 @@ export declare class Mat$Atable extends Mat$Atable_base {
     private constructor();
 }
 export default Mat$Atable;
-//# sourceMappingURL=Mat$Atable.d.ts.map

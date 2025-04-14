@@ -154,4 +154,3 @@ declare const VoiLutModule_base: typeof VoiLutModuleClass;
 export declare class VoiLutModule extends VoiLutModule_base {
 }
 export default VoiLutModule;
-//# sourceMappingURL=VoiLutModule.d.ts.map

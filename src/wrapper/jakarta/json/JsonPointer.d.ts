@@ -21,24 +21,6 @@ export declare class JsonPointerClass extends JavaClass {
     addSync(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): jakarta_json_JsonStructure | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonStructure'
-     * @return original return type: 'jakarta.json.JsonStructure'
-     */
-    remove(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): Promise<jakarta_json_JsonStructure | null>;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonStructure'
-     * @return original return type: 'jakarta.json.JsonStructure'
-     */
-    removeSync(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): jakarta_json_JsonStructure | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonStructure'
      * @return original return type: 'jakarta.json.JsonValue'
      */
     getValue(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): Promise<jakarta_json_JsonValue | null>;
@@ -59,6 +41,16 @@ export declare class JsonPointerClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonStructure'
      */
     replaceSync(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): jakarta_json_JsonStructure | null;
+    /**
+     * @param var0 original type: 'jakarta.json.JsonStructure'
+     * @return original return type: 'jakarta.json.JsonStructure'
+     */
+    remove(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): Promise<jakarta_json_JsonStructure | null>;
+    /**
+     * @param var0 original type: 'jakarta.json.JsonStructure'
+     * @return original return type: 'jakarta.json.JsonStructure'
+     */
+    removeSync(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): jakarta_json_JsonStructure | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonStructure'
      * @return original return type: 'boolean'
@@ -90,15 +82,6 @@ export interface JsonPointerInterface {
     add(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): jakarta_json_JsonStructure | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonStructure'
-     * @return original return type: 'jakarta.json.JsonStructure'
-     */
-    remove(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): jakarta_json_JsonStructure | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonStructure'
      * @return original return type: 'jakarta.json.JsonValue'
      */
     getValue(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): jakarta_json_JsonValue | null;
@@ -108,6 +91,15 @@ export interface JsonPointerInterface {
      * @return original return type: 'jakarta.json.JsonStructure'
      */
     replace(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): jakarta_json_JsonStructure | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    toString(): string;
+    /**
+     * @param var0 original type: 'jakarta.json.JsonStructure'
+     * @return original return type: 'jakarta.json.JsonStructure'
+     */
+    remove(var0: jakarta_json_JsonStructure | JavaInterfaceProxy<jakarta_json_JsonStructureInterface> | null): jakarta_json_JsonStructure | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonStructure'
      * @return original return type: 'boolean'
@@ -141,4 +133,3 @@ export declare class JsonPointer extends JsonPointer_base {
     private constructor();
 }
 export default JsonPointer;
-//# sourceMappingURL=JsonPointer.d.ts.map

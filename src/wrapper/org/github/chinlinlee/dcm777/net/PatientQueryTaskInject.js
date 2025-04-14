@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PatientQueryTaskInject = exports.createPatientQueryTaskInjectProxy = void 0;
+exports.PatientQueryTaskInject = void 0;
+exports.createPatientQueryTaskInjectProxy = createPatientQueryTaskInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PatientQueryTaskInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPatientQueryTaskInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.PatientQueryTaskInject', methods, opts);
 }
-exports.createPatientQueryTaskInjectProxy = createPatientQueryTaskInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.PatientQueryTaskInject.
  *

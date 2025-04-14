@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Closeable = exports.createCloseableProxy = void 0;
+exports.Closeable = void 0;
+exports.createCloseableProxy = createCloseableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Closeable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCloseableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.io.Closeable', methods, opts);
 }
-exports.createCloseableProxy = createCloseableProxy;
 /**
  * Class java.io.Closeable.
  *

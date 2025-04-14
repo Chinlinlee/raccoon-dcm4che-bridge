@@ -70,4 +70,3 @@ export declare class Composite extends Composite_base {
     private constructor();
 }
 export default Composite;
-//# sourceMappingURL=Composite.d.ts.map

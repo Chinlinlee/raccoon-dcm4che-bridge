@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PropertyChangeListener = exports.createPropertyChangeListenerProxy = void 0;
+exports.PropertyChangeListener = void 0;
+exports.createPropertyChangeListenerProxy = createPropertyChangeListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PropertyChangeListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPropertyChangeListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.beans.PropertyChangeListener', methods, opts);
 }
-exports.createPropertyChangeListenerProxy = createPropertyChangeListenerProxy;
 /**
  * Class java.beans.PropertyChangeListener.
  *

@@ -99,4 +99,3 @@ export declare class DimseRSP extends DimseRSP_base {
     private constructor();
 }
 export default DimseRSP;
-//# sourceMappingURL=DimseRSP.d.ts.map

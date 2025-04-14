@@ -25,16 +25,6 @@ export declare class ZoneIdClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -53,6 +43,16 @@ export declare class ZoneIdClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.time.ZoneId'
      */
@@ -206,4 +206,3 @@ export declare class ZoneId extends ZoneId_base {
     private constructor();
 }
 export default ZoneId;
-//# sourceMappingURL=ZoneId.d.ts.map

@@ -14,8 +14,8 @@ import { BufferedImage as java_awt_image_BufferedImage } from "./../../java/awt/
 import { Boolean as java_lang_Boolean } from "./../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../java/lang/Long";
 import { IIOReadUpdateListener as javax_imageio_event_IIOReadUpdateListener, IIOReadUpdateListenerInterface as javax_imageio_event_IIOReadUpdateListenerInterface } from "./event/IIOReadUpdateListener";
-import { Iterator as java_util_Iterator, IteratorInterface as java_util_IteratorInterface } from "./../../java/util/Iterator";
 import { IIOImage as javax_imageio_IIOImage } from "./IIOImage";
+import { Iterator as java_util_Iterator, IteratorInterface as java_util_IteratorInterface } from "./../../java/util/Iterator";
 import { ImageReaderSpi as javax_imageio_spi_ImageReaderSpi } from "./spi/ImageReaderSpi";
 /**
  * This class just defines types, you should import {@link ImageReader} instead of this.
@@ -253,6 +253,16 @@ export declare class ImageReaderClass extends JavaClass {
     removeIIOReadProgressListenerSync(var0: javax_imageio_event_IIOReadProgressListener | JavaInterfaceProxy<javax_imageio_event_IIOReadProgressListenerInterface> | null): void;
     /**
      * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setInput(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setInputSync(var0: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -277,16 +287,6 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     setInputSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setInput(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setInputSync(var0: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'float'
@@ -410,16 +410,6 @@ export declare class ImageReaderClass extends JavaClass {
      */
     getTileGridXOffsetSync(var0: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'java.util.Iterator'
-     * @return original return type: 'java.util.Iterator'
-     */
-    readAll(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): Promise<java_util_Iterator | null>;
-    /**
-     * @param var0 original type: 'java.util.Iterator'
-     * @return original return type: 'java.util.Iterator'
-     */
-    readAllSync(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): java_util_Iterator | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'javax.imageio.ImageReadParam'
      * @return original return type: 'javax.imageio.IIOImage'
@@ -431,6 +421,16 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'javax.imageio.IIOImage'
      */
     readAllSync(var0: java_lang_Integer | number, var1: javax_imageio_ImageReadParam | null): javax_imageio_IIOImage | null;
+    /**
+     * @param var0 original type: 'java.util.Iterator'
+     * @return original return type: 'java.util.Iterator'
+     */
+    readAll(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): Promise<java_util_Iterator | null>;
+    /**
+     * @param var0 original type: 'java.util.Iterator'
+     * @return original return type: 'java.util.Iterator'
+     */
+    readAllSync(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): java_util_Iterator | null;
     /**
      * @return original return type: 'void'
      */
@@ -626,14 +626,6 @@ export declare class ImageReaderClass extends JavaClass {
      */
     readerSupportsThumbnailsSync(): boolean;
     /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocale(): Promise<java_util_Locale | null>;
-    /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocaleSync(): java_util_Locale | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.util.Iterator'
      */
@@ -653,6 +645,14 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'int'
      */
     getNumThumbnailsSync(var0: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocale(): Promise<java_util_Locale | null>;
+    /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocaleSync(): java_util_Locale | null;
 }
 declare const ImageReader_base: typeof ImageReaderClass;
 /**
@@ -672,4 +672,3 @@ export declare class ImageReader extends ImageReader_base {
     private constructor();
 }
 export default ImageReader;
-//# sourceMappingURL=ImageReader.d.ts.map

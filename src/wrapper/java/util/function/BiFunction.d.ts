@@ -80,4 +80,3 @@ export declare class BiFunction extends BiFunction_base {
     private constructor();
 }
 export default BiFunction;
-//# sourceMappingURL=BiFunction.d.ts.map

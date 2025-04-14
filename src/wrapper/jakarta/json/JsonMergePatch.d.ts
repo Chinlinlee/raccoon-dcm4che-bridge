@@ -74,4 +74,3 @@ export declare class JsonMergePatch extends JsonMergePatch_base {
     private constructor();
 }
 export default JsonMergePatch;
-//# sourceMappingURL=JsonMergePatch.d.ts.map

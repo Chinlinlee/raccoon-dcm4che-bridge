@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StudyQueryTaskInject = exports.createStudyQueryTaskInjectProxy = void 0;
+exports.StudyQueryTaskInject = void 0;
+exports.createStudyQueryTaskInjectProxy = createStudyQueryTaskInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link StudyQueryTaskInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createStudyQueryTaskInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.StudyQueryTaskInject', methods, opts);
 }
-exports.createStudyQueryTaskInjectProxy = createStudyQueryTaskInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.StudyQueryTaskInject.
  *

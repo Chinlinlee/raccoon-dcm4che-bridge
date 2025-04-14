@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
+import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
 import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
@@ -13,13 +13,13 @@ import { Connection as org_dcm4che3_net_Connection } from "./../../../../dcm4che
  */
 export declare class SendStgCmtResultClass extends JavaClass {
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    run(): Promise<void>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    runSync(): void;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -51,6 +51,14 @@ export declare class SendStgCmtResultClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -61,29 +69,21 @@ export declare class SendStgCmtResultClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toStringAsync(): Promise<string>;
+    notifyAllSync(): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCode(): Promise<number>;
+    run(): Promise<void>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCodeSync(): number;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClass(): Promise<java_lang_Class>;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClassSync(): java_lang_Class;
+    runSync(): void;
     /**
      * @return original return type: 'void'
      */
@@ -93,13 +93,12 @@ export declare class SendStgCmtResultClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'boolean'
+     * @param var3 original type: 'org.dcm4che3.net.Connection'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: java_lang_Boolean | boolean, var3: org_dcm4che3_net_Connection | null);
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.data.Attributes'
@@ -108,13 +107,6 @@ export declare class SendStgCmtResultClass extends JavaClass {
      * @return original return type: 'org.github.chinlinlee.dcm777.dcmqrscp.SendStgCmtResult'
      */
     static newInstanceAsync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: java_lang_Boolean | boolean, var3: org_dcm4che3_net_Connection | null): Promise<SendStgCmtResult>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'org.dcm4che3.net.Connection'
-     */
-    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_data_Attributes | null, var2: java_lang_Boolean | boolean, var3: org_dcm4che3_net_Connection | null);
 }
 declare const SendStgCmtResult_base: typeof SendStgCmtResultClass;
 /**
@@ -129,4 +121,3 @@ declare const SendStgCmtResult_base: typeof SendStgCmtResultClass;
 export declare class SendStgCmtResult extends SendStgCmtResult_base {
 }
 export default SendStgCmtResult;
-//# sourceMappingURL=SendStgCmtResult.d.ts.map

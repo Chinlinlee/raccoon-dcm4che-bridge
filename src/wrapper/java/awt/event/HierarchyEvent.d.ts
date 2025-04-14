@@ -306,4 +306,3 @@ declare const HierarchyEvent_base: typeof HierarchyEventClass;
 export declare class HierarchyEvent extends HierarchyEvent_base {
 }
 export default HierarchyEvent;
-//# sourceMappingURL=HierarchyEvent.d.ts.map

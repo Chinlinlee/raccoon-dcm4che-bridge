@@ -16,19 +16,19 @@ export declare class StudyQueryTaskInjectClass extends JavaClass {
     /**
      * @return original return type: 'void'
      */
-    getStudy(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    getStudySync(): void;
-    /**
-     * @return original return type: 'void'
-     */
     wrappedFindNextStudy(): Promise<void>;
     /**
      * @return original return type: 'void'
      */
     wrappedFindNextStudySync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    getStudy(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    getStudySync(): void;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -49,11 +49,11 @@ export interface StudyQueryTaskInjectInterface {
     /**
      * @return original return type: 'void'
      */
-    getStudy(): void;
+    wrappedFindNextStudy(): void;
     /**
      * @return original return type: 'void'
      */
-    wrappedFindNextStudy(): void;
+    getStudy(): void;
 }
 /**
  * Create a proxy for the {@link StudyQueryTaskInject} interface.
@@ -82,4 +82,3 @@ export declare class StudyQueryTaskInject extends StudyQueryTaskInject_base {
     private constructor();
 }
 export default StudyQueryTaskInject;
-//# sourceMappingURL=StudyQueryTaskInject.d.ts.map

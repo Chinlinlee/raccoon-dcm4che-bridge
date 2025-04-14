@@ -1,11 +1,10 @@
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { ParticipantObjectDescription as org_dcm4che3_audit_ParticipantObjectDescription } from "./ParticipantObjectDescription";
-import { ParticipantObjectIdentification as org_dcm4che3_audit_ParticipantObjectIdentification } from "./ParticipantObjectIdentification";
-import { ParticipantObjectDetail as org_dcm4che3_audit_ParticipantObjectDetail } from "./ParticipantObjectDetail";
+import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../java/lang/Class";
+import { ParticipantObjectIdentification as org_dcm4che3_audit_ParticipantObjectIdentification } from "./ParticipantObjectIdentification";
+import { ParticipantObjectDetail as org_dcm4che3_audit_ParticipantObjectDetail } from "./ParticipantObjectDetail";
+import { ParticipantObjectDescription as org_dcm4che3_audit_ParticipantObjectDescription } from "./ParticipantObjectDescription";
 import { AuditMessages$ParticipantObjectIDTypeCode as org_dcm4che3_audit_AuditMessages$ParticipantObjectIDTypeCode } from "./AuditMessages$ParticipantObjectIDTypeCode";
 /**
  * This class just defines types, you should import {@link ParticipantObjectIdentificationBuilder} instead of this.
@@ -14,73 +13,13 @@ import { AuditMessages$ParticipantObjectIDTypeCode as org_dcm4che3_audit_AuditMe
  */
 export declare class ParticipantObjectIdentificationBuilderClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     * @return original return type: 'java.lang.Class'
      */
-    sensitivity(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     * @return original return type: 'java.lang.Class'
      */
-    sensitivitySync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    lifeCycle(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    lifeCycleSync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    name(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    nameSync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDescription'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    desc(var0: org_dcm4che3_audit_ParticipantObjectDescription | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDescription'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    descSync(var0: org_dcm4che3_audit_ParticipantObjectDescription | null): ParticipantObjectIdentificationBuilder | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    query(var0: Buffer | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    querySync(var0: Buffer | null): ParticipantObjectIdentificationBuilder | null;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentification'
-     */
-    build(): Promise<org_dcm4che3_audit_ParticipantObjectIdentification | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentification'
-     */
-    buildSync(): org_dcm4che3_audit_ParticipantObjectIdentification | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDetail[]'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    detail(var0: (org_dcm4che3_audit_ParticipantObjectDetail | null)[] | null): Promise<ParticipantObjectIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDetail[]'
-     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
-     */
-    detailSync(var0: (org_dcm4che3_audit_ParticipantObjectDetail | null)[] | null): ParticipantObjectIdentificationBuilder | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -112,6 +51,48 @@ export declare class ParticipantObjectIdentificationBuilderClass extends JavaCla
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     */
+    query(var0: Buffer | null): Promise<ParticipantObjectIdentificationBuilder | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
+     */
+    querySync(var0: Buffer | null): ParticipantObjectIdentificationBuilder | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentification'
+     */
+    build(): Promise<org_dcm4che3_audit_ParticipantObjectIdentification | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentification'
+     */
+    buildSync(): org_dcm4che3_audit_ParticipantObjectIdentification | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -122,45 +103,62 @@ export declare class ParticipantObjectIdentificationBuilderClass extends JavaCla
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    toString(): string;
+    name(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    toStringAsync(): Promise<string>;
+    nameSync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDetail[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    hashCode(): Promise<number>;
+    detail(var0: (org_dcm4che3_audit_ParticipantObjectDetail | null)[] | null): Promise<ParticipantObjectIdentificationBuilder | null>;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDetail[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    hashCodeSync(): number;
+    detailSync(var0: (org_dcm4che3_audit_ParticipantObjectDetail | null)[] | null): ParticipantObjectIdentificationBuilder | null;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    getClass(): Promise<java_lang_Class>;
+    sensitivity(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    getClassSync(): java_lang_Class;
+    sensitivitySync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    notify(): Promise<void>;
+    lifeCycle(var0: string | null): Promise<ParticipantObjectIdentificationBuilder | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    notifySync(): void;
+    lifeCycleSync(var0: string | null): ParticipantObjectIdentificationBuilder | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDescription'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    notifyAll(): Promise<void>;
+    desc(var0: org_dcm4che3_audit_ParticipantObjectDescription | null): Promise<ParticipantObjectIdentificationBuilder | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.audit.ParticipantObjectDescription'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
-    notifyAllSync(): void;
+    descSync(var0: org_dcm4che3_audit_ParticipantObjectDescription | null): ParticipantObjectIdentificationBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.dcm4che3.audit.AuditMessages$ParticipantObjectIDTypeCode'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null, var1: org_dcm4che3_audit_AuditMessages$ParticipantObjectIDTypeCode | null, var2: string | null, var3: string | null);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.dcm4che3.audit.AuditMessages$ParticipantObjectIDTypeCode'
@@ -169,13 +167,6 @@ export declare class ParticipantObjectIdentificationBuilderClass extends JavaCla
      * @return original return type: 'org.dcm4che3.audit.ParticipantObjectIdentificationBuilder'
      */
     static newInstanceAsync(var0: string | null, var1: org_dcm4che3_audit_AuditMessages$ParticipantObjectIDTypeCode | null, var2: string | null, var3: string | null): Promise<ParticipantObjectIdentificationBuilder>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.dcm4che3.audit.AuditMessages$ParticipantObjectIDTypeCode'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null, var1: org_dcm4che3_audit_AuditMessages$ParticipantObjectIDTypeCode | null, var2: string | null, var3: string | null);
 }
 declare const ParticipantObjectIdentificationBuilder_base: typeof ParticipantObjectIdentificationBuilderClass;
 /**
@@ -190,4 +181,3 @@ declare const ParticipantObjectIdentificationBuilder_base: typeof ParticipantObj
 export declare class ParticipantObjectIdentificationBuilder extends ParticipantObjectIdentificationBuilder_base {
 }
 export default ParticipantObjectIdentificationBuilder;
-//# sourceMappingURL=ParticipantObjectIdentificationBuilder.d.ts.map

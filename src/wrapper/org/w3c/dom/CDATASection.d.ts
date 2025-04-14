@@ -139,13 +139,13 @@ export declare class CDATASectionClass extends JavaClass {
      */
     getPreviousSiblingSync(): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
+    getPrefix(): Promise<string | null>;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
+    getPrefixSync(): string | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -159,13 +159,13 @@ export declare class CDATASectionClass extends JavaClass {
      */
     replaceChildSync(var0: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null, var1: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): Promise<string | null>;
+    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefixSync(): string | null;
+    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -176,6 +176,14 @@ export declare class CDATASectionClass extends JavaClass {
      * @return original return type: 'void'
      */
     setTextContentSync(var0: string | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTextContent(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTextContentSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -188,14 +196,6 @@ export declare class CDATASectionClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSupportedSync(var0: string | null, var1: string | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTextContent(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTextContentSync(): string | null;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */
@@ -628,9 +628,9 @@ export interface CDATASectionInterface {
      */
     getPreviousSibling(): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): org_w3c_dom_NamedNodeMap | null;
+    getPrefix(): string | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -638,24 +638,24 @@ export interface CDATASectionInterface {
      */
     replaceChild(var0: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null, var1: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): string | null;
+    getAttributes(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     setTextContent(var0: string | null): void;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTextContent(): string | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
     isSupported(var0: string | null, var1: string | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTextContent(): string | null;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */
@@ -826,4 +826,3 @@ export declare class CDATASection extends CDATASection_base {
     private constructor();
 }
 export default CDATASection;
-//# sourceMappingURL=CDATASection.d.ts.map

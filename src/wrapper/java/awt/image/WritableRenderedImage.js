@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WritableRenderedImage = exports.createWritableRenderedImageProxy = void 0;
+exports.WritableRenderedImage = void 0;
+exports.createWritableRenderedImageProxy = createWritableRenderedImageProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link WritableRenderedImage} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWritableRenderedImageProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.image.WritableRenderedImage', methods, opts);
 }
-exports.createWritableRenderedImageProxy = createWritableRenderedImageProxy;
 /**
  * Class java.awt.image.WritableRenderedImage.
  *

@@ -86,4 +86,3 @@ export declare class ReadableByteChannel extends ReadableByteChannel_base {
     private constructor();
 }
 export default ReadableByteChannel;
-//# sourceMappingURL=ReadableByteChannel.d.ts.map

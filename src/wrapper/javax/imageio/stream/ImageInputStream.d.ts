@@ -1,11 +1,9 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Float as java_lang_Float } from "./../../../java/lang/Float";
-import { Double as java_lang_Double } from "./../../../java/lang/Double";
 import { Short as java_lang_Short } from "./../../../java/lang/Short";
+import { Double as java_lang_Double } from "./../../../java/lang/Double";
 import { ByteOrder as java_nio_ByteOrder } from "./../../../java/nio/ByteOrder";
 import { IIOByteBuffer as javax_imageio_stream_IIOByteBuffer } from "./IIOByteBuffer";
 /**
@@ -85,19 +83,43 @@ export declare class ImageInputStreamClass extends JavaClass {
      */
     readUTFSync(): string | null;
     /**
-     * @param var0 original type: 'int[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
+     * @param var0 original type: 'byte[]'
      * @return original return type: 'void'
      */
-    readFully(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    readFully(var0: Buffer | null): Promise<void>;
     /**
-     * @param var0 original type: 'int[]'
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    readFullySync(var0: Buffer | null): void;
+    /**
+     * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFullySync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    readFully(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    readFullySync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'char[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    readFully(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'char[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    readFullySync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'long[]'
      * @param var1 original type: 'int'
@@ -127,43 +149,19 @@ export declare class ImageInputStreamClass extends JavaClass {
      */
     readFullySync(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'double[]'
+     * @param var0 original type: 'int[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFully(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    readFully(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'double[]'
+     * @param var0 original type: 'int[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFullySync(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    readFully(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    readFullySync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    readFully(var0: Buffer | null): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    readFullySync(var0: Buffer | null): void;
+    readFullySync(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'short[]'
      * @param var1 original type: 'int'
@@ -179,19 +177,19 @@ export declare class ImageInputStreamClass extends JavaClass {
      */
     readFullySync(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'double[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFully(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    readFully(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'double[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFullySync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    readFullySync(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @return original return type: 'double'
      */
@@ -249,6 +247,14 @@ export declare class ImageInputStreamClass extends JavaClass {
      */
     getBitOffsetSync(): number;
     /**
+     * @return original return type: 'int'
+     */
+    read(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    readSync(): number;
+    /**
      * @param var0 original type: 'byte[]'
      * @return original return type: 'int'
      */
@@ -258,14 +264,6 @@ export declare class ImageInputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readSync(var0: Buffer | null): number;
-    /**
-     * @return original return type: 'int'
-     */
-    read(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    readSync(): number;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -305,26 +303,6 @@ export declare class ImageInputStreamClass extends JavaClass {
      */
     getStreamPositionSync(): number;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    skipBytes(var0: java_lang_Long | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    skipBytesSync(var0: java_lang_Long | bigint | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    skipBytes(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    skipBytesSync(var0: java_lang_Integer | number): number;
-    /**
      * @return original return type: 'long'
      */
     readUnsignedInt(): Promise<number>;
@@ -340,6 +318,26 @@ export declare class ImageInputStreamClass extends JavaClass {
      * @return original return type: 'long'
      */
     getFlushedPositionSync(): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    skipBytes(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    skipBytesSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    skipBytes(var0: java_lang_Long | bigint | number): Promise<number>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    skipBytesSync(var0: java_lang_Long | bigint | number): number;
     /**
      * @return original return type: 'int'
      */
@@ -419,6 +417,16 @@ export declare class ImageInputStreamClass extends JavaClass {
      */
     readByteSync(): number;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'long'
+     */
+    readBits(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'long'
+     */
+    readBitsSync(var0: java_lang_Integer | number): number;
+    /**
      * @return original return type: 'void'
      */
     mark(): Promise<void>;
@@ -434,16 +442,6 @@ export declare class ImageInputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readUnsignedShortSync(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'long'
-     */
-    readBits(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'long'
-     */
-    readBitsSync(var0: java_lang_Integer | number): number;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -493,12 +491,24 @@ export interface ImageInputStreamInterface {
      */
     readUTF(): string | null;
     /**
-     * @param var0 original type: 'int[]'
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    readFully(var0: Buffer | null): void;
+    /**
+     * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFully(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    readFully(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'char[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    readFully(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'long[]'
      * @param var1 original type: 'int'
@@ -514,24 +524,12 @@ export interface ImageInputStreamInterface {
      */
     readFully(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'double[]'
+     * @param var0 original type: 'int[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFully(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    readFully(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    readFully(var0: Buffer | null): void;
+    readFully(var0: (java_lang_Integer | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'short[]'
      * @param var1 original type: 'int'
@@ -540,12 +538,12 @@ export interface ImageInputStreamInterface {
      */
     readFully(var0: (java_lang_Short | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'double[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
-    readFully(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    readFully(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @return original return type: 'double'
      */
@@ -575,14 +573,14 @@ export interface ImageInputStreamInterface {
      */
     getBitOffset(): number;
     /**
+     * @return original return type: 'int'
+     */
+    read(): number;
+    /**
      * @param var0 original type: 'byte[]'
      * @return original return type: 'int'
      */
     read(var0: Buffer | null): number;
-    /**
-     * @return original return type: 'int'
-     */
-    read(): number;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -603,16 +601,6 @@ export interface ImageInputStreamInterface {
      */
     getStreamPosition(): number;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'long'
-     */
-    skipBytes(var0: java_lang_Long | bigint | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    skipBytes(var0: java_lang_Integer | number): number;
-    /**
      * @return original return type: 'long'
      */
     readUnsignedInt(): number;
@@ -620,6 +608,16 @@ export interface ImageInputStreamInterface {
      * @return original return type: 'long'
      */
     getFlushedPosition(): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    skipBytes(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'long'
+     */
+    skipBytes(var0: java_lang_Long | bigint | number): number;
     /**
      * @return original return type: 'int'
      */
@@ -660,6 +658,11 @@ export interface ImageInputStreamInterface {
      */
     readByte(): number;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'long'
+     */
+    readBits(var0: java_lang_Integer | number): number;
+    /**
      * @return original return type: 'void'
      */
     mark(): void;
@@ -667,11 +670,6 @@ export interface ImageInputStreamInterface {
      * @return original return type: 'int'
      */
     readUnsignedShort(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'long'
-     */
-    readBits(var0: java_lang_Integer | number): number;
 }
 /**
  * Create a proxy for the {@link ImageInputStream} interface.
@@ -700,4 +698,3 @@ export declare class ImageInputStream extends ImageInputStream_base {
     private constructor();
 }
 export default ImageInputStream;
-//# sourceMappingURL=ImageInputStream.d.ts.map

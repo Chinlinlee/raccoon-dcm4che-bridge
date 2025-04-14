@@ -58,4 +58,3 @@ export declare class Callable extends Callable_base {
     private constructor();
 }
 export default Callable;
-//# sourceMappingURL=Callable.d.ts.map

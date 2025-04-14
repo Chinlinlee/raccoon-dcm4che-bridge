@@ -206,4 +206,3 @@ declare const Transcoder$Format_base: typeof Transcoder$FormatClass;
 export declare class Transcoder$Format extends Transcoder$Format_base {
 }
 export default Transcoder$Format;
-//# sourceMappingURL=Transcoder$Format.d.ts.map

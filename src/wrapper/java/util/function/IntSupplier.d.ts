@@ -58,4 +58,3 @@ export declare class IntSupplier extends IntSupplier_base {
     private constructor();
 }
 export default IntSupplier;
-//# sourceMappingURL=IntSupplier.d.ts.map

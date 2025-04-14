@@ -287,4 +287,3 @@ declare const ContainerEvent_base: typeof ContainerEventClass;
 export declare class ContainerEvent extends ContainerEvent_base {
 }
 export default ContainerEvent;
-//# sourceMappingURL=ContainerEvent.d.ts.map

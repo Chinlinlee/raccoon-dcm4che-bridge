@@ -141,4 +141,3 @@ declare const MenuShortcut_base: typeof MenuShortcutClass;
 export declare class MenuShortcut extends MenuShortcut_base {
 }
 export default MenuShortcut;
-//# sourceMappingURL=MenuShortcut.d.ts.map

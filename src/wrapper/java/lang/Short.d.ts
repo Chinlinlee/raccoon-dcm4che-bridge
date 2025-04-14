@@ -31,16 +31,6 @@ export declare class ShortClass extends JavaClass {
     static compareSync(var0: ShortClass | number, var1: ShortClass | number): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,6 +50,16 @@ export declare class ShortClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @return original return type: 'int'
      */
     intValue(): Promise<number>;
@@ -67,6 +67,16 @@ export declare class ShortClass extends JavaClass {
      * @return original return type: 'int'
      */
     intValueSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Short'
+     */
+    static valueOf(var0: string | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Short'
+     */
+    static valueOfSync(var0: string | null): number | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -79,16 +89,6 @@ export declare class ShortClass extends JavaClass {
      * @return original return type: 'java.lang.Short'
      */
     static valueOfSync(var0: string | null, var1: java_lang_Integer | number): number | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Short'
-     */
-    static valueOf(var0: string | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Short'
-     */
-    static valueOfSync(var0: string | null): number | null;
     /**
      * @param var0 original type: 'short'
      * @return original return type: 'java.lang.Short'
@@ -210,6 +210,14 @@ export declare class ShortClass extends JavaClass {
      */
     static compareUnsignedSync(var0: ShortClass | number, var1: ShortClass | number): number;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'short'
      * @return original return type: 'int'
      */
@@ -219,14 +227,6 @@ export declare class ShortClass extends JavaClass {
      * @return original return type: 'int'
      */
     static hashCodeSync(var0: ShortClass | number): number;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -239,16 +239,6 @@ export declare class ShortClass extends JavaClass {
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'short'
-     */
-    static parseShort(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'short'
-     */
-    static parseShortSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'short'
      */
@@ -259,6 +249,16 @@ export declare class ShortClass extends JavaClass {
      * @return original return type: 'short'
      */
     static parseShortSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'short'
+     */
+    static parseShort(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'short'
+     */
+    static parseShortSync(var0: string | null): number;
     /**
      * @return original return type: 'short'
      */
@@ -337,4 +337,3 @@ declare const Short_base: typeof ShortClass;
 export declare class Short extends Short_base {
 }
 export default Short;
-//# sourceMappingURL=Short.d.ts.map

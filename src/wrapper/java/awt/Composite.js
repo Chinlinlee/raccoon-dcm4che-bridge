@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Composite = exports.createCompositeProxy = void 0;
+exports.Composite = void 0;
+exports.createCompositeProxy = createCompositeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Composite} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCompositeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.Composite', methods, opts);
 }
-exports.createCompositeProxy = createCompositeProxy;
 /**
  * Class java.awt.Composite.
  *

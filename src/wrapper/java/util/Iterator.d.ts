@@ -98,4 +98,3 @@ export declare class Iterator extends Iterator_base {
     private constructor();
 }
 export default Iterator;
-//# sourceMappingURL=Iterator.d.ts.map

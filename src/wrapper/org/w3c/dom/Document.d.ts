@@ -185,13 +185,13 @@ export declare class DocumentClass extends JavaClass {
      */
     getPreviousSiblingSync(): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
+    getPrefix(): Promise<string | null>;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
+    getPrefixSync(): string | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -205,13 +205,13 @@ export declare class DocumentClass extends JavaClass {
      */
     replaceChildSync(var0: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null, var1: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): Promise<string | null>;
+    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefixSync(): string | null;
+    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @return original return type: 'org.w3c.dom.Element'
      */
@@ -251,6 +251,14 @@ export declare class DocumentClass extends JavaClass {
      */
     createElementSync(var0: string | null): org_w3c_dom_Element | null;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTextContent(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTextContentSync(): string | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -262,14 +270,6 @@ export declare class DocumentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSupportedSync(var0: string | null, var1: string | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTextContent(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTextContentSync(): string | null;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */
@@ -833,9 +833,9 @@ export interface DocumentInterface {
      */
     getPreviousSibling(): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): org_w3c_dom_NamedNodeMap | null;
+    getPrefix(): string | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -843,9 +843,9 @@ export interface DocumentInterface {
      */
     replaceChild(var0: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null, var1: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): string | null;
+    getAttributes(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @return original return type: 'org.w3c.dom.Element'
      */
@@ -866,15 +866,15 @@ export interface DocumentInterface {
      */
     createElement(var0: string | null): org_w3c_dom_Element | null;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTextContent(): string | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
     isSupported(var0: string | null, var1: string | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTextContent(): string | null;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */
@@ -1101,4 +1101,3 @@ export declare class Document extends Document_base {
     private constructor();
 }
 export default Document;
-//# sourceMappingURL=Document.d.ts.map

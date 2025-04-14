@@ -71,4 +71,3 @@ export declare class WatchEvent$Kind extends WatchEvent$Kind_base {
     private constructor();
 }
 export default WatchEvent$Kind;
-//# sourceMappingURL=WatchEvent$Kind.d.ts.map

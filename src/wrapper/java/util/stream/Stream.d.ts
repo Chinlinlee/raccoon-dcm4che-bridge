@@ -482,18 +482,6 @@ export declare class StreamClass extends JavaClass {
     closeSync(): void;
     /**
      * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.util.function.UnaryOperator'
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    static iterate(var0: BasicOrJavaType | null, var1: java_util_function_UnaryOperator | JavaInterfaceProxy<java_util_function_UnaryOperatorInterface> | null): Promise<Stream | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.util.function.UnaryOperator'
-     * @return original return type: 'java.util.stream.Stream'
-     */
-    static iterateSync(var0: BasicOrJavaType | null, var1: java_util_function_UnaryOperator | JavaInterfaceProxy<java_util_function_UnaryOperatorInterface> | null): Stream | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.util.function.Predicate'
      * @param var2 original type: 'java.util.function.UnaryOperator'
      * @return original return type: 'java.util.stream.Stream'
@@ -506,6 +494,18 @@ export declare class StreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.Stream'
      */
     static iterateSync(var0: BasicOrJavaType | null, var1: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null, var2: java_util_function_UnaryOperator | JavaInterfaceProxy<java_util_function_UnaryOperatorInterface> | null): Stream | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.util.function.UnaryOperator'
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    static iterate(var0: BasicOrJavaType | null, var1: java_util_function_UnaryOperator | JavaInterfaceProxy<java_util_function_UnaryOperatorInterface> | null): Promise<Stream | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.util.function.UnaryOperator'
+     * @return original return type: 'java.util.stream.Stream'
+     */
+    static iterateSync(var0: BasicOrJavaType | null, var1: java_util_function_UnaryOperator | JavaInterfaceProxy<java_util_function_UnaryOperatorInterface> | null): Stream | null;
     /**
      * @param var0 original type: 'java.util.function.BiConsumer'
      * @return original return type: 'java.util.stream.IntStream'
@@ -843,4 +843,3 @@ export declare class Stream extends Stream_base {
     private constructor();
 }
 export default Stream;
-//# sourceMappingURL=Stream.d.ts.map

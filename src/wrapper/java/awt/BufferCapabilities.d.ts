@@ -165,4 +165,3 @@ declare const BufferCapabilities_base: typeof BufferCapabilitiesClass;
 export declare class BufferCapabilities extends BufferCapabilities_base {
 }
 export default BufferCapabilities;
-//# sourceMappingURL=BufferCapabilities.d.ts.map

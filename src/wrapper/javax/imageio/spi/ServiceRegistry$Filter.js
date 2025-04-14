@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ServiceRegistry$Filter = exports.createServiceRegistry$FilterProxy = void 0;
+exports.ServiceRegistry$Filter = void 0;
+exports.createServiceRegistry$FilterProxy = createServiceRegistry$FilterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ServiceRegistry$Filter} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createServiceRegistry$FilterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.imageio.spi.ServiceRegistry$Filter', methods, opts);
 }
-exports.createServiceRegistry$FilterProxy = createServiceRegistry$FilterProxy;
 /**
  * Class javax.imageio.spi.ServiceRegistry$Filter.
  *

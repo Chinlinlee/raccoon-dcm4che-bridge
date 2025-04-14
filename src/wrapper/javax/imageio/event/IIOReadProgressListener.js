@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IIOReadProgressListener = exports.createIIOReadProgressListenerProxy = void 0;
+exports.IIOReadProgressListener = void 0;
+exports.createIIOReadProgressListenerProxy = createIIOReadProgressListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IIOReadProgressListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIIOReadProgressListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.imageio.event.IIOReadProgressListener', methods, opts);
 }
-exports.createIIOReadProgressListenerProxy = createIIOReadProgressListenerProxy;
 /**
  * Class javax.imageio.event.IIOReadProgressListener.
  *

@@ -116,6 +116,17 @@ export declare class QNameClass extends JavaClass {
     notifySync(): void;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null, var1: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'javax.xml.namespace.QName'
+     */
+    static newInstanceAsync(var0: string | null, var1: string | null): Promise<QName>;
+    /**
+     * @param var0 original type: 'java.lang.String'
      */
     constructor(var0: string | null);
     /**
@@ -136,17 +147,6 @@ export declare class QNameClass extends JavaClass {
      * @return original return type: 'javax.xml.namespace.QName'
      */
     static newInstanceAsync(var0: string | null, var1: string | null, var2: string | null): Promise<QName>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null, var1: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'javax.xml.namespace.QName'
-     */
-    static newInstanceAsync(var0: string | null, var1: string | null): Promise<QName>;
 }
 declare const QName_base: typeof QNameClass;
 /**
@@ -161,4 +161,3 @@ declare const QName_base: typeof QNameClass;
 export declare class QName extends QName_base {
 }
 export default QName;
-//# sourceMappingURL=QName.d.ts.map

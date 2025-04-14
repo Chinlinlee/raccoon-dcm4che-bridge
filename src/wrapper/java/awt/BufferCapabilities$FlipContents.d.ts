@@ -110,4 +110,3 @@ declare const BufferCapabilities$FlipContents_base: typeof BufferCapabilities$Fl
 export declare class BufferCapabilities$FlipContents extends BufferCapabilities$FlipContents_base {
 }
 export default BufferCapabilities$FlipContents;
-//# sourceMappingURL=BufferCapabilities$FlipContents.d.ts.map

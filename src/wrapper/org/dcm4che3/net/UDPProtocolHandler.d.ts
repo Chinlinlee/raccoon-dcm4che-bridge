@@ -66,4 +66,3 @@ export declare class UDPProtocolHandler extends UDPProtocolHandler_base {
     private constructor();
 }
 export default UDPProtocolHandler;
-//# sourceMappingURL=UDPProtocolHandler.d.ts.map

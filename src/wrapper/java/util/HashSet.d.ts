@@ -1,14 +1,14 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { IntFunction as java_util_function_IntFunction, IntFunctionInterface as java_util_function_IntFunctionInterface } from "./function/IntFunction";
-import { Iterator as java_util_Iterator } from "./Iterator";
-import { Spliterator as java_util_Spliterator } from "./Spliterator";
-import { Collection as java_util_Collection, CollectionInterface as java_util_CollectionInterface } from "./Collection";
+import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { Class as java_lang_Class } from "./../lang/Class";
+import { Iterator as java_util_Iterator } from "./Iterator";
+import { Collection as java_util_Collection, CollectionInterface as java_util_CollectionInterface } from "./Collection";
 import { Stream as java_util_stream_Stream } from "./stream/Stream";
-import { Predicate as java_util_function_Predicate, PredicateInterface as java_util_function_PredicateInterface } from "./function/Predicate";
+import { IntFunction as java_util_function_IntFunction, IntFunctionInterface as java_util_function_IntFunctionInterface } from "./function/IntFunction";
+import { Spliterator as java_util_Spliterator } from "./Spliterator";
 import { Consumer as java_util_function_Consumer, ConsumerInterface as java_util_function_ConsumerInterface } from "./function/Consumer";
+import { Predicate as java_util_function_Predicate, PredicateInterface as java_util_function_PredicateInterface } from "./function/Predicate";
 import { Float as java_lang_Float } from "./../lang/Float";
 /**
  * This class just defines types, you should import {@link HashSet} instead of this.
@@ -17,177 +17,13 @@ import { Float as java_lang_Float } from "./../lang/Float";
  */
 export declare class HashSetClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.Class'
      */
-    add(var0: BasicOrJavaType | null): Promise<boolean>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.Class'
      */
-    addSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    remove(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    removeSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    clone(): Promise<BasicOrJavaType | null>;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    cloneSync(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'void'
-     */
-    clear(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    clearSync(): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isEmpty(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isEmptySync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    size(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    sizeSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArray(var0: (BasicOrJavaType | null)[] | null): Promise<(BasicOrJavaType | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArraySync(var0: (BasicOrJavaType | null)[] | null): (BasicOrJavaType | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArray(): Promise<(BasicOrJavaType | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArraySync(): (BasicOrJavaType | null)[] | null;
-    /**
-     * @param var0 original type: 'java.util.function.IntFunction'
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArray(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): Promise<(BasicOrJavaType | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.util.function.IntFunction'
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArraySync(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): (BasicOrJavaType | null)[] | null;
-    /**
-     * @return original return type: 'java.util.Iterator'
-     */
-    iterator(): Promise<java_util_Iterator | null>;
-    /**
-     * @return original return type: 'java.util.Iterator'
-     */
-    iteratorSync(): java_util_Iterator | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'java.util.Spliterator'
-     */
-    spliterator(): Promise<java_util_Spliterator | null>;
-    /**
-     * @return original return type: 'java.util.Spliterator'
-     */
-    spliteratorSync(): java_util_Spliterator | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    removeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    removeAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringAsync(): Promise<string>;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    addAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    addAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    retainAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    retainAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    containsAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'boolean'
-     */
-    containsAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -219,13 +55,23 @@ export declare class HashSetClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'void'
      */
-    getClass(): Promise<java_lang_Class>;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'void'
      */
-    getClassSync(): java_lang_Class;
+    notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    remove(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    removeSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -235,13 +81,23 @@ export declare class HashSetClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.Iterator'
      */
-    notifyAll(): Promise<void>;
+    iterator(): Promise<java_util_Iterator | null>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.Iterator'
      */
-    notifyAllSync(): void;
+    iteratorSync(): java_util_Iterator | null;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    removeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    removeAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
     /**
      * @return original return type: 'java.util.stream.Stream'
      */
@@ -251,15 +107,41 @@ export declare class HashSetClass extends JavaClass {
      */
     streamSync(): java_util_stream_Stream | null;
     /**
-     * @param var0 original type: 'java.util.function.Predicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    removeIf(var0: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): Promise<boolean>;
+    hashCode(): Promise<number>;
     /**
-     * @param var0 original type: 'java.util.function.Predicate'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    removeIfSync(var0: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): boolean;
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArray(var0: (BasicOrJavaType | null)[] | null): Promise<(BasicOrJavaType | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArraySync(var0: (BasicOrJavaType | null)[] | null): (BasicOrJavaType | null)[] | null;
+    /**
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArray(): Promise<(BasicOrJavaType | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArraySync(): (BasicOrJavaType | null)[] | null;
+    /**
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArray(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): Promise<(BasicOrJavaType | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.util.function.IntFunction'
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArraySync(var0: java_util_function_IntFunction | JavaInterfaceProxy<java_util_function_IntFunctionInterface> | null): (BasicOrJavaType | null)[] | null;
     /**
      * @return original return type: 'java.util.stream.Stream'
      */
@@ -268,6 +150,24 @@ export declare class HashSetClass extends JavaClass {
      * @return original return type: 'java.util.stream.Stream'
      */
     parallelStreamSync(): java_util_stream_Stream | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    add(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    addSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'java.util.Spliterator'
+     */
+    spliterator(): Promise<java_util_Spliterator | null>;
+    /**
+     * @return original return type: 'java.util.Spliterator'
+     */
+    spliteratorSync(): java_util_Spliterator | null;
     /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'void'
@@ -279,10 +179,111 @@ export declare class HashSetClass extends JavaClass {
      */
     forEachSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): void;
     /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    containsAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    containsAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    clear(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    clearSync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isEmpty(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isEmptySync(): boolean;
+    /**
+     * @param var0 original type: 'java.util.function.Predicate'
+     * @return original return type: 'boolean'
+     */
+    removeIf(var0: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.function.Predicate'
+     * @return original return type: 'boolean'
+     */
+    removeIfSync(var0: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    size(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    sizeSync(): number;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    addAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    addAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    clone(): Promise<BasicOrJavaType | null>;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    cloneSync(): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    retainAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'boolean'
+     */
+    retainAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'int'
+     */
+    constructor(var0: java_lang_Integer | number);
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.util.HashSet'
      */
     static newInstanceAsync(var0: java_lang_Integer | number): Promise<HashSet>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'float'
+     */
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Float | number);
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'float'
@@ -291,27 +292,18 @@ export declare class HashSetClass extends JavaClass {
     static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Float | number): Promise<HashSet>;
     /**
      * @param var0 original type: 'java.util.Collection'
+     */
+    constructor(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null);
+    /**
+     * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'java.util.HashSet'
      */
     static newInstanceAsync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<HashSet>;
+    constructor();
     /**
      * @return original return type: 'java.util.HashSet'
      */
     static newInstanceAsync(): Promise<HashSet>;
-    /**
-     * @param var0 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'float'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Float | number);
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     */
-    constructor(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null);
-    constructor();
 }
 declare const HashSet_base: typeof HashSetClass;
 /**
@@ -326,4 +318,3 @@ declare const HashSet_base: typeof HashSetClass;
 export declare class HashSet extends HashSet_base {
 }
 export default HashSet;
-//# sourceMappingURL=HashSet.d.ts.map

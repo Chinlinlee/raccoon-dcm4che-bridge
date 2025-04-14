@@ -20,16 +20,6 @@ export declare class Attributes$UpdatePolicyClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,6 +38,16 @@ export declare class Attributes$UpdatePolicyClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.data.Attributes$UpdatePolicy'
@@ -198,4 +198,3 @@ declare const Attributes$UpdatePolicy_base: typeof Attributes$UpdatePolicyClass;
 export declare class Attributes$UpdatePolicy extends Attributes$UpdatePolicy_base {
 }
 export default Attributes$UpdatePolicy;
-//# sourceMappingURL=Attributes$UpdatePolicy.d.ts.map

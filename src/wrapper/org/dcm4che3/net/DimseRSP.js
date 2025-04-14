@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DimseRSP = exports.createDimseRSPProxy = void 0;
+exports.DimseRSP = void 0;
+exports.createDimseRSPProxy = createDimseRSPProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DimseRSP} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDimseRSPProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.DimseRSP', methods, opts);
 }
-exports.createDimseRSPProxy = createDimseRSPProxy;
 /**
  * Class org.dcm4che3.net.DimseRSP.
  *

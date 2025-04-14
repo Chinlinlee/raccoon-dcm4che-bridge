@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IIOMetadataFormat = exports.createIIOMetadataFormatProxy = void 0;
+exports.IIOMetadataFormat = void 0;
+exports.createIIOMetadataFormatProxy = createIIOMetadataFormatProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IIOMetadataFormat} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIIOMetadataFormatProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.imageio.metadata.IIOMetadataFormat', methods, opts);
 }
-exports.createIIOMetadataFormatProxy = createIIOMetadataFormatProxy;
 /**
  * Class javax.imageio.metadata.IIOMetadataFormat.
  *

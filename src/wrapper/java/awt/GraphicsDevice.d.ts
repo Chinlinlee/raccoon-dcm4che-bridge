@@ -236,4 +236,3 @@ export declare class GraphicsDevice extends GraphicsDevice_base {
     private constructor();
 }
 export default GraphicsDevice;
-//# sourceMappingURL=GraphicsDevice.d.ts.map

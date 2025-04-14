@@ -79,14 +79,6 @@ export declare class PrDicomObjectClass extends JavaClass {
      */
     getShutterOverlaysSync(): java_util_List | null;
     /**
-     * @return original return type: 'java.util.Optional'
-     */
-    getPrLutShapeMode(): Promise<java_util_Optional | null>;
-    /**
-     * @return original return type: 'java.util.Optional'
-     */
-    getPrLutShapeModeSync(): java_util_Optional | null;
-    /**
      * @return original return type: 'java.util.List'
      */
     getGraphicAnnotationSequence(): Promise<java_util_List | null>;
@@ -94,6 +86,14 @@ export declare class PrDicomObjectClass extends JavaClass {
      * @return original return type: 'java.util.List'
      */
     getGraphicAnnotationSequenceSync(): java_util_List | null;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    getPrLutShapeMode(): Promise<java_util_Optional | null>;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    getPrLutShapeModeSync(): java_util_Optional | null;
     /**
      * @return original return type: 'java.awt.geom.Area'
      */
@@ -288,4 +288,3 @@ declare const PrDicomObject_base: typeof PrDicomObjectClass;
 export declare class PrDicomObject extends PrDicomObject_base {
 }
 export default PrDicomObject;
-//# sourceMappingURL=PrDicomObject.d.ts.map

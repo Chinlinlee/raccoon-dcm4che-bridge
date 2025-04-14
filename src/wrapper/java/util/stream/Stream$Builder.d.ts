@@ -105,4 +105,3 @@ export declare class Stream$Builder extends Stream$Builder_base {
     private constructor();
 }
 export default Stream$Builder;
-//# sourceMappingURL=Stream$Builder.d.ts.map

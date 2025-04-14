@@ -9,6 +9,26 @@ import { Marker as org_slf4j_Marker, MarkerInterface as org_slf4j_MarkerInterfac
  */
 export declare class LoggingEventBuilderClass extends JavaClass {
     /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addArgument(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): Promise<LoggingEventBuilder | null>;
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addArgumentSync(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addArgument(var0: BasicOrJavaType | null): Promise<LoggingEventBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addArgumentSync(var0: BasicOrJavaType | null): LoggingEventBuilder | null;
+    /**
      * @return original return type: 'void'
      */
     log(): Promise<void>;
@@ -75,25 +95,17 @@ export declare class LoggingEventBuilderClass extends JavaClass {
      */
     logSync(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'java.lang.Throwable'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.function.Supplier'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
-    setCause(var0: java_lang_Throwable | null): Promise<LoggingEventBuilder | null>;
+    addKeyValue(var0: string | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): Promise<LoggingEventBuilder | null>;
     /**
-     * @param var0 original type: 'java.lang.Throwable'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.function.Supplier'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
-    setCauseSync(var0: java_lang_Throwable | null): LoggingEventBuilder | null;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addMarker(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): Promise<LoggingEventBuilder | null>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addMarkerSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): LoggingEventBuilder | null;
+    addKeyValueSync(var0: string | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -107,37 +119,15 @@ export declare class LoggingEventBuilderClass extends JavaClass {
      */
     addKeyValueSync(var0: string | null, var1: BasicOrJavaType | null): LoggingEventBuilder | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.function.Supplier'
+     * @param var0 original type: 'java.lang.Throwable'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
-    addKeyValue(var0: string | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): Promise<LoggingEventBuilder | null>;
+    setCause(var0: java_lang_Throwable | null): Promise<LoggingEventBuilder | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.function.Supplier'
+     * @param var0 original type: 'java.lang.Throwable'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
-    addKeyValueSync(var0: string | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addArgument(var0: BasicOrJavaType | null): Promise<LoggingEventBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addArgumentSync(var0: BasicOrJavaType | null): LoggingEventBuilder | null;
-    /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addArgument(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): Promise<LoggingEventBuilder | null>;
-    /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addArgumentSync(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
+    setCauseSync(var0: java_lang_Throwable | null): LoggingEventBuilder | null;
     /**
      * @param var0 original type: 'java.util.function.Supplier'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
@@ -158,6 +148,16 @@ export declare class LoggingEventBuilderClass extends JavaClass {
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
     setMessageSync(var0: string | null): LoggingEventBuilder | null;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addMarker(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): Promise<LoggingEventBuilder | null>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addMarkerSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): LoggingEventBuilder | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -171,6 +171,16 @@ export declare class LoggingEventBuilderClass extends JavaClass {
  * You should probably not edit this.
  */
 export interface LoggingEventBuilderInterface {
+    /**
+     * @param var0 original type: 'java.util.function.Supplier'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addArgument(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addArgument(var0: BasicOrJavaType | null): LoggingEventBuilder | null;
     /**
      * @return original return type: 'void'
      */
@@ -205,15 +215,11 @@ export interface LoggingEventBuilderInterface {
      */
     log(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'java.lang.Throwable'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.function.Supplier'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
-    setCause(var0: java_lang_Throwable | null): LoggingEventBuilder | null;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addMarker(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): LoggingEventBuilder | null;
+    addKeyValue(var0: string | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -221,21 +227,10 @@ export interface LoggingEventBuilderInterface {
      */
     addKeyValue(var0: string | null, var1: BasicOrJavaType | null): LoggingEventBuilder | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.function.Supplier'
+     * @param var0 original type: 'java.lang.Throwable'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
-    addKeyValue(var0: string | null, var1: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addArgument(var0: BasicOrJavaType | null): LoggingEventBuilder | null;
-    /**
-     * @param var0 original type: 'java.util.function.Supplier'
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    addArgument(var0: java_util_function_Supplier | JavaInterfaceProxy<java_util_function_SupplierInterface> | null): LoggingEventBuilder | null;
+    setCause(var0: java_lang_Throwable | null): LoggingEventBuilder | null;
     /**
      * @param var0 original type: 'java.util.function.Supplier'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
@@ -246,6 +241,11 @@ export interface LoggingEventBuilderInterface {
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
     setMessage(var0: string | null): LoggingEventBuilder | null;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    addMarker(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): LoggingEventBuilder | null;
 }
 /**
  * Create a proxy for the {@link LoggingEventBuilder} interface.
@@ -274,4 +274,3 @@ export declare class LoggingEventBuilder extends LoggingEventBuilder_base {
     private constructor();
 }
 export default LoggingEventBuilder;
-//# sourceMappingURL=LoggingEventBuilder.d.ts.map

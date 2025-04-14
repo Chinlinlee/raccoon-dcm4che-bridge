@@ -187,4 +187,3 @@ declare const AnatomicRegion_base: typeof AnatomicRegionClass;
 export declare class AnatomicRegion extends AnatomicRegion_base {
 }
 export default AnatomicRegion;
-//# sourceMappingURL=AnatomicRegion.d.ts.map

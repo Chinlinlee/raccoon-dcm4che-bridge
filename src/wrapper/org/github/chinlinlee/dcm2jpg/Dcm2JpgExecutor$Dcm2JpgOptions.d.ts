@@ -132,4 +132,3 @@ declare const Dcm2JpgExecutor$Dcm2JpgOptions_base: typeof Dcm2JpgExecutor$Dcm2Jp
 export declare class Dcm2JpgExecutor$Dcm2JpgOptions extends Dcm2JpgExecutor$Dcm2JpgOptions_base {
 }
 export default Dcm2JpgExecutor$Dcm2JpgOptions;
-//# sourceMappingURL=Dcm2JpgExecutor$Dcm2JpgOptions.d.ts.map

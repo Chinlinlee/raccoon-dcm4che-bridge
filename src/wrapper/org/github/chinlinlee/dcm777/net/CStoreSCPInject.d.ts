@@ -38,6 +38,24 @@ export declare class CStoreSCPInjectClass extends JavaClass {
      * @param var2 original type: 'org.dcm4che3.net.Dimse'
      * @param var3 original type: 'org.dcm4che3.data.Attributes'
      * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'boolean'
+     */
+    preDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'boolean'
+     */
+    preDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
      * @param var5 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'void'
      */
@@ -81,6 +99,15 @@ export interface CStoreSCPInjectInterface {
      * @param var2 original type: 'org.dcm4che3.net.Dimse'
      * @param var3 original type: 'org.dcm4che3.data.Attributes'
      * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'boolean'
+     */
+    preDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
      * @param var5 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'void'
      */
@@ -113,4 +140,3 @@ export declare class CStoreSCPInject extends CStoreSCPInject_base {
     private constructor();
 }
 export default CStoreSCPInject;
-//# sourceMappingURL=CStoreSCPInject.d.ts.map

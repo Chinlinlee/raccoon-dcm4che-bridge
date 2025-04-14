@@ -42,17 +42,17 @@ export declare class CharacterClass extends JavaClass {
      */
     static getNameSync(var0: java_lang_Integer | number): string | null;
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    static codePointAt(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): Promise<number>;
+    static codePointAt(var0: (string | null)[] | null, var1: java_lang_Integer | number): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    static codePointAtSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): number;
+    static codePointAtSync(var0: (string | null)[] | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -68,27 +68,17 @@ export declare class CharacterClass extends JavaClass {
      */
     static codePointAtSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    static codePointAt(var0: (string | null)[] | null, var1: java_lang_Integer | number): Promise<number>;
+    static codePointAt(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): Promise<number>;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    static codePointAtSync(var0: (string | null)[] | null, var1: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.Character'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Character'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: string | null): number;
+    static codePointAtSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
@@ -99,6 +89,16 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     compareToSync(var0: BasicOrJavaType | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Character'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Character'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: string | null): number;
     /**
      * @return original return type: 'java.util.Optional'
      */
@@ -148,15 +148,15 @@ export declare class CharacterClass extends JavaClass {
      */
     static isJavaIdentifierPartSync(var0: java_lang_Integer | number): boolean;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'char'
+     * @return original return type: 'char'
      */
-    static isEmoji(var0: java_lang_Integer | number): Promise<boolean>;
+    static toUpperCase(var0: string | null): Promise<string | null>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'char'
+     * @return original return type: 'char'
      */
-    static isEmojiSync(var0: java_lang_Integer | number): boolean;
+    static toUpperCaseSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -167,16 +167,6 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     static toUpperCaseSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'char'
-     */
-    static toUpperCase(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'char'
-     */
-    static toUpperCaseSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
@@ -236,18 +226,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static codePointBeforeSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'char'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static digit(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'char'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static digitSync(var0: string | null, var1: java_lang_Integer | number): number;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
@@ -259,6 +237,18 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     static digitSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'char'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static digit(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'char'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static digitSync(var0: string | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
@@ -298,6 +288,16 @@ export declare class CharacterClass extends JavaClass {
      */
     static isUnicodeIdentifierPartSync(var0: string | null): boolean;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static toLowerCase(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static toLowerCaseSync(var0: java_lang_Integer | number): number;
+    /**
      * @param var0 original type: 'char'
      * @return original return type: 'char'
      */
@@ -309,14 +309,14 @@ export declare class CharacterClass extends JavaClass {
     static toLowerCaseSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    static toLowerCase(var0: java_lang_Integer | number): Promise<number>;
+    static isSpaceChar(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    static toLowerCaseSync(var0: java_lang_Integer | number): number;
+    static isSpaceCharSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
@@ -331,22 +331,12 @@ export declare class CharacterClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isSpaceChar(var0: java_lang_Integer | number): Promise<boolean>;
+    static isWhitespace(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isSpaceCharSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isExtendedPictographic(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isExtendedPictographicSync(var0: java_lang_Integer | number): boolean;
+    static isWhitespaceSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
@@ -357,26 +347,6 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isWhitespaceSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isWhitespace(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isWhitespaceSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isEmojiPresentation(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isEmojiPresentationSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
@@ -428,16 +398,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static getTypeSync(var0: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'boolean'
-     */
-    static isDigit(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'boolean'
-     */
-    static isDigitSync(var0: string | null): boolean;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
@@ -447,6 +407,16 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isDigitSync(var0: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'boolean'
+     */
+    static isDigit(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'boolean'
+     */
+    static isDigitSync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
@@ -505,16 +475,6 @@ export declare class CharacterClass extends JavaClass {
     static compareSync(var0: string | null, var1: string | null): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -534,6 +494,16 @@ export declare class CharacterClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -544,16 +514,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static charCountSync(var0: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'boolean'
-     */
-    static isLowerCase(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'boolean'
-     */
-    static isLowerCaseSync(var0: string | null): boolean;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
@@ -563,6 +523,16 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isLowerCaseSync(var0: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'boolean'
+     */
+    static isLowerCase(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'boolean'
+     */
+    static isLowerCaseSync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -584,16 +554,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static getNumericValueSync(var0: string | null): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isISOControl(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isISOControlSync(var0: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
      */
@@ -603,6 +563,16 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isISOControlSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isISOControl(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isISOControlSync(var0: java_lang_Integer | number): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -655,30 +625,12 @@ export declare class CharacterClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isEmojiModifier(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isEmojiModifierSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
     static isAlphabetic(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
     static isAlphabeticSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'int'
@@ -689,6 +641,14 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     static hashCodeSync(var0: string | null): number;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
@@ -710,20 +670,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static isJavaLetterOrDigitSync(var0: string | null): boolean;
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static codePointCount(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static codePointCountSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
-    /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -737,6 +683,20 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     static codePointCountSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static codePointCount(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static codePointCountSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
@@ -758,16 +718,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static isUnicodeIdentifierStartSync(var0: string | null): boolean;
     /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'byte'
-     */
-    static getDirectionality(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'byte'
-     */
-    static getDirectionalitySync(var0: string | null): number;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'byte'
      */
@@ -778,15 +728,15 @@ export declare class CharacterClass extends JavaClass {
      */
     static getDirectionalitySync(var0: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'char'
+     * @return original return type: 'byte'
      */
-    static isEmojiModifierBase(var0: java_lang_Integer | number): Promise<boolean>;
+    static getDirectionality(var0: string | null): Promise<number>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'char'
+     * @return original return type: 'byte'
      */
-    static isEmojiModifierBaseSync(var0: java_lang_Integer | number): boolean;
+    static getDirectionalitySync(var0: string | null): number;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
@@ -850,16 +800,6 @@ export declare class CharacterClass extends JavaClass {
      */
     static forDigitSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): string | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isUpperCase(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isUpperCaseSync(var0: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
      */
@@ -869,6 +809,16 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isUpperCaseSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isUpperCase(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isUpperCaseSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
@@ -889,16 +839,6 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     static codePointOfSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isEmojiComponent(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isEmojiComponentSync(var0: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
@@ -950,6 +890,16 @@ export declare class CharacterClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isDefined(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static isDefinedSync(var0: java_lang_Integer | number): boolean;
+    /**
      * @param var0 original type: 'char'
      * @return original return type: 'boolean'
      */
@@ -963,32 +913,12 @@ export declare class CharacterClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static isDefined(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static isDefinedSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
     static isBmpCodePoint(var0: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
     static isBmpCodePointSync(var0: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'char'
-     */
-    static toTitleCase(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'char'
-     */
-    static toTitleCaseSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -1001,6 +931,16 @@ export declare class CharacterClass extends JavaClass {
     static toTitleCaseSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'char'
+     * @return original return type: 'char'
+     */
+    static toTitleCase(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'char'
+     */
+    static toTitleCaseSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'char'
      * @return original return type: 'boolean'
      */
     static isLowSurrogate(var0: string | null): Promise<boolean>;
@@ -1009,6 +949,20 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isLowSurrogateSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static offsetByCodePoints(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static offsetByCodePointsSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -1027,20 +981,6 @@ export declare class CharacterClass extends JavaClass {
      * @return original return type: 'int'
      */
     static offsetByCodePointsSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static offsetByCodePoints(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static offsetByCodePointsSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
      * Original type: 'char'
      */
@@ -1344,4 +1284,3 @@ declare const Character_base: typeof CharacterClass;
 export declare class Character extends Character_base {
 }
 export default Character;
-//# sourceMappingURL=Character.d.ts.map

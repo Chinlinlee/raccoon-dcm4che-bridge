@@ -8,11 +8,11 @@ export declare class JsonLocationClass extends JavaClass {
     /**
      * @return original return type: 'long'
      */
-    getColumnNumber(): Promise<number>;
+    getLineNumber(): Promise<number>;
     /**
      * @return original return type: 'long'
      */
-    getColumnNumberSync(): number;
+    getLineNumberSync(): number;
     /**
      * @return original return type: 'long'
      */
@@ -24,11 +24,11 @@ export declare class JsonLocationClass extends JavaClass {
     /**
      * @return original return type: 'long'
      */
-    getLineNumber(): Promise<number>;
+    getColumnNumber(): Promise<number>;
     /**
      * @return original return type: 'long'
      */
-    getLineNumberSync(): number;
+    getColumnNumberSync(): number;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -45,7 +45,7 @@ export interface JsonLocationInterface {
     /**
      * @return original return type: 'long'
      */
-    getColumnNumber(): number;
+    getLineNumber(): number;
     /**
      * @return original return type: 'long'
      */
@@ -53,7 +53,7 @@ export interface JsonLocationInterface {
     /**
      * @return original return type: 'long'
      */
-    getLineNumber(): number;
+    getColumnNumber(): number;
 }
 /**
  * Create a proxy for the {@link JsonLocation} interface.
@@ -82,4 +82,3 @@ export declare class JsonLocation extends JsonLocation_base {
     private constructor();
 }
 export default JsonLocation;
-//# sourceMappingURL=JsonLocation.d.ts.map

@@ -3,9 +3,9 @@ import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Locale as java_util_Locale } from "./../util/Locale";
+import { Boolean as java_lang_Boolean } from "./../lang/Boolean";
 import { Double as java_lang_Double } from "./../lang/Double";
 import { Float as java_lang_Float } from "./../lang/Float";
-import { Boolean as java_lang_Boolean } from "./../lang/Boolean";
 import { Writer as java_io_Writer } from "./Writer";
 import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./../lang/CharSequence";
 import { Appendable as java_lang_Appendable } from "./../lang/Appendable";
@@ -28,16 +28,6 @@ export declare class PrintWriterClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -57,6 +47,16 @@ export declare class PrintWriterClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -64,6 +64,18 @@ export declare class PrintWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintWriter'
+     */
+    format(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<PrintWriter | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
+     * @return original return type: 'java.io.PrintWriter'
+     */
+    formatSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): PrintWriter | null;
     /**
      * @param var0 original type: 'java.util.Locale'
      * @param var1 original type: 'java.lang.String'
@@ -78,18 +90,6 @@ export declare class PrintWriterClass extends JavaClass {
      * @return original return type: 'java.io.PrintWriter'
      */
     formatSync(var0: java_util_Locale | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): PrintWriter | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintWriter'
-     */
-    format(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<PrintWriter | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'java.io.PrintWriter'
-     */
-    formatSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): PrintWriter | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -143,25 +143,23 @@ export declare class PrintWriterClass extends JavaClass {
      */
     printlnSync(var0: (string | null)[] | null): void;
     /**
-     * @param var0 original type: 'double'
      * @return original return type: 'void'
      */
-    println(var0: java_lang_Double | number): Promise<void>;
+    println(): Promise<void>;
     /**
-     * @param var0 original type: 'double'
      * @return original return type: 'void'
      */
-    printlnSync(var0: java_lang_Double | number): void;
+    printlnSync(): void;
     /**
-     * @param var0 original type: 'float'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
-    println(var0: java_lang_Float | number): Promise<void>;
+    println(var0: java_lang_Boolean | boolean): Promise<void>;
     /**
-     * @param var0 original type: 'float'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
-    printlnSync(var0: java_lang_Float | number): void;
+    printlnSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -183,33 +181,25 @@ export declare class PrintWriterClass extends JavaClass {
      */
     printlnSync(var0: BasicOrJavaType | null): void;
     /**
+     * @param var0 original type: 'double'
      * @return original return type: 'void'
      */
-    println(): Promise<void>;
+    println(var0: java_lang_Double | number): Promise<void>;
     /**
+     * @param var0 original type: 'double'
      * @return original return type: 'void'
      */
-    printlnSync(): void;
+    printlnSync(var0: java_lang_Double | number): void;
     /**
-     * @param var0 original type: 'char'
+     * @param var0 original type: 'float'
      * @return original return type: 'void'
      */
-    println(var0: string | null): Promise<void>;
+    println(var0: java_lang_Float | number): Promise<void>;
     /**
-     * @param var0 original type: 'char'
+     * @param var0 original type: 'float'
      * @return original return type: 'void'
      */
-    printlnSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    println(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    printlnSync(var0: java_lang_Integer | number): void;
+    printlnSync(var0: java_lang_Float | number): void;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'void'
@@ -221,15 +211,25 @@ export declare class PrintWriterClass extends JavaClass {
      */
     printlnSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    println(var0: java_lang_Boolean | boolean): Promise<void>;
+    println(var0: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    printlnSync(var0: java_lang_Boolean | boolean): void;
+    printlnSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'void'
+     */
+    println(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'void'
+     */
+    printlnSync(var0: string | null): void;
     /**
      * @param var0 original type: 'float'
      * @return original return type: 'void'
@@ -355,16 +355,6 @@ export declare class PrintWriterClass extends JavaClass {
      */
     static nullWriterSync(): java_io_Writer | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    write(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    writeSync(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -379,15 +369,15 @@ export declare class PrintWriterClass extends JavaClass {
      */
     writeSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    write(var0: (string | null)[] | null): Promise<void>;
+    write(var0: string | null): Promise<void>;
     /**
-     * @param var0 original type: 'char[]'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    writeSync(var0: (string | null)[] | null): void;
+    writeSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -403,15 +393,25 @@ export declare class PrintWriterClass extends JavaClass {
      */
     writeSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'char[]'
      * @return original return type: 'void'
      */
-    write(var0: string | null): Promise<void>;
+    write(var0: (string | null)[] | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'char[]'
      * @return original return type: 'void'
      */
-    writeSync(var0: string | null): void;
+    writeSync(var0: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    write(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    writeSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -424,16 +424,16 @@ export declare class PrintWriterClass extends JavaClass {
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @return original return type: 'java.io.Writer'
+     * @return original return type: 'java.io.PrintWriter'
      */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_io_Writer | null>;
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<PrintWriter | null>;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @return original return type: 'java.io.Writer'
+     * @return original return type: 'java.io.PrintWriter'
      */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_io_Writer | null;
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): PrintWriter | null;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
@@ -452,26 +452,16 @@ export declare class PrintWriterClass extends JavaClass {
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @return original return type: 'java.io.PrintWriter'
+     * @return original return type: 'java.io.Writer'
      */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<PrintWriter | null>;
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_io_Writer | null>;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @return original return type: 'java.io.PrintWriter'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): PrintWriter | null;
-    /**
-     * @param var0 original type: 'char'
      * @return original return type: 'java.io.Writer'
      */
-    append(var0: string | null): Promise<java_io_Writer | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.io.Writer'
-     */
-    appendSync(var0: string | null): java_io_Writer | null;
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_io_Writer | null;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'java.io.PrintWriter'
@@ -493,6 +483,26 @@ export declare class PrintWriterClass extends JavaClass {
      */
     appendSync(var0: string | null): java_lang_Appendable | null;
     /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.io.Writer'
+     */
+    append(var0: string | null): Promise<java_io_Writer | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.io.Writer'
+     */
+    appendSync(var0: string | null): java_io_Writer | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.io.PrintWriter'
+     */
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<PrintWriter | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.io.PrintWriter'
+     */
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): PrintWriter | null;
+    /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @return original return type: 'java.lang.Appendable'
      */
@@ -513,15 +523,14 @@ export declare class PrintWriterClass extends JavaClass {
      */
     appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_io_Writer | null;
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.io.PrintWriter'
+     * @param var0 original type: 'java.lang.String'
      */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<PrintWriter | null>;
+    constructor(var0: string | null);
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.io.PrintWriter'
      */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): PrintWriter | null;
+    static newInstanceAsync(var0: string | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -535,15 +544,6 @@ export declare class PrintWriterClass extends JavaClass {
     static newInstanceAsync(var0: string | null, var1: string | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.io.PrintWriter'
-     */
-    static newInstanceAsync(var0: string | null): Promise<PrintWriter>;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.nio.charset.Charset'
      */
     constructor(var0: string | null, var1: java_nio_charset_Charset | null);
@@ -555,15 +555,13 @@ export declare class PrintWriterClass extends JavaClass {
     static newInstanceAsync(var0: string | null, var1: java_nio_charset_Charset | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'java.nio.charset.Charset'
      */
-    constructor(var0: java_io_File | null, var1: java_nio_charset_Charset | null);
+    constructor(var0: java_io_File | null);
     /**
      * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'java.nio.charset.Charset'
      * @return original return type: 'java.io.PrintWriter'
      */
-    static newInstanceAsync(var0: java_io_File | null, var1: java_nio_charset_Charset | null): Promise<PrintWriter>;
+    static newInstanceAsync(var0: java_io_File | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.File'
      * @param var1 original type: 'java.lang.String'
@@ -577,13 +575,15 @@ export declare class PrintWriterClass extends JavaClass {
     static newInstanceAsync(var0: java_io_File | null, var1: string | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'java.nio.charset.Charset'
      */
-    constructor(var0: java_io_File | null);
+    constructor(var0: java_io_File | null, var1: java_nio_charset_Charset | null);
     /**
      * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'java.nio.charset.Charset'
      * @return original return type: 'java.io.PrintWriter'
      */
-    static newInstanceAsync(var0: java_io_File | null): Promise<PrintWriter>;
+    static newInstanceAsync(var0: java_io_File | null, var1: java_nio_charset_Charset | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.Writer'
      */
@@ -606,13 +606,17 @@ export declare class PrintWriterClass extends JavaClass {
     static newInstanceAsync(var0: java_io_Writer | null, var1: java_lang_Boolean | boolean): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.nio.charset.Charset'
      */
-    constructor(var0: java_io_OutputStream | null);
+    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: java_nio_charset_Charset | null);
     /**
      * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.nio.charset.Charset'
      * @return original return type: 'java.io.PrintWriter'
      */
-    static newInstanceAsync(var0: java_io_OutputStream | null): Promise<PrintWriter>;
+    static newInstanceAsync(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: java_nio_charset_Charset | null): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'boolean'
@@ -626,17 +630,13 @@ export declare class PrintWriterClass extends JavaClass {
     static newInstanceAsync(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean): Promise<PrintWriter>;
     /**
      * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.nio.charset.Charset'
      */
-    constructor(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: java_nio_charset_Charset | null);
+    constructor(var0: java_io_OutputStream | null);
     /**
      * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.nio.charset.Charset'
      * @return original return type: 'java.io.PrintWriter'
      */
-    static newInstanceAsync(var0: java_io_OutputStream | null, var1: java_lang_Boolean | boolean, var2: java_nio_charset_Charset | null): Promise<PrintWriter>;
+    static newInstanceAsync(var0: java_io_OutputStream | null): Promise<PrintWriter>;
 }
 declare const PrintWriter_base: typeof PrintWriterClass;
 /**
@@ -651,4 +651,3 @@ declare const PrintWriter_base: typeof PrintWriterClass;
 export declare class PrintWriter extends PrintWriter_base {
 }
 export default PrintWriter;
-//# sourceMappingURL=PrintWriter.d.ts.map

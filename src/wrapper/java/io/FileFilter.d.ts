@@ -62,4 +62,3 @@ export declare class FileFilter extends FileFilter_base {
     private constructor();
 }
 export default FileFilter;
-//# sourceMappingURL=FileFilter.d.ts.map

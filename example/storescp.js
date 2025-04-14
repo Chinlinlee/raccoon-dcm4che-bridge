@@ -17,6 +17,19 @@ const { createCStoreSCPInjectProxy } = require("../src/wrapper/org/github/chinli
 const { File } = require("../src/wrapper/java/io/File");
 
 const proxy = createCStoreSCPInjectProxy({
+    preDimseRQ: async (association, presentationContext, dimse, requestAttr) => {
+        try {
+            const sourceAET = await association.getRemoteAET();
+            const sourceHost = await association.getRemoteHostName();
+            const sourcePort = await (await association.getSocket()).getPort();
+    
+            console.log(`Incoming C-STORE from ${sourceAET}@${sourceHost}:${sourcePort}`);
+        } catch(error) {
+            console.error(error);
+            return false;
+        }
+        return true;
+    },
     postDimseRQ: async (association, presentationContext, dimse, requestAttr, data, responseAttr) => {
         await association.tryWriteDimseRSP(presentationContext, responseAttr);
     },

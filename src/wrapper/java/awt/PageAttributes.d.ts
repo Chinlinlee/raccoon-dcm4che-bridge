@@ -160,16 +160,6 @@ export declare class PageAttributesClass extends JavaClass {
      */
     getColorSync(): java_awt_PageAttributes$ColorType | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setOrientationRequested(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setOrientationRequestedSync(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.awt.PageAttributes$OrientationRequestedType'
      * @return original return type: 'void'
      */
@@ -180,6 +170,16 @@ export declare class PageAttributesClass extends JavaClass {
      */
     setOrientationRequestedSync(var0: java_awt_PageAttributes$OrientationRequestedType | null): void;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setOrientationRequested(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setOrientationRequestedSync(var0: java_lang_Integer | number): void;
+    /**
      * @return original return type: 'void'
      */
     setPrinterResolutionToDefault(): Promise<void>;
@@ -187,16 +187,6 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setPrinterResolutionToDefaultSync(): void;
-    /**
-     * @param var0 original type: 'java.awt.PageAttributes$PrintQualityType'
-     * @return original return type: 'void'
-     */
-    setPrintQuality(var0: java_awt_PageAttributes$PrintQualityType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.PageAttributes$PrintQualityType'
-     * @return original return type: 'void'
-     */
-    setPrintQualitySync(var0: java_awt_PageAttributes$PrintQualityType | null): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -207,6 +197,16 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setPrintQualitySync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.PageAttributes$PrintQualityType'
+     * @return original return type: 'void'
+     */
+    setPrintQuality(var0: java_awt_PageAttributes$PrintQualityType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.PageAttributes$PrintQualityType'
+     * @return original return type: 'void'
+     */
+    setPrintQualitySync(var0: java_awt_PageAttributes$PrintQualityType | null): void;
     /**
      * @param var0 original type: 'java.awt.PageAttributes$ColorType'
      * @return original return type: 'void'
@@ -254,16 +254,6 @@ export declare class PageAttributesClass extends JavaClass {
      */
     setMediaSync(var0: java_awt_PageAttributes$MediaType | null): void;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPrinterResolution(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPrinterResolutionSync(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'int[]'
      * @return original return type: 'void'
      */
@@ -273,6 +263,16 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setPrinterResolutionSync(var0: (java_lang_Integer | number)[] | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setPrinterResolution(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setPrinterResolutionSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.awt.PageAttributes$ColorType'
      * @param var1 original type: 'java.awt.PageAttributes$MediaType'
@@ -320,4 +320,3 @@ declare const PageAttributes_base: typeof PageAttributesClass;
 export declare class PageAttributes extends PageAttributes_base {
 }
 export default PageAttributes;
-//# sourceMappingURL=PageAttributes.d.ts.map

@@ -73,4 +73,3 @@ export declare class TileObserver extends TileObserver_base {
     private constructor();
 }
 export default TileObserver;
-//# sourceMappingURL=TileObserver.d.ts.map

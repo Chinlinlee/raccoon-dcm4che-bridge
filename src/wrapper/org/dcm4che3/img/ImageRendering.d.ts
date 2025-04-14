@@ -182,4 +182,3 @@ declare const ImageRendering_base: typeof ImageRenderingClass;
 export declare class ImageRendering extends ImageRendering_base {
 }
 export default ImageRendering;
-//# sourceMappingURL=ImageRendering.d.ts.map

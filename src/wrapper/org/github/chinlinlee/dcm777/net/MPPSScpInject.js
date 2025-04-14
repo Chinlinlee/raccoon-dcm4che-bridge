@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MPPSScpInject = exports.createMPPSScpInjectProxy = void 0;
+exports.MPPSScpInject = void 0;
+exports.createMPPSScpInjectProxy = createMPPSScpInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link MPPSScpInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMPPSScpInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.MPPSScpInject', methods, opts);
 }
-exports.createMPPSScpInjectProxy = createMPPSScpInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.MPPSScpInject.
  *

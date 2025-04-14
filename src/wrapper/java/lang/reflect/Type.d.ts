@@ -58,4 +58,3 @@ export declare class Type extends Type_base {
     private constructor();
 }
 export default Type;
-//# sourceMappingURL=Type.d.ts.map

@@ -415,4 +415,3 @@ export declare class GlyphVector extends GlyphVector_base {
     private constructor();
 }
 export default GlyphVector;
-//# sourceMappingURL=GlyphVector.d.ts.map

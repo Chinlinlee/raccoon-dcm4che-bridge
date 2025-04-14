@@ -27,16 +27,6 @@ export declare class URIClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -55,6 +45,16 @@ export declare class URIClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.net.URI'
@@ -92,16 +92,6 @@ export declare class URIClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BasicOrJavaType | null): number;
-    /**
      * @param var0 original type: 'java.net.URI'
      * @return original return type: 'int'
      */
@@ -111,6 +101,16 @@ export declare class URIClass extends JavaClass {
      * @return original return type: 'int'
      */
     compareToSync(var0: URIClass | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BasicOrJavaType | null): number;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -398,4 +398,3 @@ declare const URI_base: typeof URIClass;
 export declare class URI extends URI_base {
 }
 export default URI;
-//# sourceMappingURL=URI.d.ts.map

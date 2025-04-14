@@ -31,16 +31,6 @@ export declare class BooleanClass extends JavaClass {
     static compareSync(var0: BooleanClass | boolean, var1: BooleanClass | boolean): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,6 +49,16 @@ export declare class BooleanClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Boolean'
@@ -259,4 +259,3 @@ declare const Boolean_base: typeof BooleanClass;
 export declare class Boolean extends Boolean_base {
 }
 export default Boolean;
-//# sourceMappingURL=Boolean.d.ts.map

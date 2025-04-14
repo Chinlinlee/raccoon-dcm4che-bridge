@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SecondaryLoop = exports.createSecondaryLoopProxy = void 0;
+exports.SecondaryLoop = void 0;
+exports.createSecondaryLoopProxy = createSecondaryLoopProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SecondaryLoop} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSecondaryLoopProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.SecondaryLoop', methods, opts);
 }
-exports.createSecondaryLoopProxy = createSecondaryLoopProxy;
 /**
  * Class java.awt.SecondaryLoop.
  *

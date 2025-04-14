@@ -32,16 +32,6 @@ export declare class ModuleClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,6 +50,16 @@ export declare class ModuleClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -258,16 +258,6 @@ export declare class ModuleClass extends JavaClass {
     getDeclaredAnnotationsByTypeSync(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isExported(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isExportedSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Module'
      * @return original return type: 'boolean'
      */
@@ -278,6 +268,16 @@ export declare class ModuleClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isExportedSync(var0: string | null, var1: ModuleClass | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isExported(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isExportedSync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -318,14 +318,6 @@ export declare class ModuleClass extends JavaClass {
      * @return original return type: 'java.lang.Module'
      */
     addOpensSync(var0: string | null, var1: ModuleClass | null): Module | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNativeAccessEnabled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isNativeAccessEnabledSync(): boolean;
 }
 declare const Module_base: typeof ModuleClass;
 /**
@@ -340,4 +332,3 @@ declare const Module_base: typeof ModuleClass;
 export declare class Module extends Module_base {
 }
 export default Module;
-//# sourceMappingURL=Module.d.ts.map

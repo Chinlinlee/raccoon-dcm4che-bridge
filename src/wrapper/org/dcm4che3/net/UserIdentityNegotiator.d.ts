@@ -67,4 +67,3 @@ export declare class UserIdentityNegotiator extends UserIdentityNegotiator_base 
     private constructor();
 }
 export default UserIdentityNegotiator;
-//# sourceMappingURL=UserIdentityNegotiator.d.ts.map

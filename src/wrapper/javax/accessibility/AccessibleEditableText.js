@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AccessibleEditableText = exports.createAccessibleEditableTextProxy = void 0;
+exports.AccessibleEditableText = void 0;
+exports.createAccessibleEditableTextProxy = createAccessibleEditableTextProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AccessibleEditableText} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAccessibleEditableTextProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.accessibility.AccessibleEditableText', methods, opts);
 }
-exports.createAccessibleEditableTextProxy = createAccessibleEditableTextProxy;
 /**
  * Class javax.accessibility.AccessibleEditableText.
  *

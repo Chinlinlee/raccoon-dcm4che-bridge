@@ -62,4 +62,3 @@ export declare class PathMatcher extends PathMatcher_base {
     private constructor();
 }
 export default PathMatcher;
-//# sourceMappingURL=PathMatcher.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DragSourceListener = exports.createDragSourceListenerProxy = void 0;
+exports.DragSourceListener = void 0;
+exports.createDragSourceListenerProxy = createDragSourceListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DragSourceListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDragSourceListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.dnd.DragSourceListener', methods, opts);
 }
-exports.createDragSourceListenerProxy = createDragSourceListenerProxy;
 /**
  * Class java.awt.dnd.DragSourceListener.
  *

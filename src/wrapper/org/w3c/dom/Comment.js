@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Comment = exports.createCommentProxy = void 0;
+exports.Comment = void 0;
+exports.createCommentProxy = createCommentProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Comment} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCommentProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.Comment', methods, opts);
 }
-exports.createCommentProxy = createCommentProxy;
 /**
  * Class org.w3c.dom.Comment.
  *

@@ -58,4 +58,3 @@ export declare class DoubleSupplier extends DoubleSupplier_base {
     private constructor();
 }
 export default DoubleSupplier;
-//# sourceMappingURL=DoubleSupplier.d.ts.map

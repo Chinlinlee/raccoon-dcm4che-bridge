@@ -100,4 +100,3 @@ export declare class IntUnaryOperator extends IntUnaryOperator_base {
     private constructor();
 }
 export default IntUnaryOperator;
-//# sourceMappingURL=IntUnaryOperator.d.ts.map

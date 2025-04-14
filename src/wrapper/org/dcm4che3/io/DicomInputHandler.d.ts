@@ -134,4 +134,3 @@ export declare class DicomInputHandler extends DicomInputHandler_base {
     private constructor();
 }
 export default DicomInputHandler;
-//# sourceMappingURL=DicomInputHandler.d.ts.map

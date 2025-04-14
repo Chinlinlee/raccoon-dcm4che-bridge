@@ -100,4 +100,3 @@ export declare class DoubleUnaryOperator extends DoubleUnaryOperator_base {
     private constructor();
 }
 export default DoubleUnaryOperator;
-//# sourceMappingURL=DoubleUnaryOperator.d.ts.map

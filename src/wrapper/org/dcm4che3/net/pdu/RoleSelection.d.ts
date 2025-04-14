@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
+import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 /**
  * This class just defines types, you should import {@link RoleSelection} instead of this.
@@ -10,45 +10,13 @@ import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
  */
 export declare class RoleSelectionClass extends JavaClass {
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    length(): Promise<number>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    lengthSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isSCU(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isSCUSync(): boolean;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isSCP(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isSCPSync(): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSOPClassUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSOPClassUIDSync(): string | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -80,6 +48,22 @@ export declare class RoleSelectionClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isSCU(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isSCUSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -90,21 +74,37 @@ export declare class RoleSelectionClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCode(): Promise<number>;
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
     /**
      * @return original return type: 'int'
      */
-    hashCodeSync(): number;
+    length(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'int'
      */
-    getClass(): Promise<java_lang_Class>;
+    lengthSync(): number;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'java.lang.String'
      */
-    getClassSync(): java_lang_Class;
+    getSOPClassUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSOPClassUIDSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isSCP(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isSCPSync(): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -114,13 +114,11 @@ export declare class RoleSelectionClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'boolean'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: string | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean);
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'boolean'
@@ -128,12 +126,6 @@ export declare class RoleSelectionClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.pdu.RoleSelection'
      */
     static newInstanceAsync(var0: string | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): Promise<RoleSelection>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'boolean'
-     */
-    constructor(var0: string | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean);
 }
 declare const RoleSelection_base: typeof RoleSelectionClass;
 /**
@@ -148,4 +140,3 @@ declare const RoleSelection_base: typeof RoleSelectionClass;
 export declare class RoleSelection extends RoleSelection_base {
 }
 export default RoleSelection;
-//# sourceMappingURL=RoleSelection.d.ts.map

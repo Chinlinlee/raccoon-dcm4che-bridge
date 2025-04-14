@@ -173,4 +173,3 @@ declare const LutShape_base: typeof LutShapeClass;
 export declare class LutShape extends LutShape_base {
 }
 export default LutShape;
-//# sourceMappingURL=LutShape.d.ts.map

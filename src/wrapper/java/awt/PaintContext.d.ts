@@ -97,4 +97,3 @@ export declare class PaintContext extends PaintContext_base {
     private constructor();
 }
 export default PaintContext;
-//# sourceMappingURL=PaintContext.d.ts.map

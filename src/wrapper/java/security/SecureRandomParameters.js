@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SecureRandomParameters = exports.createSecureRandomParametersProxy = void 0;
+exports.SecureRandomParameters = void 0;
+exports.createSecureRandomParametersProxy = createSecureRandomParametersProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SecureRandomParameters} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSecureRandomParametersProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.SecureRandomParameters', methods, opts);
 }
-exports.createSecureRandomParametersProxy = createSecureRandomParametersProxy;
 /**
  * Class java.security.SecureRandomParameters.
  *

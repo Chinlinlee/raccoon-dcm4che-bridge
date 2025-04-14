@@ -147,4 +147,3 @@ export declare class Number extends Number_base {
     private constructor();
 }
 export default Number;
-//# sourceMappingURL=Number.d.ts.map

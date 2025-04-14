@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SeriesQueryTaskInject = exports.createSeriesQueryTaskInjectProxy = void 0;
+exports.SeriesQueryTaskInject = void 0;
+exports.createSeriesQueryTaskInjectProxy = createSeriesQueryTaskInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SeriesQueryTaskInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSeriesQueryTaskInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.SeriesQueryTaskInject', methods, opts);
 }
-exports.createSeriesQueryTaskInjectProxy = createSeriesQueryTaskInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.SeriesQueryTaskInject.
  *

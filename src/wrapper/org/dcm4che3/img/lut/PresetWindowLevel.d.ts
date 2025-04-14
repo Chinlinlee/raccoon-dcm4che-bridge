@@ -243,4 +243,3 @@ declare const PresetWindowLevel_base: typeof PresetWindowLevelClass;
 export declare class PresetWindowLevel extends PresetWindowLevel_base {
 }
 export default PresetWindowLevel;
-//# sourceMappingURL=PresetWindowLevel.d.ts.map

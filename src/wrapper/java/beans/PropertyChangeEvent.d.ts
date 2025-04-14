@@ -159,4 +159,3 @@ declare const PropertyChangeEvent_base: typeof PropertyChangeEventClass;
 export declare class PropertyChangeEvent extends PropertyChangeEvent_base {
 }
 export default PropertyChangeEvent;
-//# sourceMappingURL=PropertyChangeEvent.d.ts.map

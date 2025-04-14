@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Long as java_lang_Long } from "./../lang/Long";
@@ -344,4 +342,3 @@ export declare class ObjectInput extends ObjectInput_base {
     private constructor();
 }
 export default ObjectInput;
-//# sourceMappingURL=ObjectInput.d.ts.map

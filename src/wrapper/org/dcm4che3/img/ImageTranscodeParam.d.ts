@@ -171,4 +171,3 @@ declare const ImageTranscodeParam_base: typeof ImageTranscodeParamClass;
 export declare class ImageTranscodeParam extends ImageTranscodeParam_base {
 }
 export default ImageTranscodeParam;
-//# sourceMappingURL=ImageTranscodeParam.d.ts.map

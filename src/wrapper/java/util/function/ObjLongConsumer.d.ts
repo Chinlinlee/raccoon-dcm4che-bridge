@@ -65,4 +65,3 @@ export declare class ObjLongConsumer extends ObjLongConsumer_base {
     private constructor();
 }
 export default ObjLongConsumer;
-//# sourceMappingURL=ObjLongConsumer.d.ts.map

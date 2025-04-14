@@ -46,4 +46,3 @@ export declare class CopyOption extends CopyOption_base {
     private constructor();
 }
 export default CopyOption;
-//# sourceMappingURL=CopyOption.d.ts.map

@@ -88,4 +88,3 @@ export declare class Iterable extends Iterable_base {
     private constructor();
 }
 export default Iterable;
-//# sourceMappingURL=Iterable.d.ts.map

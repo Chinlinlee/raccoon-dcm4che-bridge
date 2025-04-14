@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AnatomicBuilder$CategoryBuilder = exports.createAnatomicBuilder$CategoryBuilderProxy = void 0;
+exports.AnatomicBuilder$CategoryBuilder = void 0;
+exports.createAnatomicBuilder$CategoryBuilderProxy = createAnatomicBuilder$CategoryBuilderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AnatomicBuilder$CategoryBuilder} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAnatomicBuilder$CategoryBuilderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.weasis.dicom.ref.AnatomicBuilder$CategoryBuilder', methods, opts);
 }
-exports.createAnatomicBuilder$CategoryBuilderProxy = createAnatomicBuilder$CategoryBuilderProxy;
 /**
  * Class org.weasis.dicom.ref.AnatomicBuilder$CategoryBuilder.
  *

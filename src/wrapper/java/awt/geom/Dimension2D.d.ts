@@ -146,4 +146,3 @@ export declare class Dimension2D extends Dimension2D_base {
     private constructor();
 }
 export default Dimension2D;
-//# sourceMappingURL=Dimension2D.d.ts.map

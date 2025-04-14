@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
@@ -163,4 +161,3 @@ declare const IIOByteBuffer_base: typeof IIOByteBufferClass;
 export declare class IIOByteBuffer extends IIOByteBuffer_base {
 }
 export default IIOByteBuffer;
-//# sourceMappingURL=IIOByteBuffer.d.ts.map

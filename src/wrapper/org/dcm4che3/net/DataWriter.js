@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DataWriter = exports.createDataWriterProxy = void 0;
+exports.DataWriter = void 0;
+exports.createDataWriterProxy = createDataWriterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DataWriter} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDataWriterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.DataWriter', methods, opts);
 }
-exports.createDataWriterProxy = createDataWriterProxy;
 /**
  * Class org.dcm4che3.net.DataWriter.
  *

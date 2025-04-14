@@ -82,4 +82,3 @@ export declare class AnatomicBuilder$CategoryBuilder extends AnatomicBuilder$Cat
     private constructor();
 }
 export default AnatomicBuilder$CategoryBuilder;
-//# sourceMappingURL=AnatomicBuilder$CategoryBuilder.d.ts.map

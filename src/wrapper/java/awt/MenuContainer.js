@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MenuContainer = exports.createMenuContainerProxy = void 0;
+exports.MenuContainer = void 0;
+exports.createMenuContainerProxy = createMenuContainerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link MenuContainer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMenuContainerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.MenuContainer', methods, opts);
 }
-exports.createMenuContainerProxy = createMenuContainerProxy;
 /**
  * Class java.awt.MenuContainer.
  *

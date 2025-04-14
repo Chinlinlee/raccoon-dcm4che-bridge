@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CMoveSCPInject = exports.createCMoveSCPInjectProxy = void 0;
+exports.CMoveSCPInject = void 0;
+exports.createCMoveSCPInjectProxy = createCMoveSCPInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CMoveSCPInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCMoveSCPInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.CMoveSCPInject', methods, opts);
 }
-exports.createCMoveSCPInjectProxy = createCMoveSCPInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.CMoveSCPInject.
  *

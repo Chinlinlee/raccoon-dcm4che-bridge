@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NamedNodeMap = exports.createNamedNodeMapProxy = void 0;
+exports.NamedNodeMap = void 0;
+exports.createNamedNodeMapProxy = createNamedNodeMapProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link NamedNodeMap} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createNamedNodeMapProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.NamedNodeMap', methods, opts);
 }
-exports.createNamedNodeMapProxy = createNamedNodeMapProxy;
 /**
  * Class org.w3c.dom.NamedNodeMap.
  *

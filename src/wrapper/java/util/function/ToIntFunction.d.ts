@@ -61,4 +61,3 @@ export declare class ToIntFunction extends ToIntFunction_base {
     private constructor();
 }
 export default ToIntFunction;
-//# sourceMappingURL=ToIntFunction.d.ts.map

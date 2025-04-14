@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DOMStringList = exports.createDOMStringListProxy = void 0;
+exports.DOMStringList = void 0;
+exports.createDOMStringListProxy = createDOMStringListProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DOMStringList} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDOMStringListProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.DOMStringList', methods, opts);
 }
-exports.createDOMStringListProxy = createDOMStringListProxy;
 /**
  * Class org.w3c.dom.DOMStringList.
  *

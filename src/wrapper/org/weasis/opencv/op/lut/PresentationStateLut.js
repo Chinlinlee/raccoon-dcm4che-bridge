@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PresentationStateLut = exports.createPresentationStateLutProxy = void 0;
+exports.PresentationStateLut = void 0;
+exports.createPresentationStateLutProxy = createPresentationStateLutProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PresentationStateLut} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPresentationStateLutProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.weasis.opencv.op.lut.PresentationStateLut', methods, opts);
 }
-exports.createPresentationStateLutProxy = createPresentationStateLutProxy;
 /**
  * Class org.weasis.opencv.op.lut.PresentationStateLut.
  *

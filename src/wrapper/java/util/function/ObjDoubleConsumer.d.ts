@@ -65,4 +65,3 @@ export declare class ObjDoubleConsumer extends ObjDoubleConsumer_base {
     private constructor();
 }
 export default ObjDoubleConsumer;
-//# sourceMappingURL=ObjDoubleConsumer.d.ts.map

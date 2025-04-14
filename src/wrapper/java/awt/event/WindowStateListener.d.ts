@@ -62,4 +62,3 @@ export declare class WindowStateListener extends WindowStateListener_base {
     private constructor();
 }
 export default WindowStateListener;
-//# sourceMappingURL=WindowStateListener.d.ts.map

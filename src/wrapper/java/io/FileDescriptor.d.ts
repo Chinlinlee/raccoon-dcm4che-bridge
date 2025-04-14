@@ -127,4 +127,3 @@ declare const FileDescriptor_base: typeof FileDescriptorClass;
 export declare class FileDescriptor extends FileDescriptor_base {
 }
 export default FileDescriptor;
-//# sourceMappingURL=FileDescriptor.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonString = exports.createJsonStringProxy = void 0;
+exports.JsonString = void 0;
+exports.createJsonStringProxy = createJsonStringProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonString} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonStringProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.JsonString', methods, opts);
 }
-exports.createJsonStringProxy = createJsonStringProxy;
 /**
  * Class jakarta.json.JsonString.
  *

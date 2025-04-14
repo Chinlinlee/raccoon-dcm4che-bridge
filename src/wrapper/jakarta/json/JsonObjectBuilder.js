@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonObjectBuilder = exports.createJsonObjectBuilderProxy = void 0;
+exports.JsonObjectBuilder = void 0;
+exports.createJsonObjectBuilderProxy = createJsonObjectBuilderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonObjectBuilder} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonObjectBuilderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.JsonObjectBuilder', methods, opts);
 }
-exports.createJsonObjectBuilderProxy = createJsonObjectBuilderProxy;
 /**
  * Class jakarta.json.JsonObjectBuilder.
  *

@@ -89,4 +89,3 @@ export declare class Watchable extends Watchable_base {
     private constructor();
 }
 export default Watchable;
-//# sourceMappingURL=Watchable.d.ts.map

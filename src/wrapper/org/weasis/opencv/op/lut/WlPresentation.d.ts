@@ -71,4 +71,3 @@ export declare class WlPresentation extends WlPresentation_base {
     private constructor();
 }
 export default WlPresentation;
-//# sourceMappingURL=WlPresentation.d.ts.map

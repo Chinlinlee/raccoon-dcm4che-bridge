@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Location = exports.createLocationProxy = void 0;
+exports.Location = void 0;
+exports.createLocationProxy = createLocationProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Location} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLocationProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.xml.stream.Location', methods, opts);
 }
-exports.createLocationProxy = createLocationProxy;
 /**
  * Class javax.xml.stream.Location.
  *

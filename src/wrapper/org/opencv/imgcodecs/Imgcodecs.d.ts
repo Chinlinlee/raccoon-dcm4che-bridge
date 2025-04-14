@@ -24,16 +24,6 @@ export declare class ImgcodecsClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatRead(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'int'
      * @return original return type: 'org.opencv.core.Mat'
      */
@@ -44,6 +34,16 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatRead(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'int'
@@ -136,36 +136,6 @@ export declare class ImgcodecsClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.List'
      * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.List'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.List'
-     * @return original return type: 'boolean'
-     */
-    static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.List'
-     * @return original return type: 'boolean'
-     */
-    static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.List'
-     * @param var2 original type: 'int'
      * @return original return type: 'boolean'
      */
     static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: java_lang_Integer | number): Promise<boolean>;
@@ -192,6 +162,36 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'boolean'
+     */
+    static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'boolean'
+     */
+    static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.opencv.core.MatOfDouble'
@@ -247,6 +247,18 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'boolean'
+     */
+    static imwrite(var0: string | null, var1: org_opencv_core_Mat | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'boolean'
+     */
+    static imwriteSync(var0: string | null, var1: org_opencv_core_Mat | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.Mat'
      * @param var2 original type: 'org.opencv.core.MatOfInt'
      * @return original return type: 'boolean'
      */
@@ -260,18 +272,6 @@ export declare class ImgcodecsClass extends JavaClass {
     static imwriteSync(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfInt | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'boolean'
-     */
-    static imwrite(var0: string | null, var1: org_opencv_core_Mat | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'boolean'
-     */
-    static imwriteSync(var0: string | null, var1: org_opencv_core_Mat | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
     static haveImageWriter(var0: string | null): Promise<boolean>;
@@ -280,22 +280,6 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static haveImageWriterSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.MatOfDouble'
-     * @param var2 original type: 'org.opencv.core.MatOfDouble'
-     * @param var3 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgFileRead(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.MatOfDouble'
-     * @param var2 original type: 'org.opencv.core.MatOfDouble'
-     * @param var3 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgFileReadSync(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.opencv.core.MatOfDouble'
@@ -314,6 +298,22 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     static dicomJpgFileReadSync(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.MatOfDouble'
+     * @param var2 original type: 'org.opencv.core.MatOfDouble'
+     * @param var3 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgFileRead(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.MatOfDouble'
+     * @param var2 original type: 'org.opencv.core.MatOfDouble'
+     * @param var3 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgFileReadSync(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: java_lang_Integer | number): org_opencv_core_Mat | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.opencv.core.MatOfDouble'
@@ -991,4 +991,3 @@ declare const Imgcodecs_base: typeof ImgcodecsClass;
 export declare class Imgcodecs extends Imgcodecs_base {
 }
 export default Imgcodecs;
-//# sourceMappingURL=Imgcodecs.d.ts.map

@@ -62,4 +62,3 @@ export declare class DoubleFunction extends DoubleFunction_base {
     private constructor();
 }
 export default DoubleFunction;
-//# sourceMappingURL=DoubleFunction.d.ts.map

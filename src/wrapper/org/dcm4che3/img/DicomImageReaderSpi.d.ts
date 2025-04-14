@@ -311,4 +311,3 @@ declare const DicomImageReaderSpi_base: typeof DicomImageReaderSpiClass;
 export declare class DicomImageReaderSpi extends DicomImageReaderSpi_base {
 }
 export default DicomImageReaderSpi;
-//# sourceMappingURL=DicomImageReaderSpi.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserIdentityNegotiator = exports.createUserIdentityNegotiatorProxy = void 0;
+exports.UserIdentityNegotiator = void 0;
+exports.createUserIdentityNegotiatorProxy = createUserIdentityNegotiatorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link UserIdentityNegotiator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createUserIdentityNegotiatorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.UserIdentityNegotiator', methods, opts);
 }
-exports.createUserIdentityNegotiatorProxy = createUserIdentityNegotiatorProxy;
 /**
  * Class org.dcm4che3.net.UserIdentityNegotiator.
  *

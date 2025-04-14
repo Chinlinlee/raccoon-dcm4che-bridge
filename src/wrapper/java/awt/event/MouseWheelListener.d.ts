@@ -62,4 +62,3 @@ export declare class MouseWheelListener extends MouseWheelListener_base {
     private constructor();
 }
 export default MouseWheelListener;
-//# sourceMappingURL=MouseWheelListener.d.ts.map

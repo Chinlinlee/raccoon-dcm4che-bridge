@@ -11,14 +11,6 @@ import { Vector as java_util_Vector } from "./../../../util/Vector";
  */
 export declare class RenderableImageClass extends JavaClass {
     /**
-     * @return original return type: 'float'
-     */
-    getHeight(): Promise<number>;
-    /**
-     * @return original return type: 'float'
-     */
-    getHeightSync(): number;
-    /**
      * @param var0 original type: 'java.awt.image.renderable.RenderContext'
      * @return original return type: 'java.awt.image.RenderedImage'
      */
@@ -28,6 +20,14 @@ export declare class RenderableImageClass extends JavaClass {
      * @return original return type: 'java.awt.image.RenderedImage'
      */
     createRenderingSync(var0: java_awt_image_renderable_RenderContext | null): java_awt_image_RenderedImage | null;
+    /**
+     * @return original return type: 'float'
+     */
+    getHeight(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    getHeightSync(): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
@@ -69,14 +69,6 @@ export declare class RenderableImageClass extends JavaClass {
      */
     getPropertyNamesSync(): (string | null)[] | null;
     /**
-     * @return original return type: 'float'
-     */
-    getWidth(): Promise<number>;
-    /**
-     * @return original return type: 'float'
-     */
-    getWidthSync(): number;
-    /**
      * @return original return type: 'java.util.Vector'
      */
     getSources(): Promise<java_util_Vector | null>;
@@ -92,6 +84,14 @@ export declare class RenderableImageClass extends JavaClass {
      * @return original return type: 'java.awt.image.RenderedImage'
      */
     createDefaultRenderingSync(): java_awt_image_RenderedImage | null;
+    /**
+     * @return original return type: 'float'
+     */
+    getWidth(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    getWidthSync(): number;
     /**
      * @return original return type: 'float'
      */
@@ -126,14 +126,14 @@ export declare class RenderableImageClass extends JavaClass {
  */
 export interface RenderableImageInterface {
     /**
-     * @return original return type: 'float'
-     */
-    getHeight(): number;
-    /**
      * @param var0 original type: 'java.awt.image.renderable.RenderContext'
      * @return original return type: 'java.awt.image.RenderedImage'
      */
     createRendering(var0: java_awt_image_renderable_RenderContext | null): java_awt_image_RenderedImage | null;
+    /**
+     * @return original return type: 'float'
+     */
+    getHeight(): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
@@ -155,10 +155,6 @@ export interface RenderableImageInterface {
      */
     getPropertyNames(): (string | null)[] | null;
     /**
-     * @return original return type: 'float'
-     */
-    getWidth(): number;
-    /**
      * @return original return type: 'java.util.Vector'
      */
     getSources(): java_util_Vector | null;
@@ -166,6 +162,10 @@ export interface RenderableImageInterface {
      * @return original return type: 'java.awt.image.RenderedImage'
      */
     createDefaultRendering(): java_awt_image_RenderedImage | null;
+    /**
+     * @return original return type: 'float'
+     */
+    getWidth(): number;
     /**
      * @return original return type: 'float'
      */
@@ -202,4 +202,3 @@ export declare class RenderableImage extends RenderableImage_base {
     private constructor();
 }
 export default RenderableImage;
-//# sourceMappingURL=RenderableImage.d.ts.map

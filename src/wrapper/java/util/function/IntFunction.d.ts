@@ -62,4 +62,3 @@ export declare class IntFunction extends IntFunction_base {
     private constructor();
 }
 export default IntFunction;
-//# sourceMappingURL=IntFunction.d.ts.map

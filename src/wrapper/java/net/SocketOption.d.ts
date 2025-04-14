@@ -71,4 +71,3 @@ export declare class SocketOption extends SocketOption_base {
     private constructor();
 }
 export default SocketOption;
-//# sourceMappingURL=SocketOption.d.ts.map

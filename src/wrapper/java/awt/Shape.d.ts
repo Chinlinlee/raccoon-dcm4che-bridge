@@ -14,22 +14,6 @@ export declare class ShapeClass extends JavaClass {
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
      * @return original return type: 'boolean'
      */
     contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
@@ -50,6 +34,22 @@ export declare class ShapeClass extends JavaClass {
      */
     containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @return original return type: 'boolean'
      */
@@ -59,6 +59,16 @@ export declare class ShapeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: java_awt_geom_Point2D | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'double'
@@ -71,26 +81,6 @@ export declare class ShapeClass extends JavaClass {
      * @return original return type: 'java.awt.geom.PathIterator'
      */
     getPathIteratorSync(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
-     */
-    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
-     */
-    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    intersects(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    intersectsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -107,6 +97,16 @@ export declare class ShapeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     intersectsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    intersects(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    intersectsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
@@ -139,14 +139,6 @@ export interface ShapeInterface {
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
      * @return original return type: 'boolean'
      */
     contains(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
@@ -156,26 +148,29 @@ export interface ShapeInterface {
      */
     contains(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @return original return type: 'boolean'
      */
     contains(var0: java_awt_geom_Point2D | null): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @param var1 original type: 'double'
-     * @return original return type: 'java.awt.geom.PathIterator'
-     */
-    getPathIterator(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @return original return type: 'java.awt.geom.PathIterator'
      */
     getPathIterator(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
     /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @param var1 original type: 'double'
+     * @return original return type: 'java.awt.geom.PathIterator'
      */
-    intersects(var0: java_awt_geom_Rectangle2D | null): boolean;
+    getPathIterator(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -184,6 +179,11 @@ export interface ShapeInterface {
      * @return original return type: 'boolean'
      */
     intersects(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    intersects(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
@@ -220,4 +220,3 @@ export declare class Shape extends Shape_base {
     private constructor();
 }
 export default Shape;
-//# sourceMappingURL=Shape.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AccessibleComponent = exports.createAccessibleComponentProxy = void 0;
+exports.AccessibleComponent = void 0;
+exports.createAccessibleComponentProxy = createAccessibleComponentProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AccessibleComponent} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAccessibleComponentProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.accessibility.AccessibleComponent', methods, opts);
 }
-exports.createAccessibleComponentProxy = createAccessibleComponentProxy;
 /**
  * Class javax.accessibility.AccessibleComponent.
  *

@@ -137,6 +137,17 @@ export declare class PointClass extends JavaClass {
      */
     y: java_lang_Double | number;
     /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     */
+    constructor(var0: java_lang_Double | number, var1: java_lang_Double | number);
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'org.opencv.core.Point'
+     */
+    static newInstanceAsync(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<Point>;
+    /**
      * @param var0 original type: 'double[]'
      */
     constructor(var0: (java_lang_Double | number)[] | null);
@@ -150,17 +161,6 @@ export declare class PointClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Point'
      */
     static newInstanceAsync(): Promise<Point>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     */
-    constructor(var0: java_lang_Double | number, var1: java_lang_Double | number);
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'org.opencv.core.Point'
-     */
-    static newInstanceAsync(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<Point>;
 }
 declare const Point_base: typeof PointClass;
 /**
@@ -175,4 +175,3 @@ declare const Point_base: typeof PointClass;
 export declare class Point extends Point_base {
 }
 export default Point;
-//# sourceMappingURL=Point.d.ts.map

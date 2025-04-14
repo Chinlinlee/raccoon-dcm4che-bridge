@@ -61,14 +61,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     isSignedSync(): boolean;
     /**
-     * @return original return type: 'int'
-     */
-    getFrames(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getFramesSync(): number;
-    /**
      * @return original return type: 'boolean'
      */
     isFloatPixelData(): Promise<boolean>;
@@ -76,6 +68,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isFloatPixelDataSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getFrames(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getFramesSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -141,14 +141,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getColumnsSync(): number;
     /**
-     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
-     */
-    getVoiLUT(): Promise<org_dcm4che3_img_lut_VoiLutModule | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
-     */
-    getVoiLUTSync(): org_dcm4che3_img_lut_VoiLutModule | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasPaletteColorLookupTable(): Promise<boolean>;
@@ -156,6 +148,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasPaletteColorLookupTableSync(): boolean;
+    /**
+     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     */
+    getVoiLUT(): Promise<org_dcm4che3_img_lut_VoiLutModule | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     */
+    getVoiLUTSync(): org_dcm4che3_img_lut_VoiLutModule | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -213,14 +213,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getBitsStoredSync(): number;
     /**
-     * @return original return type: 'int'
-     */
-    getBitsAllocated(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsAllocatedSync(): number;
-    /**
      * @return original return type: 'boolean'
      */
     isMultiframeWithEmbeddedOverlays(): Promise<boolean>;
@@ -228,6 +220,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isMultiframeWithEmbeddedOverlaysSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsAllocated(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsAllocatedSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -295,14 +295,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.util.List'
-     */
-    getEmbeddedOverlay(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getEmbeddedOverlaySync(): java_util_List | null;
-    /**
      * @return original return type: 'java.lang.Integer'
      */
     getPixelPaddingRangeLimit(): Promise<number | null>;
@@ -310,6 +302,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'java.lang.Integer'
      */
     getPixelPaddingRangeLimitSync(): number | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getEmbeddedOverlay(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getEmbeddedOverlaySync(): java_util_List | null;
     /**
      * @return original return type: 'int'
      */
@@ -368,4 +368,3 @@ declare const ImageDescriptor_base: typeof ImageDescriptorClass;
 export declare class ImageDescriptor extends ImageDescriptor_base {
 }
 export default ImageDescriptor;
-//# sourceMappingURL=ImageDescriptor.d.ts.map

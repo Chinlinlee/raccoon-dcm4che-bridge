@@ -106,4 +106,3 @@ export declare class DoubleStream$Builder extends DoubleStream$Builder_base {
     private constructor();
 }
 export default DoubleStream$Builder;
-//# sourceMappingURL=DoubleStream$Builder.d.ts.map

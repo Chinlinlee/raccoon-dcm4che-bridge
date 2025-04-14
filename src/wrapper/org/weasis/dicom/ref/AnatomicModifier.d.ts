@@ -397,4 +397,3 @@ declare const AnatomicModifier_base: typeof AnatomicModifierClass;
 export declare class AnatomicModifier extends AnatomicModifier_base {
 }
 export default AnatomicModifier;
-//# sourceMappingURL=AnatomicModifier.d.ts.map

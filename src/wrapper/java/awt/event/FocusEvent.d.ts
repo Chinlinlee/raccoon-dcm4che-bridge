@@ -339,4 +339,3 @@ declare const FocusEvent_base: typeof FocusEventClass;
 export declare class FocusEvent extends FocusEvent_base {
 }
 export default FocusEvent;
-//# sourceMappingURL=FocusEvent.d.ts.map

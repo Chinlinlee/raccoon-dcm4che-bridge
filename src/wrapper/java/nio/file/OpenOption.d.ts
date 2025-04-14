@@ -46,4 +46,3 @@ export declare class OpenOption extends OpenOption_base {
     private constructor();
 }
 export default OpenOption;
-//# sourceMappingURL=OpenOption.d.ts.map

@@ -146,4 +146,3 @@ export declare class Collector extends Collector_base {
     private constructor();
 }
 export default Collector;
-//# sourceMappingURL=Collector.d.ts.map

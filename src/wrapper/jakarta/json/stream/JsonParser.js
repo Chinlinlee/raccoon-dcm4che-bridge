@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonParser = exports.createJsonParserProxy = void 0;
+exports.JsonParser = void 0;
+exports.createJsonParserProxy = createJsonParserProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonParser} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonParserProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.stream.JsonParser', methods, opts);
 }
-exports.createJsonParserProxy = createJsonParserProxy;
 /**
  * Class jakarta.json.stream.JsonParser.
  *

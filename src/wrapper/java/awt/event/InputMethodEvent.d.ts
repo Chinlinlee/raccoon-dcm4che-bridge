@@ -272,21 +272,6 @@ export declare class InputMethodEventClass extends JavaClass {
     /**
      * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.font.TextHitInfo'
-     * @param var3 original type: 'java.awt.font.TextHitInfo'
-     */
-    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_font_TextHitInfo | null, var3: java_awt_font_TextHitInfo | null);
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.font.TextHitInfo'
-     * @param var3 original type: 'java.awt.font.TextHitInfo'
-     * @return original return type: 'java.awt.event.InputMethodEvent'
-     */
-    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_font_TextHitInfo | null, var3: java_awt_font_TextHitInfo | null): Promise<InputMethodEvent>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
      * @param var2 original type: 'java.text.AttributedCharacterIterator'
      * @param var3 original type: 'int'
      * @param var4 original type: 'java.awt.font.TextHitInfo'
@@ -303,6 +288,21 @@ export declare class InputMethodEventClass extends JavaClass {
      * @return original return type: 'java.awt.event.InputMethodEvent'
      */
     static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_text_AttributedCharacterIterator | JavaInterfaceProxy<java_text_AttributedCharacterIteratorInterface> | null, var3: java_lang_Integer | number, var4: java_awt_font_TextHitInfo | null, var5: java_awt_font_TextHitInfo | null): Promise<InputMethodEvent>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.font.TextHitInfo'
+     * @param var3 original type: 'java.awt.font.TextHitInfo'
+     */
+    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_font_TextHitInfo | null, var3: java_awt_font_TextHitInfo | null);
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.font.TextHitInfo'
+     * @param var3 original type: 'java.awt.font.TextHitInfo'
+     * @return original return type: 'java.awt.event.InputMethodEvent'
+     */
+    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_font_TextHitInfo | null, var3: java_awt_font_TextHitInfo | null): Promise<InputMethodEvent>;
     /**
      * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
@@ -338,4 +338,3 @@ declare const InputMethodEvent_base: typeof InputMethodEventClass;
 export declare class InputMethodEvent extends InputMethodEvent_base {
 }
 export default InputMethodEvent;
-//# sourceMappingURL=InputMethodEvent.d.ts.map

@@ -31,16 +31,6 @@ export declare class ClockClass extends JavaClass {
     withZoneSync(var0: java_time_ZoneId | null): Clock | null;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,6 +49,16 @@ export declare class ClockClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.time.Clock'
      * @param var1 original type: 'java.time.Duration'
@@ -228,4 +228,3 @@ export declare class Clock extends Clock_base {
     private constructor();
 }
 export default Clock;
-//# sourceMappingURL=Clock.d.ts.map

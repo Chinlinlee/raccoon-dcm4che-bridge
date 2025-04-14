@@ -58,4 +58,3 @@ export declare class ProtocolFamily extends ProtocolFamily_base {
     private constructor();
 }
 export default ProtocolFamily;
-//# sourceMappingURL=ProtocolFamily.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Listener = exports.createListenerProxy = void 0;
+exports.Listener = void 0;
+exports.createListenerProxy = createListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Listener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.Listener', methods, opts);
 }
-exports.createListenerProxy = createListenerProxy;
 /**
  * Class org.dcm4che3.net.Listener.
  *

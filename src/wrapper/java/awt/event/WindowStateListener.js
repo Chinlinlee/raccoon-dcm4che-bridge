@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WindowStateListener = exports.createWindowStateListenerProxy = void 0;
+exports.WindowStateListener = void 0;
+exports.createWindowStateListenerProxy = createWindowStateListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link WindowStateListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWindowStateListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.WindowStateListener', methods, opts);
 }
-exports.createWindowStateListenerProxy = createWindowStateListenerProxy;
 /**
  * Class java.awt.event.WindowStateListener.
  *

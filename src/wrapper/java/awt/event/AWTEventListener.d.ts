@@ -62,4 +62,3 @@ export declare class AWTEventListener extends AWTEventListener_base {
     private constructor();
 }
 export default AWTEventListener;
-//# sourceMappingURL=AWTEventListener.d.ts.map

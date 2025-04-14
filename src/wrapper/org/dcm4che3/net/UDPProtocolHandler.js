@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UDPProtocolHandler = exports.createUDPProtocolHandlerProxy = void 0;
+exports.UDPProtocolHandler = void 0;
+exports.createUDPProtocolHandlerProxy = createUDPProtocolHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link UDPProtocolHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createUDPProtocolHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.UDPProtocolHandler', methods, opts);
 }
-exports.createUDPProtocolHandlerProxy = createUDPProtocolHandlerProxy;
 /**
  * Class org.dcm4che3.net.UDPProtocolHandler.
  *

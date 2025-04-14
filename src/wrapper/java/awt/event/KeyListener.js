@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KeyListener = exports.createKeyListenerProxy = void 0;
+exports.KeyListener = void 0;
+exports.createKeyListenerProxy = createKeyListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link KeyListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createKeyListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.KeyListener', methods, opts);
 }
-exports.createKeyListenerProxy = createKeyListenerProxy;
 /**
  * Class java.awt.event.KeyListener.
  *

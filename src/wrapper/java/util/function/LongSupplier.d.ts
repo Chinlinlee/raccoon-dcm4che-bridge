@@ -58,4 +58,3 @@ export declare class LongSupplier extends LongSupplier_base {
     private constructor();
 }
 export default LongSupplier;
-//# sourceMappingURL=LongSupplier.d.ts.map

@@ -102,4 +102,3 @@ declare const PageAttributes$ColorType_base: typeof PageAttributes$ColorTypeClas
 export declare class PageAttributes$ColorType extends PageAttributes$ColorType_base {
 }
 export default PageAttributes$ColorType;
-//# sourceMappingURL=PageAttributes$ColorType.d.ts.map

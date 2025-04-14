@@ -58,4 +58,3 @@ export declare class Closeable extends Closeable_base {
     private constructor();
 }
 export default Closeable;
-//# sourceMappingURL=Closeable.d.ts.map

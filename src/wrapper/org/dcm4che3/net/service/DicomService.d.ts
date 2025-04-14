@@ -11,14 +11,6 @@ import { PDVInputStream as org_dcm4che3_net_PDVInputStream } from "./../PDVInput
  */
 export declare class DicomServiceClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClasses(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClassesSync(): (string | null)[] | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
      */
@@ -28,6 +20,14 @@ export declare class DicomServiceClass extends JavaClass {
      * @return original return type: 'void'
      */
     onCloseSync(var0: org_dcm4che3_net_Association | null): void;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSOPClasses(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSOPClassesSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -60,14 +60,14 @@ export declare class DicomServiceClass extends JavaClass {
  */
 export interface DicomServiceInterface {
     /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClasses(): (string | null)[] | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
      */
     onClose(var0: org_dcm4che3_net_Association | null): void;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSOPClasses(): (string | null)[] | null;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -105,4 +105,3 @@ export declare class DicomService extends DicomService_base {
     private constructor();
 }
 export default DicomService;
-//# sourceMappingURL=DicomService.d.ts.map

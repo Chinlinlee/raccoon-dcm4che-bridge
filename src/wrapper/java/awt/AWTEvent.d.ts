@@ -213,4 +213,3 @@ export declare class AWTEvent extends AWTEvent_base {
     private constructor();
 }
 export default AWTEvent;
-//# sourceMappingURL=AWTEvent.d.ts.map

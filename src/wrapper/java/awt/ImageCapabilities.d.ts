@@ -128,4 +128,3 @@ declare const ImageCapabilities_base: typeof ImageCapabilitiesClass;
 export declare class ImageCapabilities extends ImageCapabilities_base {
 }
 export default ImageCapabilities;
-//# sourceMappingURL=ImageCapabilities.d.ts.map

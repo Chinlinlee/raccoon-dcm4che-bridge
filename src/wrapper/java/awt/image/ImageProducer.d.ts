@@ -122,4 +122,3 @@ export declare class ImageProducer extends ImageProducer_base {
     private constructor();
 }
 export default ImageProducer;
-//# sourceMappingURL=ImageProducer.d.ts.map

@@ -7,10 +7,10 @@ import { FileStore as java_nio_file_FileStore } from "./../FileStore";
 import { Class as java_lang_Class } from "./../../../lang/Class";
 import { Long as java_lang_Long } from "./../../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../../lang/Integer";
-import { FileAttributeView as java_nio_file_attribute_FileAttributeView } from "./../attribute/FileAttributeView";
-import { LinkOption as java_nio_file_LinkOption } from "./../LinkOption";
 import { AsynchronousFileChannel as java_nio_channels_AsynchronousFileChannel } from "./../../channels/AsynchronousFileChannel";
 import { ExecutorService as java_util_concurrent_ExecutorService, ExecutorServiceInterface as java_util_concurrent_ExecutorServiceInterface } from "./../../../util/concurrent/ExecutorService";
+import { FileAttributeView as java_nio_file_attribute_FileAttributeView } from "./../attribute/FileAttributeView";
+import { LinkOption as java_nio_file_LinkOption } from "./../LinkOption";
 import { List as java_util_List } from "./../../../util/List";
 import { InputStream as java_io_InputStream } from "./../../../io/InputStream";
 import { OpenOption as java_nio_file_OpenOption, OpenOptionInterface as java_nio_file_OpenOptionInterface } from "./../OpenOption";
@@ -46,16 +46,6 @@ export declare class FileSystemProviderClass extends JavaClass {
     newByteChannelSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var2: (java_nio_file_attribute_FileAttribute | JavaInterfaceProxy<java_nio_file_attribute_FileAttributeInterface> | null)[] | null): java_nio_channels_SeekableByteChannel | null;
     /**
      * @param var0 original type: 'java.nio.file.Path'
-     * @return original return type: 'java.nio.file.FileStore'
-     */
-    getFileStore(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): Promise<java_nio_file_FileStore | null>;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @return original return type: 'java.nio.file.FileStore'
-     */
-    getFileStoreSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): java_nio_file_FileStore | null;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
      * @param var1 original type: 'java.nio.file.Path'
      * @return original return type: 'boolean'
      */
@@ -67,6 +57,16 @@ export declare class FileSystemProviderClass extends JavaClass {
      */
     isSameFileSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): boolean;
     /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @return original return type: 'java.nio.file.FileStore'
+     */
+    getFileStore(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): Promise<java_nio_file_FileStore | null>;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @return original return type: 'java.nio.file.FileStore'
+     */
+    getFileStoreSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): java_nio_file_FileStore | null;
+    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -74,16 +74,6 @@ export declare class FileSystemProviderClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -105,19 +95,15 @@ export declare class FileSystemProviderClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.lang.Class'
-     * @param var2 original type: 'java.nio.file.LinkOption[]'
-     * @return original return type: 'java.nio.file.attribute.FileAttributeView'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    getFileAttributeView(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_lang_Class | null, var2: (java_nio_file_LinkOption | null)[] | null): Promise<java_nio_file_attribute_FileAttributeView | null>;
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
     /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.lang.Class'
-     * @param var2 original type: 'java.nio.file.LinkOption[]'
-     * @return original return type: 'java.nio.file.attribute.FileAttributeView'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    getFileAttributeViewSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_lang_Class | null, var2: (java_nio_file_LinkOption | null)[] | null): java_nio_file_attribute_FileAttributeView | null;
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.nio.file.Path'
      * @param var1 original type: 'java.util.Set'
@@ -134,6 +120,20 @@ export declare class FileSystemProviderClass extends JavaClass {
      * @return original return type: 'java.nio.channels.AsynchronousFileChannel'
      */
     newAsynchronousFileChannelSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null, var2: java_util_concurrent_ExecutorService | JavaInterfaceProxy<java_util_concurrent_ExecutorServiceInterface> | null, var3: (java_nio_file_attribute_FileAttribute | JavaInterfaceProxy<java_nio_file_attribute_FileAttributeInterface> | null)[] | null): java_nio_channels_AsynchronousFileChannel | null;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @param var1 original type: 'java.lang.Class'
+     * @param var2 original type: 'java.nio.file.LinkOption[]'
+     * @return original return type: 'java.nio.file.attribute.FileAttributeView'
+     */
+    getFileAttributeView(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_lang_Class | null, var2: (java_nio_file_LinkOption | null)[] | null): Promise<java_nio_file_attribute_FileAttributeView | null>;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @param var1 original type: 'java.lang.Class'
+     * @param var2 original type: 'java.nio.file.LinkOption[]'
+     * @return original return type: 'java.nio.file.attribute.FileAttributeView'
+     */
+    getFileAttributeViewSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_lang_Class | null, var2: (java_nio_file_LinkOption | null)[] | null): java_nio_file_attribute_FileAttributeView | null;
     /**
      * @return original return type: 'void'
      */
@@ -440,32 +440,6 @@ export declare class FileSystemProviderClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.nio.file.LinkOption[]'
-     * @return original return type: 'boolean'
-     */
-    exists(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: (java_nio_file_LinkOption | null)[] | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.nio.file.LinkOption[]'
-     * @return original return type: 'boolean'
-     */
-    existsSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: (java_nio_file_LinkOption | null)[] | null): boolean;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.lang.Class'
-     * @param var2 original type: 'java.nio.file.LinkOption[]'
-     * @return original return type: 'java.nio.file.attribute.BasicFileAttributes'
-     */
-    readAttributesIfExists(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_lang_Class | null, var2: (java_nio_file_LinkOption | null)[] | null): Promise<java_nio_file_attribute_BasicFileAttributes | null>;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.lang.Class'
-     * @param var2 original type: 'java.nio.file.LinkOption[]'
-     * @return original return type: 'java.nio.file.attribute.BasicFileAttributes'
-     */
-    readAttributesIfExistsSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_lang_Class | null, var2: (java_nio_file_LinkOption | null)[] | null): java_nio_file_attribute_BasicFileAttributes | null;
 }
 declare const FileSystemProvider_base: typeof FileSystemProviderClass;
 /**
@@ -485,4 +459,3 @@ export declare class FileSystemProvider extends FileSystemProvider_base {
     private constructor();
 }
 export default FileSystemProvider;
-//# sourceMappingURL=FileSystemProvider.d.ts.map

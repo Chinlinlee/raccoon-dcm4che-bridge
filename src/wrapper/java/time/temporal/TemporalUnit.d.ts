@@ -152,4 +152,3 @@ export declare class TemporalUnit extends TemporalUnit_base {
     private constructor();
 }
 export default TemporalUnit;
-//# sourceMappingURL=TemporalUnit.d.ts.map

@@ -190,4 +190,3 @@ declare const GraphicsDevice$WindowTranslucency_base: typeof GraphicsDevice$Wind
 export declare class GraphicsDevice$WindowTranslucency extends GraphicsDevice$WindowTranslucency_base {
 }
 export default GraphicsDevice$WindowTranslucency;
-//# sourceMappingURL=GraphicsDevice$WindowTranslucency.d.ts.map

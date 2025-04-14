@@ -116,16 +116,6 @@ export declare class CvTypeClass extends JavaClass {
     notifySync(): void;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static CV_32SC(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static CV_32SCSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
     static typeToString(var0: java_lang_Integer | number): Promise<string | null>;
@@ -134,6 +124,16 @@ export declare class CvTypeClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     static typeToStringSync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static CV_32SC(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    static CV_32SCSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -405,4 +405,3 @@ declare const CvType_base: typeof CvTypeClass;
 export declare class CvType extends CvType_base {
 }
 export default CvType;
-//# sourceMappingURL=CvType.d.ts.map

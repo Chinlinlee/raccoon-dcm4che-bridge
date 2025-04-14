@@ -31,16 +31,6 @@ export declare class ByteClass extends JavaClass {
     static compareSync(var0: ByteClass | number, var1: ByteClass | number): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,6 +50,16 @@ export declare class ByteClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @return original return type: 'int'
      */
     intValue(): Promise<number>;
@@ -78,6 +78,16 @@ export declare class ByteClass extends JavaClass {
      */
     static valueOfSync(var0: string | null): number | null;
     /**
+     * @param var0 original type: 'byte'
+     * @return original return type: 'java.lang.Byte'
+     */
+    static valueOf(var0: ByteClass | number): Promise<number | null>;
+    /**
+     * @param var0 original type: 'byte'
+     * @return original return type: 'java.lang.Byte'
+     */
+    static valueOfSync(var0: ByteClass | number): number | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'java.lang.Byte'
@@ -89,16 +99,6 @@ export declare class ByteClass extends JavaClass {
      * @return original return type: 'java.lang.Byte'
      */
     static valueOfSync(var0: string | null, var1: java_lang_Integer | number): number | null;
-    /**
-     * @param var0 original type: 'byte'
-     * @return original return type: 'java.lang.Byte'
-     */
-    static valueOf(var0: ByteClass | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'byte'
-     * @return original return type: 'java.lang.Byte'
-     */
-    static valueOfSync(var0: ByteClass | number): number | null;
     /**
      * @return original return type: 'void'
      */
@@ -232,6 +232,14 @@ export declare class ByteClass extends JavaClass {
      */
     static compareUnsignedSync(var0: ByteClass | number, var1: ByteClass | number): number;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'byte'
      * @return original return type: 'int'
      */
@@ -241,14 +249,6 @@ export declare class ByteClass extends JavaClass {
      * @return original return type: 'int'
      */
     static hashCodeSync(var0: ByteClass | number): number;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -327,4 +327,3 @@ declare const Byte_base: typeof ByteClass;
 export declare class Byte extends Byte_base {
 }
 export default Byte;
-//# sourceMappingURL=Byte.d.ts.map

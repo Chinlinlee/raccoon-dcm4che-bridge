@@ -62,4 +62,3 @@ export declare class URLStreamHandlerFactory extends URLStreamHandlerFactory_bas
     private constructor();
 }
 export default URLStreamHandlerFactory;
-//# sourceMappingURL=URLStreamHandlerFactory.d.ts.map

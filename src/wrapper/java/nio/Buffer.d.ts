@@ -26,16 +26,6 @@ export declare class BufferClass extends JavaClass {
     hasArraySync(): boolean;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -54,6 +44,16 @@ export declare class BufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -173,14 +173,6 @@ export declare class BufferClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'int'
-     */
-    limit(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    limitSync(): number;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
      */
@@ -190,6 +182,22 @@ export declare class BufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): Buffer | null;
+    /**
+     * @return original return type: 'int'
+     */
+    limit(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    limitSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    arrayOffset(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    arrayOffsetSync(): number;
     /**
      * @return original return type: 'java.nio.Buffer'
      */
@@ -201,11 +209,11 @@ export declare class BufferClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    arrayOffset(): Promise<number>;
+    position(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    arrayOffsetSync(): number;
+    positionSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -216,14 +224,6 @@ export declare class BufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     positionSync(var0: java_lang_Integer | number): Buffer | null;
-    /**
-     * @return original return type: 'int'
-     */
-    position(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    positionSync(): number;
     /**
      * @return original return type: 'boolean'
      */
@@ -267,4 +267,3 @@ export declare class Buffer extends Buffer_base {
     private constructor();
 }
 export default Buffer;
-//# sourceMappingURL=Buffer.d.ts.map

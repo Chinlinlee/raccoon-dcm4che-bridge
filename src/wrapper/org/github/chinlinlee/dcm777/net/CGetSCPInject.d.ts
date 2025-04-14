@@ -74,4 +74,3 @@ export declare class CGetSCPInject extends CGetSCPInject_base {
     private constructor();
 }
 export default CGetSCPInject;
-//# sourceMappingURL=CGetSCPInject.d.ts.map

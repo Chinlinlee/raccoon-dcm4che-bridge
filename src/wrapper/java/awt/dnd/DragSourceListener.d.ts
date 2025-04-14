@@ -124,4 +124,3 @@ export declare class DragSourceListener extends DragSourceListener_base {
     private constructor();
 }
 export default DragSourceListener;
-//# sourceMappingURL=DragSourceListener.d.ts.map

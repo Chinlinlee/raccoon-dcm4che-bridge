@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObjectInput = exports.createObjectInputProxy = void 0;
+exports.ObjectInput = void 0;
+exports.createObjectInputProxy = createObjectInputProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ObjectInput} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createObjectInputProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.io.ObjectInput', methods, opts);
 }
-exports.createObjectInputProxy = createObjectInputProxy;
 /**
  * Class java.io.ObjectInput.
  *

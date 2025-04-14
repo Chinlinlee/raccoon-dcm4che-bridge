@@ -70,4 +70,3 @@ export declare class SecondaryLoop extends SecondaryLoop_base {
     private constructor();
 }
 export default SecondaryLoop;
-//# sourceMappingURL=SecondaryLoop.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Shape = exports.createShapeProxy = void 0;
+exports.Shape = void 0;
+exports.createShapeProxy = createShapeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Shape} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createShapeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.Shape', methods, opts);
 }
-exports.createShapeProxy = createShapeProxy;
 /**
  * Class java.awt.Shape.
  *

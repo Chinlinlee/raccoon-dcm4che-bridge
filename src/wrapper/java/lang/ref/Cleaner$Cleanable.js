@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cleaner$Cleanable = exports.createCleaner$CleanableProxy = void 0;
+exports.Cleaner$Cleanable = void 0;
+exports.createCleaner$CleanableProxy = createCleaner$CleanableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Cleaner$Cleanable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCleaner$CleanableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.ref.Cleaner$Cleanable', methods, opts);
 }
-exports.createCleaner$CleanableProxy = createCleaner$CleanableProxy;
 /**
  * Class java.lang.ref.Cleaner$Cleanable.
  *

@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./../temporal/TemporalAmount";
 import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./../temporal/Temporal";
+import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./../temporal/TemporalAmount";
 import { Long as java_lang_Long } from "./../../lang/Long";
 import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./../temporal/TemporalUnit";
 import { LocalTime as java_time_LocalTime } from "./../LocalTime";
@@ -25,16 +25,6 @@ import { Comparator as java_util_Comparator } from "./../../util/Comparator";
 export declare class ChronoLocalDateTimeClass extends JavaClass {
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<ChronoLocalDateTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): ChronoLocalDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.temporal.Temporal'
      */
     minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
@@ -44,17 +34,15 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      */
     minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    minus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<ChronoLocalDateTime | null>;
+    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<ChronoLocalDateTime | null>;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
+    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): ChronoLocalDateTime | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
@@ -67,6 +55,18 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      * @return original return type: 'java.time.temporal.Temporal'
      */
     minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    minus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<ChronoLocalDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
     /**
      * @param var0 original type: 'java.time.chrono.ChronoLocalDateTime'
      * @return original return type: 'boolean'
@@ -182,16 +182,6 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      */
     formatSync(var0: java_time_format_DateTimeFormatter | null): string | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'boolean'
-     */
-    isSupportedSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
-    /**
      * @param var0 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'boolean'
      */
@@ -201,6 +191,16 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSupportedSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'boolean'
+     */
+    isSupported(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'boolean'
+     */
+    isSupportedSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
@@ -224,18 +224,6 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    plus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<ChronoLocalDateTime | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'java.time.temporal.Temporal'
      */
     plus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<java_time_temporal_Temporal | null>;
@@ -245,6 +233,18 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      * @return original return type: 'java.time.temporal.Temporal'
      */
     plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    plus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<ChronoLocalDateTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
@@ -286,25 +286,17 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      */
     getLongSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<ChronoLocalDateTime | null>;
+    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<ChronoLocalDateTime | null>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): ChronoLocalDateTime | null;
+    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): ChronoLocalDateTime | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @param var1 original type: 'long'
@@ -318,17 +310,25 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
      */
     withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<ChronoLocalDateTime | null>;
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<ChronoLocalDateTime | null>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): ChronoLocalDateTime | null;
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): ChronoLocalDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
@@ -402,26 +402,26 @@ export declare class ChronoLocalDateTimeClass extends JavaClass {
 export interface ChronoLocalDateTimeInterface {
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    minus?(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): ChronoLocalDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.temporal.Temporal'
      */
     minus?(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
-    minus?(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
+    minus?(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): ChronoLocalDateTime | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'java.time.temporal.Temporal'
      */
     minus?(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    minus?(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
     /**
      * @param var0 original type: 'java.time.chrono.ChronoLocalDateTime'
      * @return original return type: 'boolean'
@@ -475,17 +475,17 @@ export interface ChronoLocalDateTimeInterface {
      */
     format?(var0: java_time_format_DateTimeFormatter | null): string | null;
     /**
+     * @param var0 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'boolean'
+     */
+    isSupported?(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): boolean;
+    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'boolean'
      */
     isSupported?(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'boolean'
-     */
-    isSupported?(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.time.ZoneId'
      * @return original return type: 'java.time.chrono.ChronoZonedDateTime'
@@ -497,6 +497,12 @@ export interface ChronoLocalDateTimeInterface {
      */
     toInstant?(var0: java_time_ZoneOffset | null): java_time_Instant | null;
     /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    plus?(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
+    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @param var0 original type: 'long'
@@ -504,12 +510,6 @@ export interface ChronoLocalDateTimeInterface {
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
     plus?(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): ChronoLocalDateTime | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    plus?(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
@@ -531,22 +531,6 @@ export interface ChronoLocalDateTimeInterface {
      */
     getLong(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    with?(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
-     */
-    with?(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): ChronoLocalDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    with?(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
-    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @param var0 original type: 'java.time.temporal.TemporalField'
@@ -554,6 +538,22 @@ export interface ChronoLocalDateTimeInterface {
      * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
      */
     with?(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): ChronoLocalDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    with?(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.chrono.ChronoLocalDateTime'
+     */
+    with?(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): ChronoLocalDateTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    with?(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @return original return type: 'java.time.chrono.ChronoLocalDate'
      */
@@ -611,4 +611,3 @@ export declare class ChronoLocalDateTime extends ChronoLocalDateTime_base {
     private constructor();
 }
 export default ChronoLocalDateTime;
-//# sourceMappingURL=ChronoLocalDateTime.d.ts.map

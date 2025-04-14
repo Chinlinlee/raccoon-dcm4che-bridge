@@ -21,8 +21,8 @@ import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { IIOReadUpdateListener as javax_imageio_event_IIOReadUpdateListener, IIOReadUpdateListenerInterface as javax_imageio_event_IIOReadUpdateListenerInterface } from "./../../../javax/imageio/event/IIOReadUpdateListener";
 import { List as java_util_List } from "./../../../java/util/List";
 import { Editable as org_dcm4che3_img_util_Editable, EditableInterface as org_dcm4che3_img_util_EditableInterface } from "./util/Editable";
-import { Iterator as java_util_Iterator, IteratorInterface as java_util_IteratorInterface } from "./../../../java/util/Iterator";
 import { IIOImage as javax_imageio_IIOImage } from "./../../../javax/imageio/IIOImage";
+import { Iterator as java_util_Iterator, IteratorInterface as java_util_IteratorInterface } from "./../../../java/util/Iterator";
 import { Mat as org_opencv_core_Mat } from "./../../opencv/core/Mat";
 import { ImageReaderSpi as javax_imageio_spi_ImageReaderSpi } from "./../../../javax/imageio/spi/ImageReaderSpi";
 import { BulkDataDescriptor as org_dcm4che3_io_BulkDataDescriptor, BulkDataDescriptorInterface as org_dcm4che3_io_BulkDataDescriptorInterface } from "./../io/BulkDataDescriptor";
@@ -227,14 +227,6 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     readSync(var0: java_lang_Integer | number): java_awt_image_BufferedImage | null;
     /**
-     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
-     */
-    getPlanarImage(): Promise<org_weasis_opencv_data_PlanarImage | null>;
-    /**
-     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
-     */
-    getPlanarImageSync(): org_weasis_opencv_data_PlanarImage | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'org.dcm4che3.img.DicomImageReadParam'
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
@@ -247,13 +239,13 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     getPlanarImageSync(var0: java_lang_Integer | number, var1: org_dcm4che3_img_DicomImageReadParam | null): org_weasis_opencv_data_PlanarImage | null;
     /**
-     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
-    getStreamMetadata(): Promise<javax_imageio_metadata_IIOMetadata | null>;
+    getPlanarImage(): Promise<org_weasis_opencv_data_PlanarImage | null>;
     /**
-     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
-    getStreamMetadataSync(): javax_imageio_metadata_IIOMetadata | null;
+    getPlanarImageSync(): org_weasis_opencv_data_PlanarImage | null;
     /**
      * @return original return type: 'org.dcm4che3.img.DicomMetaData'
      */
@@ -262,6 +254,14 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.img.DicomMetaData'
      */
     getStreamMetadataSync(): org_dcm4che3_img_DicomMetaData | null;
+    /**
+     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     */
+    getStreamMetadata(): Promise<javax_imageio_metadata_IIOMetadata | null>;
+    /**
+     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     */
+    getStreamMetadataSync(): javax_imageio_metadata_IIOMetadata | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.Set'
@@ -334,6 +334,16 @@ export declare class DicomImageReaderClass extends JavaClass {
     setInputSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setInput(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    setInputSync(var0: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -344,16 +354,6 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     setInputSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setInput(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    setInputSync(var0: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'float'
@@ -511,16 +511,6 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     getTileGridXOffsetSync(var0: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'java.util.Iterator'
-     * @return original return type: 'java.util.Iterator'
-     */
-    readAll(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): Promise<java_util_Iterator | null>;
-    /**
-     * @param var0 original type: 'java.util.Iterator'
-     * @return original return type: 'java.util.Iterator'
-     */
-    readAllSync(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): java_util_Iterator | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'javax.imageio.ImageReadParam'
      * @return original return type: 'javax.imageio.IIOImage'
@@ -532,6 +522,16 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'javax.imageio.IIOImage'
      */
     readAllSync(var0: java_lang_Integer | number, var1: javax_imageio_ImageReadParam | null): javax_imageio_IIOImage | null;
+    /**
+     * @param var0 original type: 'java.util.Iterator'
+     * @return original return type: 'java.util.Iterator'
+     */
+    readAll(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): Promise<java_util_Iterator | null>;
+    /**
+     * @param var0 original type: 'java.util.Iterator'
+     * @return original return type: 'java.util.Iterator'
+     */
+    readAllSync(var0: java_util_Iterator | JavaInterfaceProxy<java_util_IteratorInterface> | null): java_util_Iterator | null;
     /**
      * @return original return type: 'void'
      */
@@ -765,14 +765,6 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     getImageTypesSync(var0: java_lang_Integer | number): java_util_Iterator | null;
     /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocale(): Promise<java_util_Locale | null>;
-    /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocaleSync(): java_util_Locale | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -782,6 +774,14 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'int'
      */
     getNumThumbnailsSync(var0: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocale(): Promise<java_util_Locale | null>;
+    /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocaleSync(): java_util_Locale | null;
     /**
      * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
      */
@@ -813,4 +813,3 @@ declare const DicomImageReader_base: typeof DicomImageReaderClass;
 export declare class DicomImageReader extends DicomImageReader_base {
 }
 export default DicomImageReader;
-//# sourceMappingURL=DicomImageReader.d.ts.map

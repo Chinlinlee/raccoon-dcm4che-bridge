@@ -62,4 +62,3 @@ export declare class IIOMetadataController extends IIOMetadataController_base {
     private constructor();
 }
 export default IIOMetadataController;
-//# sourceMappingURL=IIOMetadataController.d.ts.map

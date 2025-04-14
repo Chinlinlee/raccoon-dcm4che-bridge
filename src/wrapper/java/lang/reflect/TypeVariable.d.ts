@@ -210,4 +210,3 @@ export declare class TypeVariable extends TypeVariable_base {
     private constructor();
 }
 export default TypeVariable;
-//# sourceMappingURL=TypeVariable.d.ts.map

@@ -77,4 +77,3 @@ export declare class WindowFocusListener extends WindowFocusListener_base {
     private constructor();
 }
 export default WindowFocusListener;
-//# sourceMappingURL=WindowFocusListener.d.ts.map

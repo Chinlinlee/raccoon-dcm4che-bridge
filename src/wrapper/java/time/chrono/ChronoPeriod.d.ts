@@ -258,4 +258,3 @@ export declare class ChronoPeriod extends ChronoPeriod_base {
     private constructor();
 }
 export default ChronoPeriod;
-//# sourceMappingURL=ChronoPeriod.d.ts.map

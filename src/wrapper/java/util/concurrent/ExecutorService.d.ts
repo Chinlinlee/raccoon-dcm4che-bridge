@@ -14,6 +14,16 @@ import { TimeUnit as java_util_concurrent_TimeUnit } from "./TimeUnit";
 export declare class ExecutorServiceClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Runnable'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    submit(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): Promise<java_util_concurrent_Future | null>;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    submitSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_concurrent_Future | null;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'java.util.concurrent.Future'
      */
@@ -24,16 +34,6 @@ export declare class ExecutorServiceClass extends JavaClass {
      * @return original return type: 'java.util.concurrent.Future'
      */
     submitSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: BasicOrJavaType | null): java_util_concurrent_Future | null;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    submit(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): Promise<java_util_concurrent_Future | null>;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    submitSync(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_concurrent_Future | null;
     /**
      * @param var0 original type: 'java.util.concurrent.Callable'
      * @return original return type: 'java.util.concurrent.Future'
@@ -54,16 +54,6 @@ export declare class ExecutorServiceClass extends JavaClass {
     isTerminatedSync(): boolean;
     /**
      * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'java.util.List'
-     */
-    invokeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<java_util_List | null>;
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'java.util.List'
-     */
-    invokeAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): java_util_List | null;
-    /**
-     * @param var0 original type: 'java.util.Collection'
      * @param var1 original type: 'long'
      * @param var2 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'java.util.List'
@@ -77,6 +67,16 @@ export declare class ExecutorServiceClass extends JavaClass {
      */
     invokeAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null, var1: java_lang_Long | bigint | number, var2: java_util_concurrent_TimeUnit | null): java_util_List | null;
     /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'java.util.List'
+     */
+    invokeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<java_util_List | null>;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'java.util.List'
+     */
+    invokeAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): java_util_List | null;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'boolean'
@@ -88,6 +88,14 @@ export declare class ExecutorServiceClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     awaitTerminationSync(var0: java_lang_Long | bigint | number, var1: java_util_concurrent_TimeUnit | null): boolean;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    shutdownNow(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    shutdownNowSync(): java_util_List | null;
     /**
      * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'java.lang.Object'
@@ -112,22 +120,6 @@ export declare class ExecutorServiceClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     invokeAnySync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null, var1: java_lang_Long | bigint | number, var2: java_util_concurrent_TimeUnit | null): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    shutdownNow(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    shutdownNowSync(): java_util_List | null;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    closeSync(): void;
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'void'
@@ -169,15 +161,15 @@ export declare class ExecutorServiceClass extends JavaClass {
 export interface ExecutorServiceInterface {
     /**
      * @param var0 original type: 'java.lang.Runnable'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    submit(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_concurrent_Future | null;
+    /**
+     * @param var0 original type: 'java.lang.Runnable'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'java.util.concurrent.Future'
      */
     submit(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null, var1: BasicOrJavaType | null): java_util_concurrent_Future | null;
-    /**
-     * @param var0 original type: 'java.lang.Runnable'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    submit(var0: java_lang_Runnable | JavaInterfaceProxy<java_lang_RunnableInterface> | null): java_util_concurrent_Future | null;
     /**
      * @param var0 original type: 'java.util.concurrent.Callable'
      * @return original return type: 'java.util.concurrent.Future'
@@ -189,22 +181,26 @@ export interface ExecutorServiceInterface {
     isTerminated(): boolean;
     /**
      * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'java.util.List'
-     */
-    invokeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): java_util_List | null;
-    /**
-     * @param var0 original type: 'java.util.Collection'
      * @param var1 original type: 'long'
      * @param var2 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'java.util.List'
      */
     invokeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null, var1: java_lang_Long | bigint | number, var2: java_util_concurrent_TimeUnit | null): java_util_List | null;
     /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'java.util.List'
+     */
+    invokeAll(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): java_util_List | null;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'boolean'
      */
     awaitTermination(var0: java_lang_Long | bigint | number, var1: java_util_concurrent_TimeUnit | null): boolean;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    shutdownNow(): java_util_List | null;
     /**
      * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'java.lang.Object'
@@ -217,14 +213,6 @@ export interface ExecutorServiceInterface {
      * @return original return type: 'java.lang.Object'
      */
     invokeAny(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null, var1: java_lang_Long | bigint | number, var2: java_util_concurrent_TimeUnit | null): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    shutdownNow(): java_util_List | null;
-    /**
-     * @return original return type: 'void'
-     */
-    close?(): void;
     /**
      * @param var0 original type: 'java.lang.Runnable'
      * @return original return type: 'void'
@@ -266,4 +254,3 @@ export declare class ExecutorService extends ExecutorService_base {
     private constructor();
 }
 export default ExecutorService;
-//# sourceMappingURL=ExecutorService.d.ts.map

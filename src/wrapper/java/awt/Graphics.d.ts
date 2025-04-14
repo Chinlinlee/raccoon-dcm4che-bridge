@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
@@ -139,20 +137,6 @@ export declare class GraphicsClass extends JavaClass {
      */
     translateSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.text.AttributedCharacterIterator'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    drawString(var0: java_text_AttributedCharacterIterator | JavaInterfaceProxy<java_text_AttributedCharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.text.AttributedCharacterIterator'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    drawStringSync(var0: java_text_AttributedCharacterIterator | JavaInterfaceProxy<java_text_AttributedCharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -166,6 +150,20 @@ export declare class GraphicsClass extends JavaClass {
      * @return original return type: 'void'
      */
     drawStringSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.text.AttributedCharacterIterator'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    drawString(var0: java_text_AttributedCharacterIterator | JavaInterfaceProxy<java_text_AttributedCharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.text.AttributedCharacterIterator'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    drawStringSync(var0: java_text_AttributedCharacterIterator | JavaInterfaceProxy<java_text_AttributedCharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -211,16 +209,6 @@ export declare class GraphicsClass extends JavaClass {
      */
     draw3DRectSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean): void;
     /**
-     * @param var0 original type: 'java.awt.Polygon'
-     * @return original return type: 'void'
-     */
-    fillPolygon(var0: java_awt_Polygon | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.Polygon'
-     * @return original return type: 'void'
-     */
-    fillPolygonSync(var0: java_awt_Polygon | null): void;
-    /**
      * @param var0 original type: 'int[]'
      * @param var1 original type: 'int[]'
      * @param var2 original type: 'int'
@@ -234,6 +222,16 @@ export declare class GraphicsClass extends JavaClass {
      * @return original return type: 'void'
      */
     fillPolygonSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.Polygon'
+     * @return original return type: 'void'
+     */
+    fillPolygon(var0: java_awt_Polygon | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Polygon'
+     * @return original return type: 'void'
+     */
+    fillPolygonSync(var0: java_awt_Polygon | null): void;
     /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.Rectangle'
@@ -530,6 +528,28 @@ export declare class GraphicsClass extends JavaClass {
      * @param var2 original type: 'int'
      * @param var3 original type: 'int'
      * @param var4 original type: 'int'
+     * @param var5 original type: 'java.awt.Color'
+     * @param var6 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'boolean'
+     */
+    drawImage(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Color | null, var6: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Image'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'java.awt.Color'
+     * @param var6 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'boolean'
+     */
+    drawImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Color | null, var6: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.Image'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
      * @param var5 original type: 'int'
      * @param var6 original type: 'int'
      * @param var7 original type: 'int'
@@ -556,28 +576,6 @@ export declare class GraphicsClass extends JavaClass {
      * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'java.awt.Color'
-     * @param var6 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'boolean'
-     */
-    drawImage(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Color | null, var6: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Image'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'java.awt.Color'
-     * @param var6 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'boolean'
-     */
-    drawImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Color | null, var6: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.Image'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
      * @param var3 original type: 'java.awt.Color'
      * @param var4 original type: 'java.awt.image.ImageObserver'
      * @return original return type: 'boolean'
@@ -592,22 +590,6 @@ export declare class GraphicsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     drawImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Color | null, var4: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.Image'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'boolean'
-     */
-    drawImage(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Image'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'boolean'
-     */
-    drawImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'int'
@@ -638,6 +620,22 @@ export declare class GraphicsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     drawImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number, var7: java_lang_Integer | number, var8: java_lang_Integer | number, var9: java_awt_Color | null, var10: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.Image'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'boolean'
+     */
+    drawImage(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Image'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'boolean'
+     */
+    drawImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'int'
@@ -711,6 +709,14 @@ export declare class GraphicsClass extends JavaClass {
      */
     getClipSync(): java_awt_Shape | null;
     /**
+     * @return original return type: 'java.awt.Font'
+     */
+    getFont(): Promise<java_awt_Font | null>;
+    /**
+     * @return original return type: 'java.awt.Font'
+     */
+    getFontSync(): java_awt_Font | null;
+    /**
      * @return original return type: 'void'
      */
     finalize(): Promise<void>;
@@ -726,14 +732,6 @@ export declare class GraphicsClass extends JavaClass {
      * @return original return type: 'void'
      */
     disposeSync(): void;
-    /**
-     * @return original return type: 'java.awt.Font'
-     */
-    getFont(): Promise<java_awt_Font | null>;
-    /**
-     * @return original return type: 'java.awt.Font'
-     */
-    getFontSync(): java_awt_Font | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -751,6 +749,16 @@ export declare class GraphicsClass extends JavaClass {
      */
     fillOvalSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): void;
     /**
+     * @param var0 original type: 'java.awt.Polygon'
+     * @return original return type: 'void'
+     */
+    drawPolygon(var0: java_awt_Polygon | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Polygon'
+     * @return original return type: 'void'
+     */
+    drawPolygonSync(var0: java_awt_Polygon | null): void;
+    /**
      * @param var0 original type: 'int[]'
      * @param var1 original type: 'int[]'
      * @param var2 original type: 'int'
@@ -764,16 +772,6 @@ export declare class GraphicsClass extends JavaClass {
      * @return original return type: 'void'
      */
     drawPolygonSync(var0: (java_lang_Integer | number)[] | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.awt.Polygon'
-     * @return original return type: 'void'
-     */
-    drawPolygon(var0: java_awt_Polygon | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.Polygon'
-     * @return original return type: 'void'
-     */
-    drawPolygonSync(var0: java_awt_Polygon | null): void;
     /**
      * @param var0 original type: 'java.awt.Color'
      * @return original return type: 'void'
@@ -819,4 +817,3 @@ export declare class Graphics extends Graphics_base {
     private constructor();
 }
 export default Graphics;
-//# sourceMappingURL=Graphics.d.ts.map

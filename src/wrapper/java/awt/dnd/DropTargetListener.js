@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DropTargetListener = exports.createDropTargetListenerProxy = void 0;
+exports.DropTargetListener = void 0;
+exports.createDropTargetListenerProxy = createDropTargetListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DropTargetListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDropTargetListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.dnd.DropTargetListener', methods, opts);
 }
-exports.createDropTargetListenerProxy = createDropTargetListenerProxy;
 /**
  * Class java.awt.dnd.DropTargetListener.
  *

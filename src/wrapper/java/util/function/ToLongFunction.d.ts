@@ -61,4 +61,3 @@ export declare class ToLongFunction extends ToLongFunction_base {
     private constructor();
 }
 export default ToLongFunction;
-//# sourceMappingURL=ToLongFunction.d.ts.map

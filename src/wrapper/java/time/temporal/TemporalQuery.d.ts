@@ -62,4 +62,3 @@ export declare class TemporalQuery extends TemporalQuery_base {
     private constructor();
 }
 export default TemporalQuery;
-//# sourceMappingURL=TemporalQuery.d.ts.map

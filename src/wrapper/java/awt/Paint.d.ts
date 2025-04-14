@@ -104,4 +104,3 @@ export declare class Paint extends Paint_base {
     private constructor();
 }
 export default Paint;
-//# sourceMappingURL=Paint.d.ts.map

@@ -201,4 +201,3 @@ declare const DicomTranscodeParam_base: typeof DicomTranscodeParamClass;
 export declare class DicomTranscodeParam extends DicomTranscodeParam_base {
 }
 export default DicomTranscodeParam;
-//# sourceMappingURL=DicomTranscodeParam.d.ts.map

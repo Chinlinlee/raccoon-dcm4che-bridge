@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonPatchBuilder = exports.createJsonPatchBuilderProxy = void 0;
+exports.JsonPatchBuilder = void 0;
+exports.createJsonPatchBuilderProxy = createJsonPatchBuilderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonPatchBuilder} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonPatchBuilderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.JsonPatchBuilder', methods, opts);
 }
-exports.createJsonPatchBuilderProxy = createJsonPatchBuilderProxy;
 /**
  * Class jakarta.json.JsonPatchBuilder.
  *

@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { ImageCV as org_weasis_opencv_data_ImageCV } from "./ImageCV";
 import { Mat as org_opencv_core_Mat } from "./../../../opencv/core/Mat";
@@ -322,4 +320,3 @@ declare const LookupTableCV_base: typeof LookupTableCVClass;
 export declare class LookupTableCV extends LookupTableCV_base {
 }
 export default LookupTableCV;
-//# sourceMappingURL=LookupTableCV.d.ts.map

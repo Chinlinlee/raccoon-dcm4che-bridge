@@ -583,4 +583,3 @@ declare const Properties_base: typeof PropertiesClass;
 export declare class Properties extends Properties_base {
 }
 export default Properties;
-//# sourceMappingURL=Properties.d.ts.map

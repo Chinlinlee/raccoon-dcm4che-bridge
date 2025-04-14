@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
@@ -378,18 +376,6 @@ export declare class ToolkitClass extends JavaClass {
     getFontListSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static getProperty(var0: string | null, var1: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static getPropertySync(var0: string | null, var1: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.beans.PropertyChangeListener[]'
      */
     getPropertyChangeListeners(var0: string | null): Promise<(java_beans_PropertyChangeListener | null)[] | null>;
@@ -407,6 +393,18 @@ export declare class ToolkitClass extends JavaClass {
      */
     getPropertyChangeListenersSync(): (java_beans_PropertyChangeListener | null)[] | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static getProperty(var0: string | null, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static getPropertySync(var0: string | null, var1: string | null): string | null;
+    /**
      * @return original return type: 'java.awt.image.ColorModel'
      */
     getColorModel(): Promise<java_awt_image_ColorModel | null>;
@@ -423,15 +421,19 @@ export declare class ToolkitClass extends JavaClass {
      */
     static getDefaultToolkitSync(): Toolkit | null;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'java.awt.Image'
      */
-    createImage(var0: string | null): Promise<java_awt_Image | null>;
+    createImage(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_awt_Image | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'java.awt.Image'
      */
-    createImageSync(var0: string | null): java_awt_Image | null;
+    createImageSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_awt_Image | null;
     /**
      * @param var0 original type: 'java.awt.image.ImageProducer'
      * @return original return type: 'java.awt.Image'
@@ -463,19 +465,15 @@ export declare class ToolkitClass extends JavaClass {
      */
     createImageSync(var0: Buffer | null): java_awt_Image | null;
     /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Image'
      */
-    createImage(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_awt_Image | null>;
+    createImage(var0: string | null): Promise<java_awt_Image | null>;
     /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Image'
      */
-    createImageSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_awt_Image | null;
+    createImageSync(var0: string | null): java_awt_Image | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -587,16 +585,6 @@ export declare class ToolkitClass extends JavaClass {
      */
     getMaximumCursorColorsSync(): number;
     /**
-     * @param var0 original type: 'java.net.URL'
-     * @return original return type: 'java.awt.Image'
-     */
-    getImage(var0: java_net_URL | null): Promise<java_awt_Image | null>;
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @return original return type: 'java.awt.Image'
-     */
-    getImageSync(var0: java_net_URL | null): java_awt_Image | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Image'
      */
@@ -606,6 +594,16 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'java.awt.Image'
      */
     getImageSync(var0: string | null): java_awt_Image | null;
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @return original return type: 'java.awt.Image'
+     */
+    getImage(var0: java_net_URL | null): Promise<java_awt_Image | null>;
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @return original return type: 'java.awt.Image'
+     */
+    getImageSync(var0: java_net_URL | null): java_awt_Image | null;
     /**
      * @param var0 original type: 'java.awt.im.InputMethodHighlight'
      * @return original return type: 'java.util.Map'
@@ -635,4 +633,3 @@ export declare class Toolkit extends Toolkit_base {
     private constructor();
 }
 export default Toolkit;
-//# sourceMappingURL=Toolkit.d.ts.map

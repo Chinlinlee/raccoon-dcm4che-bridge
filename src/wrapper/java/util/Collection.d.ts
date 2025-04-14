@@ -344,4 +344,3 @@ export declare class Collection extends Collection_base {
     private constructor();
 }
 export default Collection;
-//# sourceMappingURL=Collection.d.ts.map

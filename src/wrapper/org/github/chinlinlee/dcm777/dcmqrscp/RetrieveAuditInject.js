@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RetrieveAuditInject = exports.createRetrieveAuditInjectProxy = void 0;
+exports.RetrieveAuditInject = void 0;
+exports.createRetrieveAuditInjectProxy = createRetrieveAuditInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link RetrieveAuditInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createRetrieveAuditInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.dcmqrscp.RetrieveAuditInject', methods, opts);
 }
-exports.createRetrieveAuditInjectProxy = createRetrieveAuditInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.dcmqrscp.RetrieveAuditInject.
  *

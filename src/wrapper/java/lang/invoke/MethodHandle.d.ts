@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Class as java_lang_Class } from "./../Class";
 import { Integer as java_lang_Integer } from "./../Integer";
+import { Class as java_lang_Class } from "./../Class";
 import { Long as java_lang_Long } from "./../Long";
 import { Boolean as java_lang_Boolean } from "./../Boolean";
 import { MethodType as java_lang_invoke_MethodType } from "./MethodType";
@@ -12,18 +12,6 @@ import { List as java_util_List, ListInterface as java_util_ListInterface } from
  * You should probably not edit this.
  */
 export declare class MethodHandleClass extends JavaClass {
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.invoke.MethodHandle'
-     */
-    asSpreader(var0: java_lang_Class | null, var1: java_lang_Integer | number): Promise<MethodHandle | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.invoke.MethodHandle'
-     */
-    asSpreaderSync(var0: java_lang_Class | null, var1: java_lang_Integer | number): MethodHandle | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.Class'
@@ -39,6 +27,30 @@ export declare class MethodHandleClass extends JavaClass {
      */
     asSpreaderSync(var0: java_lang_Integer | number, var1: java_lang_Class | null, var2: java_lang_Integer | number): MethodHandle | null;
     /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.invoke.MethodHandle'
+     */
+    asSpreader(var0: java_lang_Class | null, var1: java_lang_Integer | number): Promise<MethodHandle | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.invoke.MethodHandle'
+     */
+    asSpreaderSync(var0: java_lang_Class | null, var1: java_lang_Integer | number): MethodHandle | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.invoke.MethodHandle'
+     */
+    asCollector(var0: java_lang_Class | null, var1: java_lang_Integer | number): Promise<MethodHandle | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.invoke.MethodHandle'
+     */
+    asCollectorSync(var0: java_lang_Class | null, var1: java_lang_Integer | number): MethodHandle | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.Class'
      * @param var2 original type: 'int'
@@ -53,18 +65,6 @@ export declare class MethodHandleClass extends JavaClass {
      */
     asCollectorSync(var0: java_lang_Integer | number, var1: java_lang_Class | null, var2: java_lang_Integer | number): MethodHandle | null;
     /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.invoke.MethodHandle'
-     */
-    asCollector(var0: java_lang_Class | null, var1: java_lang_Integer | number): Promise<MethodHandle | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.invoke.MethodHandle'
-     */
-    asCollectorSync(var0: java_lang_Class | null, var1: java_lang_Integer | number): MethodHandle | null;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -72,16 +72,6 @@ export declare class MethodHandleClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -102,6 +92,16 @@ export declare class MethodHandleClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'java.lang.invoke.MethodHandle'
@@ -195,16 +195,6 @@ export declare class MethodHandleClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @param var0 original type: 'java.util.List'
-     * @return original return type: 'java.lang.Object'
-     */
-    invokeWithArguments(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.util.List'
-     * @return original return type: 'java.lang.Object'
-     */
-    invokeWithArgumentsSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): BasicOrJavaType | null;
-    /**
      * @param var0 original type: 'java.lang.Object[]'
      * @return original return type: 'java.lang.Object'
      */
@@ -214,6 +204,16 @@ export declare class MethodHandleClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     invokeWithArgumentsSync(var0: (BasicOrJavaType | null)[] | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.util.List'
+     * @return original return type: 'java.lang.Object'
+     */
+    invokeWithArguments(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.util.List'
+     * @return original return type: 'java.lang.Object'
+     */
+    invokeWithArgumentsSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): BasicOrJavaType | null;
     /**
      * @return original return type: 'int'
      */
@@ -267,4 +267,3 @@ export declare class MethodHandle extends MethodHandle_base {
     private constructor();
 }
 export default MethodHandle;
-//# sourceMappingURL=MethodHandle.d.ts.map

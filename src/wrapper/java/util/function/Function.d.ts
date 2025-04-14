@@ -99,4 +99,3 @@ export declare class Function extends Function_base {
     private constructor();
 }
 export default Function;
-//# sourceMappingURL=Function.d.ts.map

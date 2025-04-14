@@ -61,4 +61,3 @@ export declare class ToDoubleFunction extends ToDoubleFunction_base {
     private constructor();
 }
 export default ToDoubleFunction;
-//# sourceMappingURL=ToDoubleFunction.d.ts.map

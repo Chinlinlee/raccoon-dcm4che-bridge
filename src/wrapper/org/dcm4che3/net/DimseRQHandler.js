@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DimseRQHandler = exports.createDimseRQHandlerProxy = void 0;
+exports.DimseRQHandler = void 0;
+exports.createDimseRQHandlerProxy = createDimseRQHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DimseRQHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDimseRQHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.DimseRQHandler', methods, opts);
 }
-exports.createDimseRQHandlerProxy = createDimseRQHandlerProxy;
 /**
  * Class org.dcm4che3.net.DimseRQHandler.
  *

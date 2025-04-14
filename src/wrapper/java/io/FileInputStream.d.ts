@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
@@ -288,4 +286,3 @@ declare const FileInputStream_base: typeof FileInputStreamClass;
 export declare class FileInputStream extends FileInputStream_base {
 }
 export default FileInputStream;
-//# sourceMappingURL=FileInputStream.d.ts.map

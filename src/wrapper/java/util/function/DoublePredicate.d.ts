@@ -104,4 +104,3 @@ export declare class DoublePredicate extends DoublePredicate_base {
     private constructor();
 }
 export default DoublePredicate;
-//# sourceMappingURL=DoublePredicate.d.ts.map

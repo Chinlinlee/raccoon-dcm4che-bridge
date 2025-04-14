@@ -48,16 +48,6 @@ export declare class CharsetDecoderClass extends JavaClass {
     maxCharsPerByteSync(): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -76,6 +66,16 @@ export declare class CharsetDecoderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.nio.charset.CodingErrorAction'
      * @return original return type: 'java.nio.charset.CharsetDecoder'
@@ -249,4 +249,3 @@ export declare class CharsetDecoder extends CharsetDecoder_base {
     private constructor();
 }
 export default CharsetDecoder;
-//# sourceMappingURL=CharsetDecoder.d.ts.map

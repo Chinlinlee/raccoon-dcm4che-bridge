@@ -100,4 +100,3 @@ export declare class UnaryOperator extends UnaryOperator_base {
     private constructor();
 }
 export default UnaryOperator;
-//# sourceMappingURL=UnaryOperator.d.ts.map

@@ -112,6 +112,14 @@ export declare class JobAttributesClass extends JavaClass {
      */
     setSidesSync(var0: java_awt_JobAttributes$SidesType | null): void;
     /**
+     * @return original return type: 'int[][]'
+     */
+    getPageRanges(): Promise<((number)[] | null)[] | null>;
+    /**
+     * @return original return type: 'int[][]'
+     */
+    getPageRangesSync(): ((number)[] | null)[] | null;
+    /**
      * @param var0 original type: 'java.awt.JobAttributes$DestinationType'
      * @return original return type: 'void'
      */
@@ -121,14 +129,6 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setDestinationSync(var0: java_awt_JobAttributes$DestinationType | null): void;
-    /**
-     * @return original return type: 'int[][]'
-     */
-    getPageRanges(): Promise<((number)[] | null)[] | null>;
-    /**
-     * @return original return type: 'int[][]'
-     */
-    getPageRangesSync(): ((number)[] | null)[] | null;
     /**
      * @return original return type: 'java.awt.JobAttributes$MultipleDocumentHandlingType'
      */
@@ -361,6 +361,11 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'int'
      */
     getMinPageSync(): number;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.JobAttributes'
+     */
+    static newInstanceAsync(): Promise<JobAttributes>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.awt.JobAttributes$DefaultSelectionType'
@@ -399,11 +404,6 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'java.awt.JobAttributes'
      */
     static newInstanceAsync(var0: JobAttributesClass | null): Promise<JobAttributes>;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.JobAttributes'
-     */
-    static newInstanceAsync(): Promise<JobAttributes>;
 }
 declare const JobAttributes_base: typeof JobAttributesClass;
 /**
@@ -418,4 +418,3 @@ declare const JobAttributes_base: typeof JobAttributesClass;
 export declare class JobAttributes extends JobAttributes_base {
 }
 export default JobAttributes;
-//# sourceMappingURL=JobAttributes.d.ts.map

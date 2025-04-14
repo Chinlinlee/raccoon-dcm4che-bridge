@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DocumentType = exports.createDocumentTypeProxy = void 0;
+exports.DocumentType = void 0;
+exports.createDocumentTypeProxy = createDocumentTypeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DocumentType} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDocumentTypeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.DocumentType', methods, opts);
 }
-exports.createDocumentTypeProxy = createDocumentTypeProxy;
 /**
  * Class org.w3c.dom.DocumentType.
  *

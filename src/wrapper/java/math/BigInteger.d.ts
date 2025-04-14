@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
@@ -657,4 +655,3 @@ declare const BigInteger_base: typeof BigIntegerClass;
 export declare class BigInteger extends BigInteger_base {
 }
 export default BigInteger;
-//# sourceMappingURL=BigInteger.d.ts.map

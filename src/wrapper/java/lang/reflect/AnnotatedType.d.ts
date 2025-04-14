@@ -19,6 +19,14 @@ export declare class AnnotatedTypeClass extends JavaClass {
      */
     getAnnotationsByTypeSync(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
     /**
+     * @return original return type: 'java.lang.reflect.AnnotatedType'
+     */
+    getAnnotatedOwnerType(): Promise<AnnotatedType | null>;
+    /**
+     * @return original return type: 'java.lang.reflect.AnnotatedType'
+     */
+    getAnnotatedOwnerTypeSync(): AnnotatedType | null;
+    /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation'
      */
@@ -36,14 +44,6 @@ export declare class AnnotatedTypeClass extends JavaClass {
      * @return original return type: 'java.lang.reflect.Type'
      */
     getTypeSync(): java_lang_reflect_Type | null;
-    /**
-     * @return original return type: 'java.lang.reflect.AnnotatedType'
-     */
-    getAnnotatedOwnerType(): Promise<AnnotatedType | null>;
-    /**
-     * @return original return type: 'java.lang.reflect.AnnotatedType'
-     */
-    getAnnotatedOwnerTypeSync(): AnnotatedType | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'boolean'
@@ -109,6 +109,10 @@ export interface AnnotatedTypeInterface {
      */
     getAnnotationsByType?(var0: java_lang_Class | null): (java_lang_annotation_Annotation | null)[] | null;
     /**
+     * @return original return type: 'java.lang.reflect.AnnotatedType'
+     */
+    getAnnotatedOwnerType?(): AnnotatedType | null;
+    /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.annotation.Annotation'
      */
@@ -117,10 +121,6 @@ export interface AnnotatedTypeInterface {
      * @return original return type: 'java.lang.reflect.Type'
      */
     getType(): java_lang_reflect_Type | null;
-    /**
-     * @return original return type: 'java.lang.reflect.AnnotatedType'
-     */
-    getAnnotatedOwnerType?(): AnnotatedType | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'boolean'
@@ -172,4 +172,3 @@ export declare class AnnotatedType extends AnnotatedType_base {
     private constructor();
 }
 export default AnnotatedType;
-//# sourceMappingURL=AnnotatedType.d.ts.map

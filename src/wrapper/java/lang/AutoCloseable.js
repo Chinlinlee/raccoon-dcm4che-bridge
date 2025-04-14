@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AutoCloseable = exports.createAutoCloseableProxy = void 0;
+exports.AutoCloseable = void 0;
+exports.createAutoCloseableProxy = createAutoCloseableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AutoCloseable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAutoCloseableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.AutoCloseable', methods, opts);
 }
-exports.createAutoCloseableProxy = createAutoCloseableProxy;
 /**
  * Class java.lang.AutoCloseable.
  *

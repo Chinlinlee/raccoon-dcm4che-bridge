@@ -48,16 +48,6 @@ export declare class ColorSpaceClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getName(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getNameSync(var0: java_lang_Integer | number): string | null;
-    /**
      * @param var0 original type: 'float[]'
      * @return original return type: 'float[]'
      */
@@ -67,6 +57,16 @@ export declare class ColorSpaceClass extends JavaClass {
      * @return original return type: 'float[]'
      */
     toCIEXYZSync(var0: (java_lang_Float | number)[] | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getName(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getNameSync(var0: java_lang_Integer | number): string | null;
     /**
      * @param var0 original type: 'float[]'
      * @return original return type: 'float[]'
@@ -324,4 +324,3 @@ export declare class ColorSpace extends ColorSpace_base {
     private constructor();
 }
 export default ColorSpace;
-//# sourceMappingURL=ColorSpace.d.ts.map

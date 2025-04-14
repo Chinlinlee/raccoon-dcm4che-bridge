@@ -172,4 +172,3 @@ export declare class Era extends Era_base {
     private constructor();
 }
 export default Era;
-//# sourceMappingURL=Era.d.ts.map

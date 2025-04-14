@@ -164,4 +164,3 @@ declare const ModalityLutModule_base: typeof ModalityLutModuleClass;
 export declare class ModalityLutModule extends ModalityLutModule_base {
 }
 export default ModalityLutModule;
-//# sourceMappingURL=ModalityLutModule.d.ts.map

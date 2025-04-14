@@ -198,4 +198,3 @@ declare const LutShape$eFunction_base: typeof LutShape$eFunctionClass;
 export declare class LutShape$eFunction extends LutShape$eFunction_base {
 }
 export default LutShape$eFunction;
-//# sourceMappingURL=LutShape$eFunction.d.ts.map

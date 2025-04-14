@@ -341,15 +341,28 @@ export declare class DicomServiceExceptionClass extends JavaClass {
     fillInStackTraceSync(): java_lang_Throwable | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @param var2 original type: 'boolean'
      */
-    constructor(var0: java_lang_Integer | number, var1: string | null);
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Throwable | null, var2: java_lang_Boolean | boolean);
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @param var2 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.net.service.DicomServiceException'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null): Promise<DicomServiceException>;
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Throwable | null, var2: java_lang_Boolean | boolean): Promise<DicomServiceException>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.Throwable'
+     */
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Throwable | null);
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'org.dcm4che3.net.service.DicomServiceException'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Throwable | null): Promise<DicomServiceException>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -365,28 +378,15 @@ export declare class DicomServiceExceptionClass extends JavaClass {
     static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Boolean | boolean): Promise<DicomServiceException>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Throwable'
+     * @param var1 original type: 'java.lang.String'
      */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Throwable | null);
+    constructor(var0: java_lang_Integer | number, var1: string | null);
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Throwable'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.service.DicomServiceException'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Throwable | null): Promise<DicomServiceException>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Throwable'
-     * @param var2 original type: 'boolean'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Throwable | null, var2: java_lang_Boolean | boolean);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Throwable'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.net.service.DicomServiceException'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Throwable | null, var2: java_lang_Boolean | boolean): Promise<DicomServiceException>;
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null): Promise<DicomServiceException>;
     /**
      * @param var0 original type: 'int'
      */
@@ -410,4 +410,3 @@ declare const DicomServiceException_base: typeof DicomServiceExceptionClass;
 export declare class DicomServiceException extends DicomServiceException_base {
 }
 export default DicomServiceException;
-//# sourceMappingURL=DicomServiceException.d.ts.map

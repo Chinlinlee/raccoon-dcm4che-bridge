@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ImageConsumer = exports.createImageConsumerProxy = void 0;
+exports.ImageConsumer = void 0;
+exports.createImageConsumerProxy = createImageConsumerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ImageConsumer} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createImageConsumerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.image.ImageConsumer', methods, opts);
 }
-exports.createImageConsumerProxy = createImageConsumerProxy;
 /**
  * Class java.awt.image.ImageConsumer.
  *

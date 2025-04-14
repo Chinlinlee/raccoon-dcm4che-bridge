@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ImageObserver = exports.createImageObserverProxy = void 0;
+exports.ImageObserver = void 0;
+exports.createImageObserverProxy = createImageObserverProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ImageObserver} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createImageObserverProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.image.ImageObserver', methods, opts);
 }
-exports.createImageObserverProxy = createImageObserverProxy;
 /**
  * Class java.awt.image.ImageObserver.
  *

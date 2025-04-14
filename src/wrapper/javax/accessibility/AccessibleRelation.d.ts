@@ -276,4 +276,3 @@ declare const AccessibleRelation_base: typeof AccessibleRelationClass;
 export declare class AccessibleRelation extends AccessibleRelation_base {
 }
 export default AccessibleRelation;
-//# sourceMappingURL=AccessibleRelation.d.ts.map

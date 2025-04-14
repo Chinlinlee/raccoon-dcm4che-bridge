@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObjectOutput = exports.createObjectOutputProxy = void 0;
+exports.ObjectOutput = void 0;
+exports.createObjectOutputProxy = createObjectOutputProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ObjectOutput} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createObjectOutputProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.io.ObjectOutput', methods, opts);
 }
-exports.createObjectOutputProxy = createObjectOutputProxy;
 /**
  * Class java.io.ObjectOutput.
  *

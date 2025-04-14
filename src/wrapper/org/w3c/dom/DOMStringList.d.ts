@@ -89,4 +89,3 @@ export declare class DOMStringList extends DOMStringList_base {
     private constructor();
 }
 export default DOMStringList;
-//# sourceMappingURL=DOMStringList.d.ts.map

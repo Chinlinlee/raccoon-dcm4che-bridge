@@ -188,4 +188,3 @@ declare const FontRenderContext_base: typeof FontRenderContextClass;
 export declare class FontRenderContext extends FontRenderContext_base {
 }
 export default FontRenderContext;
-//# sourceMappingURL=FontRenderContext.d.ts.map

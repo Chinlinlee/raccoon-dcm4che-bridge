@@ -97,4 +97,3 @@ export declare class MPPSScpInject extends MPPSScpInject_base {
     private constructor();
 }
 export default MPPSScpInject;
-//# sourceMappingURL=MPPSScpInject.d.ts.map

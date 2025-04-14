@@ -70,4 +70,3 @@ export declare class Channel extends Channel_base {
     private constructor();
 }
 export default Channel;
-//# sourceMappingURL=Channel.d.ts.map

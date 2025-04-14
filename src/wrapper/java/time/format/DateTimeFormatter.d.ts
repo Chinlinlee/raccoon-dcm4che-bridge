@@ -54,16 +54,6 @@ export declare class DateTimeFormatterClass extends JavaClass {
     parseBestSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: (java_time_temporal_TemporalQuery | JavaInterfaceProxy<java_time_temporal_TemporalQueryInterface> | null)[] | null): java_time_temporal_TemporalAccessor | null;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -83,6 +73,26 @@ export declare class DateTimeFormatterClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'java.time.format.FormatStyle'
+     * @return original return type: 'java.time.format.DateTimeFormatter'
+     */
+    static ofLocalizedDateTime(var0: java_time_format_FormatStyle | null): Promise<DateTimeFormatter | null>;
+    /**
+     * @param var0 original type: 'java.time.format.FormatStyle'
+     * @return original return type: 'java.time.format.DateTimeFormatter'
+     */
+    static ofLocalizedDateTimeSync(var0: java_time_format_FormatStyle | null): DateTimeFormatter | null;
+    /**
      * @param var0 original type: 'java.time.format.FormatStyle'
      * @param var1 original type: 'java.time.format.FormatStyle'
      * @return original return type: 'java.time.format.DateTimeFormatter'
@@ -94,16 +104,6 @@ export declare class DateTimeFormatterClass extends JavaClass {
      * @return original return type: 'java.time.format.DateTimeFormatter'
      */
     static ofLocalizedDateTimeSync(var0: java_time_format_FormatStyle | null, var1: java_time_format_FormatStyle | null): DateTimeFormatter | null;
-    /**
-     * @param var0 original type: 'java.time.format.FormatStyle'
-     * @return original return type: 'java.time.format.DateTimeFormatter'
-     */
-    static ofLocalizedDateTime(var0: java_time_format_FormatStyle | null): Promise<DateTimeFormatter | null>;
-    /**
-     * @param var0 original type: 'java.time.format.FormatStyle'
-     * @return original return type: 'java.time.format.DateTimeFormatter'
-     */
-    static ofLocalizedDateTimeSync(var0: java_time_format_FormatStyle | null): DateTimeFormatter | null;
     /**
      * @return original return type: 'java.util.Set'
      */
@@ -197,16 +197,6 @@ export declare class DateTimeFormatterClass extends JavaClass {
      */
     getChronologySync(): java_time_chrono_Chronology | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.time.format.DateTimeFormatter'
-     */
-    static ofLocalizedPattern(var0: string | null): Promise<DateTimeFormatter | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.time.format.DateTimeFormatter'
-     */
-    static ofLocalizedPatternSync(var0: string | null): DateTimeFormatter | null;
-    /**
      * @param var0 original type: 'java.time.format.DecimalStyle'
      * @return original return type: 'java.time.format.DateTimeFormatter'
      */
@@ -227,16 +217,6 @@ export declare class DateTimeFormatterClass extends JavaClass {
      */
     withChronologySync(var0: java_time_chrono_Chronology | JavaInterfaceProxy<java_time_chrono_ChronologyInterface> | null): DateTimeFormatter | null;
     /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.format.DateTimeFormatter'
-     */
-    withZone(var0: java_time_ZoneId | null): Promise<DateTimeFormatter | null>;
-    /**
-     * @param var0 original type: 'java.time.ZoneId'
-     * @return original return type: 'java.time.format.DateTimeFormatter'
-     */
-    withZoneSync(var0: java_time_ZoneId | null): DateTimeFormatter | null;
-    /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'java.time.format.DateTimeFormatter'
      */
@@ -246,6 +226,16 @@ export declare class DateTimeFormatterClass extends JavaClass {
      * @return original return type: 'java.time.format.DateTimeFormatter'
      */
     localizedBySync(var0: java_util_Locale | null): DateTimeFormatter | null;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.format.DateTimeFormatter'
+     */
+    withZone(var0: java_time_ZoneId | null): Promise<DateTimeFormatter | null>;
+    /**
+     * @param var0 original type: 'java.time.ZoneId'
+     * @return original return type: 'java.time.format.DateTimeFormatter'
+     */
+    withZoneSync(var0: java_time_ZoneId | null): DateTimeFormatter | null;
     /**
      * @return original return type: 'java.time.temporal.TemporalQuery'
      */
@@ -304,6 +294,16 @@ export declare class DateTimeFormatterClass extends JavaClass {
     parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_text_ParsePosition | null): java_time_temporal_TemporalAccessor | null;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.time.temporal.TemporalAccessor'
+     */
+    parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<java_time_temporal_TemporalAccessor | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.time.temporal.TemporalAccessor'
+     */
+    parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_time_temporal_TemporalAccessor | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'java.time.temporal.TemporalQuery'
      * @return original return type: 'java.lang.Object'
      */
@@ -314,16 +314,6 @@ export declare class DateTimeFormatterClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_time_temporal_TemporalQuery | JavaInterfaceProxy<java_time_temporal_TemporalQueryInterface> | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.time.temporal.TemporalAccessor'
-     */
-    parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<java_time_temporal_TemporalAccessor | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.time.temporal.TemporalAccessor'
-     */
-    parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_time_temporal_TemporalAccessor | null;
     /**
      * @return original return type: 'java.time.format.DecimalStyle'
      */
@@ -484,4 +474,3 @@ declare const DateTimeFormatter_base: typeof DateTimeFormatterClass;
 export declare class DateTimeFormatter extends DateTimeFormatter_base {
 }
 export default DateTimeFormatter;
-//# sourceMappingURL=DateTimeFormatter.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FlavorMap = exports.createFlavorMapProxy = void 0;
+exports.FlavorMap = void 0;
+exports.createFlavorMapProxy = createFlavorMapProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link FlavorMap} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFlavorMapProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.datatransfer.FlavorMap', methods, opts);
 }
-exports.createFlavorMapProxy = createFlavorMapProxy;
 /**
  * Class java.awt.datatransfer.FlavorMap.
  *

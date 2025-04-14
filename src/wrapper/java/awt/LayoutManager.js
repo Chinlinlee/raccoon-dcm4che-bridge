@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LayoutManager = exports.createLayoutManagerProxy = void 0;
+exports.LayoutManager = void 0;
+exports.createLayoutManagerProxy = createLayoutManagerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LayoutManager} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLayoutManagerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.LayoutManager', methods, opts);
 }
-exports.createLayoutManagerProxy = createLayoutManagerProxy;
 /**
  * Class java.awt.LayoutManager.
  *

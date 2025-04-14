@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserDataHandler = exports.createUserDataHandlerProxy = void 0;
+exports.UserDataHandler = void 0;
+exports.createUserDataHandlerProxy = createUserDataHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link UserDataHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createUserDataHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.UserDataHandler', methods, opts);
 }
-exports.createUserDataHandlerProxy = createUserDataHandlerProxy;
 /**
  * Class org.w3c.dom.UserDataHandler.
  *

@@ -86,4 +86,3 @@ export declare class WritableByteChannel extends WritableByteChannel_base {
     private constructor();
 }
 export default WritableByteChannel;
-//# sourceMappingURL=WritableByteChannel.d.ts.map

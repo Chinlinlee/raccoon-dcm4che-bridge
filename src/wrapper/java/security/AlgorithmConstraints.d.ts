@@ -112,4 +112,3 @@ export declare class AlgorithmConstraints extends AlgorithmConstraints_base {
     private constructor();
 }
 export default AlgorithmConstraints;
-//# sourceMappingURL=AlgorithmConstraints.d.ts.map

@@ -190,4 +190,3 @@ declare const Window$Type_base: typeof Window$TypeClass;
 export declare class Window$Type extends Window$Type_base {
 }
 export default Window$Type;
-//# sourceMappingURL=Window$Type.d.ts.map

@@ -223,4 +223,3 @@ declare const IIOImage_base: typeof IIOImageClass;
 export declare class IIOImage extends IIOImage_base {
 }
 export default IIOImage;
-//# sourceMappingURL=IIOImage.d.ts.map

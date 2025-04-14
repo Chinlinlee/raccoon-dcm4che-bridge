@@ -184,4 +184,3 @@ export declare class MenuComponent extends MenuComponent_base {
     private constructor();
 }
 export default MenuComponent;
-//# sourceMappingURL=MenuComponent.d.ts.map

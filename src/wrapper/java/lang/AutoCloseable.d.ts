@@ -58,4 +58,3 @@ export declare class AutoCloseable extends AutoCloseable_base {
     private constructor();
 }
 export default AutoCloseable;
-//# sourceMappingURL=AutoCloseable.d.ts.map

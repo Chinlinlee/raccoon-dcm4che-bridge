@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Editable = exports.createEditableProxy = void 0;
+exports.Editable = void 0;
+exports.createEditableProxy = createEditableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Editable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createEditableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.img.util.Editable', methods, opts);
 }
-exports.createEditableProxy = createEditableProxy;
 /**
  * Class org.dcm4che3.img.util.Editable.
  *

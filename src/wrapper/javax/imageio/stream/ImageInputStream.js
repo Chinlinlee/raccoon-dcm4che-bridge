@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ImageInputStream = exports.createImageInputStreamProxy = void 0;
+exports.ImageInputStream = void 0;
+exports.createImageInputStreamProxy = createImageInputStreamProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ImageInputStream} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createImageInputStreamProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.imageio.stream.ImageInputStream', methods, opts);
 }
-exports.createImageInputStreamProxy = createImageInputStreamProxy;
 /**
  * Class javax.imageio.stream.ImageInputStream.
  *

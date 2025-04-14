@@ -565,4 +565,3 @@ export declare class IIOMetadataFormat extends IIOMetadataFormat_base {
     private constructor();
 }
 export default IIOMetadataFormat;
-//# sourceMappingURL=IIOMetadataFormat.d.ts.map

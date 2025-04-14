@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SSLSessionContext = exports.createSSLSessionContextProxy = void 0;
+exports.SSLSessionContext = void 0;
+exports.createSSLSessionContextProxy = createSSLSessionContextProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SSLSessionContext} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSSLSessionContextProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.net.ssl.SSLSessionContext', methods, opts);
 }
-exports.createSSLSessionContextProxy = createSSLSessionContextProxy;
 /**
  * Class javax.net.ssl.SSLSessionContext.
  *

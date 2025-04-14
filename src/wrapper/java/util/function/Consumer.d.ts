@@ -76,4 +76,3 @@ export declare class Consumer extends Consumer_base {
     private constructor();
 }
 export default Consumer;
-//# sourceMappingURL=Consumer.d.ts.map

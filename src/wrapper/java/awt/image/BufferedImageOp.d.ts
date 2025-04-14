@@ -132,4 +132,3 @@ export declare class BufferedImageOp extends BufferedImageOp_base {
     private constructor();
 }
 export default BufferedImageOp;
-//# sourceMappingURL=BufferedImageOp.d.ts.map

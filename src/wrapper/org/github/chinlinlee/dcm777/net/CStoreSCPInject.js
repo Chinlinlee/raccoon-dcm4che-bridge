@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CStoreSCPInject = exports.createCStoreSCPInjectProxy = void 0;
+exports.CStoreSCPInject = void 0;
+exports.createCStoreSCPInjectProxy = createCStoreSCPInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CStoreSCPInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCStoreSCPInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.CStoreSCPInject', methods, opts);
 }
-exports.createCStoreSCPInjectProxy = createCStoreSCPInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.CStoreSCPInject.
  *

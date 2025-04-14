@@ -191,4 +191,3 @@ declare const InputMethodHighlight_base: typeof InputMethodHighlightClass;
 export declare class InputMethodHighlight extends InputMethodHighlight_base {
 }
 export default InputMethodHighlight;
-//# sourceMappingURL=InputMethodHighlight.d.ts.map

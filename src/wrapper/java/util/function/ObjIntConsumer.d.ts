@@ -65,4 +65,3 @@ export declare class ObjIntConsumer extends ObjIntConsumer_base {
     private constructor();
 }
 export default ObjIntConsumer;
-//# sourceMappingURL=ObjIntConsumer.d.ts.map

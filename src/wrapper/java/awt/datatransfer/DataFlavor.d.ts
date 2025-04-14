@@ -458,4 +458,3 @@ declare const DataFlavor_base: typeof DataFlavorClass;
 export declare class DataFlavor extends DataFlavor_base {
 }
 export default DataFlavor;
-//# sourceMappingURL=DataFlavor.d.ts.map

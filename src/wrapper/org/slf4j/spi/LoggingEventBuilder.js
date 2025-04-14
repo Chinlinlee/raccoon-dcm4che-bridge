@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LoggingEventBuilder = exports.createLoggingEventBuilderProxy = void 0;
+exports.LoggingEventBuilder = void 0;
+exports.createLoggingEventBuilderProxy = createLoggingEventBuilderProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link LoggingEventBuilder} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLoggingEventBuilderProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.slf4j.spi.LoggingEventBuilder', methods, opts);
 }
-exports.createLoggingEventBuilderProxy = createLoggingEventBuilderProxy;
 /**
  * Class org.slf4j.spi.LoggingEventBuilder.
  *

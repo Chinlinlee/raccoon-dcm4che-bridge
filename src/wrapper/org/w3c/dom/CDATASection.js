@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CDATASection = exports.createCDATASectionProxy = void 0;
+exports.CDATASection = void 0;
+exports.createCDATASectionProxy = createCDATASectionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CDATASection} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCDATASectionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.CDATASection', methods, opts);
 }
-exports.createCDATASectionProxy = createCDATASectionProxy;
 /**
  * Class org.w3c.dom.CDATASection.
  *

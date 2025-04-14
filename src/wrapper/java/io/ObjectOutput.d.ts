@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Float as java_lang_Float } from "./../lang/Float";
@@ -308,4 +306,3 @@ export declare class ObjectOutput extends ObjectOutput_base {
     private constructor();
 }
 export default ObjectOutput;
-//# sourceMappingURL=ObjectOutput.d.ts.map

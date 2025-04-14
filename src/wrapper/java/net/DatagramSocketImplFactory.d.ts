@@ -59,4 +59,3 @@ export declare class DatagramSocketImplFactory extends DatagramSocketImplFactory
     private constructor();
 }
 export default DatagramSocketImplFactory;
-//# sourceMappingURL=DatagramSocketImplFactory.d.ts.map

@@ -70,4 +70,3 @@ export declare class FileAttribute extends FileAttribute_base {
     private constructor();
 }
 export default FileAttribute;
-//# sourceMappingURL=FileAttribute.d.ts.map

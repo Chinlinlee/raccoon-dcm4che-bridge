@@ -252,4 +252,3 @@ declare const ComponentEvent_base: typeof ComponentEventClass;
 export declare class ComponentEvent extends ComponentEvent_base {
 }
 export default ComponentEvent;
-//# sourceMappingURL=ComponentEvent.d.ts.map

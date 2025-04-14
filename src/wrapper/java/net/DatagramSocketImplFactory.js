@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DatagramSocketImplFactory = exports.createDatagramSocketImplFactoryProxy = void 0;
+exports.DatagramSocketImplFactory = void 0;
+exports.createDatagramSocketImplFactoryProxy = createDatagramSocketImplFactoryProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DatagramSocketImplFactory} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDatagramSocketImplFactoryProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.net.DatagramSocketImplFactory', methods, opts);
 }
-exports.createDatagramSocketImplFactoryProxy = createDatagramSocketImplFactoryProxy;
 /**
  * Class java.net.DatagramSocketImplFactory.
  *

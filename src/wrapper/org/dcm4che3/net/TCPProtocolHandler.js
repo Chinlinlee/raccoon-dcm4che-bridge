@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TCPProtocolHandler = exports.createTCPProtocolHandlerProxy = void 0;
+exports.TCPProtocolHandler = void 0;
+exports.createTCPProtocolHandlerProxy = createTCPProtocolHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TCPProtocolHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTCPProtocolHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.TCPProtocolHandler', methods, opts);
 }
-exports.createTCPProtocolHandlerProxy = createTCPProtocolHandlerProxy;
 /**
  * Class org.dcm4che3.net.TCPProtocolHandler.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BufferedImageOp = exports.createBufferedImageOpProxy = void 0;
+exports.BufferedImageOp = void 0;
+exports.createBufferedImageOpProxy = createBufferedImageOpProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link BufferedImageOp} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createBufferedImageOpProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.image.BufferedImageOp', methods, opts);
 }
-exports.createBufferedImageOpProxy = createBufferedImageOpProxy;
 /**
  * Class java.awt.image.BufferedImageOp.
  *

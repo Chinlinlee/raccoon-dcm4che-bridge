@@ -84,4 +84,3 @@ export declare class BulkDataDescriptor extends BulkDataDescriptor_base {
     private constructor();
 }
 export default BulkDataDescriptor;
-//# sourceMappingURL=BulkDataDescriptor.d.ts.map

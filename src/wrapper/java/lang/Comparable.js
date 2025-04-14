@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Comparable = exports.createComparableProxy = void 0;
+exports.Comparable = void 0;
+exports.createComparableProxy = createComparableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Comparable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createComparableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.lang.Comparable', methods, opts);
 }
-exports.createComparableProxy = createComparableProxy;
 /**
  * Class java.lang.Comparable.
  *

@@ -62,4 +62,3 @@ export declare class IIOParamController extends IIOParamController_base {
     private constructor();
 }
 export default IIOParamController;
-//# sourceMappingURL=IIOParamController.d.ts.map

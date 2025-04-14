@@ -159,4 +159,3 @@ declare const DisplayMode_base: typeof DisplayModeClass;
 export declare class DisplayMode extends DisplayMode_base {
 }
 export default DisplayMode;
-//# sourceMappingURL=DisplayMode.d.ts.map

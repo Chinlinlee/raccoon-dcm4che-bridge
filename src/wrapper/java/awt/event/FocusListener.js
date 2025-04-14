@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FocusListener = exports.createFocusListenerProxy = void 0;
+exports.FocusListener = void 0;
+exports.createFocusListenerProxy = createFocusListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link FocusListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFocusListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.FocusListener', methods, opts);
 }
-exports.createFocusListenerProxy = createFocusListenerProxy;
 /**
  * Class java.awt.event.FocusListener.
  *

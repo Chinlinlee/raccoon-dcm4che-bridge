@@ -118,4 +118,3 @@ declare const Paths_base: typeof PathsClass;
 export declare class Paths extends Paths_base {
 }
 export default Paths;
-//# sourceMappingURL=Paths.d.ts.map

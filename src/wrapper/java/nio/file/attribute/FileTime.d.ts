@@ -20,16 +20,6 @@ export declare class FileTimeClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,6 +38,16 @@ export declare class FileTimeClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -121,16 +121,6 @@ export declare class FileTimeClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @param var0 original type: 'java.time.Instant'
-     * @return original return type: 'java.nio.file.attribute.FileTime'
-     */
-    static from(var0: java_time_Instant | null): Promise<FileTime | null>;
-    /**
-     * @param var0 original type: 'java.time.Instant'
-     * @return original return type: 'java.nio.file.attribute.FileTime'
-     */
-    static fromSync(var0: java_time_Instant | null): FileTime | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.util.concurrent.TimeUnit'
      * @return original return type: 'java.nio.file.attribute.FileTime'
@@ -142,6 +132,16 @@ export declare class FileTimeClass extends JavaClass {
      * @return original return type: 'java.nio.file.attribute.FileTime'
      */
     static fromSync(var0: java_lang_Long | bigint | number, var1: java_util_concurrent_TimeUnit | null): FileTime | null;
+    /**
+     * @param var0 original type: 'java.time.Instant'
+     * @return original return type: 'java.nio.file.attribute.FileTime'
+     */
+    static from(var0: java_time_Instant | null): Promise<FileTime | null>;
+    /**
+     * @param var0 original type: 'java.time.Instant'
+     * @return original return type: 'java.nio.file.attribute.FileTime'
+     */
+    static fromSync(var0: java_time_Instant | null): FileTime | null;
     /**
      * @return original return type: 'long'
      */
@@ -174,4 +174,3 @@ declare const FileTime_base: typeof FileTimeClass;
 export declare class FileTime extends FileTime_base {
 }
 export default FileTime;
-//# sourceMappingURL=FileTime.d.ts.map

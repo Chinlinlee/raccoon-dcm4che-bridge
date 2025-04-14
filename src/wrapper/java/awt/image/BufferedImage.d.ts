@@ -8,8 +8,8 @@ import { TileObserver as java_awt_image_TileObserver, TileObserverInterface as j
 import { Raster as java_awt_image_Raster } from "./Raster";
 import { ImageProducer as java_awt_image_ImageProducer } from "./ImageProducer";
 import { Long as java_lang_Long } from "./../../lang/Long";
-import { ImageObserver as java_awt_image_ImageObserver, ImageObserverInterface as java_awt_image_ImageObserverInterface } from "./ImageObserver";
 import { Vector as java_util_Vector } from "./../../util/Vector";
+import { ImageObserver as java_awt_image_ImageObserver, ImageObserverInterface as java_awt_image_ImageObserverInterface } from "./ImageObserver";
 import { Point as java_awt_Point } from "./../Point";
 import { Image as java_awt_Image } from "./../Image";
 import { Graphics2D as java_awt_Graphics2D } from "./../Graphics2D";
@@ -67,20 +67,6 @@ export declare class BufferedImageClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setRGB(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setRGBSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
      * @param var3 original type: 'int'
      * @param var4 original type: 'int[]'
      * @param var5 original type: 'int'
@@ -100,6 +86,28 @@ export declare class BufferedImageClass extends JavaClass {
      */
     setRGBSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: (java_lang_Integer | number)[] | null, var5: java_lang_Integer | number, var6: java_lang_Integer | number): void;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setRGB(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setRGBSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getNumYTiles(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getNumYTilesSync(): number;
+    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -109,14 +117,6 @@ export declare class BufferedImageClass extends JavaClass {
      * @return original return type: 'void'
      */
     coerceDataSync(var0: java_lang_Boolean | boolean): void;
-    /**
-     * @return original return type: 'int'
-     */
-    getNumYTiles(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getNumYTilesSync(): number;
     /**
      * @return original return type: 'java.awt.image.SampleModel'
      */
@@ -296,13 +296,13 @@ export declare class BufferedImageClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.util.Vector'
      */
-    getWidth(): Promise<number>;
+    getSources(): Promise<java_util_Vector | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.util.Vector'
      */
-    getWidthSync(): number;
+    getSourcesSync(): java_util_Vector | null;
     /**
      * @param var0 original type: 'java.awt.image.ImageObserver'
      * @return original return type: 'int'
@@ -314,13 +314,13 @@ export declare class BufferedImageClass extends JavaClass {
      */
     getWidthSync(var0: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): number;
     /**
-     * @return original return type: 'java.util.Vector'
+     * @return original return type: 'int'
      */
-    getSources(): Promise<java_util_Vector | null>;
+    getWidth(): Promise<number>;
     /**
-     * @return original return type: 'java.util.Vector'
+     * @return original return type: 'int'
      */
-    getSourcesSync(): java_util_Vector | null;
+    getWidthSync(): number;
     /**
      * @param var0 original type: 'java.awt.image.TileObserver'
      * @return original return type: 'void'
@@ -370,14 +370,6 @@ export declare class BufferedImageClass extends JavaClass {
      */
     getScaledInstanceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_awt_Image | null;
     /**
-     * @return original return type: 'int'
-     */
-    getHeight(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getHeightSync(): number;
-    /**
      * @param var0 original type: 'java.awt.image.ImageObserver'
      * @return original return type: 'int'
      */
@@ -387,6 +379,14 @@ export declare class BufferedImageClass extends JavaClass {
      * @return original return type: 'int'
      */
     getHeightSync(var0: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getHeight(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getHeightSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -428,6 +428,14 @@ export declare class BufferedImageClass extends JavaClass {
      */
     getGraphicsSync(): java_awt_Graphics | null;
     /**
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    getAlphaRaster(): Promise<java_awt_image_WritableRaster | null>;
+    /**
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    getAlphaRasterSync(): java_awt_image_WritableRaster | null;
+    /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
      */
@@ -445,14 +453,6 @@ export declare class BufferedImageClass extends JavaClass {
      * @return original return type: 'java.awt.image.Raster'
      */
     getDataSync(): java_awt_image_Raster | null;
-    /**
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    getAlphaRaster(): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    getAlphaRasterSync(): java_awt_image_WritableRaster | null;
     /**
      * @return original return type: 'java.awt.image.WritableRaster'
      */
@@ -709,19 +709,6 @@ export declare class BufferedImageClass extends JavaClass {
      */
     static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_IndexColorModel | null): Promise<BufferedImage>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.awt.image.BufferedImage'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<BufferedImage>;
-    /**
      * @param var0 original type: 'java.awt.image.ColorModel'
      * @param var1 original type: 'java.awt.image.WritableRaster'
      * @param var2 original type: 'boolean'
@@ -736,6 +723,19 @@ export declare class BufferedImageClass extends JavaClass {
      * @return original return type: 'java.awt.image.BufferedImage'
      */
     static newInstanceAsync(var0: java_awt_image_ColorModel | null, var1: java_awt_image_WritableRaster | null, var2: java_lang_Boolean | boolean, var3: java_util_Hashtable | null): Promise<BufferedImage>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     */
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.awt.image.BufferedImage'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<BufferedImage>;
 }
 declare const BufferedImage_base: typeof BufferedImageClass;
 /**
@@ -750,4 +750,3 @@ declare const BufferedImage_base: typeof BufferedImageClass;
 export declare class BufferedImage extends BufferedImage_base {
 }
 export default BufferedImage;
-//# sourceMappingURL=BufferedImage.d.ts.map

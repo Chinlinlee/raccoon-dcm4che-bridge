@@ -208,6 +208,16 @@ export declare class SetClass extends JavaClass {
     static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null): Set | null;
     /**
      * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Set'
+     */
+    static of(var0: BasicOrJavaType | null): Promise<Set | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Set'
+     */
+    static ofSync(var0: BasicOrJavaType | null): Set | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @param var3 original type: 'java.lang.Object'
@@ -222,14 +232,6 @@ export declare class SetClass extends JavaClass {
      * @return original return type: 'java.util.Set'
      */
     static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Set | null;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    static of(): Promise<Set | null>;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    static ofSync(): Set | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -355,15 +357,13 @@ export declare class SetClass extends JavaClass {
      */
     static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): Set | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'java.util.Set'
      */
-    static of(var0: BasicOrJavaType | null): Promise<Set | null>;
+    static of(): Promise<Set | null>;
     /**
-     * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'java.util.Set'
      */
-    static ofSync(var0: BasicOrJavaType | null): Set | null;
+    static ofSync(): Set | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -377,14 +377,6 @@ export declare class SetClass extends JavaClass {
      */
     static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Set | null;
     /**
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArray(): Promise<(BasicOrJavaType | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArraySync(): (BasicOrJavaType | null)[] | null;
-    /**
      * @param var0 original type: 'java.lang.Object[]'
      * @return original return type: 'java.lang.Object[]'
      */
@@ -394,6 +386,14 @@ export declare class SetClass extends JavaClass {
      * @return original return type: 'java.lang.Object[]'
      */
     toArraySync(var0: (BasicOrJavaType | null)[] | null): (BasicOrJavaType | null)[] | null;
+    /**
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArray(): Promise<(BasicOrJavaType | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArraySync(): (BasicOrJavaType | null)[] | null;
     /**
      * @param var0 original type: 'java.util.function.IntFunction'
      * @return original return type: 'java.lang.Object[]'
@@ -511,16 +511,16 @@ export interface SetInterface {
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArray?(): (BasicOrJavaType | null)[] | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
      * @param var0 original type: 'java.lang.Object[]'
      * @return original return type: 'java.lang.Object[]'
      */
     toArray?(var0: (BasicOrJavaType | null)[] | null): (BasicOrJavaType | null)[] | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArray?(): (BasicOrJavaType | null)[] | null;
     /**
      * @param var0 original type: 'java.util.function.IntFunction'
      * @return original return type: 'java.lang.Object[]'
@@ -563,4 +563,3 @@ export declare class Set extends Set_base {
     private constructor();
 }
 export default Set;
-//# sourceMappingURL=Set.d.ts.map

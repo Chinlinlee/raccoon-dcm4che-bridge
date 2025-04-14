@@ -83,4 +83,3 @@ export declare class Enumeration extends Enumeration_base {
     private constructor();
 }
 export default Enumeration;
-//# sourceMappingURL=Enumeration.d.ts.map

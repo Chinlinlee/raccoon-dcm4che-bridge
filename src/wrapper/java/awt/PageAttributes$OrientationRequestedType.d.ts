@@ -102,4 +102,3 @@ declare const PageAttributes$OrientationRequestedType_base: typeof PageAttribute
 export declare class PageAttributes$OrientationRequestedType extends PageAttributes$OrientationRequestedType_base {
 }
 export default PageAttributes$OrientationRequestedType;
-//# sourceMappingURL=PageAttributes$OrientationRequestedType.d.ts.map

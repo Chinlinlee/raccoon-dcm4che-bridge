@@ -104,4 +104,3 @@ export declare class IntPredicate extends IntPredicate_base {
     private constructor();
 }
 export default IntPredicate;
-//# sourceMappingURL=IntPredicate.d.ts.map

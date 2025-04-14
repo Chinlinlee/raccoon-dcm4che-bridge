@@ -61,4 +61,3 @@ export declare class Editable extends Editable_base {
     private constructor();
 }
 export default Editable;
-//# sourceMappingURL=Editable.d.ts.map

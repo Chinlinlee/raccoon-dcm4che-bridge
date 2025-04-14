@@ -1,12 +1,12 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
+import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
+import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
 import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../../../../dcm4che3/net/pdu/PresentationContext";
 import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
 import { PDVInputStream as org_dcm4che3_net_PDVInputStream } from "./../../../../dcm4che3/net/PDVInputStream";
-import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
-import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { StgCmtSCPInject as org_github_chinlinlee_dcm777_net_StgCmtSCPInject, StgCmtSCPInjectInterface as org_github_chinlinlee_dcm777_net_StgCmtSCPInjectInterface } from "./StgCmtSCPInject";
 /**
  * This class just defines types, you should import {@link SimpleStgCmtSCP} instead of this.
@@ -15,49 +15,13 @@ import { StgCmtSCPInject as org_github_chinlinlee_dcm777_net_StgCmtSCPInject, St
  */
 export declare class SimpleStgCmtSCPClass extends JavaClass {
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): Promise<void>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
-     * @return original return type: 'void'
-     */
-    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
-     * @return original return type: 'void'
-     */
-    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClasses(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClassesSync(): (string | null)[] | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
@@ -99,6 +63,14 @@ export declare class SimpleStgCmtSCPClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -109,29 +81,57 @@ export declare class SimpleStgCmtSCPClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toStringAsync(): Promise<string>;
+    notifyAllSync(): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String[]'
      */
-    hashCode(): Promise<number>;
+    getSOPClasses(): Promise<(string | null)[] | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String[]'
      */
-    hashCodeSync(): number;
+    getSOPClassesSync(): (string | null)[] | null;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
      */
-    getClass(): Promise<java_lang_Class>;
+    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
      */
-    getClassSync(): java_lang_Class;
+    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'void'
+     */
+    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'void'
+     */
+    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -141,22 +141,14 @@ export declare class SimpleStgCmtSCPClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.StgCmtSCPInject'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_github_chinlinlee_dcm777_net_StgCmtSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_StgCmtSCPInjectInterface> | null);
     /**
      * @param var0 original type: 'org.github.chinlinlee.dcm777.net.StgCmtSCPInject'
      * @return original return type: 'org.github.chinlinlee.dcm777.net.SimpleStgCmtSCP'
      */
     static newInstanceAsync(var0: org_github_chinlinlee_dcm777_net_StgCmtSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_StgCmtSCPInjectInterface> | null): Promise<SimpleStgCmtSCP>;
-    /**
-     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.StgCmtSCPInject'
-     */
-    constructor(var0: org_github_chinlinlee_dcm777_net_StgCmtSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_StgCmtSCPInjectInterface> | null);
 }
 declare const SimpleStgCmtSCP_base: typeof SimpleStgCmtSCPClass;
 /**
@@ -171,4 +163,3 @@ declare const SimpleStgCmtSCP_base: typeof SimpleStgCmtSCPClass;
 export declare class SimpleStgCmtSCP extends SimpleStgCmtSCP_base {
 }
 export default SimpleStgCmtSCP;
-//# sourceMappingURL=SimpleStgCmtSCP.d.ts.map

@@ -305,4 +305,3 @@ declare const ActionEvent_base: typeof ActionEventClass;
 export declare class ActionEvent extends ActionEvent_base {
 }
 export default ActionEvent;
-//# sourceMappingURL=ActionEvent.d.ts.map

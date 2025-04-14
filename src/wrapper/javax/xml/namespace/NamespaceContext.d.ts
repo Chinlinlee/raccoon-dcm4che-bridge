@@ -92,4 +92,3 @@ export declare class NamespaceContext extends NamespaceContext_base {
     private constructor();
 }
 export default NamespaceContext;
-//# sourceMappingURL=NamespaceContext.d.ts.map

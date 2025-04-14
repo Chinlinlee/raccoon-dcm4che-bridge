@@ -105,4 +105,3 @@ export declare class GroupPrincipal extends GroupPrincipal_base {
     private constructor();
 }
 export default GroupPrincipal;
-//# sourceMappingURL=GroupPrincipal.d.ts.map

@@ -126,4 +126,3 @@ export declare class DOMImplementation extends DOMImplementation_base {
     private constructor();
 }
 export default DOMImplementation;
-//# sourceMappingURL=DOMImplementation.d.ts.map

@@ -207,4 +207,3 @@ declare const Cursor_base: typeof CursorClass;
 export declare class Cursor extends Cursor_base {
 }
 export default Cursor;
-//# sourceMappingURL=Cursor.d.ts.map

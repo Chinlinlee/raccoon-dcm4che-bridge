@@ -62,4 +62,3 @@ export declare class DragGestureListener extends DragGestureListener_base {
     private constructor();
 }
 export default DragGestureListener;
-//# sourceMappingURL=DragGestureListener.d.ts.map

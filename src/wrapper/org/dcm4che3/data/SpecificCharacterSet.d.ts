@@ -58,16 +58,6 @@ export declare class SpecificCharacterSetClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -86,6 +76,16 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -185,14 +185,6 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    static getDefaultCharacterSet(): Promise<SpecificCharacterSet | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    static getDefaultCharacterSetSync(): SpecificCharacterSet | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -204,6 +196,14 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      * @return original return type: 'void'
      */
     static setCharsetNameMappingSync(var0: string | null, var1: string | null): void;
+    /**
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    static getDefaultCharacterSet(): Promise<SpecificCharacterSet | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    static getDefaultCharacterSetSync(): SpecificCharacterSet | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -250,4 +250,3 @@ declare const SpecificCharacterSet_base: typeof SpecificCharacterSetClass;
 export declare class SpecificCharacterSet extends SpecificCharacterSet_base {
 }
 export default SpecificCharacterSet;
-//# sourceMappingURL=SpecificCharacterSet.d.ts.map

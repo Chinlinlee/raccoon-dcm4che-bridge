@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RetrieveTask = exports.createRetrieveTaskProxy = void 0;
+exports.RetrieveTask = void 0;
+exports.createRetrieveTaskProxy = createRetrieveTaskProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link RetrieveTask} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createRetrieveTaskProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.service.RetrieveTask', methods, opts);
 }
-exports.createRetrieveTaskProxy = createRetrieveTaskProxy;
 /**
  * Class org.dcm4che3.net.service.RetrieveTask.
  *

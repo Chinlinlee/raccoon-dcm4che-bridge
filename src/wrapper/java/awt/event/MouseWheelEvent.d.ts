@@ -265,19 +265,19 @@ export declare class MouseWheelEventClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    getScrollAmount(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getScrollAmountSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
     getUnitsToScroll(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
     getUnitsToScrollSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getScrollAmount(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getScrollAmountSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -703,4 +703,3 @@ declare const MouseWheelEvent_base: typeof MouseWheelEventClass;
 export declare class MouseWheelEvent extends MouseWheelEvent_base {
 }
 export default MouseWheelEvent;
-//# sourceMappingURL=MouseWheelEvent.d.ts.map

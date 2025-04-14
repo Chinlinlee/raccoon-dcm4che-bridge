@@ -193,4 +193,3 @@ declare const Clipboard_base: typeof ClipboardClass;
 export declare class Clipboard extends Clipboard_base {
 }
 export default Clipboard;
-//# sourceMappingURL=Clipboard.d.ts.map

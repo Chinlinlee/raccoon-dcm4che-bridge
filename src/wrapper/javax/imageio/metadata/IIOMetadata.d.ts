@@ -236,4 +236,3 @@ export declare class IIOMetadata extends IIOMetadata_base {
     private constructor();
 }
 export default IIOMetadata;
-//# sourceMappingURL=IIOMetadata.d.ts.map

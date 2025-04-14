@@ -136,14 +136,6 @@ export declare class RectangleClass extends JavaClass {
      */
     insideSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
     /**
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    getBounds(): Promise<Rectangle | null>;
-    /**
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    getBoundsSync(): Rectangle | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -156,6 +148,14 @@ export declare class RectangleClass extends JavaClass {
      */
     translateSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
     /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    getBounds(): Promise<Rectangle | null>;
+    /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    getBoundsSync(): Rectangle | null;
+    /**
      * @return original return type: 'void'
      */
     notify(): Promise<void>;
@@ -163,18 +163,6 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifySync(): void;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @param var1 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
-     */
-    setFrameFromCenter(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @param var1 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
-     */
-    setFrameFromCenterSync(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): void;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -191,6 +179,18 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'void'
      */
     setFrameFromCenterSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): void;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @param var1 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    setFrameFromCenter(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @param var1 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    setFrameFromCenterSync(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): void;
     /**
      * @return original return type: 'double'
      */
@@ -282,16 +282,6 @@ export declare class RectangleClass extends JavaClass {
      */
     setFrameSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): void;
     /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'void'
-     */
-    setFrame(var0: java_awt_geom_Rectangle2D | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'void'
-     */
-    setFrameSync(var0: java_awt_geom_Rectangle2D | null): void;
-    /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @param var1 original type: 'java.awt.geom.Dimension2D'
      * @return original return type: 'void'
@@ -303,6 +293,16 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'void'
      */
     setFrameSync(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Dimension2D | null): void;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'void'
+     */
+    setFrame(var0: java_awt_geom_Rectangle2D | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'void'
+     */
+    setFrameSync(var0: java_awt_geom_Rectangle2D | null): void;
     /**
      * @return original return type: 'int'
      */
@@ -338,26 +338,6 @@ export declare class RectangleClass extends JavaClass {
      */
     getCenterXSync(): number;
     /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'void'
-     */
-    add(var0: RectangleClass | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'void'
-     */
-    addSync(var0: RectangleClass | null): void;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'void'
-     */
-    add(var0: java_awt_Point | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'void'
-     */
-    addSync(var0: java_awt_Point | null): void;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -369,6 +349,26 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'void'
      */
     addSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'void'
+     */
+    add(var0: java_awt_Point | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'void'
+     */
+    addSync(var0: java_awt_Point | null): void;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'void'
+     */
+    add(var0: RectangleClass | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'void'
+     */
+    addSync(var0: RectangleClass | null): void;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -382,16 +382,6 @@ export declare class RectangleClass extends JavaClass {
      */
     addSync(var0: java_lang_Double | number, var1: java_lang_Double | number): void;
     /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
-     */
-    add(var0: java_awt_geom_Point2D | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
-     */
-    addSync(var0: java_awt_geom_Point2D | null): void;
-    /**
      * @param var0 original type: 'java.awt.geom.Rectangle2D'
      * @return original return type: 'void'
      */
@@ -401,6 +391,16 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'void'
      */
     addSync(var0: java_awt_geom_Rectangle2D | null): void;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    add(var0: java_awt_geom_Point2D | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    addSync(var0: java_awt_geom_Point2D | null): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -556,6 +556,18 @@ export declare class RectangleClass extends JavaClass {
      */
     setBoundsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): void;
     /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @param var1 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    setFrameFromDiagonal(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @param var1 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    setFrameFromDiagonalSync(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): void;
+    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @param var2 original type: 'double'
@@ -572,17 +584,13 @@ export declare class RectangleClass extends JavaClass {
      */
     setFrameFromDiagonalSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): void;
     /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @param var1 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
+     * @return original return type: 'double'
      */
-    setFrameFromDiagonal(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): Promise<void>;
+    getX(): Promise<number>;
     /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @param var1 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
+     * @return original return type: 'double'
      */
-    setFrameFromDiagonalSync(var0: java_awt_geom_Point2D | null, var1: java_awt_geom_Point2D | null): void;
+    getXSync(): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -610,16 +618,6 @@ export declare class RectangleClass extends JavaClass {
      */
     containsSync(var0: RectangleClass | null): boolean;
     /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_Point | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_Point | null): boolean;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'boolean'
@@ -632,17 +630,15 @@ export declare class RectangleClass extends JavaClass {
      */
     containsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
     /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
+     * @param var0 original type: 'java.awt.Point'
      * @return original return type: 'boolean'
      */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
+    contains(var0: java_awt_Point | null): Promise<boolean>;
     /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
+     * @param var0 original type: 'java.awt.Point'
      * @return original return type: 'boolean'
      */
-    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
+    containsSync(var0: java_awt_Point | null): boolean;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -660,15 +656,17 @@ export declare class RectangleClass extends JavaClass {
      */
     containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
     /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
      * @return original return type: 'boolean'
      */
-    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
      * @return original return type: 'boolean'
      */
-    containsSync(var0: java_awt_geom_Point2D | null): boolean;
+    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.Rectangle2D'
      * @return original return type: 'boolean'
@@ -680,6 +678,16 @@ export declare class RectangleClass extends JavaClass {
      */
     containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_geom_Point2D | null): boolean;
+    /**
      * @return original return type: 'java.awt.Dimension'
      */
     getSize(): Promise<java_awt_Dimension | null>;
@@ -687,14 +695,6 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'java.awt.Dimension'
      */
     getSizeSync(): java_awt_Dimension | null;
-    /**
-     * @return original return type: 'double'
-     */
-    getX(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getXSync(): number;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -740,16 +740,6 @@ export declare class RectangleClass extends JavaClass {
      */
     createUnionSync(var0: java_awt_geom_Rectangle2D | null): java_awt_geom_Rectangle2D | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @return original return type: 'int'
@@ -771,6 +761,16 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'int'
      */
     outcodeSync(var0: java_awt_geom_Point2D | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
@@ -884,6 +884,20 @@ export declare class RectangleClass extends JavaClass {
      */
     static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<Rectangle>;
     /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     */
+    constructor(var0: RectangleClass | null);
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    static newInstanceAsync(var0: RectangleClass | null): Promise<Rectangle>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    static newInstanceAsync(): Promise<Rectangle>;
+    /**
      * @param var0 original type: 'java.awt.Dimension'
      */
     constructor(var0: java_awt_Dimension | null);
@@ -901,20 +915,6 @@ export declare class RectangleClass extends JavaClass {
      * @return original return type: 'java.awt.Rectangle'
      */
     static newInstanceAsync(var0: java_awt_Point | null): Promise<Rectangle>;
-    /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     */
-    constructor(var0: RectangleClass | null);
-    /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    static newInstanceAsync(var0: RectangleClass | null): Promise<Rectangle>;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    static newInstanceAsync(): Promise<Rectangle>;
     /**
      * @param var0 original type: 'java.awt.Point'
      * @param var1 original type: 'java.awt.Dimension'
@@ -940,4 +940,3 @@ declare const Rectangle_base: typeof RectangleClass;
 export declare class Rectangle extends Rectangle_base {
 }
 export default Rectangle;
-//# sourceMappingURL=Rectangle.d.ts.map

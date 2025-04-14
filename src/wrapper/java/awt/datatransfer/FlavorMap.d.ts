@@ -78,4 +78,3 @@ export declare class FlavorMap extends FlavorMap_base {
     private constructor();
 }
 export default FlavorMap;
-//# sourceMappingURL=FlavorMap.d.ts.map

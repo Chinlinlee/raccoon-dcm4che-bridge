@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DragGestureListener = exports.createDragGestureListenerProxy = void 0;
+exports.DragGestureListener = void 0;
+exports.createDragGestureListenerProxy = createDragGestureListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DragGestureListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDragGestureListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.dnd.DragGestureListener', methods, opts);
 }
-exports.createDragGestureListenerProxy = createDragGestureListenerProxy;
 /**
  * Class java.awt.dnd.DragGestureListener.
  *

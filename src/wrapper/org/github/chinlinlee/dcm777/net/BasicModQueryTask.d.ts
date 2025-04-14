@@ -1,10 +1,10 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
-import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
+import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { Boolean as java_lang_Boolean } from "./../../../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
+import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
+import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
 import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../../../../dcm4che3/net/pdu/PresentationContext";
 import { QueryTaskInject as org_github_chinlinlee_dcm777_net_QueryTaskInject, QueryTaskInjectInterface as org_github_chinlinlee_dcm777_net_QueryTaskInjectInterface } from "./QueryTaskInject";
 /**
@@ -14,47 +14,13 @@ import { QueryTaskInject as org_github_chinlinlee_dcm777_net_QueryTaskInject, Qu
  */
 export declare class BasicModQueryTaskClass extends JavaClass {
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.Class'
      */
-    hasMoreMatches(): Promise<boolean>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'java.lang.Class'
      */
-    hasMoreMatchesSync(): boolean;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    nextMatch(): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    nextMatchSync(): org_dcm4che3_data_Attributes | null;
-    /**
-     * @return original return type: 'void'
-     */
-    run(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    runSync(): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOptionalKeysNotSupported(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOptionalKeysNotSupportedSync(): boolean;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -96,6 +62,62 @@ export declare class BasicModQueryTaskClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isOptionalKeysNotSupported(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOptionalKeysNotSupportedSync(): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    run(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    runSync(): void;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasMoreMatches(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasMoreMatchesSync(): boolean;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    nextMatch(): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    nextMatchSync(): org_dcm4che3_data_Attributes | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -106,45 +128,22 @@ export declare class BasicModQueryTaskClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringAsync(): Promise<string>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClass(): Promise<java_lang_Class>;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClassSync(): java_lang_Class;
-    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
      */
-    notify(): Promise<void>;
+    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
     /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
      */
-    notifySync(): void;
+    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null);
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -159,24 +158,17 @@ export declare class BasicModQueryTaskClass extends JavaClass {
      * @param var2 original type: 'org.dcm4che3.data.Attributes'
      * @param var3 original type: 'org.dcm4che3.data.Attributes'
      * @param var4 original type: 'org.github.chinlinlee.dcm777.net.QueryTaskInject'
-     * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModQueryTask'
      */
-    static newInstanceAsync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null, var4: org_github_chinlinlee_dcm777_net_QueryTaskInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_QueryTaskInjectInterface> | null): Promise<BasicModQueryTask>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     */
-    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null);
+    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null, var4: org_github_chinlinlee_dcm777_net_QueryTaskInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_QueryTaskInjectInterface> | null);
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
      * @param var2 original type: 'org.dcm4che3.data.Attributes'
      * @param var3 original type: 'org.dcm4che3.data.Attributes'
      * @param var4 original type: 'org.github.chinlinlee.dcm777.net.QueryTaskInject'
+     * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModQueryTask'
      */
-    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null, var4: org_github_chinlinlee_dcm777_net_QueryTaskInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_QueryTaskInjectInterface> | null);
+    static newInstanceAsync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null, var4: org_github_chinlinlee_dcm777_net_QueryTaskInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_QueryTaskInjectInterface> | null): Promise<BasicModQueryTask>;
 }
 declare const BasicModQueryTask_base: typeof BasicModQueryTaskClass;
 /**
@@ -191,4 +183,3 @@ declare const BasicModQueryTask_base: typeof BasicModQueryTaskClass;
 export declare class BasicModQueryTask extends BasicModQueryTask_base {
 }
 export default BasicModQueryTask;
-//# sourceMappingURL=BasicModQueryTask.d.ts.map

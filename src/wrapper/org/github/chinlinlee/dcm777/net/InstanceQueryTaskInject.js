@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InstanceQueryTaskInject = exports.createInstanceQueryTaskInjectProxy = void 0;
+exports.InstanceQueryTaskInject = void 0;
+exports.createInstanceQueryTaskInjectProxy = createInstanceQueryTaskInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link InstanceQueryTaskInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createInstanceQueryTaskInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.InstanceQueryTaskInject', methods, opts);
 }
-exports.createInstanceQueryTaskInjectProxy = createInstanceQueryTaskInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.InstanceQueryTaskInject.
  *

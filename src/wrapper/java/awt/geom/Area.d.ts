@@ -176,38 +176,6 @@ export declare class AreaClass extends JavaClass {
      */
     createTransformedAreaSync(var0: java_awt_geom_AffineTransform | null): Area | null;
     /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_geom_Point2D | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
-    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @param var2 original type: 'double'
@@ -223,6 +191,38 @@ export declare class AreaClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_geom_Point2D | null): boolean;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @return original return type: 'void'
@@ -294,14 +294,6 @@ export declare class AreaClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.Object'
-     */
-    clone(): Promise<BasicOrJavaType | null>;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    cloneSync(): BasicOrJavaType | null;
-    /**
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
     getBounds2D(): Promise<java_awt_geom_Rectangle2D | null>;
@@ -309,6 +301,14 @@ export declare class AreaClass extends JavaClass {
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
     getBounds2DSync(): java_awt_geom_Rectangle2D | null;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    clone(): Promise<BasicOrJavaType | null>;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    cloneSync(): BasicOrJavaType | null;
     /**
      * @return original return type: 'void'
      */
@@ -345,4 +345,3 @@ declare const Area_base: typeof AreaClass;
 export declare class Area extends Area_base {
 }
 export default Area;
-//# sourceMappingURL=Area.d.ts.map

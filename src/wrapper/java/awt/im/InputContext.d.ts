@@ -166,14 +166,6 @@ export declare class InputContextClass extends JavaClass {
      */
     disposeSync(): void;
     /**
-     * @return original return type: 'java.awt.im.InputContext'
-     */
-    static getInstance(): Promise<InputContext | null>;
-    /**
-     * @return original return type: 'java.awt.im.InputContext'
-     */
-    static getInstanceSync(): InputContext | null;
-    /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'boolean'
      */
@@ -183,6 +175,14 @@ export declare class InputContextClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     selectInputMethodSync(var0: java_util_Locale | null): boolean;
+    /**
+     * @return original return type: 'java.awt.im.InputContext'
+     */
+    static getInstance(): Promise<InputContext | null>;
+    /**
+     * @return original return type: 'java.awt.im.InputContext'
+     */
+    static getInstanceSync(): InputContext | null;
     /**
      * @return original return type: 'java.util.Locale'
      */
@@ -205,4 +205,3 @@ declare const InputContext_base: typeof InputContextClass;
 export declare class InputContext extends InputContext_base {
 }
 export default InputContext;
-//# sourceMappingURL=InputContext.d.ts.map

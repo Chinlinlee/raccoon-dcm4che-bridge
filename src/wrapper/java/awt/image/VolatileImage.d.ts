@@ -84,24 +84,6 @@ export declare class VolatileImageClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @return original return type: 'int'
-     */
-    getWidth(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getWidthSync(): number;
-    /**
-     * @param var0 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'int'
-     */
-    getWidth(var0: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'int'
-     */
-    getWidthSync(var0: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): number;
-    /**
      * @return original return type: 'java.awt.ImageCapabilities'
      */
     getCapabilities(): Promise<java_awt_ImageCapabilities | null>;
@@ -119,6 +101,24 @@ export declare class VolatileImageClass extends JavaClass {
      * @return original return type: 'java.awt.ImageCapabilities'
      */
     getCapabilitiesSync(var0: java_awt_GraphicsConfiguration | null): java_awt_ImageCapabilities | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getWidth(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getWidthSync(): number;
+    /**
+     * @param var0 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'int'
+     */
+    getWidth(var0: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'int'
+     */
+    getWidthSync(var0: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): number;
     /**
      * @return original return type: 'void'
      */
@@ -320,4 +320,3 @@ export declare class VolatileImage extends VolatileImage_base {
     private constructor();
 }
 export default VolatileImage;
-//# sourceMappingURL=VolatileImage.d.ts.map

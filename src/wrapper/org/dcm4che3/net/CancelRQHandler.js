@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CancelRQHandler = exports.createCancelRQHandlerProxy = void 0;
+exports.CancelRQHandler = void 0;
+exports.createCancelRQHandlerProxy = createCancelRQHandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CancelRQHandler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCancelRQHandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.CancelRQHandler', methods, opts);
 }
-exports.createCancelRQHandlerProxy = createCancelRQHandlerProxy;
 /**
  * Class org.dcm4che3.net.CancelRQHandler.
  *

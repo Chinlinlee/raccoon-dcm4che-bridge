@@ -21,16 +21,6 @@ export declare class FloatBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -49,6 +39,16 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.nio.FloatBuffer'
      */
@@ -86,6 +86,16 @@ export declare class FloatBufferClass extends JavaClass {
      */
     compareToSync(var0: FloatBufferClass | null): number;
     /**
+     * @param var0 original type: 'float[]'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    put(var0: (java_lang_Float | number)[] | null): Promise<FloatBuffer | null>;
+    /**
+     * @param var0 original type: 'float[]'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    putSync(var0: (java_lang_Float | number)[] | null): FloatBuffer | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'float[]'
      * @param var2 original type: 'int'
@@ -114,6 +124,20 @@ export declare class FloatBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: (java_lang_Float | number)[] | null): FloatBuffer | null;
     /**
+     * @param var0 original type: 'float[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    put(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<FloatBuffer | null>;
+    /**
+     * @param var0 original type: 'float[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    putSync(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): FloatBuffer | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.FloatBuffer'
      * @param var2 original type: 'int'
@@ -130,16 +154,6 @@ export declare class FloatBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: FloatBufferClass | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): FloatBuffer | null;
     /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    put(var0: (java_lang_Float | number)[] | null): Promise<FloatBuffer | null>;
-    /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    putSync(var0: (java_lang_Float | number)[] | null): FloatBuffer | null;
-    /**
      * @param var0 original type: 'java.nio.FloatBuffer'
      * @return original return type: 'java.nio.FloatBuffer'
      */
@@ -149,30 +163,6 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.FloatBuffer'
      */
     putSync(var0: FloatBufferClass | null): FloatBuffer | null;
-    /**
-     * @param var0 original type: 'float[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    put(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<FloatBuffer | null>;
-    /**
-     * @param var0 original type: 'float[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    putSync(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): FloatBuffer | null;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    put(var0: java_lang_Float | number): Promise<FloatBuffer | null>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    putSync(var0: java_lang_Float | number): FloatBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'float'
@@ -185,6 +175,16 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.FloatBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Float | number): FloatBuffer | null;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    put(var0: java_lang_Float | number): Promise<FloatBuffer | null>;
+    /**
+     * @param var0 original type: 'float'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    putSync(var0: java_lang_Float | number): FloatBuffer | null;
     /**
      * @return original return type: 'java.nio.FloatBuffer'
      */
@@ -234,14 +234,6 @@ export declare class FloatBufferClass extends JavaClass {
      */
     arraySync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    slice(): Promise<FloatBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    sliceSync(): FloatBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     slice(): Promise<java_nio_Buffer | null>;
@@ -249,6 +241,14 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     sliceSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    slice(): Promise<FloatBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    sliceSync(): FloatBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -282,6 +282,14 @@ export declare class FloatBufferClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
+     * @return original return type: 'float'
+     */
+    get(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    getSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'float[]'
      * @return original return type: 'java.nio.FloatBuffer'
@@ -303,6 +311,22 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'float'
      */
     getSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'float[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    get(var0: java_lang_Integer | number, var1: (java_lang_Float | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<FloatBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'float[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    getSync(var0: java_lang_Integer | number, var1: (java_lang_Float | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): FloatBuffer | null;
     /**
      * @param var0 original type: 'float[]'
      * @param var1 original type: 'int'
@@ -329,28 +353,14 @@ export declare class FloatBufferClass extends JavaClass {
     getSync(var0: (java_lang_Float | number)[] | null): FloatBuffer | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'float[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.FloatBuffer'
      */
-    get(var0: java_lang_Integer | number, var1: (java_lang_Float | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<FloatBuffer | null>;
+    limit(var0: java_lang_Integer | number): Promise<FloatBuffer | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'float[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.FloatBuffer'
      */
-    getSync(var0: java_lang_Integer | number, var1: (java_lang_Float | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): FloatBuffer | null;
-    /**
-     * @return original return type: 'float'
-     */
-    get(): Promise<number>;
-    /**
-     * @return original return type: 'float'
-     */
-    getSync(): number;
+    limitSync(var0: java_lang_Integer | number): FloatBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -361,16 +371,6 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    limit(var0: java_lang_Integer | number): Promise<FloatBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    limitSync(var0: java_lang_Integer | number): FloatBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -428,14 +428,6 @@ export declare class FloatBufferClass extends JavaClass {
      */
     hasRemainingSync(): boolean;
     /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    clear(): Promise<FloatBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    clearSync(): FloatBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     clear(): Promise<java_nio_Buffer | null>;
@@ -443,6 +435,14 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     clearSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    clear(): Promise<FloatBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    clearSync(): FloatBuffer | null;
     /**
      * @return original return type: 'java.nio.FloatBuffer'
      */
@@ -468,14 +468,6 @@ export declare class FloatBufferClass extends JavaClass {
      */
     remainingSync(): number;
     /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    rewind(): Promise<FloatBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    rewindSync(): FloatBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     rewind(): Promise<java_nio_Buffer | null>;
@@ -483,6 +475,14 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     rewindSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    rewind(): Promise<FloatBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    rewindSync(): FloatBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.FloatBuffer'
@@ -559,6 +559,16 @@ export declare class FloatBufferClass extends JavaClass {
     positionSync(): number;
     /**
      * @param var0 original type: 'float[]'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    static wrap(var0: (java_lang_Float | number)[] | null): Promise<FloatBuffer | null>;
+    /**
+     * @param var0 original type: 'float[]'
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    static wrapSync(var0: (java_lang_Float | number)[] | null): FloatBuffer | null;
+    /**
+     * @param var0 original type: 'float[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.nio.FloatBuffer'
@@ -572,16 +582,6 @@ export declare class FloatBufferClass extends JavaClass {
      */
     static wrapSync(var0: (java_lang_Float | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): FloatBuffer | null;
     /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    static wrap(var0: (java_lang_Float | number)[] | null): Promise<FloatBuffer | null>;
-    /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    static wrapSync(var0: (java_lang_Float | number)[] | null): FloatBuffer | null;
-    /**
      * @return original return type: 'boolean'
      */
     isDirect(): Promise<boolean>;
@@ -590,14 +590,6 @@ export declare class FloatBufferClass extends JavaClass {
      */
     isDirectSync(): boolean;
     /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    mark(): Promise<FloatBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.FloatBuffer'
-     */
-    markSync(): FloatBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     mark(): Promise<java_nio_Buffer | null>;
@@ -605,6 +597,14 @@ export declare class FloatBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     markSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    mark(): Promise<FloatBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.FloatBuffer'
+     */
+    markSync(): FloatBuffer | null;
 }
 declare const FloatBuffer_base: typeof FloatBufferClass;
 /**
@@ -624,4 +624,3 @@ export declare class FloatBuffer extends FloatBuffer_base {
     private constructor();
 }
 export default FloatBuffer;
-//# sourceMappingURL=FloatBuffer.d.ts.map

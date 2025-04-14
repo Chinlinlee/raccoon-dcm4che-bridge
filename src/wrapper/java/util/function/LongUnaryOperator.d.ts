@@ -100,4 +100,3 @@ export declare class LongUnaryOperator extends LongUnaryOperator_base {
     private constructor();
 }
 export default LongUnaryOperator;
-//# sourceMappingURL=LongUnaryOperator.d.ts.map

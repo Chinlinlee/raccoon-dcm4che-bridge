@@ -61,4 +61,3 @@ export declare class Comparable extends Comparable_base {
     private constructor();
 }
 export default Comparable;
-//# sourceMappingURL=Comparable.d.ts.map

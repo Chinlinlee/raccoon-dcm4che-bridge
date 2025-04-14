@@ -171,4 +171,3 @@ export declare class NamedNodeMap extends NamedNodeMap_base {
     private constructor();
 }
 export default NamedNodeMap;
-//# sourceMappingURL=NamedNodeMap.d.ts.map

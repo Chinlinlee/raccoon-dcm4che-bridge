@@ -203,4 +203,3 @@ declare const SimpleMPPSScp_base: typeof SimpleMPPSScpClass;
 export declare class SimpleMPPSScp extends SimpleMPPSScp_base {
 }
 export default SimpleMPPSScp;
-//# sourceMappingURL=SimpleMPPSScp.d.ts.map

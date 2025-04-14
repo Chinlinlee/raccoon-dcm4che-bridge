@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NamespaceContext = exports.createNamespaceContextProxy = void 0;
+exports.NamespaceContext = void 0;
+exports.createNamespaceContextProxy = createNamespaceContextProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link NamespaceContext} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createNamespaceContextProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.xml.namespace.NamespaceContext', methods, opts);
 }
-exports.createNamespaceContextProxy = createNamespaceContextProxy;
 /**
  * Class javax.xml.namespace.NamespaceContext.
  *

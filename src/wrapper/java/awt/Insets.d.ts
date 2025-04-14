@@ -149,4 +149,3 @@ declare const Insets_base: typeof InsetsClass;
 export declare class Insets extends Insets_base {
 }
 export default Insets;
-//# sourceMappingURL=Insets.d.ts.map

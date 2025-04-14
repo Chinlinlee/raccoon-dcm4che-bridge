@@ -434,4 +434,3 @@ declare const CodingScheme_base: typeof CodingSchemeClass;
 export declare class CodingScheme extends CodingScheme_base {
 }
 export default CodingScheme;
-//# sourceMappingURL=CodingScheme.d.ts.map

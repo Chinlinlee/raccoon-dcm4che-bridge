@@ -77,4 +77,3 @@ export declare class LongConsumer extends LongConsumer_base {
     private constructor();
 }
 export default LongConsumer;
-//# sourceMappingURL=LongConsumer.d.ts.map

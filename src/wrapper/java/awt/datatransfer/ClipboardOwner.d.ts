@@ -66,4 +66,3 @@ export declare class ClipboardOwner extends ClipboardOwner_base {
     private constructor();
 }
 export default ClipboardOwner;
-//# sourceMappingURL=ClipboardOwner.d.ts.map

@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
@@ -127,21 +125,21 @@ export declare class FontMetricsClass extends JavaClass {
      */
     bytesWidthSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'java.text.CharacterIterator'
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.awt.Graphics'
      * @return original return type: 'java.awt.font.LineMetrics'
      */
-    getLineMetrics(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): Promise<java_awt_font_LineMetrics | null>;
+    getLineMetrics(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): Promise<java_awt_font_LineMetrics | null>;
     /**
-     * @param var0 original type: 'java.text.CharacterIterator'
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.awt.Graphics'
      * @return original return type: 'java.awt.font.LineMetrics'
      */
-    getLineMetricsSync(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): java_awt_font_LineMetrics | null;
+    getLineMetricsSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): java_awt_font_LineMetrics | null;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -159,21 +157,21 @@ export declare class FontMetricsClass extends JavaClass {
      */
     getLineMetricsSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): java_awt_font_LineMetrics | null;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'java.text.CharacterIterator'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.awt.Graphics'
      * @return original return type: 'java.awt.font.LineMetrics'
      */
-    getLineMetrics(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): Promise<java_awt_font_LineMetrics | null>;
+    getLineMetrics(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): Promise<java_awt_font_LineMetrics | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'java.text.CharacterIterator'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.awt.Graphics'
      * @return original return type: 'java.awt.font.LineMetrics'
      */
-    getLineMetricsSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): java_awt_font_LineMetrics | null;
+    getLineMetricsSync(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_Graphics | null): java_awt_font_LineMetrics | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.Graphics'
@@ -271,16 +269,6 @@ export declare class FontMetricsClass extends JavaClass {
      */
     getStringBoundsSync(var0: string | null, var1: java_awt_Graphics | null): java_awt_geom_Rectangle2D | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    charWidth(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    charWidthSync(var0: java_lang_Integer | number): number;
-    /**
      * @param var0 original type: 'char'
      * @return original return type: 'int'
      */
@@ -290,6 +278,16 @@ export declare class FontMetricsClass extends JavaClass {
      * @return original return type: 'int'
      */
     charWidthSync(var0: string | null): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    charWidth(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    charWidthSync(var0: java_lang_Integer | number): number;
     /**
      * @return original return type: 'int'
      */
@@ -391,4 +389,3 @@ export declare class FontMetrics extends FontMetrics_base {
     private constructor();
 }
 export default FontMetrics;
-//# sourceMappingURL=FontMetrics.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchResult = exports.createMatchResultProxy = void 0;
+exports.MatchResult = void 0;
+exports.createMatchResultProxy = createMatchResultProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link MatchResult} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMatchResultProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.regex.MatchResult', methods, opts);
 }
-exports.createMatchResultProxy = createMatchResultProxy;
 /**
  * Class java.util.regex.MatchResult.
  *

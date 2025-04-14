@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MulticastChannel = exports.createMulticastChannelProxy = void 0;
+exports.MulticastChannel = void 0;
+exports.createMulticastChannelProxy = createMulticastChannelProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link MulticastChannel} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMulticastChannelProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.channels.MulticastChannel', methods, opts);
 }
-exports.createMulticastChannelProxy = createMulticastChannelProxy;
 /**
  * Class java.nio.channels.MulticastChannel.
  *

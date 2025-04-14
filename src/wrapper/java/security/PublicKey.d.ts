@@ -87,4 +87,3 @@ export declare class PublicKey extends PublicKey_base {
     private constructor();
 }
 export default PublicKey;
-//# sourceMappingURL=PublicKey.d.ts.map

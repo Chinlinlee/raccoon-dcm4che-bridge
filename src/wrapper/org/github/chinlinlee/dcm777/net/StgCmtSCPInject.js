@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StgCmtSCPInject = exports.createStgCmtSCPInjectProxy = void 0;
+exports.StgCmtSCPInject = void 0;
+exports.createStgCmtSCPInjectProxy = createStgCmtSCPInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link StgCmtSCPInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createStgCmtSCPInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.StgCmtSCPInject', methods, opts);
 }
-exports.createStgCmtSCPInjectProxy = createStgCmtSCPInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.StgCmtSCPInject.
  *

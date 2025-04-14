@@ -120,4 +120,3 @@ declare const DropTargetEvent_base: typeof DropTargetEventClass;
 export declare class DropTargetEvent extends DropTargetEvent_base {
 }
 export default DropTargetEvent;
-//# sourceMappingURL=DropTargetEvent.d.ts.map

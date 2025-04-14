@@ -71,6 +71,16 @@ export declare class CommonClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    static throwDicomServiceException(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    static throwDicomServiceExceptionSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -81,16 +91,6 @@ export declare class CommonClass extends JavaClass {
      * @return original return type: 'void'
      */
     static throwDicomServiceExceptionSync(var0: java_lang_Integer | number, var1: string | null): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    static throwDicomServiceException(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    static throwDicomServiceExceptionSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -190,4 +190,3 @@ declare const Common_base: typeof CommonClass;
 export declare class Common extends Common_base {
 }
 export default Common;
-//# sourceMappingURL=Common.d.ts.map

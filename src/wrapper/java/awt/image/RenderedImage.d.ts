@@ -15,19 +15,19 @@ export declare class RenderedImageClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    getTileHeight(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getTileHeightSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
     getMinTileX(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
     getMinTileXSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getTileHeight(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getTileHeightSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -83,14 +83,6 @@ export declare class RenderedImageClass extends JavaClass {
      */
     getNumYTilesSync(): number;
     /**
-     * @return original return type: 'int'
-     */
-    getWidth(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getWidthSync(): number;
-    /**
      * @return original return type: 'java.util.Vector'
      */
     getSources(): Promise<java_util_Vector | null>;
@@ -98,6 +90,14 @@ export declare class RenderedImageClass extends JavaClass {
      * @return original return type: 'java.util.Vector'
      */
     getSourcesSync(): java_util_Vector | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getWidth(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getWidthSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -157,13 +157,13 @@ export declare class RenderedImageClass extends JavaClass {
      */
     getNumXTilesSync(): number;
     /**
-     * @return original return type: 'java.awt.image.Raster'
+     * @return original return type: 'int'
      */
-    getData(): Promise<java_awt_image_Raster | null>;
+    getMinX(): Promise<number>;
     /**
-     * @return original return type: 'java.awt.image.Raster'
+     * @return original return type: 'int'
      */
-    getDataSync(): java_awt_image_Raster | null;
+    getMinXSync(): number;
     /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
@@ -175,13 +175,13 @@ export declare class RenderedImageClass extends JavaClass {
      */
     getDataSync(var0: java_awt_Rectangle | null): java_awt_image_Raster | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.awt.image.Raster'
      */
-    getMinX(): Promise<number>;
+    getData(): Promise<java_awt_image_Raster | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.awt.image.Raster'
      */
-    getMinXSync(): number;
+    getDataSync(): java_awt_image_Raster | null;
     /**
      * @return original return type: 'int'
      */
@@ -206,11 +206,11 @@ export interface RenderedImageInterface {
     /**
      * @return original return type: 'int'
      */
-    getTileHeight(): number;
+    getMinTileX(): number;
     /**
      * @return original return type: 'int'
      */
-    getMinTileX(): number;
+    getTileHeight(): number;
     /**
      * @return original return type: 'int'
      */
@@ -239,13 +239,13 @@ export interface RenderedImageInterface {
      */
     getNumYTiles(): number;
     /**
-     * @return original return type: 'int'
-     */
-    getWidth(): number;
-    /**
      * @return original return type: 'java.util.Vector'
      */
     getSources(): java_util_Vector | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getWidth(): number;
     /**
      * @return original return type: 'int'
      */
@@ -276,18 +276,18 @@ export interface RenderedImageInterface {
      */
     getNumXTiles(): number;
     /**
-     * @return original return type: 'java.awt.image.Raster'
+     * @return original return type: 'int'
      */
-    getData(): java_awt_image_Raster | null;
+    getMinX(): number;
     /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
      */
     getData(var0: java_awt_Rectangle | null): java_awt_image_Raster | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.awt.image.Raster'
      */
-    getMinX(): number;
+    getData(): java_awt_image_Raster | null;
     /**
      * @return original return type: 'int'
      */
@@ -320,4 +320,3 @@ export declare class RenderedImage extends RenderedImage_base {
     private constructor();
 }
 export default RenderedImage;
-//# sourceMappingURL=RenderedImage.d.ts.map

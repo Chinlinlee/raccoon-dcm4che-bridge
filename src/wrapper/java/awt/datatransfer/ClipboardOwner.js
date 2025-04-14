@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClipboardOwner = exports.createClipboardOwnerProxy = void 0;
+exports.ClipboardOwner = void 0;
+exports.createClipboardOwnerProxy = createClipboardOwnerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ClipboardOwner} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createClipboardOwnerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.datatransfer.ClipboardOwner', methods, opts);
 }
-exports.createClipboardOwnerProxy = createClipboardOwnerProxy;
 /**
  * Class java.awt.datatransfer.ClipboardOwner.
  *

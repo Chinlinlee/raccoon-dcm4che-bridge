@@ -145,16 +145,6 @@ export declare class TextHitInfoClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
      * @param var0 original type: 'java.awt.font.TextHitInfo'
      * @return original return type: 'boolean'
      */
@@ -164,6 +154,16 @@ export declare class TextHitInfoClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     equalsSync(var0: TextHitInfoClass | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -186,4 +186,3 @@ declare const TextHitInfo_base: typeof TextHitInfoClass;
 export declare class TextHitInfo extends TextHitInfo_base {
 }
 export default TextHitInfo;
-//# sourceMappingURL=TextHitInfo.d.ts.map

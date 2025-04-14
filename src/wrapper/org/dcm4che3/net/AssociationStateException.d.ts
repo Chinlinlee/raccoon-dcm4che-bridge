@@ -1,11 +1,11 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { PrintWriter as java_io_PrintWriter } from "./../../../java/io/PrintWriter";
-import { PrintStream as java_io_PrintStream } from "./../../../java/io/PrintStream";
-import { StackTraceElement as java_lang_StackTraceElement } from "./../../../java/lang/StackTraceElement";
-import { Throwable as java_lang_Throwable } from "./../../../java/lang/Throwable";
+import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../java/lang/Class";
+import { PrintWriter as java_io_PrintWriter } from "./../../../java/io/PrintWriter";
+import { PrintStream as java_io_PrintStream } from "./../../../java/io/PrintStream";
+import { Throwable as java_lang_Throwable } from "./../../../java/lang/Throwable";
+import { StackTraceElement as java_lang_StackTraceElement } from "./../../../java/lang/StackTraceElement";
 import { State as org_dcm4che3_net_State } from "./State";
 /**
  * This class just defines types, you should import {@link AssociationStateException} instead of this.
@@ -14,119 +14,13 @@ import { State as org_dcm4che3_net_State } from "./State";
  */
 export declare class AssociationStateExceptionClass extends JavaClass {
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    printStackTrace(): Promise<void>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    printStackTraceSync(): void;
-    /**
-     * @param var0 original type: 'java.io.PrintWriter'
-     * @return original return type: 'void'
-     */
-    printStackTrace(var0: java_io_PrintWriter | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.io.PrintWriter'
-     * @return original return type: 'void'
-     */
-    printStackTraceSync(var0: java_io_PrintWriter | null): void;
-    /**
-     * @param var0 original type: 'java.io.PrintStream'
-     * @return original return type: 'void'
-     */
-    printStackTrace(var0: java_io_PrintStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.io.PrintStream'
-     * @return original return type: 'void'
-     */
-    printStackTraceSync(var0: java_io_PrintStream | null): void;
-    /**
-     * @return original return type: 'java.lang.StackTraceElement[]'
-     */
-    getStackTrace(): Promise<(java_lang_StackTraceElement | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.StackTraceElement[]'
-     */
-    getStackTraceSync(): (java_lang_StackTraceElement | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.Throwable'
-     */
-    fillInStackTrace(): Promise<java_lang_Throwable | null>;
-    /**
-     * @return original return type: 'java.lang.Throwable'
-     */
-    fillInStackTraceSync(): java_lang_Throwable | null;
-    /**
-     * @return original return type: 'java.lang.Throwable'
-     */
-    getCause(): Promise<java_lang_Throwable | null>;
-    /**
-     * @return original return type: 'java.lang.Throwable'
-     */
-    getCauseSync(): java_lang_Throwable | null;
-    /**
-     * @param var0 original type: 'java.lang.Throwable'
-     * @return original return type: 'java.lang.Throwable'
-     */
-    initCause(var0: java_lang_Throwable | null): Promise<java_lang_Throwable | null>;
-    /**
-     * @param var0 original type: 'java.lang.Throwable'
-     * @return original return type: 'java.lang.Throwable'
-     */
-    initCauseSync(var0: java_lang_Throwable | null): java_lang_Throwable | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringAsync(): Promise<string>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getMessage(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getMessageSync(): string | null;
-    /**
-     * @return original return type: 'java.lang.Throwable[]'
-     */
-    getSuppressed(): Promise<(java_lang_Throwable | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.Throwable[]'
-     */
-    getSuppressedSync(): (java_lang_Throwable | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getLocalizedMessage(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getLocalizedMessageSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.StackTraceElement[]'
-     * @return original return type: 'void'
-     */
-    setStackTrace(var0: (java_lang_StackTraceElement | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.StackTraceElement[]'
-     * @return original return type: 'void'
-     */
-    setStackTraceSync(var0: (java_lang_StackTraceElement | null)[] | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    addSuppressed(var0: java_lang_Throwable | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    addSuppressedSync(var0: java_lang_Throwable | null): void;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -158,6 +52,120 @@ export declare class AssociationStateExceptionClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'void'
+     */
+    printStackTrace(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    printStackTraceSync(): void;
+    /**
+     * @param var0 original type: 'java.io.PrintWriter'
+     * @return original return type: 'void'
+     */
+    printStackTrace(var0: java_io_PrintWriter | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.PrintWriter'
+     * @return original return type: 'void'
+     */
+    printStackTraceSync(var0: java_io_PrintWriter | null): void;
+    /**
+     * @param var0 original type: 'java.io.PrintStream'
+     * @return original return type: 'void'
+     */
+    printStackTrace(var0: java_io_PrintStream | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.PrintStream'
+     * @return original return type: 'void'
+     */
+    printStackTraceSync(var0: java_io_PrintStream | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getLocalizedMessage(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getLocalizedMessageSync(): string | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.Throwable'
+     * @return original return type: 'java.lang.Throwable'
+     */
+    initCause(var0: java_lang_Throwable | null): Promise<java_lang_Throwable | null>;
+    /**
+     * @param var0 original type: 'java.lang.Throwable'
+     * @return original return type: 'java.lang.Throwable'
+     */
+    initCauseSync(var0: java_lang_Throwable | null): java_lang_Throwable | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getMessage(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getMessageSync(): string | null;
+    /**
+     * @return original return type: 'java.lang.Throwable'
+     */
+    getCause(): Promise<java_lang_Throwable | null>;
+    /**
+     * @return original return type: 'java.lang.Throwable'
+     */
+    getCauseSync(): java_lang_Throwable | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @return original return type: 'java.lang.StackTraceElement[]'
+     */
+    getStackTrace(): Promise<(java_lang_StackTraceElement | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.StackTraceElement[]'
+     */
+    getStackTraceSync(): (java_lang_StackTraceElement | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.StackTraceElement[]'
+     * @return original return type: 'void'
+     */
+    setStackTrace(var0: (java_lang_StackTraceElement | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.StackTraceElement[]'
+     * @return original return type: 'void'
+     */
+    setStackTraceSync(var0: (java_lang_StackTraceElement | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    addSuppressed(var0: java_lang_Throwable | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    addSuppressedSync(var0: java_lang_Throwable | null): void;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -168,46 +176,30 @@ export declare class AssociationStateExceptionClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Throwable[]'
      */
-    hashCode(): Promise<number>;
+    getSuppressed(): Promise<(java_lang_Throwable | null)[] | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Throwable[]'
      */
-    hashCodeSync(): number;
+    getSuppressedSync(): (java_lang_Throwable | null)[] | null;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'java.lang.Throwable'
      */
-    getClass(): Promise<java_lang_Class>;
+    fillInStackTrace(): Promise<java_lang_Throwable | null>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'java.lang.Throwable'
      */
-    getClassSync(): java_lang_Class;
+    fillInStackTraceSync(): java_lang_Throwable | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.net.State'
      */
-    notify(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifySync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_dcm4che3_net_State | null);
     /**
      * @param var0 original type: 'org.dcm4che3.net.State'
      * @return original return type: 'org.dcm4che3.net.AssociationStateException'
      */
     static newInstanceAsync(var0: org_dcm4che3_net_State | null): Promise<AssociationStateException>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.State'
-     */
-    constructor(var0: org_dcm4che3_net_State | null);
 }
 declare const AssociationStateException_base: typeof AssociationStateExceptionClass;
 /**
@@ -222,4 +214,3 @@ declare const AssociationStateException_base: typeof AssociationStateExceptionCl
 export declare class AssociationStateException extends AssociationStateException_base {
 }
 export default AssociationStateException;
-//# sourceMappingURL=AssociationStateException.d.ts.map

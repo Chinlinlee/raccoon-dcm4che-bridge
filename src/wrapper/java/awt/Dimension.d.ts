@@ -205,4 +205,3 @@ declare const Dimension_base: typeof DimensionClass;
 export declare class Dimension extends Dimension_base {
 }
 export default Dimension;
-//# sourceMappingURL=Dimension.d.ts.map

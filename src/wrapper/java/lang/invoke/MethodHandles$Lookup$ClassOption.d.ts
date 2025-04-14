@@ -20,16 +20,6 @@ export declare class MethodHandles$Lookup$ClassOptionClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,6 +38,16 @@ export declare class MethodHandles$Lookup$ClassOptionClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.invoke.MethodHandles$Lookup$ClassOption'
@@ -186,4 +186,3 @@ declare const MethodHandles$Lookup$ClassOption_base: typeof MethodHandles$Lookup
 export declare class MethodHandles$Lookup$ClassOption extends MethodHandles$Lookup$ClassOption_base {
 }
 export default MethodHandles$Lookup$ClassOption;
-//# sourceMappingURL=MethodHandles$Lookup$ClassOption.d.ts.map

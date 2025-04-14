@@ -58,4 +58,3 @@ export declare class FileAttributeView extends FileAttributeView_base {
     private constructor();
 }
 export default FileAttributeView;
-//# sourceMappingURL=FileAttributeView.d.ts.map

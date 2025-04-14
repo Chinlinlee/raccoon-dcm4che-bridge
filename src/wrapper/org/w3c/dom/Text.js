@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Text = exports.createTextProxy = void 0;
+exports.Text = void 0;
+exports.createTextProxy = createTextProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Text} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTextProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.Text', methods, opts);
 }
-exports.createTextProxy = createTextProxy;
 /**
  * Class org.w3c.dom.Text.
  *

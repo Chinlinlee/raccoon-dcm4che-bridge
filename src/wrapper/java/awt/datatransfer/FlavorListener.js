@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FlavorListener = exports.createFlavorListenerProxy = void 0;
+exports.FlavorListener = void 0;
+exports.createFlavorListenerProxy = createFlavorListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link FlavorListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createFlavorListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.datatransfer.FlavorListener', methods, opts);
 }
-exports.createFlavorListenerProxy = createFlavorListenerProxy;
 /**
  * Class java.awt.datatransfer.FlavorListener.
  *

@@ -58,4 +58,3 @@ export declare class SupplierEx extends SupplierEx_base {
     private constructor();
 }
 export default SupplierEx;
-//# sourceMappingURL=SupplierEx.d.ts.map

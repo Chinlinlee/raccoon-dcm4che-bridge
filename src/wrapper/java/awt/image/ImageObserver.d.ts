@@ -110,4 +110,3 @@ export declare class ImageObserver extends ImageObserver_base {
     private constructor();
 }
 export default ImageObserver;
-//# sourceMappingURL=ImageObserver.d.ts.map

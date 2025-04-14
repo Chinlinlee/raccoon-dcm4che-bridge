@@ -67,4 +67,3 @@ export declare class Transcoder$Handler extends Transcoder$Handler_base {
     private constructor();
 }
 export default Transcoder$Handler;
-//# sourceMappingURL=Transcoder$Handler.d.ts.map

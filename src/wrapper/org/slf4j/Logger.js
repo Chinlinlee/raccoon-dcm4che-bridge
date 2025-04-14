@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Logger = exports.createLoggerProxy = void 0;
+exports.Logger = void 0;
+exports.createLoggerProxy = createLoggerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Logger} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createLoggerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.slf4j.Logger', methods, opts);
 }
-exports.createLoggerProxy = createLoggerProxy;
 /**
  * Class org.slf4j.Logger.
  *

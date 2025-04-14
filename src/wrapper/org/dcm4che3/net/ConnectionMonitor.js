@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ConnectionMonitor = exports.createConnectionMonitorProxy = void 0;
+exports.ConnectionMonitor = void 0;
+exports.createConnectionMonitorProxy = createConnectionMonitorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ConnectionMonitor} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createConnectionMonitorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.ConnectionMonitor', methods, opts);
 }
-exports.createConnectionMonitorProxy = createConnectionMonitorProxy;
 /**
  * Class org.dcm4che3.net.ConnectionMonitor.
  *

@@ -145,4 +145,3 @@ export declare class CharSequence extends CharSequence_base {
     private constructor();
 }
 export default CharSequence;
-//# sourceMappingURL=CharSequence.d.ts.map

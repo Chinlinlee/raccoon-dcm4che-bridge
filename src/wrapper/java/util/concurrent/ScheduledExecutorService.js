@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ScheduledExecutorService = exports.createScheduledExecutorServiceProxy = void 0;
+exports.ScheduledExecutorService = void 0;
+exports.createScheduledExecutorServiceProxy = createScheduledExecutorServiceProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ScheduledExecutorService} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createScheduledExecutorServiceProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.concurrent.ScheduledExecutorService', methods, opts);
 }
-exports.createScheduledExecutorServiceProxy = createScheduledExecutorServiceProxy;
 /**
  * Class java.util.concurrent.ScheduledExecutorService.
  *

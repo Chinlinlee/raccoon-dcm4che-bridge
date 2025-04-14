@@ -105,4 +105,3 @@ export declare class UserPrincipal extends UserPrincipal_base {
     private constructor();
 }
 export default UserPrincipal;
-//# sourceMappingURL=UserPrincipal.d.ts.map

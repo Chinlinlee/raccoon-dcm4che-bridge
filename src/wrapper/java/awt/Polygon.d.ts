@@ -116,14 +116,6 @@ export declare class PolygonClass extends JavaClass {
      */
     getBoundingBoxSync(): java_awt_Rectangle | null;
     /**
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    getBounds(): Promise<java_awt_Rectangle | null>;
-    /**
-     * @return original return type: 'java.awt.Rectangle'
-     */
-    getBoundsSync(): java_awt_Rectangle | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -135,6 +127,14 @@ export declare class PolygonClass extends JavaClass {
      * @return original return type: 'void'
      */
     translateSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    getBounds(): Promise<java_awt_Rectangle | null>;
+    /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    getBoundsSync(): java_awt_Rectangle | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -156,18 +156,6 @@ export declare class PolygonClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @return original return type: 'boolean'
@@ -180,25 +168,17 @@ export declare class PolygonClass extends JavaClass {
      */
     containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
     /**
-     * @param var0 original type: 'java.awt.Point'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @return original return type: 'boolean'
      */
-    contains(var0: java_awt_Point | null): Promise<boolean>;
+    contains(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.awt.Point'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @return original return type: 'boolean'
      */
-    containsSync(var0: java_awt_Point | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_geom_Point2D | null): boolean;
+    containsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -226,15 +206,25 @@ export declare class PolygonClass extends JavaClass {
      */
     containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'boolean'
      */
-    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
+    contains(var0: java_awt_Point | null): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'boolean'
      */
-    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
+    containsSync(var0: java_awt_Point | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_geom_Point2D | null): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'double'
@@ -247,6 +237,16 @@ export declare class PolygonClass extends JavaClass {
      * @return original return type: 'java.awt.geom.PathIterator'
      */
     getPathIteratorSync(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
     /**
      * @return original return type: 'int'
      */
@@ -325,4 +325,3 @@ declare const Polygon_base: typeof PolygonClass;
 export declare class Polygon extends Polygon_base {
 }
 export default Polygon;
-//# sourceMappingURL=Polygon.d.ts.map

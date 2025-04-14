@@ -66,4 +66,3 @@ export declare class DoubleStream$DoubleMapMultiConsumer extends DoubleStream$Do
     private constructor();
 }
 export default DoubleStream$DoubleMapMultiConsumer;
-//# sourceMappingURL=DoubleStream$DoubleMapMultiConsumer.d.ts.map

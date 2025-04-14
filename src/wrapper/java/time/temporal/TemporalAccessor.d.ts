@@ -124,4 +124,3 @@ export declare class TemporalAccessor extends TemporalAccessor_base {
     private constructor();
 }
 export default TemporalAccessor;
-//# sourceMappingURL=TemporalAccessor.d.ts.map

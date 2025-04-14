@@ -193,4 +193,3 @@ export declare class TypeDescriptor$OfMethod extends TypeDescriptor$OfMethod_bas
     private constructor();
 }
 export default TypeDescriptor$OfMethod;
-//# sourceMappingURL=TypeDescriptor$OfMethod.d.ts.map

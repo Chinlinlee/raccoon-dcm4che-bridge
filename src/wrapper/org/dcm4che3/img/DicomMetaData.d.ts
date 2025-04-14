@@ -318,4 +318,3 @@ declare const DicomMetaData_base: typeof DicomMetaDataClass;
 export declare class DicomMetaData extends DicomMetaData_base {
 }
 export default DicomMetaData;
-//# sourceMappingURL=DicomMetaData.d.ts.map

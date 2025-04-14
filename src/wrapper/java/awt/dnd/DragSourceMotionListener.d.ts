@@ -62,4 +62,3 @@ export declare class DragSourceMotionListener extends DragSourceMotionListener_b
     private constructor();
 }
 export default DragSourceMotionListener;
-//# sourceMappingURL=DragSourceMotionListener.d.ts.map

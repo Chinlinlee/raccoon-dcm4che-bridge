@@ -22,16 +22,6 @@ export declare class TimeZoneClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,6 +40,16 @@ export declare class TimeZoneClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.time.ZoneId'
      * @return original return type: 'java.util.TimeZone'
@@ -133,14 +133,6 @@ export declare class TimeZoneClass extends JavaClass {
      */
     getIDSync(): string | null;
     /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    static getAvailableIDs(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    static getAvailableIDsSync(): (string | null)[] | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String[]'
      */
@@ -150,6 +142,14 @@ export declare class TimeZoneClass extends JavaClass {
      * @return original return type: 'java.lang.String[]'
      */
     static getAvailableIDsSync(var0: java_lang_Integer | number): (string | null)[] | null;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    static getAvailableIDs(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    static getAvailableIDsSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'java.util.TimeZone'
      * @return original return type: 'void'
@@ -176,14 +176,6 @@ export declare class TimeZoneClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifySync(): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDisplayName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getDisplayNameSync(): string | null;
     /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'int'
@@ -220,6 +212,14 @@ export declare class TimeZoneClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getDisplayNameSync(var0: java_util_Locale | null): string | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getDisplayNameSync(): string | null;
     /**
      * @return original return type: 'int'
      */
@@ -337,4 +337,3 @@ export declare class TimeZone extends TimeZone_base {
     private constructor();
 }
 export default TimeZone;
-//# sourceMappingURL=TimeZone.d.ts.map

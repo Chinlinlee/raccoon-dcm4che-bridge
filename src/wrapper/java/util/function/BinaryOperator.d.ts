@@ -102,4 +102,3 @@ export declare class BinaryOperator extends BinaryOperator_base {
     private constructor();
 }
 export default BinaryOperator;
-//# sourceMappingURL=BinaryOperator.d.ts.map

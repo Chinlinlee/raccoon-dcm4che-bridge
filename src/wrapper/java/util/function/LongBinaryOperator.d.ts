@@ -65,4 +65,3 @@ export declare class LongBinaryOperator extends LongBinaryOperator_base {
     private constructor();
 }
 export default LongBinaryOperator;
-//# sourceMappingURL=LongBinaryOperator.d.ts.map

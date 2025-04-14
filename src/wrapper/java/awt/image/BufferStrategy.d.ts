@@ -149,4 +149,3 @@ export declare class BufferStrategy extends BufferStrategy_base {
     private constructor();
 }
 export default BufferStrategy;
-//# sourceMappingURL=BufferStrategy.d.ts.map

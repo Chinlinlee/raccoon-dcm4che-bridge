@@ -102,4 +102,3 @@ declare const JobAttributes$DestinationType_base: typeof JobAttributes$Destinati
 export declare class JobAttributes$DestinationType extends JobAttributes$DestinationType_base {
 }
 export default JobAttributes$DestinationType;
-//# sourceMappingURL=JobAttributes$DestinationType.d.ts.map

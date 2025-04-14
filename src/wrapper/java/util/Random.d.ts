@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Float as java_lang_Float } from "./../lang/Float";
 import { Class as java_lang_Class } from "./../lang/Class";
@@ -431,4 +429,3 @@ declare const Random_base: typeof RandomClass;
 export declare class Random extends Random_base {
 }
 export default Random;
-//# sourceMappingURL=Random.d.ts.map

@@ -58,4 +58,3 @@ export declare class FileStoreAttributeView extends FileStoreAttributeView_base 
     private constructor();
 }
 export default FileStoreAttributeView;
-//# sourceMappingURL=FileStoreAttributeView.d.ts.map

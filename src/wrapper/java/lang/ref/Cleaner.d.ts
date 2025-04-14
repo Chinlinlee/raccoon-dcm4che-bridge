@@ -127,4 +127,3 @@ declare const Cleaner_base: typeof CleanerClass;
 export declare class Cleaner extends Cleaner_base {
 }
 export default Cleaner;
-//# sourceMappingURL=Cleaner.d.ts.map

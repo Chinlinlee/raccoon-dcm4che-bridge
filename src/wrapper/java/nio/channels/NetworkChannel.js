@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NetworkChannel = exports.createNetworkChannelProxy = void 0;
+exports.NetworkChannel = void 0;
+exports.createNetworkChannelProxy = createNetworkChannelProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link NetworkChannel} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createNetworkChannelProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.nio.channels.NetworkChannel', methods, opts);
 }
-exports.createNetworkChannelProxy = createNetworkChannelProxy;
 /**
  * Class java.nio.channels.NetworkChannel.
  *

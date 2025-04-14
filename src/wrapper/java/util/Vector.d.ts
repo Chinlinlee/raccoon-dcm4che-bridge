@@ -187,6 +187,24 @@ export declare class VectorClass extends JavaClass {
      */
     getSync(var0: java_lang_Integer | number): BasicOrJavaType | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    removeElementAt(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    removeElementAtSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArray(): Promise<(BasicOrJavaType | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.Object[]'
+     */
+    toArraySync(): (BasicOrJavaType | null)[] | null;
+    /**
      * @param var0 original type: 'java.lang.Object[]'
      * @return original return type: 'java.lang.Object[]'
      */
@@ -196,14 +214,6 @@ export declare class VectorClass extends JavaClass {
      * @return original return type: 'java.lang.Object[]'
      */
     toArraySync(var0: (BasicOrJavaType | null)[] | null): (BasicOrJavaType | null)[] | null;
-    /**
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArray(): Promise<(BasicOrJavaType | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.Object[]'
-     */
-    toArraySync(): (BasicOrJavaType | null)[] | null;
     /**
      * @param var0 original type: 'java.util.function.IntFunction'
      * @return original return type: 'java.lang.Object[]'
@@ -224,16 +234,6 @@ export declare class VectorClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     elementAtSync(var0: java_lang_Integer | number): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    removeElementAt(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    removeElementAtSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'java.util.stream.Stream'
      */
@@ -273,16 +273,6 @@ export declare class VectorClass extends JavaClass {
      */
     removeAllElementsSync(): void;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    add(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    addSync(var0: BasicOrJavaType | null): boolean;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'void'
@@ -294,6 +284,16 @@ export declare class VectorClass extends JavaClass {
      * @return original return type: 'void'
      */
     addSync(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    add(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    addSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -475,6 +475,14 @@ export declare class VectorClass extends JavaClass {
      */
     addAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
     /**
+     * @return original return type: 'java.lang.Object'
+     */
+    lastElement(): Promise<BasicOrJavaType | null>;
+    /**
+     * @return original return type: 'java.lang.Object'
+     */
+    lastElementSync(): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -495,27 +503,11 @@ export declare class VectorClass extends JavaClass {
     /**
      * @return original return type: 'java.lang.Object'
      */
-    lastElement(): Promise<BasicOrJavaType | null>;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
-    lastElementSync(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.lang.Object'
-     */
     clone(): Promise<BasicOrJavaType | null>;
     /**
      * @return original return type: 'java.lang.Object'
      */
     cloneSync(): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'java.util.ListIterator'
-     */
-    listIterator(): Promise<java_util_ListIterator | null>;
-    /**
-     * @return original return type: 'java.util.ListIterator'
-     */
-    listIteratorSync(): java_util_ListIterator | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.util.ListIterator'
@@ -527,15 +519,13 @@ export declare class VectorClass extends JavaClass {
      */
     listIteratorSync(var0: java_lang_Integer | number): java_util_ListIterator | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.ListIterator'
      */
-    ensureCapacity(var0: java_lang_Integer | number): Promise<void>;
+    listIterator(): Promise<java_util_ListIterator | null>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'java.util.ListIterator'
      */
-    ensureCapacitySync(var0: java_lang_Integer | number): void;
+    listIteratorSync(): java_util_ListIterator | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'void'
@@ -546,6 +536,16 @@ export declare class VectorClass extends JavaClass {
      * @return original return type: 'void'
      */
     addElementSync(var0: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    ensureCapacity(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    ensureCapacitySync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -567,20 +567,6 @@ export declare class VectorClass extends JavaClass {
      */
     retainAllSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.util.Collection'
-     */
-    constructor(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null);
-    /**
-     * @param var0 original type: 'java.util.Collection'
-     * @return original return type: 'java.util.Vector'
-     */
-    static newInstanceAsync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<Vector>;
-    constructor();
-    /**
-     * @return original return type: 'java.util.Vector'
-     */
-    static newInstanceAsync(): Promise<Vector>;
-    /**
      * @param var0 original type: 'int'
      */
     constructor(var0: java_lang_Integer | number);
@@ -589,6 +575,20 @@ export declare class VectorClass extends JavaClass {
      * @return original return type: 'java.util.Vector'
      */
     static newInstanceAsync(var0: java_lang_Integer | number): Promise<Vector>;
+    constructor();
+    /**
+     * @return original return type: 'java.util.Vector'
+     */
+    static newInstanceAsync(): Promise<Vector>;
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     */
+    constructor(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null);
+    /**
+     * @param var0 original type: 'java.util.Collection'
+     * @return original return type: 'java.util.Vector'
+     */
+    static newInstanceAsync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): Promise<Vector>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -614,4 +614,3 @@ declare const Vector_base: typeof VectorClass;
 export declare class Vector extends Vector_base {
 }
 export default Vector;
-//# sourceMappingURL=Vector.d.ts.map

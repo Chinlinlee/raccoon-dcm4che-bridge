@@ -143,4 +143,3 @@ export declare class PathIterator extends PathIterator_base {
     private constructor();
 }
 export default PathIterator;
-//# sourceMappingURL=PathIterator.d.ts.map

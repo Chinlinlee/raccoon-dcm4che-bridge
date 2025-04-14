@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { Module as java_lang_Module } from "./Module";
 import { Class as java_lang_Class } from "./Class";
 import { Long as java_lang_Long } from "./Long";
 import { Integer as java_lang_Integer } from "./Integer";
+import { Module as java_lang_Module } from "./Module";
 import { ModuleLayer as java_lang_ModuleLayer } from "./ModuleLayer";
 /**
  * This class just defines types, you should import {@link ModuleLayer$Controller} instead of this.
@@ -11,16 +11,6 @@ import { ModuleLayer as java_lang_ModuleLayer } from "./ModuleLayer";
  */
 export declare class ModuleLayer$ControllerClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Module'
-     * @return original return type: 'java.lang.ModuleLayer$Controller'
-     */
-    enableNativeAccess(var0: java_lang_Module | null): Promise<ModuleLayer$Controller | null>;
-    /**
-     * @param var0 original type: 'java.lang.Module'
-     * @return original return type: 'java.lang.ModuleLayer$Controller'
-     */
-    enableNativeAccessSync(var0: java_lang_Module | null): ModuleLayer$Controller | null;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -28,16 +18,6 @@ export declare class ModuleLayer$ControllerClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -58,6 +38,16 @@ export declare class ModuleLayer$ControllerClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.Module'
      * @param var1 original type: 'java.lang.Module'
@@ -154,4 +144,3 @@ declare const ModuleLayer$Controller_base: typeof ModuleLayer$ControllerClass;
 export declare class ModuleLayer$Controller extends ModuleLayer$Controller_base {
 }
 export default ModuleLayer$Controller;
-//# sourceMappingURL=ModuleLayer$Controller.d.ts.map

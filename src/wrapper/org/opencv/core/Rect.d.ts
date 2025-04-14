@@ -240,4 +240,3 @@ declare const Rect_base: typeof RectClass;
 export declare class Rect extends Rect_base {
 }
 export default Rect;
-//# sourceMappingURL=Rect.d.ts.map

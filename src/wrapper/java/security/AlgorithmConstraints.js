@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AlgorithmConstraints = exports.createAlgorithmConstraintsProxy = void 0;
+exports.AlgorithmConstraints = void 0;
+exports.createAlgorithmConstraintsProxy = createAlgorithmConstraintsProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AlgorithmConstraints} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAlgorithmConstraintsProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.AlgorithmConstraints', methods, opts);
 }
-exports.createAlgorithmConstraintsProxy = createAlgorithmConstraintsProxy;
 /**
  * Class java.security.AlgorithmConstraints.
  *

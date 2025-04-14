@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AWTEventListener = exports.createAWTEventListenerProxy = void 0;
+exports.AWTEventListener = void 0;
+exports.createAWTEventListenerProxy = createAWTEventListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AWTEventListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAWTEventListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.AWTEventListener', methods, opts);
 }
-exports.createAWTEventListenerProxy = createAWTEventListenerProxy;
 /**
  * Class java.awt.event.AWTEventListener.
  *

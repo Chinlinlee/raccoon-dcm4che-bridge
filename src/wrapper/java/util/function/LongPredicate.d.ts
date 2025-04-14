@@ -104,4 +104,3 @@ export declare class LongPredicate extends LongPredicate_base {
     private constructor();
 }
 export default LongPredicate;
-//# sourceMappingURL=LongPredicate.d.ts.map

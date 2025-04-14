@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { PhotometricInterpretation as org_dcm4che3_image_PhotometricInterpretation } from "./../../image/PhotometricInterpretation";
+import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../java/lang/Class";
+import { PhotometricInterpretation as org_dcm4che3_image_PhotometricInterpretation } from "./../../image/PhotometricInterpretation";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attributes";
 /**
  * This class just defines types, you should import {@link ImageDescriptor} instead of this.
@@ -11,165 +11,13 @@ import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attribu
  */
 export declare class ImageDescriptorClass extends JavaClass {
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    getLength(): Promise<number>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.Class'
      */
-    getLengthSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isSigned(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isSignedSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsAllocated(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsAllocatedSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsStored(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsStoredSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getFrames(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getFramesSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getSamples(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSamplesSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getFrameLength(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getFrameLengthSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getColumns(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getColumnsSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isBanded(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isBandedSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getRows(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getRowsSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getPlanarConfiguration(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPlanarConfigurationSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    is16BitsAllocated8BitsStored(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    is16BitsAllocated8BitsStoredSync(): boolean;
-    /**
-     * @return original return type: 'org.dcm4che3.image.PhotometricInterpretation'
-     */
-    getPhotometricInterpretation(): Promise<org_dcm4che3_image_PhotometricInterpretation | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.image.PhotometricInterpretation'
-     */
-    getPhotometricInterpretationSync(): org_dcm4che3_image_PhotometricInterpretation | null;
-    /**
-     * @return original return type: 'int[]'
-     */
-    getEmbeddedOverlays(): Promise<(number)[] | null>;
-    /**
-     * @return original return type: 'int[]'
-     */
-    getEmbeddedOverlaysSync(): (number)[] | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsCompressed(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getBitsCompressedSync(): number;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSopClassUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getSopClassUIDSync(): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframe(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframeSync(): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getPixelRepresentation(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPixelRepresentationSync(): number;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframeWithEmbeddedOverlays(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframeWithEmbeddedOverlaysSync(): boolean;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getBodyPartExamined(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getBodyPartExaminedSync(): string | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -201,6 +49,174 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isSigned(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isSignedSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getFrames(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getFramesSync(): number;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifyAllSync(): void;
+    /**
+     * @return original return type: 'int[]'
+     */
+    getEmbeddedOverlays(): Promise<(number)[] | null>;
+    /**
+     * @return original return type: 'int[]'
+     */
+    getEmbeddedOverlaysSync(): (number)[] | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getRows(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getRowsSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getPlanarConfiguration(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getPlanarConfigurationSync(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSopClassUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSopClassUIDSync(): string | null;
+    /**
+     * @return original return type: 'void'
+     */
+    notify(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    notifySync(): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getColumns(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getColumnsSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframe(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframeSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsCompressed(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsCompressedSync(): number;
+    /**
+     * @return original return type: 'org.dcm4che3.image.PhotometricInterpretation'
+     */
+    getPhotometricInterpretation(): Promise<org_dcm4che3_image_PhotometricInterpretation | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.image.PhotometricInterpretation'
+     */
+    getPhotometricInterpretationSync(): org_dcm4che3_image_PhotometricInterpretation | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsStored(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsStoredSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframeWithEmbeddedOverlays(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframeWithEmbeddedOverlaysSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsAllocated(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getBitsAllocatedSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getSamples(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSamplesSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getPixelRepresentation(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getPixelRepresentationSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isBanded(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isBandedSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    is16BitsAllocated8BitsStored(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    is16BitsAllocated8BitsStoredSync(): boolean;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getBodyPartExamined(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getBodyPartExaminedSync(): string | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -211,45 +227,25 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
+    getLength(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    hashCode(): Promise<number>;
+    getLengthSync(): number;
     /**
      * @return original return type: 'int'
      */
-    hashCodeSync(): number;
+    getFrameLength(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'int'
      */
-    getClass(): Promise<java_lang_Class>;
+    getFrameLengthSync(): number;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
      */
-    getClassSync(): java_lang_Class;
-    /**
-     * @return original return type: 'void'
-     */
-    notify(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifySync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_dcm4che3_data_Attributes | null);
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
@@ -258,18 +254,14 @@ export declare class ImageDescriptorClass extends JavaClass {
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
      */
-    static newInstanceAsync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<ImageDescriptor>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     */
-    constructor(var0: org_dcm4che3_data_Attributes | null);
+    constructor(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number);
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.imageio.codec.ImageDescriptor'
      */
-    constructor(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number);
+    static newInstanceAsync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<ImageDescriptor>;
 }
 declare const ImageDescriptor_base: typeof ImageDescriptorClass;
 /**
@@ -284,4 +276,3 @@ declare const ImageDescriptor_base: typeof ImageDescriptorClass;
 export declare class ImageDescriptor extends ImageDescriptor_base {
 }
 export default ImageDescriptor;
-//# sourceMappingURL=ImageDescriptor.d.ts.map

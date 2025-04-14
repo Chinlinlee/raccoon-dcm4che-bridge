@@ -62,4 +62,3 @@ export declare class TemporalAdjuster extends TemporalAdjuster_base {
     private constructor();
 }
 export default TemporalAdjuster;
-//# sourceMappingURL=TemporalAdjuster.d.ts.map

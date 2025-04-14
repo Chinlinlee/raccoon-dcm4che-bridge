@@ -146,4 +146,3 @@ declare const MaskArea_base: typeof MaskAreaClass;
 export declare class MaskArea extends MaskArea_base {
 }
 export default MaskArea;
-//# sourceMappingURL=MaskArea.d.ts.map

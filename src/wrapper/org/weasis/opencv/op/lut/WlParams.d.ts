@@ -168,4 +168,3 @@ export declare class WlParams extends WlParams_base {
     private constructor();
 }
 export default WlParams;
-//# sourceMappingURL=WlParams.d.ts.map

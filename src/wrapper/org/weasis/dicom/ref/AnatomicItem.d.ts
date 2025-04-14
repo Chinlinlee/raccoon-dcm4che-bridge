@@ -107,4 +107,3 @@ export declare class AnatomicItem extends AnatomicItem_base {
     private constructor();
 }
 export default AnatomicItem;
-//# sourceMappingURL=AnatomicItem.d.ts.map

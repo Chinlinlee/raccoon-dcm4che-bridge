@@ -19,14 +19,6 @@ export declare class DragSourceEventClass extends JavaClass {
      */
     getClassSync(): java_lang_Class;
     /**
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocation(): Promise<java_awt_Point | null>;
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocationSync(): java_awt_Point | null;
-    /**
      * @return original return type: 'int'
      */
     getX(): Promise<number>;
@@ -34,6 +26,14 @@ export declare class DragSourceEventClass extends JavaClass {
      * @return original return type: 'int'
      */
     getXSync(): number;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocation(): Promise<java_awt_Point | null>;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocationSync(): java_awt_Point | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -158,4 +158,3 @@ declare const DragSourceEvent_base: typeof DragSourceEventClass;
 export declare class DragSourceEvent extends DragSourceEvent_base {
 }
 export default DragSourceEvent;
-//# sourceMappingURL=DragSourceEvent.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MouseMotionListener = exports.createMouseMotionListenerProxy = void 0;
+exports.MouseMotionListener = void 0;
+exports.createMouseMotionListenerProxy = createMouseMotionListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link MouseMotionListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMouseMotionListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.MouseMotionListener', methods, opts);
 }
-exports.createMouseMotionListenerProxy = createMouseMotionListenerProxy;
 /**
  * Class java.awt.event.MouseMotionListener.
  *

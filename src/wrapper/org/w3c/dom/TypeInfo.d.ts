@@ -108,4 +108,3 @@ export declare class TypeInfo extends TypeInfo_base {
     private constructor();
 }
 export default TypeInfo;
-//# sourceMappingURL=TypeInfo.d.ts.map

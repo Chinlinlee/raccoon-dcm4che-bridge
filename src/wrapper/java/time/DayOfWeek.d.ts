@@ -37,16 +37,6 @@ export declare class DayOfWeekClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -65,6 +55,16 @@ export declare class DayOfWeekClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.time.DayOfWeek[]'
      */
@@ -333,4 +333,3 @@ declare const DayOfWeek_base: typeof DayOfWeekClass;
 export declare class DayOfWeek extends DayOfWeek_base {
 }
 export default DayOfWeek;
-//# sourceMappingURL=DayOfWeek.d.ts.map

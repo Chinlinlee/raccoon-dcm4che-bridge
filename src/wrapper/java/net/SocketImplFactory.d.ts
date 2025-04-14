@@ -59,4 +59,3 @@ export declare class SocketImplFactory extends SocketImplFactory_base {
     private constructor();
 }
 export default SocketImplFactory;
-//# sourceMappingURL=SocketImplFactory.d.ts.map

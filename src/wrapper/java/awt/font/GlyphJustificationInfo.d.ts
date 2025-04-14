@@ -173,4 +173,3 @@ declare const GlyphJustificationInfo_base: typeof GlyphJustificationInfoClass;
 export declare class GlyphJustificationInfo extends GlyphJustificationInfo_base {
 }
 export default GlyphJustificationInfo;
-//# sourceMappingURL=GlyphJustificationInfo.d.ts.map

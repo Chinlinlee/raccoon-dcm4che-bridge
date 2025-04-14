@@ -77,4 +77,3 @@ export declare class DoubleConsumer extends DoubleConsumer_base {
     private constructor();
 }
 export default DoubleConsumer;
-//# sourceMappingURL=DoubleConsumer.d.ts.map

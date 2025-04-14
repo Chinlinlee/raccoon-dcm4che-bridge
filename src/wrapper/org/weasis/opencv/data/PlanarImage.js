@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PlanarImage = exports.createPlanarImageProxy = void 0;
+exports.PlanarImage = void 0;
+exports.createPlanarImageProxy = createPlanarImageProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PlanarImage} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPlanarImageProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.weasis.opencv.data.PlanarImage', methods, opts);
 }
-exports.createPlanarImageProxy = createPlanarImageProxy;
 /**
  * Class org.weasis.opencv.data.PlanarImage.
  *

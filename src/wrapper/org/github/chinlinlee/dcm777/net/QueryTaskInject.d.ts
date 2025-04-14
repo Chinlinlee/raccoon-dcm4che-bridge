@@ -7,16 +7,6 @@ import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4ch
  */
 export declare class QueryTaskInjectClass extends JavaClass {
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    adjust(var0: org_dcm4che3_data_Attributes | null): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    adjustSync(var0: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasMoreMatches(): Promise<boolean>;
@@ -32,6 +22,16 @@ export declare class QueryTaskInjectClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     nextMatchSync(): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    adjust(var0: org_dcm4che3_data_Attributes | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    adjustSync(var0: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -46,11 +46,6 @@ export declare class QueryTaskInjectClass extends JavaClass {
  */
 export interface QueryTaskInjectInterface {
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    adjust(var0: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasMoreMatches(): boolean;
@@ -58,6 +53,11 @@ export interface QueryTaskInjectInterface {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     nextMatch(): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    adjust(var0: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
 }
 /**
  * Create a proxy for the {@link QueryTaskInject} interface.
@@ -86,4 +86,3 @@ export declare class QueryTaskInject extends QueryTaskInject_base {
     private constructor();
 }
 export default QueryTaskInject;
-//# sourceMappingURL=QueryTaskInject.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Node = exports.createNodeProxy = void 0;
+exports.Node = void 0;
+exports.createNodeProxy = createNodeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Node} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createNodeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.Node', methods, opts);
 }
-exports.createNodeProxy = createNodeProxy;
 /**
  * Class org.w3c.dom.Node.
  *

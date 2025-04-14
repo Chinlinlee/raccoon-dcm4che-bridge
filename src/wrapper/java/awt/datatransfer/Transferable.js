@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Transferable = exports.createTransferableProxy = void 0;
+exports.Transferable = void 0;
+exports.createTransferableProxy = createTransferableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Transferable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTransferableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.datatransfer.Transferable', methods, opts);
 }
-exports.createTransferableProxy = createTransferableProxy;
 /**
  * Class java.awt.datatransfer.Transferable.
  *

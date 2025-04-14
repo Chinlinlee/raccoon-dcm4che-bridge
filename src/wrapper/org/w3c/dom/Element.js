@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Element = exports.createElementProxy = void 0;
+exports.Element = void 0;
+exports.createElementProxy = createElementProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Element} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createElementProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.Element', methods, opts);
 }
-exports.createElementProxy = createElementProxy;
 /**
  * Class org.w3c.dom.Element.
  *

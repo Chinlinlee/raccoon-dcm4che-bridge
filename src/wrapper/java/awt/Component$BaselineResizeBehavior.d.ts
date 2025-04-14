@@ -194,4 +194,3 @@ declare const Component$BaselineResizeBehavior_base: typeof Component$BaselineRe
 export declare class Component$BaselineResizeBehavior extends Component$BaselineResizeBehavior_base {
 }
 export default Component$BaselineResizeBehavior;
-//# sourceMappingURL=Component$BaselineResizeBehavior.d.ts.map

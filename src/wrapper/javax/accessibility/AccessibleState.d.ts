@@ -229,4 +229,3 @@ declare const AccessibleState_base: typeof AccessibleStateClass;
 export declare class AccessibleState extends AccessibleState_base {
 }
 export default AccessibleState;
-//# sourceMappingURL=AccessibleState.d.ts.map

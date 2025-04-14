@@ -7,23 +7,13 @@ import { Integer as java_lang_Integer } from "./../../lang/Integer";
  */
 export declare class MatchResultClass extends JavaClass {
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    group(): Promise<string | null>;
+    groupCount(): Promise<number>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    groupSync(): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    group(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    groupSync(var0: java_lang_Integer | number): string | null;
+    groupCountSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -61,13 +51,23 @@ export declare class MatchResultClass extends JavaClass {
      */
     endSync(): number;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    groupCount(): Promise<number>;
+    group(): Promise<string | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    groupCountSync(): number;
+    groupSync(): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    group(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    groupSync(var0: java_lang_Integer | number): string | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -82,14 +82,9 @@ export declare class MatchResultClass extends JavaClass {
  */
 export interface MatchResultInterface {
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'int'
      */
-    group(): string | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    group(var0: java_lang_Integer | number): string | null;
+    groupCount(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -109,9 +104,14 @@ export interface MatchResultInterface {
      */
     end(): number;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.lang.String'
      */
-    groupCount(): number;
+    group(): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    group(var0: java_lang_Integer | number): string | null;
 }
 /**
  * Create a proxy for the {@link MatchResult} interface.
@@ -140,4 +140,3 @@ export declare class MatchResult extends MatchResult_base {
     private constructor();
 }
 export default MatchResult;
-//# sourceMappingURL=MatchResult.d.ts.map

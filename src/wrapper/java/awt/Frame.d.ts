@@ -35,10 +35,10 @@ import { MenuBar as java_awt_MenuBar } from "./MenuBar";
 import { MouseMotionListener as java_awt_event_MouseMotionListener, MouseMotionListenerInterface as java_awt_event_MouseMotionListenerInterface } from "./event/MouseMotionListener";
 import { PopupMenu as java_awt_PopupMenu } from "./PopupMenu";
 import { KeyListener as java_awt_event_KeyListener, KeyListenerInterface as java_awt_event_KeyListenerInterface } from "./event/KeyListener";
-import { PrintWriter as java_io_PrintWriter } from "./../io/PrintWriter";
 import { PrintStream as java_io_PrintStream } from "./../io/PrintStream";
-import { DropTarget as java_awt_dnd_DropTarget } from "./dnd/DropTarget";
+import { PrintWriter as java_io_PrintWriter } from "./../io/PrintWriter";
 import { PropertyChangeListener as java_beans_PropertyChangeListener, PropertyChangeListenerInterface as java_beans_PropertyChangeListenerInterface } from "./../beans/PropertyChangeListener";
+import { DropTarget as java_awt_dnd_DropTarget } from "./dnd/DropTarget";
 import { Shape as java_awt_Shape, ShapeInterface as java_awt_ShapeInterface } from "./Shape";
 import { MenuComponent as java_awt_MenuComponent } from "./MenuComponent";
 import { Image as java_awt_Image } from "./Image";
@@ -52,9 +52,9 @@ import { Locale as java_util_Locale } from "./../util/Locale";
 import { Float as java_lang_Float } from "./../lang/Float";
 import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../util/List";
 import { Long as java_lang_Long } from "./../lang/Long";
-import { Double as java_lang_Double } from "./../lang/Double";
 import { Short as java_lang_Short } from "./../lang/Short";
 import { Byte as java_lang_Byte } from "./../lang/Byte";
+import { Double as java_lang_Double } from "./../lang/Double";
 import { EventListener as java_util_EventListener } from "./../util/EventListener";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { FocusTraversalPolicy as java_awt_FocusTraversalPolicy } from "./FocusTraversalPolicy";
@@ -325,6 +325,16 @@ export declare class FrameClass extends JavaClass {
     toBackSync(): void;
     /**
      * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    createBufferStrategy(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    createBufferStrategySync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'java.awt.BufferCapabilities'
      * @return original return type: 'void'
      */
@@ -337,26 +347,6 @@ export declare class FrameClass extends JavaClass {
     createBufferStrategySync(var0: java_lang_Integer | number, var1: java_awt_BufferCapabilities | null): void;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    createBufferStrategy(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    createBufferStrategySync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_Point | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_Point | null): boolean;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'boolean'
      */
@@ -367,6 +357,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_Point | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_Point | null): boolean;
     /**
      * @return original return type: 'java.awt.Dimension'
      */
@@ -800,16 +800,6 @@ export declare class FrameClass extends JavaClass {
      */
     setVisibleSync(var0: java_lang_Boolean | boolean): void;
     /**
-     * @param var0 original type: 'java.awt.Component'
-     * @return original return type: 'java.awt.Component'
-     */
-    add(var0: java_awt_Component | null): Promise<java_awt_Component | null>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @return original return type: 'java.awt.Component'
-     */
-    addSync(var0: java_awt_Component | null): java_awt_Component | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.Component'
      * @return original return type: 'java.awt.Component'
@@ -821,18 +811,6 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'java.awt.Component'
      */
     addSync(var0: string | null, var1: java_awt_Component | null): java_awt_Component | null;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    add(var0: java_awt_Component | null, var1: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    addSync(var0: java_awt_Component | null, var1: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
@@ -848,6 +826,18 @@ export declare class FrameClass extends JavaClass {
     /**
      * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    add(var0: java_awt_Component | null, var1: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    addSync(var0: java_awt_Component | null, var1: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
@@ -859,6 +849,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'void'
      */
     addSync(var0: java_awt_Component | null, var1: BasicOrJavaType | null, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @return original return type: 'java.awt.Component'
+     */
+    add(var0: java_awt_Component | null): Promise<java_awt_Component | null>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @return original return type: 'java.awt.Component'
+     */
+    addSync(var0: java_awt_Component | null): java_awt_Component | null;
     /**
      * @param var0 original type: 'java.awt.PopupMenu'
      * @return original return type: 'void'
@@ -916,6 +916,18 @@ export declare class FrameClass extends JavaClass {
      */
     isVisibleSync(): boolean;
     /**
+     * @param var0 original type: 'java.io.PrintStream'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    list(var0: java_io_PrintStream | null, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.PrintStream'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    listSync(var0: java_io_PrintStream | null, var1: java_lang_Integer | number): void;
+    /**
      * @param var0 original type: 'java.io.PrintWriter'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -928,17 +940,13 @@ export declare class FrameClass extends JavaClass {
      */
     listSync(var0: java_io_PrintWriter | null, var1: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.io.PrintStream'
-     * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
-    list(var0: java_io_PrintStream | null, var1: java_lang_Integer | number): Promise<void>;
+    list(): Promise<void>;
     /**
-     * @param var0 original type: 'java.io.PrintStream'
-     * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
-    listSync(var0: java_io_PrintStream | null, var1: java_lang_Integer | number): void;
+    listSync(): void;
     /**
      * @param var0 original type: 'java.io.PrintWriter'
      * @return original return type: 'void'
@@ -960,23 +968,15 @@ export declare class FrameClass extends JavaClass {
      */
     listSync(var0: java_io_PrintStream | null): void;
     /**
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
      */
-    list(): Promise<void>;
+    removePropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
     /**
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
      */
-    listSync(): void;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DropTarget'
-     * @return original return type: 'void'
-     */
-    setDropTarget(var0: java_awt_dnd_DropTarget | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DropTarget'
-     * @return original return type: 'void'
-     */
-    setDropTargetSync(var0: java_awt_dnd_DropTarget | null): void;
+    removePropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.beans.PropertyChangeListener'
@@ -990,15 +990,15 @@ export declare class FrameClass extends JavaClass {
      */
     removePropertyChangeListenerSync(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @param var0 original type: 'java.awt.dnd.DropTarget'
      * @return original return type: 'void'
      */
-    removePropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
+    setDropTarget(var0: java_awt_dnd_DropTarget | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @param var0 original type: 'java.awt.dnd.DropTarget'
      * @return original return type: 'void'
      */
-    removePropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
+    setDropTargetSync(var0: java_awt_dnd_DropTarget | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -1172,16 +1172,6 @@ export declare class FrameClass extends JavaClass {
      */
     removeSync(var0: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.awt.event.MouseWheelListener'
-     * @return original return type: 'void'
-     */
-    addMouseWheelListener(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.event.MouseWheelListener'
-     * @return original return type: 'void'
-     */
-    addMouseWheelListenerSync(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): void;
-    /**
      * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -1201,6 +1191,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     imageUpdateSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.event.MouseWheelListener'
+     * @return original return type: 'void'
+     */
+    addMouseWheelListener(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.event.MouseWheelListener'
+     * @return original return type: 'void'
+     */
+    addMouseWheelListenerSync(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): void;
     /**
      * @return original return type: 'java.awt.LayoutManager'
      */
@@ -1272,16 +1272,6 @@ export declare class FrameClass extends JavaClass {
      */
     getComponentListenersSync(): (java_awt_event_ComponentListener | null)[] | null;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
-     * @return original return type: 'void'
-     */
-    addPropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
-     * @return original return type: 'void'
-     */
-    addPropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
@@ -1293,6 +1283,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'void'
      */
     addPropertyChangeListenerSync(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @return original return type: 'void'
+     */
+    addPropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @return original return type: 'void'
+     */
+    addPropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -1326,16 +1326,6 @@ export declare class FrameClass extends JavaClass {
      */
     getCursorSync(): java_awt_Cursor | null;
     /**
-     * @param var0 original type: 'java.awt.image.ImageProducer'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImage(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): Promise<java_awt_Image | null>;
-    /**
-     * @param var0 original type: 'java.awt.image.ImageProducer'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImageSync(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): java_awt_Image | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.awt.Image'
@@ -1347,6 +1337,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'java.awt.Image'
      */
     createImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_Image | null;
+    /**
+     * @param var0 original type: 'java.awt.image.ImageProducer'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImage(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): Promise<java_awt_Image | null>;
+    /**
+     * @param var0 original type: 'java.awt.image.ImageProducer'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImageSync(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): java_awt_Image | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'boolean'
@@ -1490,18 +1490,6 @@ export declare class FrameClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.VolatileImage'
-     */
-    createVolatileImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_VolatileImage | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.VolatileImage'
-     */
-    createVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_VolatileImage | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
      * @param var2 original type: 'java.awt.ImageCapabilities'
      * @return original return type: 'java.awt.image.VolatileImage'
      */
@@ -1513,6 +1501,18 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'java.awt.image.VolatileImage'
      */
     createVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_ImageCapabilities | null): java_awt_image_VolatileImage | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.image.VolatileImage'
+     */
+    createVolatileImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_VolatileImage | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.image.VolatileImage'
+     */
+    createVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_VolatileImage | null;
     /**
      * @return original return type: 'java.awt.Point'
      */
@@ -1711,34 +1711,6 @@ export declare class FrameClass extends JavaClass {
     firePropertyChangeSync(var0: string | null, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'float'
-     * @param var2 original type: 'float'
-     * @return original return type: 'void'
-     */
-    firePropertyChange(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'float'
-     * @param var2 original type: 'float'
-     * @return original return type: 'void'
-     */
-    firePropertyChangeSync(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @return original return type: 'void'
-     */
-    firePropertyChange(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @return original return type: 'void'
-     */
-    firePropertyChangeSync(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'short'
      * @param var2 original type: 'short'
      * @return original return type: 'void'
@@ -1779,6 +1751,34 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'void'
      */
     firePropertyChangeSync(var0: string | null, var1: java_lang_Byte | number, var2: java_lang_Byte | number): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @return original return type: 'void'
+     */
+    firePropertyChange(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @return original return type: 'void'
+     */
+    firePropertyChangeSync(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'float'
+     * @param var2 original type: 'float'
+     * @return original return type: 'void'
+     */
+    firePropertyChange(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'float'
+     * @param var2 original type: 'float'
+     * @return original return type: 'void'
+     */
+    firePropertyChangeSync(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): void;
     /**
      * @param var0 original type: 'java.awt.event.MouseMotionListener'
      * @return original return type: 'void'
@@ -1834,16 +1834,6 @@ export declare class FrameClass extends JavaClass {
      */
     isBackgroundSetSync(): boolean;
     /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.Component'
-     */
-    findComponentAt(var0: java_awt_Point | null): Promise<java_awt_Component | null>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.Component'
-     */
-    findComponentAtSync(var0: java_awt_Point | null): java_awt_Component | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.awt.Component'
@@ -1855,6 +1845,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'java.awt.Component'
      */
     findComponentAtSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_Component | null;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.Component'
+     */
+    findComponentAt(var0: java_awt_Point | null): Promise<java_awt_Component | null>;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.Component'
+     */
+    findComponentAtSync(var0: java_awt_Point | null): java_awt_Component | null;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -1908,6 +1908,14 @@ export declare class FrameClass extends JavaClass {
      */
     boundsSync(): java_awt_Rectangle | null;
     /**
+     * @return original return type: 'void'
+     */
+    repaint(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    repaintSync(): void;
+    /**
      * @param var0 original type: 'long'
      * @return original return type: 'void'
      */
@@ -1951,14 +1959,6 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'void'
      */
     repaintSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'void'
-     */
-    repaint(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    repaintSync(): void;
     /**
      * @return original return type: 'java.awt.event.MouseMotionListener[]'
      */
@@ -2273,6 +2273,18 @@ export declare class FrameClass extends JavaClass {
     disableSync(): void;
     /**
      * @param var0 original type: 'java.awt.Image'
+     * @param var1 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'boolean'
+     */
+    prepareImage(var0: java_awt_Image | null, var1: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Image'
+     * @param var1 original type: 'java.awt.image.ImageObserver'
+     * @return original return type: 'boolean'
+     */
+    prepareImageSync(var0: java_awt_Image | null, var1: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'java.awt.image.ImageObserver'
@@ -2287,18 +2299,6 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     prepareImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.Image'
-     * @param var1 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'boolean'
-     */
-    prepareImage(var0: java_awt_Image | null, var1: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Image'
-     * @param var1 original type: 'java.awt.image.ImageObserver'
-     * @return original return type: 'boolean'
-     */
-    prepareImageSync(var0: java_awt_Image | null, var1: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -2890,16 +2890,6 @@ export declare class FrameClass extends JavaClass {
      */
     transferFocusBackwardSync(): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    applyResourceBundle(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    applyResourceBundleSync(var0: string | null): void;
-    /**
      * @param var0 original type: 'java.util.ResourceBundle'
      * @return original return type: 'void'
      */
@@ -2909,6 +2899,16 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'void'
      */
     applyResourceBundleSync(var0: java_util_ResourceBundle | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    applyResourceBundle(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    applyResourceBundleSync(var0: string | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -2992,6 +2992,14 @@ export declare class FrameClass extends JavaClass {
      */
     isFocusOwnerSync(): boolean;
     /**
+     * @return original return type: 'int'
+     */
+    getX(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getXSync(): number;
+    /**
      * @return original return type: 'java.awt.Dimension'
      */
     getSize(): Promise<java_awt_Dimension | null>;
@@ -3012,19 +3020,19 @@ export declare class FrameClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    getX(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getXSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
     getState(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
     getStateSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getY(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getYSync(): number;
     /**
      * @param var0 original type: 'java.awt.event.HierarchyBoundsListener'
      * @return original return type: 'void'
@@ -3035,14 +3043,6 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeHierarchyBoundsListenerSync(var0: java_awt_event_HierarchyBoundsListener | JavaInterfaceProxy<java_awt_event_HierarchyBoundsListenerInterface> | null): void;
-    /**
-     * @return original return type: 'int'
-     */
-    getY(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getYSync(): number;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -3225,6 +3225,11 @@ export declare class FrameClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly MOVE_CURSOR: java_lang_Integer | number;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.Frame'
+     */
+    static newInstanceAsync(): Promise<Frame>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.GraphicsConfiguration'
@@ -3237,15 +3242,6 @@ export declare class FrameClass extends JavaClass {
      */
     static newInstanceAsync(var0: string | null, var1: java_awt_GraphicsConfiguration | null): Promise<Frame>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.Frame'
-     */
-    static newInstanceAsync(var0: string | null): Promise<Frame>;
-    /**
      * @param var0 original type: 'java.awt.GraphicsConfiguration'
      */
     constructor(var0: java_awt_GraphicsConfiguration | null);
@@ -3254,11 +3250,15 @@ export declare class FrameClass extends JavaClass {
      * @return original return type: 'java.awt.Frame'
      */
     static newInstanceAsync(var0: java_awt_GraphicsConfiguration | null): Promise<Frame>;
-    constructor();
     /**
+     * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Frame'
      */
-    static newInstanceAsync(): Promise<Frame>;
+    static newInstanceAsync(var0: string | null): Promise<Frame>;
 }
 declare const Frame_base: typeof FrameClass;
 /**
@@ -3273,4 +3273,3 @@ declare const Frame_base: typeof FrameClass;
 export declare class Frame extends Frame_base {
 }
 export default Frame;
-//# sourceMappingURL=Frame.d.ts.map

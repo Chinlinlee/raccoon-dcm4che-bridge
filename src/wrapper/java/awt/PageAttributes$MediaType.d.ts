@@ -682,4 +682,3 @@ declare const PageAttributes$MediaType_base: typeof PageAttributes$MediaTypeClas
 export declare class PageAttributes$MediaType extends PageAttributes$MediaType_base {
 }
 export default PageAttributes$MediaType;
-//# sourceMappingURL=PageAttributes$MediaType.d.ts.map

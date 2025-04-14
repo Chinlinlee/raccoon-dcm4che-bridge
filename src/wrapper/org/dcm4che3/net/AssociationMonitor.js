@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AssociationMonitor = exports.createAssociationMonitorProxy = void 0;
+exports.AssociationMonitor = void 0;
+exports.createAssociationMonitorProxy = createAssociationMonitorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AssociationMonitor} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAssociationMonitorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.AssociationMonitor', methods, opts);
 }
-exports.createAssociationMonitorProxy = createAssociationMonitorProxy;
 /**
  * Class org.dcm4che3.net.AssociationMonitor.
  *

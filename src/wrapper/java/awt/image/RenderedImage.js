@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RenderedImage = exports.createRenderedImageProxy = void 0;
+exports.RenderedImage = void 0;
+exports.createRenderedImageProxy = createRenderedImageProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link RenderedImage} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createRenderedImageProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.image.RenderedImage', methods, opts);
 }
-exports.createRenderedImageProxy = createRenderedImageProxy;
 /**
  * Class java.awt.image.RenderedImage.
  *

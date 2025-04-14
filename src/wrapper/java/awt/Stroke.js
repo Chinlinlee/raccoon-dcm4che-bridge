@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Stroke = exports.createStrokeProxy = void 0;
+exports.Stroke = void 0;
+exports.createStrokeProxy = createStrokeProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Stroke} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createStrokeProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.Stroke', methods, opts);
 }
-exports.createStrokeProxy = createStrokeProxy;
 /**
  * Class java.awt.Stroke.
  *

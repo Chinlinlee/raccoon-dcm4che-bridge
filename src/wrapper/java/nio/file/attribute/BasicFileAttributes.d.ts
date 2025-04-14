@@ -155,4 +155,3 @@ export declare class BasicFileAttributes extends BasicFileAttributes_base {
     private constructor();
 }
 export default BasicFileAttributes;
-//# sourceMappingURL=BasicFileAttributes.d.ts.map

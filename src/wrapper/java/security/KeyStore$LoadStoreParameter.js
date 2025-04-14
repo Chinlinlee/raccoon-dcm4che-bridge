@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KeyStore$LoadStoreParameter = exports.createKeyStore$LoadStoreParameterProxy = void 0;
+exports.KeyStore$LoadStoreParameter = void 0;
+exports.createKeyStore$LoadStoreParameterProxy = createKeyStore$LoadStoreParameterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link KeyStore$LoadStoreParameter} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createKeyStore$LoadStoreParameterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.KeyStore$LoadStoreParameter', methods, opts);
 }
-exports.createKeyStore$LoadStoreParameterProxy = createKeyStore$LoadStoreParameterProxy;
 /**
  * Class java.security.KeyStore$LoadStoreParameter.
  *

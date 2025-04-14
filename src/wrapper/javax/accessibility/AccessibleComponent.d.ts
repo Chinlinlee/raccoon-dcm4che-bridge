@@ -422,4 +422,3 @@ export declare class AccessibleComponent extends AccessibleComponent_base {
     private constructor();
 }
 export default AccessibleComponent;
-//# sourceMappingURL=AccessibleComponent.d.ts.map

@@ -36,16 +36,6 @@ export declare class DecimalStyleClass extends JavaClass {
     getDecimalSeparatorSync(): string | null;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -64,6 +54,16 @@ export declare class DecimalStyleClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -198,4 +198,3 @@ declare const DecimalStyle_base: typeof DecimalStyleClass;
 export declare class DecimalStyle extends DecimalStyle_base {
 }
 export default DecimalStyle;
-//# sourceMappingURL=DecimalStyle.d.ts.map

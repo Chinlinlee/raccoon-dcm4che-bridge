@@ -5,8 +5,8 @@ import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { List as java_util_List } from "./../../../java/util/List";
 import { Path as java_nio_file_Path, PathInterface as java_nio_file_PathInterface } from "./../../../java/nio/file/Path";
 import { ImageTranscodeParam as org_dcm4che3_img_ImageTranscodeParam } from "./ImageTranscodeParam";
-import { DicomTranscodeParam as org_dcm4che3_img_DicomTranscodeParam } from "./DicomTranscodeParam";
 import { OutputStream as java_io_OutputStream } from "./../../../java/io/OutputStream";
+import { DicomTranscodeParam as org_dcm4che3_img_DicomTranscodeParam } from "./DicomTranscodeParam";
 import { Editable as org_dcm4che3_img_util_Editable } from "./util/Editable";
 import { MaskArea as org_dcm4che3_img_op_MaskArea } from "./op/MaskArea";
 import { DicomImageReaderSpi as org_dcm4che3_img_DicomImageReaderSpi } from "./DicomImageReaderSpi";
@@ -96,20 +96,6 @@ export declare class TranscoderClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.nio.file.Path'
-     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
-     * @return original return type: 'java.nio.file.Path'
-     */
-    static dcm2dcm(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): Promise<java_nio_file_Path | null>;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.nio.file.Path'
-     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
-     * @return original return type: 'java.nio.file.Path'
-     */
-    static dcm2dcmSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): java_nio_file_Path | null;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
      * @param var1 original type: 'java.io.OutputStream'
      * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
      * @return original return type: 'void'
@@ -122,6 +108,20 @@ export declare class TranscoderClass extends JavaClass {
      * @return original return type: 'void'
      */
     static dcm2dcmSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_io_OutputStream | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): void;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @param var1 original type: 'java.nio.file.Path'
+     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
+     * @return original return type: 'java.nio.file.Path'
+     */
+    static dcm2dcm(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): Promise<java_nio_file_Path | null>;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @param var1 original type: 'java.nio.file.Path'
+     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
+     * @return original return type: 'java.nio.file.Path'
+     */
+    static dcm2dcmSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): java_nio_file_Path | null;
     /**
      * @param var0 original type: 'org.dcm4che3.img.op.MaskArea'
      * @return original return type: 'org.dcm4che3.img.util.Editable'
@@ -163,4 +163,3 @@ declare const Transcoder_base: typeof TranscoderClass;
 export declare class Transcoder extends Transcoder_base {
 }
 export default Transcoder;
-//# sourceMappingURL=Transcoder.d.ts.map

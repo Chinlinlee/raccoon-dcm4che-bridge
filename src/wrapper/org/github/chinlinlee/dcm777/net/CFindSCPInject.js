@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CFindSCPInject = exports.createCFindSCPInjectProxy = void 0;
+exports.CFindSCPInject = void 0;
+exports.createCFindSCPInjectProxy = createCFindSCPInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CFindSCPInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCFindSCPInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.CFindSCPInject', methods, opts);
 }
-exports.createCFindSCPInjectProxy = createCFindSCPInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.CFindSCPInject.
  *

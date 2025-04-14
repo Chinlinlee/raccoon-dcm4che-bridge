@@ -62,4 +62,3 @@ export declare class Stroke extends Stroke_base {
     private constructor();
 }
 export default Stroke;
-//# sourceMappingURL=Stroke.d.ts.map

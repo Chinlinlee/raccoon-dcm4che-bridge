@@ -74,4 +74,3 @@ export declare class CMoveSCPInject extends CMoveSCPInject_base {
     private constructor();
 }
 export default CMoveSCPInject;
-//# sourceMappingURL=CMoveSCPInject.d.ts.map

@@ -74,4 +74,3 @@ export declare class QueryTask extends QueryTask_base {
     private constructor();
 }
 export default QueryTask;
-//# sourceMappingURL=QueryTask.d.ts.map

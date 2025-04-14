@@ -198,4 +198,3 @@ declare const Range_base: typeof RangeClass;
 export declare class Range extends Range_base {
 }
 export default Range;
-//# sourceMappingURL=Range.d.ts.map

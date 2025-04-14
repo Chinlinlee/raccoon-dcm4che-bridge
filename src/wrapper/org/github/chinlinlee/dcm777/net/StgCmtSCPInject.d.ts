@@ -77,4 +77,3 @@ export declare class StgCmtSCPInject extends StgCmtSCPInject_base {
     private constructor();
 }
 export default StgCmtSCPInject;
-//# sourceMappingURL=StgCmtSCPInject.d.ts.map

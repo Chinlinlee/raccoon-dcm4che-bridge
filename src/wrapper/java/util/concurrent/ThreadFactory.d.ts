@@ -63,4 +63,3 @@ export declare class ThreadFactory extends ThreadFactory_base {
     private constructor();
 }
 export default ThreadFactory;
-//# sourceMappingURL=ThreadFactory.d.ts.map

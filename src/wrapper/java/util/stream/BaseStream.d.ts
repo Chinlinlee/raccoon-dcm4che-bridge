@@ -148,4 +148,3 @@ export declare class BaseStream extends BaseStream_base {
     private constructor();
 }
 export default BaseStream;
-//# sourceMappingURL=BaseStream.d.ts.map

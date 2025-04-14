@@ -62,4 +62,3 @@ export declare class DoubleToIntFunction extends DoubleToIntFunction_base {
     private constructor();
 }
 export default DoubleToIntFunction;
-//# sourceMappingURL=DoubleToIntFunction.d.ts.map

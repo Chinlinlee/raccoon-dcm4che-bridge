@@ -108,14 +108,6 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      */
     compareToSync(var0: java_lang_Enum | null): number;
     /**
-     * @return original return type: 'boolean'
-     */
-    canEncodeSigned(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    canEncodeSignedSync(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getPlanarConfiguration(): Promise<number>;
@@ -123,6 +115,14 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      * @return original return type: 'int'
      */
     getPlanarConfigurationSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    canEncodeSigned(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    canEncodeSignedSync(): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -311,4 +311,3 @@ declare const TransferSyntaxType_base: typeof TransferSyntaxTypeClass;
 export declare class TransferSyntaxType extends TransferSyntaxType_base {
 }
 export default TransferSyntaxType;
-//# sourceMappingURL=TransferSyntaxType.d.ts.map

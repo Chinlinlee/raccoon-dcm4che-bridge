@@ -311,6 +311,23 @@ export declare class WindowEventClass extends JavaClass {
     /**
      * @param var0 original type: 'java.awt.Window'
      * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.Window'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     */
+    constructor(var0: java_awt_Window | null, var1: java_lang_Integer | number, var2: java_awt_Window | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'java.awt.Window'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.Window'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @return original return type: 'java.awt.event.WindowEvent'
+     */
+    static newInstanceAsync(var0: java_awt_Window | null, var1: java_lang_Integer | number, var2: java_awt_Window | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<WindowEvent>;
+    /**
+     * @param var0 original type: 'java.awt.Window'
+     * @param var1 original type: 'int'
      */
     constructor(var0: java_awt_Window | null, var1: java_lang_Integer | number);
     /**
@@ -347,23 +364,6 @@ export declare class WindowEventClass extends JavaClass {
      * @return original return type: 'java.awt.event.WindowEvent'
      */
     static newInstanceAsync(var0: java_awt_Window | null, var1: java_lang_Integer | number, var2: java_awt_Window | null): Promise<WindowEvent>;
-    /**
-     * @param var0 original type: 'java.awt.Window'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.Window'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     */
-    constructor(var0: java_awt_Window | null, var1: java_lang_Integer | number, var2: java_awt_Window | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'java.awt.Window'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.Window'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @return original return type: 'java.awt.event.WindowEvent'
-     */
-    static newInstanceAsync(var0: java_awt_Window | null, var1: java_lang_Integer | number, var2: java_awt_Window | null, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<WindowEvent>;
 }
 declare const WindowEvent_base: typeof WindowEventClass;
 /**
@@ -378,4 +378,3 @@ declare const WindowEvent_base: typeof WindowEventClass;
 export declare class WindowEvent extends WindowEvent_base {
 }
 export default WindowEvent;
-//# sourceMappingURL=WindowEvent.d.ts.map

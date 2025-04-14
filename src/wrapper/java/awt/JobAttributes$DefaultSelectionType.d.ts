@@ -106,4 +106,3 @@ declare const JobAttributes$DefaultSelectionType_base: typeof JobAttributes$Defa
 export declare class JobAttributes$DefaultSelectionType extends JobAttributes$DefaultSelectionType_base {
 }
 export default JobAttributes$DefaultSelectionType;
-//# sourceMappingURL=JobAttributes$DefaultSelectionType.d.ts.map

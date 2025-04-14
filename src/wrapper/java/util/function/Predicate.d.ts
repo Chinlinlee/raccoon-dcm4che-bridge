@@ -123,4 +123,3 @@ export declare class Predicate extends Predicate_base {
     private constructor();
 }
 export default Predicate;
-//# sourceMappingURL=Predicate.d.ts.map

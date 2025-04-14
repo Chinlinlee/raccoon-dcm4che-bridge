@@ -110,6 +110,16 @@ export declare class ComparatorClass extends JavaClass {
      */
     thenComparingLongSync(var0: java_util_function_ToLongFunction | JavaInterfaceProxy<java_util_function_ToLongFunctionInterface> | null): Comparator | null;
     /**
+     * @param var0 original type: 'java.util.Comparator'
+     * @return original return type: 'java.util.Comparator'
+     */
+    thenComparing(var0: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Promise<Comparator | null>;
+    /**
+     * @param var0 original type: 'java.util.Comparator'
+     * @return original return type: 'java.util.Comparator'
+     */
+    thenComparingSync(var0: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Comparator | null;
+    /**
      * @param var0 original type: 'java.util.function.Function'
      * @param var1 original type: 'java.util.Comparator'
      * @return original return type: 'java.util.Comparator'
@@ -121,16 +131,6 @@ export declare class ComparatorClass extends JavaClass {
      * @return original return type: 'java.util.Comparator'
      */
     thenComparingSync(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null, var1: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Comparator | null;
-    /**
-     * @param var0 original type: 'java.util.Comparator'
-     * @return original return type: 'java.util.Comparator'
-     */
-    thenComparing(var0: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Promise<Comparator | null>;
-    /**
-     * @param var0 original type: 'java.util.Comparator'
-     * @return original return type: 'java.util.Comparator'
-     */
-    thenComparingSync(var0: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Comparator | null;
     /**
      * @param var0 original type: 'java.util.function.Function'
      * @return original return type: 'java.util.Comparator'
@@ -224,16 +224,16 @@ export interface ComparatorInterface {
      */
     thenComparingLong?(var0: java_util_function_ToLongFunction | JavaInterfaceProxy<java_util_function_ToLongFunctionInterface> | null): Comparator | null;
     /**
+     * @param var0 original type: 'java.util.Comparator'
+     * @return original return type: 'java.util.Comparator'
+     */
+    thenComparing?(var0: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Comparator | null;
+    /**
      * @param var0 original type: 'java.util.function.Function'
      * @param var1 original type: 'java.util.Comparator'
      * @return original return type: 'java.util.Comparator'
      */
     thenComparing?(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null, var1: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Comparator | null;
-    /**
-     * @param var0 original type: 'java.util.Comparator'
-     * @return original return type: 'java.util.Comparator'
-     */
-    thenComparing?(var0: ComparatorClass | JavaInterfaceProxy<ComparatorInterface> | null): Comparator | null;
     /**
      * @param var0 original type: 'java.util.function.Function'
      * @return original return type: 'java.util.Comparator'
@@ -276,4 +276,3 @@ export declare class Comparator extends Comparator_base {
     private constructor();
 }
 export default Comparator;
-//# sourceMappingURL=Comparator.d.ts.map

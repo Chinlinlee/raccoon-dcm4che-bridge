@@ -3,8 +3,8 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { WlPresentation as org_weasis_opencv_op_lut_WlPresentation, WlPresentationInterface as org_weasis_opencv_op_lut_WlPresentationInterface } from "./../../weasis/opencv/op/lut/WlPresentation";
-import { LutShape as org_weasis_opencv_op_lut_LutShape } from "./../../weasis/opencv/op/lut/LutShape";
 import { PrDicomObject as org_dcm4che3_img_data_PrDicomObject } from "./data/PrDicomObject";
+import { LutShape as org_weasis_opencv_op_lut_LutShape } from "./../../weasis/opencv/op/lut/LutShape";
 import { PresetWindowLevel as org_dcm4che3_img_lut_PresetWindowLevel } from "./lut/PresetWindowLevel";
 import { LookupTableCV as org_weasis_opencv_data_LookupTableCV } from "./../../weasis/opencv/data/LookupTableCV";
 import { WlParams as org_weasis_opencv_op_lut_WlParams, WlParamsInterface as org_weasis_opencv_op_lut_WlParamsInterface } from "./../../weasis/opencv/op/lut/WlParams";
@@ -115,16 +115,6 @@ export declare class DicomImageAdapterClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @param var0 original type: 'org.weasis.opencv.op.lut.WlPresentation'
-     * @return original return type: 'org.weasis.opencv.op.lut.LutShape'
-     */
-    getDefaultShape(var0: org_weasis_opencv_op_lut_WlPresentation | JavaInterfaceProxy<org_weasis_opencv_op_lut_WlPresentationInterface> | null): Promise<org_weasis_opencv_op_lut_LutShape | null>;
-    /**
-     * @param var0 original type: 'org.weasis.opencv.op.lut.WlPresentation'
-     * @return original return type: 'org.weasis.opencv.op.lut.LutShape'
-     */
-    getDefaultShapeSync(var0: org_weasis_opencv_op_lut_WlPresentation | JavaInterfaceProxy<org_weasis_opencv_op_lut_WlPresentationInterface> | null): org_weasis_opencv_op_lut_LutShape | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.img.data.PrDicomObject'
      * @return original return type: 'double'
      */
@@ -134,6 +124,16 @@ export declare class DicomImageAdapterClass extends JavaClass {
      * @return original return type: 'double'
      */
     getRescaleInterceptSync(var0: org_dcm4che3_img_data_PrDicomObject | null): number;
+    /**
+     * @param var0 original type: 'org.weasis.opencv.op.lut.WlPresentation'
+     * @return original return type: 'org.weasis.opencv.op.lut.LutShape'
+     */
+    getDefaultShape(var0: org_weasis_opencv_op_lut_WlPresentation | JavaInterfaceProxy<org_weasis_opencv_op_lut_WlPresentationInterface> | null): Promise<org_weasis_opencv_op_lut_LutShape | null>;
+    /**
+     * @param var0 original type: 'org.weasis.opencv.op.lut.WlPresentation'
+     * @return original return type: 'org.weasis.opencv.op.lut.LutShape'
+     */
+    getDefaultShapeSync(var0: org_weasis_opencv_op_lut_WlPresentation | JavaInterfaceProxy<org_weasis_opencv_op_lut_WlPresentationInterface> | null): org_weasis_opencv_op_lut_LutShape | null;
     /**
      * @param var0 original type: 'org.weasis.opencv.op.lut.WlPresentation'
      * @return original return type: 'int'
@@ -373,4 +373,3 @@ declare const DicomImageAdapter_base: typeof DicomImageAdapterClass;
 export declare class DicomImageAdapter extends DicomImageAdapter_base {
 }
 export default DicomImageAdapter;
-//# sourceMappingURL=DicomImageAdapter.d.ts.map

@@ -187,4 +187,3 @@ export declare class MethodHandleInfo extends MethodHandleInfo_base {
     private constructor();
 }
 export default MethodHandleInfo;
-//# sourceMappingURL=MethodHandleInfo.d.ts.map

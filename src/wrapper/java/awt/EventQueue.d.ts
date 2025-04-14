@@ -74,6 +74,14 @@ export declare class EventQueueClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @return original return type: 'java.awt.AWTEvent'
+     */
+    peekEvent(): Promise<java_awt_AWTEvent | null>;
+    /**
+     * @return original return type: 'java.awt.AWTEvent'
+     */
+    peekEventSync(): java_awt_AWTEvent | null;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.awt.AWTEvent'
      */
@@ -83,14 +91,6 @@ export declare class EventQueueClass extends JavaClass {
      * @return original return type: 'java.awt.AWTEvent'
      */
     peekEventSync(var0: java_lang_Integer | number): java_awt_AWTEvent | null;
-    /**
-     * @return original return type: 'java.awt.AWTEvent'
-     */
-    peekEvent(): Promise<java_awt_AWTEvent | null>;
-    /**
-     * @return original return type: 'java.awt.AWTEvent'
-     */
-    peekEventSync(): java_awt_AWTEvent | null;
     /**
      * @param var0 original type: 'java.awt.EventQueue'
      * @return original return type: 'void'
@@ -200,4 +200,3 @@ declare const EventQueue_base: typeof EventQueueClass;
 export declare class EventQueue extends EventQueue_base {
 }
 export default EventQueue;
-//# sourceMappingURL=EventQueue.d.ts.map

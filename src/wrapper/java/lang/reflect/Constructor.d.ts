@@ -5,7 +5,6 @@ import { Integer as java_lang_Integer } from "./../Integer";
 import { AnnotatedType as java_lang_reflect_AnnotatedType } from "./AnnotatedType";
 import { Type as java_lang_reflect_Type } from "./Type";
 import { Annotation as java_lang_annotation_Annotation } from "./../annotation/Annotation";
-import { Set as java_util_Set } from "./../../util/Set";
 import { TypeVariable as java_lang_reflect_TypeVariable } from "./TypeVariable";
 import { Boolean as java_lang_Boolean } from "./../Boolean";
 import { AccessibleObject as java_lang_reflect_AccessibleObject } from "./AccessibleObject";
@@ -26,16 +25,6 @@ export declare class ConstructorClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -54,6 +43,16 @@ export declare class ConstructorClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -144,14 +143,6 @@ export declare class ConstructorClass extends JavaClass {
      * @return original return type: 'java.lang.annotation.Annotation[]'
      */
     getDeclaredAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    accessFlags(): Promise<java_util_Set | null>;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    accessFlagsSync(): java_util_Set | null;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -386,4 +377,3 @@ declare const Constructor_base: typeof ConstructorClass;
 export declare class Constructor extends Constructor_base {
 }
 export default Constructor;
-//# sourceMappingURL=Constructor.d.ts.map

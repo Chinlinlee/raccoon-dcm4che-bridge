@@ -62,4 +62,3 @@ export declare class LongToIntFunction extends LongToIntFunction_base {
     private constructor();
 }
 export default LongToIntFunction;
-//# sourceMappingURL=LongToIntFunction.d.ts.map

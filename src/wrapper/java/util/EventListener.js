@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EventListener = exports.createEventListenerProxy = void 0;
+exports.EventListener = void 0;
+exports.createEventListenerProxy = createEventListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link EventListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createEventListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.util.EventListener', methods, opts);
 }
-exports.createEventListenerProxy = createEventListenerProxy;
 /**
  * Class java.util.EventListener.
  *

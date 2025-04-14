@@ -46,4 +46,3 @@ export declare class EventListener extends EventListener_base {
     private constructor();
 }
 export default EventListener;
-//# sourceMappingURL=EventListener.d.ts.map

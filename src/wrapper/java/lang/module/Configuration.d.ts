@@ -23,16 +23,6 @@ export declare class ConfigurationClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -51,6 +41,16 @@ export declare class ConfigurationClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.module.ModuleFinder'
      * @param var1 original type: 'java.lang.module.ModuleFinder'
@@ -193,4 +193,3 @@ declare const Configuration_base: typeof ConfigurationClass;
 export declare class Configuration extends Configuration_base {
 }
 export default Configuration;
-//# sourceMappingURL=Configuration.d.ts.map

@@ -55,14 +55,6 @@ export declare class GraphicsConfigurationClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
-     * @return original return type: 'java.awt.image.ColorModel'
-     */
-    getColorModel(): Promise<java_awt_image_ColorModel | null>;
-    /**
-     * @return original return type: 'java.awt.image.ColorModel'
-     */
-    getColorModelSync(): java_awt_image_ColorModel | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.awt.image.ColorModel'
      */
@@ -72,6 +64,14 @@ export declare class GraphicsConfigurationClass extends JavaClass {
      * @return original return type: 'java.awt.image.ColorModel'
      */
     getColorModelSync(var0: java_lang_Integer | number): java_awt_image_ColorModel | null;
+    /**
+     * @return original return type: 'java.awt.image.ColorModel'
+     */
+    getColorModel(): Promise<java_awt_image_ColorModel | null>;
+    /**
+     * @return original return type: 'java.awt.image.ColorModel'
+     */
+    getColorModelSync(): java_awt_image_ColorModel | null;
     /**
      * @return original return type: 'java.awt.geom.AffineTransform'
      */
@@ -144,20 +144,6 @@ export declare class GraphicsConfigurationClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.awt.ImageCapabilities'
-     * @return original return type: 'java.awt.image.VolatileImage'
-     */
-    createCompatibleVolatileImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_ImageCapabilities | null): Promise<java_awt_image_VolatileImage | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.ImageCapabilities'
-     * @return original return type: 'java.awt.image.VolatileImage'
-     */
-    createCompatibleVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_ImageCapabilities | null): java_awt_image_VolatileImage | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.ImageCapabilities'
      * @param var3 original type: 'int'
      * @return original return type: 'java.awt.image.VolatileImage'
      */
@@ -185,6 +171,20 @@ export declare class GraphicsConfigurationClass extends JavaClass {
      */
     createCompatibleVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_awt_image_VolatileImage | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.ImageCapabilities'
+     * @return original return type: 'java.awt.image.VolatileImage'
+     */
+    createCompatibleVolatileImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_ImageCapabilities | null): Promise<java_awt_image_VolatileImage | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.ImageCapabilities'
+     * @return original return type: 'java.awt.image.VolatileImage'
+     */
+    createCompatibleVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_ImageCapabilities | null): java_awt_image_VolatileImage | null;
+    /**
      * @return original return type: 'java.awt.ImageCapabilities'
      */
     getImageCapabilities(): Promise<java_awt_ImageCapabilities | null>;
@@ -203,6 +203,18 @@ export declare class GraphicsConfigurationClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.image.BufferedImage'
+     */
+    createCompatibleImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_BufferedImage | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.image.BufferedImage'
+     */
+    createCompatibleImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_BufferedImage | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.awt.image.BufferedImage'
      */
@@ -214,18 +226,6 @@ export declare class GraphicsConfigurationClass extends JavaClass {
      * @return original return type: 'java.awt.image.BufferedImage'
      */
     createCompatibleImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_awt_image_BufferedImage | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.BufferedImage'
-     */
-    createCompatibleImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_BufferedImage | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.BufferedImage'
-     */
-    createCompatibleImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_BufferedImage | null;
     /**
      * @return original return type: 'java.awt.BufferCapabilities'
      */
@@ -263,4 +263,3 @@ export declare class GraphicsConfiguration extends GraphicsConfiguration_base {
     private constructor();
 }
 export default GraphicsConfiguration;
-//# sourceMappingURL=GraphicsConfiguration.d.ts.map

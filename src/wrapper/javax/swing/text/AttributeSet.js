@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AttributeSet = exports.createAttributeSetProxy = void 0;
+exports.AttributeSet = void 0;
+exports.createAttributeSetProxy = createAttributeSetProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AttributeSet} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAttributeSetProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.swing.text.AttributeSet', methods, opts);
 }
-exports.createAttributeSetProxy = createAttributeSetProxy;
 /**
  * Class javax.swing.text.AttributeSet.
  *

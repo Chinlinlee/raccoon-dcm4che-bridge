@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { EventTypeCode as org_dcm4che3_audit_EventTypeCode } from "./EventTypeCode";
-import { EventIdentification as org_dcm4che3_audit_EventIdentification } from "./EventIdentification";
+import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../java/lang/Class";
+import { EventTypeCode as org_dcm4che3_audit_EventTypeCode } from "./EventTypeCode";
+import { EventIdentification as org_dcm4che3_audit_EventIdentification } from "./EventIdentification";
 import { AuditMessages$EventID as org_dcm4che3_audit_AuditMessages$EventID } from "./AuditMessages$EventID";
 import { Calendar as java_util_Calendar } from "./../../../java/util/Calendar";
 /**
@@ -13,33 +13,13 @@ import { Calendar as java_util_Calendar } from "./../../../java/util/Calendar";
  */
 export declare class EventIdentificationBuilderClass extends JavaClass {
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.EventTypeCode[]'
-     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
+     * @return original return type: 'java.lang.Class'
      */
-    eventTypeCode(var0: (org_dcm4che3_audit_EventTypeCode | null)[] | null): Promise<EventIdentificationBuilder | null>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.EventTypeCode[]'
-     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
+     * @return original return type: 'java.lang.Class'
      */
-    eventTypeCodeSync(var0: (org_dcm4che3_audit_EventTypeCode | null)[] | null): EventIdentificationBuilder | null;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
-     */
-    build(): Promise<org_dcm4che3_audit_EventIdentification | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
-     */
-    buildSync(): org_dcm4che3_audit_EventIdentification | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
-     */
-    outcomeDesc(var0: string | null): Promise<EventIdentificationBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
-     */
-    outcomeDescSync(var0: string | null): EventIdentificationBuilder | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -71,6 +51,42 @@ export declare class EventIdentificationBuilderClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.audit.EventTypeCode[]'
+     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
+     */
+    eventTypeCode(var0: (org_dcm4che3_audit_EventTypeCode | null)[] | null): Promise<EventIdentificationBuilder | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.EventTypeCode[]'
+     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
+     */
+    eventTypeCodeSync(var0: (org_dcm4che3_audit_EventTypeCode | null)[] | null): EventIdentificationBuilder | null;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
+     */
+    build(): Promise<org_dcm4che3_audit_EventIdentification | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.audit.EventIdentification'
+     */
+    buildSync(): org_dcm4che3_audit_EventIdentification | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
+     */
+    outcomeDesc(var0: string | null): Promise<EventIdentificationBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
+     */
+    outcomeDescSync(var0: string | null): EventIdentificationBuilder | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -81,29 +97,13 @@ export declare class EventIdentificationBuilderClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toStringAsync(): Promise<string>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClass(): Promise<java_lang_Class>;
-    /**
-     * @return original return type: 'java.lang.Class'
-     */
-    getClassSync(): java_lang_Class;
+    notifyAllSync(): void;
     /**
      * @return original return type: 'void'
      */
@@ -113,13 +113,12 @@ export declare class EventIdentificationBuilderClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$EventID'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.util.Calendar'
+     * @param var3 original type: 'java.lang.String'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_dcm4che3_audit_AuditMessages$EventID | null, var1: string | null, var2: java_util_Calendar | null, var3: string | null);
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$EventID'
      * @param var1 original type: 'java.lang.String'
@@ -128,13 +127,6 @@ export declare class EventIdentificationBuilderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.audit.EventIdentificationBuilder'
      */
     static newInstanceAsync(var0: org_dcm4che3_audit_AuditMessages$EventID | null, var1: string | null, var2: java_util_Calendar | null, var3: string | null): Promise<EventIdentificationBuilder>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.AuditMessages$EventID'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.util.Calendar'
-     * @param var3 original type: 'java.lang.String'
-     */
-    constructor(var0: org_dcm4che3_audit_AuditMessages$EventID | null, var1: string | null, var2: java_util_Calendar | null, var3: string | null);
 }
 declare const EventIdentificationBuilder_base: typeof EventIdentificationBuilderClass;
 /**
@@ -149,4 +141,3 @@ declare const EventIdentificationBuilder_base: typeof EventIdentificationBuilder
 export declare class EventIdentificationBuilder extends EventIdentificationBuilder_base {
 }
 export default EventIdentificationBuilder;
-//# sourceMappingURL=EventIdentificationBuilder.d.ts.map

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HierarchyBoundsListener = exports.createHierarchyBoundsListenerProxy = void 0;
+exports.HierarchyBoundsListener = void 0;
+exports.createHierarchyBoundsListenerProxy = createHierarchyBoundsListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link HierarchyBoundsListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createHierarchyBoundsListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.HierarchyBoundsListener', methods, opts);
 }
-exports.createHierarchyBoundsListenerProxy = createHierarchyBoundsListenerProxy;
 /**
  * Class java.awt.event.HierarchyBoundsListener.
  *

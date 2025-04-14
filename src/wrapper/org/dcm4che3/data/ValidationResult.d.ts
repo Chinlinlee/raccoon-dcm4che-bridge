@@ -22,16 +22,6 @@ export declare class ValidationResultClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,6 +40,16 @@ export declare class ValidationResultClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int[]'
      */
@@ -175,6 +175,14 @@ export declare class ValidationResultClass extends JavaClass {
      */
     addMissingAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    hasInvalidAttributeValues(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasInvalidAttributeValuesSync(): boolean;
+    /**
      * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
      * @return original return type: 'void'
      */
@@ -185,14 +193,6 @@ export declare class ValidationResultClass extends JavaClass {
      */
     addNotAllowedAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
     /**
-     * @return original return type: 'boolean'
-     */
-    hasInvalidAttributeValues(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasInvalidAttributeValuesSync(): boolean;
-    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'java.lang.String'
      */
@@ -202,6 +202,28 @@ export declare class ValidationResultClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     asTextSync(var0: org_dcm4che3_data_Attributes | null): string | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
+     */
+    addMissingAttribute(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @return original return type: 'void'
+     */
+    addMissingAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @param var1 original type: 'org.dcm4che3.data.ValidationResult$Invalid'
+     * @return original return type: 'void'
+     */
+    addInvalidAttributeValue(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult$Invalid | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
+     * @param var1 original type: 'org.dcm4che3.data.ValidationResult$Invalid'
+     * @return original return type: 'void'
+     */
+    addInvalidAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult$Invalid | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
      * @param var1 original type: 'org.dcm4che3.data.ValidationResult$Invalid'
@@ -218,28 +240,6 @@ export declare class ValidationResultClass extends JavaClass {
      * @return original return type: 'void'
      */
     addInvalidAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult$Invalid | null, var2: (ValidationResultClass | null)[] | null, var3: (org_dcm4che3_data_IOD | null)[] | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @param var1 original type: 'org.dcm4che3.data.ValidationResult$Invalid'
-     * @return original return type: 'void'
-     */
-    addInvalidAttributeValue(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult$Invalid | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @param var1 original type: 'org.dcm4che3.data.ValidationResult$Invalid'
-     * @return original return type: 'void'
-     */
-    addInvalidAttributeValueSync(var0: org_dcm4che3_data_IOD$DataElement | null, var1: org_dcm4che3_data_ValidationResult$Invalid | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
-     */
-    addMissingAttribute(var0: org_dcm4che3_data_IOD$DataElement | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.IOD$DataElement'
-     * @return original return type: 'void'
-     */
-    addMissingAttributeSync(var0: org_dcm4che3_data_IOD$DataElement | null): void;
     constructor();
     /**
      * @return original return type: 'org.dcm4che3.data.ValidationResult'
@@ -259,4 +259,3 @@ declare const ValidationResult_base: typeof ValidationResultClass;
 export declare class ValidationResult extends ValidationResult_base {
 }
 export default ValidationResult;
-//# sourceMappingURL=ValidationResult.d.ts.map

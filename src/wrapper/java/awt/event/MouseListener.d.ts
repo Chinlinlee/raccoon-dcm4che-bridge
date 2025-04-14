@@ -122,4 +122,3 @@ export declare class MouseListener extends MouseListener_base {
     private constructor();
 }
 export default MouseListener;
-//# sourceMappingURL=MouseListener.d.ts.map

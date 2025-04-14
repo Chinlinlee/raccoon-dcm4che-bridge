@@ -58,4 +58,3 @@ export declare class Cleaner$Cleanable extends Cleaner$Cleanable_base {
     private constructor();
 }
 export default Cleaner$Cleanable;
-//# sourceMappingURL=Cleaner$Cleanable.d.ts.map

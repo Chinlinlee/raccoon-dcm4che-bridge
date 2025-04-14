@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Mat$Atable = exports.createMat$AtableProxy = void 0;
+exports.Mat$Atable = void 0;
+exports.createMat$AtableProxy = createMat$AtableProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Mat$Atable} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMat$AtableProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.opencv.core.Mat$Atable', methods, opts);
 }
-exports.createMat$AtableProxy = createMat$AtableProxy;
 /**
  * Class org.opencv.core.Mat$Atable.
  *

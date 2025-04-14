@@ -9,6 +9,34 @@ import { JsonValue$ValueType as jakarta_json_JsonValue$ValueType } from "./JsonV
  */
 export declare class JsonValueClass extends JavaClass {
     /**
+     * @return original return type: 'jakarta.json.JsonObject'
+     */
+    asJsonObject(): Promise<jakarta_json_JsonObject | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonObject'
+     */
+    asJsonObjectSync(): jakarta_json_JsonObject | null;
+    /**
+     * @return original return type: 'jakarta.json.JsonArray'
+     */
+    asJsonArray(): Promise<jakarta_json_JsonArray | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonArray'
+     */
+    asJsonArraySync(): jakarta_json_JsonArray | null;
+    /**
+     * @return original return type: 'jakarta.json.JsonValue$ValueType'
+     */
+    getValueType(): Promise<jakarta_json_JsonValue$ValueType | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonValue$ValueType'
+     */
+    getValueTypeSync(): jakarta_json_JsonValue$ValueType | null;
+    /**
+     * Original type: 'jakarta.json.JsonValue'
+     */
+    static readonly NULL: JsonValueClass | JavaInterfaceProxy<JsonValueInterface> | null;
+    /**
      * Original type: 'jakarta.json.JsonObject'
      */
     static readonly EMPTY_JSON_OBJECT: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null;
@@ -19,47 +47,11 @@ export declare class JsonValueClass extends JavaClass {
     /**
      * Original type: 'jakarta.json.JsonValue'
      */
-    static readonly NULL: JsonValueClass | JavaInterfaceProxy<JsonValueInterface> | null;
-    /**
-     * Original type: 'jakarta.json.JsonValue'
-     */
     static readonly TRUE: JsonValueClass | JavaInterfaceProxy<JsonValueInterface> | null;
     /**
      * Original type: 'jakarta.json.JsonValue'
      */
     static readonly FALSE: JsonValueClass | JavaInterfaceProxy<JsonValueInterface> | null;
-    /**
-     * @return original return type: 'jakarta.json.JsonArray'
-     */
-    asJsonArray(): Promise<jakarta_json_JsonArray | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonArray'
-     */
-    asJsonArraySync(): jakarta_json_JsonArray | null;
-    /**
-     * @return original return type: 'jakarta.json.JsonObject'
-     */
-    asJsonObject(): Promise<jakarta_json_JsonObject | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonObject'
-     */
-    asJsonObjectSync(): jakarta_json_JsonObject | null;
-    /**
-     * @return original return type: 'jakarta.json.JsonValue$ValueType'
-     */
-    getValueType(): Promise<jakarta_json_JsonValue$ValueType | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonValue$ValueType'
-     */
-    getValueTypeSync(): jakarta_json_JsonValue$ValueType | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toString(): string;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    toStringSync(): string;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -74,21 +66,21 @@ export declare class JsonValueClass extends JavaClass {
  */
 export interface JsonValueInterface {
     /**
-     * @return original return type: 'jakarta.json.JsonArray'
-     */
-    asJsonArray?(): jakarta_json_JsonArray | null;
-    /**
      * @return original return type: 'jakarta.json.JsonObject'
      */
     asJsonObject?(): jakarta_json_JsonObject | null;
     /**
-     * @return original return type: 'jakarta.json.JsonValue$ValueType'
+     * @return original return type: 'jakarta.json.JsonArray'
      */
-    getValueType(): jakarta_json_JsonValue$ValueType | null;
+    asJsonArray?(): jakarta_json_JsonArray | null;
     /**
      * @return original return type: 'java.lang.String'
      */
     toString(): string;
+    /**
+     * @return original return type: 'jakarta.json.JsonValue$ValueType'
+     */
+    getValueType(): jakarta_json_JsonValue$ValueType | null;
 }
 /**
  * Create a proxy for the {@link JsonValue} interface.
@@ -117,4 +109,3 @@ export declare class JsonValue extends JsonValue_base {
     private constructor();
 }
 export default JsonValue;
-//# sourceMappingURL=JsonValue.d.ts.map

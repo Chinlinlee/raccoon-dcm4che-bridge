@@ -66,4 +66,3 @@ export declare class LongStream$LongMapMultiConsumer extends LongStream$LongMapM
     private constructor();
 }
 export default LongStream$LongMapMultiConsumer;
-//# sourceMappingURL=LongStream$LongMapMultiConsumer.d.ts.map

@@ -2,8 +2,8 @@ import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridg
 import { JsonArrayBuilder as jakarta_json_JsonArrayBuilder } from "./JsonArrayBuilder";
 import { JsonArray as jakarta_json_JsonArray, JsonArrayInterface as jakarta_json_JsonArrayInterface } from "./JsonArray";
 import { Collection as java_util_Collection, CollectionInterface as java_util_CollectionInterface } from "./../../java/util/Collection";
-import { JsonObjectBuilder as jakarta_json_JsonObjectBuilder } from "./JsonObjectBuilder";
 import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../../java/util/Map";
+import { JsonObjectBuilder as jakarta_json_JsonObjectBuilder } from "./JsonObjectBuilder";
 import { JsonObject as jakarta_json_JsonObject, JsonObjectInterface as jakarta_json_JsonObjectInterface } from "./JsonObject";
 /**
  * This class just defines types, you should import {@link JsonBuilderFactory} instead of this.
@@ -40,13 +40,13 @@ export declare class JsonBuilderFactoryClass extends JavaClass {
      */
     createArrayBuilderSync(): jakarta_json_JsonArrayBuilder | null;
     /**
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     * @return original return type: 'java.util.Map'
      */
-    createObjectBuilder(): Promise<jakarta_json_JsonObjectBuilder | null>;
+    getConfigInUse(): Promise<java_util_Map | null>;
     /**
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     * @return original return type: 'java.util.Map'
      */
-    createObjectBuilderSync(): jakarta_json_JsonObjectBuilder | null;
+    getConfigInUseSync(): java_util_Map | null;
     /**
      * @param var0 original type: 'java.util.Map'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
@@ -68,13 +68,13 @@ export declare class JsonBuilderFactoryClass extends JavaClass {
      */
     createObjectBuilderSync(var0: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null): jakarta_json_JsonObjectBuilder | null;
     /**
-     * @return original return type: 'java.util.Map'
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    getConfigInUse(): Promise<java_util_Map | null>;
+    createObjectBuilder(): Promise<jakarta_json_JsonObjectBuilder | null>;
     /**
-     * @return original return type: 'java.util.Map'
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    getConfigInUseSync(): java_util_Map | null;
+    createObjectBuilderSync(): jakarta_json_JsonObjectBuilder | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -105,11 +105,9 @@ export interface JsonBuilderFactoryInterface {
      */
     createArrayBuilder?(): jakarta_json_JsonArrayBuilder | null;
     /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     * @return original return type: 'java.util.Map'
      */
-    createObjectBuilder?(): jakarta_json_JsonObjectBuilder | null;
+    getConfigInUse(): java_util_Map | null;
     /**
      * @param var0 original type: 'java.util.Map'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
@@ -121,9 +119,11 @@ export interface JsonBuilderFactoryInterface {
      */
     createObjectBuilder?(var0: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null): jakarta_json_JsonObjectBuilder | null;
     /**
-     * @return original return type: 'java.util.Map'
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    getConfigInUse(): java_util_Map | null;
+    createObjectBuilder?(): jakarta_json_JsonObjectBuilder | null;
 }
 /**
  * Create a proxy for the {@link JsonBuilderFactory} interface.
@@ -152,4 +152,3 @@ export declare class JsonBuilderFactory extends JsonBuilderFactory_base {
     private constructor();
 }
 export default JsonBuilderFactory;
-//# sourceMappingURL=JsonBuilderFactory.d.ts.map

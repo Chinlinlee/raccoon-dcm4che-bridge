@@ -14,22 +14,22 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setPointTransform(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPointTransformSync(var0: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
     setNearLosslessError(var0: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
     setNearLosslessErrorSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setPointTransform(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setPointTransformSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -131,13 +131,13 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     getSourceRegionSync(): java_awt_Rectangle | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    getPrediction(): Promise<number>;
+    isCompressionLossless(): Promise<boolean>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'boolean'
      */
-    getPredictionSync(): number;
+    isCompressionLosslessSync(): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -147,13 +147,13 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     getCompressionQualitySync(): number;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    isCompressionLossless(): Promise<boolean>;
+    getPrediction(): Promise<number>;
     /**
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    isCompressionLosslessSync(): boolean;
+    getPredictionSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -246,4 +246,3 @@ declare const DicomJpegWriteParam_base: typeof DicomJpegWriteParamClass;
 export declare class DicomJpegWriteParam extends DicomJpegWriteParam_base {
 }
 export default DicomJpegWriteParam;
-//# sourceMappingURL=DicomJpegWriteParam.d.ts.map

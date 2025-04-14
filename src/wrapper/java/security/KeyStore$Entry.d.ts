@@ -59,4 +59,3 @@ export declare class KeyStore$Entry extends KeyStore$Entry_base {
     private constructor();
 }
 export default KeyStore$Entry;
-//# sourceMappingURL=KeyStore$Entry.d.ts.map

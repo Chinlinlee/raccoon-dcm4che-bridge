@@ -105,4 +105,3 @@ export declare class Principal extends Principal_base {
     private constructor();
 }
 export default Principal;
-//# sourceMappingURL=Principal.d.ts.map

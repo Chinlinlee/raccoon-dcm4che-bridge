@@ -174,4 +174,3 @@ export declare class CharacterIterator extends CharacterIterator_base {
     private constructor();
 }
 export default CharacterIterator;
-//# sourceMappingURL=CharacterIterator.d.ts.map

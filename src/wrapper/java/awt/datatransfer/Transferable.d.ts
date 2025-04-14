@@ -89,4 +89,3 @@ export declare class Transferable extends Transferable_base {
     private constructor();
 }
 export default Transferable;
-//# sourceMappingURL=Transferable.d.ts.map

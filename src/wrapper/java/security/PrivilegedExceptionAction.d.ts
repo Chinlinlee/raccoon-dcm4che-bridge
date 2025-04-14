@@ -58,4 +58,3 @@ export declare class PrivilegedExceptionAction extends PrivilegedExceptionAction
     private constructor();
 }
 export default PrivilegedExceptionAction;
-//# sourceMappingURL=PrivilegedExceptionAction.d.ts.map

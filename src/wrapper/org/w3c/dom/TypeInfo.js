@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TypeInfo = exports.createTypeInfoProxy = void 0;
+exports.TypeInfo = void 0;
+exports.createTypeInfoProxy = createTypeInfoProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TypeInfo} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTypeInfoProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.TypeInfo', methods, opts);
 }
-exports.createTypeInfoProxy = createTypeInfoProxy;
 /**
  * Class org.w3c.dom.TypeInfo.
  *

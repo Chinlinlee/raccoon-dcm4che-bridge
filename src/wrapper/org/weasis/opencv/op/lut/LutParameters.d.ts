@@ -203,4 +203,3 @@ declare const LutParameters_base: typeof LutParametersClass;
 export declare class LutParameters extends LutParameters_base {
 }
 export default LutParameters;
-//# sourceMappingURL=LutParameters.d.ts.map

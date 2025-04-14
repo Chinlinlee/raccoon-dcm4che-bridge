@@ -141,4 +141,3 @@ declare const Mat$Tuple4_base: typeof Mat$Tuple4Class;
 export declare class Mat$Tuple4 extends Mat$Tuple4_base {
 }
 export default Mat$Tuple4;
-//# sourceMappingURL=Mat$Tuple4.d.ts.map

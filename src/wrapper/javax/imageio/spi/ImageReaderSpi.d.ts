@@ -311,4 +311,3 @@ export declare class ImageReaderSpi extends ImageReaderSpi_base {
     private constructor();
 }
 export default ImageReaderSpi;
-//# sourceMappingURL=ImageReaderSpi.d.ts.map

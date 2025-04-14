@@ -172,6 +172,14 @@ export declare class InputEventClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
+     * @return original return type: 'long'
+     */
+    getWhen(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getWhenSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -181,14 +189,6 @@ export declare class InputEventClass extends JavaClass {
      * @return original return type: 'int'
      */
     static getMaskForButtonSync(var0: java_lang_Integer | number): number;
-    /**
-     * @return original return type: 'long'
-     */
-    getWhen(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getWhenSync(): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -410,4 +410,3 @@ export declare class InputEvent extends InputEvent_base {
     private constructor();
 }
 export default InputEvent;
-//# sourceMappingURL=InputEvent.d.ts.map

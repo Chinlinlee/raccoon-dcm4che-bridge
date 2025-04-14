@@ -192,4 +192,3 @@ declare const DragSourceDropEvent_base: typeof DragSourceDropEventClass;
 export declare class DragSourceDropEvent extends DragSourceDropEvent_base {
 }
 export default DragSourceDropEvent;
-//# sourceMappingURL=DragSourceDropEvent.d.ts.map

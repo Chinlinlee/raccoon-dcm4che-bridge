@@ -183,4 +183,3 @@ export declare class DragGestureRecognizer extends DragGestureRecognizer_base {
     private constructor();
 }
 export default DragGestureRecognizer;
-//# sourceMappingURL=DragGestureRecognizer.d.ts.map

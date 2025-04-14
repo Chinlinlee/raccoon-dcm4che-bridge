@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CGetSCPInject = exports.createCGetSCPInjectProxy = void 0;
+exports.CGetSCPInject = void 0;
+exports.createCGetSCPInjectProxy = createCGetSCPInjectProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CGetSCPInject} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCGetSCPInjectProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.github.chinlinlee.dcm777.net.CGetSCPInject', methods, opts);
 }
-exports.createCGetSCPInjectProxy = createCGetSCPInjectProxy;
 /**
  * Class org.github.chinlinlee.dcm777.net.CGetSCPInject.
  *

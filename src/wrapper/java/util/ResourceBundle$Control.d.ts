@@ -247,4 +247,3 @@ declare const ResourceBundle$Control_base: typeof ResourceBundle$ControlClass;
 export declare class ResourceBundle$Control extends ResourceBundle$Control_base {
 }
 export default ResourceBundle$Control;
-//# sourceMappingURL=ResourceBundle$Control.d.ts.map

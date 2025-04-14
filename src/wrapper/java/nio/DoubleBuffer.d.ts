@@ -21,16 +21,6 @@ export declare class DoubleBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -49,6 +39,16 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.nio.DoubleBuffer'
      */
@@ -86,6 +86,16 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     compareToSync(var0: DoubleBufferClass | null): number;
     /**
+     * @param var0 original type: 'double[]'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    put(var0: (java_lang_Double | number)[] | null): Promise<DoubleBuffer | null>;
+    /**
+     * @param var0 original type: 'double[]'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    putSync(var0: (java_lang_Double | number)[] | null): DoubleBuffer | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'double[]'
      * @param var2 original type: 'int'
@@ -114,6 +124,20 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: (java_lang_Double | number)[] | null): DoubleBuffer | null;
     /**
+     * @param var0 original type: 'double[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    put(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<DoubleBuffer | null>;
+    /**
+     * @param var0 original type: 'double[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    putSync(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): DoubleBuffer | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.DoubleBuffer'
      * @param var2 original type: 'int'
@@ -130,16 +154,6 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: DoubleBufferClass | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): DoubleBuffer | null;
     /**
-     * @param var0 original type: 'double[]'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    put(var0: (java_lang_Double | number)[] | null): Promise<DoubleBuffer | null>;
-    /**
-     * @param var0 original type: 'double[]'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    putSync(var0: (java_lang_Double | number)[] | null): DoubleBuffer | null;
-    /**
      * @param var0 original type: 'java.nio.DoubleBuffer'
      * @return original return type: 'java.nio.DoubleBuffer'
      */
@@ -149,30 +163,6 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.DoubleBuffer'
      */
     putSync(var0: DoubleBufferClass | null): DoubleBuffer | null;
-    /**
-     * @param var0 original type: 'double[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    put(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<DoubleBuffer | null>;
-    /**
-     * @param var0 original type: 'double[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    putSync(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): DoubleBuffer | null;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    put(var0: java_lang_Double | number): Promise<DoubleBuffer | null>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    putSync(var0: java_lang_Double | number): DoubleBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'double'
@@ -185,6 +175,16 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.DoubleBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): DoubleBuffer | null;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    put(var0: java_lang_Double | number): Promise<DoubleBuffer | null>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    putSync(var0: java_lang_Double | number): DoubleBuffer | null;
     /**
      * @return original return type: 'java.nio.DoubleBuffer'
      */
@@ -234,14 +234,6 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     arraySync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    slice(): Promise<DoubleBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    sliceSync(): DoubleBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     slice(): Promise<java_nio_Buffer | null>;
@@ -249,6 +241,14 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     sliceSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    slice(): Promise<DoubleBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    sliceSync(): DoubleBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -282,6 +282,14 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
+     * @return original return type: 'double'
+     */
+    get(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'double[]'
      * @return original return type: 'java.nio.DoubleBuffer'
@@ -303,6 +311,22 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'double'
      */
     getSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'double[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    get(var0: java_lang_Integer | number, var1: (java_lang_Double | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<DoubleBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'double[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    getSync(var0: java_lang_Integer | number, var1: (java_lang_Double | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): DoubleBuffer | null;
     /**
      * @param var0 original type: 'double[]'
      * @param var1 original type: 'int'
@@ -329,28 +353,14 @@ export declare class DoubleBufferClass extends JavaClass {
     getSync(var0: (java_lang_Double | number)[] | null): DoubleBuffer | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'double[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.DoubleBuffer'
      */
-    get(var0: java_lang_Integer | number, var1: (java_lang_Double | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<DoubleBuffer | null>;
+    limit(var0: java_lang_Integer | number): Promise<DoubleBuffer | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'double[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.DoubleBuffer'
      */
-    getSync(var0: java_lang_Integer | number, var1: (java_lang_Double | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): DoubleBuffer | null;
-    /**
-     * @return original return type: 'double'
-     */
-    get(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getSync(): number;
+    limitSync(var0: java_lang_Integer | number): DoubleBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -361,16 +371,6 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    limit(var0: java_lang_Integer | number): Promise<DoubleBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    limitSync(var0: java_lang_Integer | number): DoubleBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -428,14 +428,6 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     hasRemainingSync(): boolean;
     /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    clear(): Promise<DoubleBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    clearSync(): DoubleBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     clear(): Promise<java_nio_Buffer | null>;
@@ -443,6 +435,14 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     clearSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    clear(): Promise<DoubleBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    clearSync(): DoubleBuffer | null;
     /**
      * @return original return type: 'java.nio.DoubleBuffer'
      */
@@ -468,14 +468,6 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     remainingSync(): number;
     /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    rewind(): Promise<DoubleBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    rewindSync(): DoubleBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     rewind(): Promise<java_nio_Buffer | null>;
@@ -483,6 +475,14 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     rewindSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    rewind(): Promise<DoubleBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    rewindSync(): DoubleBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.DoubleBuffer'
@@ -559,6 +559,16 @@ export declare class DoubleBufferClass extends JavaClass {
     positionSync(): number;
     /**
      * @param var0 original type: 'double[]'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    static wrap(var0: (java_lang_Double | number)[] | null): Promise<DoubleBuffer | null>;
+    /**
+     * @param var0 original type: 'double[]'
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    static wrapSync(var0: (java_lang_Double | number)[] | null): DoubleBuffer | null;
+    /**
+     * @param var0 original type: 'double[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.nio.DoubleBuffer'
@@ -572,16 +582,6 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     static wrapSync(var0: (java_lang_Double | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): DoubleBuffer | null;
     /**
-     * @param var0 original type: 'double[]'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    static wrap(var0: (java_lang_Double | number)[] | null): Promise<DoubleBuffer | null>;
-    /**
-     * @param var0 original type: 'double[]'
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    static wrapSync(var0: (java_lang_Double | number)[] | null): DoubleBuffer | null;
-    /**
      * @return original return type: 'boolean'
      */
     isDirect(): Promise<boolean>;
@@ -590,14 +590,6 @@ export declare class DoubleBufferClass extends JavaClass {
      */
     isDirectSync(): boolean;
     /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    mark(): Promise<DoubleBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.DoubleBuffer'
-     */
-    markSync(): DoubleBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     mark(): Promise<java_nio_Buffer | null>;
@@ -605,6 +597,14 @@ export declare class DoubleBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     markSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    mark(): Promise<DoubleBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.DoubleBuffer'
+     */
+    markSync(): DoubleBuffer | null;
 }
 declare const DoubleBuffer_base: typeof DoubleBufferClass;
 /**
@@ -624,4 +624,3 @@ export declare class DoubleBuffer extends DoubleBuffer_base {
     private constructor();
 }
 export default DoubleBuffer;
-//# sourceMappingURL=DoubleBuffer.d.ts.map

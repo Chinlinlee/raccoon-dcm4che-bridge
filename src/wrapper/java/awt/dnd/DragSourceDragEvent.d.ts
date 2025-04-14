@@ -210,4 +210,3 @@ declare const DragSourceDragEvent_base: typeof DragSourceDragEventClass;
 export declare class DragSourceDragEvent extends DragSourceDragEvent_base {
 }
 export default DragSourceDragEvent;
-//# sourceMappingURL=DragSourceDragEvent.d.ts.map

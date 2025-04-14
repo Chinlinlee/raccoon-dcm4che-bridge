@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SocketOption = exports.createSocketOptionProxy = void 0;
+exports.SocketOption = void 0;
+exports.createSocketOptionProxy = createSocketOptionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SocketOption} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSocketOptionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.net.SocketOption', methods, opts);
 }
-exports.createSocketOptionProxy = createSocketOptionProxy;
 /**
  * Class java.net.SocketOption.
  *

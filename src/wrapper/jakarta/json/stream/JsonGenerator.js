@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonGenerator = exports.createJsonGeneratorProxy = void 0;
+exports.JsonGenerator = void 0;
+exports.createJsonGeneratorProxy = createJsonGeneratorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonGenerator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonGeneratorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.stream.JsonGenerator', methods, opts);
 }
-exports.createJsonGeneratorProxy = createJsonGeneratorProxy;
 /**
  * Class jakarta.json.stream.JsonGenerator.
  *

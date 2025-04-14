@@ -36,16 +36,6 @@ export declare class AccessibleObjectClass extends JavaClass {
     isAccessibleSync(): boolean;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -65,6 +55,26 @@ export declare class AccessibleObjectClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setAccessible(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setAccessibleSync(var0: java_lang_Boolean | boolean): void;
+    /**
      * @param var0 original type: 'java.lang.reflect.AccessibleObject[]'
      * @param var1 original type: 'boolean'
      * @return original return type: 'void'
@@ -76,16 +86,6 @@ export declare class AccessibleObjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     static setAccessibleSync(var0: (AccessibleObjectClass | null)[] | null, var1: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setAccessible(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setAccessibleSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'boolean'
@@ -210,4 +210,3 @@ declare const AccessibleObject_base: typeof AccessibleObjectClass;
 export declare class AccessibleObject extends AccessibleObject_base {
 }
 export default AccessibleObject;
-//# sourceMappingURL=AccessibleObject.d.ts.map

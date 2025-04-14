@@ -32,16 +32,6 @@ export declare class IntegerClass extends JavaClass {
     static compareSync(var0: IntegerClass | number, var1: IntegerClass | number): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,6 +50,16 @@ export declare class IntegerClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -158,16 +158,6 @@ export declare class IntegerClass extends JavaClass {
     compareToSync(var0: BasicOrJavaType | null): number;
     /**
      * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Integer'
-     */
-    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Integer'
-     */
-    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
-    /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
      * @return original return type: 'java.lang.Object'
      */
     resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<BasicOrJavaType | null>;
@@ -176,6 +166,16 @@ export declare class IntegerClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Integer'
+     */
+    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Integer'
+     */
+    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Integer'
@@ -363,18 +363,6 @@ export declare class IntegerClass extends JavaClass {
      */
     static maxSync(var0: IntegerClass | number, var1: IntegerClass | number): number;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static compress(var0: IntegerClass | number, var1: IntegerClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static compressSync(var0: IntegerClass | number, var1: IntegerClass | number): number;
-    /**
      * @return original return type: 'int'
      */
     intValue(): Promise<number>;
@@ -382,6 +370,18 @@ export declare class IntegerClass extends JavaClass {
      * @return original return type: 'int'
      */
     intValueSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.Integer'
+     */
+    static valueOf(var0: string | null, var1: IntegerClass | number): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.Integer'
+     */
+    static valueOfSync(var0: string | null, var1: IntegerClass | number): number | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Integer'
@@ -402,18 +402,6 @@ export declare class IntegerClass extends JavaClass {
      * @return original return type: 'java.lang.Integer'
      */
     static valueOfSync(var0: IntegerClass | number): number | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.Integer'
-     */
-    static valueOf(var0: string | null, var1: IntegerClass | number): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.lang.Integer'
-     */
-    static valueOfSync(var0: string | null, var1: IntegerClass | number): number | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -500,18 +488,6 @@ export declare class IntegerClass extends JavaClass {
      * @return original return type: 'int'
      */
     static parseIntSync(var0: string | null, var1: IntegerClass | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static expand(var0: IntegerClass | number, var1: IntegerClass | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    static expandSync(var0: IntegerClass | number, var1: IntegerClass | number): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -666,4 +642,3 @@ declare const Integer_base: typeof IntegerClass;
 export declare class Integer extends Integer_base {
 }
 export default Integer;
-//# sourceMappingURL=Integer.d.ts.map

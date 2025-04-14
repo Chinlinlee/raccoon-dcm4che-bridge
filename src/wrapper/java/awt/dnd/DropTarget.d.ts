@@ -1,6 +1,6 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { DropTargetDropEvent as java_awt_dnd_DropTargetDropEvent } from "./DropTargetDropEvent";
 import { DropTargetListener as java_awt_dnd_DropTargetListener, DropTargetListenerInterface as java_awt_dnd_DropTargetListenerInterface } from "./DropTargetListener";
+import { DropTargetDropEvent as java_awt_dnd_DropTargetDropEvent } from "./DropTargetDropEvent";
 import { Class as java_lang_Class } from "./../../lang/Class";
 import { Long as java_lang_Long } from "./../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
@@ -17,16 +17,6 @@ import { DropTargetEvent as java_awt_dnd_DropTargetEvent } from "./DropTargetEve
  */
 export declare class DropTargetClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.awt.dnd.DropTargetDropEvent'
-     * @return original return type: 'void'
-     */
-    drop(var0: java_awt_dnd_DropTargetDropEvent | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DropTargetDropEvent'
-     * @return original return type: 'void'
-     */
-    dropSync(var0: java_awt_dnd_DropTargetDropEvent | null): void;
-    /**
      * @param var0 original type: 'java.awt.dnd.DropTargetListener'
      * @return original return type: 'void'
      */
@@ -36,6 +26,16 @@ export declare class DropTargetClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeDropTargetListenerSync(var0: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.awt.dnd.DropTargetDropEvent'
+     * @return original return type: 'void'
+     */
+    drop(var0: java_awt_dnd_DropTargetDropEvent | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.dnd.DropTargetDropEvent'
+     * @return original return type: 'void'
+     */
+    dropSync(var0: java_awt_dnd_DropTargetDropEvent | null): void;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -258,35 +258,6 @@ export declare class DropTargetClass extends JavaClass {
      * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.awt.dnd.DropTargetListener'
-     */
-    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null);
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.dnd.DropTargetListener'
-     * @return original return type: 'java.awt.dnd.DropTarget'
-     */
-    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
-     */
-    constructor(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null);
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
-     * @return original return type: 'java.awt.dnd.DropTarget'
-     */
-    static newInstanceAsync(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.dnd.DropTarget'
-     */
-    static newInstanceAsync(): Promise<DropTarget>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.dnd.DropTargetListener'
      * @param var3 original type: 'boolean'
      */
     constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null, var3: java_lang_Boolean | boolean);
@@ -315,6 +286,35 @@ export declare class DropTargetClass extends JavaClass {
      * @return original return type: 'java.awt.dnd.DropTarget'
      */
     static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null, var3: java_lang_Boolean | boolean, var4: java_awt_datatransfer_FlavorMap | JavaInterfaceProxy<java_awt_datatransfer_FlavorMapInterface> | null): Promise<DropTarget>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
+     */
+    constructor(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null);
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
+     * @return original return type: 'java.awt.dnd.DropTarget'
+     */
+    static newInstanceAsync(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.dnd.DropTargetListener'
+     */
+    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null);
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.dnd.DropTargetListener'
+     * @return original return type: 'java.awt.dnd.DropTarget'
+     */
+    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.dnd.DropTarget'
+     */
+    static newInstanceAsync(): Promise<DropTarget>;
 }
 declare const DropTarget_base: typeof DropTargetClass;
 /**
@@ -329,4 +329,3 @@ declare const DropTarget_base: typeof DropTargetClass;
 export declare class DropTarget extends DropTarget_base {
 }
 export default DropTarget;
-//# sourceMappingURL=DropTarget.d.ts.map

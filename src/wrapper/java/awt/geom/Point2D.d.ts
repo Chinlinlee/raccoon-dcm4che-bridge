@@ -48,6 +48,16 @@ export declare class Point2DClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'double'
+     */
+    distance(var0: Point2DClass | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'double'
+     */
+    distanceSync(var0: Point2DClass | null): number;
+    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @return original return type: 'double'
@@ -59,16 +69,6 @@ export declare class Point2DClass extends JavaClass {
      * @return original return type: 'double'
      */
     distanceSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'double'
-     */
-    distance(var0: Point2DClass | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'double'
-     */
-    distanceSync(var0: Point2DClass | null): number;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -93,18 +93,6 @@ export declare class Point2DClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'double'
-     */
-    distanceSq(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<number>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'double'
-     */
-    distanceSqSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
     /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @return original return type: 'double'
@@ -131,6 +119,18 @@ export declare class Point2DClass extends JavaClass {
      * @return original return type: 'double'
      */
     static distanceSqSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): number;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'double'
+     */
+    distanceSq(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<number>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'double'
+     */
+    distanceSqSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
     /**
      * @return original return type: 'void'
      */
@@ -222,4 +222,3 @@ export declare class Point2D extends Point2D_base {
     private constructor();
 }
 export default Point2D;
-//# sourceMappingURL=Point2D.d.ts.map

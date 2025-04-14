@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KeyManager = exports.createKeyManagerProxy = void 0;
+exports.KeyManager = void 0;
+exports.createKeyManagerProxy = createKeyManagerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link KeyManager} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createKeyManagerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.net.ssl.KeyManager', methods, opts);
 }
-exports.createKeyManagerProxy = createKeyManagerProxy;
 /**
  * Class javax.net.ssl.KeyManager.
  *

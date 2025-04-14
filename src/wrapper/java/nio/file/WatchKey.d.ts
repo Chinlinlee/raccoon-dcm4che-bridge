@@ -108,4 +108,3 @@ export declare class WatchKey extends WatchKey_base {
     private constructor();
 }
 export default WatchKey;
-//# sourceMappingURL=WatchKey.d.ts.map

@@ -1,9 +1,9 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
-import { Association as org_dcm4che3_net_Association } from "./../Association";
+import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Boolean as java_lang_Boolean } from "./../../../../java/lang/Boolean";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../java/lang/Class";
+import { Association as org_dcm4che3_net_Association } from "./../Association";
 import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../pdu/PresentationContext";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attributes";
 /**
@@ -13,31 +13,13 @@ import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attribu
  */
 export declare class BasicQueryTaskClass extends JavaClass {
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    run(): Promise<void>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'java.lang.Class'
      */
-    runSync(): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @return original return type: 'void'
-     */
-    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOptionalKeysNotSupported(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isOptionalKeysNotSupportedSync(): boolean;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -79,6 +61,22 @@ export declare class BasicQueryTaskClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isOptionalKeysNotSupported(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isOptionalKeysNotSupportedSync(): boolean;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -89,29 +87,31 @@ export declare class BasicQueryTaskClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toStringAsync(): Promise<string>;
+    notifyAllSync(): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCode(): Promise<number>;
+    run(): Promise<void>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'void'
      */
-    hashCodeSync(): number;
+    runSync(): void;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
      */
-    getClass(): Promise<java_lang_Class>;
+    onCancelRQ(var0: org_dcm4che3_net_Association | null): Promise<void>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @return original return type: 'void'
      */
-    getClassSync(): java_lang_Class;
+    onCancelRQSync(var0: org_dcm4che3_net_Association | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -121,13 +121,12 @@ export declare class BasicQueryTaskClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null);
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
@@ -136,13 +135,6 @@ export declare class BasicQueryTaskClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.service.BasicQueryTask'
      */
     static newInstanceAsync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): Promise<BasicQueryTask>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     */
-    constructor(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null);
 }
 declare const BasicQueryTask_base: typeof BasicQueryTaskClass;
 /**
@@ -157,4 +149,3 @@ declare const BasicQueryTask_base: typeof BasicQueryTaskClass;
 export declare class BasicQueryTask extends BasicQueryTask_base {
 }
 export default BasicQueryTask;
-//# sourceMappingURL=BasicQueryTask.d.ts.map

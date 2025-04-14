@@ -32,16 +32,6 @@ export declare class LongClass extends JavaClass {
     static compareSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: LongClass | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: LongClass | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,6 +50,16 @@ export declare class LongClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: LongClass | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: LongClass | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -93,16 +93,6 @@ export declare class LongClass extends JavaClass {
      */
     static sumSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
-     * @param var0 original type: 'java.lang.Long'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: LongClass | bigint | number | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Long'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: LongClass | bigint | number | null): number;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
@@ -113,15 +103,15 @@ export declare class LongClass extends JavaClass {
      */
     compareToSync(var0: BasicOrJavaType | null): number;
     /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Long'
+     * @param var0 original type: 'java.lang.Long'
+     * @return original return type: 'int'
      */
-    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
+    compareTo(var0: LongClass | bigint | number | null): Promise<number>;
     /**
-     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
-     * @return original return type: 'java.lang.Long'
+     * @param var0 original type: 'java.lang.Long'
+     * @return original return type: 'int'
      */
-    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
+    compareToSync(var0: LongClass | bigint | number | null): number;
     /**
      * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
      * @return original return type: 'java.lang.Object'
@@ -132,6 +122,16 @@ export declare class LongClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Long'
+     */
+    resolveConstantDesc(var0: java_lang_invoke_MethodHandles$Lookup | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.invoke.MethodHandles$Lookup'
+     * @return original return type: 'java.lang.Long'
+     */
+    resolveConstantDescSync(var0: java_lang_invoke_MethodHandles$Lookup | null): number | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Long'
@@ -178,14 +178,16 @@ export declare class LongClass extends JavaClass {
     notifySync(): void;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
      * @return original return type: 'long'
      */
-    static parseUnsignedLong(var0: string | null): Promise<number>;
+    static parseUnsignedLong(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
      * @return original return type: 'long'
      */
-    static parseUnsignedLongSync(var0: string | null): number;
+    static parseUnsignedLongSync(var0: string | null, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
@@ -204,16 +206,14 @@ export declare class LongClass extends JavaClass {
     static parseUnsignedLongSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
      * @return original return type: 'long'
      */
-    static parseUnsignedLong(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
+    static parseUnsignedLong(var0: string | null): Promise<number>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
      * @return original return type: 'long'
      */
-    static parseUnsignedLongSync(var0: string | null, var1: java_lang_Integer | number): number;
+    static parseUnsignedLongSync(var0: string | null): number;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
@@ -239,6 +239,14 @@ export declare class LongClass extends JavaClass {
      */
     static remainderUnsignedSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'long'
      * @return original return type: 'int'
      */
@@ -248,14 +256,6 @@ export declare class LongClass extends JavaClass {
      * @return original return type: 'int'
      */
     static hashCodeSync(var0: LongClass | bigint | number): number;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @return original return type: 'short'
      */
@@ -319,18 +319,6 @@ export declare class LongClass extends JavaClass {
      */
     static maxSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static compress(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static compressSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
      * @return original return type: 'int'
      */
     intValue(): Promise<number>;
@@ -351,16 +339,6 @@ export declare class LongClass extends JavaClass {
      */
     static valueOfSync(var0: string | null, var1: java_lang_Integer | number): number | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOf(var0: string | null): Promise<number | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.Long'
-     */
-    static valueOfSync(var0: string | null): number | null;
-    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.lang.Long'
      */
@@ -370,6 +348,16 @@ export declare class LongClass extends JavaClass {
      * @return original return type: 'java.lang.Long'
      */
     static valueOfSync(var0: LongClass | bigint | number): number | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static valueOf(var0: string | null): Promise<number | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Long'
+     */
+    static valueOfSync(var0: string | null): number | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
@@ -455,18 +443,6 @@ export declare class LongClass extends JavaClass {
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static expand(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'long'
-     */
-    static expandSync(var0: LongClass | bigint | number, var1: LongClass | bigint | number): number;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
      * @return original return type: 'int'
      */
     static compareUnsigned(var0: LongClass | bigint | number, var1: LongClass | bigint | number): Promise<number>;
@@ -487,28 +463,6 @@ export declare class LongClass extends JavaClass {
      */
     static toBinaryStringSync(var0: LongClass | bigint | number): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseLong(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'long'
-     */
-    static parseLongSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static parseLong(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'long'
-     */
-    static parseLongSync(var0: string | null, var1: java_lang_Integer | number): number;
-    /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -524,6 +478,28 @@ export declare class LongClass extends JavaClass {
      * @return original return type: 'long'
      */
     static parseLongSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static parseLong(var0: string | null, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'long'
+     */
+    static parseLongSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseLong(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'long'
+     */
+    static parseLongSync(var0: string | null): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -656,4 +632,3 @@ declare const Long_base: typeof LongClass;
 export declare class Long extends Long_base {
 }
 export default Long;
-//# sourceMappingURL=Long.d.ts.map

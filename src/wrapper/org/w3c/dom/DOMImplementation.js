@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DOMImplementation = exports.createDOMImplementationProxy = void 0;
+exports.DOMImplementation = void 0;
+exports.createDOMImplementationProxy = createDOMImplementationProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DOMImplementation} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDOMImplementationProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.DOMImplementation', methods, opts);
 }
-exports.createDOMImplementationProxy = createDOMImplementationProxy;
 /**
  * Class org.w3c.dom.DOMImplementation.
  *

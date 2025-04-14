@@ -1,7 +1,7 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
+import { JsonValue as jakarta_json_JsonValue, JsonValueInterface as jakarta_json_JsonValueInterface } from "./JsonValue";
 import { JsonObject as jakarta_json_JsonObject, JsonObjectInterface as jakarta_json_JsonObjectInterface } from "./JsonObject";
 import { JsonArray as jakarta_json_JsonArray, JsonArrayInterface as jakarta_json_JsonArrayInterface } from "./JsonArray";
-import { JsonValue as jakarta_json_JsonValue, JsonValueInterface as jakarta_json_JsonValueInterface } from "./JsonValue";
 import { JsonValue$ValueType as jakarta_json_JsonValue$ValueType } from "./JsonValue$ValueType";
 /**
  * This class just defines types, you should import {@link JsonStructure} instead of this.
@@ -9,26 +9,6 @@ import { JsonValue$ValueType as jakarta_json_JsonValue$ValueType } from "./JsonV
  * You should probably not edit this.
  */
 export declare class JsonStructureClass extends JavaClass {
-    /**
-     * Original type: 'jakarta.json.JsonObject'
-     */
-    static readonly EMPTY_JSON_OBJECT: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null;
-    /**
-     * Original type: 'jakarta.json.JsonArray'
-     */
-    static readonly EMPTY_JSON_ARRAY: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null;
-    /**
-     * Original type: 'jakarta.json.JsonValue'
-     */
-    static readonly NULL: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null;
-    /**
-     * Original type: 'jakarta.json.JsonValue'
-     */
-    static readonly TRUE: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null;
-    /**
-     * Original type: 'jakarta.json.JsonValue'
-     */
-    static readonly FALSE: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonValue'
@@ -40,14 +20,6 @@ export declare class JsonStructureClass extends JavaClass {
      */
     getValueSync(var0: string | null): jakarta_json_JsonValue | null;
     /**
-     * @return original return type: 'jakarta.json.JsonArray'
-     */
-    asJsonArray(): Promise<jakarta_json_JsonArray | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonArray'
-     */
-    asJsonArraySync(): jakarta_json_JsonArray | null;
-    /**
      * @return original return type: 'jakarta.json.JsonObject'
      */
     asJsonObject(): Promise<jakarta_json_JsonObject | null>;
@@ -55,6 +27,14 @@ export declare class JsonStructureClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonObject'
      */
     asJsonObjectSync(): jakarta_json_JsonObject | null;
+    /**
+     * @return original return type: 'jakarta.json.JsonArray'
+     */
+    asJsonArray(): Promise<jakarta_json_JsonArray | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonArray'
+     */
+    asJsonArraySync(): jakarta_json_JsonArray | null;
     /**
      * @return original return type: 'jakarta.json.JsonValue$ValueType'
      */
@@ -64,13 +44,25 @@ export declare class JsonStructureClass extends JavaClass {
      */
     getValueTypeSync(): jakarta_json_JsonValue$ValueType | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * Original type: 'jakarta.json.JsonValue'
      */
-    toString(): string;
+    static readonly NULL: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * Original type: 'jakarta.json.JsonObject'
      */
-    toStringSync(): string;
+    static readonly EMPTY_JSON_OBJECT: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null;
+    /**
+     * Original type: 'jakarta.json.JsonArray'
+     */
+    static readonly EMPTY_JSON_ARRAY: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null;
+    /**
+     * Original type: 'jakarta.json.JsonValue'
+     */
+    static readonly TRUE: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null;
+    /**
+     * Original type: 'jakarta.json.JsonValue'
+     */
+    static readonly FALSE: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -90,21 +82,21 @@ export interface JsonStructureInterface {
      */
     getValue?(var0: string | null): jakarta_json_JsonValue | null;
     /**
-     * @return original return type: 'jakarta.json.JsonArray'
-     */
-    asJsonArray?(): jakarta_json_JsonArray | null;
-    /**
      * @return original return type: 'jakarta.json.JsonObject'
      */
     asJsonObject?(): jakarta_json_JsonObject | null;
     /**
-     * @return original return type: 'jakarta.json.JsonValue$ValueType'
+     * @return original return type: 'jakarta.json.JsonArray'
      */
-    getValueType(): jakarta_json_JsonValue$ValueType | null;
+    asJsonArray?(): jakarta_json_JsonArray | null;
     /**
      * @return original return type: 'java.lang.String'
      */
     toString(): string;
+    /**
+     * @return original return type: 'jakarta.json.JsonValue$ValueType'
+     */
+    getValueType(): jakarta_json_JsonValue$ValueType | null;
 }
 /**
  * Create a proxy for the {@link JsonStructure} interface.
@@ -133,4 +125,3 @@ export declare class JsonStructure extends JsonStructure_base {
     private constructor();
 }
 export default JsonStructure;
-//# sourceMappingURL=JsonStructure.d.ts.map

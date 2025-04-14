@@ -18,16 +18,6 @@ export declare class AttributedCharacterIterator$AttributeClass extends JavaClas
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -46,6 +36,16 @@ export declare class AttributedCharacterIterator$AttributeClass extends JavaClas
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -106,4 +106,3 @@ declare const AttributedCharacterIterator$Attribute_base: typeof AttributedChara
 export declare class AttributedCharacterIterator$Attribute extends AttributedCharacterIterator$Attribute_base {
 }
 export default AttributedCharacterIterator$Attribute;
-//# sourceMappingURL=AttributedCharacterIterator$Attribute.d.ts.map

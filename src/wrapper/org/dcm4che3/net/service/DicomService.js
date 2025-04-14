@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DicomService = exports.createDicomServiceProxy = void 0;
+exports.DicomService = void 0;
+exports.createDicomServiceProxy = createDicomServiceProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DicomService} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDicomServiceProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.service.DicomService', methods, opts);
 }
-exports.createDicomServiceProxy = createDicomServiceProxy;
 /**
  * Class org.dcm4che3.net.service.DicomService.
  *

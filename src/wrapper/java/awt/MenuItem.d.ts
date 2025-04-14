@@ -134,14 +134,6 @@ export declare class MenuItemClass extends JavaClass {
      */
     removeActionListenerSync(var0: java_awt_event_ActionListener | JavaInterfaceProxy<java_awt_event_ActionListenerInterface> | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    enable(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    enableSync(): void;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -151,6 +143,14 @@ export declare class MenuItemClass extends JavaClass {
      * @return original return type: 'void'
      */
     enableSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'void'
+     */
+    enable(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    enableSync(): void;
     /**
      * @return original return type: 'int'
      */
@@ -329,6 +329,20 @@ export declare class MenuItemClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getActionCommandSync(): string | null;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.MenuItem'
+     */
+    static newInstanceAsync(): Promise<MenuItem>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.awt.MenuItem'
+     */
+    static newInstanceAsync(var0: string | null): Promise<MenuItem>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.MenuShortcut'
@@ -340,20 +354,6 @@ export declare class MenuItemClass extends JavaClass {
      * @return original return type: 'java.awt.MenuItem'
      */
     static newInstanceAsync(var0: string | null, var1: java_awt_MenuShortcut | null): Promise<MenuItem>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.MenuItem'
-     */
-    static newInstanceAsync(var0: string | null): Promise<MenuItem>;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.MenuItem'
-     */
-    static newInstanceAsync(): Promise<MenuItem>;
 }
 declare const MenuItem_base: typeof MenuItemClass;
 /**
@@ -368,4 +368,3 @@ declare const MenuItem_base: typeof MenuItemClass;
 export declare class MenuItem extends MenuItem_base {
 }
 export default MenuItem;
-//# sourceMappingURL=MenuItem.d.ts.map

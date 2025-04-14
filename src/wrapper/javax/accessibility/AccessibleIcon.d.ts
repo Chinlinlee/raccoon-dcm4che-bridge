@@ -97,4 +97,3 @@ export declare class AccessibleIcon extends AccessibleIcon_base {
     private constructor();
 }
 export default AccessibleIcon;
-//# sourceMappingURL=AccessibleIcon.d.ts.map

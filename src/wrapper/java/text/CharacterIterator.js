@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CharacterIterator = exports.createCharacterIteratorProxy = void 0;
+exports.CharacterIterator = void 0;
+exports.createCharacterIteratorProxy = createCharacterIteratorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link CharacterIterator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createCharacterIteratorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.text.CharacterIterator', methods, opts);
 }
-exports.createCharacterIteratorProxy = createCharacterIteratorProxy;
 /**
  * Class java.text.CharacterIterator.
  *

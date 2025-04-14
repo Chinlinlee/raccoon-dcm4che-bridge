@@ -144,4 +144,3 @@ export declare class AccessibleSelection extends AccessibleSelection_base {
     private constructor();
 }
 export default AccessibleSelection;
-//# sourceMappingURL=AccessibleSelection.d.ts.map

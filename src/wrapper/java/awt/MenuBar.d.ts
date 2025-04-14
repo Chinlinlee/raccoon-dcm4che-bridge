@@ -91,16 +91,6 @@ export declare class MenuBarClass extends JavaClass {
      */
     shortcutsSync(): java_util_Enumeration | null;
     /**
-     * @param var0 original type: 'java.awt.MenuComponent'
-     * @return original return type: 'void'
-     */
-    remove(var0: java_awt_MenuComponent | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.MenuComponent'
-     * @return original return type: 'void'
-     */
-    removeSync(var0: java_awt_MenuComponent | null): void;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -110,6 +100,16 @@ export declare class MenuBarClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.MenuComponent'
+     * @return original return type: 'void'
+     */
+    remove(var0: java_awt_MenuComponent | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.MenuComponent'
+     * @return original return type: 'void'
+     */
+    removeSync(var0: java_awt_MenuComponent | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -299,4 +299,3 @@ declare const MenuBar_base: typeof MenuBarClass;
 export declare class MenuBar extends MenuBar_base {
 }
 export default MenuBar;
-//# sourceMappingURL=MenuBar.d.ts.map

@@ -102,4 +102,3 @@ declare const PageAttributes$OriginType_base: typeof PageAttributes$OriginTypeCl
 export declare class PageAttributes$OriginType extends PageAttributes$OriginType_base {
 }
 export default PageAttributes$OriginType;
-//# sourceMappingURL=PageAttributes$OriginType.d.ts.map

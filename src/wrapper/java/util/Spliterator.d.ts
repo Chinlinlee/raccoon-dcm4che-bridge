@@ -186,4 +186,3 @@ export declare class Spliterator extends Spliterator_base {
     private constructor();
 }
 export default Spliterator;
-//# sourceMappingURL=Spliterator.d.ts.map

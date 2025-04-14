@@ -112,4 +112,3 @@ declare const FlavorEvent_base: typeof FlavorEventClass;
 export declare class FlavorEvent extends FlavorEvent_base {
 }
 export default FlavorEvent;
-//# sourceMappingURL=FlavorEvent.d.ts.map

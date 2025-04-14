@@ -106,4 +106,3 @@ export declare class TemporalAmount extends TemporalAmount_base {
     private constructor();
 }
 export default TemporalAmount;
-//# sourceMappingURL=TemporalAmount.d.ts.map

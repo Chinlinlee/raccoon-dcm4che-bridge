@@ -58,4 +58,3 @@ export declare class Runnable extends Runnable_base {
     private constructor();
 }
 export default Runnable;
-//# sourceMappingURL=Runnable.d.ts.map

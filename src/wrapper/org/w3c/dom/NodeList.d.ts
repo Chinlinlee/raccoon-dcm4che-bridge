@@ -75,4 +75,3 @@ export declare class NodeList extends NodeList_base {
     private constructor();
 }
 export default NodeList;
-//# sourceMappingURL=NodeList.d.ts.map

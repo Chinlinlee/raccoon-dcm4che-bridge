@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.XMLStreamWriter = exports.createXMLStreamWriterProxy = void 0;
+exports.XMLStreamWriter = void 0;
+exports.createXMLStreamWriterProxy = createXMLStreamWriterProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link XMLStreamWriter} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createXMLStreamWriterProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.xml.stream.XMLStreamWriter', methods, opts);
 }
-exports.createXMLStreamWriterProxy = createXMLStreamWriterProxy;
 /**
  * Class javax.xml.stream.XMLStreamWriter.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContainerListener = exports.createContainerListenerProxy = void 0;
+exports.ContainerListener = void 0;
+exports.createContainerListenerProxy = createContainerListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ContainerListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createContainerListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.event.ContainerListener', methods, opts);
 }
-exports.createContainerListenerProxy = createContainerListenerProxy;
 /**
  * Class java.awt.event.ContainerListener.
  *

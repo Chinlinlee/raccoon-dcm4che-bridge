@@ -92,4 +92,3 @@ export declare class KeyListener extends KeyListener_base {
     private constructor();
 }
 export default KeyListener;
-//# sourceMappingURL=KeyListener.d.ts.map

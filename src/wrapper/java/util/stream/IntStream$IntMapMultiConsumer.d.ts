@@ -66,4 +66,3 @@ export declare class IntStream$IntMapMultiConsumer extends IntStream$IntMapMulti
     private constructor();
 }
 export default IntStream$IntMapMultiConsumer;
-//# sourceMappingURL=IntStream$IntMapMultiConsumer.d.ts.map

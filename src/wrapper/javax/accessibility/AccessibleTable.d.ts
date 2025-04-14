@@ -372,4 +372,3 @@ export declare class AccessibleTable extends AccessibleTable_base {
     private constructor();
 }
 export default AccessibleTable;
-//# sourceMappingURL=AccessibleTable.d.ts.map

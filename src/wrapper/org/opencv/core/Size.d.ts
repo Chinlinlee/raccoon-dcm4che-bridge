@@ -180,4 +180,3 @@ declare const Size_base: typeof SizeClass;
 export declare class Size extends Size_base {
 }
 export default Size;
-//# sourceMappingURL=Size.d.ts.map

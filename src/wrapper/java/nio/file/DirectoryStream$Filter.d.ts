@@ -61,4 +61,3 @@ export declare class DirectoryStream$Filter extends DirectoryStream$Filter_base 
     private constructor();
 }
 export default DirectoryStream$Filter;
-//# sourceMappingURL=DirectoryStream$Filter.d.ts.map

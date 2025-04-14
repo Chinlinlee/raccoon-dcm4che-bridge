@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Transcoder$Handler = exports.createTranscoder$HandlerProxy = void 0;
+exports.Transcoder$Handler = void 0;
+exports.createTranscoder$HandlerProxy = createTranscoder$HandlerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Transcoder$Handler} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTranscoder$HandlerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.imageio.codec.Transcoder$Handler', methods, opts);
 }
-exports.createTranscoder$HandlerProxy = createTranscoder$HandlerProxy;
 /**
  * Class org.dcm4che3.imageio.codec.Transcoder$Handler.
  *

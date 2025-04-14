@@ -110,4 +110,3 @@ export declare class DOMConfiguration extends DOMConfiguration_base {
     private constructor();
 }
 export default DOMConfiguration;
-//# sourceMappingURL=DOMConfiguration.d.ts.map

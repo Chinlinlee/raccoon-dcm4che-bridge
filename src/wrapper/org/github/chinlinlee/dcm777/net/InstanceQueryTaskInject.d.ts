@@ -6,14 +6,6 @@ import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridg
  */
 export declare class InstanceQueryTaskInjectClass extends JavaClass {
     /**
-     * @return original return type: 'void'
-     */
-    getInstance(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    getInstanceSync(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextInstance(): Promise<boolean>;
@@ -21,6 +13,14 @@ export declare class InstanceQueryTaskInjectClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     findNextInstanceSync(): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    getInstance(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    getInstanceSync(): void;
     /**
      * @return original return type: 'void'
      */
@@ -43,13 +43,13 @@ export declare class InstanceQueryTaskInjectClass extends JavaClass {
  */
 export interface InstanceQueryTaskInjectInterface {
     /**
-     * @return original return type: 'void'
-     */
-    getInstance(): void;
-    /**
      * @return original return type: 'boolean'
      */
     findNextInstance(): boolean;
+    /**
+     * @return original return type: 'void'
+     */
+    getInstance(): void;
     /**
      * @return original return type: 'void'
      */
@@ -82,4 +82,3 @@ export declare class InstanceQueryTaskInject extends InstanceQueryTaskInject_bas
     private constructor();
 }
 export default InstanceQueryTaskInject;
-//# sourceMappingURL=InstanceQueryTaskInject.d.ts.map

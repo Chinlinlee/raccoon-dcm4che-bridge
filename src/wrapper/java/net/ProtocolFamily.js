@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProtocolFamily = exports.createProtocolFamilyProxy = void 0;
+exports.ProtocolFamily = void 0;
+exports.createProtocolFamilyProxy = createProtocolFamilyProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ProtocolFamily} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createProtocolFamilyProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.net.ProtocolFamily', methods, opts);
 }
-exports.createProtocolFamilyProxy = createProtocolFamilyProxy;
 /**
  * Class java.net.ProtocolFamily.
  *

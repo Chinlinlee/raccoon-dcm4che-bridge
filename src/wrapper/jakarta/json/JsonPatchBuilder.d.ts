@@ -59,14 +59,16 @@ export declare class JsonPatchBuilderClass extends JavaClass {
     addSync(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
-    remove(var0: string | null): Promise<JsonPatchBuilder | null>;
+    move(var0: string | null, var1: string | null): Promise<JsonPatchBuilder | null>;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
-    removeSync(var0: string | null): JsonPatchBuilder | null;
+    moveSync(var0: string | null, var1: string | null): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'jakarta.json.JsonValue'
@@ -115,6 +117,14 @@ export declare class JsonPatchBuilderClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     testSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
+    /**
+     * @return original return type: 'jakarta.json.JsonPatch'
+     */
+    build(): Promise<jakarta_json_JsonPatch | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonPatch'
+     */
+    buildSync(): jakarta_json_JsonPatch | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -176,25 +186,15 @@ export declare class JsonPatchBuilderClass extends JavaClass {
      */
     copySync(var0: string | null, var1: string | null): JsonPatchBuilder | null;
     /**
-     * @return original return type: 'jakarta.json.JsonPatch'
-     */
-    build(): Promise<jakarta_json_JsonPatch | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonPatch'
-     */
-    buildSync(): jakarta_json_JsonPatch | null;
-    /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
-    move(var0: string | null, var1: string | null): Promise<JsonPatchBuilder | null>;
+    remove(var0: string | null): Promise<JsonPatchBuilder | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
-    moveSync(var0: string | null, var1: string | null): JsonPatchBuilder | null;
+    removeSync(var0: string | null): JsonPatchBuilder | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -234,9 +234,10 @@ export interface JsonPatchBuilderInterface {
     add(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
-    remove(var0: string | null): JsonPatchBuilder | null;
+    move(var0: string | null, var1: string | null): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'jakarta.json.JsonValue'
@@ -261,6 +262,10 @@ export interface JsonPatchBuilderInterface {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     test(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
+    /**
+     * @return original return type: 'jakarta.json.JsonPatch'
+     */
+    build(): jakarta_json_JsonPatch | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -292,15 +297,10 @@ export interface JsonPatchBuilderInterface {
      */
     copy(var0: string | null, var1: string | null): JsonPatchBuilder | null;
     /**
-     * @return original return type: 'jakarta.json.JsonPatch'
-     */
-    build(): jakarta_json_JsonPatch | null;
-    /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
-    move(var0: string | null, var1: string | null): JsonPatchBuilder | null;
+    remove(var0: string | null): JsonPatchBuilder | null;
 }
 /**
  * Create a proxy for the {@link JsonPatchBuilder} interface.
@@ -329,4 +329,3 @@ export declare class JsonPatchBuilder extends JsonPatchBuilder_base {
     private constructor();
 }
 export default JsonPatchBuilder;
-//# sourceMappingURL=JsonPatchBuilder.d.ts.map

@@ -4,9 +4,8 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Set as java_util_Set, SetInterface as java_util_SetInterface } from "./../../../java/util/Set";
-import { Callable as java_util_concurrent_Callable, CallableInterface as java_util_concurrent_CallableInterface } from "./../../../java/util/concurrent/Callable";
-import { PrivilegedAction as java_security_PrivilegedAction, PrivilegedActionInterface as java_security_PrivilegedActionInterface } from "./../../../java/security/PrivilegedAction";
 import { PrivilegedExceptionAction as java_security_PrivilegedExceptionAction, PrivilegedExceptionActionInterface as java_security_PrivilegedExceptionActionInterface } from "./../../../java/security/PrivilegedExceptionAction";
+import { PrivilegedAction as java_security_PrivilegedAction, PrivilegedActionInterface as java_security_PrivilegedActionInterface } from "./../../../java/security/PrivilegedAction";
 import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 /**
  * This class just defines types, you should import {@link Subject} instead of this.
@@ -34,16 +33,6 @@ export declare class SubjectClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -62,6 +51,16 @@ export declare class SubjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.util.Set'
      */
@@ -89,18 +88,6 @@ export declare class SubjectClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.util.concurrent.Callable'
-     * @return original return type: 'java.lang.Object'
-     */
-    static callAs(var0: SubjectClass | null, var1: java_util_concurrent_Callable | JavaInterfaceProxy<java_util_concurrent_CallableInterface> | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.util.concurrent.Callable'
-     * @return original return type: 'java.lang.Object'
-     */
-    static callAsSync(var0: SubjectClass | null, var1: java_util_concurrent_Callable | JavaInterfaceProxy<java_util_concurrent_CallableInterface> | null): BasicOrJavaType | null;
-    /**
      * @return original return type: 'java.util.Set'
      */
     getPrincipals(): Promise<java_util_Set | null>;
@@ -119,14 +106,6 @@ export declare class SubjectClass extends JavaClass {
      */
     getPrincipalsSync(var0: java_lang_Class | null): java_util_Set | null;
     /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPublicCredentials(): Promise<java_util_Set | null>;
-    /**
-     * @return original return type: 'java.util.Set'
-     */
-    getPublicCredentialsSync(): java_util_Set | null;
-    /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'java.util.Set'
      */
@@ -137,6 +116,14 @@ export declare class SubjectClass extends JavaClass {
      */
     getPublicCredentialsSync(var0: java_lang_Class | null): java_util_Set | null;
     /**
+     * @return original return type: 'java.util.Set'
+     */
+    getPublicCredentials(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    getPublicCredentialsSync(): java_util_Set | null;
+    /**
      * @return original return type: 'void'
      */
     notify(): Promise<void>;
@@ -144,20 +131,6 @@ export declare class SubjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifySync(): void;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedAction'
-     * @param var2 original type: 'java.security.AccessControlContext'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsPrivileged(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'javax.security.auth.Subject'
-     * @param var1 original type: 'java.security.PrivilegedAction'
-     * @param var2 original type: 'java.security.AccessControlContext'
-     * @return original return type: 'java.lang.Object'
-     */
-    static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'javax.security.auth.Subject'
      * @param var1 original type: 'java.security.PrivilegedExceptionAction'
@@ -173,13 +146,19 @@ export declare class SubjectClass extends JavaClass {
      */
     static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedExceptionAction | JavaInterfaceProxy<java_security_PrivilegedExceptionActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'javax.security.auth.Subject'
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedAction'
+     * @param var2 original type: 'java.security.AccessControlContext'
+     * @return original return type: 'java.lang.Object'
      */
-    static current(): Promise<Subject | null>;
+    static doAsPrivileged(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): Promise<BasicOrJavaType | null>;
     /**
-     * @return original return type: 'javax.security.auth.Subject'
+     * @param var0 original type: 'javax.security.auth.Subject'
+     * @param var1 original type: 'java.security.PrivilegedAction'
+     * @param var2 original type: 'java.security.AccessControlContext'
+     * @return original return type: 'java.lang.Object'
      */
-    static currentSync(): Subject | null;
+    static doAsPrivilegedSync(var0: SubjectClass | null, var1: java_security_PrivilegedAction | JavaInterfaceProxy<java_security_PrivilegedActionInterface> | null, var2: java_security_AccessControlContext | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'javax.security.auth.Subject'
      * @param var1 original type: 'java.security.PrivilegedAction'
@@ -272,4 +251,3 @@ declare const Subject_base: typeof SubjectClass;
 export declare class Subject extends Subject_base {
 }
 export default Subject;
-//# sourceMappingURL=Subject.d.ts.map

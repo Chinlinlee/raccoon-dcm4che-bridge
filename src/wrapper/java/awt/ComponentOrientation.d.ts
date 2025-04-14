@@ -144,4 +144,3 @@ declare const ComponentOrientation_base: typeof ComponentOrientationClass;
 export declare class ComponentOrientation extends ComponentOrientation_base {
 }
 export default ComponentOrientation;
-//# sourceMappingURL=ComponentOrientation.d.ts.map

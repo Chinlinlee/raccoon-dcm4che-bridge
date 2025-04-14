@@ -1,5 +1,3 @@
-/// <reference types="node" />
-/// <reference types="node" />
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
 import { ColorModel as java_awt_image_ColorModel } from "./ColorModel";
@@ -237,4 +235,3 @@ export declare class ImageConsumer extends ImageConsumer_base {
     private constructor();
 }
 export default ImageConsumer;
-//# sourceMappingURL=ImageConsumer.d.ts.map

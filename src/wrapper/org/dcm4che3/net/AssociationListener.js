@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AssociationListener = exports.createAssociationListenerProxy = void 0;
+exports.AssociationListener = void 0;
+exports.createAssociationListenerProxy = createAssociationListenerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AssociationListener} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAssociationListenerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.AssociationListener', methods, opts);
 }
-exports.createAssociationListenerProxy = createAssociationListenerProxy;
 /**
  * Class org.dcm4che3.net.AssociationListener.
  *

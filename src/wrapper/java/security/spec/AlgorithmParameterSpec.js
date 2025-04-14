@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AlgorithmParameterSpec = exports.createAlgorithmParameterSpecProxy = void 0;
+exports.AlgorithmParameterSpec = void 0;
+exports.createAlgorithmParameterSpecProxy = createAlgorithmParameterSpecProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AlgorithmParameterSpec} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAlgorithmParameterSpecProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.security.spec.AlgorithmParameterSpec', methods, opts);
 }
-exports.createAlgorithmParameterSpecProxy = createAlgorithmParameterSpecProxy;
 /**
  * Class java.security.spec.AlgorithmParameterSpec.
  *

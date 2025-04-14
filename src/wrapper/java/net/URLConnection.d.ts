@@ -101,14 +101,6 @@ export declare class URLConnectionClass extends JavaClass {
      */
     static getDefaultAllowUserInteractionSync(): boolean;
     /**
-     * @return original return type: 'boolean'
-     */
-    getDefaultUseCaches(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    getDefaultUseCachesSync(): boolean;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
@@ -118,6 +110,14 @@ export declare class URLConnectionClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static getDefaultUseCachesSync(var0: string | null): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getDefaultUseCaches(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getDefaultUseCachesSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -177,16 +177,6 @@ export declare class URLConnectionClass extends JavaClass {
      */
     getURLSync(): java_net_URL | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getHeaderField(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    getHeaderFieldSync(var0: java_lang_Integer | number): string | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
@@ -196,6 +186,16 @@ export declare class URLConnectionClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getHeaderFieldSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getHeaderField(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    getHeaderFieldSync(var0: java_lang_Integer | number): string | null;
     /**
      * @return original return type: 'java.util.Map'
      */
@@ -274,16 +274,6 @@ export declare class URLConnectionClass extends JavaClass {
     setDoOutputSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -303,6 +293,16 @@ export declare class URLConnectionClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @return original return type: 'long'
      */
     getLastModified(): Promise<number>;
@@ -321,6 +321,14 @@ export declare class URLConnectionClass extends JavaClass {
      */
     setIfModifiedSinceSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @return original return type: 'int'
+     */
+    getReadTimeout(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getReadTimeoutSync(): number;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     getContent(): Promise<BasicOrJavaType | null>;
@@ -338,14 +346,6 @@ export declare class URLConnectionClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     getContentSync(var0: (java_lang_Class | null)[] | null): BasicOrJavaType | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getReadTimeout(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getReadTimeoutSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -427,14 +427,6 @@ export declare class URLConnectionClass extends JavaClass {
      */
     static setDefaultRequestPropertySync(var0: string | null, var1: string | null): void;
     /**
-     * @return original return type: 'long'
-     */
-    getDate(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getDateSync(): number;
-    /**
      * @return original return type: 'java.net.FileNameMap'
      */
     static getFileNameMap(): Promise<java_net_FileNameMap | null>;
@@ -443,13 +435,13 @@ export declare class URLConnectionClass extends JavaClass {
      */
     static getFileNameMapSync(): java_net_FileNameMap | null;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'long'
      */
-    connect(): Promise<void>;
+    getDate(): Promise<number>;
     /**
-     * @return original return type: 'void'
+     * @return original return type: 'long'
      */
-    connectSync(): void;
+    getDateSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
@@ -460,6 +452,14 @@ export declare class URLConnectionClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getHeaderFieldKeySync(var0: java_lang_Integer | number): string | null;
+    /**
+     * @return original return type: 'void'
+     */
+    connect(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    connectSync(): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -591,4 +591,3 @@ export declare class URLConnection extends URLConnection_base {
     private constructor();
 }
 export default URLConnection;
-//# sourceMappingURL=URLConnection.d.ts.map

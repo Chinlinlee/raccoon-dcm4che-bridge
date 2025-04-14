@@ -1,14 +1,14 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
-import { RetrieveTask as org_dcm4che3_net_service_RetrieveTask } from "./../../../../dcm4che3/net/service/RetrieveTask";
+import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { Association as org_dcm4che3_net_Association } from "./../../../../dcm4che3/net/Association";
+import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
+import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
+import { RetrieveTask as org_dcm4che3_net_service_RetrieveTask } from "./../../../../dcm4che3/net/service/RetrieveTask";
 import { PresentationContext as org_dcm4che3_net_pdu_PresentationContext } from "./../../../../dcm4che3/net/pdu/PresentationContext";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../../../dcm4che3/data/Attributes";
 import { EnumSet as java_util_EnumSet } from "./../../../../../java/util/EnumSet";
 import { Dimse as org_dcm4che3_net_Dimse } from "./../../../../dcm4che3/net/Dimse";
 import { PDVInputStream as org_dcm4che3_net_PDVInputStream } from "./../../../../dcm4che3/net/PDVInputStream";
-import { Long as java_lang_Long } from "./../../../../../java/lang/Long";
-import { Integer as java_lang_Integer } from "./../../../../../java/lang/Integer";
-import { Class as java_lang_Class } from "./../../../../../java/lang/Class";
 import { CMoveSCPInject as org_github_chinlinlee_dcm777_net_CMoveSCPInject, CMoveSCPInjectInterface as org_github_chinlinlee_dcm777_net_CMoveSCPInjectInterface } from "./CMoveSCPInject";
 /**
  * This class just defines types, you should import {@link SimpleCMoveSCP} instead of this.
@@ -17,73 +17,13 @@ import { CMoveSCPInject as org_github_chinlinlee_dcm777_net_CMoveSCPInject, CMov
  */
 export declare class SimpleCMoveSCPClass extends JavaClass {
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.net.service.RetrieveTask'
+     * @return original return type: 'java.lang.Class'
      */
-    calculateMatches(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): Promise<org_dcm4che3_net_service_RetrieveTask | null>;
+    getClass(): Promise<java_lang_Class>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'org.dcm4che3.net.service.RetrieveTask'
+     * @return original return type: 'java.lang.Class'
      */
-    calculateMatchesSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): org_dcm4che3_net_service_RetrieveTask | null;
-    /**
-     * @return original return type: 'java.util.EnumSet'
-     */
-    getQrLevels(): Promise<java_util_EnumSet | null>;
-    /**
-     * @return original return type: 'java.util.EnumSet'
-     */
-    getQrLevelsSync(): java_util_EnumSet | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
-     */
-    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'void'
-     */
-    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
-     * @return original return type: 'void'
-     */
-    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Association'
-     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
-     * @param var2 original type: 'org.dcm4che3.net.Dimse'
-     * @param var3 original type: 'org.dcm4che3.data.Attributes'
-     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
-     * @return original return type: 'void'
-     */
-    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClasses(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getSOPClassesSync(): (string | null)[] | null;
+    getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'
@@ -125,6 +65,30 @@ export declare class SimpleCMoveSCPClass extends JavaClass {
      */
     waitSync(var0: java_lang_Long | bigint | number): void;
     /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.net.service.RetrieveTask'
+     */
+    calculateMatches(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): Promise<org_dcm4che3_net_service_RetrieveTask | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'org.dcm4che3.net.service.RetrieveTask'
+     */
+    calculateMatchesSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null): org_dcm4che3_net_service_RetrieveTask | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -135,29 +99,65 @@ export declare class SimpleCMoveSCPClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toString(): string;
+    notifyAll(): Promise<void>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    toStringAsync(): Promise<string>;
+    notifyAllSync(): void;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.util.EnumSet'
      */
-    hashCode(): Promise<number>;
+    getQrLevels(): Promise<java_util_EnumSet | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.util.EnumSet'
      */
-    hashCodeSync(): number;
+    getQrLevelsSync(): java_util_EnumSet | null;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'java.lang.String[]'
      */
-    getClass(): Promise<java_lang_Class>;
+    getSOPClasses(): Promise<(string | null)[] | null>;
     /**
-     * @return original return type: 'java.lang.Class'
+     * @return original return type: 'java.lang.String[]'
      */
-    getClassSync(): java_lang_Class;
+    getSOPClassesSync(): (string | null)[] | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
+     */
+    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'void'
+     */
+    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_data_Attributes | null): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'void'
+     */
+    onDimseRQ(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Association'
+     * @param var1 original type: 'org.dcm4che3.net.pdu.PresentationContext'
+     * @param var2 original type: 'org.dcm4che3.net.Dimse'
+     * @param var3 original type: 'org.dcm4che3.data.Attributes'
+     * @param var4 original type: 'org.dcm4che3.net.PDVInputStream'
+     * @return original return type: 'void'
+     */
+    onDimseRQSync(var0: org_dcm4che3_net_Association | null, var1: org_dcm4che3_net_pdu_PresentationContext | null, var2: org_dcm4che3_net_Dimse | null, var3: org_dcm4che3_data_Attributes | null, var4: org_dcm4che3_net_PDVInputStream | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -167,13 +167,11 @@ export declare class SimpleCMoveSCPClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CMoveSCPInject'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.util.EnumSet'
      */
-    notifyAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    notifyAllSync(): void;
+    constructor(var0: org_github_chinlinlee_dcm777_net_CMoveSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CMoveSCPInjectInterface> | null, var1: string | null, var2: java_util_EnumSet | null);
     /**
      * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CMoveSCPInject'
      * @param var1 original type: 'java.lang.String'
@@ -181,12 +179,6 @@ export declare class SimpleCMoveSCPClass extends JavaClass {
      * @return original return type: 'org.github.chinlinlee.dcm777.net.SimpleCMoveSCP'
      */
     static newInstanceAsync(var0: org_github_chinlinlee_dcm777_net_CMoveSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CMoveSCPInjectInterface> | null, var1: string | null, var2: java_util_EnumSet | null): Promise<SimpleCMoveSCP>;
-    /**
-     * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CMoveSCPInject'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.util.EnumSet'
-     */
-    constructor(var0: org_github_chinlinlee_dcm777_net_CMoveSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CMoveSCPInjectInterface> | null, var1: string | null, var2: java_util_EnumSet | null);
 }
 declare const SimpleCMoveSCP_base: typeof SimpleCMoveSCPClass;
 /**
@@ -201,4 +193,3 @@ declare const SimpleCMoveSCP_base: typeof SimpleCMoveSCPClass;
 export declare class SimpleCMoveSCP extends SimpleCMoveSCP_base {
 }
 export default SimpleCMoveSCP;
-//# sourceMappingURL=SimpleCMoveSCP.d.ts.map

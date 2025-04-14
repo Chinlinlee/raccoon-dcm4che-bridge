@@ -202,4 +202,3 @@ export declare class IIOReadProgressListener extends IIOReadProgressListener_bas
     private constructor();
 }
 export default IIOReadProgressListener;
-//# sourceMappingURL=IIOReadProgressListener.d.ts.map

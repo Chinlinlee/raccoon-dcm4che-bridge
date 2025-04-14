@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PathIterator = exports.createPathIteratorProxy = void 0;
+exports.PathIterator = void 0;
+exports.createPathIteratorProxy = createPathIteratorProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link PathIterator} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPathIteratorProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.geom.PathIterator', methods, opts);
 }
-exports.createPathIteratorProxy = createPathIteratorProxy;
 /**
  * Class java.awt.geom.PathIterator.
  *

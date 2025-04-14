@@ -99,4 +99,3 @@ export declare class Appendable extends Appendable_base {
     private constructor();
 }
 export default Appendable;
-//# sourceMappingURL=Appendable.d.ts.map

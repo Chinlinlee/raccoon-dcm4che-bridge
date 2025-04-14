@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AccessibleIcon = exports.createAccessibleIconProxy = void 0;
+exports.AccessibleIcon = void 0;
+exports.createAccessibleIconProxy = createAccessibleIconProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AccessibleIcon} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAccessibleIconProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.accessibility.AccessibleIcon', methods, opts);
 }
-exports.createAccessibleIconProxy = createAccessibleIconProxy;
 /**
  * Class javax.accessibility.AccessibleIcon.
  *

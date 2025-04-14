@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessingInstruction = exports.createProcessingInstructionProxy = void 0;
+exports.ProcessingInstruction = void 0;
+exports.createProcessingInstructionProxy = createProcessingInstructionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link ProcessingInstruction} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createProcessingInstructionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.ProcessingInstruction', methods, opts);
 }
-exports.createProcessingInstructionProxy = createProcessingInstructionProxy;
 /**
  * Class org.w3c.dom.ProcessingInstruction.
  *

@@ -20935,4 +20935,3 @@ declare const Tag_base: typeof TagClass;
 export declare class Tag extends Tag_base {
 }
 export default Tag;
-//# sourceMappingURL=Tag.d.ts.map

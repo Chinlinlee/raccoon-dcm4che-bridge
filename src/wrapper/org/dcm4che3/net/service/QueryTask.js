@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.QueryTask = exports.createQueryTaskProxy = void 0;
+exports.QueryTask = void 0;
+exports.createQueryTaskProxy = createQueryTaskProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link QueryTask} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createQueryTaskProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.net.service.QueryTask', methods, opts);
 }
-exports.createQueryTaskProxy = createQueryTaskProxy;
 /**
  * Class org.dcm4che3.net.service.QueryTask.
  *

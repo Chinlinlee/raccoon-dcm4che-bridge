@@ -79,14 +79,6 @@ export declare class LineMetricsClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'float'
-     */
-    getAscent(): Promise<number>;
-    /**
-     * @return original return type: 'float'
-     */
-    getAscentSync(): number;
-    /**
      * @return original return type: 'int'
      */
     getBaselineIndex(): Promise<number>;
@@ -94,6 +86,14 @@ export declare class LineMetricsClass extends JavaClass {
      * @return original return type: 'int'
      */
     getBaselineIndexSync(): number;
+    /**
+     * @return original return type: 'float'
+     */
+    getAscent(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    getAscentSync(): number;
     /**
      * @return original return type: 'float'
      */
@@ -187,4 +187,3 @@ export declare class LineMetrics extends LineMetrics_base {
     private constructor();
 }
 export default LineMetrics;
-//# sourceMappingURL=LineMetrics.d.ts.map

@@ -299,4 +299,3 @@ export declare class ResourceBundle extends ResourceBundle_base {
     private constructor();
 }
 export default ResourceBundle;
-//# sourceMappingURL=ResourceBundle.d.ts.map

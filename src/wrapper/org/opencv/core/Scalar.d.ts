@@ -230,4 +230,3 @@ declare const Scalar_base: typeof ScalarClass;
 export declare class Scalar extends Scalar_base {
 }
 export default Scalar;
-//# sourceMappingURL=Scalar.d.ts.map

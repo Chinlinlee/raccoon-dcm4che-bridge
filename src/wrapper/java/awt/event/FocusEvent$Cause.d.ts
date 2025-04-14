@@ -222,4 +222,3 @@ declare const FocusEvent$Cause_base: typeof FocusEvent$CauseClass;
 export declare class FocusEvent$Cause extends FocusEvent$Cause_base {
 }
 export default FocusEvent$Cause;
-//# sourceMappingURL=FocusEvent$Cause.d.ts.map

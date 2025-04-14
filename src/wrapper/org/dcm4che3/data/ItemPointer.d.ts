@@ -18,16 +18,6 @@ export declare class ItemPointerClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -46,6 +36,16 @@ export declare class ItemPointerClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'org.dcm4che3.data.ItemPointer'
      * @return original return type: 'boolean'
@@ -160,4 +160,3 @@ declare const ItemPointer_base: typeof ItemPointerClass;
 export declare class ItemPointer extends ItemPointer_base {
 }
 export default ItemPointer;
-//# sourceMappingURL=ItemPointer.d.ts.map

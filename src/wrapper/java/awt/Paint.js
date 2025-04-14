@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Paint = exports.createPaintProxy = void 0;
+exports.Paint = void 0;
+exports.createPaintProxy = createPaintProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Paint} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createPaintProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('java.awt.Paint', methods, opts);
 }
-exports.createPaintProxy = createPaintProxy;
 /**
  * Class java.awt.Paint.
  *

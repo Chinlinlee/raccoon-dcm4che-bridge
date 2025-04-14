@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonLocation = exports.createJsonLocationProxy = void 0;
+exports.JsonLocation = void 0;
+exports.createJsonLocationProxy = createJsonLocationProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonLocation} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonLocationProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.stream.JsonLocation', methods, opts);
 }
-exports.createJsonLocationProxy = createJsonLocationProxy;
 /**
  * Class jakarta.json.stream.JsonLocation.
  *

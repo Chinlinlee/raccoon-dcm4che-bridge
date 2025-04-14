@@ -19,16 +19,6 @@ export declare class InputStreamClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,15 +38,15 @@ export declare class InputStreamClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'int'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    read(var0: Buffer | null): Promise<number>;
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
     /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'int'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    readSync(var0: Buffer | null): number;
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -71,6 +61,16 @@ export declare class InputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    read(var0: Buffer | null): Promise<number>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'int'
+     */
+    readSync(var0: Buffer | null): number;
     /**
      * @return original return type: 'int'
      */
@@ -166,13 +166,15 @@ export declare class InputStreamClass extends JavaClass {
      */
     readAllBytesSync(): Buffer | null;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
      */
-    reset(): Promise<void>;
+    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
      */
-    resetSync(): void;
+    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -188,15 +190,13 @@ export declare class InputStreamClass extends JavaClass {
      */
     readNBytesSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
+     * @return original return type: 'void'
      */
-    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
+    reset(): Promise<void>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
+     * @return original return type: 'void'
      */
-    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
+    resetSync(): void;
     /**
      * @return original return type: 'void'
      */
@@ -244,4 +244,3 @@ export declare class InputStream extends InputStream_base {
     private constructor();
 }
 export default InputStream;
-//# sourceMappingURL=InputStream.d.ts.map

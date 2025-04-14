@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DocumentFragment = exports.createDocumentFragmentProxy = void 0;
+exports.DocumentFragment = void 0;
+exports.createDocumentFragmentProxy = createDocumentFragmentProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link DocumentFragment} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createDocumentFragmentProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.DocumentFragment', methods, opts);
 }
-exports.createDocumentFragmentProxy = createDocumentFragmentProxy;
 /**
  * Class org.w3c.dom.DocumentFragment.
  *

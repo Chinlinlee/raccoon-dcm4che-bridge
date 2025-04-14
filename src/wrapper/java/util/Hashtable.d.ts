@@ -412,4 +412,3 @@ declare const Hashtable_base: typeof HashtableClass;
 export declare class Hashtable extends Hashtable_base {
 }
 export default Hashtable;
-//# sourceMappingURL=Hashtable.d.ts.map

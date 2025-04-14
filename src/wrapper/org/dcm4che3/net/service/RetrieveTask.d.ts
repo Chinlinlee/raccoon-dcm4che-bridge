@@ -74,4 +74,3 @@ export declare class RetrieveTask extends RetrieveTask_base {
     private constructor();
 }
 export default RetrieveTask;
-//# sourceMappingURL=RetrieveTask.d.ts.map

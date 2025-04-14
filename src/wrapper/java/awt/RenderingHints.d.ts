@@ -569,4 +569,3 @@ declare const RenderingHints_base: typeof RenderingHintsClass;
 export declare class RenderingHints extends RenderingHints_base {
 }
 export default RenderingHints;
-//# sourceMappingURL=RenderingHints.d.ts.map

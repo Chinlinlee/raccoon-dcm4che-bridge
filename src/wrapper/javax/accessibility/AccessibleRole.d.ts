@@ -365,4 +365,3 @@ declare const AccessibleRole_base: typeof AccessibleRoleClass;
 export declare class AccessibleRole extends AccessibleRole_base {
 }
 export default AccessibleRole;
-//# sourceMappingURL=AccessibleRole.d.ts.map

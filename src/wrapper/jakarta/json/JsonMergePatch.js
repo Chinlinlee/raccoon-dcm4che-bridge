@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JsonMergePatch = exports.createJsonMergePatchProxy = void 0;
+exports.JsonMergePatch = void 0;
+exports.createJsonMergePatchProxy = createJsonMergePatchProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link JsonMergePatch} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createJsonMergePatchProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('jakarta.json.JsonMergePatch', methods, opts);
 }
-exports.createJsonMergePatchProxy = createJsonMergePatchProxy;
 /**
  * Class jakarta.json.JsonMergePatch.
  *

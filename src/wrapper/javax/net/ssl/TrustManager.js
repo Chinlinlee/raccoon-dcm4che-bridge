@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TrustManager = exports.createTrustManagerProxy = void 0;
+exports.TrustManager = void 0;
+exports.createTrustManagerProxy = createTrustManagerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link TrustManager} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createTrustManagerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.net.ssl.TrustManager', methods, opts);
 }
-exports.createTrustManagerProxy = createTrustManagerProxy;
 /**
  * Class javax.net.ssl.TrustManager.
  *

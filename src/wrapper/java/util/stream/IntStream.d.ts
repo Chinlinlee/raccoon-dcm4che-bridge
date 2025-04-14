@@ -301,6 +301,14 @@ export declare class IntStreamClass extends JavaClass {
      */
     sequentialSync(): IntStream | null;
     /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    distinct(): Promise<IntStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    distinctSync(): IntStream | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.util.stream.IntStream'
@@ -312,14 +320,6 @@ export declare class IntStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     static rangeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): IntStream | null;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    distinct(): Promise<IntStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    distinctSync(): IntStream | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.util.stream.IntStream'
@@ -363,14 +363,6 @@ export declare class IntStreamClass extends JavaClass {
      */
     minSync(): java_util_OptionalInt | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallel(): Promise<java_util_stream_BaseStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallelSync(): java_util_stream_BaseStream | null;
-    /**
      * @return original return type: 'java.util.stream.IntStream'
      */
     parallel(): Promise<IntStream | null>;
@@ -378,6 +370,14 @@ export declare class IntStreamClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     parallelSync(): IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallel(): Promise<java_util_stream_BaseStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallelSync(): java_util_stream_BaseStream | null;
     /**
      * @param var0 original type: 'java.util.function.IntToLongFunction'
      * @return original return type: 'java.util.stream.LongStream'
@@ -720,15 +720,15 @@ export interface IntStreamInterface {
      */
     min(): java_util_OptionalInt | null;
     /**
-     * @return original return type: 'java.util.stream.BaseStream'
-     */
-    parallel?(): java_util_stream_BaseStream | null;
-    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @return original return type: 'java.util.stream.IntStream'
      */
     parallel?(): IntStream | null;
+    /**
+     * @return original return type: 'java.util.stream.BaseStream'
+     */
+    parallel?(): java_util_stream_BaseStream | null;
     /**
      * @param var0 original type: 'java.util.function.IntToLongFunction'
      * @return original return type: 'java.util.stream.LongStream'
@@ -813,4 +813,3 @@ export declare class IntStream extends IntStream_base {
     private constructor();
 }
 export default IntStream;
-//# sourceMappingURL=IntStream.d.ts.map

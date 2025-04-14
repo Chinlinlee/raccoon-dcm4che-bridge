@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SupplierEx = exports.createSupplierExProxy = void 0;
+exports.SupplierEx = void 0;
+exports.createSupplierExProxy = createSupplierExProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link SupplierEx} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createSupplierExProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.dcm4che3.img.util.SupplierEx', methods, opts);
 }
-exports.createSupplierExProxy = createSupplierExProxy;
 /**
  * Class org.dcm4che3.img.util.SupplierEx.
  *

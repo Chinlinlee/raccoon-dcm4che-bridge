@@ -247,4 +247,3 @@ export declare class IIOReadUpdateListener extends IIOReadUpdateListener_base {
     private constructor();
 }
 export default IIOReadUpdateListener;
-//# sourceMappingURL=IIOReadUpdateListener.d.ts.map

@@ -7,22 +7,6 @@ import { Iterator as java_util_Iterator } from "./../../java/util/Iterator";
  */
 export declare class MarkerClass extends JavaClass {
     /**
-     * Original type: 'java.lang.String'
-     */
-    static readonly ANY_MARKER: string | null;
-    /**
-     * Original type: 'java.lang.String'
-     */
-    static readonly ANY_NON_NULL_MARKER: string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getNameSync(): string | null;
-    /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'void'
      */
@@ -32,34 +16,6 @@ export declare class MarkerClass extends JavaClass {
      * @return original return type: 'void'
      */
     addSync(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @return original return type: 'boolean'
-     */
-    remove(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @return original return type: 'boolean'
-     */
-    removeSync(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @return original return type: 'java.util.Iterator'
      */
@@ -89,6 +45,22 @@ export declare class MarkerClass extends JavaClass {
      */
     containsSync(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): boolean;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getNameSync(): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @return original return type: 'boolean'
      */
     hasChildren(): Promise<boolean>;
@@ -97,6 +69,16 @@ export declare class MarkerClass extends JavaClass {
      */
     hasChildrenSync(): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
      * @return original return type: 'boolean'
      */
     hasReferences(): Promise<boolean>;
@@ -104,6 +86,24 @@ export declare class MarkerClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasReferencesSync(): boolean;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @return original return type: 'boolean'
+     */
+    remove(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @return original return type: 'boolean'
+     */
+    removeSync(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): boolean;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly ANY_MARKER: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly ANY_NON_NULL_MARKER: string | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -118,28 +118,10 @@ export declare class MarkerClass extends JavaClass {
  */
 export interface MarkerInterface {
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getName(): string | null;
-    /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'void'
      */
     add(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @return original return type: 'boolean'
-     */
-    remove(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): number;
     /**
      * @return original return type: 'java.util.Iterator'
      */
@@ -155,13 +137,31 @@ export interface MarkerInterface {
      */
     contains(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): boolean;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getName(): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): number;
+    /**
      * @return original return type: 'boolean'
      */
     hasChildren(): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): boolean;
+    /**
      * @return original return type: 'boolean'
      */
     hasReferences(): boolean;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @return original return type: 'boolean'
+     */
+    remove(var0: MarkerClass | JavaInterfaceProxy<MarkerInterface> | null): boolean;
 }
 /**
  * Create a proxy for the {@link Marker} interface.
@@ -190,4 +190,3 @@ export declare class Marker extends Marker_base {
     private constructor();
 }
 export default Marker;
-//# sourceMappingURL=Marker.d.ts.map

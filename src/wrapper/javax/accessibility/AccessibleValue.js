@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AccessibleValue = exports.createAccessibleValueProxy = void 0;
+exports.AccessibleValue = void 0;
+exports.createAccessibleValueProxy = createAccessibleValueProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AccessibleValue} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAccessibleValueProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.accessibility.AccessibleValue', methods, opts);
 }
-exports.createAccessibleValueProxy = createAccessibleValueProxy;
 /**
  * Class javax.accessibility.AccessibleValue.
  *

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NodeList = exports.createNodeListProxy = void 0;
+exports.NodeList = void 0;
+exports.createNodeListProxy = createNodeListProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link NodeList} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createNodeListProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.NodeList', methods, opts);
 }
-exports.createNodeListProxy = createNodeListProxy;
 /**
  * Class org.w3c.dom.NodeList.
  *

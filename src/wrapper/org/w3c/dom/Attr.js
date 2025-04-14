@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Attr = exports.createAttrProxy = void 0;
+exports.Attr = void 0;
+exports.createAttrProxy = createAttrProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Attr} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAttrProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.Attr', methods, opts);
 }
-exports.createAttrProxy = createAttrProxy;
 /**
  * Class org.w3c.dom.Attr.
  *

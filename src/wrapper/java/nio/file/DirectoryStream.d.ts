@@ -100,4 +100,3 @@ export declare class DirectoryStream extends DirectoryStream_base {
     private constructor();
 }
 export default DirectoryStream;
-//# sourceMappingURL=DirectoryStream.d.ts.map

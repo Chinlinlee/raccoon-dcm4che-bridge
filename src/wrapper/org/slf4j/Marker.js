@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Marker = exports.createMarkerProxy = void 0;
+exports.Marker = void 0;
+exports.createMarkerProxy = createMarkerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link Marker} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createMarkerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.slf4j.Marker', methods, opts);
 }
-exports.createMarkerProxy = createMarkerProxy;
 /**
  * Class org.slf4j.Marker.
  *

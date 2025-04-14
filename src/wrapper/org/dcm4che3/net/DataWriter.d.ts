@@ -65,4 +65,3 @@ export declare class DataWriter extends DataWriter_base {
     private constructor();
 }
 export default DataWriter;
-//# sourceMappingURL=DataWriter.d.ts.map

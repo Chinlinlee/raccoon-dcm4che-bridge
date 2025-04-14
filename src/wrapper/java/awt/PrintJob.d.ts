@@ -149,4 +149,3 @@ export declare class PrintJob extends PrintJob_base {
     private constructor();
 }
 export default PrintJob;
-//# sourceMappingURL=PrintJob.d.ts.map

@@ -16,16 +16,6 @@ import { SortedMap as java_util_SortedMap } from "./../../util/SortedMap";
  */
 export declare class CharsetClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.nio.CharBuffer'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    encode(var0: java_nio_CharBuffer | null): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'java.nio.CharBuffer'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    encodeSync(var0: java_nio_CharBuffer | null): java_nio_ByteBuffer | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.nio.ByteBuffer'
      */
@@ -36,6 +26,16 @@ export declare class CharsetClass extends JavaClass {
      */
     encodeSync(var0: string | null): java_nio_ByteBuffer | null;
     /**
+     * @param var0 original type: 'java.nio.CharBuffer'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    encode(var0: java_nio_CharBuffer | null): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'java.nio.CharBuffer'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    encodeSync(var0: java_nio_CharBuffer | null): java_nio_ByteBuffer | null;
+    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -43,16 +43,6 @@ export declare class CharsetClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -74,6 +64,16 @@ export declare class CharsetClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @return original return type: 'java.util.Set'
      */
     aliases(): Promise<java_util_Set | null>;
@@ -81,18 +81,6 @@ export declare class CharsetClass extends JavaClass {
      * @return original return type: 'java.util.Set'
      */
     aliasesSync(): java_util_Set | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.nio.charset.Charset'
-     * @return original return type: 'java.nio.charset.Charset'
-     */
-    static forName(var0: string | null, var1: CharsetClass | null): Promise<Charset | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.nio.charset.Charset'
-     * @return original return type: 'java.nio.charset.Charset'
-     */
-    static forNameSync(var0: string | null, var1: CharsetClass | null): Charset | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.nio.charset.Charset'
@@ -112,6 +100,14 @@ export declare class CharsetClass extends JavaClass {
      */
     newDecoderSync(): java_nio_charset_CharsetDecoder | null;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    displayName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    displayNameSync(): string | null;
+    /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'java.lang.String'
      */
@@ -121,14 +117,6 @@ export declare class CharsetClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     displayNameSync(var0: java_util_Locale | null): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    displayName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    displayNameSync(): string | null;
     /**
      * @return original return type: 'void'
      */
@@ -280,4 +268,3 @@ export declare class Charset extends Charset_base {
     private constructor();
 }
 export default Charset;
-//# sourceMappingURL=Charset.d.ts.map

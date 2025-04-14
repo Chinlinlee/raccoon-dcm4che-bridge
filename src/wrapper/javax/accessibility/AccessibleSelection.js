@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AccessibleSelection = exports.createAccessibleSelectionProxy = void 0;
+exports.AccessibleSelection = void 0;
+exports.createAccessibleSelectionProxy = createAccessibleSelectionProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link AccessibleSelection} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createAccessibleSelectionProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.accessibility.AccessibleSelection', methods, opts);
 }
-exports.createAccessibleSelectionProxy = createAccessibleSelectionProxy;
 /**
  * Class javax.accessibility.AccessibleSelection.
  *

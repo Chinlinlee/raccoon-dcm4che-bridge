@@ -20,16 +20,6 @@ export declare class DicomInputStream$IncludeBulkDataClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,6 +38,16 @@ export declare class DicomInputStream$IncludeBulkDataClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.io.DicomInputStream$IncludeBulkData'
@@ -190,4 +190,3 @@ declare const DicomInputStream$IncludeBulkData_base: typeof DicomInputStream$Inc
 export declare class DicomInputStream$IncludeBulkData extends DicomInputStream$IncludeBulkData_base {
 }
 export default DicomInputStream$IncludeBulkData;
-//# sourceMappingURL=DicomInputStream$IncludeBulkData.d.ts.map

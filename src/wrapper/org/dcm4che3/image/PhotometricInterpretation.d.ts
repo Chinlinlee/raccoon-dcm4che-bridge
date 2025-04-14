@@ -24,6 +24,14 @@ export declare class PhotometricInterpretationClass extends JavaClass {
      */
     getClassSync(): java_lang_Class;
     /**
+     * @return original return type: 'boolean'
+     */
+    isYBR(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isYBRSync(): boolean;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -41,14 +49,6 @@ export declare class PhotometricInterpretationClass extends JavaClass {
      * @return original return type: 'java.awt.image.SampleModel'
      */
     createSampleModelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean): java_awt_image_SampleModel | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isYBR(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isYBRSync(): boolean;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -330,4 +330,3 @@ export declare class PhotometricInterpretation extends PhotometricInterpretation
     private constructor();
 }
 export default PhotometricInterpretation;
-//# sourceMappingURL=PhotometricInterpretation.d.ts.map

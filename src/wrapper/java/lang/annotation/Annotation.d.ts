@@ -90,4 +90,3 @@ export declare class Annotation extends Annotation_base {
     private constructor();
 }
 export default Annotation;
-//# sourceMappingURL=Annotation.d.ts.map

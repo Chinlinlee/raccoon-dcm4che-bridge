@@ -217,4 +217,3 @@ export declare class TemporalField extends TemporalField_base {
     private constructor();
 }
 export default TemporalField;
-//# sourceMappingURL=TemporalField.d.ts.map

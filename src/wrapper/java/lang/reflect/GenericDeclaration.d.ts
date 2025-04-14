@@ -160,4 +160,3 @@ export declare class GenericDeclaration extends GenericDeclaration_base {
     private constructor();
 }
 export default GenericDeclaration;
-//# sourceMappingURL=GenericDeclaration.d.ts.map

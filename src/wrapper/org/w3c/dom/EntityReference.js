@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EntityReference = exports.createEntityReferenceProxy = void 0;
+exports.EntityReference = void 0;
+exports.createEntityReferenceProxy = createEntityReferenceProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link EntityReference} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createEntityReferenceProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.w3c.dom.EntityReference', methods, opts);
 }
-exports.createEntityReferenceProxy = createEntityReferenceProxy;
 /**
  * Class org.w3c.dom.EntityReference.
  *

@@ -65,4 +65,3 @@ export declare class DoubleBinaryOperator extends DoubleBinaryOperator_base {
     private constructor();
 }
 export default DoubleBinaryOperator;
-//# sourceMappingURL=DoubleBinaryOperator.d.ts.map

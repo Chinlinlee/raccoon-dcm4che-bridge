@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WlParams = exports.createWlParamsProxy = void 0;
+exports.WlParams = void 0;
+exports.createWlParamsProxy = createWlParamsProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link WlParams} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createWlParamsProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('org.weasis.opencv.op.lut.WlParams', methods, opts);
 }
-exports.createWlParamsProxy = createWlParamsProxy;
 /**
  * Class org.weasis.opencv.op.lut.WlParams.
  *

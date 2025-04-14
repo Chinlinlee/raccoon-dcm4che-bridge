@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IIOParamController = exports.createIIOParamControllerProxy = void 0;
+exports.IIOParamController = void 0;
+exports.createIIOParamControllerProxy = createIIOParamControllerProxy;
 const java_bridge_1 = require("java-bridge");
 /**
  * Create a proxy for the {@link IIOParamController} interface.
@@ -13,7 +14,6 @@ const java_bridge_1 = require("java-bridge");
 function createIIOParamControllerProxy(methods, opts) {
     return (0, java_bridge_1.newProxy)('javax.imageio.IIOParamController', methods, opts);
 }
-exports.createIIOParamControllerProxy = createIIOParamControllerProxy;
 /**
  * Class javax.imageio.IIOParamController.
  *

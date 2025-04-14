@@ -221,4 +221,3 @@ export declare class AccessibleText extends AccessibleText_base {
     private constructor();
 }
 export default AccessibleText;
-//# sourceMappingURL=AccessibleText.d.ts.map

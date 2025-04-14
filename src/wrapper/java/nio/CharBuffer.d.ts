@@ -23,16 +23,6 @@ export declare class CharBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -52,6 +42,16 @@ export declare class CharBufferClass extends JavaClass {
      */
     waitSync(): void;
     /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @return original return type: 'java.nio.CharBuffer'
      */
     compact(): Promise<CharBuffer | null>;
@@ -68,6 +68,16 @@ export declare class CharBufferClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @param var0 original type: 'java.nio.CharBuffer'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: CharBufferClass | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.nio.CharBuffer'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: CharBufferClass | null): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'int'
      */
@@ -79,14 +89,40 @@ export declare class CharBufferClass extends JavaClass {
     compareToSync(var0: BasicOrJavaType | null): number;
     /**
      * @param var0 original type: 'java.nio.CharBuffer'
-     * @return original return type: 'int'
+     * @return original return type: 'java.nio.CharBuffer'
      */
-    compareTo(var0: CharBufferClass | null): Promise<number>;
+    put(var0: CharBufferClass | null): Promise<CharBuffer | null>;
     /**
      * @param var0 original type: 'java.nio.CharBuffer'
-     * @return original return type: 'int'
+     * @return original return type: 'java.nio.CharBuffer'
      */
-    compareToSync(var0: CharBufferClass | null): number;
+    putSync(var0: CharBufferClass | null): CharBuffer | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    put(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    putSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    put(var0: java_lang_Integer | number, var1: (string | null)[] | null): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    putSync(var0: java_lang_Integer | number, var1: (string | null)[] | null): CharBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'char'
@@ -99,20 +135,6 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'java.nio.CharBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: string | null): CharBuffer | null;
-    /**
-     * @param var0 original type: 'char[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    put(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'char[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    putSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'char[]'
@@ -140,15 +162,19 @@ export declare class CharBufferClass extends JavaClass {
      */
     putSync(var0: (string | null)[] | null): CharBuffer | null;
     /**
-     * @param var0 original type: 'java.nio.CharBuffer'
+     * @param var0 original type: 'char[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'java.nio.CharBuffer'
      */
-    put(var0: CharBufferClass | null): Promise<CharBuffer | null>;
+    put(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<CharBuffer | null>;
     /**
-     * @param var0 original type: 'java.nio.CharBuffer'
+     * @param var0 original type: 'char[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'java.nio.CharBuffer'
      */
-    putSync(var0: CharBufferClass | null): CharBuffer | null;
+    putSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.CharBuffer'
@@ -166,48 +192,22 @@ export declare class CharBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: CharBufferClass | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): CharBuffer | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'char[]'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    put(var0: java_lang_Integer | number, var1: (string | null)[] | null): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'char[]'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    putSync(var0: java_lang_Integer | number, var1: (string | null)[] | null): CharBuffer | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'char'
      * @return original return type: 'java.nio.CharBuffer'
      */
     put(var0: string | null): Promise<CharBuffer | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'char'
      * @return original return type: 'java.nio.CharBuffer'
      */
     putSync(var0: string | null): CharBuffer | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    put(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    putSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
-    /**
-     * @param var0 original type: 'char'
      * @return original return type: 'java.nio.CharBuffer'
      */
     put(var0: string | null): Promise<CharBuffer | null>;
     /**
-     * @param var0 original type: 'char'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.nio.CharBuffer'
      */
     putSync(var0: string | null): CharBuffer | null;
@@ -244,6 +244,14 @@ export declare class CharBufferClass extends JavaClass {
      */
     isReadOnlySync(): boolean;
     /**
+     * @return original return type: 'char[]'
+     */
+    array(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'char[]'
+     */
+    arraySync(): (string | null)[] | null;
+    /**
      * @return original return type: 'java.lang.Object'
      */
     array(): Promise<BasicOrJavaType | null>;
@@ -252,13 +260,21 @@ export declare class CharBufferClass extends JavaClass {
      */
     arraySync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
      */
-    array(): Promise<(string | null)[] | null>;
+    slice(): Promise<CharBuffer | null>;
     /**
-     * @return original return type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
      */
-    arraySync(): (string | null)[] | null;
+    sliceSync(): CharBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    slice(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    sliceSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -284,22 +300,6 @@ export declare class CharBufferClass extends JavaClass {
      */
     sliceSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_nio_Buffer | null;
     /**
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    slice(): Promise<CharBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    sliceSync(): CharBuffer | null;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    slice(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    sliceSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'int'
      */
     hashCode(): Promise<number>;
@@ -307,6 +307,24 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     hashCodeSync(): number;
+    /**
+     * @return original return type: 'char'
+     */
+    get(): Promise<string | null>;
+    /**
+     * @return original return type: 'char'
+     */
+    getSync(): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'char'
+     */
+    get(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'char'
+     */
+    getSync(var0: java_lang_Integer | number): string | null;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -322,24 +340,6 @@ export declare class CharBufferClass extends JavaClass {
      */
     getSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'char'
-     */
-    get(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'char'
-     */
-    getSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @return original return type: 'char'
-     */
-    get(): Promise<string | null>;
-    /**
-     * @return original return type: 'char'
-     */
-    getSync(): string | null;
-    /**
      * @param var0 original type: 'char[]'
      * @return original return type: 'java.nio.CharBuffer'
      */
@@ -349,6 +349,18 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'java.nio.CharBuffer'
      */
     getSync(var0: (string | null)[] | null): CharBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    get(var0: java_lang_Integer | number, var1: (string | null)[] | null): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    getSync(var0: java_lang_Integer | number, var1: (string | null)[] | null): CharBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'char[]'
@@ -367,16 +379,14 @@ export declare class CharBufferClass extends JavaClass {
     getSync(var0: java_lang_Integer | number, var1: (string | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): CharBuffer | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'char[]'
      * @return original return type: 'java.nio.CharBuffer'
      */
-    get(var0: java_lang_Integer | number, var1: (string | null)[] | null): Promise<CharBuffer | null>;
+    limit(var0: java_lang_Integer | number): Promise<CharBuffer | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'char[]'
      * @return original return type: 'java.nio.CharBuffer'
      */
-    getSync(var0: java_lang_Integer | number, var1: (string | null)[] | null): CharBuffer | null;
+    limitSync(var0: java_lang_Integer | number): CharBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -387,16 +397,6 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    limit(var0: java_lang_Integer | number): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    limitSync(var0: java_lang_Integer | number): CharBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -615,16 +615,6 @@ export declare class CharBufferClass extends JavaClass {
     resetSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    position(var0: java_lang_Integer | number): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    positionSync(var0: java_lang_Integer | number): CharBuffer | null;
-    /**
-     * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
      */
     position(var0: java_lang_Integer | number): Promise<java_nio_Buffer | null>;
@@ -633,6 +623,16 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     positionSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    position(var0: java_lang_Integer | number): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    positionSync(var0: java_lang_Integer | number): CharBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -656,6 +656,26 @@ export declare class CharBufferClass extends JavaClass {
      */
     static wrapSync(var0: (string | null)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
     /**
+     * @param var0 original type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    static wrap(var0: (string | null)[] | null): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'char[]'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    static wrapSync(var0: (string | null)[] | null): CharBuffer | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    static wrap(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    static wrapSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): CharBuffer | null;
+    /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -670,26 +690,6 @@ export declare class CharBufferClass extends JavaClass {
      */
     static wrapSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): CharBuffer | null;
     /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    static wrap(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    static wrapSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): CharBuffer | null;
-    /**
-     * @param var0 original type: 'char[]'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    static wrap(var0: (string | null)[] | null): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'char[]'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    static wrapSync(var0: (string | null)[] | null): CharBuffer | null;
-    /**
      * @return original return type: 'boolean'
      */
     isDirect(): Promise<boolean>;
@@ -697,46 +697,6 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isDirectSync(): boolean;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    append(var0: string | null): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    appendSync(var0: string | null): CharBuffer | null;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    append(var0: string | null): Promise<java_lang_Appendable | null>;
-    /**
-     * @param var0 original type: 'char'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    appendSync(var0: string | null): java_lang_Appendable | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<CharBuffer | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): CharBuffer | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<java_lang_Appendable | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.lang.Appendable'
-     */
-    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_lang_Appendable | null;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'int'
@@ -766,6 +726,46 @@ export declare class CharBufferClass extends JavaClass {
      */
     appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_lang_Appendable | null;
     /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<java_lang_Appendable | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_lang_Appendable | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    append(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    appendSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): CharBuffer | null;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    append(var0: string | null): Promise<CharBuffer | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    appendSync(var0: string | null): CharBuffer | null;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    append(var0: string | null): Promise<java_lang_Appendable | null>;
+    /**
+     * @param var0 original type: 'char'
+     * @return original return type: 'java.lang.Appendable'
+     */
+    appendSync(var0: string | null): java_lang_Appendable | null;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
      */
@@ -784,14 +784,6 @@ export declare class CharBufferClass extends JavaClass {
      */
     charsSync(): java_util_stream_IntStream | null;
     /**
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    mark(): Promise<CharBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.CharBuffer'
-     */
-    markSync(): CharBuffer | null;
-    /**
      * @return original return type: 'java.nio.Buffer'
      */
     mark(): Promise<java_nio_Buffer | null>;
@@ -799,6 +791,14 @@ export declare class CharBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     markSync(): java_nio_Buffer | null;
+    /**
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    mark(): Promise<CharBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.CharBuffer'
+     */
+    markSync(): CharBuffer | null;
 }
 declare const CharBuffer_base: typeof CharBufferClass;
 /**
@@ -818,4 +818,3 @@ export declare class CharBuffer extends CharBuffer_base {
     private constructor();
 }
 export default CharBuffer;
-//# sourceMappingURL=CharBuffer.d.ts.map

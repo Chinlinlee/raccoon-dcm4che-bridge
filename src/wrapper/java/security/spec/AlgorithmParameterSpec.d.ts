@@ -46,4 +46,3 @@ export declare class AlgorithmParameterSpec extends AlgorithmParameterSpec_base 
     private constructor();
 }
 export default AlgorithmParameterSpec;
-//# sourceMappingURL=AlgorithmParameterSpec.d.ts.map
