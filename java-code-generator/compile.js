@@ -38,7 +38,7 @@ async function compareFiles(filePath1, filePath2) {
             fs.readFile(filePath1, { encoding: "utf8" }),
             fs.readFile(filePath2, { encoding: "utf8" })
         ]);
-        return (Diff.diffChars(fileContent1, fileContent2)) > 0;
+        return (Diff.diffChars(fileContent1, fileContent2).length) > 0;
     } catch (error) {
         console.warn(`Warning comparing files ${filePath1} and ${filePath2}: ${error.message}`);
         return false; // Assume not the same if comparison fails
