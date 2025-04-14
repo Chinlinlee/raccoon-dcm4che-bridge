@@ -5,7 +5,7 @@
 const { program } = require('commander');
 
 program
-  .option('-cn, --classname [string...]', "class name of java class");
+  .option('--cn, --classname [string...]', "class name of java class");
 
 program.parse();
 
