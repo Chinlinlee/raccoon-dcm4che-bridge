@@ -16,8 +16,8 @@
   "author": "LI, CHIN-LIN",
   "license": "MIT",
   "dependencies": {
-    "glob": "^10.3.10",
-    "java-bridge": "^2.5.2"
+    "glob": "^10.4.5",
+    "java-bridge": "^2.8.0"
   },
   "repository": {
     "url": "https://github.com/Chinlinlee/raccoon-dcm4che-bridge"
