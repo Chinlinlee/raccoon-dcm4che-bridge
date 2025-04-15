@@ -156,6 +156,7 @@ async function generate() {
         "org.dcm4che3.util.TagUtils",
         "org.dcm4che3.util.UIDUtils",
         "org.dcm4che3.tool.dcmqrscp.SendStgCmtResult",
+        "org.github.chinlinlee.dcm777.img.DecompressFramesOutput",
         "org.github.chinlinlee.dcm777.net.BasicModCFindSCP",
         "org.github.chinlinlee.dcm777.net.BasicModQueryTask",
         "org.github.chinlinlee.dcm777.net.CFindSCPInject",

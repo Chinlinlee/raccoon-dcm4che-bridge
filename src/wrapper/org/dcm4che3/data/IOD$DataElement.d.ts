@@ -110,16 +110,6 @@ export declare class IOD$DataElementClass extends JavaClass {
      */
     getValueNumberSync(): number;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Code[]'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    setValues(var0: (org_dcm4che3_data_Code | null)[] | null): Promise<IOD$DataElement | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Code[]'
-     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
-     */
-    setValuesSync(var0: (org_dcm4che3_data_Code | null)[] | null): IOD$DataElement | null;
-    /**
      * @param var0 original type: 'int[]'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
@@ -139,6 +129,16 @@ export declare class IOD$DataElementClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
      */
     setValuesSync(var0: (string | null)[] | null): IOD$DataElement | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Code[]'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    setValues(var0: (org_dcm4che3_data_Code | null)[] | null): Promise<IOD$DataElement | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Code[]'
+     * @return original return type: 'org.dcm4che3.data.IOD$DataElement'
+     */
+    setValuesSync(var0: (org_dcm4che3_data_Code | null)[] | null): IOD$DataElement | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.IOD'
      * @return original return type: 'org.dcm4che3.data.IOD$DataElement'

@@ -19,6 +19,14 @@ import { Locale as java_util_Locale } from "./../util/Locale";
  */
 export declare class MonthClass extends JavaClass {
     /**
+     * @return original return type: 'java.time.Month'
+     */
+    firstMonthOfQuarter(): Promise<Month | null>;
+    /**
+     * @return original return type: 'java.time.Month'
+     */
+    firstMonthOfQuarterSync(): Month | null;
+    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.time.Month'
      */
@@ -28,14 +36,6 @@ export declare class MonthClass extends JavaClass {
      * @return original return type: 'java.time.Month'
      */
     minusSync(var0: java_lang_Long | bigint | number): Month | null;
-    /**
-     * @return original return type: 'java.time.Month'
-     */
-    firstMonthOfQuarter(): Promise<Month | null>;
-    /**
-     * @return original return type: 'java.time.Month'
-     */
-    firstMonthOfQuarterSync(): Month | null;
     /**
      * @return original return type: 'java.lang.Class'
      */

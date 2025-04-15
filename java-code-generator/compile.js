@@ -49,6 +49,7 @@ async function syncDirectories(source, destination) {
                 }
                 console.log(`Copying new file: ${path.relative(__dirname, destPath)}`);
 
+                await fs.mkdir(path.dirname(destPath), { recursive: true });
                 await fs.copyFile(sourcePath, destPath);
 
             }

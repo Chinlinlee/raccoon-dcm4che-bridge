@@ -29,16 +29,6 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      */
     isASCIISync(): boolean;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static checkSpecificCharacterSet(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static checkSpecificCharacterSetSync(var0: string | null): string | null;
-    /**
      * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'boolean'
      */
@@ -48,6 +38,16 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static trimISO2022Sync(var0: (string | null)[] | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static checkSpecificCharacterSet(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static checkSpecificCharacterSetSync(var0: string | null): string | null;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -185,6 +185,14 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    static getDefaultCharacterSet(): Promise<SpecificCharacterSet | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
+     */
+    static getDefaultCharacterSetSync(): SpecificCharacterSet | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -196,14 +204,6 @@ export declare class SpecificCharacterSetClass extends JavaClass {
      * @return original return type: 'void'
      */
     static setCharsetNameMappingSync(var0: string | null, var1: string | null): void;
-    /**
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    static getDefaultCharacterSet(): Promise<SpecificCharacterSet | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.SpecificCharacterSet'
-     */
-    static getDefaultCharacterSetSync(): SpecificCharacterSet | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
