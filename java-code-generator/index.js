@@ -119,6 +119,7 @@ async function generate() {
         "org.dcm4che3.io.DicomInputStream",
         "org.dcm4che3.io.DicomOutputStream",
         "org.dcm4che3.io.DicomInputStream$IncludeBulkData",
+        "org.dcm4che3.io.BasicBulkDataDescriptor",
         "org.dcm4che3.media.DicomDirReader",
         "org.dcm4che3.media.DicomDirWriter",
         "org.dcm4che3.media.RecordFactory",
