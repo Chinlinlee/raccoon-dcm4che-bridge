@@ -16,36 +16,6 @@ const finalDestDir = path.join(__dirname, "../src/wrapper");
 // --- End Configuration ---
 
 /**
- * Compares two files by content.
- * @param {string} filePath1 Path to the first file.
- * @param {string} filePath2 Path to the second file.
- * @returns {Promise<boolean>} True if files are identical, false otherwise.
- */
-async function compareFiles(filePath1, filePath2) {
-    try {
-        const [stat1, stat2] = await Promise.all([
-            fs.stat(filePath1).catch(() => null), // Handle case where file doesn't exist
-            fs.stat(filePath2).catch(() => null)
-        ]);
-
-        // If either file doesn't exist, they are not the same
-        if (!stat1 || !stat2) return false;
-        // If sizes are different, they are not the same
-        if (stat1.size !== stat2.size) return false;
-
-        // Read both files and compare buffers
-        const [fileContent1, fileContent2] = await Promise.all([
-            fs.readFile(filePath1, { encoding: "utf8" }),
-            fs.readFile(filePath2, { encoding: "utf8" })
-        ]);
-        return (Diff.diffChars(fileContent1, fileContent2).length) > 0;
-    } catch (error) {
-        console.warn(`Warning comparing files ${filePath1} and ${filePath2}: ${error.message}`);
-        return false; // Assume not the same if comparison fails
-    }
-}
-
-/**
  * Recursively synchronizes the contents of a source directory to a destination directory.
  * Copies new/changed files, skips identical files, and removes files/dirs in destination
  * that are no longer in the source.
@@ -72,31 +42,17 @@ async function syncDirectories(source, destination) {
                 await syncDirectories(sourcePath, destPath);
             } else if (sourceEntry.isFile()) {
                 const destEntry = destEntryMap.get(sourceEntry.name);
-                let shouldCopy = true; // Assume copy unless proven otherwise
-
-                if (destEntry && destEntry.isFile()) {
-                    // Destination file exists, compare them
-                    const areSame = await compareFiles(sourcePath, destPath);
-                    if (areSame) {
-                        console.log(`Skipping identical file: ${path.relative(__dirname, destPath)}`);
-                        shouldCopy = false;
-                    } else {
-                         console.log(`Overwriting changed file: ${path.relative(__dirname, destPath)}`);
-                    }
-                } else if (destEntry && destEntry.isDirectory()) {
-                     // Name collision: source is file, destination is directory. Remove dest dir.
-                     console.log(`Removing directory to replace with file: ${path.relative(__dirname, destPath)}`);
-                     await fs.rm(destPath, { recursive: true, force: true });
-                } else {
-                    // Destination file doesn't exist
-                    console.log(`Copying new file: ${path.relative(__dirname, destPath)}`);
+                if (destEntry && destEntry.isDirectory()) {
+                    // Name collision: source is file, destination is directory. Remove dest dir.
+                    console.log(`Removing directory to replace with file: ${path.relative(__dirname, destPath)}`);
+                    await fs.rm(destPath, { recursive: true, force: true });
                 }
+                console.log(`Copying new file: ${path.relative(__dirname, destPath)}`);
 
-                if (shouldCopy) {
-                    await fs.copyFile(sourcePath, destPath);
-                }
+                await fs.copyFile(sourcePath, destPath);
+
             }
-             // Ignore other entry types like symbolic links for simplicity here
+            // Ignore other entry types like symbolic links for simplicity here
         }
 
         // Process entries in the destination directory that are NOT in the source
@@ -175,7 +131,7 @@ async function compileTypeScript() {
         }
         // Log the full error if the above wasn't helpful
         if (!error.stderr && !error.stdout) {
-             console.error("Full error object:", error);
+            console.error("Full error object:", error);
         }
         process.exit(1); // Exit with a non-zero code to indicate failure
     }
@@ -191,10 +147,10 @@ async function compileTypeScript() {
 
     // Step 7: Clean up intermediate directory
     console.log(`Cleaning up intermediate directory: ${outputDir}...`);
-     try {
+    try {
         await fs.rm(outputDir, { recursive: true, force: true });
         console.log("Intermediate directory cleaned up.");
-    } catch(error) {
+    } catch (error) {
         console.warn(`Warning: Could not clean up intermediate directory ${outputDir}: ${error.message}`);
     }
 
