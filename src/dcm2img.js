@@ -11,8 +11,10 @@ const { CvType } = require('./wrapper/org/opencv/core/CvType');
 const { Imgcodecs } = require('./wrapper/org/opencv/imgcodecs/Imgcodecs');
 
 /**
+ * Utility class for converting DICOM images to standard image formats
+ * Implemented based on weasis-dicom-tools
  * @author Chinlinlee
- * Implement nodejs dcm2image wrapper from [weasis-dicom-tools](https://github.com/nroduit/weasis-dicom-tools/blob/master/weasis-dicom-tools/src/main/java/org/dcm4che3/img/Transcoder.java#L94)
+ * @see {@link https://github.com/nroduit/weasis-dicom-tools/blob/master/weasis-dicom-tools/src/main/java/org/dcm4che3/img/Transcoder.java#L94}
  */
 class Dcm2imageWrapper {
     /**

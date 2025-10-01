@@ -1,4 +1,3 @@
-
 const { Tag } = require("./wrapper/org/dcm4che3/data/Tag");
 const { UID } = require("./wrapper/org/dcm4che3/data/UID");
 const { VR } = require("./wrapper/org/dcm4che3/data/VR");
