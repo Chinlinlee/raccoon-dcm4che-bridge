@@ -2,12 +2,12 @@ import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
-import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../../java/util/List";
-import { Mat as org_opencv_core_Mat } from "./../../../opencv/core/Mat";
-import { Shape as java_awt_Shape, ShapeInterface as java_awt_ShapeInterface } from "./../../../../java/awt/Shape";
 import { ImageCV as org_weasis_opencv_data_ImageCV } from "./../data/ImageCV";
+import { Mat as org_opencv_core_Mat } from "./../../../opencv/core/Mat";
 import { Rectangle as java_awt_Rectangle } from "./../../../../java/awt/Rectangle";
 import { Double as java_lang_Double } from "./../../../../java/lang/Double";
+import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../../java/util/List";
+import { Shape as java_awt_Shape, ShapeInterface as java_awt_ShapeInterface } from "./../../../../java/awt/Shape";
 import { File as java_io_File } from "./../../../../java/io/File";
 import { Dimension as java_awt_Dimension } from "./../../../../java/awt/Dimension";
 import { PlanarImage as org_weasis_opencv_data_PlanarImage, PlanarImageInterface as org_weasis_opencv_data_PlanarImageInterface } from "./../data/PlanarImage";
@@ -34,6 +34,16 @@ export declare class ImageProcessorClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -53,15 +63,19 @@ export declare class ImageProcessorClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'java.awt.Rectangle'
+     * @param var2 original type: 'double'
+     * @return original return type: 'org.weasis.opencv.data.ImageCV'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    static applyCropMask(var0: org_opencv_core_Mat | null, var1: java_awt_Rectangle | null, var2: java_lang_Double | number): Promise<org_weasis_opencv_data_ImageCV | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'java.awt.Rectangle'
+     * @param var2 original type: 'double'
+     * @return original return type: 'org.weasis.opencv.data.ImageCV'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    static applyCropMaskSync(var0: org_opencv_core_Mat | null, var1: java_awt_Rectangle | null, var2: java_lang_Double | number): org_weasis_opencv_data_ImageCV | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'java.awt.Shape'
@@ -78,20 +92,6 @@ export declare class ImageProcessorClass extends JavaClass {
      * @return original return type: 'java.util.List'
      */
     static getMaskImageSync(var0: org_opencv_core_Mat | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_lang_Integer | number | null, var3: java_lang_Integer | number | null): java_util_List | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.awt.Rectangle'
-     * @param var2 original type: 'double'
-     * @return original return type: 'org.weasis.opencv.data.ImageCV'
-     */
-    static applyCropMask(var0: org_opencv_core_Mat | null, var1: java_awt_Rectangle | null, var2: java_lang_Double | number): Promise<org_weasis_opencv_data_ImageCV | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.awt.Rectangle'
-     * @param var2 original type: 'double'
-     * @return original return type: 'org.weasis.opencv.data.ImageCV'
-     */
-    static applyCropMaskSync(var0: org_opencv_core_Mat | null, var1: java_awt_Rectangle | null, var2: java_lang_Double | number): org_weasis_opencv_data_ImageCV | null;
     /**
      * @param var0 original type: 'java.io.File'
      * @param var1 original type: 'java.util.List'
@@ -165,28 +165,6 @@ export declare class ImageProcessorClass extends JavaClass {
      */
     static buildThumbnailSync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: java_awt_Dimension | null, var2: java_lang_Boolean | boolean): org_weasis_opencv_data_ImageCV | null;
     /**
-     * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'java.util.List'
-     * @return original return type: 'org.weasis.opencv.data.ImageCV'
-     */
-    static readImage(var0: java_io_File | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<org_weasis_opencv_data_ImageCV | null>;
-    /**
-     * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'java.util.List'
-     * @return original return type: 'org.weasis.opencv.data.ImageCV'
-     */
-    static readImageSync(var0: java_io_File | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): org_weasis_opencv_data_ImageCV | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
-     */
-    static findMinMaxValues(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Core$MinMaxLocResult | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
-     */
-    static findMinMaxValuesSync(var0: org_opencv_core_Mat | null): org_opencv_core_Core$MinMaxLocResult | null;
-    /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'java.lang.Integer'
      * @param var2 original type: 'java.lang.Integer'
@@ -200,6 +178,28 @@ export declare class ImageProcessorClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
      */
     static findMinMaxValuesSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number | null, var2: java_lang_Integer | number | null): org_opencv_core_Core$MinMaxLocResult | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
+     */
+    static findMinMaxValues(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Core$MinMaxLocResult | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
+     */
+    static findMinMaxValuesSync(var0: org_opencv_core_Mat | null): org_opencv_core_Core$MinMaxLocResult | null;
+    /**
+     * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'org.weasis.opencv.data.ImageCV'
+     */
+    static readImage(var0: java_io_File | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<org_weasis_opencv_data_ImageCV | null>;
+    /**
+     * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'org.weasis.opencv.data.ImageCV'
+     */
+    static readImageSync(var0: java_io_File | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): org_weasis_opencv_data_ImageCV | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'org.opencv.core.Mat'
@@ -224,6 +224,18 @@ export declare class ImageProcessorClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifySync(): void;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.weasis.opencv.data.ImageCV'
+     */
+    static getRotatedImage(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): Promise<org_weasis_opencv_data_ImageCV | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.weasis.opencv.data.ImageCV'
+     */
+    static getRotatedImageSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): org_weasis_opencv_data_ImageCV | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'java.awt.image.RenderedImage'
@@ -252,18 +264,6 @@ export declare class ImageProcessorClass extends JavaClass {
      * @return original return type: 'org.weasis.opencv.data.ImageCV'
      */
     static applyShutterSync(var0: org_opencv_core_Mat | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_awt_Color | null): org_weasis_opencv_data_ImageCV | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.weasis.opencv.data.ImageCV'
-     */
-    static getRotatedImage(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): Promise<org_weasis_opencv_data_ImageCV | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.weasis.opencv.data.ImageCV'
-     */
-    static getRotatedImageSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): org_weasis_opencv_data_ImageCV | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'org.opencv.core.Mat'
@@ -338,6 +338,70 @@ export declare class ImageProcessorClass extends JavaClass {
     static rescaleToByteSync(var0: org_opencv_core_Mat | null, var1: java_lang_Double | number, var2: java_lang_Double | number): org_weasis_opencv_data_ImageCV | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'java.io.File'
+     * @param var2 original type: 'org.opencv.core.MatOfInt'
+     * @return original return type: 'boolean'
+     */
+    static writeImage(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: org_opencv_core_MatOfInt | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'java.io.File'
+     * @param var2 original type: 'org.opencv.core.MatOfInt'
+     * @return original return type: 'boolean'
+     */
+    static writeImageSync(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: org_opencv_core_MatOfInt | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.image.RenderedImage'
+     * @param var1 original type: 'java.io.File'
+     * @return original return type: 'boolean'
+     */
+    static writeImage(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null, var1: java_io_File | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.image.RenderedImage'
+     * @param var1 original type: 'java.io.File'
+     * @return original return type: 'boolean'
+     */
+    static writeImageSync(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null, var1: java_io_File | null): boolean;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'java.io.File'
+     * @return original return type: 'boolean'
+     */
+    static writeImage(var0: org_opencv_core_Mat | null, var1: java_io_File | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'java.io.File'
+     * @return original return type: 'boolean'
+     */
+    static writeImageSync(var0: org_opencv_core_Mat | null, var1: java_io_File | null): boolean;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'double[][]'
+     */
+    static meanStdDev(var0: org_opencv_core_Mat | null): Promise<((number)[] | null)[] | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'double[][]'
+     */
+    static meanStdDevSync(var0: org_opencv_core_Mat | null): ((number)[] | null)[] | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @param var2 original type: 'java.lang.Integer'
+     * @param var3 original type: 'java.lang.Integer'
+     * @return original return type: 'double[][]'
+     */
+    static meanStdDev(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null, var2: java_lang_Integer | number | null, var3: java_lang_Integer | number | null): Promise<((number)[] | null)[] | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @param var2 original type: 'java.lang.Integer'
+     * @param var3 original type: 'java.lang.Integer'
+     * @return original return type: 'double[][]'
+     */
+    static meanStdDevSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null, var2: java_lang_Integer | number | null, var3: java_lang_Integer | number | null): ((number)[] | null)[] | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'java.awt.Shape'
      * @return original return type: 'double[][]'
      */
@@ -366,68 +430,18 @@ export declare class ImageProcessorClass extends JavaClass {
     static meanStdDevSync(var0: org_opencv_core_Mat | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_lang_Integer | number | null, var3: java_lang_Integer | number | null): ((number)[] | null)[] | null;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @param var2 original type: 'java.lang.Integer'
-     * @param var3 original type: 'java.lang.Integer'
-     * @return original return type: 'double[][]'
+     * @param var1 original type: 'java.io.File'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
      */
-    static meanStdDev(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null, var2: java_lang_Integer | number | null, var3: java_lang_Integer | number | null): Promise<((number)[] | null)[] | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @param var2 original type: 'java.lang.Integer'
-     * @param var3 original type: 'java.lang.Integer'
-     * @return original return type: 'double[][]'
-     */
-    static meanStdDevSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null, var2: java_lang_Integer | number | null, var3: java_lang_Integer | number | null): ((number)[] | null)[] | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'double[][]'
-     */
-    static meanStdDev(var0: org_opencv_core_Mat | null): Promise<((number)[] | null)[] | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'double[][]'
-     */
-    static meanStdDevSync(var0: org_opencv_core_Mat | null): ((number)[] | null)[] | null;
+    static writeThumbnail(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: java_lang_Integer | number): Promise<boolean>;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'java.io.File'
+     * @param var2 original type: 'int'
      * @return original return type: 'boolean'
      */
-    static writeImage(var0: org_opencv_core_Mat | null, var1: java_io_File | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.io.File'
-     * @return original return type: 'boolean'
-     */
-    static writeImageSync(var0: org_opencv_core_Mat | null, var1: java_io_File | null): boolean;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.io.File'
-     * @param var2 original type: 'org.opencv.core.MatOfInt'
-     * @return original return type: 'boolean'
-     */
-    static writeImage(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: org_opencv_core_MatOfInt | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.io.File'
-     * @param var2 original type: 'org.opencv.core.MatOfInt'
-     * @return original return type: 'boolean'
-     */
-    static writeImageSync(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: org_opencv_core_MatOfInt | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.image.RenderedImage'
-     * @param var1 original type: 'java.io.File'
-     * @return original return type: 'boolean'
-     */
-    static writeImage(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null, var1: java_io_File | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.image.RenderedImage'
-     * @param var1 original type: 'java.io.File'
-     * @return original return type: 'boolean'
-     */
-    static writeImageSync(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null, var1: java_io_File | null): boolean;
+    static writeThumbnailSync(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'java.awt.image.RenderedImage'
@@ -456,20 +470,6 @@ export declare class ImageProcessorClass extends JavaClass {
      * @return original return type: 'org.weasis.opencv.data.ImageCV'
      */
     static overlaySync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_Mat | null, var2: java_awt_Color | null): org_weasis_opencv_data_ImageCV | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.io.File'
-     * @param var2 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static writeThumbnail(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'java.io.File'
-     * @param var2 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    static writeThumbnailSync(var0: org_opencv_core_Mat | null, var1: java_io_File | null, var2: java_lang_Integer | number): boolean;
     /**
      * @param var0 original type: 'org.opencv.core.Mat'
      * @param var1 original type: 'byte[][]'

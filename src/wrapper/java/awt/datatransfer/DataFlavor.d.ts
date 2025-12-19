@@ -39,6 +39,16 @@ export declare class DataFlavorClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -57,16 +67,6 @@ export declare class DataFlavorClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -178,16 +178,6 @@ export declare class DataFlavorClass extends JavaClass {
      */
     getParameterSync(var0: string | null): string | null;
     /**
-     * @param var0 original type: 'java.io.ObjectOutput'
-     * @return original return type: 'void'
-     */
-    writeExternal(var0: java_io_ObjectOutput | JavaInterfaceProxy<java_io_ObjectOutputInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.io.ObjectOutput'
-     * @return original return type: 'void'
-     */
-    writeExternalSync(var0: java_io_ObjectOutput | JavaInterfaceProxy<java_io_ObjectOutputInterface> | null): void;
-    /**
      * @param var0 original type: 'java.awt.datatransfer.DataFlavor[]'
      * @return original return type: 'java.awt.datatransfer.DataFlavor'
      */
@@ -197,6 +187,16 @@ export declare class DataFlavorClass extends JavaClass {
      * @return original return type: 'java.awt.datatransfer.DataFlavor'
      */
     static selectBestTextFlavorSync(var0: (DataFlavorClass | null)[] | null): DataFlavor | null;
+    /**
+     * @param var0 original type: 'java.io.ObjectOutput'
+     * @return original return type: 'void'
+     */
+    writeExternal(var0: java_io_ObjectOutput | JavaInterfaceProxy<java_io_ObjectOutputInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.ObjectOutput'
+     * @return original return type: 'void'
+     */
+    writeExternalSync(var0: java_io_ObjectOutput | JavaInterfaceProxy<java_io_ObjectOutputInterface> | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -284,36 +284,6 @@ export declare class DataFlavorClass extends JavaClass {
      */
     isRepresentationClassInputStreamSync(): boolean;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: string | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.datatransfer.DataFlavor'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: DataFlavorClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.datatransfer.DataFlavor'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: DataFlavorClass | null): boolean;
-    /**
      * @return original return type: 'boolean'
      */
     isRepresentationClassReader(): Promise<boolean>;
@@ -329,6 +299,36 @@ export declare class DataFlavorClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isFlavorRemoteObjectTypeSync(): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.datatransfer.DataFlavor'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: DataFlavorClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.datatransfer.DataFlavor'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: DataFlavorClass | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: string | null): boolean;
     /**
      * @return original return type: 'java.lang.Object'
      */
@@ -395,20 +395,6 @@ export declare class DataFlavorClass extends JavaClass {
      * Original type: 'java.awt.datatransfer.DataFlavor'
      */
     static readonly fragmentHtmlFlavor: DataFlavorClass | null;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.datatransfer.DataFlavor'
-     */
-    static newInstanceAsync(): Promise<DataFlavor>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.datatransfer.DataFlavor'
-     */
-    static newInstanceAsync(var0: string | null): Promise<DataFlavor>;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.String'
@@ -420,6 +406,11 @@ export declare class DataFlavorClass extends JavaClass {
      * @return original return type: 'java.awt.datatransfer.DataFlavor'
      */
     static newInstanceAsync(var0: java_lang_Class | null, var1: string | null): Promise<DataFlavor>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.datatransfer.DataFlavor'
+     */
+    static newInstanceAsync(): Promise<DataFlavor>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -444,6 +435,15 @@ export declare class DataFlavorClass extends JavaClass {
      * @return original return type: 'java.awt.datatransfer.DataFlavor'
      */
     static newInstanceAsync(var0: string | null, var1: string | null, var2: java_lang_ClassLoader | null): Promise<DataFlavor>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.awt.datatransfer.DataFlavor'
+     */
+    static newInstanceAsync(var0: string | null): Promise<DataFlavor>;
 }
 declare const DataFlavor_base: typeof DataFlavorClass;
 /**

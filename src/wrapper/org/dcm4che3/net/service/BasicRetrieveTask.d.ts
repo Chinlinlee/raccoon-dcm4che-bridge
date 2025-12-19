@@ -32,6 +32,16 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,16 +60,6 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -153,14 +153,6 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getRequestAssociation(): Promise<org_dcm4che3_net_Association | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.Association'
-     */
-    getRequestAssociationSync(): org_dcm4che3_net_Association | null;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -170,6 +162,14 @@ export declare class BasicRetrieveTaskClass extends JavaClass {
      * @return original return type: 'void'
      */
     setSendPendingRSPSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getRequestAssociation(): Promise<org_dcm4che3_net_Association | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.Association'
+     */
+    getRequestAssociationSync(): org_dcm4che3_net_Association | null;
     /**
      * @param var0 original type: 'org.dcm4che3.net.Association'
      * @return original return type: 'void'

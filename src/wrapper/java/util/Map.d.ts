@@ -56,18 +56,6 @@ export declare class MapClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replace(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -80,6 +68,18 @@ export declare class MapClass extends JavaClass {
      */
     replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replace(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.util.function.BiFunction'
      * @return original return type: 'void'
      */
@@ -89,16 +89,6 @@ export declare class MapClass extends JavaClass {
      * @return original return type: 'void'
      */
     replaceAllSync(var0: java_util_function_BiFunction | JavaInterfaceProxy<java_util_function_BiFunctionInterface> | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    remove(var0: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    removeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -111,6 +101,16 @@ export declare class MapClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     removeSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    remove(var0: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    removeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -172,34 +172,6 @@ export declare class MapClass extends JavaClass {
      * @param var5 original type: 'java.lang.Object'
      * @param var6 original type: 'java.lang.Object'
      * @param var7 original type: 'java.lang.Object'
-     * @param var8 original type: 'java.lang.Object'
-     * @param var9 original type: 'java.lang.Object'
-     * @return original return type: 'java.util.Map'
-     */
-    static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null, var6: BasicOrJavaType | null, var7: BasicOrJavaType | null, var8: BasicOrJavaType | null, var9: BasicOrJavaType | null): Promise<Map | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @param var4 original type: 'java.lang.Object'
-     * @param var5 original type: 'java.lang.Object'
-     * @param var6 original type: 'java.lang.Object'
-     * @param var7 original type: 'java.lang.Object'
-     * @param var8 original type: 'java.lang.Object'
-     * @param var9 original type: 'java.lang.Object'
-     * @return original return type: 'java.util.Map'
-     */
-    static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null, var6: BasicOrJavaType | null, var7: BasicOrJavaType | null, var8: BasicOrJavaType | null, var9: BasicOrJavaType | null): Map | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @param var4 original type: 'java.lang.Object'
-     * @param var5 original type: 'java.lang.Object'
-     * @param var6 original type: 'java.lang.Object'
-     * @param var7 original type: 'java.lang.Object'
      * @return original return type: 'java.util.Map'
      */
     static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null, var6: BasicOrJavaType | null, var7: BasicOrJavaType | null): Promise<Map | null>;
@@ -215,6 +187,42 @@ export declare class MapClass extends JavaClass {
      * @return original return type: 'java.util.Map'
      */
     static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null, var6: BasicOrJavaType | null, var7: BasicOrJavaType | null): Map | null;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    static of(): Promise<Map | null>;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    static ofSync(): Map | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Map'
+     */
+    static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<Map | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Map'
+     */
+    static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Map | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Map'
+     */
+    static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Promise<Map | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Map'
+     */
+    static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Map | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -235,42 +243,6 @@ export declare class MapClass extends JavaClass {
      * @return original return type: 'java.util.Map'
      */
     static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null): Map | null;
-    /**
-     * @return original return type: 'java.util.Map'
-     */
-    static of(): Promise<Map | null>;
-    /**
-     * @return original return type: 'java.util.Map'
-     */
-    static ofSync(): Map | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @return original return type: 'java.util.Map'
-     */
-    static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Promise<Map | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @return original return type: 'java.util.Map'
-     */
-    static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Map | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.util.Map'
-     */
-    static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<Map | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.util.Map'
-     */
-    static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Map | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -474,6 +446,34 @@ export declare class MapClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @param var4 original type: 'java.lang.Object'
+     * @param var5 original type: 'java.lang.Object'
+     * @param var6 original type: 'java.lang.Object'
+     * @param var7 original type: 'java.lang.Object'
+     * @param var8 original type: 'java.lang.Object'
+     * @param var9 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Map'
+     */
+    static of(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null, var6: BasicOrJavaType | null, var7: BasicOrJavaType | null, var8: BasicOrJavaType | null, var9: BasicOrJavaType | null): Promise<Map | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @param var4 original type: 'java.lang.Object'
+     * @param var5 original type: 'java.lang.Object'
+     * @param var6 original type: 'java.lang.Object'
+     * @param var7 original type: 'java.lang.Object'
+     * @param var8 original type: 'java.lang.Object'
+     * @param var9 original type: 'java.lang.Object'
+     * @return original return type: 'java.util.Map'
+     */
+    static ofSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null, var4: BasicOrJavaType | null, var5: BasicOrJavaType | null, var6: BasicOrJavaType | null, var7: BasicOrJavaType | null, var8: BasicOrJavaType | null, var9: BasicOrJavaType | null): Map | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.util.function.BiFunction'
      * @return original return type: 'java.lang.Object'
      */
@@ -643,21 +643,27 @@ export interface MapInterface {
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replace?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
     replace?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replace?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.util.function.BiFunction'
      * @return original return type: 'void'
      */
     replaceAll?(var0: java_util_function_BiFunction | JavaInterfaceProxy<java_util_function_BiFunctionInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    remove?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
@@ -665,12 +671,6 @@ export interface MapInterface {
      * @return original return type: 'java.lang.Object'
      */
     remove?(var0: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    remove?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'

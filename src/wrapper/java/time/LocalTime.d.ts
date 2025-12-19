@@ -9,8 +9,8 @@ import { TemporalQuery as java_time_temporal_TemporalQuery, TemporalQueryInterfa
 import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./temporal/TemporalUnit";
 import { DateTimeFormatter as java_time_format_DateTimeFormatter } from "./format/DateTimeFormatter";
 import { TemporalField as java_time_temporal_TemporalField, TemporalFieldInterface as java_time_temporal_TemporalFieldInterface } from "./temporal/TemporalField";
-import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./temporal/Temporal";
 import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./temporal/TemporalAmount";
+import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./temporal/Temporal";
 import { ZoneOffset as java_time_ZoneOffset } from "./ZoneOffset";
 import { Instant as java_time_Instant } from "./Instant";
 import { ZoneId as java_time_ZoneId } from "./ZoneId";
@@ -188,16 +188,6 @@ export declare class LocalTimeClass extends JavaClass {
      */
     minusNanosSync(var0: java_lang_Long | bigint | number): LocalTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'boolean'
-     */
-    isSupportedSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
-    /**
      * @param var0 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'boolean'
      */
@@ -208,15 +198,15 @@ export declare class LocalTimeClass extends JavaClass {
      */
     isSupportedSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.temporal.Temporal'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'boolean'
      */
-    plus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    isSupported(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.temporal.Temporal'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'boolean'
      */
-    plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
+    isSupportedSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.LocalTime'
@@ -228,17 +218,15 @@ export declare class LocalTimeClass extends JavaClass {
      */
     plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): LocalTime | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.LocalTime'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.temporal.Temporal'
      */
-    plus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<LocalTime | null>;
+    plus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
-     * @return original return type: 'java.time.LocalTime'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.temporal.Temporal'
      */
-    plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): LocalTime | null;
+    plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
@@ -251,6 +239,18 @@ export declare class LocalTimeClass extends JavaClass {
      * @return original return type: 'java.time.temporal.Temporal'
      */
     plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    plus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<LocalTime | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): LocalTime | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.time.LocalTime'
@@ -304,26 +304,6 @@ export declare class LocalTimeClass extends JavaClass {
      */
     static ofInstantSync(var0: java_time_Instant | null, var1: java_time_ZoneId | null): LocalTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<LocalTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): LocalTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'java.time.temporal.Temporal'
@@ -348,6 +328,36 @@ export declare class LocalTimeClass extends JavaClass {
      */
     minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): LocalTime | null;
     /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<LocalTime | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): LocalTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
@@ -367,16 +377,6 @@ export declare class LocalTimeClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.time.LocalTime'
@@ -465,6 +465,20 @@ export declare class LocalTimeClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    static of(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<LocalTime | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    static ofSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): LocalTime | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @param var3 original type: 'int'
      * @return original return type: 'java.time.LocalTime'
      */
@@ -489,20 +503,6 @@ export declare class LocalTimeClass extends JavaClass {
      * @return original return type: 'java.time.LocalTime'
      */
     static ofSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): LocalTime | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    static of(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<LocalTime | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    static ofSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): LocalTime | null;
     /**
      * @return original return type: 'java.time.LocalTime'
      */
@@ -561,6 +561,16 @@ export declare class LocalTimeClass extends JavaClass {
     atOffsetSync(var0: java_time_ZoneOffset | null): java_time_OffsetTime | null;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    static parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<LocalTime | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): LocalTime | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
      * @param var1 original type: 'java.time.format.DateTimeFormatter'
      * @return original return type: 'java.time.LocalTime'
      */
@@ -571,16 +581,6 @@ export declare class LocalTimeClass extends JavaClass {
      * @return original return type: 'java.time.LocalTime'
      */
     static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_time_format_DateTimeFormatter | null): LocalTime | null;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    static parse(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Promise<LocalTime | null>;
-    /**
-     * @param var0 original type: 'java.lang.CharSequence'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    static parseSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): LocalTime | null;
     /**
      * @param var0 original type: 'java.time.LocalTime'
      * @return original return type: 'boolean'
@@ -612,17 +612,25 @@ export declare class LocalTimeClass extends JavaClass {
      */
     withNanoSync(var0: java_lang_Integer | number): LocalTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.time.temporal.Temporal'
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.LocalTime'
      */
-    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<LocalTime | null>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @param var1 original type: 'long'
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.LocalTime'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): LocalTime | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
      * @return original return type: 'java.time.temporal.Temporal'
      */
-    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @param var1 original type: 'long'
@@ -636,25 +644,17 @@ export declare class LocalTimeClass extends JavaClass {
      */
     withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): LocalTime | null;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
      * @return original return type: 'java.time.temporal.Temporal'
      */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    with(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): Promise<java_time_temporal_Temporal | null>;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @param var1 original type: 'long'
      * @return original return type: 'java.time.temporal.Temporal'
      */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<LocalTime | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.LocalTime'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): LocalTime | null;
+    withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'

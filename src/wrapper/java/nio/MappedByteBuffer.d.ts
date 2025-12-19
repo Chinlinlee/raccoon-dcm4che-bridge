@@ -62,16 +62,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     asLongBufferSync(): java_nio_LongBuffer | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BasicOrJavaType | null): number;
-    /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @return original return type: 'int'
      */
@@ -82,6 +72,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     compareToSync(var0: java_nio_ByteBuffer | null): number;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BasicOrJavaType | null): number;
+    /**
      * @return original return type: 'boolean'
      */
     isLoaded(): Promise<boolean>;
@@ -89,16 +89,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isLoadedSync(): boolean;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    put(var0: java_nio_ByteBuffer | null): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    putSync(var0: java_nio_ByteBuffer | null): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'byte'
@@ -111,6 +101,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Byte | number): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    put(var0: java_nio_ByteBuffer | null): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    putSync(var0: java_nio_ByteBuffer | null): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.ByteBuffer'
@@ -166,16 +166,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: Buffer | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): java_nio_ByteBuffer | null;
     /**
-     * @param var0 original type: 'byte'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    put(var0: java_lang_Byte | number): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'byte'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    putSync(var0: java_lang_Byte | number): java_nio_ByteBuffer | null;
-    /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -189,6 +179,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     putSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'byte'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    put(var0: java_lang_Byte | number): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'byte'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    putSync(var0: java_lang_Byte | number): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -251,16 +251,6 @@ export declare class MappedByteBufferClass extends JavaClass {
     sliceSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.Buffer'
-     */
-    limit(var0: java_lang_Integer | number): Promise<java_nio_Buffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.Buffer'
-     */
-    limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
-    /**
-     * @param var0 original type: 'int'
      * @return original return type: 'java.nio.ByteBuffer'
      */
     limit(var0: java_lang_Integer | number): Promise<java_nio_ByteBuffer | null>;
@@ -269,6 +259,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.Buffer'
+     */
+    limit(var0: java_lang_Integer | number): Promise<java_nio_Buffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.Buffer'
+     */
+    limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.MappedByteBuffer'
@@ -288,14 +288,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     limitSync(): number;
     /**
-     * @return original return type: 'java.nio.ByteOrder'
-     */
-    order(): Promise<java_nio_ByteOrder | null>;
-    /**
-     * @return original return type: 'java.nio.ByteOrder'
-     */
-    orderSync(): java_nio_ByteOrder | null;
-    /**
      * @param var0 original type: 'java.nio.ByteOrder'
      * @return original return type: 'java.nio.ByteBuffer'
      */
@@ -305,6 +297,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     orderSync(var0: java_nio_ByteOrder | null): java_nio_ByteBuffer | null;
+    /**
+     * @return original return type: 'java.nio.ByteOrder'
+     */
+    order(): Promise<java_nio_ByteOrder | null>;
+    /**
+     * @return original return type: 'java.nio.ByteOrder'
+     */
+    orderSync(): java_nio_ByteOrder | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.ByteBuffer'
@@ -386,14 +386,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     remainingSync(): number;
     /**
-     * @return original return type: 'char'
-     */
-    getChar(): Promise<string | null>;
-    /**
-     * @return original return type: 'char'
-     */
-    getCharSync(): string | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
      */
@@ -404,13 +396,13 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     getCharSync(var0: java_lang_Integer | number): string | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'char'
      */
-    getInt(): Promise<number>;
+    getChar(): Promise<string | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'char'
      */
-    getIntSync(): number;
+    getCharSync(): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -421,6 +413,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     getIntSync(var0: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getInt(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getIntSync(): number;
     /**
      * @param var0 original type: 'float'
      * @return original return type: 'java.nio.ByteBuffer'
@@ -454,6 +454,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     static allocateSync(var0: java_lang_Integer | number): java_nio_ByteBuffer | null;
     /**
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    reset(): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    resetSync(): java_nio_ByteBuffer | null;
+    /**
      * @return original return type: 'java.nio.Buffer'
      */
     reset(): Promise<java_nio_Buffer | null>;
@@ -469,14 +477,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.MappedByteBuffer'
      */
     resetSync(): MappedByteBuffer | null;
-    /**
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    reset(): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    resetSync(): java_nio_ByteBuffer | null;
     /**
      * @return original return type: 'java.nio.MappedByteBuffer'
      */
@@ -509,16 +509,6 @@ export declare class MappedByteBufferClass extends JavaClass {
     positionSync(var0: java_lang_Integer | number): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.MappedByteBuffer'
-     */
-    position(var0: java_lang_Integer | number): Promise<MappedByteBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.nio.MappedByteBuffer'
-     */
-    positionSync(var0: java_lang_Integer | number): MappedByteBuffer | null;
-    /**
-     * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
      */
     position(var0: java_lang_Integer | number): Promise<java_nio_Buffer | null>;
@@ -527,6 +517,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     positionSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.MappedByteBuffer'
+     */
+    position(var0: java_lang_Integer | number): Promise<MappedByteBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.MappedByteBuffer'
+     */
+    positionSync(var0: java_lang_Integer | number): MappedByteBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -543,6 +543,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ShortBuffer'
      */
     asShortBufferSync(): java_nio_ShortBuffer | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -564,16 +574,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -581,14 +581,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
-    /**
-     * @return original return type: 'double'
-     */
-    getDouble(): Promise<number>;
-    /**
-     * @return original return type: 'double'
-     */
-    getDoubleSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'double'
@@ -599,6 +591,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'double'
      */
     getDoubleSync(var0: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'double'
+     */
+    getDouble(): Promise<number>;
+    /**
+     * @return original return type: 'double'
+     */
+    getDoubleSync(): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'double'
@@ -622,6 +622,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     putDoubleSync(var0: java_lang_Double | number): java_nio_ByteBuffer | null;
     /**
+     * @return original return type: 'float'
+     */
+    getFloat(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    getFloatSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'float'
      */
@@ -632,13 +640,15 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     getFloatSync(var0: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'float'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.ByteBuffer'
      */
-    getFloat(): Promise<number>;
+    putLong(var0: java_lang_Long | bigint | number): Promise<java_nio_ByteBuffer | null>;
     /**
-     * @return original return type: 'float'
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.ByteBuffer'
      */
-    getFloatSync(): number;
+    putLongSync(var0: java_lang_Long | bigint | number): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'long'
@@ -651,16 +661,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     putLongSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): java_nio_ByteBuffer | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    putLong(var0: java_lang_Long | bigint | number): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    putLongSync(var0: java_lang_Long | bigint | number): java_nio_ByteBuffer | null;
     /**
      * @return original return type: 'java.nio.ByteBuffer'
      */
@@ -702,14 +702,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     loadSync(): MappedByteBuffer | null;
     /**
-     * @return original return type: 'byte[]'
-     */
-    array(): Promise<Buffer | null>;
-    /**
-     * @return original return type: 'byte[]'
-     */
-    arraySync(): Buffer | null;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     array(): Promise<BasicOrJavaType | null>;
@@ -717,6 +709,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     arraySync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'byte[]'
+     */
+    array(): Promise<Buffer | null>;
+    /**
+     * @return original return type: 'byte[]'
+     */
+    arraySync(): Buffer | null;
     /**
      * @return original return type: 'java.nio.DoubleBuffer'
      */
@@ -734,6 +734,60 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    get(var0: Buffer | null): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    getSync(var0: Buffer | null): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte'
+     */
+    get(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte'
+     */
+    getSync(var0: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'byte'
+     */
+    get(): Promise<number>;
+    /**
+     * @return original return type: 'byte'
+     */
+    getSync(): number;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    get(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    getSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'byte[]'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    get(var0: java_lang_Integer | number, var1: Buffer | null): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'byte[]'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    getSync(var0: java_lang_Integer | number, var1: Buffer | null): java_nio_ByteBuffer | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'byte[]'
      * @param var2 original type: 'int'
@@ -750,60 +804,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     getSync(var0: java_lang_Integer | number, var1: Buffer | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): java_nio_ByteBuffer | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte'
-     */
-    get(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte'
-     */
-    getSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    get(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    getSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_nio_ByteBuffer | null;
-    /**
-     * @return original return type: 'byte'
-     */
-    get(): Promise<number>;
-    /**
-     * @return original return type: 'byte'
-     */
-    getSync(): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'byte[]'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    get(var0: java_lang_Integer | number, var1: Buffer | null): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'byte[]'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    getSync(var0: java_lang_Integer | number, var1: Buffer | null): java_nio_ByteBuffer | null;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    get(var0: Buffer | null): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    getSync(var0: Buffer | null): java_nio_ByteBuffer | null;
-    /**
      * @return original return type: 'int'
      */
     arrayOffset(): Promise<number>;
@@ -811,16 +811,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     arrayOffsetSync(): number;
-    /**
-     * @param var0 original type: 'short'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    putShort(var0: java_lang_Short | number): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'short'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    putShortSync(var0: java_lang_Short | number): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'short'
@@ -833,6 +823,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     putShortSync(var0: java_lang_Integer | number, var1: java_lang_Short | number): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'short'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    putShort(var0: java_lang_Short | number): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'short'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    putShortSync(var0: java_lang_Short | number): java_nio_ByteBuffer | null;
     /**
      * @return original return type: 'java.nio.Buffer'
      */
@@ -866,6 +866,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     hasArraySync(): boolean;
     /**
+     * @return original return type: 'short'
+     */
+    getShort(): Promise<number>;
+    /**
+     * @return original return type: 'short'
+     */
+    getShortSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'short'
      */
@@ -875,14 +883,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'short'
      */
     getShortSync(var0: java_lang_Integer | number): number;
-    /**
-     * @return original return type: 'short'
-     */
-    getShort(): Promise<number>;
-    /**
-     * @return original return type: 'short'
-     */
-    getShortSync(): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'char'
@@ -914,14 +914,6 @@ export declare class MappedByteBufferClass extends JavaClass {
      */
     hasRemainingSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clear(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clearSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.MappedByteBuffer'
      */
     clear(): Promise<MappedByteBuffer | null>;
@@ -937,6 +929,14 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     clearSync(): java_nio_ByteBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clear(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clearSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'long'
@@ -1023,16 +1023,6 @@ export declare class MappedByteBufferClass extends JavaClass {
     alignedSliceSync(var0: java_lang_Integer | number): java_nio_ByteBuffer | null;
     /**
      * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    static wrap(var0: Buffer | null): Promise<java_nio_ByteBuffer | null>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'java.nio.ByteBuffer'
-     */
-    static wrapSync(var0: Buffer | null): java_nio_ByteBuffer | null;
-    /**
-     * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.nio.ByteBuffer'
@@ -1045,6 +1035,16 @@ export declare class MappedByteBufferClass extends JavaClass {
      * @return original return type: 'java.nio.ByteBuffer'
      */
     static wrapSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_nio_ByteBuffer | null;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    static wrap(var0: Buffer | null): Promise<java_nio_ByteBuffer | null>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'java.nio.ByteBuffer'
+     */
+    static wrapSync(var0: Buffer | null): java_nio_ByteBuffer | null;
     /**
      * @return original return type: 'boolean'
      */

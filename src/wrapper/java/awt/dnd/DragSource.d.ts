@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
+import { DragSourceListener as java_awt_dnd_DragSourceListener, DragSourceListenerInterface as java_awt_dnd_DragSourceListenerInterface } from "./DragSourceListener";
 import { EventListener as java_util_EventListener } from "./../../util/EventListener";
 import { Class as java_lang_Class } from "./../../lang/Class";
-import { DragSourceListener as java_awt_dnd_DragSourceListener, DragSourceListenerInterface as java_awt_dnd_DragSourceListenerInterface } from "./DragSourceListener";
 import { Long as java_lang_Long } from "./../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
 import { DragGestureRecognizer as java_awt_dnd_DragGestureRecognizer } from "./DragGestureRecognizer";
@@ -21,16 +21,6 @@ import { Transferable as java_awt_datatransfer_Transferable, TransferableInterfa
  */
 export declare class DragSourceClass extends JavaClass {
     /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.EventListener[]'
-     */
-    getListeners(var0: java_lang_Class | null): Promise<(java_util_EventListener | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.EventListener[]'
-     */
-    getListenersSync(var0: java_lang_Class | null): (java_util_EventListener | null)[] | null;
-    /**
      * @param var0 original type: 'java.awt.dnd.DragSourceListener'
      * @return original return type: 'void'
      */
@@ -41,6 +31,16 @@ export declare class DragSourceClass extends JavaClass {
      */
     removeDragSourceListenerSync(var0: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): void;
     /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.EventListener[]'
+     */
+    getListeners(var0: java_lang_Class | null): Promise<(java_util_EventListener | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.EventListener[]'
+     */
+    getListenersSync(var0: java_lang_Class | null): (java_util_EventListener | null)[] | null;
+    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -48,6 +48,16 @@ export declare class DragSourceClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -69,15 +79,19 @@ export declare class DragSourceClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.dnd.DragGestureListener'
+     * @return original return type: 'java.awt.dnd.DragGestureRecognizer'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    createDefaultDragGestureRecognizer(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DragGestureListener | JavaInterfaceProxy<java_awt_dnd_DragGestureListenerInterface> | null): Promise<java_awt_dnd_DragGestureRecognizer | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.awt.dnd.DragGestureListener'
+     * @return original return type: 'java.awt.dnd.DragGestureRecognizer'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    createDefaultDragGestureRecognizerSync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DragGestureListener | JavaInterfaceProxy<java_awt_dnd_DragGestureListenerInterface> | null): java_awt_dnd_DragGestureRecognizer | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.awt.Component'
@@ -94,20 +108,6 @@ export declare class DragSourceClass extends JavaClass {
      * @return original return type: 'java.awt.dnd.DragGestureRecognizer'
      */
     createDragGestureRecognizerSync(var0: java_lang_Class | null, var1: java_awt_Component | null, var2: java_lang_Integer | number, var3: java_awt_dnd_DragGestureListener | JavaInterfaceProxy<java_awt_dnd_DragGestureListenerInterface> | null): java_awt_dnd_DragGestureRecognizer | null;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.dnd.DragGestureListener'
-     * @return original return type: 'java.awt.dnd.DragGestureRecognizer'
-     */
-    createDefaultDragGestureRecognizer(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DragGestureListener | JavaInterfaceProxy<java_awt_dnd_DragGestureListenerInterface> | null): Promise<java_awt_dnd_DragGestureRecognizer | null>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.awt.dnd.DragGestureListener'
-     * @return original return type: 'java.awt.dnd.DragGestureRecognizer'
-     */
-    createDefaultDragGestureRecognizerSync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DragGestureListener | JavaInterfaceProxy<java_awt_dnd_DragGestureListenerInterface> | null): java_awt_dnd_DragGestureRecognizer | null;
     /**
      * @param var0 original type: 'java.awt.dnd.DragSourceMotionListener'
      * @return original return type: 'void'
@@ -219,26 +219,6 @@ export declare class DragSourceClass extends JavaClass {
      * @param var3 original type: 'java.awt.Point'
      * @param var4 original type: 'java.awt.datatransfer.Transferable'
      * @param var5 original type: 'java.awt.dnd.DragSourceListener'
-     * @return original return type: 'void'
-     */
-    startDrag(var0: java_awt_dnd_DragGestureEvent | null, var1: java_awt_Cursor | null, var2: java_awt_Image | null, var3: java_awt_Point | null, var4: java_awt_datatransfer_Transferable | JavaInterfaceProxy<java_awt_datatransfer_TransferableInterface> | null, var5: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DragGestureEvent'
-     * @param var1 original type: 'java.awt.Cursor'
-     * @param var2 original type: 'java.awt.Image'
-     * @param var3 original type: 'java.awt.Point'
-     * @param var4 original type: 'java.awt.datatransfer.Transferable'
-     * @param var5 original type: 'java.awt.dnd.DragSourceListener'
-     * @return original return type: 'void'
-     */
-    startDragSync(var0: java_awt_dnd_DragGestureEvent | null, var1: java_awt_Cursor | null, var2: java_awt_Image | null, var3: java_awt_Point | null, var4: java_awt_datatransfer_Transferable | JavaInterfaceProxy<java_awt_datatransfer_TransferableInterface> | null, var5: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): void;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DragGestureEvent'
-     * @param var1 original type: 'java.awt.Cursor'
-     * @param var2 original type: 'java.awt.Image'
-     * @param var3 original type: 'java.awt.Point'
-     * @param var4 original type: 'java.awt.datatransfer.Transferable'
-     * @param var5 original type: 'java.awt.dnd.DragSourceListener'
      * @param var6 original type: 'java.awt.datatransfer.FlavorMap'
      * @return original return type: 'void'
      */
@@ -288,6 +268,26 @@ export declare class DragSourceClass extends JavaClass {
      * @return original return type: 'void'
      */
     startDragSync(var0: java_awt_dnd_DragGestureEvent | null, var1: java_awt_Cursor | null, var2: java_awt_datatransfer_Transferable | JavaInterfaceProxy<java_awt_datatransfer_TransferableInterface> | null, var3: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.awt.dnd.DragGestureEvent'
+     * @param var1 original type: 'java.awt.Cursor'
+     * @param var2 original type: 'java.awt.Image'
+     * @param var3 original type: 'java.awt.Point'
+     * @param var4 original type: 'java.awt.datatransfer.Transferable'
+     * @param var5 original type: 'java.awt.dnd.DragSourceListener'
+     * @return original return type: 'void'
+     */
+    startDrag(var0: java_awt_dnd_DragGestureEvent | null, var1: java_awt_Cursor | null, var2: java_awt_Image | null, var3: java_awt_Point | null, var4: java_awt_datatransfer_Transferable | JavaInterfaceProxy<java_awt_datatransfer_TransferableInterface> | null, var5: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.dnd.DragGestureEvent'
+     * @param var1 original type: 'java.awt.Cursor'
+     * @param var2 original type: 'java.awt.Image'
+     * @param var3 original type: 'java.awt.Point'
+     * @param var4 original type: 'java.awt.datatransfer.Transferable'
+     * @param var5 original type: 'java.awt.dnd.DragSourceListener'
+     * @return original return type: 'void'
+     */
+    startDragSync(var0: java_awt_dnd_DragGestureEvent | null, var1: java_awt_Cursor | null, var2: java_awt_Image | null, var3: java_awt_Point | null, var4: java_awt_datatransfer_Transferable | JavaInterfaceProxy<java_awt_datatransfer_TransferableInterface> | null, var5: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): void;
     /**
      * @return original return type: 'java.awt.dnd.DragSourceListener[]'
      */

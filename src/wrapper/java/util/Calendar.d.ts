@@ -41,6 +41,16 @@ export declare class CalendarClass extends JavaClass {
     static getAvailableCalendarTypesSync(): java_util_Set | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,16 +69,6 @@ export declare class CalendarClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -131,18 +131,6 @@ export declare class CalendarClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    roll(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    rollSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): void;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -153,6 +141,18 @@ export declare class CalendarClass extends JavaClass {
      * @return original return type: 'void'
      */
     rollSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    roll(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    rollSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -248,16 +248,6 @@ export declare class CalendarClass extends JavaClass {
      */
     getSync(var0: java_lang_Integer | number): number;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getMinimum(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getMinimumSync(var0: java_lang_Integer | number): number;
-    /**
      * @param var0 original type: 'java.util.TimeZone'
      * @return original return type: 'void'
      */
@@ -267,6 +257,16 @@ export declare class CalendarClass extends JavaClass {
      * @return original return type: 'void'
      */
     setTimeZoneSync(var0: java_util_TimeZone | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getMinimum(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getMinimumSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -414,14 +414,6 @@ export declare class CalendarClass extends JavaClass {
      */
     getLeastMaximumSync(var0: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'void'
-     */
-    clear(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    clearSync(): void;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -431,6 +423,14 @@ export declare class CalendarClass extends JavaClass {
      * @return original return type: 'void'
      */
     clearSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'void'
+     */
+    clear(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    clearSync(): void;
     /**
      * @return original return type: 'long'
      */

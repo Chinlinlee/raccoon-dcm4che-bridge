@@ -62,16 +62,6 @@ export declare class BigIntegerClass extends JavaClass {
      */
     gcdSync(var0: BigIntegerClass | null): BigInteger | null;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareTo(var0: BasicOrJavaType | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'int'
-     */
-    compareToSync(var0: BasicOrJavaType | null): number;
-    /**
      * @param var0 original type: 'java.math.BigInteger'
      * @return original return type: 'int'
      */
@@ -81,6 +71,16 @@ export declare class BigIntegerClass extends JavaClass {
      * @return original return type: 'int'
      */
     compareToSync(var0: BigIntegerClass | null): number;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareTo(var0: BasicOrJavaType | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'int'
+     */
+    compareToSync(var0: BasicOrJavaType | null): number;
     /**
      * @return original return type: 'java.math.BigInteger[]'
      */
@@ -126,6 +126,14 @@ export declare class BigIntegerClass extends JavaClass {
      */
     shortValueSync(): number;
     /**
+     * @return original return type: 'int'
+     */
+    signum(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    signumSync(): number;
+    /**
      * @param var0 original type: 'java.math.BigInteger'
      * @return original return type: 'java.math.BigInteger'
      */
@@ -135,14 +143,6 @@ export declare class BigIntegerClass extends JavaClass {
      * @return original return type: 'java.math.BigInteger'
      */
     addSync(var0: BigIntegerClass | null): BigInteger | null;
-    /**
-     * @return original return type: 'int'
-     */
-    signum(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    signumSync(): number;
     /**
      * @param var0 original type: 'java.math.BigInteger'
      * @return original return type: 'java.math.BigInteger'
@@ -233,6 +233,16 @@ export declare class BigIntegerClass extends JavaClass {
      * @param var0 original type: 'java.math.BigInteger'
      * @return original return type: 'java.math.BigInteger'
      */
+    parallelMultiply(var0: BigIntegerClass | null): Promise<BigInteger | null>;
+    /**
+     * @param var0 original type: 'java.math.BigInteger'
+     * @return original return type: 'java.math.BigInteger'
+     */
+    parallelMultiplySync(var0: BigIntegerClass | null): BigInteger | null;
+    /**
+     * @param var0 original type: 'java.math.BigInteger'
+     * @return original return type: 'java.math.BigInteger'
+     */
     andNot(var0: BigIntegerClass | null): Promise<BigInteger | null>;
     /**
      * @param var0 original type: 'java.math.BigInteger'
@@ -259,6 +269,16 @@ export declare class BigIntegerClass extends JavaClass {
     modInverseSync(var0: BigIntegerClass | null): BigInteger | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -277,16 +297,6 @@ export declare class BigIntegerClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'long'
      */

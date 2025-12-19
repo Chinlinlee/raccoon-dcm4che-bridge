@@ -10,6 +10,14 @@ import { NamespaceContext as javax_xml_namespace_NamespaceContext } from "./../n
  */
 export declare class XMLStreamReaderClass extends JavaClass {
     /**
+     * @return original return type: 'int'
+     */
+    next(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    nextSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
@@ -20,13 +28,13 @@ export declare class XMLStreamReaderClass extends JavaClass {
      */
     getAttributeTypeSync(var0: java_lang_Integer | number): string | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'javax.xml.stream.Location'
      */
-    next(): Promise<number>;
+    getLocation(): Promise<javax_xml_stream_Location | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'javax.xml.stream.Location'
      */
-    nextSync(): number;
+    getLocationSync(): javax_xml_stream_Location | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -43,14 +51,6 @@ export declare class XMLStreamReaderClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getPIDataSync(): string | null;
-    /**
-     * @return original return type: 'javax.xml.stream.Location'
-     */
-    getLocation(): Promise<javax_xml_stream_Location | null>;
-    /**
-     * @return original return type: 'javax.xml.stream.Location'
-     */
-    getLocationSync(): javax_xml_stream_Location | null;
     /**
      * @return original return type: 'javax.xml.namespace.QName'
      */
@@ -198,14 +198,6 @@ export declare class XMLStreamReaderClass extends JavaClass {
      */
     getVersionSync(): string | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getPrefix(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getPrefixSync(): string | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
@@ -215,6 +207,14 @@ export declare class XMLStreamReaderClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     getPropertySync(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPrefix(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPrefixSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -242,6 +242,14 @@ export declare class XMLStreamReaderClass extends JavaClass {
      */
     isAttributeSpecifiedSync(var0: java_lang_Integer | number): boolean;
     /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasNextSync(): boolean;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.String'
@@ -255,14 +263,6 @@ export declare class XMLStreamReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     requireSync(var0: java_lang_Integer | number, var1: string | null, var2: string | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNextSync(): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -300,6 +300,14 @@ export declare class XMLStreamReaderClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
+    getTextLength(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getTextLengthSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
     getEventType(): Promise<number>;
     /**
      * @return original return type: 'int'
@@ -313,14 +321,6 @@ export declare class XMLStreamReaderClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getCharacterEncodingSchemeSync(): string | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getTextLength(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getTextLengthSync(): number;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -337,6 +337,14 @@ export declare class XMLStreamReaderClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isEndElementSync(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isStartElement(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isStartElementSync(): boolean;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -365,14 +373,6 @@ export declare class XMLStreamReaderClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getNamespaceURISync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isStartElement(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isStartElementSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -483,14 +483,18 @@ export declare class XMLStreamReaderClass extends JavaClass {
  */
 export interface XMLStreamReaderInterface {
     /**
+     * @return original return type: 'int'
+     */
+    next(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
     getAttributeType(var0: java_lang_Integer | number): string | null;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'javax.xml.stream.Location'
      */
-    next(): number;
+    getLocation(): javax_xml_stream_Location | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -499,10 +503,6 @@ export interface XMLStreamReaderInterface {
      * @return original return type: 'java.lang.String'
      */
     getPIData(): string | null;
-    /**
-     * @return original return type: 'javax.xml.stream.Location'
-     */
-    getLocation(): javax_xml_stream_Location | null;
     /**
      * @return original return type: 'javax.xml.namespace.QName'
      */
@@ -577,14 +577,14 @@ export interface XMLStreamReaderInterface {
      */
     getVersion(): string | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getPrefix(): string | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
     getProperty(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPrefix(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -599,16 +599,16 @@ export interface XMLStreamReaderInterface {
      */
     isAttributeSpecified(var0: java_lang_Integer | number): boolean;
     /**
+     * @return original return type: 'boolean'
+     */
+    hasNext(): boolean;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     require(var0: java_lang_Integer | number, var1: string | null, var2: string | null): void;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasNext(): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -629,15 +629,15 @@ export interface XMLStreamReaderInterface {
     /**
      * @return original return type: 'int'
      */
+    getTextLength(): number;
+    /**
+     * @return original return type: 'int'
+     */
     getEventType(): number;
     /**
      * @return original return type: 'java.lang.String'
      */
     getCharacterEncodingScheme(): string | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getTextLength(): number;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -646,6 +646,10 @@ export interface XMLStreamReaderInterface {
      * @return original return type: 'boolean'
      */
     isEndElement(): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isStartElement(): boolean;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -660,10 +664,6 @@ export interface XMLStreamReaderInterface {
      * @return original return type: 'java.lang.String'
      */
     getNamespaceURI(var0: java_lang_Integer | number): string | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isStartElement(): boolean;
     /**
      * @return original return type: 'boolean'
      */

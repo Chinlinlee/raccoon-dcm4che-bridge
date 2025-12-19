@@ -20,6 +20,16 @@ export declare class PointClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class PointClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'double[]'
      * @return original return type: 'void'
@@ -137,17 +137,6 @@ export declare class PointClass extends JavaClass {
      */
     y: java_lang_Double | number;
     /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     */
-    constructor(var0: java_lang_Double | number, var1: java_lang_Double | number);
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'org.opencv.core.Point'
-     */
-    static newInstanceAsync(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<Point>;
-    /**
      * @param var0 original type: 'double[]'
      */
     constructor(var0: (java_lang_Double | number)[] | null);
@@ -161,6 +150,17 @@ export declare class PointClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Point'
      */
     static newInstanceAsync(): Promise<Point>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     */
+    constructor(var0: java_lang_Double | number, var1: java_lang_Double | number);
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'org.opencv.core.Point'
+     */
+    static newInstanceAsync(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<Point>;
 }
 declare const Point_base: typeof PointClass;
 /**

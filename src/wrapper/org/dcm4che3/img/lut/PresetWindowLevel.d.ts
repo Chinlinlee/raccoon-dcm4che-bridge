@@ -26,6 +26,16 @@ export declare class PresetWindowLevelClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -44,16 +54,6 @@ export declare class PresetWindowLevelClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -199,14 +199,6 @@ export declare class PresetWindowLevelClass extends JavaClass {
      */
     getKeyCodeSync(): number;
     /**
-     * @return original return type: 'java.util.Map'
-     */
-    static getPresetListByModality(): Promise<java_util_Map | null>;
-    /**
-     * @return original return type: 'java.util.Map'
-     */
-    static getPresetListByModalitySync(): java_util_Map | null;
-    /**
      * @return original return type: 'double'
      */
     getMinBox(): Promise<number>;
@@ -214,6 +206,14 @@ export declare class PresetWindowLevelClass extends JavaClass {
      * @return original return type: 'double'
      */
     getMinBoxSync(): number;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    static getPresetListByModality(): Promise<java_util_Map | null>;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    static getPresetListByModalitySync(): java_util_Map | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Double'

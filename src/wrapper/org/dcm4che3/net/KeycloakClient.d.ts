@@ -41,6 +41,16 @@ export declare class KeycloakClientClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,16 +69,6 @@ export declare class KeycloakClientClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -112,6 +112,14 @@ export declare class KeycloakClientClass extends JavaClass {
      */
     notifySync(): void;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getKeycloakClientSecret(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getKeycloakClientSecretSync(): string | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.net.KeycloakClient$GrantType'
      * @return original return type: 'void'
      */
@@ -121,14 +129,6 @@ export declare class KeycloakClientClass extends JavaClass {
      * @return original return type: 'void'
      */
     setKeycloakGrantTypeSync(var0: org_dcm4che3_net_KeycloakClient$GrantType | null): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getKeycloakClientSecret(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getKeycloakClientSecretSync(): string | null;
     /**
      * @return original return type: 'int'
      */
@@ -236,14 +236,6 @@ export declare class KeycloakClientClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'org.dcm4che3.net.KeycloakClient'
-     */
-    clone(): Promise<KeycloakClient | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.net.KeycloakClient'
-     */
-    cloneSync(): KeycloakClient | null;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     clone(): Promise<BasicOrJavaType | null>;
@@ -251,6 +243,14 @@ export declare class KeycloakClientClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     cloneSync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'org.dcm4che3.net.KeycloakClient'
+     */
+    clone(): Promise<KeycloakClient | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.net.KeycloakClient'
+     */
+    cloneSync(): KeycloakClient | null;
     /**
      * @return original return type: 'boolean'
      */

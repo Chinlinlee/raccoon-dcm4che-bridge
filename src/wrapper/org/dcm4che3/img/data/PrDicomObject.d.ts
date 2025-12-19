@@ -26,6 +26,16 @@ export declare class PrDicomObjectClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -44,16 +54,6 @@ export declare class PrDicomObjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.util.List'
      */
@@ -79,14 +79,6 @@ export declare class PrDicomObjectClass extends JavaClass {
      */
     getShutterOverlaysSync(): java_util_List | null;
     /**
-     * @return original return type: 'java.util.List'
-     */
-    getGraphicAnnotationSequence(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getGraphicAnnotationSequenceSync(): java_util_List | null;
-    /**
      * @return original return type: 'java.util.Optional'
      */
     getPrLutShapeMode(): Promise<java_util_Optional | null>;
@@ -94,6 +86,14 @@ export declare class PrDicomObjectClass extends JavaClass {
      * @return original return type: 'java.util.Optional'
      */
     getPrLutShapeModeSync(): java_util_Optional | null;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getGraphicAnnotationSequence(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getGraphicAnnotationSequenceSync(): java_util_List | null;
     /**
      * @return original return type: 'java.awt.geom.Area'
      */
@@ -219,6 +219,14 @@ export declare class PrDicomObjectClass extends JavaClass {
      */
     getPrLutExplanationSync(): java_util_Optional | null;
     /**
+     * @return original return type: 'java.util.List'
+     */
+    getOverlays(): Promise<java_util_List | null>;
+    /**
+     * @return original return type: 'java.util.List'
+     */
+    getOverlaysSync(): java_util_List | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.img.data.PrDicomObject'
      */
@@ -228,14 +236,6 @@ export declare class PrDicomObjectClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.img.data.PrDicomObject'
      */
     static getPresentationStateSync(var0: string | null): PrDicomObject | null;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getOverlays(): Promise<java_util_List | null>;
-    /**
-     * @return original return type: 'java.util.List'
-     */
-    getOverlaysSync(): java_util_List | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'

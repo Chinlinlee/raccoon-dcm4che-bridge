@@ -45,6 +45,16 @@ export declare class LookupTableCVClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -64,15 +74,13 @@ export declare class LookupTableCVClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    getOffset(): Promise<number>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    getOffsetSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -83,14 +91,6 @@ export declare class LookupTableCVClass extends JavaClass {
      * @return original return type: 'int'
      */
     getOffsetSync(var0: java_lang_Integer | number): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getOffset(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getOffsetSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -116,14 +116,6 @@ export declare class LookupTableCVClass extends JavaClass {
      */
     getOffsetsSync(): (number)[] | null;
     /**
-     * @return original return type: 'byte[][]'
-     */
-    getByteData(): Promise<(Buffer | null)[] | null>;
-    /**
-     * @return original return type: 'byte[][]'
-     */
-    getByteDataSync(): (Buffer | null)[] | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'byte[]'
      */
@@ -133,6 +125,14 @@ export declare class LookupTableCVClass extends JavaClass {
      * @return original return type: 'byte[]'
      */
     getByteDataSync(var0: java_lang_Integer | number): Buffer | null;
+    /**
+     * @return original return type: 'byte[][]'
+     */
+    getByteData(): Promise<(Buffer | null)[] | null>;
+    /**
+     * @return original return type: 'byte[][]'
+     */
+    getByteDataSync(): (Buffer | null)[] | null;
     /**
      * @return original return type: 'int'
      */
@@ -204,17 +204,6 @@ export declare class LookupTableCVClass extends JavaClass {
     /**
      * @param var0 original type: 'byte[][]'
      * @param var1 original type: 'int[]'
-     */
-    constructor(var0: (Buffer | null)[] | null, var1: (java_lang_Integer | number)[] | null);
-    /**
-     * @param var0 original type: 'byte[][]'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'org.weasis.opencv.data.LookupTableCV'
-     */
-    static newInstanceAsync(var0: (Buffer | null)[] | null, var1: (java_lang_Integer | number)[] | null): Promise<LookupTableCV>;
-    /**
-     * @param var0 original type: 'byte[][]'
-     * @param var1 original type: 'int[]'
      * @param var2 original type: 'boolean'
      */
     constructor(var0: (Buffer | null)[] | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Boolean | boolean);
@@ -265,17 +254,6 @@ export declare class LookupTableCVClass extends JavaClass {
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
-     */
-    constructor(var0: Buffer | null, var1: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.weasis.opencv.data.LookupTableCV'
-     */
-    static newInstanceAsync(var0: Buffer | null, var1: java_lang_Integer | number): Promise<LookupTableCV>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @param var1 original type: 'int'
      * @param var2 original type: 'boolean'
      */
     constructor(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean);
@@ -286,6 +264,17 @@ export declare class LookupTableCVClass extends JavaClass {
      * @return original return type: 'org.weasis.opencv.data.LookupTableCV'
      */
     static newInstanceAsync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<LookupTableCV>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     */
+    constructor(var0: Buffer | null, var1: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'byte[]'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.weasis.opencv.data.LookupTableCV'
+     */
+    static newInstanceAsync(var0: Buffer | null, var1: java_lang_Integer | number): Promise<LookupTableCV>;
     /**
      * @param var0 original type: 'byte[][]'
      */
@@ -306,6 +295,17 @@ export declare class LookupTableCVClass extends JavaClass {
      * @return original return type: 'org.weasis.opencv.data.LookupTableCV'
      */
     static newInstanceAsync(var0: (Buffer | null)[] | null, var1: java_lang_Integer | number): Promise<LookupTableCV>;
+    /**
+     * @param var0 original type: 'byte[][]'
+     * @param var1 original type: 'int[]'
+     */
+    constructor(var0: (Buffer | null)[] | null, var1: (java_lang_Integer | number)[] | null);
+    /**
+     * @param var0 original type: 'byte[][]'
+     * @param var1 original type: 'int[]'
+     * @return original return type: 'org.weasis.opencv.data.LookupTableCV'
+     */
+    static newInstanceAsync(var0: (Buffer | null)[] | null, var1: (java_lang_Integer | number)[] | null): Promise<LookupTableCV>;
 }
 declare const LookupTableCV_base: typeof LookupTableCVClass;
 /**

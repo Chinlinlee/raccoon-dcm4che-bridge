@@ -20,6 +20,16 @@ export declare class ReaderClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,26 +48,6 @@ export declare class ReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'char[]'
-     * @return original return type: 'int'
-     */
-    read(var0: (string | null)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'char[]'
-     * @return original return type: 'int'
-     */
-    readSync(var0: (string | null)[] | null): number;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -90,6 +80,16 @@ export declare class ReaderClass extends JavaClass {
      * @return original return type: 'int'
      */
     readSync(): number;
+    /**
+     * @param var0 original type: 'char[]'
+     * @return original return type: 'int'
+     */
+    read(var0: (string | null)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'char[]'
+     * @return original return type: 'int'
+     */
+    readSync(var0: (string | null)[] | null): number;
     /**
      * @return original return type: 'boolean'
      */

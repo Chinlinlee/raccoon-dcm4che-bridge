@@ -4,6 +4,7 @@ import { Long as java_lang_Long } from "./../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
 import { Stream as java_util_stream_Stream } from "./../stream/Stream";
 import { CharSequence as java_lang_CharSequence, CharSequenceInterface as java_lang_CharSequenceInterface } from "./../../lang/CharSequence";
+import { Map as java_util_Map } from "./../Map";
 import { Predicate as java_util_function_Predicate } from "./../function/Predicate";
 import { Matcher as java_util_regex_Matcher } from "./Matcher";
 /**
@@ -20,6 +21,16 @@ export declare class PatternClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -40,16 +51,6 @@ export declare class PatternClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -84,6 +85,14 @@ export declare class PatternClass extends JavaClass {
      * @return original return type: 'java.util.stream.Stream'
      */
     splitAsStreamSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): java_util_stream_Stream | null;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    namedGroups(): Promise<java_util_Map | null>;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    namedGroupsSync(): java_util_Map | null;
     /**
      * @return original return type: 'java.util.function.Predicate'
      */
@@ -176,6 +185,18 @@ export declare class PatternClass extends JavaClass {
      * @return original return type: 'java.util.regex.Pattern'
      */
     static compileSync(var0: string | null, var1: java_lang_Integer | number): Pattern | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    splitWithDelimiters(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): Promise<(string | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.String[]'
+     */
+    splitWithDelimitersSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): (string | null)[] | null;
     /**
      * @return original return type: 'int'
      */

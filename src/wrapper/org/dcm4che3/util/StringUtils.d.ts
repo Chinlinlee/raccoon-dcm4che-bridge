@@ -34,6 +34,16 @@ export declare class StringUtilsClass extends JavaClass {
     static isIPAddrSync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -52,16 +62,6 @@ export declare class StringUtilsClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -221,18 +221,6 @@ export declare class StringUtilsClass extends JavaClass {
      */
     static parseISSync(var0: string | null): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static requireNotEmpty(var0: string | null, var1: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static requireNotEmptySync(var0: string | null, var1: string | null): string | null;
-    /**
      * @param var0 original type: 'java.lang.Object[]'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object[]'
@@ -244,6 +232,18 @@ export declare class StringUtilsClass extends JavaClass {
      * @return original return type: 'java.lang.Object[]'
      */
     static requireNotEmptySync(var0: (BasicOrJavaType | null)[] | null, var1: string | null): (BasicOrJavaType | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static requireNotEmpty(var0: string | null, var1: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static requireNotEmptySync(var0: string | null, var1: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'long'

@@ -7,6 +7,8 @@ import { SecureRandomParameters as java_security_SecureRandomParameters, SecureR
 import { LongStream as java_util_stream_LongStream } from "./../util/stream/LongStream";
 import { IntStream as java_util_stream_IntStream } from "./../util/stream/IntStream";
 import { Provider as java_security_Provider } from "./Provider";
+import { Random as java_util_Random } from "./../util/Random";
+import { RandomGenerator as java_util_random_RandomGenerator, RandomGeneratorInterface as java_util_random_RandomGeneratorInterface } from "./../util/random/RandomGenerator";
 import { Double as java_lang_Double } from "./../lang/Double";
 import { DoubleStream as java_util_stream_DoubleStream } from "./../util/stream/DoubleStream";
 /**
@@ -55,6 +57,16 @@ export declare class SecureRandomClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -74,16 +86,6 @@ export declare class SecureRandomClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -101,16 +103,6 @@ export declare class SecureRandomClass extends JavaClass {
     notifySync(): void;
     /**
      * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    nextBytes(var0: Buffer | null): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    nextBytesSync(var0: Buffer | null): void;
-    /**
-     * @param var0 original type: 'byte[]'
      * @param var1 original type: 'java.security.SecureRandomParameters'
      * @return original return type: 'void'
      */
@@ -121,6 +113,38 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'void'
      */
     nextBytesSync(var0: Buffer | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): void;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    nextBytes(var0: Buffer | null): Promise<void>;
+    /**
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'void'
+     */
+    nextBytesSync(var0: Buffer | null): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    longs(var0: java_lang_Long | bigint | number): Promise<java_util_stream_LongStream | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    longsSync(var0: java_lang_Long | bigint | number): java_util_stream_LongStream | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    longs(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number): Promise<java_util_stream_LongStream | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.stream.LongStream'
+     */
+    longsSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number): java_util_stream_LongStream | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
@@ -136,16 +160,6 @@ export declare class SecureRandomClass extends JavaClass {
      */
     longsSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Long | bigint | number): java_util_stream_LongStream | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    longs(var0: java_lang_Long | bigint | number): Promise<java_util_stream_LongStream | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    longsSync(var0: java_lang_Long | bigint | number): java_util_stream_LongStream | null;
-    /**
      * @return original return type: 'java.util.stream.LongStream'
      */
     longs(): Promise<java_util_stream_LongStream | null>;
@@ -153,18 +167,6 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'java.util.stream.LongStream'
      */
     longsSync(): java_util_stream_LongStream | null;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    longs(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number): Promise<java_util_stream_LongStream | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.util.stream.LongStream'
-     */
-    longsSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number): java_util_stream_LongStream | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.util.stream.IntStream'
@@ -184,18 +186,6 @@ export declare class SecureRandomClass extends JavaClass {
      */
     intsSync(): java_util_stream_IntStream | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    ints(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_util_stream_IntStream | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.util.stream.IntStream'
-     */
-    intsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_util_stream_IntStream | null;
-    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -209,6 +199,18 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'java.util.stream.IntStream'
      */
     intsSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_util_stream_IntStream | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    ints(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_util_stream_IntStream | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.util.stream.IntStream'
+     */
+    intsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_util_stream_IntStream | null;
     /**
      * @return original return type: 'int'
      */
@@ -225,6 +227,16 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'java.security.Provider'
      */
     getProviderSync(): java_security_Provider | null;
+    /**
+     * @param var0 original type: 'java.util.random.RandomGenerator'
+     * @return original return type: 'java.util.Random'
+     */
+    static from(var0: java_util_random_RandomGenerator | JavaInterfaceProxy<java_util_random_RandomGeneratorInterface> | null): Promise<java_util_Random | null>;
+    /**
+     * @param var0 original type: 'java.util.random.RandomGenerator'
+     * @return original return type: 'java.util.Random'
+     */
+    static fromSync(var0: java_util_random_RandomGenerator | JavaInterfaceProxy<java_util_random_RandomGeneratorInterface> | null): java_util_Random | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -268,6 +280,14 @@ export declare class SecureRandomClass extends JavaClass {
      */
     static getInstanceStrongSync(): SecureRandom | null;
     /**
+     * @return original return type: 'void'
+     */
+    reseed(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    reseedSync(): void;
+    /**
      * @param var0 original type: 'java.security.SecureRandomParameters'
      * @return original return type: 'void'
      */
@@ -277,14 +297,6 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'void'
      */
     reseedSync(var0: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): void;
-    /**
-     * @return original return type: 'void'
-     */
-    reseed(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    reseedSync(): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'byte[]'
@@ -438,14 +450,6 @@ export declare class SecureRandomClass extends JavaClass {
      */
     doublesSync(var0: java_lang_Long | bigint | number, var1: java_lang_Double | number, var2: java_lang_Double | number): java_util_stream_DoubleStream | null;
     /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    doubles(): Promise<java_util_stream_DoubleStream | null>;
-    /**
-     * @return original return type: 'java.util.stream.DoubleStream'
-     */
-    doublesSync(): java_util_stream_DoubleStream | null;
-    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @return original return type: 'java.util.stream.DoubleStream'
@@ -457,6 +461,14 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'java.util.stream.DoubleStream'
      */
     doublesSync(var0: java_lang_Double | number, var1: java_lang_Double | number): java_util_stream_DoubleStream | null;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    doubles(): Promise<java_util_stream_DoubleStream | null>;
+    /**
+     * @return original return type: 'java.util.stream.DoubleStream'
+     */
+    doublesSync(): java_util_stream_DoubleStream | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -489,28 +501,18 @@ export declare class SecureRandomClass extends JavaClass {
     static getInstanceSync(var0: string | null, var1: string | null): SecureRandom | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.Provider'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @param var2 original type: 'java.security.Provider'
      * @return original return type: 'java.security.SecureRandom'
      */
-    static getInstance(var0: string | null, var1: java_security_Provider | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.Provider'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null, var1: java_security_Provider | null): SecureRandom | null;
+    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): Promise<SecureRandom | null>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @param var2 original type: 'java.security.Provider'
      * @return original return type: 'java.security.SecureRandom'
      */
-    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): SecureRandom | null;
+    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): SecureRandom | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.security.SecureRandomParameters'
@@ -527,6 +529,30 @@ export declare class SecureRandomClass extends JavaClass {
     static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: string | null): SecureRandom | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): Promise<SecureRandom | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.SecureRandomParameters'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null): SecureRandom | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.Provider'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstance(var0: string | null, var1: java_security_Provider | null): Promise<SecureRandom | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.security.Provider'
+     * @return original return type: 'java.security.SecureRandom'
+     */
+    static getInstanceSync(var0: string | null, var1: java_security_Provider | null): SecureRandom | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.security.SecureRandom'
      */
     static getInstance(var0: string | null): Promise<SecureRandom | null>;
@@ -535,20 +561,6 @@ export declare class SecureRandomClass extends JavaClass {
      * @return original return type: 'java.security.SecureRandom'
      */
     static getInstanceSync(var0: string | null): SecureRandom | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @param var2 original type: 'java.security.Provider'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstance(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): Promise<SecureRandom | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.security.SecureRandomParameters'
-     * @param var2 original type: 'java.security.Provider'
-     * @return original return type: 'java.security.SecureRandom'
-     */
-    static getInstanceSync(var0: string | null, var1: java_security_SecureRandomParameters | JavaInterfaceProxy<java_security_SecureRandomParametersInterface> | null, var2: java_security_Provider | null): SecureRandom | null;
     /**
      * @param var0 original type: 'byte[]'
      * @return original return type: 'void'

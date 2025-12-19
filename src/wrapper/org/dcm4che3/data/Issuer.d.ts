@@ -30,6 +30,16 @@ export declare class IssuerClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,16 +58,6 @@ export declare class IssuerClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -104,16 +104,6 @@ export declare class IssuerClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Issuer'
-     * @return original return type: 'boolean'
-     */
-    matches(var0: IssuerClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Issuer'
-     * @return original return type: 'boolean'
-     */
-    matchesSync(var0: IssuerClass | null): boolean;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Issuer'
      * @param var1 original type: 'boolean'
      * @param var2 original type: 'boolean'
      * @return original return type: 'boolean'
@@ -126,6 +116,16 @@ export declare class IssuerClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     matchesSync(var0: IssuerClass | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Issuer'
+     * @return original return type: 'boolean'
+     */
+    matches(var0: IssuerClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Issuer'
+     * @return original return type: 'boolean'
+     */
+    matchesSync(var0: IssuerClass | null): boolean;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Issuer'
      * @return original return type: 'boolean'

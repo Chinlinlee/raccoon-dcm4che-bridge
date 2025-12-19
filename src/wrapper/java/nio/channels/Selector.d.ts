@@ -39,6 +39,16 @@ export declare class SelectorClass extends JavaClass {
     selectNowSync(): number;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,24 +69,14 @@ export declare class SelectorClass extends JavaClass {
     waitSync(): void;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'int'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    select(var0: java_lang_Long | bigint | number): Promise<number>;
     /**
      * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'int'
      */
-    select(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.util.function.Consumer'
-     * @return original return type: 'int'
-     */
-    selectSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): number;
+    selectSync(var0: java_lang_Long | bigint | number): number;
     /**
      * @param var0 original type: 'java.util.function.Consumer'
      * @param var1 original type: 'long'
@@ -90,15 +90,15 @@ export declare class SelectorClass extends JavaClass {
      */
     selectSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null, var1: java_lang_Long | bigint | number): number;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'int'
      */
-    select(var0: java_lang_Long | bigint | number): Promise<number>;
+    select(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): Promise<number>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'java.util.function.Consumer'
      * @return original return type: 'int'
      */
-    selectSync(var0: java_lang_Long | bigint | number): number;
+    selectSync(var0: java_util_function_Consumer | JavaInterfaceProxy<java_util_function_ConsumerInterface> | null): number;
     /**
      * @return original return type: 'int'
      */
@@ -108,14 +108,6 @@ export declare class SelectorClass extends JavaClass {
      */
     selectSync(): number;
     /**
-     * @return original return type: 'java.nio.channels.Selector'
-     */
-    wakeup(): Promise<Selector | null>;
-    /**
-     * @return original return type: 'java.nio.channels.Selector'
-     */
-    wakeupSync(): Selector | null;
-    /**
      * @return original return type: 'java.util.Set'
      */
     keys(): Promise<java_util_Set | null>;
@@ -123,6 +115,14 @@ export declare class SelectorClass extends JavaClass {
      * @return original return type: 'java.util.Set'
      */
     keysSync(): java_util_Set | null;
+    /**
+     * @return original return type: 'java.nio.channels.Selector'
+     */
+    wakeup(): Promise<Selector | null>;
+    /**
+     * @return original return type: 'java.nio.channels.Selector'
+     */
+    wakeupSync(): Selector | null;
     /**
      * @return original return type: 'java.util.Set'
      */

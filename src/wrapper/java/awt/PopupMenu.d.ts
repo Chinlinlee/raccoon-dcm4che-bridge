@@ -50,6 +50,16 @@ export declare class PopupMenuClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -68,16 +78,6 @@ export declare class PopupMenuClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -175,16 +175,6 @@ export declare class PopupMenuClass extends JavaClass {
      */
     getShortcutSync(): java_awt_MenuShortcut | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    remove(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    removeSync(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.awt.MenuComponent'
      * @return original return type: 'void'
      */
@@ -194,6 +184,16 @@ export declare class PopupMenuClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeSync(var0: java_awt_MenuComponent | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    remove(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    removeSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'void'
      */

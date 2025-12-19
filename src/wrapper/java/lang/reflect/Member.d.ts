@@ -1,4 +1,5 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
+import { Set as java_util_Set } from "./../../util/Set";
 import { Class as java_lang_Class } from "./../Class";
 import { Integer as java_lang_Integer } from "./../Integer";
 /**
@@ -7,6 +8,14 @@ import { Integer as java_lang_Integer } from "./../Integer";
  * You should probably not edit this.
  */
 export declare class MemberClass extends JavaClass {
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlags(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlagsSync(): java_util_Set | null;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -60,6 +69,10 @@ export declare class MemberClass extends JavaClass {
  * You should probably not edit this.
  */
 export interface MemberInterface {
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlags?(): java_util_Set | null;
     /**
      * @return original return type: 'java.lang.Class'
      */

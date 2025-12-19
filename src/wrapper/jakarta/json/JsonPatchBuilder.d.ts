@@ -1,7 +1,7 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { Boolean as java_lang_Boolean } from "./../../java/lang/Boolean";
 import { Integer as java_lang_Integer } from "./../../java/lang/Integer";
 import { JsonValue as jakarta_json_JsonValue, JsonValueInterface as jakarta_json_JsonValueInterface } from "./JsonValue";
+import { Boolean as java_lang_Boolean } from "./../../java/lang/Boolean";
 import { JsonPatch as jakarta_json_JsonPatch } from "./JsonPatch";
 /**
  * This class just defines types, you should import {@link JsonPatchBuilder} instead of this.
@@ -9,18 +9,6 @@ import { JsonPatch as jakarta_json_JsonPatch } from "./JsonPatch";
  * You should probably not edit this.
  */
 export declare class JsonPatchBuilderClass extends JavaClass {
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    add(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonPatchBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    addSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -57,6 +45,18 @@ export declare class JsonPatchBuilderClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     addSync(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonPatchBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    add(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonPatchBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    addSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -127,6 +127,30 @@ export declare class JsonPatchBuilderClass extends JavaClass {
     buildSync(): jakarta_json_JsonPatch | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    replace(var0: string | null, var1: java_lang_Integer | number): Promise<JsonPatchBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    replaceSync(var0: string | null, var1: java_lang_Integer | number): JsonPatchBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    replace(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonPatchBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    replaceSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
@@ -149,30 +173,6 @@ export declare class JsonPatchBuilderClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     replaceSync(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonPatchBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    replace(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonPatchBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    replaceSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    replace(var0: string | null, var1: java_lang_Integer | number): Promise<JsonPatchBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    replaceSync(var0: string | null, var1: java_lang_Integer | number): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -210,12 +210,6 @@ export declare class JsonPatchBuilderClass extends JavaClass {
 export interface JsonPatchBuilderInterface {
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    add(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
@@ -232,6 +226,12 @@ export interface JsonPatchBuilderInterface {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     add(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonPatchBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    add(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -268,6 +268,18 @@ export interface JsonPatchBuilderInterface {
     build(): jakarta_json_JsonPatch | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    replace(var0: string | null, var1: java_lang_Integer | number): JsonPatchBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    replace(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
@@ -278,18 +290,6 @@ export interface JsonPatchBuilderInterface {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     replace(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonPatchBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    replace(var0: string | null, var1: java_lang_Boolean | boolean): JsonPatchBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    replace(var0: string | null, var1: java_lang_Integer | number): JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'

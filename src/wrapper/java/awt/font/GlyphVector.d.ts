@@ -38,6 +38,16 @@ export declare class GlyphVectorClass extends JavaClass {
     getGlyphPositionSync(var0: java_lang_Integer | number): java_awt_geom_Point2D | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -56,16 +66,6 @@ export declare class GlyphVectorClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.awt.font.FontRenderContext'
@@ -159,14 +159,6 @@ export declare class GlyphVectorClass extends JavaClass {
      */
     getOutlineSync(): java_awt_Shape | null;
     /**
-     * @return original return type: 'void'
-     */
-    performDefaultLayout(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    performDefaultLayoutSync(): void;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.awt.font.GlyphJustificationInfo'
      */
@@ -176,6 +168,14 @@ export declare class GlyphVectorClass extends JavaClass {
      * @return original return type: 'java.awt.font.GlyphJustificationInfo'
      */
     getGlyphJustificationInfoSync(var0: java_lang_Integer | number): java_awt_font_GlyphJustificationInfo | null;
+    /**
+     * @return original return type: 'void'
+     */
+    performDefaultLayout(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    performDefaultLayoutSync(): void;
     /**
      * @return original return type: 'java.awt.font.FontRenderContext'
      */
@@ -222,6 +222,18 @@ export declare class GlyphVectorClass extends JavaClass {
     getLayoutFlagsSync(): number;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    setGlyphPosition(var0: java_lang_Integer | number, var1: java_awt_geom_Point2D | null): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'void'
+     */
+    setGlyphPositionSync(var0: java_lang_Integer | number, var1: java_awt_geom_Point2D | null): void;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int[]'
      * @return original return type: 'int[]'
@@ -236,16 +248,14 @@ export declare class GlyphVectorClass extends JavaClass {
     getGlyphCodesSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Integer | number)[] | null): (number)[] | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
+     * @return original return type: 'java.awt.Shape'
      */
-    setGlyphPosition(var0: java_lang_Integer | number, var1: java_awt_geom_Point2D | null): Promise<void>;
+    getGlyphLogicalBounds(var0: java_lang_Integer | number): Promise<java_awt_Shape | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'void'
+     * @return original return type: 'java.awt.Shape'
      */
-    setGlyphPositionSync(var0: java_lang_Integer | number, var1: java_awt_geom_Point2D | null): void;
+    getGlyphLogicalBoundsSync(var0: java_lang_Integer | number): java_awt_Shape | null;
     /**
      * @param var0 original type: 'java.awt.font.FontRenderContext'
      * @param var1 original type: 'float'
@@ -260,16 +270,6 @@ export declare class GlyphVectorClass extends JavaClass {
      * @return original return type: 'java.awt.Rectangle'
      */
     getPixelBoundsSync(var0: java_awt_font_FontRenderContext | null, var1: java_lang_Float | number, var2: java_lang_Float | number): java_awt_Rectangle | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.awt.Shape'
-     */
-    getGlyphLogicalBounds(var0: java_lang_Integer | number): Promise<java_awt_Shape | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.awt.Shape'
-     */
-    getGlyphLogicalBoundsSync(var0: java_lang_Integer | number): java_awt_Shape | null;
     /**
      * @return original return type: 'int'
      */
@@ -318,16 +318,6 @@ export declare class GlyphVectorClass extends JavaClass {
     getFontSync(): java_awt_Font | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getGlyphCode(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getGlyphCodeSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'float[]'
      * @return original return type: 'float[]'
@@ -340,6 +330,16 @@ export declare class GlyphVectorClass extends JavaClass {
      * @return original return type: 'float[]'
      */
     getGlyphPositionsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Float | number)[] | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getGlyphCode(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getGlyphCodeSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.awt.Shape'

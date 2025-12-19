@@ -22,6 +22,16 @@ export declare class IOExceptionClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -41,24 +51,6 @@ export declare class IOExceptionClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @return original return type: 'void'
-     */
-    printStackTrace(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    printStackTraceSync(): void;
-    /**
      * @param var0 original type: 'java.io.PrintWriter'
      * @return original return type: 'void'
      */
@@ -68,6 +60,14 @@ export declare class IOExceptionClass extends JavaClass {
      * @return original return type: 'void'
      */
     printStackTraceSync(var0: java_io_PrintWriter | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    printStackTrace(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    printStackTraceSync(): void;
     /**
      * @param var0 original type: 'java.io.PrintStream'
      * @return original return type: 'void'

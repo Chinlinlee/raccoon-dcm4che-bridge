@@ -23,6 +23,16 @@ export declare class PageAttributesClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -41,16 +51,6 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.awt.PageAttributes$OriginType'
      * @return original return type: 'void'
@@ -118,16 +118,6 @@ export declare class PageAttributesClass extends JavaClass {
      */
     setOrientationRequestedToDefaultSync(): void;
     /**
-     * @param var0 original type: 'java.awt.PageAttributes'
-     * @return original return type: 'void'
-     */
-    set(var0: PageAttributesClass | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.PageAttributes'
-     * @return original return type: 'void'
-     */
-    setSync(var0: PageAttributesClass | null): void;
-    /**
      * @return original return type: 'java.awt.PageAttributes$MediaType'
      */
     getMedia(): Promise<java_awt_PageAttributes$MediaType | null>;
@@ -143,6 +133,16 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'java.awt.PageAttributes$OrientationRequestedType'
      */
     getOrientationRequestedSync(): java_awt_PageAttributes$OrientationRequestedType | null;
+    /**
+     * @param var0 original type: 'java.awt.PageAttributes'
+     * @return original return type: 'void'
+     */
+    set(var0: PageAttributesClass | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.PageAttributes'
+     * @return original return type: 'void'
+     */
+    setSync(var0: PageAttributesClass | null): void;
     /**
      * @return original return type: 'java.awt.PageAttributes$OriginType'
      */
@@ -160,16 +160,6 @@ export declare class PageAttributesClass extends JavaClass {
      */
     getColorSync(): java_awt_PageAttributes$ColorType | null;
     /**
-     * @param var0 original type: 'java.awt.PageAttributes$OrientationRequestedType'
-     * @return original return type: 'void'
-     */
-    setOrientationRequested(var0: java_awt_PageAttributes$OrientationRequestedType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.PageAttributes$OrientationRequestedType'
-     * @return original return type: 'void'
-     */
-    setOrientationRequestedSync(var0: java_awt_PageAttributes$OrientationRequestedType | null): void;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -180,6 +170,16 @@ export declare class PageAttributesClass extends JavaClass {
      */
     setOrientationRequestedSync(var0: java_lang_Integer | number): void;
     /**
+     * @param var0 original type: 'java.awt.PageAttributes$OrientationRequestedType'
+     * @return original return type: 'void'
+     */
+    setOrientationRequested(var0: java_awt_PageAttributes$OrientationRequestedType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.PageAttributes$OrientationRequestedType'
+     * @return original return type: 'void'
+     */
+    setOrientationRequestedSync(var0: java_awt_PageAttributes$OrientationRequestedType | null): void;
+    /**
      * @return original return type: 'void'
      */
     setPrinterResolutionToDefault(): Promise<void>;
@@ -187,16 +187,6 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setPrinterResolutionToDefaultSync(): void;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPrintQuality(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setPrintQualitySync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.awt.PageAttributes$PrintQualityType'
      * @return original return type: 'void'
@@ -207,6 +197,16 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setPrintQualitySync(var0: java_awt_PageAttributes$PrintQualityType | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setPrintQuality(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setPrintQualitySync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.awt.PageAttributes$ColorType'
      * @return original return type: 'void'
@@ -274,6 +274,20 @@ export declare class PageAttributesClass extends JavaClass {
      */
     setPrinterResolutionSync(var0: java_lang_Integer | number): void;
     /**
+     * @param var0 original type: 'java.awt.PageAttributes'
+     */
+    constructor(var0: PageAttributesClass | null);
+    /**
+     * @param var0 original type: 'java.awt.PageAttributes'
+     * @return original return type: 'java.awt.PageAttributes'
+     */
+    static newInstanceAsync(var0: PageAttributesClass | null): Promise<PageAttributes>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.PageAttributes'
+     */
+    static newInstanceAsync(): Promise<PageAttributes>;
+    /**
      * @param var0 original type: 'java.awt.PageAttributes$ColorType'
      * @param var1 original type: 'java.awt.PageAttributes$MediaType'
      * @param var2 original type: 'java.awt.PageAttributes$OrientationRequestedType'
@@ -292,20 +306,6 @@ export declare class PageAttributesClass extends JavaClass {
      * @return original return type: 'java.awt.PageAttributes'
      */
     static newInstanceAsync(var0: java_awt_PageAttributes$ColorType | null, var1: java_awt_PageAttributes$MediaType | null, var2: java_awt_PageAttributes$OrientationRequestedType | null, var3: java_awt_PageAttributes$OriginType | null, var4: java_awt_PageAttributes$PrintQualityType | null, var5: (java_lang_Integer | number)[] | null): Promise<PageAttributes>;
-    /**
-     * @param var0 original type: 'java.awt.PageAttributes'
-     */
-    constructor(var0: PageAttributesClass | null);
-    /**
-     * @param var0 original type: 'java.awt.PageAttributes'
-     * @return original return type: 'java.awt.PageAttributes'
-     */
-    static newInstanceAsync(var0: PageAttributesClass | null): Promise<PageAttributes>;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.PageAttributes'
-     */
-    static newInstanceAsync(): Promise<PageAttributes>;
 }
 declare const PageAttributes_base: typeof PageAttributesClass;
 /**

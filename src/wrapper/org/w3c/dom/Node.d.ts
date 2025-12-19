@@ -88,14 +88,6 @@ export declare class NodeClass extends JavaClass {
      */
     insertBeforeSync(var0: NodeClass | JavaInterfaceProxy<NodeInterface> | null, var1: NodeClass | JavaInterfaceProxy<NodeInterface> | null): Node | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    hasAttributes(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasAttributesSync(): boolean;
-    /**
      * @return original return type: 'void'
      */
     normalize(): Promise<void>;
@@ -103,6 +95,14 @@ export declare class NodeClass extends JavaClass {
      * @return original return type: 'void'
      */
     normalizeSync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasAttributes(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasAttributesSync(): boolean;
     /**
      * @return original return type: 'short'
      */
@@ -156,13 +156,13 @@ export declare class NodeClass extends JavaClass {
      */
     getPreviousSiblingSync(): Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): Promise<string | null>;
+    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefixSync(): string | null;
+    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -176,13 +176,13 @@ export declare class NodeClass extends JavaClass {
      */
     replaceChildSync(var0: NodeClass | JavaInterfaceProxy<NodeInterface> | null, var1: NodeClass | JavaInterfaceProxy<NodeInterface> | null): Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
+    getPrefix(): Promise<string | null>;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
+    getPrefixSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -212,6 +212,18 @@ export declare class NodeClass extends JavaClass {
      */
     getParentNodeSync(): Node | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isSupported(var0: string | null, var1: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isSupportedSync(var0: string | null, var1: string | null): boolean;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getNodeName(): Promise<string | null>;
@@ -227,18 +239,6 @@ export declare class NodeClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getTextContentSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: string | null, var1: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isSupportedSync(var0: string | null, var1: string | null): boolean;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */
@@ -479,13 +479,13 @@ export interface NodeInterface {
      */
     insertBefore(var0: NodeClass | JavaInterfaceProxy<NodeInterface> | null, var1: NodeClass | JavaInterfaceProxy<NodeInterface> | null): Node | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    hasAttributes(): boolean;
-    /**
      * @return original return type: 'void'
      */
     normalize(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasAttributes(): boolean;
     /**
      * @return original return type: 'short'
      */
@@ -513,9 +513,9 @@ export interface NodeInterface {
      */
     getPreviousSibling(): Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): string | null;
+    getAttributes(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -523,9 +523,9 @@ export interface NodeInterface {
      */
     replaceChild(var0: NodeClass | JavaInterfaceProxy<NodeInterface> | null, var1: NodeClass | JavaInterfaceProxy<NodeInterface> | null): Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): org_w3c_dom_NamedNodeMap | null;
+    getPrefix(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -541,6 +541,12 @@ export interface NodeInterface {
      */
     getParentNode(): Node | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isSupported(var0: string | null, var1: string | null): boolean;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getNodeName(): string | null;
@@ -548,12 +554,6 @@ export interface NodeInterface {
      * @return original return type: 'java.lang.String'
      */
     getTextContent(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: string | null, var1: string | null): boolean;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */

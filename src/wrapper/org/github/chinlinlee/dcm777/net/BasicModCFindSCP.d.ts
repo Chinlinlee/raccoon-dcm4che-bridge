@@ -36,6 +36,16 @@ export declare class BasicModCFindSCPClass extends JavaClass {
     onCloseSync(var0: org_dcm4che3_net_Association | null): void;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -54,16 +64,6 @@ export declare class BasicModCFindSCPClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -159,6 +159,15 @@ export declare class BasicModCFindSCPClass extends JavaClass {
      */
     notifySync(): void;
     /**
+     * @param var0 original type: 'java.lang.String[]'
+     */
+    constructor(var0: (string | null)[] | null);
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModCFindSCP'
+     */
+    static newInstanceAsync(var0: (string | null)[] | null): Promise<BasicModCFindSCP>;
+    /**
      * @param var0 original type: 'org.github.chinlinlee.dcm777.net.CFindSCPInject'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.util.EnumSet'
@@ -182,15 +191,6 @@ export declare class BasicModCFindSCPClass extends JavaClass {
      * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModCFindSCP'
      */
     static newInstanceAsync(var0: org_github_chinlinlee_dcm777_net_CFindSCPInject | JavaInterfaceProxy<org_github_chinlinlee_dcm777_net_CFindSCPInjectInterface> | null, var1: (string | null)[] | null): Promise<BasicModCFindSCP>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     */
-    constructor(var0: (string | null)[] | null);
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'org.github.chinlinlee.dcm777.net.BasicModCFindSCP'
-     */
-    static newInstanceAsync(var0: (string | null)[] | null): Promise<BasicModCFindSCP>;
 }
 declare const BasicModCFindSCP_base: typeof BasicModCFindSCPClass;
 /**

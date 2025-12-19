@@ -20,6 +20,16 @@ export declare class RecordFactoryClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrivateRecordUID(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrivateRecordUIDSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int[]'
      * @return original return type: 'int[]'
      */
@@ -31,15 +41,15 @@ export declare class RecordFactoryClass extends JavaClass {
      */
     setPrivateRecordKeysSync(var0: string | null, var1: (java_lang_Integer | number)[] | null): (number)[] | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    getPrivateRecordUID(var0: string | null): Promise<string | null>;
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    getPrivateRecordUIDSync(var0: string | null): string | null;
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -60,16 +70,6 @@ export declare class RecordFactoryClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -149,6 +149,20 @@ export declare class RecordFactoryClass extends JavaClass {
      */
     setPrivateRecordUIDSync(var0: string | null, var1: string | null): string | null;
     /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    createRecord(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var2 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    createRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.media.RecordType'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'org.dcm4che3.data.Attributes'
@@ -166,20 +180,6 @@ export declare class RecordFactoryClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     createRecordSync(var0: org_dcm4che3_media_RecordType | null, var1: string | null, var2: org_dcm4che3_data_Attributes | null, var3: org_dcm4che3_data_Attributes | null, var4: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    createRecord(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
-     * @param var2 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    createRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
     /**
      * @return original return type: 'int'
      */

@@ -18,6 +18,16 @@ export declare class UIDClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -36,16 +46,6 @@ export declare class UIDClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -155,6 +155,10 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly ThermographyImageStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly UnifiedWorklistAndProcedureStep: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -216,6 +220,10 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly dicomDevice: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly LabelMapSegmentationStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -603,6 +611,10 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly JPEGXLLossless: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly PseudoColorSoftcopyPresentationStateStorage: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -684,6 +696,10 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly JPEGSpectralSelectionNonHierarchical79: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly WaveformPresentationStateStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -1179,6 +1195,10 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly HeightMapSegmentationStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly EncapsulatedCDAStorage: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -1436,6 +1456,10 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly PrivateGEPETRawDataStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly WaveformAnnotationSRStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -1779,6 +1803,10 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly JPEGXLJPEGRecompression: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly DICOS2DAITStorage: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -1907,6 +1935,10 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly DeflatedImageFrameCompression: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly GenericImplantTemplateInformationModelFind: string | null;
     /**
      * Original type: 'java.lang.String'
@@ -1955,11 +1987,23 @@ export declare class UIDClass extends JavaClass {
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly ThermographyMultiFrameImageStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly RTPatientPositionAcquisitionInstructionStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
+    static readonly JPEGXL: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
     static readonly EddyCurrentImageStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly WaveformAcquisitionPresentationStateStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */
@@ -2096,6 +2140,10 @@ export declare class UIDClass extends JavaClass {
      * Original type: 'java.lang.String'
      */
     static readonly PrivatePhilipsSpecialisedXAStorage: string | null;
+    /**
+     * Original type: 'java.lang.String'
+     */
+    static readonly UltrasoundWaveformStorage: string | null;
     /**
      * Original type: 'java.lang.String'
      */

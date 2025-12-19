@@ -389,6 +389,16 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     disposeSync(): void;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    static removeSeriesToFloatImages(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    static removeSeriesToFloatImagesSync(var0: string | null): void;
+    /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'void'
      */
@@ -422,6 +432,16 @@ export declare class DicomImageReaderClass extends JavaClass {
     getTileWidthSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -440,16 +460,6 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -478,6 +488,16 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Boolean'
+     */
+    static getForceToFloatImages(var0: string | null): Promise<boolean | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.Boolean'
+     */
+    static getForceToFloatImagesSync(var0: string | null): boolean | null;
     /**
      * @param var0 original type: 'org.dcm4che3.img.DicomImageReadParam'
      * @param var1 original type: 'org.dcm4che3.img.util.Editable'
@@ -568,6 +588,18 @@ export declare class DicomImageReaderClass extends JavaClass {
      * @return original return type: 'int'
      */
     getHeightSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Boolean'
+     * @return original return type: 'void'
+     */
+    static addSeriesToFloatImages(var0: string | null, var1: java_lang_Boolean | boolean | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Boolean'
+     * @return original return type: 'void'
+     */
+    static addSeriesToFloatImagesSync(var0: string | null, var1: java_lang_Boolean | boolean | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -765,6 +797,14 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     getImageTypesSync(var0: java_lang_Integer | number): java_util_Iterator | null;
     /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocale(): Promise<java_util_Locale | null>;
+    /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocaleSync(): java_util_Locale | null;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -775,21 +815,13 @@ export declare class DicomImageReaderClass extends JavaClass {
      */
     getNumThumbnailsSync(var0: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocale(): Promise<java_util_Locale | null>;
-    /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocaleSync(): java_util_Locale | null;
-    /**
-     * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
-     */
-    static readonly BULKDATA_DESCRIPTOR: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null;
-    /**
      * Original type: 'java.util.Set'
      */
     static BULK_TAGS: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null;
+    /**
+     * Original type: 'org.dcm4che3.io.BulkDataDescriptor'
+     */
+    static readonly BULK_DATA_DESCRIPTOR: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null;
     /**
      * @param var0 original type: 'javax.imageio.spi.ImageReaderSpi'
      */

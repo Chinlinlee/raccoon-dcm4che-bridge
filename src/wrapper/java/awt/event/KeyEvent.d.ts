@@ -29,6 +29,16 @@ export declare class KeyEventClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -47,16 +57,6 @@ export declare class KeyEventClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
@@ -1315,6 +1315,25 @@ export declare class KeyEventClass extends JavaClass {
      * @param var3 original type: 'int'
      * @param var4 original type: 'int'
      * @param var5 original type: 'char'
+     */
+    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: string | null);
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'long'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'char'
+     * @return original return type: 'java.awt.event.KeyEvent'
+     */
+    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: string | null): Promise<KeyEvent>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'long'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'char'
      * @param var6 original type: 'int'
      */
     constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: string | null, var6: java_lang_Integer | number);
@@ -1329,25 +1348,6 @@ export declare class KeyEventClass extends JavaClass {
      * @return original return type: 'java.awt.event.KeyEvent'
      */
     static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: string | null, var6: java_lang_Integer | number): Promise<KeyEvent>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'long'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'char'
-     */
-    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: string | null);
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'long'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'char'
-     * @return original return type: 'java.awt.event.KeyEvent'
-     */
-    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Long | bigint | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: string | null): Promise<KeyEvent>;
 }
 declare const KeyEvent_base: typeof KeyEventClass;
 /**

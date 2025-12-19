@@ -22,6 +22,16 @@ export declare class SSLParametersClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -41,15 +51,15 @@ export declare class SSLParametersClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    setMaximumPacketSize(var0: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'long'
+     * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    setMaximumPacketSizeSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -61,16 +71,6 @@ export declare class SSLParametersClass extends JavaClass {
      */
     setWantClientAuthSync(var0: java_lang_Boolean | boolean): void;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaximumPacketSize(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaximumPacketSizeSync(var0: java_lang_Integer | number): void;
-    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -78,6 +78,16 @@ export declare class SSLParametersClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setNamedGroups(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setNamedGroupsSync(var0: (string | null)[] | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -96,6 +106,14 @@ export declare class SSLParametersClass extends JavaClass {
      * @return original return type: 'void'
      */
     setUseCipherSuitesOrderSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getNamedGroups(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getNamedGroupsSync(): (string | null)[] | null;
     /**
      * @return original return type: 'void'
      */
@@ -195,6 +213,16 @@ export declare class SSLParametersClass extends JavaClass {
      */
     getServerNamesSync(): java_util_List | null;
     /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setSignatureSchemes(var0: (string | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'void'
+     */
+    setSignatureSchemesSync(var0: (string | null)[] | null): void;
+    /**
      * @return original return type: 'java.lang.String[]'
      */
     getApplicationProtocols(): Promise<(string | null)[] | null>;
@@ -223,14 +251,6 @@ export declare class SSLParametersClass extends JavaClass {
      */
     setApplicationProtocolsSync(var0: (string | null)[] | null): void;
     /**
-     * @return original return type: 'boolean'
-     */
-    getWantClientAuth(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    getWantClientAuthSync(): boolean;
-    /**
      * @return original return type: 'java.lang.String'
      */
     getEndpointIdentificationAlgorithm(): Promise<string | null>;
@@ -238,6 +258,14 @@ export declare class SSLParametersClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getEndpointIdentificationAlgorithmSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getWantClientAuth(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getWantClientAuthSync(): boolean;
     /**
      * @return original return type: 'java.security.AlgorithmConstraints'
      */
@@ -265,6 +293,14 @@ export declare class SSLParametersClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSignatureSchemes(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getSignatureSchemesSync(): (string | null)[] | null;
+    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -275,14 +311,6 @@ export declare class SSLParametersClass extends JavaClass {
      */
     setNeedClientAuthSync(var0: java_lang_Boolean | boolean): void;
     /**
-     * @return original return type: 'boolean'
-     */
-    getNeedClientAuth(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    getNeedClientAuthSync(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getMaximumPacketSize(): Promise<number>;
@@ -290,6 +318,14 @@ export declare class SSLParametersClass extends JavaClass {
      * @return original return type: 'int'
      */
     getMaximumPacketSizeSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getNeedClientAuth(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getNeedClientAuthSync(): boolean;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -300,6 +336,17 @@ export declare class SSLParametersClass extends JavaClass {
      * @return original return type: 'void'
      */
     setEnableRetransmissionsSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.String[]'
+     */
+    constructor(var0: (string | null)[] | null, var1: (string | null)[] | null);
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @param var1 original type: 'java.lang.String[]'
+     * @return original return type: 'javax.net.ssl.SSLParameters'
+     */
+    static newInstanceAsync(var0: (string | null)[] | null, var1: (string | null)[] | null): Promise<SSLParameters>;
     /**
      * @param var0 original type: 'java.lang.String[]'
      */
@@ -314,17 +361,6 @@ export declare class SSLParametersClass extends JavaClass {
      * @return original return type: 'javax.net.ssl.SSLParameters'
      */
     static newInstanceAsync(): Promise<SSLParameters>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @param var1 original type: 'java.lang.String[]'
-     */
-    constructor(var0: (string | null)[] | null, var1: (string | null)[] | null);
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @param var1 original type: 'java.lang.String[]'
-     * @return original return type: 'javax.net.ssl.SSLParameters'
-     */
-    static newInstanceAsync(var0: (string | null)[] | null, var1: (string | null)[] | null): Promise<SSLParameters>;
 }
 declare const SSLParameters_base: typeof SSLParametersClass;
 /**

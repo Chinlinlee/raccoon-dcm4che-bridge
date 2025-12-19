@@ -45,6 +45,16 @@ export declare class DragSourceDropEventClass extends JavaClass {
     getLocationSync(): java_awt_Point | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -63,16 +73,6 @@ export declare class DragSourceDropEventClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -141,6 +141,19 @@ export declare class DragSourceDropEventClass extends JavaClass {
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.awt.dnd.DragSourceContext'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     */
+    constructor(var0: java_awt_dnd_DragSourceContext | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean);
+    /**
+     * @param var0 original type: 'java.awt.dnd.DragSourceContext'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.awt.dnd.DragSourceDropEvent'
+     */
+    static newInstanceAsync(var0: java_awt_dnd_DragSourceContext | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<DragSourceDropEvent>;
+    /**
+     * @param var0 original type: 'java.awt.dnd.DragSourceContext'
      */
     constructor(var0: java_awt_dnd_DragSourceContext | null);
     /**
@@ -165,19 +178,6 @@ export declare class DragSourceDropEventClass extends JavaClass {
      * @return original return type: 'java.awt.dnd.DragSourceDropEvent'
      */
     static newInstanceAsync(var0: java_awt_dnd_DragSourceContext | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_lang_Integer | number, var4: java_lang_Integer | number): Promise<DragSourceDropEvent>;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DragSourceContext'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     */
-    constructor(var0: java_awt_dnd_DragSourceContext | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean);
-    /**
-     * @param var0 original type: 'java.awt.dnd.DragSourceContext'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.awt.dnd.DragSourceDropEvent'
-     */
-    static newInstanceAsync(var0: java_awt_dnd_DragSourceContext | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<DragSourceDropEvent>;
 }
 declare const DragSourceDropEvent_base: typeof DragSourceDropEventClass;
 /**

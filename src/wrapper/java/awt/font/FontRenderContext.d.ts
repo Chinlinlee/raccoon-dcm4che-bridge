@@ -20,6 +20,16 @@ export declare class FontRenderContextClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class FontRenderContextClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -97,16 +97,6 @@ export declare class FontRenderContextClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
-    /**
      * @param var0 original type: 'java.awt.font.FontRenderContext'
      * @return original return type: 'boolean'
      */
@@ -116,6 +106,16 @@ export declare class FontRenderContextClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     equalsSync(var0: FontRenderContextClass | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -133,14 +133,6 @@ export declare class FontRenderContextClass extends JavaClass {
      */
     getFractionalMetricsHintSync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.awt.geom.AffineTransform'
-     */
-    getTransform(): Promise<java_awt_geom_AffineTransform | null>;
-    /**
-     * @return original return type: 'java.awt.geom.AffineTransform'
-     */
-    getTransformSync(): java_awt_geom_AffineTransform | null;
-    /**
      * @return original return type: 'boolean'
      */
     isAntiAliased(): Promise<boolean>;
@@ -149,18 +141,13 @@ export declare class FontRenderContextClass extends JavaClass {
      */
     isAntiAliasedSync(): boolean;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @param var1 original type: 'java.lang.Object'
-     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.awt.geom.AffineTransform'
      */
-    constructor(var0: java_awt_geom_AffineTransform | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null);
+    getTransform(): Promise<java_awt_geom_AffineTransform | null>;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @param var1 original type: 'java.lang.Object'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'java.awt.font.FontRenderContext'
+     * @return original return type: 'java.awt.geom.AffineTransform'
      */
-    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): Promise<FontRenderContext>;
+    getTransformSync(): java_awt_geom_AffineTransform | null;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'boolean'
@@ -174,6 +161,19 @@ export declare class FontRenderContextClass extends JavaClass {
      * @return original return type: 'java.awt.font.FontRenderContext'
      */
     static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Boolean | boolean, var2: java_lang_Boolean | boolean): Promise<FontRenderContext>;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @param var1 original type: 'java.lang.Object'
+     * @param var2 original type: 'java.lang.Object'
+     */
+    constructor(var0: java_awt_geom_AffineTransform | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null);
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @param var1 original type: 'java.lang.Object'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.awt.font.FontRenderContext'
+     */
+    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): Promise<FontRenderContext>;
 }
 declare const FontRenderContext_base: typeof FontRenderContextClass;
 /**

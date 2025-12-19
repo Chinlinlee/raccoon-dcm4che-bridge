@@ -34,6 +34,16 @@ export declare class ServerSocketClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -52,16 +62,6 @@ export declare class ServerSocketClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -116,16 +116,6 @@ export declare class ServerSocketClass extends JavaClass {
     supportedOptionsSync(): java_util_Set | null;
     /**
      * @param var0 original type: 'java.net.SocketAddress'
-     * @return original return type: 'void'
-     */
-    bind(var0: java_net_SocketAddress | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.net.SocketAddress'
-     * @return original return type: 'void'
-     */
-    bindSync(var0: java_net_SocketAddress | null): void;
-    /**
-     * @param var0 original type: 'java.net.SocketAddress'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -136,6 +126,16 @@ export declare class ServerSocketClass extends JavaClass {
      * @return original return type: 'void'
      */
     bindSync(var0: java_net_SocketAddress | null, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.net.SocketAddress'
+     * @return original return type: 'void'
+     */
+    bind(var0: java_net_SocketAddress | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.net.SocketAddress'
+     * @return original return type: 'void'
+     */
+    bindSync(var0: java_net_SocketAddress | null): void;
     /**
      * @return original return type: 'java.nio.channels.ServerSocketChannel'
      */
@@ -299,17 +299,6 @@ export declare class ServerSocketClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.net.ServerSocket'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<ServerSocket>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
      * @param var2 original type: 'java.net.InetAddress'
      */
     constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_net_InetAddress | null);
@@ -320,6 +309,17 @@ export declare class ServerSocketClass extends JavaClass {
      * @return original return type: 'java.net.ServerSocket'
      */
     static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_net_InetAddress | null): Promise<ServerSocket>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     */
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.net.ServerSocket'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<ServerSocket>;
 }
 declare const ServerSocket_base: typeof ServerSocketClass;
 /**

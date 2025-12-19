@@ -16,18 +16,6 @@ import { JsonArray as jakarta_json_JsonArray } from "./JsonArray";
 export declare class JsonArrayBuilderClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    addSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'java.math.BigInteger'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -52,6 +40,18 @@ export declare class JsonArrayBuilderClass extends JavaClass {
     addSync(var0: java_lang_Integer | number, var1: java_math_BigDecimal | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    addSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -74,16 +74,6 @@ export declare class JsonArrayBuilderClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
     addSync(var0: java_lang_Integer | number, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonArrayBuilder'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add(var0: JsonArrayBuilderClass | JavaInterfaceProxy<JsonArrayBuilderInterface> | null): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonArrayBuilder'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    addSync(var0: JsonArrayBuilderClass | JavaInterfaceProxy<JsonArrayBuilderInterface> | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'jakarta.json.JsonArrayBuilder'
@@ -145,6 +135,16 @@ export declare class JsonArrayBuilderClass extends JavaClass {
      */
     addSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): JsonArrayBuilder | null;
     /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add(var0: java_lang_Double | number): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'double'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    addSync(var0: java_lang_Double | number): JsonArrayBuilder | null;
+    /**
      * @param var0 original type: 'long'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -154,36 +154,6 @@ export declare class JsonArrayBuilderClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
     addSync(var0: java_lang_Long | bigint | number): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add(var0: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    addSync(var0: java_lang_Integer | number): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'java.math.BigInteger'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add(var0: java_math_BigInteger | null): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'java.math.BigInteger'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    addSync(var0: java_math_BigInteger | null): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonValue'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'jakarta.json.JsonValue'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    addSync(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
@@ -195,6 +165,46 @@ export declare class JsonArrayBuilderClass extends JavaClass {
      */
     addSync(var0: string | null): JsonArrayBuilder | null;
     /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add(var0: java_math_BigDecimal | null): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    addSync(var0: java_math_BigDecimal | null): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'java.math.BigInteger'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add(var0: java_math_BigInteger | null): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'java.math.BigInteger'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    addSync(var0: java_math_BigInteger | null): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add(var0: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    addSync(var0: java_lang_Integer | number): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'jakarta.json.JsonArrayBuilder'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add(var0: JsonArrayBuilderClass | JavaInterfaceProxy<JsonArrayBuilderInterface> | null): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'jakarta.json.JsonArrayBuilder'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    addSync(var0: JsonArrayBuilderClass | JavaInterfaceProxy<JsonArrayBuilderInterface> | null): JsonArrayBuilder | null;
+    /**
      * @param var0 original type: 'jakarta.json.JsonObjectBuilder'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -205,15 +215,15 @@ export declare class JsonArrayBuilderClass extends JavaClass {
      */
     addSync(var0: jakarta_json_JsonObjectBuilder | JavaInterfaceProxy<jakarta_json_JsonObjectBuilderInterface> | null): JsonArrayBuilder | null;
     /**
-     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var0 original type: 'jakarta.json.JsonValue'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    add(var0: java_math_BigDecimal | null): Promise<JsonArrayBuilder | null>;
+    add(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): Promise<JsonArrayBuilder | null>;
     /**
-     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var0 original type: 'jakarta.json.JsonValue'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    addSync(var0: java_math_BigDecimal | null): JsonArrayBuilder | null;
+    addSync(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
@@ -225,27 +235,17 @@ export declare class JsonArrayBuilderClass extends JavaClass {
      */
     addSync(var0: java_lang_Boolean | boolean): JsonArrayBuilder | null;
     /**
-     * @param var0 original type: 'double'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    add(var0: java_lang_Double | number): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'double'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    addSync(var0: java_lang_Double | number): JsonArrayBuilder | null;
+    set(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): Promise<JsonArrayBuilder | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    set(var0: java_lang_Integer | number, var1: java_lang_Double | number): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    setSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): JsonArrayBuilder | null;
+    setSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'long'
@@ -260,28 +260,16 @@ export declare class JsonArrayBuilderClass extends JavaClass {
     setSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
+     * @param var1 original type: 'double'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    set(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
+    set(var0: java_lang_Integer | number, var1: java_lang_Double | number): Promise<JsonArrayBuilder | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
+     * @param var1 original type: 'double'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    setSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    set(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): Promise<JsonArrayBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    setSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): JsonArrayBuilder | null;
+    setSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'jakarta.json.JsonObjectBuilder'
@@ -356,6 +344,18 @@ export declare class JsonArrayBuilderClass extends JavaClass {
     setSync(var0: java_lang_Integer | number, var1: java_math_BigInteger | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    set(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    setSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
     setNull(var0: java_lang_Integer | number): Promise<JsonArrayBuilder | null>;
@@ -425,12 +425,6 @@ export declare class JsonArrayBuilderClass extends JavaClass {
 export interface JsonArrayBuilderInterface {
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add?(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'java.math.BigInteger'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -443,6 +437,12 @@ export interface JsonArrayBuilderInterface {
     add?(var0: java_lang_Integer | number, var1: java_math_BigDecimal | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add?(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -453,13 +453,6 @@ export interface JsonArrayBuilderInterface {
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
     add?(var0: java_lang_Integer | number, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonArrayBuilder | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @param var0 original type: 'jakarta.json.JsonArrayBuilder'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add?(var0: JsonArrayBuilderClass | JavaInterfaceProxy<JsonArrayBuilderInterface> | null): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'jakarta.json.JsonArrayBuilder'
@@ -493,31 +486,17 @@ export interface JsonArrayBuilderInterface {
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
+     * @param var0 original type: 'double'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add?(var0: java_lang_Double | number): JsonArrayBuilder | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
      * @param var0 original type: 'long'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
     add?(var0: java_lang_Long | bigint | number): JsonArrayBuilder | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @param var0 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add?(var0: java_lang_Integer | number): JsonArrayBuilder | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @param var0 original type: 'java.math.BigInteger'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add?(var0: java_math_BigInteger | null): JsonArrayBuilder | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @param var0 original type: 'jakarta.json.JsonValue'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add?(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonArrayBuilder | null;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
@@ -528,6 +507,34 @@ export interface JsonArrayBuilderInterface {
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
+     * @param var0 original type: 'java.math.BigDecimal'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add?(var0: java_math_BigDecimal | null): JsonArrayBuilder | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @param var0 original type: 'java.math.BigInteger'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add?(var0: java_math_BigInteger | null): JsonArrayBuilder | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @param var0 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add?(var0: java_lang_Integer | number): JsonArrayBuilder | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @param var0 original type: 'jakarta.json.JsonArrayBuilder'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    add?(var0: JsonArrayBuilderClass | JavaInterfaceProxy<JsonArrayBuilderInterface> | null): JsonArrayBuilder | null;
+    /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
      * @param var0 original type: 'jakarta.json.JsonObjectBuilder'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
@@ -535,10 +542,10 @@ export interface JsonArrayBuilderInterface {
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
-     * @param var0 original type: 'java.math.BigDecimal'
+     * @param var0 original type: 'jakarta.json.JsonValue'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    add?(var0: java_math_BigDecimal | null): JsonArrayBuilder | null;
+    add?(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonArrayBuilder | null;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
@@ -547,18 +554,11 @@ export interface JsonArrayBuilderInterface {
      */
     add?(var0: java_lang_Boolean | boolean): JsonArrayBuilder | null;
     /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @param var0 original type: 'double'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    add?(var0: java_lang_Double | number): JsonArrayBuilder | null;
-    /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    set?(var0: java_lang_Integer | number, var1: java_lang_Double | number): JsonArrayBuilder | null;
+    set?(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'long'
@@ -567,16 +567,10 @@ export interface JsonArrayBuilderInterface {
     set?(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
+     * @param var1 original type: 'double'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    set?(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
-     */
-    set?(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): JsonArrayBuilder | null;
+    set?(var0: java_lang_Integer | number, var1: java_lang_Double | number): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'jakarta.json.JsonObjectBuilder'
@@ -613,6 +607,12 @@ export interface JsonArrayBuilderInterface {
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
     set?(var0: java_lang_Integer | number, var1: java_math_BigInteger | null): JsonArrayBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     */
+    set?(var0: java_lang_Integer | number, var1: java_lang_Integer | number): JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'

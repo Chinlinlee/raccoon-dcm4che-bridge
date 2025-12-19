@@ -35,6 +35,16 @@ export declare class VolatileImageClass extends JavaClass {
     contentsLostSync(): boolean;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -53,16 +63,6 @@ export declare class VolatileImageClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.image.ImageObserver'
@@ -128,14 +128,6 @@ export declare class VolatileImageClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @return original return type: 'int'
-     */
-    getTransparency(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getTransparencySync(): number;
-    /**
      * @return original return type: 'java.awt.image.BufferedImage'
      */
     getSnapshot(): Promise<java_awt_image_BufferedImage | null>;
@@ -143,6 +135,14 @@ export declare class VolatileImageClass extends JavaClass {
      * @return original return type: 'java.awt.image.BufferedImage'
      */
     getSnapshotSync(): java_awt_image_BufferedImage | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getTransparency(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getTransparencySync(): number;
     /**
      * @param var0 original type: 'float'
      * @return original return type: 'void'

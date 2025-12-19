@@ -1,12 +1,12 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { Long as java_lang_Long } from "./../../java/lang/Long";
-import { Double as java_lang_Double } from "./../../java/lang/Double";
 import { Boolean as java_lang_Boolean } from "./../../java/lang/Boolean";
+import { Double as java_lang_Double } from "./../../java/lang/Double";
+import { Long as java_lang_Long } from "./../../java/lang/Long";
 import { JsonArrayBuilder as jakarta_json_JsonArrayBuilder, JsonArrayBuilderInterface as jakarta_json_JsonArrayBuilderInterface } from "./JsonArrayBuilder";
 import { JsonValue as jakarta_json_JsonValue, JsonValueInterface as jakarta_json_JsonValueInterface } from "./JsonValue";
 import { BigInteger as java_math_BigInteger } from "./../../java/math/BigInteger";
-import { Integer as java_lang_Integer } from "./../../java/lang/Integer";
 import { BigDecimal as java_math_BigDecimal } from "./../../java/math/BigDecimal";
+import { Integer as java_lang_Integer } from "./../../java/lang/Integer";
 import { JsonObject as jakarta_json_JsonObject } from "./JsonObject";
 /**
  * This class just defines types, you should import {@link JsonObjectBuilder} instead of this.
@@ -16,16 +16,16 @@ import { JsonObject as jakarta_json_JsonObject } from "./JsonObject";
 export declare class JsonObjectBuilderClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    add(var0: string | null, var1: java_lang_Long | bigint | number): Promise<JsonObjectBuilder | null>;
+    add(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonObjectBuilder | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    addSync(var0: string | null, var1: java_lang_Long | bigint | number): JsonObjectBuilder | null;
+    addSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'double'
@@ -40,16 +40,16 @@ export declare class JsonObjectBuilderClass extends JavaClass {
     addSync(var0: string | null, var1: java_lang_Double | number): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
+     * @param var1 original type: 'long'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    add(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonObjectBuilder | null>;
+    add(var0: string | null, var1: java_lang_Long | bigint | number): Promise<JsonObjectBuilder | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
+     * @param var1 original type: 'long'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    addSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonObjectBuilder | null;
+    addSync(var0: string | null, var1: java_lang_Long | bigint | number): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'jakarta.json.JsonObjectBuilder'
@@ -112,18 +112,6 @@ export declare class JsonObjectBuilderClass extends JavaClass {
     addSync(var0: string | null, var1: java_math_BigInteger | null): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
-     */
-    add(var0: string | null, var1: java_lang_Integer | number): Promise<JsonObjectBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
-     */
-    addSync(var0: string | null, var1: java_lang_Integer | number): JsonObjectBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.math.BigDecimal'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
@@ -134,6 +122,18 @@ export declare class JsonObjectBuilderClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
     addSync(var0: string | null, var1: java_math_BigDecimal | null): JsonObjectBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     */
+    add(var0: string | null, var1: java_lang_Integer | number): Promise<JsonObjectBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     */
+    addSync(var0: string | null, var1: java_lang_Integer | number): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonObjectBuilder'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
@@ -187,10 +187,10 @@ export declare class JsonObjectBuilderClass extends JavaClass {
 export interface JsonObjectBuilderInterface {
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'long'
+     * @param var1 original type: 'boolean'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    add(var0: string | null, var1: java_lang_Long | bigint | number): JsonObjectBuilder | null;
+    add(var0: string | null, var1: java_lang_Boolean | boolean): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'double'
@@ -199,10 +199,10 @@ export interface JsonObjectBuilderInterface {
     add(var0: string | null, var1: java_lang_Double | number): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
+     * @param var1 original type: 'long'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
-    add(var0: string | null, var1: java_lang_Boolean | boolean): JsonObjectBuilder | null;
+    add(var0: string | null, var1: java_lang_Long | bigint | number): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'jakarta.json.JsonObjectBuilder'
@@ -235,16 +235,16 @@ export interface JsonObjectBuilderInterface {
     add(var0: string | null, var1: java_math_BigInteger | null): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
-     */
-    add(var0: string | null, var1: java_lang_Integer | number): JsonObjectBuilder | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.math.BigDecimal'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
     add(var0: string | null, var1: java_math_BigDecimal | null): JsonObjectBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     */
+    add(var0: string | null, var1: java_lang_Integer | number): JsonObjectBuilder | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonObjectBuilder'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'

@@ -35,6 +35,16 @@ export declare class AreaClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -53,16 +63,6 @@ export declare class AreaClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.awt.geom.Area'
      * @return original return type: 'void'
@@ -178,6 +178,18 @@ export declare class AreaClass extends JavaClass {
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
      * @param var2 original type: 'double'
      * @param var3 original type: 'double'
      * @return original return type: 'boolean'
@@ -212,18 +224,6 @@ export declare class AreaClass extends JavaClass {
      */
     containsSync(var0: java_awt_geom_Point2D | null): boolean;
     /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
-    /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @return original return type: 'void'
      */
@@ -245,16 +245,6 @@ export declare class AreaClass extends JavaClass {
     exclusiveOrSync(var0: AreaClass | null): void;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
-     */
-    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
-     */
-    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'double'
      * @return original return type: 'java.awt.geom.PathIterator'
      */
@@ -265,6 +255,16 @@ export declare class AreaClass extends JavaClass {
      * @return original return type: 'java.awt.geom.PathIterator'
      */
     getPathIteratorSync(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
     /**
      * @return original return type: 'int'
      */
@@ -294,14 +294,6 @@ export declare class AreaClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.awt.geom.Rectangle2D'
-     */
-    getBounds2D(): Promise<java_awt_geom_Rectangle2D | null>;
-    /**
-     * @return original return type: 'java.awt.geom.Rectangle2D'
-     */
-    getBounds2DSync(): java_awt_geom_Rectangle2D | null;
-    /**
      * @return original return type: 'java.lang.Object'
      */
     clone(): Promise<BasicOrJavaType | null>;
@@ -309,6 +301,14 @@ export declare class AreaClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     cloneSync(): BasicOrJavaType | null;
+    /**
+     * @return original return type: 'java.awt.geom.Rectangle2D'
+     */
+    getBounds2D(): Promise<java_awt_geom_Rectangle2D | null>;
+    /**
+     * @return original return type: 'java.awt.geom.Rectangle2D'
+     */
+    getBounds2DSync(): java_awt_geom_Rectangle2D | null;
     /**
      * @return original return type: 'void'
      */

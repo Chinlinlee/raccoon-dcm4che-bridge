@@ -219,6 +219,16 @@ export declare class ProviderClass extends JavaClass {
     setPropertySync(var0: string | null, var1: string | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -237,16 +247,6 @@ export declare class ProviderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.io.InputStream'
      * @return original return type: 'void'
@@ -440,14 +440,6 @@ export declare class ProviderClass extends JavaClass {
      */
     getPropertySync(var0: string | null, var1: string | null): string | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getVersionStr(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getVersionStrSync(): string | null;
-    /**
      * @param var0 original type: 'java.util.function.BiConsumer'
      * @return original return type: 'void'
      */
@@ -457,6 +449,14 @@ export declare class ProviderClass extends JavaClass {
      * @return original return type: 'void'
      */
     forEachSync(var0: java_util_function_BiConsumer | JavaInterfaceProxy<java_util_function_BiConsumerInterface> | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getVersionStr(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getVersionStrSync(): string | null;
     /**
      * @return original return type: 'java.util.Set'
      */
@@ -544,18 +544,6 @@ export declare class ProviderClass extends JavaClass {
     /**
      * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    storeToXML(var0: java_io_OutputStream | null, var1: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    storeToXMLSync(var0: java_io_OutputStream | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.nio.charset.Charset'
      * @return original return type: 'void'
      */
@@ -567,6 +555,18 @@ export declare class ProviderClass extends JavaClass {
      * @return original return type: 'void'
      */
     storeToXMLSync(var0: java_io_OutputStream | null, var1: string | null, var2: java_nio_charset_Charset | null): void;
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    storeToXML(var0: java_io_OutputStream | null, var1: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    storeToXMLSync(var0: java_io_OutputStream | null, var1: string | null): void;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.util.function.BiFunction'

@@ -17,8 +17,8 @@ import { BulkData as org_dcm4che3_data_BulkData } from "./../../data/BulkData";
 import { BulkDataDescriptor as org_dcm4che3_io_BulkDataDescriptor, BulkDataDescriptorInterface as org_dcm4che3_io_BulkDataDescriptorInterface } from "./../../io/BulkDataDescriptor";
 import { File as java_io_File } from "./../../../../java/io/File";
 import { OutputStream as java_io_OutputStream } from "./../../../../java/io/OutputStream";
-import { Fragments as org_dcm4che3_data_Fragments } from "./../../data/Fragments";
 import { Sequence as org_dcm4che3_data_Sequence } from "./../../data/Sequence";
+import { Fragments as org_dcm4che3_data_Fragments } from "./../../data/Fragments";
 import { BulkDataCreator as org_dcm4che3_io_BulkDataCreator, BulkDataCreatorInterface as org_dcm4che3_io_BulkDataCreatorInterface } from "./../../io/BulkDataCreator";
 import { InputStream as java_io_InputStream } from "./../../../../java/io/InputStream";
 import { DicomInputHandler as org_dcm4che3_io_DicomInputHandler, DicomInputHandlerInterface as org_dcm4che3_io_DicomInputHandlerInterface } from "./../../io/DicomInputHandler";
@@ -129,16 +129,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     bigEndianSync(): boolean;
     /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    readFully(var0: Buffer | null): Promise<void>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'void'
-     */
-    readFullySync(var0: Buffer | null): void;
-    /**
      * @param var0 original type: 'short[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -167,19 +157,15 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     readFullySync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.function.Predicate'
+     * @param var0 original type: 'byte[]'
      * @return original return type: 'void'
      */
-    readAttributes(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Long | bigint | number, var2: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): Promise<void>;
+    readFully(var0: Buffer | null): Promise<void>;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'java.util.function.Predicate'
+     * @param var0 original type: 'byte[]'
      * @return original return type: 'void'
      */
-    readAttributesSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Long | bigint | number, var2: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): void;
+    readFullySync(var0: Buffer | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'long'
@@ -194,6 +180,20 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'void'
      */
     readAttributesSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Long | bigint | number, var2: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.function.Predicate'
+     * @return original return type: 'void'
+     */
+    readAttributes(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Long | bigint | number, var2: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'java.util.function.Predicate'
+     * @return original return type: 'void'
+     */
+    readAttributesSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Long | bigint | number, var2: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): void;
     /**
      * @return original return type: 'java.nio.file.Path'
      */
@@ -245,14 +245,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     readSync(var0: Buffer | null): number;
     /**
-     * @return original return type: 'int'
-     */
-    read(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    readSync(): number;
-    /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -266,6 +258,14 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
+    /**
+     * @return original return type: 'int'
+     */
+    read(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    readSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -353,16 +353,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     resetSync(): void;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
-     */
-    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
-    /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -376,6 +366,16 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readNBytesSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
+     */
+    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'long'
@@ -434,6 +434,16 @@ export declare class DicomFileInputStreamClass extends JavaClass {
     createBulkDataSync(var0: org_dcm4che3_io_DicomInputStream | null): org_dcm4che3_data_BulkData | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -453,15 +463,13 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    readFileMetaInformation(): Promise<org_dcm4che3_data_Attributes | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    readFileMetaInformationSync(): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'org.dcm4che3.io.BulkDataDescriptor'
      * @return original return type: 'void'
@@ -472,14 +480,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'void'
      */
     setBulkDataDescriptorSync(var0: org_dcm4che3_io_BulkDataDescriptor | JavaInterfaceProxy<org_dcm4che3_io_BulkDataDescriptorInterface> | null): void;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    readFileMetaInformation(): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    readFileMetaInformationSync(): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'java.io.File'
      * @return original return type: 'org.dcm4che3.io.DicomInputStream'
@@ -641,6 +641,14 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     closeSync(): void;
     /**
+     * @return original return type: 'void'
+     */
+    skipSequence(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    skipSequenceSync(): void;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -650,14 +658,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'void'
      */
     setBulkDataFileSuffixSync(var0: string | null): void;
-    /**
-     * @return original return type: 'void'
-     */
-    skipSequence(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    skipSequenceSync(): void;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'void'
@@ -677,13 +677,17 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     getBulkDataFilePrefixSync(): string | null;
     /**
-     * @return original return type: 'byte[]'
+     * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
+     * @param var1 original type: 'org.dcm4che3.data.Sequence'
+     * @return original return type: 'void'
      */
-    readValue(): Promise<Buffer | null>;
+    readValue(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Sequence | null): Promise<void>;
     /**
-     * @return original return type: 'byte[]'
+     * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
+     * @param var1 original type: 'org.dcm4che3.data.Sequence'
+     * @return original return type: 'void'
      */
-    readValueSync(): Buffer | null;
+    readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Sequence | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
      * @param var1 original type: 'org.dcm4che3.data.Fragments'
@@ -697,17 +701,13 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Fragments | null): void;
     /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
-     * @param var1 original type: 'org.dcm4che3.data.Sequence'
-     * @return original return type: 'void'
+     * @return original return type: 'byte[]'
      */
-    readValue(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Sequence | null): Promise<void>;
+    readValue(): Promise<Buffer | null>;
     /**
-     * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
-     * @param var1 original type: 'org.dcm4che3.data.Sequence'
-     * @return original return type: 'void'
+     * @return original return type: 'byte[]'
      */
-    readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Sequence | null): void;
+    readValueSync(): Buffer | null;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
      * @param var1 original type: 'org.dcm4che3.data.Attributes'
@@ -779,24 +779,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     getTagPositionSync(): number;
     /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    readDataset(): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    readDatasetSync(): org_dcm4che3_data_Attributes | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    readDataset(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    readDatasetSync(var0: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
-    /**
      * @param var0 original type: 'java.util.function.Predicate'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
@@ -807,17 +789,15 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     readDatasetSync(var0: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): org_dcm4che3_data_Attributes | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.function.Predicate'
+     * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    readDataset(var0: java_lang_Long | bigint | number, var1: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): Promise<org_dcm4che3_data_Attributes | null>;
+    readDataset(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.util.function.Predicate'
+     * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    readDatasetSync(var0: java_lang_Long | bigint | number, var1: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): org_dcm4che3_data_Attributes | null;
+    readDatasetSync(var0: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -830,6 +810,26 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     readDatasetSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    readDataset(): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    readDatasetSync(): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.function.Predicate'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    readDataset(var0: java_lang_Long | bigint | number, var1: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.util.function.Predicate'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    readDatasetSync(var0: java_lang_Long | bigint | number, var1: java_util_function_Predicate | JavaInterfaceProxy<java_util_function_PredicateInterface> | null): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'void'
@@ -853,14 +853,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     static toAttributePathSync(var0: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var1: java_lang_Integer | number): string | null;
     /**
-     * @return original return type: 'long'
-     */
-    getPosition(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getPositionSync(): number;
-    /**
      * @return original return type: 'boolean'
      */
     explicitVR(): Promise<boolean>;
@@ -868,6 +860,14 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     explicitVRSync(): boolean;
+    /**
+     * @return original return type: 'long'
+     */
+    getPosition(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getPositionSync(): number;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputHandler'
      * @return original return type: 'void'
@@ -914,6 +914,18 @@ export declare class DicomFileInputStreamClass extends JavaClass {
     isExcludeBulkDataSync(): boolean;
     /**
      * @param var0 original type: 'java.io.InputStream'
+     * @param var1 original type: 'long'
+     * @return original return type: 'org.dcm4che3.io.DicomInputStream'
+     */
+    static createWithLimit(var0: java_io_InputStream | null, var1: java_lang_Long | bigint | number): Promise<org_dcm4che3_io_DicomInputStream | null>;
+    /**
+     * @param var0 original type: 'java.io.InputStream'
+     * @param var1 original type: 'long'
+     * @return original return type: 'org.dcm4che3.io.DicomInputStream'
+     */
+    static createWithLimitSync(var0: java_io_InputStream | null, var1: java_lang_Long | bigint | number): org_dcm4che3_io_DicomInputStream | null;
+    /**
+     * @param var0 original type: 'java.io.InputStream'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'long'
      * @return original return type: 'org.dcm4che3.io.DicomInputStream'
@@ -927,18 +939,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     static createWithLimitSync(var0: java_io_InputStream | null, var1: string | null, var2: java_lang_Long | bigint | number): org_dcm4che3_io_DicomInputStream | null;
     /**
-     * @param var0 original type: 'java.io.InputStream'
-     * @param var1 original type: 'long'
-     * @return original return type: 'org.dcm4che3.io.DicomInputStream'
-     */
-    static createWithLimit(var0: java_io_InputStream | null, var1: java_lang_Long | bigint | number): Promise<org_dcm4che3_io_DicomInputStream | null>;
-    /**
-     * @param var0 original type: 'java.io.InputStream'
-     * @param var1 original type: 'long'
-     * @return original return type: 'org.dcm4che3.io.DicomInputStream'
-     */
-    static createWithLimitSync(var0: java_io_InputStream | null, var1: java_lang_Long | bigint | number): org_dcm4che3_io_DicomInputStream | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -949,15 +949,6 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      */
     markSync(var0: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.nio.file.Path'
-     */
-    constructor(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null);
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @return original return type: 'org.dcm4che3.img.stream.DicomFileInputStream'
-     */
-    static newInstanceAsync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): Promise<DicomFileInputStream>;
-    /**
      * @param var0 original type: 'java.lang.String'
      */
     constructor(var0: string | null);
@@ -966,6 +957,15 @@ export declare class DicomFileInputStreamClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.img.stream.DicomFileInputStream'
      */
     static newInstanceAsync(var0: string | null): Promise<DicomFileInputStream>;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     */
+    constructor(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null);
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @return original return type: 'org.dcm4che3.img.stream.DicomFileInputStream'
+     */
+    static newInstanceAsync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null): Promise<DicomFileInputStream>;
 }
 declare const DicomFileInputStream_base: typeof DicomFileInputStreamClass;
 /**

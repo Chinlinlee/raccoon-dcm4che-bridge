@@ -197,6 +197,14 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     setInverseLutSync(var0: java_lang_Boolean | boolean | null): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isAllowFloatImageConversion(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isAllowFloatImageConversionSync(): boolean;
+    /**
      * @param var0 original type: 'java.awt.Dimension'
      * @return original return type: 'void'
      */
@@ -304,6 +312,16 @@ export declare class DicomImageReadParamClass extends JavaClass {
     getInverseLutSync(): java_util_Optional | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -323,16 +341,6 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'java.awt.image.BufferedImage'
      */
     getDestination(): Promise<java_awt_image_BufferedImage | null>;
@@ -349,14 +357,6 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     getVoiLUTIndexSync(): number;
     /**
-     * @return original return type: 'java.util.Optional'
-     */
-    getApplyPixelPadding(): Promise<java_util_Optional | null>;
-    /**
-     * @return original return type: 'java.util.Optional'
-     */
-    getApplyPixelPaddingSync(): java_util_Optional | null;
-    /**
      * @param var0 original type: 'java.lang.Double'
      * @return original return type: 'void'
      */
@@ -366,6 +366,14 @@ export declare class DicomImageReadParamClass extends JavaClass {
      * @return original return type: 'void'
      */
     setLevelMaxSync(var0: java_lang_Double | number | null): void;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    getApplyPixelPadding(): Promise<java_util_Optional | null>;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    getApplyPixelPaddingSync(): java_util_Optional | null;
     /**
      * @return original return type: 'void'
      */
@@ -385,16 +393,6 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     setOverlayColorSync(var0: java_awt_Color | null): void;
     /**
-     * @param var0 original type: 'java.lang.Boolean'
-     * @return original return type: 'void'
-     */
-    setKeepRgbForLossyJpeg(var0: java_lang_Boolean | boolean | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Boolean'
-     * @return original return type: 'void'
-     */
-    setKeepRgbForLossyJpegSync(var0: java_lang_Boolean | boolean | null): void;
-    /**
      * @param var0 original type: 'java.awt.image.BufferedImage'
      * @return original return type: 'void'
      */
@@ -404,6 +402,16 @@ export declare class DicomImageReadParamClass extends JavaClass {
      * @return original return type: 'void'
      */
     setDestinationSync(var0: java_awt_image_BufferedImage | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Boolean'
+     * @return original return type: 'void'
+     */
+    setKeepRgbForLossyJpeg(var0: java_lang_Boolean | boolean | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Boolean'
+     * @return original return type: 'void'
+     */
+    setKeepRgbForLossyJpegSync(var0: java_lang_Boolean | boolean | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -533,6 +541,16 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     setReleaseImageAfterProcessingSync(var0: java_lang_Boolean | boolean | null): void;
     /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setAllowFloatImageConversion(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setAllowFloatImageConversionSync(var0: java_lang_Boolean | boolean): void;
+    /**
      * @return original return type: 'java.util.OptionalDouble'
      */
     getLevelMin(): Promise<java_util_OptionalDouble | null>;
@@ -549,14 +567,6 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     getSourceRegionSync(): java_awt_Rectangle | null;
     /**
-     * @return original return type: 'java.util.Optional'
-     */
-    getFillOutsideLutRange(): Promise<java_util_Optional | null>;
-    /**
-     * @return original return type: 'java.util.Optional'
-     */
-    getFillOutsideLutRangeSync(): java_util_Optional | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -566,6 +576,14 @@ export declare class DicomImageReadParamClass extends JavaClass {
      * @return original return type: 'void'
      */
     setOverlayActivationMaskSync(var0: java_lang_Integer | number): void;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    getFillOutsideLutRange(): Promise<java_util_Optional | null>;
+    /**
+     * @return original return type: 'java.util.Optional'
+     */
+    getFillOutsideLutRangeSync(): java_util_Optional | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -615,6 +633,14 @@ export declare class DicomImageReadParamClass extends JavaClass {
      */
     getReleaseImageAfterProcessingSync(): java_util_Optional | null;
     /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    getLevelMax(): Promise<java_util_OptionalDouble | null>;
+    /**
+     * @return original return type: 'java.util.OptionalDouble'
+     */
+    getLevelMaxSync(): java_util_OptionalDouble | null;
+    /**
      * @param var0 original type: 'javax.imageio.IIOParamController'
      * @return original return type: 'void'
      */
@@ -632,14 +658,6 @@ export declare class DicomImageReadParamClass extends JavaClass {
      * @return original return type: 'int'
      */
     getOverlayGrayscaleValueSync(): number;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    getLevelMax(): Promise<java_util_OptionalDouble | null>;
-    /**
-     * @return original return type: 'java.util.OptionalDouble'
-     */
-    getLevelMaxSync(): java_util_OptionalDouble | null;
     /**
      * @param var0 original type: 'java.awt.Point'
      * @return original return type: 'void'

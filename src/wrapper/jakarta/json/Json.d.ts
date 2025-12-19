@@ -18,19 +18,19 @@ import { JsonString as jakarta_json_JsonString } from "./JsonString";
 import { JsonParser as jakarta_json_stream_JsonParser } from "./stream/JsonParser";
 import { InputStream as java_io_InputStream } from "./../../java/io/InputStream";
 import { Reader as java_io_Reader } from "./../../java/io/Reader";
-import { JsonParserFactory as jakarta_json_stream_JsonParserFactory } from "./stream/JsonParserFactory";
 import { JsonMergePatch as jakarta_json_JsonMergePatch } from "./JsonMergePatch";
 import { JsonValue as jakarta_json_JsonValue, JsonValueInterface as jakarta_json_JsonValueInterface } from "./JsonValue";
+import { JsonParserFactory as jakarta_json_stream_JsonParserFactory } from "./stream/JsonParserFactory";
 import { JsonPatchBuilder as jakarta_json_JsonPatchBuilder } from "./JsonPatchBuilder";
 import { JsonReader as jakarta_json_JsonReader } from "./JsonReader";
 import { JsonPointer as jakarta_json_JsonPointer } from "./JsonPointer";
 import { JsonObjectBuilder as jakarta_json_JsonObjectBuilder } from "./JsonObjectBuilder";
 import { JsonObject as jakarta_json_JsonObject, JsonObjectInterface as jakarta_json_JsonObjectInterface } from "./JsonObject";
-import { JsonGenerator as jakarta_json_stream_JsonGenerator } from "./stream/JsonGenerator";
-import { Writer as java_io_Writer } from "./../../java/io/Writer";
-import { OutputStream as java_io_OutputStream } from "./../../java/io/OutputStream";
 import { JsonArrayBuilder as jakarta_json_JsonArrayBuilder } from "./JsonArrayBuilder";
 import { Collection as java_util_Collection, CollectionInterface as java_util_CollectionInterface } from "./../../java/util/Collection";
+import { JsonGenerator as jakarta_json_stream_JsonGenerator } from "./stream/JsonGenerator";
+import { OutputStream as java_io_OutputStream } from "./../../java/io/OutputStream";
+import { Writer as java_io_Writer } from "./../../java/io/Writer";
 import { JsonWriter as jakarta_json_JsonWriter } from "./JsonWriter";
 import { JsonStructure as jakarta_json_JsonStructure, JsonStructureInterface as jakarta_json_JsonStructureInterface } from "./JsonStructure";
 /**
@@ -47,6 +47,16 @@ export declare class JsonClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -67,16 +77,6 @@ export declare class JsonClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.util.Map'
      * @return original return type: 'jakarta.json.JsonBuilderFactory'
@@ -152,26 +152,6 @@ export declare class JsonClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static decodePointer(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    static decodePointerSync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'jakarta.json.JsonNumber'
-     */
-    static createValue(var0: java_lang_Long | bigint | number): Promise<jakarta_json_JsonNumber | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'jakarta.json.JsonNumber'
-     */
-    static createValueSync(var0: java_lang_Long | bigint | number): jakarta_json_JsonNumber | null;
-    /**
      * @param var0 original type: 'double'
      * @return original return type: 'jakarta.json.JsonNumber'
      */
@@ -212,15 +192,15 @@ export declare class JsonClass extends JavaClass {
      */
     static createValueSync(var0: java_lang_Number | null): jakarta_json_JsonNumber | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'jakarta.json.JsonString'
+     * @param var0 original type: 'long'
+     * @return original return type: 'jakarta.json.JsonNumber'
      */
-    static createValue(var0: string | null): Promise<jakarta_json_JsonString | null>;
+    static createValue(var0: java_lang_Long | bigint | number): Promise<jakarta_json_JsonNumber | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'jakarta.json.JsonString'
+     * @param var0 original type: 'long'
+     * @return original return type: 'jakarta.json.JsonNumber'
      */
-    static createValueSync(var0: string | null): jakarta_json_JsonString | null;
+    static createValueSync(var0: java_lang_Long | bigint | number): jakarta_json_JsonNumber | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'jakarta.json.JsonNumber'
@@ -231,6 +211,26 @@ export declare class JsonClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonNumber'
      */
     static createValueSync(var0: java_lang_Integer | number): jakarta_json_JsonNumber | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'jakarta.json.JsonString'
+     */
+    static createValue(var0: string | null): Promise<jakarta_json_JsonString | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'jakarta.json.JsonString'
+     */
+    static createValueSync(var0: string | null): jakarta_json_JsonString | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static decodePointer(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static decodePointerSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'java.io.InputStream'
      * @return original return type: 'jakarta.json.stream.JsonParser'
@@ -252,16 +252,6 @@ export declare class JsonClass extends JavaClass {
      */
     static createParserSync(var0: java_io_Reader | null): jakarta_json_stream_JsonParser | null;
     /**
-     * @param var0 original type: 'java.util.Map'
-     * @return original return type: 'jakarta.json.stream.JsonParserFactory'
-     */
-    static createParserFactory(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Promise<jakarta_json_stream_JsonParserFactory | null>;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @return original return type: 'jakarta.json.stream.JsonParserFactory'
-     */
-    static createParserFactorySync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): jakarta_json_stream_JsonParserFactory | null;
-    /**
      * @param var0 original type: 'jakarta.json.JsonValue'
      * @param var1 original type: 'jakarta.json.JsonValue'
      * @return original return type: 'jakarta.json.JsonMergePatch'
@@ -274,6 +264,24 @@ export declare class JsonClass extends JavaClass {
      */
     static createMergeDiffSync(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): jakarta_json_JsonMergePatch | null;
     /**
+     * @param var0 original type: 'java.util.Map'
+     * @return original return type: 'jakarta.json.stream.JsonParserFactory'
+     */
+    static createParserFactory(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Promise<jakarta_json_stream_JsonParserFactory | null>;
+    /**
+     * @param var0 original type: 'java.util.Map'
+     * @return original return type: 'jakarta.json.stream.JsonParserFactory'
+     */
+    static createParserFactorySync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): jakarta_json_stream_JsonParserFactory | null;
+    /**
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    static createPatchBuilder(): Promise<jakarta_json_JsonPatchBuilder | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonPatchBuilder'
+     */
+    static createPatchBuilderSync(): jakarta_json_JsonPatchBuilder | null;
+    /**
      * @param var0 original type: 'jakarta.json.JsonArray'
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
@@ -283,14 +291,6 @@ export declare class JsonClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonPatchBuilder'
      */
     static createPatchBuilderSync(var0: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null): jakarta_json_JsonPatchBuilder | null;
-    /**
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    static createPatchBuilder(): Promise<jakarta_json_JsonPatchBuilder | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonPatchBuilder'
-     */
-    static createPatchBuilderSync(): jakarta_json_JsonPatchBuilder | null;
     /**
      * @param var0 original type: 'java.io.Reader'
      * @return original return type: 'jakarta.json.JsonReader'
@@ -360,25 +360,23 @@ export declare class JsonClass extends JavaClass {
      */
     static createObjectBuilderSync(): jakarta_json_JsonObjectBuilder | null;
     /**
-     * @param var0 original type: 'java.io.Writer'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     * @param var0 original type: 'jakarta.json.JsonArray'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    static createGenerator(var0: java_io_Writer | null): Promise<jakarta_json_stream_JsonGenerator | null>;
+    static createArrayBuilder(var0: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null): Promise<jakarta_json_JsonArrayBuilder | null>;
     /**
-     * @param var0 original type: 'java.io.Writer'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     * @param var0 original type: 'jakarta.json.JsonArray'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    static createGeneratorSync(var0: java_io_Writer | null): jakarta_json_stream_JsonGenerator | null;
+    static createArrayBuilderSync(var0: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null): jakarta_json_JsonArrayBuilder | null;
     /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    static createGenerator(var0: java_io_OutputStream | null): Promise<jakarta_json_stream_JsonGenerator | null>;
+    static createArrayBuilder(): Promise<jakarta_json_JsonArrayBuilder | null>;
     /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     * @return original return type: 'jakarta.json.JsonArrayBuilder'
      */
-    static createGeneratorSync(var0: java_io_OutputStream | null): jakarta_json_stream_JsonGenerator | null;
+    static createArrayBuilderSync(): jakarta_json_JsonArrayBuilder | null;
     /**
      * @param var0 original type: 'java.util.Collection'
      * @return original return type: 'jakarta.json.JsonArrayBuilder'
@@ -390,23 +388,25 @@ export declare class JsonClass extends JavaClass {
      */
     static createArrayBuilderSync(var0: java_util_Collection | JavaInterfaceProxy<java_util_CollectionInterface> | null): jakarta_json_JsonArrayBuilder | null;
     /**
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     * @param var0 original type: 'java.io.OutputStream'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    static createArrayBuilder(): Promise<jakarta_json_JsonArrayBuilder | null>;
+    static createGenerator(var0: java_io_OutputStream | null): Promise<jakarta_json_stream_JsonGenerator | null>;
     /**
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     * @param var0 original type: 'java.io.OutputStream'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    static createArrayBuilderSync(): jakarta_json_JsonArrayBuilder | null;
+    static createGeneratorSync(var0: java_io_OutputStream | null): jakarta_json_stream_JsonGenerator | null;
     /**
-     * @param var0 original type: 'jakarta.json.JsonArray'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     * @param var0 original type: 'java.io.Writer'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    static createArrayBuilder(var0: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null): Promise<jakarta_json_JsonArrayBuilder | null>;
+    static createGenerator(var0: java_io_Writer | null): Promise<jakarta_json_stream_JsonGenerator | null>;
     /**
-     * @param var0 original type: 'jakarta.json.JsonArray'
-     * @return original return type: 'jakarta.json.JsonArrayBuilder'
+     * @param var0 original type: 'java.io.Writer'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    static createArrayBuilderSync(var0: jakarta_json_JsonArray | JavaInterfaceProxy<jakarta_json_JsonArrayInterface> | null): jakarta_json_JsonArrayBuilder | null;
+    static createGeneratorSync(var0: java_io_Writer | null): jakarta_json_stream_JsonGenerator | null;
     /**
      * @param var0 original type: 'java.io.Writer'
      * @return original return type: 'jakarta.json.JsonWriter'

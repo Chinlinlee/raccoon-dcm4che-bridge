@@ -18,6 +18,16 @@ export declare class PresentationContextClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -37,16 +47,6 @@ export declare class PresentationContextClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'java.lang.String'
      */
     getTransferSyntax(): Promise<string | null>;
@@ -54,6 +54,14 @@ export declare class PresentationContextClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getTransferSyntaxSync(): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getPCID(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getPCIDSync(): number;
     /**
      * @return original return type: 'java.lang.String[]'
      */
@@ -72,14 +80,6 @@ export declare class PresentationContextClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsTransferSyntaxSync(var0: string | null): boolean;
-    /**
-     * @return original return type: 'int'
-     */
-    getPCID(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPCIDSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -170,6 +170,21 @@ export declare class PresentationContextClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String[]'
+     */
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null, var3: (string | null)[] | null);
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.String'
+     * @param var3 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null, var3: (string | null)[] | null): Promise<PresentationContext>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.String'
      */
     constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null);
     /**
@@ -192,21 +207,6 @@ export declare class PresentationContextClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
      */
     static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null, var2: (string | null)[] | null): Promise<PresentationContext>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String[]'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null, var3: (string | null)[] | null);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.String'
-     * @param var3 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.net.pdu.PresentationContext'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: string | null, var3: (string | null)[] | null): Promise<PresentationContext>;
 }
 declare const PresentationContext_base: typeof PresentationContextClass;
 /**

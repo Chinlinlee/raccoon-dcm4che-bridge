@@ -46,6 +46,16 @@ export declare class DropTargetClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -64,16 +74,6 @@ export declare class DropTargetClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.awt.dnd.DropTargetDragEvent'
      * @return original return type: 'void'
@@ -256,6 +256,22 @@ export declare class DropTargetClass extends JavaClass {
     getDefaultActionsSync(): number;
     /**
      * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
+     */
+    constructor(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null);
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
+     * @return original return type: 'java.awt.dnd.DropTarget'
+     */
+    static newInstanceAsync(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.dnd.DropTarget'
+     */
+    static newInstanceAsync(): Promise<DropTarget>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.awt.dnd.DropTargetListener'
      * @param var3 original type: 'boolean'
@@ -288,17 +304,6 @@ export declare class DropTargetClass extends JavaClass {
     static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null, var3: java_lang_Boolean | boolean, var4: java_awt_datatransfer_FlavorMap | JavaInterfaceProxy<java_awt_datatransfer_FlavorMapInterface> | null): Promise<DropTarget>;
     /**
      * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
-     */
-    constructor(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null);
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'java.awt.dnd.DropTargetListener'
-     * @return original return type: 'java.awt.dnd.DropTarget'
-     */
-    static newInstanceAsync(var0: java_awt_Component | null, var1: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
      * @param var2 original type: 'java.awt.dnd.DropTargetListener'
      */
@@ -310,11 +315,6 @@ export declare class DropTargetClass extends JavaClass {
      * @return original return type: 'java.awt.dnd.DropTarget'
      */
     static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_awt_dnd_DropTargetListener | JavaInterfaceProxy<java_awt_dnd_DropTargetListenerInterface> | null): Promise<DropTarget>;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.dnd.DropTarget'
-     */
-    static newInstanceAsync(): Promise<DropTarget>;
 }
 declare const DropTarget_base: typeof DropTargetClass;
 /**

@@ -42,6 +42,16 @@ export declare class SSLEngineClass extends JavaClass {
     getSSLParametersSync(): javax_net_ssl_SSLParameters | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,16 +70,6 @@ export declare class SSLEngineClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -203,14 +203,6 @@ export declare class SSLEngineClass extends JavaClass {
      */
     beginHandshakeSync(): void;
     /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getEnabledProtocols(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getEnabledProtocolsSync(): (string | null)[] | null;
-    /**
      * @return original return type: 'boolean'
      */
     isInboundDone(): Promise<boolean>;
@@ -218,6 +210,14 @@ export declare class SSLEngineClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isInboundDoneSync(): boolean;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getEnabledProtocols(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getEnabledProtocolsSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -285,14 +285,6 @@ export declare class SSLEngineClass extends JavaClass {
      */
     setSSLParametersSync(var0: javax_net_ssl_SSLParameters | null): void;
     /**
-     * @return original return type: 'boolean'
-     */
-    getUseClientMode(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    getUseClientModeSync(): boolean;
-    /**
      * @return original return type: 'void'
      */
     closeInbound(): Promise<void>;
@@ -300,6 +292,14 @@ export declare class SSLEngineClass extends JavaClass {
      * @return original return type: 'void'
      */
     closeInboundSync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getUseClientMode(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    getUseClientModeSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -317,14 +317,6 @@ export declare class SSLEngineClass extends JavaClass {
      */
     getHandshakeApplicationProtocolSelectorSync(): java_util_function_BiFunction | null;
     /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getEnabledCipherSuites(): Promise<(string | null)[] | null>;
-    /**
-     * @return original return type: 'java.lang.String[]'
-     */
-    getEnabledCipherSuitesSync(): (string | null)[] | null;
-    /**
      * @return original return type: 'javax.net.ssl.SSLEngineResult$HandshakeStatus'
      */
     getHandshakeStatus(): Promise<javax_net_ssl_SSLEngineResult$HandshakeStatus | null>;
@@ -332,6 +324,14 @@ export declare class SSLEngineClass extends JavaClass {
      * @return original return type: 'javax.net.ssl.SSLEngineResult$HandshakeStatus'
      */
     getHandshakeStatusSync(): javax_net_ssl_SSLEngineResult$HandshakeStatus | null;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getEnabledCipherSuites(): Promise<(string | null)[] | null>;
+    /**
+     * @return original return type: 'java.lang.String[]'
+     */
+    getEnabledCipherSuitesSync(): (string | null)[] | null;
     /**
      * @return original return type: 'java.lang.String[]'
      */

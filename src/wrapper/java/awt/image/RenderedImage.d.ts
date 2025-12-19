@@ -157,13 +157,13 @@ export declare class RenderedImageClass extends JavaClass {
      */
     getNumXTilesSync(): number;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.awt.image.Raster'
      */
-    getMinX(): Promise<number>;
+    getData(): Promise<java_awt_image_Raster | null>;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.awt.image.Raster'
      */
-    getMinXSync(): number;
+    getDataSync(): java_awt_image_Raster | null;
     /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
@@ -175,13 +175,13 @@ export declare class RenderedImageClass extends JavaClass {
      */
     getDataSync(var0: java_awt_Rectangle | null): java_awt_image_Raster | null;
     /**
-     * @return original return type: 'java.awt.image.Raster'
+     * @return original return type: 'int'
      */
-    getData(): Promise<java_awt_image_Raster | null>;
+    getMinX(): Promise<number>;
     /**
-     * @return original return type: 'java.awt.image.Raster'
+     * @return original return type: 'int'
      */
-    getDataSync(): java_awt_image_Raster | null;
+    getMinXSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -276,18 +276,18 @@ export interface RenderedImageInterface {
      */
     getNumXTiles(): number;
     /**
-     * @return original return type: 'int'
+     * @return original return type: 'java.awt.image.Raster'
      */
-    getMinX(): number;
+    getData(): java_awt_image_Raster | null;
     /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
      */
     getData(var0: java_awt_Rectangle | null): java_awt_image_Raster | null;
     /**
-     * @return original return type: 'java.awt.image.Raster'
+     * @return original return type: 'int'
      */
-    getData(): java_awt_image_Raster | null;
+    getMinX(): number;
     /**
      * @return original return type: 'int'
      */

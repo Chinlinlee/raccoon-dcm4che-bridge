@@ -53,6 +53,16 @@ export declare class DatagramSocketClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -71,16 +81,6 @@ export declare class DatagramSocketClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -409,11 +409,6 @@ export declare class DatagramSocketClass extends JavaClass {
      * @return original return type: 'java.net.SocketAddress'
      */
     getRemoteSocketAddressSync(): java_net_SocketAddress | null;
-    constructor();
-    /**
-     * @return original return type: 'java.net.DatagramSocket'
-     */
-    static newInstanceAsync(): Promise<DatagramSocket>;
     /**
      * @param var0 original type: 'int'
      */
@@ -423,15 +418,6 @@ export declare class DatagramSocketClass extends JavaClass {
      * @return original return type: 'java.net.DatagramSocket'
      */
     static newInstanceAsync(var0: java_lang_Integer | number): Promise<DatagramSocket>;
-    /**
-     * @param var0 original type: 'java.net.SocketAddress'
-     */
-    constructor(var0: java_net_SocketAddress | null);
-    /**
-     * @param var0 original type: 'java.net.SocketAddress'
-     * @return original return type: 'java.net.DatagramSocket'
-     */
-    static newInstanceAsync(var0: java_net_SocketAddress | null): Promise<DatagramSocket>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.net.InetAddress'
@@ -443,6 +429,20 @@ export declare class DatagramSocketClass extends JavaClass {
      * @return original return type: 'java.net.DatagramSocket'
      */
     static newInstanceAsync(var0: java_lang_Integer | number, var1: java_net_InetAddress | null): Promise<DatagramSocket>;
+    /**
+     * @param var0 original type: 'java.net.SocketAddress'
+     */
+    constructor(var0: java_net_SocketAddress | null);
+    /**
+     * @param var0 original type: 'java.net.SocketAddress'
+     * @return original return type: 'java.net.DatagramSocket'
+     */
+    static newInstanceAsync(var0: java_net_SocketAddress | null): Promise<DatagramSocket>;
+    constructor();
+    /**
+     * @return original return type: 'java.net.DatagramSocket'
+     */
+    static newInstanceAsync(): Promise<DatagramSocket>;
 }
 declare const DatagramSocket_base: typeof DatagramSocketClass;
 /**

@@ -2,19 +2,22 @@ import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
-import { ParticipantObjectDetail as org_dcm4che3_audit_ParticipantObjectDetail } from "./ParticipantObjectDetail";
 import { AuditMessages$UserIDTypeCode as org_dcm4che3_audit_AuditMessages$UserIDTypeCode } from "./AuditMessages$UserIDTypeCode";
+import { ParticipantObjectDetail as org_dcm4che3_audit_ParticipantObjectDetail } from "./ParticipantObjectDetail";
 import { AuditMessage as org_dcm4che3_audit_AuditMessage } from "./AuditMessage";
 import { OutputStream as java_io_OutputStream } from "./../../../java/io/OutputStream";
 import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { AuditSourceIdentification as org_dcm4che3_audit_AuditSourceIdentification } from "./AuditSourceIdentification";
 import { AuditMessages$AuditSourceTypeCode as org_dcm4che3_audit_AuditMessages$AuditSourceTypeCode } from "./AuditMessages$AuditSourceTypeCode";
+import { Accession as org_dcm4che3_audit_Accession } from "./Accession";
+import { ParticipantObjectContainsStudy as org_dcm4che3_audit_ParticipantObjectContainsStudy } from "./ParticipantObjectContainsStudy";
 import { SOPClass as org_dcm4che3_audit_SOPClass } from "./SOPClass";
 import { HashSet as java_util_HashSet } from "./../../../java/util/HashSet";
 import { EventIdentification as org_dcm4che3_audit_EventIdentification } from "./EventIdentification";
-import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../java/util/List";
-import { ParticipantObjectIdentification as org_dcm4che3_audit_ParticipantObjectIdentification } from "./ParticipantObjectIdentification";
 import { ActiveParticipant as org_dcm4che3_audit_ActiveParticipant } from "./ActiveParticipant";
+import { ParticipantObjectIdentification as org_dcm4che3_audit_ParticipantObjectIdentification } from "./ParticipantObjectIdentification";
+import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../java/util/List";
+import { MPPS as org_dcm4che3_audit_MPPS } from "./MPPS";
 import { InputStream as java_io_InputStream } from "./../../../java/io/InputStream";
 import { Reader as java_io_Reader } from "./../../../java/io/Reader";
 /**
@@ -43,6 +46,16 @@ export declare class AuditMessagesClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -62,15 +75,15 @@ export declare class AuditMessagesClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.AuditMessages$UserIDTypeCode'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    static userIDTypeCode(var0: string | null): Promise<org_dcm4che3_audit_AuditMessages$UserIDTypeCode | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.AuditMessages$UserIDTypeCode'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    static userIDTypeCodeSync(var0: string | null): org_dcm4che3_audit_AuditMessages$UserIDTypeCode | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -83,16 +96,6 @@ export declare class AuditMessagesClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.audit.ParticipantObjectDetail'
      */
     static createParticipantObjectDetailSync(var0: string | null, var1: string | null): org_dcm4che3_audit_ParticipantObjectDetail | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.AuditMessages$UserIDTypeCode'
-     */
-    static userIDTypeCode(var0: string | null): Promise<org_dcm4che3_audit_AuditMessages$UserIDTypeCode | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.audit.AuditMessages$UserIDTypeCode'
-     */
-    static userIDTypeCodeSync(var0: string | null): org_dcm4che3_audit_AuditMessages$UserIDTypeCode | null;
     /**
      * @return original return type: 'void'
      */
@@ -121,40 +124,32 @@ export declare class AuditMessagesClass extends JavaClass {
     static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean, var3: string | null, var4: string | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
-     * @return original return type: 'java.lang.String'
+     * @param var1 original type: 'java.io.OutputStream'
+     * @param var2 original type: 'boolean'
+     * @param var3 original type: 'java.lang.String'
+     * @return original return type: 'void'
      */
-    static toXML(var0: org_dcm4che3_audit_AuditMessage | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
-     * @return original return type: 'java.lang.String'
-     */
-    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null): string | null;
+    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean, var3: string | null): Promise<void>;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
      * @param var1 original type: 'java.io.OutputStream'
      * @param var2 original type: 'boolean'
+     * @param var3 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean): Promise<void>;
+    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean, var3: string | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
      * @param var1 original type: 'java.io.OutputStream'
-     * @param var2 original type: 'boolean'
      * @return original return type: 'void'
      */
-    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean): void;
+    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null): Promise<void>;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'java.lang.String'
+     * @param var1 original type: 'java.io.OutputStream'
+     * @return original return type: 'void'
      */
-    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_lang_Boolean | boolean): Promise<string | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'java.lang.String'
-     */
-    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_lang_Boolean | boolean): string | null;
+    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
      * @param var1 original type: 'boolean'
@@ -187,32 +182,40 @@ export declare class AuditMessagesClass extends JavaClass {
     static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_lang_Boolean | boolean, var2: string | null): string | null;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
-     * @param var1 original type: 'java.io.OutputStream'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'java.lang.String'
-     * @return original return type: 'void'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'java.lang.String'
      */
-    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean, var3: string | null): Promise<void>;
+    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_lang_Boolean | boolean): Promise<string | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'java.lang.String'
+     */
+    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_lang_Boolean | boolean): string | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
+     * @return original return type: 'java.lang.String'
+     */
+    static toXML(var0: org_dcm4che3_audit_AuditMessage | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
+     * @return original return type: 'java.lang.String'
+     */
+    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null): string | null;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
      * @param var1 original type: 'java.io.OutputStream'
      * @param var2 original type: 'boolean'
-     * @param var3 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean, var3: string | null): void;
+    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean): Promise<void>;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
      * @param var1 original type: 'java.io.OutputStream'
+     * @param var2 original type: 'boolean'
      * @return original return type: 'void'
      */
-    static toXML(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.audit.AuditMessage'
-     * @param var1 original type: 'java.io.OutputStream'
-     * @return original return type: 'void'
-     */
-    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null): void;
+    static toXMLSync(var0: org_dcm4che3_audit_AuditMessage | null, var1: java_io_OutputStream | null, var2: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'byte[]'
@@ -258,6 +261,16 @@ export declare class AuditMessagesClass extends JavaClass {
      */
     static alternativeUserIDForAETitleSync(var0: (string | null)[] | null): string | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.Accession'
+     */
+    static createAccession(var0: string | null): Promise<org_dcm4che3_audit_Accession | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.Accession'
+     */
+    static createAccessionSync(var0: string | null): org_dcm4che3_audit_Accession | null;
+    /**
      * @return original return type: 'int'
      */
     hashCode(): Promise<number>;
@@ -265,6 +278,16 @@ export declare class AuditMessagesClass extends JavaClass {
      * @return original return type: 'int'
      */
     hashCodeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectContainsStudy'
+     */
+    static createParticipantObjectContainsStudy(var0: (string | null)[] | null): Promise<org_dcm4che3_audit_ParticipantObjectContainsStudy | null>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.audit.ParticipantObjectContainsStudy'
+     */
+    static createParticipantObjectContainsStudySync(var0: (string | null)[] | null): org_dcm4che3_audit_ParticipantObjectContainsStudy | null;
     /**
      * @param var0 original type: 'java.util.HashSet'
      * @param var1 original type: 'java.lang.String'
@@ -291,6 +314,20 @@ export declare class AuditMessagesClass extends JavaClass {
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.EventIdentification'
+     * @param var1 original type: 'org.dcm4che3.audit.ActiveParticipant[]'
+     * @param var2 original type: 'org.dcm4che3.audit.ParticipantObjectIdentification[]'
+     * @return original return type: 'org.dcm4che3.audit.AuditMessage'
+     */
+    static createMessage(var0: org_dcm4che3_audit_EventIdentification | null, var1: (org_dcm4che3_audit_ActiveParticipant | null)[] | null, var2: (org_dcm4che3_audit_ParticipantObjectIdentification | null)[] | null): Promise<org_dcm4che3_audit_AuditMessage | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.EventIdentification'
+     * @param var1 original type: 'org.dcm4che3.audit.ActiveParticipant[]'
+     * @param var2 original type: 'org.dcm4che3.audit.ParticipantObjectIdentification[]'
+     * @return original return type: 'org.dcm4che3.audit.AuditMessage'
+     */
+    static createMessageSync(var0: org_dcm4che3_audit_EventIdentification | null, var1: (org_dcm4che3_audit_ActiveParticipant | null)[] | null, var2: (org_dcm4che3_audit_ParticipantObjectIdentification | null)[] | null): org_dcm4che3_audit_AuditMessage | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.audit.EventIdentification'
      * @param var1 original type: 'java.util.List'
      * @param var2 original type: 'org.dcm4che3.audit.ParticipantObjectIdentification[]'
      * @return original return type: 'org.dcm4che3.audit.AuditMessage'
@@ -304,19 +341,15 @@ export declare class AuditMessagesClass extends JavaClass {
      */
     static createMessageSync(var0: org_dcm4che3_audit_EventIdentification | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: (org_dcm4che3_audit_ParticipantObjectIdentification | null)[] | null): org_dcm4che3_audit_AuditMessage | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.EventIdentification'
-     * @param var1 original type: 'org.dcm4che3.audit.ActiveParticipant[]'
-     * @param var2 original type: 'org.dcm4che3.audit.ParticipantObjectIdentification[]'
-     * @return original return type: 'org.dcm4che3.audit.AuditMessage'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.MPPS'
      */
-    static createMessage(var0: org_dcm4che3_audit_EventIdentification | null, var1: (org_dcm4che3_audit_ActiveParticipant | null)[] | null, var2: (org_dcm4che3_audit_ParticipantObjectIdentification | null)[] | null): Promise<org_dcm4che3_audit_AuditMessage | null>;
+    static createMPPS(var0: string | null): Promise<org_dcm4che3_audit_MPPS | null>;
     /**
-     * @param var0 original type: 'org.dcm4che3.audit.EventIdentification'
-     * @param var1 original type: 'org.dcm4che3.audit.ActiveParticipant[]'
-     * @param var2 original type: 'org.dcm4che3.audit.ParticipantObjectIdentification[]'
-     * @return original return type: 'org.dcm4che3.audit.AuditMessage'
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.audit.MPPS'
      */
-    static createMessageSync(var0: org_dcm4che3_audit_EventIdentification | null, var1: (org_dcm4che3_audit_ActiveParticipant | null)[] | null, var2: (org_dcm4che3_audit_ParticipantObjectIdentification | null)[] | null): org_dcm4che3_audit_AuditMessage | null;
+    static createMPPSSync(var0: string | null): org_dcm4che3_audit_MPPS | null;
     /**
      * @param var0 original type: 'java.io.InputStream'
      * @return original return type: 'org.dcm4che3.audit.AuditMessage'

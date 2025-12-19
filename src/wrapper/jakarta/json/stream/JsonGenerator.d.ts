@@ -1,8 +1,8 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { JsonValue as jakarta_json_JsonValue, JsonValueInterface as jakarta_json_JsonValueInterface } from "./../JsonValue";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
-import { Double as java_lang_Double } from "./../../../java/lang/Double";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
+import { Double as java_lang_Double } from "./../../../java/lang/Double";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { BigInteger as java_math_BigInteger } from "./../../../java/math/BigInteger";
 import { BigDecimal as java_math_BigDecimal } from "./../../../java/math/BigDecimal";
@@ -67,6 +67,14 @@ export declare class JsonGeneratorClass extends JavaClass {
      */
     writeStartArraySync(var0: string | null): JsonGenerator | null;
     /**
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    writeNull(): Promise<JsonGenerator | null>;
+    /**
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    writeNullSync(): JsonGenerator | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
@@ -79,29 +87,11 @@ export declare class JsonGeneratorClass extends JavaClass {
     /**
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    writeNull(): Promise<JsonGenerator | null>;
-    /**
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    writeNullSync(): JsonGenerator | null;
-    /**
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
     writeEnd(): Promise<JsonGenerator | null>;
     /**
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
     writeEndSync(): JsonGenerator | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    write(var0: string | null): Promise<JsonGenerator | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    writeSync(var0: string | null): JsonGenerator | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonValue'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
@@ -113,15 +103,15 @@ export declare class JsonGeneratorClass extends JavaClass {
      */
     writeSync(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonGenerator | null;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'long'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    write(var0: java_lang_Boolean | boolean): Promise<JsonGenerator | null>;
+    write(var0: java_lang_Long | bigint | number): Promise<JsonGenerator | null>;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'long'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    writeSync(var0: java_lang_Boolean | boolean): JsonGenerator | null;
+    writeSync(var0: java_lang_Long | bigint | number): JsonGenerator | null;
     /**
      * @param var0 original type: 'double'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
@@ -134,6 +124,18 @@ export declare class JsonGeneratorClass extends JavaClass {
     writeSync(var0: java_lang_Double | number): JsonGenerator | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    write(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonGenerator | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    writeSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonGenerator | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'double'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
@@ -144,16 +146,6 @@ export declare class JsonGeneratorClass extends JavaClass {
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
     writeSync(var0: string | null, var1: java_lang_Double | number): JsonGenerator | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    write(var0: java_lang_Long | bigint | number): Promise<JsonGenerator | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    writeSync(var0: java_lang_Long | bigint | number): JsonGenerator | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
@@ -184,6 +176,16 @@ export declare class JsonGeneratorClass extends JavaClass {
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
     writeSync(var0: java_math_BigDecimal | null): JsonGenerator | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    write(var0: string | null): Promise<JsonGenerator | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    writeSync(var0: string | null): JsonGenerator | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.math.BigInteger'
@@ -221,17 +223,15 @@ export declare class JsonGeneratorClass extends JavaClass {
      */
     writeSync(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonGenerator | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    write(var0: string | null, var1: java_lang_Boolean | boolean): Promise<JsonGenerator | null>;
+    write(var0: java_lang_Boolean | boolean): Promise<JsonGenerator | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    writeSync(var0: string | null, var1: java_lang_Boolean | boolean): JsonGenerator | null;
+    writeSync(var0: java_lang_Boolean | boolean): JsonGenerator | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'long'
@@ -321,6 +321,10 @@ export interface JsonGeneratorInterface {
      */
     writeStartArray(var0: string | null): JsonGenerator | null;
     /**
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    writeNull(): JsonGenerator | null;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
@@ -328,26 +332,17 @@ export interface JsonGeneratorInterface {
     /**
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    writeNull(): JsonGenerator | null;
-    /**
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
     writeEnd(): JsonGenerator | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    write(var0: string | null): JsonGenerator | null;
     /**
      * @param var0 original type: 'jakarta.json.JsonValue'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
     write(var0: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonGenerator | null;
     /**
-     * @param var0 original type: 'boolean'
+     * @param var0 original type: 'long'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    write(var0: java_lang_Boolean | boolean): JsonGenerator | null;
+    write(var0: java_lang_Long | bigint | number): JsonGenerator | null;
     /**
      * @param var0 original type: 'double'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
@@ -355,15 +350,16 @@ export interface JsonGeneratorInterface {
     write(var0: java_lang_Double | number): JsonGenerator | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    write(var0: string | null, var1: java_lang_Boolean | boolean): JsonGenerator | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'double'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
     write(var0: string | null, var1: java_lang_Double | number): JsonGenerator | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'jakarta.json.stream.JsonGenerator'
-     */
-    write(var0: java_lang_Long | bigint | number): JsonGenerator | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
@@ -379,6 +375,11 @@ export interface JsonGeneratorInterface {
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
     write(var0: java_math_BigDecimal | null): JsonGenerator | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'jakarta.json.stream.JsonGenerator'
+     */
+    write(var0: string | null): JsonGenerator | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.math.BigInteger'
@@ -398,11 +399,10 @@ export interface JsonGeneratorInterface {
      */
     write(var0: string | null, var1: jakarta_json_JsonValue | JavaInterfaceProxy<jakarta_json_JsonValueInterface> | null): JsonGenerator | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'boolean'
+     * @param var0 original type: 'boolean'
      * @return original return type: 'jakarta.json.stream.JsonGenerator'
      */
-    write(var0: string | null, var1: java_lang_Boolean | boolean): JsonGenerator | null;
+    write(var0: java_lang_Boolean | boolean): JsonGenerator | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'long'

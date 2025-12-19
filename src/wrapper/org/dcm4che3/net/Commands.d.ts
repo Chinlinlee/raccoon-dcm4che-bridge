@@ -11,6 +11,16 @@ import { Dimse as org_dcm4che3_net_Dimse } from "./Dimse";
  */
 export declare class CommandsClass extends JavaClass {
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkCCancelRQ(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkCCancelRQSync(var0: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -23,16 +33,6 @@ export declare class CommandsClass extends JavaClass {
      */
     static mkEchoRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkCCancelRQ(var0: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkCCancelRQSync(var0: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -40,6 +40,16 @@ export declare class CommandsClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -60,16 +70,6 @@ export declare class CommandsClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'int'
@@ -128,6 +128,20 @@ export declare class CommandsClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkNCreateRQ(var0: java_lang_Integer | number, var1: string | null, var2: string | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkNCreateRQSync(var0: java_lang_Integer | number, var1: string | null, var2: string | null): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.String'
      * @param var3 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
@@ -163,17 +177,17 @@ export declare class CommandsClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static mkNCreateRQ(var0: java_lang_Integer | number, var1: string | null, var2: string | null): Promise<org_dcm4che3_data_Attributes | null>;
+    static mkCFindRQ(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.String'
+     * @param var2 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static mkNCreateRQSync(var0: java_lang_Integer | number, var1: string | null, var2: string | null): org_dcm4che3_data_Attributes | null;
+    static mkCFindRQSync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -186,20 +200,6 @@ export declare class CommandsClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     static mkCEchoRQSync(var0: java_lang_Integer | number, var1: string | null): org_dcm4che3_data_Attributes | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkCFindRQ(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkCFindRQSync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
      * @return original return type: 'void'
      */
@@ -221,18 +221,6 @@ export declare class CommandsClass extends JavaClass {
      */
     static mkNSetRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkNCreateRSP(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkNCreateRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.String'
@@ -250,6 +238,18 @@ export declare class CommandsClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     static mkNEventReportRQSync(var0: java_lang_Integer | number, var1: string | null, var2: string | null, var3: java_lang_Integer | number, var4: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkNCreateRSP(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkNCreateRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
      * @return original return type: 'int'
      */
@@ -457,18 +457,6 @@ export declare class CommandsClass extends JavaClass {
      * @param var1 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
-    static mkCMoveRSP(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    static mkCMoveRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
     static mkNDeleteRSP(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
@@ -476,6 +464,18 @@ export declare class CommandsClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     static mkNDeleteRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkCMoveRSP(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    static mkCMoveRSPSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Integer | number): org_dcm4che3_data_Attributes | null;
     /**
      * Original type: 'int'
      */

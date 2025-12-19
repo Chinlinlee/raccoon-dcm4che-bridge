@@ -53,18 +53,6 @@ export declare class JsonObjectClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replace(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -77,6 +65,18 @@ export declare class JsonObjectClass extends JavaClass {
      */
     replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replace(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.util.function.BiFunction'
      * @return original return type: 'void'
      */
@@ -86,16 +86,6 @@ export declare class JsonObjectClass extends JavaClass {
      * @return original return type: 'void'
      */
     replaceAllSync(var0: java_util_function_BiFunction | JavaInterfaceProxy<java_util_function_BiFunctionInterface> | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    remove(var0: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    removeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -108,6 +98,16 @@ export declare class JsonObjectClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     removeSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    remove(var0: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    removeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -480,21 +480,27 @@ export interface JsonObjectInterface {
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replace?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
     replace?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replace?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.util.function.BiFunction'
      * @return original return type: 'void'
      */
     replaceAll?(var0: java_util_function_BiFunction | JavaInterfaceProxy<java_util_function_BiFunctionInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    remove?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
     /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
@@ -502,12 +508,6 @@ export interface JsonObjectInterface {
      * @return original return type: 'java.lang.Object'
      */
     remove?(var0: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    remove?(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'

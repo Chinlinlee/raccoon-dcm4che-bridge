@@ -20,6 +20,16 @@ export declare class DataBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class DataBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -68,16 +68,6 @@ export declare class DataBufferClass extends JavaClass {
     static getDataTypeSizeSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'double'
-     */
-    getElemDouble(var0: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'double'
-     */
-    getElemDoubleSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'double'
      */
@@ -88,6 +78,16 @@ export declare class DataBufferClass extends JavaClass {
      * @return original return type: 'double'
      */
     getElemDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'double'
+     */
+    getElemDouble(var0: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'double'
+     */
+    getElemDoubleSync(var0: java_lang_Integer | number): number;
     /**
      * @return original return type: 'int'
      */
@@ -164,6 +164,18 @@ export declare class DataBufferClass extends JavaClass {
     getSizeSync(): number;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'double'
+     * @return original return type: 'void'
+     */
+    setElemDouble(var0: java_lang_Integer | number, var1: java_lang_Double | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'double'
+     * @return original return type: 'void'
+     */
+    setElemDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): void;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'double'
      * @return original return type: 'void'
@@ -176,18 +188,6 @@ export declare class DataBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     setElemDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Double | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
-     * @return original return type: 'void'
-     */
-    setElemDouble(var0: java_lang_Integer | number, var1: java_lang_Double | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'double'
-     * @return original return type: 'void'
-     */
-    setElemDoubleSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -209,18 +209,6 @@ export declare class DataBufferClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setElem(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setElemSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'void'
      */
@@ -234,14 +222,16 @@ export declare class DataBufferClass extends JavaClass {
     setElemSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'float'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
      */
-    getElemFloat(var0: java_lang_Integer | number): Promise<number>;
+    setElem(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'float'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
      */
-    getElemFloatSync(var0: java_lang_Integer | number): number;
+    setElemSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -256,16 +246,14 @@ export declare class DataBufferClass extends JavaClass {
     getElemFloatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
+     * @return original return type: 'float'
      */
-    getElem(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<number>;
+    getElemFloat(var0: java_lang_Integer | number): Promise<number>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
+     * @return original return type: 'float'
      */
-    getElemSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    getElemFloatSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -276,6 +264,18 @@ export declare class DataBufferClass extends JavaClass {
      * @return original return type: 'int'
      */
     getElemSync(var0: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getElem(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'int'
+     */
+    getElemSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
     /**
      * Original type: 'int'
      */

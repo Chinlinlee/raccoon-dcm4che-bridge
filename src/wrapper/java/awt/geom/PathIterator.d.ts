@@ -1,6 +1,6 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
-import { Float as java_lang_Float } from "./../../lang/Float";
 import { Double as java_lang_Double } from "./../../lang/Double";
+import { Float as java_lang_Float } from "./../../lang/Float";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
 /**
  * This class just defines types, you should import {@link PathIterator} instead of this.
@@ -25,16 +25,6 @@ export declare class PathIteratorClass extends JavaClass {
      */
     getWindingRuleSync(): number;
     /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'int'
-     */
-    currentSegment(var0: (java_lang_Float | number)[] | null): Promise<number>;
-    /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'int'
-     */
-    currentSegmentSync(var0: (java_lang_Float | number)[] | null): number;
-    /**
      * @param var0 original type: 'double[]'
      * @return original return type: 'int'
      */
@@ -44,6 +34,16 @@ export declare class PathIteratorClass extends JavaClass {
      * @return original return type: 'int'
      */
     currentSegmentSync(var0: (java_lang_Double | number)[] | null): number;
+    /**
+     * @param var0 original type: 'float[]'
+     * @return original return type: 'int'
+     */
+    currentSegment(var0: (java_lang_Float | number)[] | null): Promise<number>;
+    /**
+     * @param var0 original type: 'float[]'
+     * @return original return type: 'int'
+     */
+    currentSegmentSync(var0: (java_lang_Float | number)[] | null): number;
     /**
      * @return original return type: 'boolean'
      */
@@ -102,15 +102,15 @@ export interface PathIteratorInterface {
      */
     getWindingRule(): number;
     /**
-     * @param var0 original type: 'float[]'
-     * @return original return type: 'int'
-     */
-    currentSegment(var0: (java_lang_Float | number)[] | null): number;
-    /**
      * @param var0 original type: 'double[]'
      * @return original return type: 'int'
      */
     currentSegment(var0: (java_lang_Double | number)[] | null): number;
+    /**
+     * @param var0 original type: 'float[]'
+     * @return original return type: 'int'
+     */
+    currentSegment(var0: (java_lang_Float | number)[] | null): number;
     /**
      * @return original return type: 'boolean'
      */

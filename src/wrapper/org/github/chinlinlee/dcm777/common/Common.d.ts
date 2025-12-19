@@ -23,6 +23,16 @@ export declare class CommonClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -41,16 +51,6 @@ export declare class CommonClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -71,14 +71,18 @@ export declare class CommonClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'boolean'
      * @return original return type: 'void'
      */
-    static throwDicomServiceException(var0: java_lang_Integer | number): Promise<void>;
+    static throwDicomServiceException(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Boolean | boolean): Promise<void>;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'boolean'
      * @return original return type: 'void'
      */
-    static throwDicomServiceExceptionSync(var0: java_lang_Integer | number): void;
+    static throwDicomServiceExceptionSync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Boolean | boolean): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -93,18 +97,14 @@ export declare class CommonClass extends JavaClass {
     static throwDicomServiceExceptionSync(var0: java_lang_Integer | number, var1: string | null): void;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'boolean'
      * @return original return type: 'void'
      */
-    static throwDicomServiceException(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Boolean | boolean): Promise<void>;
+    static throwDicomServiceException(var0: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'boolean'
      * @return original return type: 'void'
      */
-    static throwDicomServiceExceptionSync(var0: java_lang_Integer | number, var1: string | null, var2: java_lang_Boolean | boolean): void;
+    static throwDicomServiceExceptionSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'void'
      */

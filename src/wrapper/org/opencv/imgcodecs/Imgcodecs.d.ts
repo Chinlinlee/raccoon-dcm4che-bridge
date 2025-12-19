@@ -1,12 +1,13 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Mat as org_opencv_core_Mat } from "./../core/Mat";
-import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { MatOfByte as org_opencv_core_MatOfByte } from "./../core/MatOfByte";
 import { MatOfInt as org_opencv_core_MatOfInt } from "./../core/MatOfInt";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
+import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { List as java_util_List, ListInterface as java_util_ListInterface } from "./../../../java/util/List";
 import { MatOfDouble as org_opencv_core_MatOfDouble } from "./../core/MatOfDouble";
+import { Animation as org_opencv_imgcodecs_Animation } from "./Animation";
 import { Range as org_opencv_core_Range } from "./../core/Range";
 /**
  * This class just defines types, you should import {@link Imgcodecs} instead of this.
@@ -23,56 +24,6 @@ export declare class ImgcodecsClass extends JavaClass {
      */
     getClassSync(): java_lang_Class;
     /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatRead(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatRead(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatRead(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @param var2 original type: 'org.opencv.core.MatOfByte'
-     * @return original return type: 'boolean'
-     */
-    static imencode(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfByte | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @param var2 original type: 'org.opencv.core.MatOfByte'
-     * @return original return type: 'boolean'
-     */
-    static imencodeSync(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfByte | null): boolean;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.opencv.core.Mat'
      * @param var2 original type: 'org.opencv.core.MatOfByte'
@@ -88,6 +39,30 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static imencodeSync(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfByte | null, var3: org_opencv_core_MatOfInt | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @param var2 original type: 'org.opencv.core.MatOfByte'
+     * @return original return type: 'boolean'
+     */
+    static imencode(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfByte | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @param var2 original type: 'org.opencv.core.MatOfByte'
+     * @return original return type: 'boolean'
+     */
+    static imencodeSync(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfByte | null): boolean;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -109,29 +84,17 @@ export declare class ImgcodecsClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'boolean'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<boolean>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'boolean'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.MatOfInt'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomRawMatRead(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.MatOfInt'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomRawMatReadSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): org_opencv_core_Mat | null;
+    static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.List'
@@ -183,33 +146,17 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'org.opencv.core.MatOfInt'
      * @return original return type: 'boolean'
      */
-    static imreadmulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<boolean>;
+    static imwritemulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfInt | null): Promise<boolean>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'org.opencv.core.MatOfInt'
      * @return original return type: 'boolean'
      */
-    static imreadmultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.MatOfDouble'
-     * @param var2 original type: 'org.opencv.core.MatOfDouble'
-     * @param var3 original type: 'org.opencv.core.MatOfInt'
-     * @param var4 original type: 'java.lang.String'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomRawFileRead(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: org_opencv_core_MatOfInt | null, var4: string | null): Promise<org_opencv_core_Mat | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.MatOfDouble'
-     * @param var2 original type: 'org.opencv.core.MatOfDouble'
-     * @param var3 original type: 'org.opencv.core.MatOfInt'
-     * @param var4 original type: 'java.lang.String'
-     * @return original return type: 'org.opencv.core.Mat'
-     */
-    static dicomRawFileReadSync(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: org_opencv_core_MatOfInt | null, var4: string | null): org_opencv_core_Mat | null;
+    static imwritemultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfInt | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.List'
@@ -223,20 +170,6 @@ export declare class ImgcodecsClass extends JavaClass {
      */
     static imwritemultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.List'
-     * @param var2 original type: 'org.opencv.core.MatOfInt'
-     * @return original return type: 'boolean'
-     */
-    static imwritemulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfInt | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.List'
-     * @param var2 original type: 'org.opencv.core.MatOfInt'
-     * @return original return type: 'boolean'
-     */
-    static imwritemultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfInt | null): boolean;
-    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -244,18 +177,6 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'boolean'
-     */
-    static imwrite(var0: string | null, var1: org_opencv_core_Mat | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'org.opencv.core.Mat'
-     * @return original return type: 'boolean'
-     */
-    static imwriteSync(var0: string | null, var1: org_opencv_core_Mat | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'org.opencv.core.Mat'
@@ -270,6 +191,18 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static imwriteSync(var0: string | null, var1: org_opencv_core_Mat | null, var2: org_opencv_core_MatOfInt | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'boolean'
+     */
+    static imwrite(var0: string | null, var1: org_opencv_core_Mat | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'boolean'
+     */
+    static imwriteSync(var0: string | null, var1: org_opencv_core_Mat | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -329,36 +262,6 @@ export declare class ImgcodecsClass extends JavaClass {
      */
     static dicomJpgFileReadSync(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null): org_opencv_core_Mat | null;
     /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.util.List'
-     * @param var3 original type: 'org.opencv.core.Range'
-     * @return original return type: 'boolean'
-     */
-    static imdecodemulti(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var3: org_opencv_core_Range | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.util.List'
-     * @param var3 original type: 'org.opencv.core.Range'
-     * @return original return type: 'boolean'
-     */
-    static imdecodemultiSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var3: org_opencv_core_Range | null): boolean;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.util.List'
-     * @return original return type: 'boolean'
-     */
-    static imdecodemulti(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.util.List'
-     * @return original return type: 'boolean'
-     */
-    static imdecodemultiSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
-    /**
      * @return original return type: 'void'
      */
     notify(): Promise<void>;
@@ -367,19 +270,47 @@ export declare class ImgcodecsClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.MatOfInt'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.opencv.core.Mat'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
      */
-    static dicomJpgWrite(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): Promise<org_opencv_core_Mat | null>;
+    static imreadanimation(var0: string | null, var1: org_opencv_imgcodecs_Animation | null, var2: java_lang_Integer | number): Promise<boolean>;
     /**
-     * @param var0 original type: 'org.opencv.core.Mat'
-     * @param var1 original type: 'org.opencv.core.MatOfInt'
-     * @param var2 original type: 'java.lang.String'
-     * @return original return type: 'org.opencv.core.Mat'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @param var2 original type: 'int'
+     * @return original return type: 'boolean'
      */
-    static dicomJpgWriteSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): org_opencv_core_Mat | null;
+    static imreadanimationSync(var0: string | null, var1: org_opencv_imgcodecs_Animation | null, var2: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @return original return type: 'boolean'
+     */
+    static imreadanimation(var0: string | null, var1: org_opencv_imgcodecs_Animation | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @return original return type: 'boolean'
+     */
+    static imreadanimationSync(var0: string | null, var1: org_opencv_imgcodecs_Animation | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static imreadanimation(var0: string | null, var1: org_opencv_imgcodecs_Animation | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    static imreadanimationSync(var0: string | null, var1: org_opencv_imgcodecs_Animation | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -400,16 +331,6 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'org.opencv.core.Mat'
      */
     static imdecodeSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equals(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.List'
@@ -446,6 +367,184 @@ export declare class ImgcodecsClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static haveImageReaderSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatRead(var0: org_opencv_core_Mat | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatRead(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatRead(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgMatReadSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.MatOfInt'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomRawMatRead(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.MatOfInt'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomRawMatReadSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.MatOfDouble'
+     * @param var2 original type: 'org.opencv.core.MatOfDouble'
+     * @param var3 original type: 'org.opencv.core.MatOfInt'
+     * @param var4 original type: 'java.lang.String'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomRawFileRead(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: org_opencv_core_MatOfInt | null, var4: string | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.core.MatOfDouble'
+     * @param var2 original type: 'org.opencv.core.MatOfDouble'
+     * @param var3 original type: 'org.opencv.core.MatOfInt'
+     * @param var4 original type: 'java.lang.String'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomRawFileReadSync(var0: string | null, var1: org_opencv_core_MatOfDouble | null, var2: org_opencv_core_MatOfDouble | null, var3: org_opencv_core_MatOfInt | null, var4: string | null): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.util.List'
+     * @return original return type: 'boolean'
+     */
+    static imdecodemulti(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.util.List'
+     * @return original return type: 'boolean'
+     */
+    static imdecodemultiSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.util.List'
+     * @param var3 original type: 'org.opencv.core.Range'
+     * @return original return type: 'boolean'
+     */
+    static imdecodemulti(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var3: org_opencv_core_Range | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.util.List'
+     * @param var3 original type: 'org.opencv.core.Range'
+     * @return original return type: 'boolean'
+     */
+    static imdecodemultiSync(var0: org_opencv_core_Mat | null, var1: java_lang_Integer | number, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var3: org_opencv_core_Range | null): boolean;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.MatOfInt'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgWrite(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): Promise<org_opencv_core_Mat | null>;
+    /**
+     * @param var0 original type: 'org.opencv.core.Mat'
+     * @param var1 original type: 'org.opencv.core.MatOfInt'
+     * @param var2 original type: 'java.lang.String'
+     * @return original return type: 'org.opencv.core.Mat'
+     */
+    static dicomJpgWriteSync(var0: org_opencv_core_Mat | null, var1: org_opencv_core_MatOfInt | null, var2: string | null): org_opencv_core_Mat | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equals(var0: BasicOrJavaType | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'boolean'
+     */
+    equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'org.opencv.core.MatOfByte'
+     * @param var3 original type: 'org.opencv.core.MatOfInt'
+     * @return original return type: 'boolean'
+     */
+    static imencodemulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfByte | null, var3: org_opencv_core_MatOfInt | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'org.opencv.core.MatOfByte'
+     * @param var3 original type: 'org.opencv.core.MatOfInt'
+     * @return original return type: 'boolean'
+     */
+    static imencodemultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfByte | null, var3: org_opencv_core_MatOfInt | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'org.opencv.core.MatOfByte'
+     * @return original return type: 'boolean'
+     */
+    static imencodemulti(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfByte | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.List'
+     * @param var2 original type: 'org.opencv.core.MatOfByte'
+     * @return original return type: 'boolean'
+     */
+    static imencodemultiSync(var0: string | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null, var2: org_opencv_core_MatOfByte | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @return original return type: 'boolean'
+     */
+    static imwriteanimation(var0: string | null, var1: org_opencv_imgcodecs_Animation | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @return original return type: 'boolean'
+     */
+    static imwriteanimationSync(var0: string | null, var1: org_opencv_imgcodecs_Animation | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @param var2 original type: 'org.opencv.core.MatOfInt'
+     * @return original return type: 'boolean'
+     */
+    static imwriteanimation(var0: string | null, var1: org_opencv_imgcodecs_Animation | null, var2: org_opencv_core_MatOfInt | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'org.opencv.imgcodecs.Animation'
+     * @param var2 original type: 'org.opencv.core.MatOfInt'
+     * @return original return type: 'boolean'
+     */
+    static imwriteanimationSync(var0: string | null, var1: org_opencv_imgcodecs_Animation | null, var2: org_opencv_core_MatOfInt | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -519,6 +618,10 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_GIF_COLORTABLE_SIZE_64: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMWRITE_EXR_COMPRESSION_ZIPS: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -551,7 +654,43 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_GIF_COLORTABLE_SIZE_8: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_IT8MP: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_DEFLATE: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_IT8CTPAD: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_SGILOG: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_WEBP: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly DICOM_CP_JPLS: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly DICOM_CP_JXL: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMREAD_COLOR_BGR: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMREAD_COLOR_RGB: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -560,6 +699,10 @@ export declare class ImgcodecsClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly IMWRITE_EXR_COMPRESSION_B44: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_LZMA: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -607,6 +750,14 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_ADOBE_DEFLATE: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_IT8LW: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly EPI_YBR_Partial_422: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -635,11 +786,23 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_PREDICTOR: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_T43: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly POS_DATE_TIME: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
     static readonly JPEG_spectralSelection: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_JPEGXL_QUALITY: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -667,6 +830,10 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_PACKBITS: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly JPEG_lossless: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -675,11 +842,31 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_JBIG: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_PREDICTOR_NONE: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMWRITE_PAM_FORMAT_RGB: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
     static readonly JPEG_sequential: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_DCS: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_OJPEG: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_ZSTD: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -695,7 +882,31 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_PIXARLOG: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_COLORTABLE_SIZE_32: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMWRITE_JPEG_SAMPLING_FACTOR_444: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_CCITTFAX3: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_CCITTFAX4: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_JPEG: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_DITHER: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -711,7 +922,27 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_JXL: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_LERC: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly DICOM_PARAM_IMREAD: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_COLORTABLE: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_CCITTRLE: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_IT8BL: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -743,11 +974,23 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_PREDICTOR_HORIZONTAL: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly EPI_YBR_Full: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
     static readonly IMWRITE_EXR_COMPRESSION_PXR24: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_FAST_FLOYD_DITHER: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_COLORTABLE_SIZE_128: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -795,6 +1038,10 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_JPEGXL_EFFORT: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly DICOM_FLAG_FLOAT: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -811,7 +1058,15 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_LZW: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMWRITE_PAM_FORMAT_NULL: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_COLORTABLE_SIZE_16: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -827,6 +1082,10 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_GIF_TRANSPARENCY: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMWRITE_EXR_COMPRESSION_DWAA: java_lang_Integer | number;
     /**
      * Original type: 'int'
@@ -836,6 +1095,10 @@ export declare class ImgcodecsClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly IMWRITE_EXR_COMPRESSION_DWAB: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_JP2000: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -851,7 +1114,23 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_PREDICTOR_FLOATINGPOINT: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_NONE: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly EPI_Monochrome2: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_SGILOG24: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_LOOP: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -867,7 +1146,15 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_THUNDERSCAN: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMREAD_REDUCED_GRAYSCALE_2: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_CCITT_T4: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -880,6 +1167,14 @@ export declare class ImgcodecsClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly IMWRITE_TIFF_YDPI: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_CCITT_T6: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_T85: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -899,7 +1194,15 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_JPEGXL_DECODING_SPEED: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMREAD_COLOR: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_JPEGXL_DISTANCE: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -915,7 +1218,15 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_GIF_SPEED: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_ROWSPERSTRIP: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -924,6 +1235,10 @@ export declare class ImgcodecsClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly POS_IMAGE_DESCRIPTION: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_QUALITY: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -940,6 +1255,10 @@ export declare class ImgcodecsClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly DICOM_CP_J2K: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_COLORTABLE_SIZE_256: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
@@ -963,11 +1282,27 @@ export declare class ImgcodecsClass extends JavaClass {
     /**
      * Original type: 'int'
      */
+    static readonly IMWRITE_TIFF_COMPRESSION_PIXARFILM: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_NEXT: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_GIF_FAST_NO_DITHER: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
     static readonly IMREAD_ANYCOLOR: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */
     static readonly IMWRITE_JPEG_SAMPLING_FACTOR: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly IMWRITE_TIFF_COMPRESSION_CCITTRLEW: java_lang_Integer | number;
     /**
      * Original type: 'int'
      */

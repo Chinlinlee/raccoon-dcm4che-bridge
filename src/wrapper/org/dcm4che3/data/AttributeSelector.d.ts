@@ -21,6 +21,16 @@ export declare class AttributeSelectorClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -39,16 +49,6 @@ export declare class AttributeSelectorClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -157,17 +157,24 @@ export declare class AttributeSelectorClass extends JavaClass {
     tagSync(): number;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.util.List'
      */
-    constructor(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null);
+    constructor(var0: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.data.AttributeSelector'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number): Promise<AttributeSelector>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.util.List'
+     */
+    constructor(var0: java_lang_Integer | number, var1: string | null);
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.data.AttributeSelector'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<AttributeSelector>;
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null): Promise<AttributeSelector>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
@@ -184,23 +191,16 @@ export declare class AttributeSelectorClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.util.List'
      */
-    constructor(var0: java_lang_Integer | number, var1: string | null);
+    constructor(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null);
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.util.List'
      * @return original return type: 'org.dcm4che3.data.AttributeSelector'
      */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null): Promise<AttributeSelector>;
-    /**
-     * @param var0 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'org.dcm4che3.data.AttributeSelector'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number): Promise<AttributeSelector>;
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: string | null, var2: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<AttributeSelector>;
 }
 declare const AttributeSelector_base: typeof AttributeSelectorClass;
 /**

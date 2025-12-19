@@ -4,6 +4,7 @@ import { Long as java_lang_Long } from "./../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
 import { Boolean as java_lang_Boolean } from "./../../lang/Boolean";
 import { Pattern as java_util_regex_Pattern } from "./Pattern";
+import { Map as java_util_Map } from "./../Map";
 import { Function as java_util_function_Function, FunctionInterface as java_util_function_FunctionInterface } from "./../function/Function";
 import { MatchResult as java_util_regex_MatchResult } from "./MatchResult";
 import { Stream as java_util_stream_Stream } from "./../stream/Stream";
@@ -42,6 +43,16 @@ export declare class MatcherClass extends JavaClass {
     hasTransparentBoundsSync(): boolean;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -60,16 +71,6 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'java.util.regex.Matcher'
@@ -96,6 +97,14 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'java.util.regex.Pattern'
      */
     patternSync(): java_util_regex_Pattern | null;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    namedGroups(): Promise<java_util_Map | null>;
+    /**
+     * @return original return type: 'java.util.Map'
+     */
+    namedGroupsSync(): java_util_Map | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -125,16 +134,6 @@ export declare class MatcherClass extends JavaClass {
      */
     regionStartSync(): number;
     /**
-     * @param var0 original type: 'java.util.function.Function'
-     * @return original return type: 'java.lang.String'
-     */
-    replaceAll(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.util.function.Function'
-     * @return original return type: 'java.lang.String'
-     */
-    replaceAllSync(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null): string | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
@@ -144,6 +143,16 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     replaceAllSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.util.function.Function'
+     * @return original return type: 'java.lang.String'
+     */
+    replaceAll(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.util.function.Function'
+     * @return original return type: 'java.lang.String'
+     */
+    replaceAllSync(var0: java_util_function_Function | JavaInterfaceProxy<java_util_function_FunctionInterface> | null): string | null;
     /**
      * @return original return type: 'void'
      */
@@ -168,6 +177,14 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'java.util.regex.MatchResult'
      */
     toMatchResultSync(): java_util_regex_MatchResult | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasMatch(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasMatchSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -205,16 +222,6 @@ export declare class MatcherClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    end(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    endSync(var0: string | null): number;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -233,6 +240,16 @@ export declare class MatcherClass extends JavaClass {
      */
     endSync(): number;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    end(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    endSync(var0: string | null): number;
+    /**
      * @return original return type: 'java.util.stream.Stream'
      */
     results(): Promise<java_util_stream_Stream | null>;
@@ -240,16 +257,6 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'java.util.stream.Stream'
      */
     resultsSync(): java_util_stream_Stream | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    group(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    groupSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.String'
@@ -269,6 +276,16 @@ export declare class MatcherClass extends JavaClass {
      */
     groupSync(): string | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    group(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    groupSync(var0: string | null): string | null;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
@@ -279,14 +296,6 @@ export declare class MatcherClass extends JavaClass {
      */
     startSync(var0: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'int'
-     */
-    start(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    startSync(): number;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'int'
      */
@@ -296,6 +305,14 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'int'
      */
     startSync(var0: string | null): number;
+    /**
+     * @return original return type: 'int'
+     */
+    start(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    startSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -383,14 +400,6 @@ export declare class MatcherClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.util.regex.Matcher'
-     */
-    reset(): Promise<Matcher | null>;
-    /**
-     * @return original return type: 'java.util.regex.Matcher'
-     */
-    resetSync(): Matcher | null;
-    /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @return original return type: 'java.util.regex.Matcher'
      */
@@ -400,6 +409,14 @@ export declare class MatcherClass extends JavaClass {
      * @return original return type: 'java.util.regex.Matcher'
      */
     resetSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null): Matcher | null;
+    /**
+     * @return original return type: 'java.util.regex.Matcher'
+     */
+    reset(): Promise<Matcher | null>;
+    /**
+     * @return original return type: 'java.util.regex.Matcher'
+     */
+    resetSync(): Matcher | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'

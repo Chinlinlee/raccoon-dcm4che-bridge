@@ -32,6 +32,16 @@ export declare class MethodTypeClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,16 +60,6 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -85,16 +85,6 @@ export declare class MethodTypeClass extends JavaClass {
      */
     dropParameterTypesSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): MethodType | null;
     /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    changeReturnType(var0: java_lang_Class | null): Promise<MethodType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    changeReturnTypeSync(var0: java_lang_Class | null): MethodType | null;
-    /**
      * @param var0 original type: 'java.lang.invoke.TypeDescriptor$OfField'
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
      */
@@ -104,6 +94,16 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
      */
     changeReturnTypeSync(var0: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): java_lang_invoke_TypeDescriptor$OfMethod | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    changeReturnType(var0: java_lang_Class | null): Promise<MethodType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    changeReturnTypeSync(var0: java_lang_Class | null): MethodType | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.ClassLoader'
@@ -158,18 +158,6 @@ export declare class MethodTypeClass extends JavaClass {
     unwrapSync(): MethodType | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    changeParameterType(var0: java_lang_Integer | number, var1: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): Promise<java_lang_invoke_TypeDescriptor$OfMethod | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField'
-     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
-     */
-    changeParameterTypeSync(var0: java_lang_Integer | number, var1: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): java_lang_invoke_TypeDescriptor$OfMethod | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.Class'
      * @return original return type: 'java.lang.invoke.MethodType'
      */
@@ -181,6 +169,18 @@ export declare class MethodTypeClass extends JavaClass {
      */
     changeParameterTypeSync(var0: java_lang_Integer | number, var1: java_lang_Class | null): MethodType | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    changeParameterType(var0: java_lang_Integer | number, var1: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): Promise<java_lang_invoke_TypeDescriptor$OfMethod | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField'
+     * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
+     */
+    changeParameterTypeSync(var0: java_lang_Integer | number, var1: java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null): java_lang_invoke_TypeDescriptor$OfMethod | null;
+    /**
      * @return original return type: 'boolean'
      */
     hasWrappers(): Promise<boolean>;
@@ -188,30 +188,6 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasWrappersSync(): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'java.lang.Class[]'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static methodType(var0: java_lang_Class | null, var1: (java_lang_Class | null)[] | null): Promise<MethodType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'java.lang.Class[]'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static methodTypeSync(var0: java_lang_Class | null, var1: (java_lang_Class | null)[] | null): MethodType | null;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'java.lang.invoke.MethodType'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static methodType(var0: java_lang_Class | null, var1: MethodTypeClass | null): Promise<MethodType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'java.lang.invoke.MethodType'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static methodTypeSync(var0: java_lang_Class | null, var1: MethodTypeClass | null): MethodType | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.Class'
@@ -226,18 +202,6 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.MethodType'
      */
     static methodTypeSync(var0: java_lang_Class | null, var1: java_lang_Class | null, var2: (java_lang_Class | null)[] | null): MethodType | null;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'java.util.List'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static methodType(var0: java_lang_Class | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<MethodType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @param var1 original type: 'java.util.List'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static methodTypeSync(var0: java_lang_Class | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): MethodType | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.Class'
@@ -260,6 +224,42 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.MethodType'
      */
     static methodTypeSync(var0: java_lang_Class | null): MethodType | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'java.lang.Class[]'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static methodType(var0: java_lang_Class | null, var1: (java_lang_Class | null)[] | null): Promise<MethodType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'java.lang.Class[]'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static methodTypeSync(var0: java_lang_Class | null, var1: (java_lang_Class | null)[] | null): MethodType | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static methodType(var0: java_lang_Class | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): Promise<MethodType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'java.util.List'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static methodTypeSync(var0: java_lang_Class | null, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): MethodType | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'java.lang.invoke.MethodType'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static methodType(var0: java_lang_Class | null, var1: MethodTypeClass | null): Promise<MethodType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @param var1 original type: 'java.lang.invoke.MethodType'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static methodTypeSync(var0: java_lang_Class | null, var1: MethodTypeClass | null): MethodType | null;
     /**
      * @return original return type: 'java.lang.Class[]'
      */
@@ -362,18 +362,6 @@ export declare class MethodTypeClass extends JavaClass {
     insertParameterTypesSync(var0: java_lang_Integer | number, var1: java_util_List | JavaInterfaceProxy<java_util_ListInterface> | null): MethodType | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Class[]'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    insertParameterTypes(var0: java_lang_Integer | number, var1: (java_lang_Class | null)[] | null): Promise<MethodType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Class[]'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    insertParameterTypesSync(var0: java_lang_Integer | number, var1: (java_lang_Class | null)[] | null): MethodType | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.invoke.TypeDescriptor$OfField[]'
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
      */
@@ -384,6 +372,18 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.TypeDescriptor$OfMethod'
      */
     insertParameterTypesSync(var0: java_lang_Integer | number, var1: (java_lang_invoke_TypeDescriptor$OfField | JavaInterfaceProxy<java_lang_invoke_TypeDescriptor$OfFieldInterface> | null)[] | null): java_lang_invoke_TypeDescriptor$OfMethod | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.Class[]'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    insertParameterTypes(var0: java_lang_Integer | number, var1: (java_lang_Class | null)[] | null): Promise<MethodType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.Class[]'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    insertParameterTypesSync(var0: java_lang_Integer | number, var1: (java_lang_Class | null)[] | null): MethodType | null;
     /**
      * @return original return type: 'java.lang.invoke.MethodType'
      */
@@ -420,6 +420,16 @@ export declare class MethodTypeClass extends JavaClass {
     parameterListSync(): java_util_List | null;
     /**
      * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static genericMethodType(var0: java_lang_Integer | number): Promise<MethodType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.invoke.MethodType'
+     */
+    static genericMethodTypeSync(var0: java_lang_Integer | number): MethodType | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'boolean'
      * @return original return type: 'java.lang.invoke.MethodType'
      */
@@ -430,16 +440,6 @@ export declare class MethodTypeClass extends JavaClass {
      * @return original return type: 'java.lang.invoke.MethodType'
      */
     static genericMethodTypeSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): MethodType | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static genericMethodType(var0: java_lang_Integer | number): Promise<MethodType | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.invoke.MethodType'
-     */
-    static genericMethodTypeSync(var0: java_lang_Integer | number): MethodType | null;
     /**
      * @return original return type: 'java.lang.invoke.MethodType'
      */

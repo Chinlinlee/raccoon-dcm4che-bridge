@@ -12,6 +12,7 @@ import { Double as java_lang_Double } from "./../../../java/lang/Double";
 import { DatePrecisions as org_dcm4che3_data_DatePrecisions } from "./DatePrecisions";
 import { SpecificCharacterSet as org_dcm4che3_data_SpecificCharacterSet } from "./SpecificCharacterSet";
 import { Float as java_lang_Float } from "./../../../java/lang/Float";
+import { Temporal as java_time_temporal_Temporal } from "./../../../java/time/temporal/Temporal";
 import { StringBuilder as java_lang_StringBuilder } from "./../../../java/lang/StringBuilder";
 /**
  * This class just defines types, you should import {@link VR} instead of this.
@@ -41,6 +42,16 @@ export declare class VRClass extends JavaClass {
     toggleEndianSync(var0: Buffer | null, var1: java_lang_Boolean | boolean): Buffer | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -59,16 +70,6 @@ export declare class VRClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -192,14 +193,6 @@ export declare class VRClass extends JavaClass {
      */
     getDeclaringClassSync(): java_lang_Class | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isStringType(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isStringTypeSync(): boolean;
-    /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'boolean'
      * @return original return type: 'double[]'
@@ -211,6 +204,14 @@ export declare class VRClass extends JavaClass {
      * @return original return type: 'double[]'
      */
     toDoublesSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean): (number)[] | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isStringType(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isStringTypeSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'boolean'
@@ -263,22 +264,6 @@ export declare class VRClass extends JavaClass {
     isIntTypeSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'int'
-     */
-    toInt(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'int'
-     */
-    toIntSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.util.TimeZone'
      * @param var2 original type: 'boolean'
      * @param var3 original type: 'org.dcm4che3.data.DatePrecisions'
@@ -293,6 +278,22 @@ export declare class VRClass extends JavaClass {
      * @return original return type: 'java.util.Date[]'
      */
     toDatesSync(var0: BasicOrJavaType | null, var1: java_util_TimeZone | null, var2: java_lang_Boolean | boolean, var3: org_dcm4che3_data_DatePrecisions | null): (java_util_Date | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'int'
+     */
+    toInt(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'int'
+     */
+    toIntSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: java_lang_Integer | number, var3: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'boolean'
@@ -423,6 +424,20 @@ export declare class VRClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     toStringsSync(var0: BasicOrJavaType | null, var1: java_lang_Boolean | boolean, var2: org_dcm4che3_data_SpecificCharacterSet | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    toTemporal(var0: BasicOrJavaType | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecision | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'org.dcm4che3.data.DatePrecision'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    toTemporalSync(var0: BasicOrJavaType | null, var1: java_lang_Integer | number, var2: org_dcm4che3_data_DatePrecision | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'

@@ -218,6 +218,16 @@ export declare class SocketClass extends JavaClass {
     getOOBInlineSync(): boolean;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -236,16 +246,6 @@ export declare class SocketClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -322,6 +322,16 @@ export declare class SocketClass extends JavaClass {
     closeSync(): void;
     /**
      * @param var0 original type: 'java.net.SocketAddress'
+     * @return original return type: 'void'
+     */
+    connect(var0: java_net_SocketAddress | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.net.SocketAddress'
+     * @return original return type: 'void'
+     */
+    connectSync(var0: java_net_SocketAddress | null): void;
+    /**
+     * @param var0 original type: 'java.net.SocketAddress'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -332,16 +342,6 @@ export declare class SocketClass extends JavaClass {
      * @return original return type: 'void'
      */
     connectSync(var0: java_net_SocketAddress | null, var1: java_lang_Integer | number): void;
-    /**
-     * @param var0 original type: 'java.net.SocketAddress'
-     * @return original return type: 'void'
-     */
-    connect(var0: java_net_SocketAddress | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.net.SocketAddress'
-     * @return original return type: 'void'
-     */
-    connectSync(var0: java_net_SocketAddress | null): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -486,11 +486,19 @@ export declare class SocketClass extends JavaClass {
      * @return original return type: 'java.io.OutputStream'
      */
     getOutputStreamSync(): java_io_OutputStream | null;
-    constructor();
     /**
+     * @param var0 original type: 'java.net.InetAddress'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     */
+    constructor(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean);
+    /**
+     * @param var0 original type: 'java.net.InetAddress'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
      * @return original return type: 'java.net.Socket'
      */
-    static newInstanceAsync(): Promise<Socket>;
+    static newInstanceAsync(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<Socket>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -502,17 +510,6 @@ export declare class SocketClass extends JavaClass {
      * @return original return type: 'java.net.Socket'
      */
     static newInstanceAsync(var0: string | null, var1: java_lang_Integer | number): Promise<Socket>;
-    /**
-     * @param var0 original type: 'java.net.InetAddress'
-     * @param var1 original type: 'int'
-     */
-    constructor(var0: java_net_InetAddress | null, var1: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'java.net.InetAddress'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.net.Socket'
-     */
-    static newInstanceAsync(var0: java_net_InetAddress | null, var1: java_lang_Integer | number): Promise<Socket>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -531,16 +528,18 @@ export declare class SocketClass extends JavaClass {
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
+     * @param var2 original type: 'java.net.InetAddress'
+     * @param var3 original type: 'int'
      */
-    constructor(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean);
+    constructor(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_net_InetAddress | null, var3: java_lang_Integer | number);
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
+     * @param var2 original type: 'java.net.InetAddress'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.net.Socket'
      */
-    static newInstanceAsync(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<Socket>;
+    static newInstanceAsync(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_net_InetAddress | null, var3: java_lang_Integer | number): Promise<Socket>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -557,18 +556,19 @@ export declare class SocketClass extends JavaClass {
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'java.net.InetAddress'
-     * @param var3 original type: 'int'
      */
-    constructor(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_net_InetAddress | null, var3: java_lang_Integer | number);
+    constructor(var0: java_net_InetAddress | null, var1: java_lang_Integer | number);
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'java.net.InetAddress'
-     * @param var3 original type: 'int'
      * @return original return type: 'java.net.Socket'
      */
-    static newInstanceAsync(var0: java_net_InetAddress | null, var1: java_lang_Integer | number, var2: java_net_InetAddress | null, var3: java_lang_Integer | number): Promise<Socket>;
+    static newInstanceAsync(var0: java_net_InetAddress | null, var1: java_lang_Integer | number): Promise<Socket>;
+    constructor();
+    /**
+     * @return original return type: 'java.net.Socket'
+     */
+    static newInstanceAsync(): Promise<Socket>;
     /**
      * @param var0 original type: 'java.net.Proxy'
      */

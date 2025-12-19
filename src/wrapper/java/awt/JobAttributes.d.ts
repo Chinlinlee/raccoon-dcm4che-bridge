@@ -2,8 +2,8 @@ import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
-import { JobAttributes$DestinationType as java_awt_JobAttributes$DestinationType } from "./JobAttributes$DestinationType";
 import { JobAttributes$DefaultSelectionType as java_awt_JobAttributes$DefaultSelectionType } from "./JobAttributes$DefaultSelectionType";
+import { JobAttributes$DestinationType as java_awt_JobAttributes$DestinationType } from "./JobAttributes$DestinationType";
 import { JobAttributes$MultipleDocumentHandlingType as java_awt_JobAttributes$MultipleDocumentHandlingType } from "./JobAttributes$MultipleDocumentHandlingType";
 import { JobAttributes$SidesType as java_awt_JobAttributes$SidesType } from "./JobAttributes$SidesType";
 import { JobAttributes$DialogType as java_awt_JobAttributes$DialogType } from "./JobAttributes$DialogType";
@@ -31,6 +31,16 @@ export declare class JobAttributesClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,15 +60,13 @@ export declare class JobAttributesClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'java.awt.JobAttributes$DefaultSelectionType'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    getDefaultSelection(): Promise<java_awt_JobAttributes$DefaultSelectionType | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @return original return type: 'java.awt.JobAttributes$DefaultSelectionType'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    getDefaultSelectionSync(): java_awt_JobAttributes$DefaultSelectionType | null;
     /**
      * @return original return type: 'java.awt.JobAttributes$DestinationType'
      */
@@ -67,14 +75,6 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'java.awt.JobAttributes$DestinationType'
      */
     getDestinationSync(): java_awt_JobAttributes$DestinationType | null;
-    /**
-     * @return original return type: 'java.awt.JobAttributes$DefaultSelectionType'
-     */
-    getDefaultSelection(): Promise<java_awt_JobAttributes$DefaultSelectionType | null>;
-    /**
-     * @return original return type: 'java.awt.JobAttributes$DefaultSelectionType'
-     */
-    getDefaultSelectionSync(): java_awt_JobAttributes$DefaultSelectionType | null;
     /**
      * @return original return type: 'int'
      */
@@ -210,14 +210,6 @@ export declare class JobAttributesClass extends JavaClass {
      */
     setCopiesSync(var0: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFileName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFileNameSync(): string | null;
-    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -237,6 +229,14 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'void'
      */
     setPageRangesSync(var0: ((java_lang_Integer | number)[] | null)[] | null): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFileName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFileNameSync(): string | null;
     /**
      * @return original return type: 'int'
      */
@@ -361,11 +361,6 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'int'
      */
     getMinPageSync(): number;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.JobAttributes'
-     */
-    static newInstanceAsync(): Promise<JobAttributes>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.awt.JobAttributes$DefaultSelectionType'
@@ -404,6 +399,11 @@ export declare class JobAttributesClass extends JavaClass {
      * @return original return type: 'java.awt.JobAttributes'
      */
     static newInstanceAsync(var0: JobAttributesClass | null): Promise<JobAttributes>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.JobAttributes'
+     */
+    static newInstanceAsync(): Promise<JobAttributes>;
 }
 declare const JobAttributes_base: typeof JobAttributesClass;
 /**

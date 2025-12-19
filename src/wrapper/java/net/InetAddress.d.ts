@@ -19,6 +19,16 @@ export declare class InetAddressClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -37,16 +47,6 @@ export declare class InetAddressClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -154,15 +154,13 @@ export declare class InetAddressClass extends JavaClass {
      */
     isMCNodeLocalSync(): boolean;
     /**
-     * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    isReachable(var0: java_lang_Integer | number): Promise<boolean>;
+    isMCSiteLocal(): Promise<boolean>;
     /**
-     * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    isReachableSync(var0: java_lang_Integer | number): boolean;
+    isMCSiteLocalSync(): boolean;
     /**
      * @param var0 original type: 'java.net.NetworkInterface'
      * @param var1 original type: 'int'
@@ -178,13 +176,15 @@ export declare class InetAddressClass extends JavaClass {
      */
     isReachableSync(var0: java_net_NetworkInterface | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): boolean;
     /**
+     * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    isMCSiteLocal(): Promise<boolean>;
+    isReachable(var0: java_lang_Integer | number): Promise<boolean>;
     /**
+     * @param var0 original type: 'int'
      * @return original return type: 'boolean'
      */
-    isMCSiteLocalSync(): boolean;
+    isReachableSync(var0: java_lang_Integer | number): boolean;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -193,6 +193,14 @@ export declare class InetAddressClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getHostNameSync(): string | null;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMCGlobal(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMCGlobalSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.net.InetAddress[]'
@@ -203,14 +211,6 @@ export declare class InetAddressClass extends JavaClass {
      * @return original return type: 'java.net.InetAddress[]'
      */
     static getAllByNameSync(var0: string | null): (InetAddress | null)[] | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMCGlobal(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMCGlobalSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */

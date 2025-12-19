@@ -26,6 +26,16 @@ export declare class HashSetClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -44,16 +54,6 @@ export declare class HashSetClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -224,6 +224,16 @@ export declare class HashSetClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.HashSet'
+     */
+    static newHashSet(var0: java_lang_Integer | number): Promise<HashSet | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.HashSet'
+     */
+    static newHashSetSync(var0: java_lang_Integer | number): HashSet | null;
     /**
      * @return original return type: 'int'
      */

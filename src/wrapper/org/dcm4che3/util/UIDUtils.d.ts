@@ -43,6 +43,16 @@ export declare class UIDUtilsClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -61,16 +71,6 @@ export declare class UIDUtilsClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.util.Map'
@@ -205,6 +205,16 @@ export declare class UIDUtilsClass extends JavaClass {
     static getRootSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createUIDIfNull(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    static createUIDIfNullSync(var0: string | null): string | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
@@ -216,15 +226,13 @@ export declare class UIDUtilsClass extends JavaClass {
      */
     static createUIDIfNullSync(var0: string | null, var1: string | null): string | null;
     /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
-    static createUIDIfNull(var0: string | null): Promise<string | null>;
+    static createUID(): Promise<string | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
-    static createUIDIfNullSync(var0: string | null): string | null;
+    static createUIDSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
@@ -235,14 +243,6 @@ export declare class UIDUtilsClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     static createUIDSync(var0: string | null): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    static createUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    static createUIDSync(): string | null;
     constructor();
     /**
      * @return original return type: 'org.dcm4che3.util.UIDUtils'

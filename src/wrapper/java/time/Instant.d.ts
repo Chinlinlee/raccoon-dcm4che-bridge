@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { Long as java_lang_Long } from "./../lang/Long";
-import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./temporal/TemporalAmount";
 import { Temporal as java_time_temporal_Temporal, TemporalInterface as java_time_temporal_TemporalInterface } from "./temporal/Temporal";
+import { TemporalAmount as java_time_temporal_TemporalAmount, TemporalAmountInterface as java_time_temporal_TemporalAmountInterface } from "./temporal/TemporalAmount";
 import { TemporalUnit as java_time_temporal_TemporalUnit, TemporalUnitInterface as java_time_temporal_TemporalUnitInterface } from "./temporal/TemporalUnit";
 import { Class as java_lang_Class } from "./../lang/Class";
 import { Integer as java_lang_Integer } from "./../lang/Integer";
@@ -24,6 +24,16 @@ import { TemporalAdjuster as java_time_temporal_TemporalAdjuster, TemporalAdjust
 export declare class InstantClass extends JavaClass {
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'java.time.Instant'
+     */
+    static ofEpochSecond(var0: java_lang_Long | bigint | number): Promise<Instant | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.Instant'
+     */
+    static ofEpochSecondSync(var0: java_lang_Long | bigint | number): Instant | null;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'long'
      * @return original return type: 'java.time.Instant'
      */
@@ -35,26 +45,6 @@ export declare class InstantClass extends JavaClass {
      */
     static ofEpochSecondSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number): Instant | null;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.Instant'
-     */
-    static ofEpochSecond(var0: java_lang_Long | bigint | number): Promise<Instant | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.Instant'
-     */
-    static ofEpochSecondSync(var0: java_lang_Long | bigint | number): Instant | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.Instant'
-     */
-    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<Instant | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.Instant'
-     */
-    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Instant | null;
-    /**
      * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.temporal.Temporal'
      */
@@ -65,17 +55,15 @@ export declare class InstantClass extends JavaClass {
      */
     minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.Instant'
      */
-    minus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<Instant | null>;
+    minus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<Instant | null>;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
      * @return original return type: 'java.time.Instant'
      */
-    minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Instant | null;
+    minusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Instant | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
@@ -89,6 +77,18 @@ export declare class InstantClass extends JavaClass {
      */
     minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
     /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.Instant'
+     */
+    minus(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Promise<Instant | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'java.time.temporal.TemporalUnit'
+     * @return original return type: 'java.time.Instant'
+     */
+    minusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): Instant | null;
+    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -96,6 +96,16 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -117,16 +127,6 @@ export declare class InstantClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -134,16 +134,6 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.Instant'
-     */
-    static ofEpochMilli(var0: java_lang_Long | bigint | number): Promise<Instant | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.time.Instant'
-     */
-    static ofEpochMilliSync(var0: java_lang_Long | bigint | number): Instant | null;
     /**
      * @param var0 original type: 'java.time.temporal.Temporal'
      * @return original return type: 'java.time.temporal.Temporal'
@@ -154,6 +144,16 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'java.time.temporal.Temporal'
      */
     adjustIntoSync(var0: java_time_temporal_Temporal | JavaInterfaceProxy<java_time_temporal_TemporalInterface> | null): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.Instant'
+     */
+    static ofEpochMilli(var0: java_lang_Long | bigint | number): Promise<Instant | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.time.Instant'
+     */
+    static ofEpochMilliSync(var0: java_lang_Long | bigint | number): Instant | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @return original return type: 'java.time.temporal.ValueRange'
@@ -325,16 +325,6 @@ export declare class InstantClass extends JavaClass {
      */
     toEpochMilliSync(): number;
     /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalField'
-     * @return original return type: 'boolean'
-     */
-    isSupportedSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
-    /**
      * @param var0 original type: 'java.time.temporal.TemporalUnit'
      * @return original return type: 'boolean'
      */
@@ -344,6 +334,16 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isSupportedSync(var0: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): boolean;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'boolean'
+     */
+    isSupported(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalField'
+     * @return original return type: 'boolean'
+     */
+    isSupportedSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.lang.CharSequence'
      * @return original return type: 'java.time.Instant'
@@ -364,26 +364,6 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'java.time.ZonedDateTime'
      */
     atZoneSync(var0: java_time_ZoneId | null): java_time_ZonedDateTime | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    plus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.Instant'
-     */
-    plus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<Instant | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAmount'
-     * @return original return type: 'java.time.Instant'
-     */
-    plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Instant | null;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'java.time.temporal.TemporalUnit'
@@ -409,6 +389,26 @@ export declare class InstantClass extends JavaClass {
      */
     plusSync(var0: java_lang_Long | bigint | number, var1: java_time_temporal_TemporalUnit | JavaInterfaceProxy<java_time_temporal_TemporalUnitInterface> | null): java_time_temporal_Temporal | null;
     /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.Instant'
+     */
+    plus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<Instant | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.Instant'
+     */
+    plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Instant | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    plus(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAmount'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    plusSync(var0: java_time_temporal_TemporalAmount | JavaInterfaceProxy<java_time_temporal_TemporalAmountInterface> | null): java_time_temporal_Temporal | null;
+    /**
      * @param var0 original type: 'java.time.Instant'
      * @return original return type: 'boolean'
      */
@@ -428,26 +428,6 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'long'
      */
     getLongSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null): number;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.Instant'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<Instant | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.Instant'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Instant | null;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
-    /**
-     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
-     * @return original return type: 'java.time.temporal.Temporal'
-     */
-    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'java.time.temporal.TemporalField'
      * @param var1 original type: 'long'
@@ -472,6 +452,26 @@ export declare class InstantClass extends JavaClass {
      * @return original return type: 'java.time.temporal.Temporal'
      */
     withSync(var0: java_time_temporal_TemporalField | JavaInterfaceProxy<java_time_temporal_TemporalFieldInterface> | null, var1: java_lang_Long | bigint | number): java_time_temporal_Temporal | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.Instant'
+     */
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<Instant | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.Instant'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Instant | null;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    with(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): Promise<java_time_temporal_Temporal | null>;
+    /**
+     * @param var0 original type: 'java.time.temporal.TemporalAdjuster'
+     * @return original return type: 'java.time.temporal.Temporal'
+     */
+    withSync(var0: java_time_temporal_TemporalAdjuster | JavaInterfaceProxy<java_time_temporal_TemporalAdjusterInterface> | null): java_time_temporal_Temporal | null;
     /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.time.Instant'

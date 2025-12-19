@@ -20,6 +20,16 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.net.WebApplication$ServiceClass'
@@ -167,6 +167,10 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
+    static readonly DOCUMENTATION: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
     static readonly J4C_ROUTER: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
@@ -176,6 +180,42 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
     static readonly UPS_MATCHING: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly STOW_RS: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly FHIR: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly DCM4CHEE_ARC: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly UPS_RS: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly QIDO_RS: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly XDS_RS: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly GRAFANA: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly DCM4CHEE_ARC_AET_DIFF: WebApplication$ServiceClassClass | null;
+    /**
+     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
+     */
+    static readonly QIDO_COUNT: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
@@ -191,19 +231,11 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
-    static readonly STOW_RS: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
-    static readonly FHIR: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
     static readonly MWL_RS: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
-    static readonly DCM4CHEE_ARC: WebApplication$ServiceClassClass | null;
+    static readonly AI_CHAT: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
@@ -212,14 +244,6 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
     static readonly PROMETHEUS: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
-    static readonly UPS_RS: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
-    static readonly QIDO_RS: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
@@ -235,27 +259,11 @@ export declare class WebApplication$ServiceClassClass extends JavaClass {
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
-    static readonly XDS_RS: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
     static readonly AGFA_BLOB: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */
-    static readonly GRAFANA: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
     static readonly ELASTICSEARCH: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
-    static readonly DCM4CHEE_ARC_AET_DIFF: WebApplication$ServiceClassClass | null;
-    /**
-     * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
-     */
-    static readonly QIDO_COUNT: WebApplication$ServiceClassClass | null;
     /**
      * Original type: 'org.dcm4che3.net.WebApplication$ServiceClass'
      */

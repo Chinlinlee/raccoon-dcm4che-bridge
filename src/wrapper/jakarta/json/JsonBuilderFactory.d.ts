@@ -48,6 +48,14 @@ export declare class JsonBuilderFactoryClass extends JavaClass {
      */
     getConfigInUseSync(): java_util_Map | null;
     /**
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     */
+    createObjectBuilder(): Promise<jakarta_json_JsonObjectBuilder | null>;
+    /**
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     */
+    createObjectBuilderSync(): jakarta_json_JsonObjectBuilder | null;
+    /**
      * @param var0 original type: 'java.util.Map'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
@@ -67,14 +75,6 @@ export declare class JsonBuilderFactoryClass extends JavaClass {
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
     createObjectBuilderSync(var0: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null): jakarta_json_JsonObjectBuilder | null;
-    /**
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
-     */
-    createObjectBuilder(): Promise<jakarta_json_JsonObjectBuilder | null>;
-    /**
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
-     */
-    createObjectBuilderSync(): jakarta_json_JsonObjectBuilder | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -109,6 +109,12 @@ export interface JsonBuilderFactoryInterface {
      */
     getConfigInUse(): java_util_Map | null;
     /**
+     * **Note: Although this method is marked as optional, it actually must be implemented.**
+     *
+     * @return original return type: 'jakarta.json.JsonObjectBuilder'
+     */
+    createObjectBuilder?(): jakarta_json_JsonObjectBuilder | null;
+    /**
      * @param var0 original type: 'java.util.Map'
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
@@ -118,12 +124,6 @@ export interface JsonBuilderFactoryInterface {
      * @return original return type: 'jakarta.json.JsonObjectBuilder'
      */
     createObjectBuilder?(var0: jakarta_json_JsonObject | JavaInterfaceProxy<jakarta_json_JsonObjectInterface> | null): jakarta_json_JsonObjectBuilder | null;
-    /**
-     * **Note: Although this method is marked as optional, it actually must be implemented.**
-     *
-     * @return original return type: 'jakarta.json.JsonObjectBuilder'
-     */
-    createObjectBuilder?(): jakarta_json_JsonObjectBuilder | null;
 }
 /**
  * Create a proxy for the {@link JsonBuilderFactory} interface.

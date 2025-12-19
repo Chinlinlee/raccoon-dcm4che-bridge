@@ -16,14 +16,6 @@ import { AbstractSelector as java_nio_channels_spi_AbstractSelector } from "./Ab
  */
 export declare class SelectorProviderClass extends JavaClass {
     /**
-     * @return original return type: 'java.nio.channels.SocketChannel'
-     */
-    openSocketChannel(): Promise<java_nio_channels_SocketChannel | null>;
-    /**
-     * @return original return type: 'java.nio.channels.SocketChannel'
-     */
-    openSocketChannelSync(): java_nio_channels_SocketChannel | null;
-    /**
      * @param var0 original type: 'java.net.ProtocolFamily'
      * @return original return type: 'java.nio.channels.SocketChannel'
      */
@@ -34,6 +26,14 @@ export declare class SelectorProviderClass extends JavaClass {
      */
     openSocketChannelSync(var0: java_net_ProtocolFamily | JavaInterfaceProxy<java_net_ProtocolFamilyInterface> | null): java_nio_channels_SocketChannel | null;
     /**
+     * @return original return type: 'java.nio.channels.SocketChannel'
+     */
+    openSocketChannel(): Promise<java_nio_channels_SocketChannel | null>;
+    /**
+     * @return original return type: 'java.nio.channels.SocketChannel'
+     */
+    openSocketChannelSync(): java_nio_channels_SocketChannel | null;
+    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -41,6 +41,16 @@ export declare class SelectorProviderClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -62,16 +72,6 @@ export declare class SelectorProviderClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'void'
      */
     notifyAll(): Promise<void>;
@@ -79,6 +79,14 @@ export declare class SelectorProviderClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @return original return type: 'java.nio.channels.DatagramChannel'
+     */
+    openDatagramChannel(): Promise<java_nio_channels_DatagramChannel | null>;
+    /**
+     * @return original return type: 'java.nio.channels.DatagramChannel'
+     */
+    openDatagramChannelSync(): java_nio_channels_DatagramChannel | null;
     /**
      * @param var0 original type: 'java.net.ProtocolFamily'
      * @return original return type: 'java.nio.channels.DatagramChannel'
@@ -89,14 +97,6 @@ export declare class SelectorProviderClass extends JavaClass {
      * @return original return type: 'java.nio.channels.DatagramChannel'
      */
     openDatagramChannelSync(var0: java_net_ProtocolFamily | JavaInterfaceProxy<java_net_ProtocolFamilyInterface> | null): java_nio_channels_DatagramChannel | null;
-    /**
-     * @return original return type: 'java.nio.channels.DatagramChannel'
-     */
-    openDatagramChannel(): Promise<java_nio_channels_DatagramChannel | null>;
-    /**
-     * @return original return type: 'java.nio.channels.DatagramChannel'
-     */
-    openDatagramChannelSync(): java_nio_channels_DatagramChannel | null;
     /**
      * @return original return type: 'void'
      */

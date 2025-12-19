@@ -5,10 +5,10 @@ import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { List as java_util_List } from "./../../../java/util/List";
 import { Path as java_nio_file_Path, PathInterface as java_nio_file_PathInterface } from "./../../../java/nio/file/Path";
 import { ImageTranscodeParam as org_dcm4che3_img_ImageTranscodeParam } from "./ImageTranscodeParam";
-import { OutputStream as java_io_OutputStream } from "./../../../java/io/OutputStream";
-import { DicomTranscodeParam as org_dcm4che3_img_DicomTranscodeParam } from "./DicomTranscodeParam";
 import { Editable as org_dcm4che3_img_util_Editable } from "./util/Editable";
 import { MaskArea as org_dcm4che3_img_op_MaskArea } from "./op/MaskArea";
+import { DicomTranscodeParam as org_dcm4che3_img_DicomTranscodeParam } from "./DicomTranscodeParam";
+import { OutputStream as java_io_OutputStream } from "./../../../java/io/OutputStream";
 import { DicomImageReaderSpi as org_dcm4che3_img_DicomImageReaderSpi } from "./DicomImageReaderSpi";
 /**
  * This class just defines types, you should import {@link Transcoder} instead of this.
@@ -24,6 +24,16 @@ export declare class TranscoderClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -44,16 +54,6 @@ export declare class TranscoderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.nio.file.Path'
      * @param var1 original type: 'java.nio.file.Path'
@@ -95,19 +95,15 @@ export declare class TranscoderClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.io.OutputStream'
-     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.img.op.MaskArea'
+     * @return original return type: 'org.dcm4che3.img.util.Editable'
      */
-    static dcm2dcm(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_io_OutputStream | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): Promise<void>;
+    static getMaskedImage(var0: org_dcm4che3_img_op_MaskArea | null): Promise<org_dcm4che3_img_util_Editable | null>;
     /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @param var1 original type: 'java.io.OutputStream'
-     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
-     * @return original return type: 'void'
+     * @param var0 original type: 'org.dcm4che3.img.op.MaskArea'
+     * @return original return type: 'org.dcm4che3.img.util.Editable'
      */
-    static dcm2dcmSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_io_OutputStream | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): void;
+    static getMaskedImageSync(var0: org_dcm4che3_img_op_MaskArea | null): org_dcm4che3_img_util_Editable | null;
     /**
      * @param var0 original type: 'java.nio.file.Path'
      * @param var1 original type: 'java.nio.file.Path'
@@ -123,15 +119,19 @@ export declare class TranscoderClass extends JavaClass {
      */
     static dcm2dcmSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): java_nio_file_Path | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.img.op.MaskArea'
-     * @return original return type: 'org.dcm4che3.img.util.Editable'
+     * @param var0 original type: 'java.nio.file.Path'
+     * @param var1 original type: 'java.io.OutputStream'
+     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
+     * @return original return type: 'void'
      */
-    static getMaskedImage(var0: org_dcm4che3_img_op_MaskArea | null): Promise<org_dcm4che3_img_util_Editable | null>;
+    static dcm2dcm(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_io_OutputStream | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): Promise<void>;
     /**
-     * @param var0 original type: 'org.dcm4che3.img.op.MaskArea'
-     * @return original return type: 'org.dcm4che3.img.util.Editable'
+     * @param var0 original type: 'java.nio.file.Path'
+     * @param var1 original type: 'java.io.OutputStream'
+     * @param var2 original type: 'org.dcm4che3.img.DicomTranscodeParam'
+     * @return original return type: 'void'
      */
-    static getMaskedImageSync(var0: org_dcm4che3_img_op_MaskArea | null): org_dcm4che3_img_util_Editable | null;
+    static dcm2dcmSync(var0: java_nio_file_Path | JavaInterfaceProxy<java_nio_file_PathInterface> | null, var1: java_io_OutputStream | null, var2: org_dcm4che3_img_DicomTranscodeParam | null): void;
     /**
      * @return original return type: 'void'
      */

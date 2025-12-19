@@ -123,14 +123,6 @@ export declare class AttrClass extends JavaClass {
      */
     isIdSync(): boolean;
     /**
-     * @return original return type: 'boolean'
-     */
-    hasAttributes(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    hasAttributesSync(): boolean;
-    /**
      * @return original return type: 'void'
      */
     normalize(): Promise<void>;
@@ -138,6 +130,14 @@ export declare class AttrClass extends JavaClass {
      * @return original return type: 'void'
      */
     normalizeSync(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasAttributes(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasAttributesSync(): boolean;
     /**
      * @return original return type: 'short'
      */
@@ -191,13 +191,13 @@ export declare class AttrClass extends JavaClass {
      */
     getPreviousSiblingSync(): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): Promise<string | null>;
+    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefixSync(): string | null;
+    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -211,13 +211,13 @@ export declare class AttrClass extends JavaClass {
      */
     replaceChildSync(var0: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null, var1: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): Promise<org_w3c_dom_NamedNodeMap | null>;
+    getPrefix(): Promise<string | null>;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributesSync(): org_w3c_dom_NamedNodeMap | null;
+    getPrefixSync(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -247,6 +247,18 @@ export declare class AttrClass extends JavaClass {
      */
     getParentNodeSync(): org_w3c_dom_Node | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isSupported(var0: string | null, var1: string | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isSupportedSync(var0: string | null, var1: string | null): boolean;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getNodeName(): Promise<string | null>;
@@ -262,18 +274,6 @@ export declare class AttrClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getTextContentSync(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: string | null, var1: string | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isSupportedSync(var0: string | null, var1: string | null): boolean;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */
@@ -556,13 +556,13 @@ export interface AttrInterface {
      */
     isId(): boolean;
     /**
-     * @return original return type: 'boolean'
-     */
-    hasAttributes(): boolean;
-    /**
      * @return original return type: 'void'
      */
     normalize(): void;
+    /**
+     * @return original return type: 'boolean'
+     */
+    hasAttributes(): boolean;
     /**
      * @return original return type: 'short'
      */
@@ -590,9 +590,9 @@ export interface AttrInterface {
      */
     getPreviousSibling(): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @return original return type: 'org.w3c.dom.NamedNodeMap'
      */
-    getPrefix(): string | null;
+    getAttributes(): org_w3c_dom_NamedNodeMap | null;
     /**
      * @param var0 original type: 'org.w3c.dom.Node'
      * @param var1 original type: 'org.w3c.dom.Node'
@@ -600,9 +600,9 @@ export interface AttrInterface {
      */
     replaceChild(var0: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null, var1: org_w3c_dom_Node | JavaInterfaceProxy<org_w3c_dom_NodeInterface> | null): org_w3c_dom_Node | null;
     /**
-     * @return original return type: 'org.w3c.dom.NamedNodeMap'
+     * @return original return type: 'java.lang.String'
      */
-    getAttributes(): org_w3c_dom_NamedNodeMap | null;
+    getPrefix(): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -618,6 +618,12 @@ export interface AttrInterface {
      */
     getParentNode(): org_w3c_dom_Node | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    isSupported(var0: string | null, var1: string | null): boolean;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getNodeName(): string | null;
@@ -625,12 +631,6 @@ export interface AttrInterface {
      * @return original return type: 'java.lang.String'
      */
     getTextContent(): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    isSupported(var0: string | null, var1: string | null): boolean;
     /**
      * @return original return type: 'org.w3c.dom.Node'
      */

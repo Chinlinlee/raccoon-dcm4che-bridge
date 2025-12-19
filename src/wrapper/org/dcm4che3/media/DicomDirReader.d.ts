@@ -3,8 +3,8 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../data/Attributes";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { RecordFactory as org_dcm4che3_media_RecordFactory } from "./RecordFactory";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { File as java_io_File } from "./../../../java/io/File";
 /**
  * This class just defines types, you should import {@link DicomDirReader} instead of this.
@@ -20,6 +20,16 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -41,16 +51,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'java.lang.String'
      */
     getDescriptorFileCharacterSet(): Promise<string | null>;
@@ -66,20 +66,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findLowerInstanceRecord(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findLowerInstanceRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'org.dcm4che3.data.Attributes'
@@ -98,6 +84,20 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     findLowerInstanceRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_media_RecordFactory | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findLowerInstanceRecord(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findLowerInstanceRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'boolean'
@@ -125,14 +125,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     getFileSync(): java_io_File | null;
     /**
-     * @return original return type: 'int'
-     */
-    getFileSetConsistencyFlag(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getFileSetConsistencyFlagSync(): number;
-    /**
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     readFirstRootDirectoryRecord(): Promise<org_dcm4che3_data_Attributes | null>;
@@ -140,6 +132,14 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     readFirstRootDirectoryRecordSync(): org_dcm4che3_data_Attributes | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getFileSetConsistencyFlag(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getFileSetConsistencyFlagSync(): number;
     /**
      * @return original return type: 'void'
      */
@@ -209,6 +209,32 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     findNextStudyRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_media_RecordFactory | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
     /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findPatientRecord(var0: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findPatientRecordSync(var0: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.media.RecordFactory'
+     * @param var2 original type: 'boolean'
+     * @param var3 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findPatientRecord(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_media_RecordFactory | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.media.RecordFactory'
+     * @param var2 original type: 'boolean'
+     * @param var3 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findPatientRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_media_RecordFactory | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'java.lang.String[]'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -239,32 +265,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     findNextSeriesRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_media_RecordFactory | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.media.RecordFactory'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findPatientRecord(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_media_RecordFactory | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'org.dcm4che3.media.RecordFactory'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findPatientRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_media_RecordFactory | null, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findPatientRecord(var0: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findPatientRecordSync(var0: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
-    /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'java.lang.String[]'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -294,6 +294,14 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static inUseSync(var0: org_dcm4che3_data_Attributes | null): boolean;
+    /**
+     * @return original return type: 'java.io.File'
+     */
+    getDescriptorFile(): Promise<java_io_File | null>;
+    /**
+     * @return original return type: 'java.io.File'
+     */
+    getDescriptorFileSync(): java_io_File | null;
     /**
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
@@ -334,14 +342,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     findNextInstanceRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
-    /**
-     * @return original return type: 'java.io.File'
-     */
-    getDescriptorFile(): Promise<java_io_File | null>;
-    /**
-     * @return original return type: 'java.io.File'
-     */
-    getDescriptorFileSync(): java_io_File | null;
     /**
      * @param var0 original type: 'boolean'
      * @param var1 original type: 'org.dcm4che3.data.Attributes'
@@ -429,6 +429,14 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     getFileSetInformationSync(): org_dcm4che3_data_Attributes | null;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFileSetID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFileSetIDSync(): string | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'boolean'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -440,32 +448,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     findNextDirectoryRecordInUseSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFileSetID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFileSetIDSync(): string | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'boolean'
-     * @param var4 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findNextDirectoryRecord(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: org_dcm4che3_data_Attributes | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'boolean'
-     * @param var2 original type: 'org.dcm4che3.data.Attributes'
-     * @param var3 original type: 'boolean'
-     * @param var4 original type: 'boolean'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findNextDirectoryRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: org_dcm4che3_data_Attributes | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
     /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'org.dcm4che3.data.Attributes'
@@ -496,6 +478,24 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     findNextPatientRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'boolean'
+     * @param var4 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findNextDirectoryRecord(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: org_dcm4che3_data_Attributes | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'boolean'
+     * @param var2 original type: 'org.dcm4che3.data.Attributes'
+     * @param var3 original type: 'boolean'
+     * @param var4 original type: 'boolean'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findNextDirectoryRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: java_lang_Boolean | boolean, var2: org_dcm4che3_data_Attributes | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -533,14 +533,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     findFirstRootDirectoryRecordInUseSync(var0: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
     /**
-     * @return original return type: 'int'
-     */
-    getOffsetOfLastRootDirectoryRecord(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getOffsetOfLastRootDirectoryRecordSync(): number;
-    /**
      * @return original return type: 'java.lang.String'
      */
     getFileSetUID(): Promise<string | null>;
@@ -548,6 +540,14 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getFileSetUIDSync(): string | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getOffsetOfLastRootDirectoryRecord(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getOffsetOfLastRootDirectoryRecordSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -587,26 +587,6 @@ export declare class DicomDirReaderClass extends JavaClass {
      */
     readNextDirectoryRecordSync(var0: org_dcm4che3_data_Attributes | null): org_dcm4che3_data_Attributes | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTransferSyntaxUID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getTransferSyntaxUIDSync(): string | null;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findStudyRecord(var0: org_dcm4che3_data_Attributes | null, var1: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @param var1 original type: 'java.lang.String[]'
-     * @return original return type: 'org.dcm4che3.data.Attributes'
-     */
-    findStudyRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
-    /**
      * @param var0 original type: 'org.dcm4che3.data.Attributes'
      * @param var1 original type: 'org.dcm4che3.data.Attributes'
      * @param var2 original type: 'org.dcm4che3.media.RecordFactory'
@@ -624,6 +604,26 @@ export declare class DicomDirReaderClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Attributes'
      */
     findStudyRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: org_dcm4che3_data_Attributes | null, var2: org_dcm4che3_media_RecordFactory | null, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): org_dcm4che3_data_Attributes | null;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findStudyRecord(var0: org_dcm4che3_data_Attributes | null, var1: (string | null)[] | null): Promise<org_dcm4che3_data_Attributes | null>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'java.lang.String[]'
+     * @return original return type: 'org.dcm4che3.data.Attributes'
+     */
+    findStudyRecordSync(var0: org_dcm4che3_data_Attributes | null, var1: (string | null)[] | null): org_dcm4che3_data_Attributes | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTransferSyntaxUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getTransferSyntaxUIDSync(): string | null;
     /**
      * @param var0 original type: 'java.io.File'
      */

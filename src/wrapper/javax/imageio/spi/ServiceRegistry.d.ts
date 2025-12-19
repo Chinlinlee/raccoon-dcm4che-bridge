@@ -13,6 +13,14 @@ import { ServiceRegistry$Filter as javax_imageio_spi_ServiceRegistry$Filter, Ser
  */
 export declare class ServiceRegistryClass extends JavaClass {
     /**
+     * @return original return type: 'void'
+     */
+    deregisterAll(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    deregisterAllSync(): void;
+    /**
      * @param var0 original type: 'java.lang.Class'
      * @return original return type: 'void'
      */
@@ -23,14 +31,6 @@ export declare class ServiceRegistryClass extends JavaClass {
      */
     deregisterAllSync(var0: java_lang_Class | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    deregisterAll(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    deregisterAllSync(): void;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -38,6 +38,16 @@ export declare class ServiceRegistryClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -58,16 +68,6 @@ export declare class ServiceRegistryClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.Object'
@@ -92,16 +92,6 @@ export declare class ServiceRegistryClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Iterator'
-     */
-    static lookupProviders(var0: java_lang_Class | null): Promise<java_util_Iterator | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.Iterator'
-     */
-    static lookupProvidersSync(var0: java_lang_Class | null): java_util_Iterator | null;
-    /**
-     * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.ClassLoader'
      * @return original return type: 'java.util.Iterator'
      */
@@ -112,6 +102,16 @@ export declare class ServiceRegistryClass extends JavaClass {
      * @return original return type: 'java.util.Iterator'
      */
     static lookupProvidersSync(var0: java_lang_Class | null, var1: java_lang_ClassLoader | null): java_util_Iterator | null;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Iterator'
+     */
+    static lookupProviders(var0: java_lang_Class | null): Promise<java_util_Iterator | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.Iterator'
+     */
+    static lookupProvidersSync(var0: java_lang_Class | null): java_util_Iterator | null;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'boolean'
@@ -140,6 +140,16 @@ export declare class ServiceRegistryClass extends JavaClass {
     getServiceProvidersSync(var0: java_lang_Class | null, var1: javax_imageio_spi_ServiceRegistry$Filter | JavaInterfaceProxy<javax_imageio_spi_ServiceRegistry$FilterInterface> | null, var2: java_lang_Boolean | boolean): java_util_Iterator | null;
     /**
      * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    deregisterServiceProvider(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    deregisterServiceProviderSync(var0: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Class'
      * @return original return type: 'boolean'
      */
@@ -151,16 +161,6 @@ export declare class ServiceRegistryClass extends JavaClass {
      */
     deregisterServiceProviderSync(var0: BasicOrJavaType | null, var1: java_lang_Class | null): boolean;
     /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    deregisterServiceProvider(var0: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    deregisterServiceProviderSync(var0: BasicOrJavaType | null): void;
-    /**
      * @return original return type: 'void'
      */
     notify(): Promise<void>;
@@ -168,6 +168,16 @@ export declare class ServiceRegistryClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifySync(): void;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    registerServiceProvider(var0: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    registerServiceProviderSync(var0: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Class'
@@ -182,14 +192,14 @@ export declare class ServiceRegistryClass extends JavaClass {
     registerServiceProviderSync(var0: BasicOrJavaType | null, var1: java_lang_Class | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    registerServiceProvider(var0: BasicOrJavaType | null): Promise<void>;
+    contains(var0: BasicOrJavaType | null): Promise<boolean>;
     /**
      * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    registerServiceProviderSync(var0: BasicOrJavaType | null): void;
+    containsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.lang.Object'
@@ -204,16 +214,6 @@ export declare class ServiceRegistryClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     setOrderingSync(var0: java_lang_Class | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: BasicOrJavaType | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: BasicOrJavaType | null): boolean;
     /**
      * @param var0 original type: 'java.util.Iterator'
      * @return original return type: 'void'

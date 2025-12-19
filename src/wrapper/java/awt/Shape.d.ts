@@ -1,7 +1,7 @@
 import { JavaClass, InterfaceProxyOptions, JavaInterfaceProxy } from "java-bridge";
 import { Double as java_lang_Double } from "./../lang/Double";
-import { Rectangle2D as java_awt_geom_Rectangle2D } from "./geom/Rectangle2D";
 import { Point2D as java_awt_geom_Point2D } from "./geom/Point2D";
+import { Rectangle2D as java_awt_geom_Rectangle2D } from "./geom/Rectangle2D";
 import { PathIterator as java_awt_geom_PathIterator } from "./geom/PathIterator";
 import { AffineTransform as java_awt_geom_AffineTransform } from "./geom/AffineTransform";
 import { Rectangle as java_awt_Rectangle } from "./Rectangle";
@@ -11,28 +11,6 @@ import { Rectangle as java_awt_Rectangle } from "./Rectangle";
  * You should probably not edit this.
  */
 export declare class ShapeClass extends JavaClass {
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -60,15 +38,27 @@ export declare class ShapeClass extends JavaClass {
      */
     containsSync(var0: java_awt_geom_Point2D | null): boolean;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
      */
-    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
      */
-    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
+    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'double'
@@ -81,6 +71,16 @@ export declare class ShapeClass extends JavaClass {
      * @return original return type: 'java.awt.geom.PathIterator'
      */
     getPathIteratorSync(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIterator(var0: java_awt_geom_AffineTransform | null): Promise<java_awt_geom_PathIterator | null>;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIteratorSync(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -139,17 +139,6 @@ export interface ShapeInterface {
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_geom_Rectangle2D | null): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
      * @param var2 original type: 'double'
      * @param var3 original type: 'double'
      * @return original return type: 'boolean'
@@ -161,16 +150,27 @@ export interface ShapeInterface {
      */
     contains(var0: java_awt_geom_Point2D | null): boolean;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.geom.PathIterator'
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
      */
-    getPathIterator(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'double'
      * @return original return type: 'java.awt.geom.PathIterator'
      */
     getPathIterator(var0: java_awt_geom_AffineTransform | null, var1: java_lang_Double | number): java_awt_geom_PathIterator | null;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.geom.PathIterator'
+     */
+    getPathIterator(var0: java_awt_geom_AffineTransform | null): java_awt_geom_PathIterator | null;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'

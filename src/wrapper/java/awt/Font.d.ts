@@ -8,8 +8,8 @@ import { Locale as java_util_Locale } from "./../util/Locale";
 import { AttributedCharacterIterator$Attribute as java_text_AttributedCharacterIterator$Attribute } from "./../text/AttributedCharacterIterator$Attribute";
 import { LineMetrics as java_awt_font_LineMetrics } from "./font/LineMetrics";
 import { CharacterIterator as java_text_CharacterIterator, CharacterIteratorInterface as java_text_CharacterIteratorInterface } from "./../text/CharacterIterator";
-import { File as java_io_File } from "./../io/File";
 import { InputStream as java_io_InputStream } from "./../io/InputStream";
+import { File as java_io_File } from "./../io/File";
 import { AffineTransform as java_awt_geom_AffineTransform } from "./geom/AffineTransform";
 import { Map as java_util_Map, MapInterface as java_util_MapInterface } from "./../util/Map";
 import { Float as java_lang_Float } from "./../lang/Float";
@@ -30,6 +30,16 @@ export declare class FontClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -48,16 +58,6 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -161,14 +161,6 @@ export declare class FontClass extends JavaClass {
      */
     getStyleSync(): number;
     /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
-    /**
      * @return original return type: 'java.text.AttributedCharacterIterator$Attribute[]'
      */
     getAvailableAttributes(): Promise<(java_text_AttributedCharacterIterator$Attribute | null)[] | null>;
@@ -176,6 +168,14 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'java.text.AttributedCharacterIterator$Attribute[]'
      */
     getAvailableAttributesSync(): (java_text_AttributedCharacterIterator$Attribute | null)[] | null;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
     /**
      * @param var0 original type: 'char'
      * @return original return type: 'byte'
@@ -198,6 +198,22 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'java.awt.font.LineMetrics'
      */
     getLineMetricsSync(var0: string | null, var1: java_awt_font_FontRenderContext | null): java_awt_font_LineMetrics | null;
+    /**
+     * @param var0 original type: 'java.text.CharacterIterator'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.awt.font.FontRenderContext'
+     * @return original return type: 'java.awt.font.LineMetrics'
+     */
+    getLineMetrics(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_font_FontRenderContext | null): Promise<java_awt_font_LineMetrics | null>;
+    /**
+     * @param var0 original type: 'java.text.CharacterIterator'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'java.awt.font.FontRenderContext'
+     * @return original return type: 'java.awt.font.LineMetrics'
+     */
+    getLineMetricsSync(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_font_FontRenderContext | null): java_awt_font_LineMetrics | null;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -231,21 +247,15 @@ export declare class FontClass extends JavaClass {
      */
     getLineMetricsSync(var0: string | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_font_FontRenderContext | null): java_awt_font_LineMetrics | null;
     /**
-     * @param var0 original type: 'java.text.CharacterIterator'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.awt.font.FontRenderContext'
-     * @return original return type: 'java.awt.font.LineMetrics'
+     * @param var0 original type: 'java.io.InputStream'
+     * @return original return type: 'java.awt.Font[]'
      */
-    getLineMetrics(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_font_FontRenderContext | null): Promise<java_awt_font_LineMetrics | null>;
+    static createFonts(var0: java_io_InputStream | null): Promise<(Font | null)[] | null>;
     /**
-     * @param var0 original type: 'java.text.CharacterIterator'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'java.awt.font.FontRenderContext'
-     * @return original return type: 'java.awt.font.LineMetrics'
+     * @param var0 original type: 'java.io.InputStream'
+     * @return original return type: 'java.awt.Font[]'
      */
-    getLineMetricsSync(var0: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_font_FontRenderContext | null): java_awt_font_LineMetrics | null;
+    static createFontsSync(var0: java_io_InputStream | null): (Font | null)[] | null;
     /**
      * @param var0 original type: 'java.io.File'
      * @return original return type: 'java.awt.Font[]'
@@ -257,16 +267,6 @@ export declare class FontClass extends JavaClass {
      */
     static createFontsSync(var0: java_io_File | null): (Font | null)[] | null;
     /**
-     * @param var0 original type: 'java.io.InputStream'
-     * @return original return type: 'java.awt.Font[]'
-     */
-    static createFonts(var0: java_io_InputStream | null): Promise<(Font | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.io.InputStream'
-     * @return original return type: 'java.awt.Font[]'
-     */
-    static createFontsSync(var0: java_io_InputStream | null): (Font | null)[] | null;
-    /**
      * @return original return type: 'float'
      */
     getSize2D(): Promise<number>;
@@ -275,14 +275,6 @@ export declare class FontClass extends JavaClass {
      */
     getSize2DSync(): number;
     /**
-     * @return original return type: 'java.awt.geom.AffineTransform'
-     */
-    getTransform(): Promise<java_awt_geom_AffineTransform | null>;
-    /**
-     * @return original return type: 'java.awt.geom.AffineTransform'
-     */
-    getTransformSync(): java_awt_geom_AffineTransform | null;
-    /**
      * @return original return type: 'boolean'
      */
     hasUniformLineMetrics(): Promise<boolean>;
@@ -290,6 +282,14 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasUniformLineMetricsSync(): boolean;
+    /**
+     * @return original return type: 'java.awt.geom.AffineTransform'
+     */
+    getTransform(): Promise<java_awt_geom_AffineTransform | null>;
+    /**
+     * @return original return type: 'java.awt.geom.AffineTransform'
+     */
+    getTransformSync(): java_awt_geom_AffineTransform | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -379,17 +379,25 @@ export declare class FontClass extends JavaClass {
      */
     getAttributesSync(): java_util_Map | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'float'
+     * @param var0 original type: 'float'
      * @return original return type: 'java.awt.Font'
      */
-    deriveFont(var0: java_lang_Integer | number, var1: java_lang_Float | number): Promise<Font | null>;
+    deriveFont(var0: java_lang_Float | number): Promise<Font | null>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'float'
+     * @param var0 original type: 'float'
      * @return original return type: 'java.awt.Font'
      */
-    deriveFontSync(var0: java_lang_Integer | number, var1: java_lang_Float | number): Font | null;
+    deriveFontSync(var0: java_lang_Float | number): Font | null;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.Font'
+     */
+    deriveFont(var0: java_awt_geom_AffineTransform | null): Promise<Font | null>;
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.Font'
+     */
+    deriveFontSync(var0: java_awt_geom_AffineTransform | null): Font | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.awt.geom.AffineTransform'
@@ -403,35 +411,17 @@ export declare class FontClass extends JavaClass {
      */
     deriveFontSync(var0: java_lang_Integer | number, var1: java_awt_geom_AffineTransform | null): Font | null;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'float'
      * @return original return type: 'java.awt.Font'
      */
-    deriveFont(var0: java_awt_geom_AffineTransform | null): Promise<Font | null>;
+    deriveFont(var0: java_lang_Integer | number, var1: java_lang_Float | number): Promise<Font | null>;
     /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'float'
      * @return original return type: 'java.awt.Font'
      */
-    deriveFontSync(var0: java_awt_geom_AffineTransform | null): Font | null;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.awt.Font'
-     */
-    deriveFont(var0: java_lang_Float | number): Promise<Font | null>;
-    /**
-     * @param var0 original type: 'float'
-     * @return original return type: 'java.awt.Font'
-     */
-    deriveFontSync(var0: java_lang_Float | number): Font | null;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @return original return type: 'java.awt.Font'
-     */
-    deriveFont(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Promise<Font | null>;
-    /**
-     * @param var0 original type: 'java.util.Map'
-     * @return original return type: 'java.awt.Font'
-     */
-    deriveFontSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Font | null;
+    deriveFontSync(var0: java_lang_Integer | number, var1: java_lang_Float | number): Font | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.awt.Font'
@@ -443,13 +433,15 @@ export declare class FontClass extends JavaClass {
      */
     deriveFontSync(var0: java_lang_Integer | number): Font | null;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.util.Map'
+     * @return original return type: 'java.awt.Font'
      */
-    getPSName(): Promise<string | null>;
+    deriveFont(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Promise<Font | null>;
     /**
-     * @return original return type: 'java.lang.String'
+     * @param var0 original type: 'java.util.Map'
+     * @return original return type: 'java.awt.Font'
      */
-    getPSNameSync(): string | null;
+    deriveFontSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Font | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -458,6 +450,14 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     hasLayoutAttributesSync(): boolean;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPSName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getPSNameSync(): string | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -474,6 +474,14 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'int'
      */
     getNumGlyphsSync(): number;
+    /**
+     * @return original return type: 'float'
+     */
+    getItalicAngle(): Promise<number>;
+    /**
+     * @return original return type: 'float'
+     */
+    getItalicAngleSync(): number;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -513,21 +521,17 @@ export declare class FontClass extends JavaClass {
      */
     canDisplayUpToSync(var0: string | null): number;
     /**
-     * @return original return type: 'float'
+     * @param var0 original type: 'java.awt.font.FontRenderContext'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.awt.font.GlyphVector'
      */
-    getItalicAngle(): Promise<number>;
+    createGlyphVector(var0: java_awt_font_FontRenderContext | null, var1: (string | null)[] | null): Promise<java_awt_font_GlyphVector | null>;
     /**
-     * @return original return type: 'float'
+     * @param var0 original type: 'java.awt.font.FontRenderContext'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.awt.font.GlyphVector'
      */
-    getItalicAngleSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getSize(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSizeSync(): number;
+    createGlyphVectorSync(var0: java_awt_font_FontRenderContext | null, var1: (string | null)[] | null): java_awt_font_GlyphVector | null;
     /**
      * @param var0 original type: 'java.awt.font.FontRenderContext'
      * @param var1 original type: 'java.text.CharacterIterator'
@@ -542,18 +546,6 @@ export declare class FontClass extends JavaClass {
     createGlyphVectorSync(var0: java_awt_font_FontRenderContext | null, var1: java_text_CharacterIterator | JavaInterfaceProxy<java_text_CharacterIteratorInterface> | null): java_awt_font_GlyphVector | null;
     /**
      * @param var0 original type: 'java.awt.font.FontRenderContext'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'java.awt.font.GlyphVector'
-     */
-    createGlyphVector(var0: java_awt_font_FontRenderContext | null, var1: (java_lang_Integer | number)[] | null): Promise<java_awt_font_GlyphVector | null>;
-    /**
-     * @param var0 original type: 'java.awt.font.FontRenderContext'
-     * @param var1 original type: 'int[]'
-     * @return original return type: 'java.awt.font.GlyphVector'
-     */
-    createGlyphVectorSync(var0: java_awt_font_FontRenderContext | null, var1: (java_lang_Integer | number)[] | null): java_awt_font_GlyphVector | null;
-    /**
-     * @param var0 original type: 'java.awt.font.FontRenderContext'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.awt.font.GlyphVector'
      */
@@ -566,16 +558,32 @@ export declare class FontClass extends JavaClass {
     createGlyphVectorSync(var0: java_awt_font_FontRenderContext | null, var1: string | null): java_awt_font_GlyphVector | null;
     /**
      * @param var0 original type: 'java.awt.font.FontRenderContext'
-     * @param var1 original type: 'char[]'
+     * @param var1 original type: 'int[]'
      * @return original return type: 'java.awt.font.GlyphVector'
      */
-    createGlyphVector(var0: java_awt_font_FontRenderContext | null, var1: (string | null)[] | null): Promise<java_awt_font_GlyphVector | null>;
+    createGlyphVector(var0: java_awt_font_FontRenderContext | null, var1: (java_lang_Integer | number)[] | null): Promise<java_awt_font_GlyphVector | null>;
     /**
      * @param var0 original type: 'java.awt.font.FontRenderContext'
-     * @param var1 original type: 'char[]'
+     * @param var1 original type: 'int[]'
      * @return original return type: 'java.awt.font.GlyphVector'
      */
-    createGlyphVectorSync(var0: java_awt_font_FontRenderContext | null, var1: (string | null)[] | null): java_awt_font_GlyphVector | null;
+    createGlyphVectorSync(var0: java_awt_font_FontRenderContext | null, var1: (java_lang_Integer | number)[] | null): java_awt_font_GlyphVector | null;
+    /**
+     * @return original return type: 'int'
+     */
+    getSize(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSizeSync(): number;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFamily(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getFamilySync(): string | null;
     /**
      * @param var0 original type: 'java.util.Locale'
      * @return original return type: 'java.lang.String'
@@ -586,14 +594,6 @@ export declare class FontClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getFamilySync(var0: java_util_Locale | null): string | null;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFamily(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getFamilySync(): string | null;
     /**
      * @param var0 original type: 'char[]'
      * @param var1 original type: 'int'
@@ -619,15 +619,15 @@ export declare class FontClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'java.util.Map'
      * @return original return type: 'java.awt.Font'
      */
-    static getFont(var0: string | null): Promise<Font | null>;
+    static getFont(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Promise<Font | null>;
     /**
-     * @param var0 original type: 'java.lang.String'
+     * @param var0 original type: 'java.util.Map'
      * @return original return type: 'java.awt.Font'
      */
-    static getFontSync(var0: string | null): Font | null;
+    static getFontSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Font | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.Font'
@@ -641,15 +641,15 @@ export declare class FontClass extends JavaClass {
      */
     static getFontSync(var0: string | null, var1: FontClass | null): Font | null;
     /**
-     * @param var0 original type: 'java.util.Map'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Font'
      */
-    static getFont(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Promise<Font | null>;
+    static getFont(var0: string | null): Promise<Font | null>;
     /**
-     * @param var0 original type: 'java.util.Map'
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Font'
      */
-    static getFontSync(var0: java_util_Map | JavaInterfaceProxy<java_util_MapInterface> | null): Font | null;
+    static getFontSync(var0: string | null): Font | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.io.InputStream'

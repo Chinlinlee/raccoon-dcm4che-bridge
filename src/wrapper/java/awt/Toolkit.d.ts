@@ -26,8 +26,8 @@ import { Point as java_awt_Point } from "./Point";
 import { PropertyChangeListener as java_beans_PropertyChangeListener, PropertyChangeListenerInterface as java_beans_PropertyChangeListenerInterface } from "./../beans/PropertyChangeListener";
 import { Clipboard as java_awt_datatransfer_Clipboard } from "./datatransfer/Clipboard";
 import { ColorModel as java_awt_image_ColorModel } from "./image/ColorModel";
-import { ImageProducer as java_awt_image_ImageProducer, ImageProducerInterface as java_awt_image_ImageProducerInterface } from "./image/ImageProducer";
 import { URL as java_net_URL } from "./../net/URL";
+import { ImageProducer as java_awt_image_ImageProducer, ImageProducerInterface as java_awt_image_ImageProducerInterface } from "./image/ImageProducer";
 import { Boolean as java_lang_Boolean } from "./../lang/Boolean";
 import { Dialog$ModalExclusionType as java_awt_Dialog$ModalExclusionType } from "./Dialog$ModalExclusionType";
 import { Map as java_util_Map } from "./../util/Map";
@@ -56,6 +56,16 @@ export declare class ToolkitClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -74,16 +84,6 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.Class'
      * @param var1 original type: 'java.awt.dnd.DragSource'
@@ -187,6 +187,24 @@ export declare class ToolkitClass extends JavaClass {
      */
     getFontMetricsSync(var0: java_awt_Font | null): java_awt_FontMetrics | null;
     /**
+     * @return original return type: 'java.awt.event.AWTEventListener[]'
+     */
+    getAWTEventListeners(): Promise<(java_awt_event_AWTEventListener | null)[] | null>;
+    /**
+     * @return original return type: 'java.awt.event.AWTEventListener[]'
+     */
+    getAWTEventListenersSync(): (java_awt_event_AWTEventListener | null)[] | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.awt.event.AWTEventListener[]'
+     */
+    getAWTEventListeners(var0: java_lang_Long | bigint | number): Promise<(java_awt_event_AWTEventListener | null)[] | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.awt.event.AWTEventListener[]'
+     */
+    getAWTEventListenersSync(var0: java_lang_Long | bigint | number): (java_awt_event_AWTEventListener | null)[] | null;
+    /**
      * @return original return type: 'int'
      */
     getScreenResolution(): Promise<number>;
@@ -211,23 +229,15 @@ export declare class ToolkitClass extends JavaClass {
      */
     checkImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): number;
     /**
-     * @return original return type: 'java.awt.event.AWTEventListener[]'
+     * @param var0 original type: 'java.awt.event.AWTEventListener'
+     * @return original return type: 'void'
      */
-    getAWTEventListeners(): Promise<(java_awt_event_AWTEventListener | null)[] | null>;
+    removeAWTEventListener(var0: java_awt_event_AWTEventListener | JavaInterfaceProxy<java_awt_event_AWTEventListenerInterface> | null): Promise<void>;
     /**
-     * @return original return type: 'java.awt.event.AWTEventListener[]'
+     * @param var0 original type: 'java.awt.event.AWTEventListener'
+     * @return original return type: 'void'
      */
-    getAWTEventListenersSync(): (java_awt_event_AWTEventListener | null)[] | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.awt.event.AWTEventListener[]'
-     */
-    getAWTEventListeners(var0: java_lang_Long | bigint | number): Promise<(java_awt_event_AWTEventListener | null)[] | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.awt.event.AWTEventListener[]'
-     */
-    getAWTEventListenersSync(var0: java_lang_Long | bigint | number): (java_awt_event_AWTEventListener | null)[] | null;
+    removeAWTEventListenerSync(var0: java_awt_event_AWTEventListener | JavaInterfaceProxy<java_awt_event_AWTEventListenerInterface> | null): void;
     /**
      * @param var0 original type: 'java.awt.Frame'
      * @param var1 original type: 'java.lang.String'
@@ -258,16 +268,6 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'java.awt.PrintJob'
      */
     getPrintJobSync(var0: java_awt_Frame | null, var1: string | null, var2: java_util_Properties | null): java_awt_PrintJob | null;
-    /**
-     * @param var0 original type: 'java.awt.event.AWTEventListener'
-     * @return original return type: 'void'
-     */
-    removeAWTEventListener(var0: java_awt_event_AWTEventListener | JavaInterfaceProxy<java_awt_event_AWTEventListenerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.event.AWTEventListener'
-     * @return original return type: 'void'
-     */
-    removeAWTEventListenerSync(var0: java_awt_event_AWTEventListener | JavaInterfaceProxy<java_awt_event_AWTEventListenerInterface> | null): void;
     /**
      * @return original return type: 'int'
      */
@@ -341,6 +341,14 @@ export declare class ToolkitClass extends JavaClass {
      */
     getScreenSizeSync(): java_awt_Dimension | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isAlwaysOnTopSupported(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isAlwaysOnTopSupportedSync(): boolean;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
@@ -359,14 +367,6 @@ export declare class ToolkitClass extends JavaClass {
      */
     getSystemClipboardSync(): java_awt_datatransfer_Clipboard | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isAlwaysOnTopSupported(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isAlwaysOnTopSupportedSync(): boolean;
-    /**
      * @return original return type: 'java.lang.String[]'
      */
     getFontList(): Promise<(string | null)[] | null>;
@@ -374,24 +374,6 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'java.lang.String[]'
      */
     getFontListSync(): (string | null)[] | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.beans.PropertyChangeListener[]'
-     */
-    getPropertyChangeListeners(var0: string | null): Promise<(java_beans_PropertyChangeListener | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.beans.PropertyChangeListener[]'
-     */
-    getPropertyChangeListenersSync(var0: string | null): (java_beans_PropertyChangeListener | null)[] | null;
-    /**
-     * @return original return type: 'java.beans.PropertyChangeListener[]'
-     */
-    getPropertyChangeListeners(): Promise<(java_beans_PropertyChangeListener | null)[] | null>;
-    /**
-     * @return original return type: 'java.beans.PropertyChangeListener[]'
-     */
-    getPropertyChangeListenersSync(): (java_beans_PropertyChangeListener | null)[] | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -413,6 +395,24 @@ export declare class ToolkitClass extends JavaClass {
      */
     getColorModelSync(): java_awt_image_ColorModel | null;
     /**
+     * @return original return type: 'java.beans.PropertyChangeListener[]'
+     */
+    getPropertyChangeListeners(): Promise<(java_beans_PropertyChangeListener | null)[] | null>;
+    /**
+     * @return original return type: 'java.beans.PropertyChangeListener[]'
+     */
+    getPropertyChangeListenersSync(): (java_beans_PropertyChangeListener | null)[] | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.beans.PropertyChangeListener[]'
+     */
+    getPropertyChangeListeners(var0: string | null): Promise<(java_beans_PropertyChangeListener | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.beans.PropertyChangeListener[]'
+     */
+    getPropertyChangeListenersSync(var0: string | null): (java_beans_PropertyChangeListener | null)[] | null;
+    /**
      * @return original return type: 'java.awt.Toolkit'
      */
     static getDefaultToolkit(): Promise<Toolkit | null>;
@@ -420,6 +420,36 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'java.awt.Toolkit'
      */
     static getDefaultToolkitSync(): Toolkit | null;
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImage(var0: java_net_URL | null): Promise<java_awt_Image | null>;
+    /**
+     * @param var0 original type: 'java.net.URL'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImageSync(var0: java_net_URL | null): java_awt_Image | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImage(var0: string | null): Promise<java_awt_Image | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImageSync(var0: string | null): java_awt_Image | null;
+    /**
+     * @param var0 original type: 'java.awt.image.ImageProducer'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImage(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): Promise<java_awt_Image | null>;
+    /**
+     * @param var0 original type: 'java.awt.image.ImageProducer'
+     * @return original return type: 'java.awt.Image'
+     */
+    createImageSync(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): java_awt_Image | null;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -435,26 +465,6 @@ export declare class ToolkitClass extends JavaClass {
      */
     createImageSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): java_awt_Image | null;
     /**
-     * @param var0 original type: 'java.awt.image.ImageProducer'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImage(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): Promise<java_awt_Image | null>;
-    /**
-     * @param var0 original type: 'java.awt.image.ImageProducer'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImageSync(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): java_awt_Image | null;
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImage(var0: java_net_URL | null): Promise<java_awt_Image | null>;
-    /**
-     * @param var0 original type: 'java.net.URL'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImageSync(var0: java_net_URL | null): java_awt_Image | null;
-    /**
      * @param var0 original type: 'byte[]'
      * @return original return type: 'java.awt.Image'
      */
@@ -464,16 +474,6 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'java.awt.Image'
      */
     createImageSync(var0: Buffer | null): java_awt_Image | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImage(var0: string | null): Promise<java_awt_Image | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.Image'
-     */
-    createImageSync(var0: string | null): java_awt_Image | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -585,16 +585,6 @@ export declare class ToolkitClass extends JavaClass {
      */
     getMaximumCursorColorsSync(): number;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.Image'
-     */
-    getImage(var0: string | null): Promise<java_awt_Image | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.awt.Image'
-     */
-    getImageSync(var0: string | null): java_awt_Image | null;
-    /**
      * @param var0 original type: 'java.net.URL'
      * @return original return type: 'java.awt.Image'
      */
@@ -604,6 +594,16 @@ export declare class ToolkitClass extends JavaClass {
      * @return original return type: 'java.awt.Image'
      */
     getImageSync(var0: java_net_URL | null): java_awt_Image | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.awt.Image'
+     */
+    getImage(var0: string | null): Promise<java_awt_Image | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.awt.Image'
+     */
+    getImageSync(var0: string | null): java_awt_Image | null;
     /**
      * @param var0 original type: 'java.awt.im.InputMethodHighlight'
      * @return original return type: 'java.util.Map'

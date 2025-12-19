@@ -18,16 +18,6 @@ export declare class NamespaceContextClass extends JavaClass {
     getPrefixSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getNamespaceURI(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getNamespaceURISync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.util.Iterator'
      */
     getPrefixes(var0: string | null): Promise<java_util_Iterator | null>;
@@ -36,6 +26,16 @@ export declare class NamespaceContextClass extends JavaClass {
      * @return original return type: 'java.util.Iterator'
      */
     getPrefixesSync(var0: string | null): java_util_Iterator | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getNamespaceURI(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getNamespaceURISync(var0: string | null): string | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -56,14 +56,14 @@ export interface NamespaceContextInterface {
     getPrefix(var0: string | null): string | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getNamespaceURI(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.util.Iterator'
      */
     getPrefixes(var0: string | null): java_util_Iterator | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getNamespaceURI(var0: string | null): string | null;
 }
 /**
  * Create a proxy for the {@link NamespaceContext} interface.

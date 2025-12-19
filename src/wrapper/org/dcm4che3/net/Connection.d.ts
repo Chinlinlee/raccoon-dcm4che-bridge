@@ -83,22 +83,22 @@ export declare class ConnectionClass extends JavaClass {
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    setHttpProxy(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setHttpProxySync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
     setBindAddress(var0: string | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     setBindAddressSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setHttpProxy(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setHttpProxySync(var0: string | null): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -225,6 +225,16 @@ export declare class ConnectionClass extends JavaClass {
     getHttpProxySync(): string | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -243,16 +253,6 @@ export declare class ConnectionClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.Boolean'
      * @return original return type: 'void'
@@ -310,16 +310,6 @@ export declare class ConnectionClass extends JavaClass {
      */
     notifySync(): void;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxOpsInvoked(var0: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setMaxOpsInvokedSync(var0: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
      */
@@ -329,6 +319,16 @@ export declare class ConnectionClass extends JavaClass {
      * @return original return type: 'void'
      */
     setTlsProtocolsSync(var0: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxOpsInvoked(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setMaxOpsInvokedSync(var0: java_lang_Integer | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -632,6 +632,14 @@ export declare class ConnectionClass extends JavaClass {
      */
     setBacklogSync(var0: java_lang_Integer | number): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isTcpNoDelay(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTcpNoDelaySync(): boolean;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -644,21 +652,11 @@ export declare class ConnectionClass extends JavaClass {
     /**
      * @return original return type: 'boolean'
      */
-    isTcpNoDelay(): Promise<boolean>;
+    useHttpProxy(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
-    isTcpNoDelaySync(): boolean;
-    /**
-     * @param var0 original type: 'java.net.DatagramSocket'
-     * @return original return type: 'void'
-     */
-    setReceiveBufferSize(var0: java_net_DatagramSocket | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.net.DatagramSocket'
-     * @return original return type: 'void'
-     */
-    setReceiveBufferSizeSync(var0: java_net_DatagramSocket | null): void;
+    useHttpProxySync(): boolean;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -670,13 +668,15 @@ export declare class ConnectionClass extends JavaClass {
      */
     setReceiveBufferSizeSync(var0: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.net.DatagramSocket'
+     * @return original return type: 'void'
      */
-    useHttpProxy(): Promise<boolean>;
+    setReceiveBufferSize(var0: java_net_DatagramSocket | null): Promise<void>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.net.DatagramSocket'
+     * @return original return type: 'void'
      */
-    useHttpProxySync(): boolean;
+    setReceiveBufferSizeSync(var0: java_net_DatagramSocket | null): void;
     /**
      * @return original return type: 'int'
      */
@@ -804,6 +804,16 @@ export declare class ConnectionClass extends JavaClass {
      */
     getTlsCipherSuitesSync(): (string | null)[] | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCommonName(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    setCommonNameSync(var0: string | null): void;
+    /**
      * @param var0 original type: 'org.dcm4che3.net.Connection$Protocol'
      * @param var1 original type: 'org.dcm4che3.net.UDPProtocolHandler'
      * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
@@ -815,16 +825,6 @@ export declare class ConnectionClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.UDPProtocolHandler'
      */
     static registerUDPProtocolHandlerSync(var0: org_dcm4che3_net_Connection$Protocol | null, var1: org_dcm4che3_net_UDPProtocolHandler | JavaInterfaceProxy<org_dcm4che3_net_UDPProtocolHandlerInterface> | null): org_dcm4che3_net_UDPProtocolHandler | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCommonName(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    setCommonNameSync(var0: string | null): void;
     /**
      * @return original return type: 'int'
      */
@@ -852,6 +852,14 @@ export declare class ConnectionClass extends JavaClass {
      */
     getProtocolSync(): org_dcm4che3_net_Connection$Protocol | null;
     /**
+     * @return original return type: 'java.lang.Boolean'
+     */
+    getInstalled(): Promise<boolean | null>;
+    /**
+     * @return original return type: 'java.lang.Boolean'
+     */
+    getInstalledSync(): boolean | null;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
@@ -861,14 +869,6 @@ export declare class ConnectionClass extends JavaClass {
      * @return original return type: 'void'
      */
     setSocketCloseDelaySync(var0: java_lang_Integer | number): void;
-    /**
-     * @return original return type: 'java.lang.Boolean'
-     */
-    getInstalled(): Promise<boolean | null>;
-    /**
-     * @return original return type: 'java.lang.Boolean'
-     */
-    getInstalledSync(): boolean | null;
     /**
      * @param var0 original type: 'java.lang.String[]'
      * @return original return type: 'void'
@@ -973,15 +973,6 @@ export declare class ConnectionClass extends JavaClass {
      */
     static newInstanceAsync(): Promise<Connection>;
     /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
-     */
-    constructor(var0: ConnectionClass | null);
-    /**
-     * @param var0 original type: 'org.dcm4che3.net.Connection'
-     * @return original return type: 'org.dcm4che3.net.Connection'
-     */
-    static newInstanceAsync(var0: ConnectionClass | null): Promise<Connection>;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'int'
@@ -1005,6 +996,15 @@ export declare class ConnectionClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.net.Connection'
      */
     static newInstanceAsync(var0: string | null, var1: string | null): Promise<Connection>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     */
+    constructor(var0: ConnectionClass | null);
+    /**
+     * @param var0 original type: 'org.dcm4che3.net.Connection'
+     * @return original return type: 'org.dcm4che3.net.Connection'
+     */
+    static newInstanceAsync(var0: ConnectionClass | null): Promise<Connection>;
 }
 declare const Connection_base: typeof ConnectionClass;
 /**

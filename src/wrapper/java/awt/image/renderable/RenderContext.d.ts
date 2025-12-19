@@ -21,6 +21,16 @@ export declare class RenderContextClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -39,16 +49,6 @@ export declare class RenderContextClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @return original return type: 'void'
@@ -188,25 +188,14 @@ export declare class RenderContextClass extends JavaClass {
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'java.awt.Shape'
-     * @param var2 original type: 'java.awt.RenderingHints'
      */
-    constructor(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_awt_RenderingHints | null);
+    constructor(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null);
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'java.awt.Shape'
-     * @param var2 original type: 'java.awt.RenderingHints'
      * @return original return type: 'java.awt.image.renderable.RenderContext'
      */
-    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_awt_RenderingHints | null): Promise<RenderContext>;
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     */
-    constructor(var0: java_awt_geom_AffineTransform | null);
-    /**
-     * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @return original return type: 'java.awt.image.renderable.RenderContext'
-     */
-    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null): Promise<RenderContext>;
+    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null): Promise<RenderContext>;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'java.awt.RenderingHints'
@@ -220,15 +209,26 @@ export declare class RenderContextClass extends JavaClass {
     static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: java_awt_RenderingHints | null): Promise<RenderContext>;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
-     * @param var1 original type: 'java.awt.Shape'
      */
-    constructor(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null);
+    constructor(var0: java_awt_geom_AffineTransform | null);
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @return original return type: 'java.awt.image.renderable.RenderContext'
+     */
+    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null): Promise<RenderContext>;
     /**
      * @param var0 original type: 'java.awt.geom.AffineTransform'
      * @param var1 original type: 'java.awt.Shape'
+     * @param var2 original type: 'java.awt.RenderingHints'
+     */
+    constructor(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_awt_RenderingHints | null);
+    /**
+     * @param var0 original type: 'java.awt.geom.AffineTransform'
+     * @param var1 original type: 'java.awt.Shape'
+     * @param var2 original type: 'java.awt.RenderingHints'
      * @return original return type: 'java.awt.image.renderable.RenderContext'
      */
-    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null): Promise<RenderContext>;
+    static newInstanceAsync(var0: java_awt_geom_AffineTransform | null, var1: java_awt_Shape | JavaInterfaceProxy<java_awt_ShapeInterface> | null, var2: java_awt_RenderingHints | null): Promise<RenderContext>;
 }
 declare const RenderContext_base: typeof RenderContextClass;
 /**

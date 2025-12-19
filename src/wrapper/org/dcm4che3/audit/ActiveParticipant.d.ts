@@ -22,6 +22,16 @@ export declare class ActiveParticipantClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -40,16 +50,6 @@ export declare class ActiveParticipantClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -111,6 +111,14 @@ export declare class ActiveParticipantClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserName(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getUserNameSync(): string | null;
+    /**
      * @param var0 original type: 'org.dcm4che3.audit.UserIDTypeCode'
      * @return original return type: 'void'
      */
@@ -120,14 +128,6 @@ export declare class ActiveParticipantClass extends JavaClass {
      * @return original return type: 'void'
      */
     setUserIDTypeCodeSync(var0: org_dcm4che3_audit_UserIDTypeCode | null): void;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserName(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getUserNameSync(): string | null;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -173,14 +173,6 @@ export declare class ActiveParticipantClass extends JavaClass {
      */
     getUserIDTypeCodeSync(): org_dcm4che3_audit_UserIDTypeCode | null;
     /**
-     * @return original return type: 'java.lang.String'
-     */
-    getNetworkAccessPointID(): Promise<string | null>;
-    /**
-     * @return original return type: 'java.lang.String'
-     */
-    getNetworkAccessPointIDSync(): string | null;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -190,6 +182,14 @@ export declare class ActiveParticipantClass extends JavaClass {
      * @return original return type: 'void'
      */
     setUserIsRequestorSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getNetworkAccessPointID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getNetworkAccessPointIDSync(): string | null;
     /**
      * @param var0 original type: 'org.dcm4che3.audit.MediaType'
      * @return original return type: 'void'

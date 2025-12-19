@@ -5,12 +5,13 @@ import { Integer as java_lang_Integer } from "./../lang/Integer";
 import { Enumeration as java_util_Enumeration } from "./../util/Enumeration";
 import { Certificate as java_security_cert_Certificate } from "./cert/Certificate";
 import { Date as java_util_Date } from "./../util/Date";
-import { KeyStore$LoadStoreParameter as java_security_KeyStore$LoadStoreParameter, KeyStore$LoadStoreParameterInterface as java_security_KeyStore$LoadStoreParameterInterface } from "./KeyStore$LoadStoreParameter";
 import { InputStream as java_io_InputStream } from "./../io/InputStream";
+import { KeyStore$LoadStoreParameter as java_security_KeyStore$LoadStoreParameter, KeyStore$LoadStoreParameterInterface as java_security_KeyStore$LoadStoreParameterInterface } from "./KeyStore$LoadStoreParameter";
 import { Key as java_security_Key, KeyInterface as java_security_KeyInterface } from "./Key";
 import { Provider as java_security_Provider } from "./Provider";
 import { KeyStore$Entry as java_security_KeyStore$Entry, KeyStore$EntryInterface as java_security_KeyStore$EntryInterface } from "./KeyStore$Entry";
 import { KeyStore$ProtectionParameter as java_security_KeyStore$ProtectionParameter, KeyStore$ProtectionParameterInterface as java_security_KeyStore$ProtectionParameterInterface } from "./KeyStore$ProtectionParameter";
+import { Set as java_util_Set } from "./../util/Set";
 import { OutputStream as java_io_OutputStream } from "./../io/OutputStream";
 import { File as java_io_File } from "./../io/File";
 /**
@@ -27,6 +28,16 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -47,16 +58,6 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.util.Enumeration'
      */
@@ -112,26 +113,6 @@ export declare class KeyStoreClass extends JavaClass {
      */
     getCreationDateSync(var0: string | null): java_util_Date | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.security.cert.Certificate'
-     */
-    getCertificate(var0: string | null): Promise<java_security_cert_Certificate | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.security.cert.Certificate'
-     */
-    getCertificateSync(var0: string | null): java_security_cert_Certificate | null;
-    /**
-     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
-     * @return original return type: 'void'
-     */
-    load(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
-     * @return original return type: 'void'
-     */
-    loadSync(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): void;
-    /**
      * @param var0 original type: 'java.io.InputStream'
      * @param var1 original type: 'char[]'
      * @return original return type: 'void'
@@ -143,6 +124,26 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'void'
      */
     loadSync(var0: java_io_InputStream | null, var1: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
+     * @return original return type: 'void'
+     */
+    load(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
+     * @return original return type: 'void'
+     */
+    loadSync(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.security.cert.Certificate'
+     */
+    getCertificate(var0: string | null): Promise<java_security_cert_Certificate | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.security.cert.Certificate'
+     */
+    getCertificateSync(var0: string | null): java_security_cert_Certificate | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'byte[]'
@@ -252,6 +253,16 @@ export declare class KeyStoreClass extends JavaClass {
      */
     getKeySync(var0: string | null, var1: (string | null)[] | null): java_security_Key | null;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.util.Set'
+     */
+    getAttributes(var0: string | null): Promise<java_util_Set | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.util.Set'
+     */
+    getAttributesSync(var0: string | null): java_util_Set | null;
+    /**
      * @param var0 original type: 'java.security.cert.Certificate'
      * @return original return type: 'java.lang.String'
      */
@@ -261,16 +272,6 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getCertificateAliasSync(var0: java_security_cert_Certificate | null): string | null;
-    /**
-     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
-     * @return original return type: 'void'
-     */
-    store(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
-     * @return original return type: 'void'
-     */
-    storeSync(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): void;
     /**
      * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'char[]'
@@ -283,6 +284,16 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'void'
      */
     storeSync(var0: java_io_OutputStream | null, var1: (string | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
+     * @return original return type: 'void'
+     */
+    store(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.security.KeyStore$LoadStoreParameter'
+     * @return original return type: 'void'
+     */
+    storeSync(var0: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -349,6 +360,18 @@ export declare class KeyStoreClass extends JavaClass {
     isKeyEntrySync(var0: string | null): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.security.KeyStore'
+     */
+    static getInstance(var0: string | null, var1: string | null): Promise<KeyStore | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'java.security.KeyStore'
+     */
+    static getInstanceSync(var0: string | null, var1: string | null): KeyStore | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.security.KeyStore'
      */
     static getInstance(var0: string | null): Promise<KeyStore | null>;
@@ -357,6 +380,18 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'java.security.KeyStore'
      */
     static getInstanceSync(var0: string | null): KeyStore | null;
+    /**
+     * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.security.KeyStore'
+     */
+    static getInstance(var0: java_io_File | null, var1: (string | null)[] | null): Promise<KeyStore | null>;
+    /**
+     * @param var0 original type: 'java.io.File'
+     * @param var1 original type: 'char[]'
+     * @return original return type: 'java.security.KeyStore'
+     */
+    static getInstanceSync(var0: java_io_File | null, var1: (string | null)[] | null): KeyStore | null;
     /**
      * @param var0 original type: 'java.io.File'
      * @param var1 original type: 'java.security.KeyStore$LoadStoreParameter'
@@ -371,18 +406,6 @@ export declare class KeyStoreClass extends JavaClass {
     static getInstanceSync(var0: java_io_File | null, var1: java_security_KeyStore$LoadStoreParameter | JavaInterfaceProxy<java_security_KeyStore$LoadStoreParameterInterface> | null): KeyStore | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.security.KeyStore'
-     */
-    static getInstance(var0: string | null, var1: string | null): Promise<KeyStore | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'java.security.KeyStore'
-     */
-    static getInstanceSync(var0: string | null, var1: string | null): KeyStore | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.security.Provider'
      * @return original return type: 'java.security.KeyStore'
      */
@@ -393,18 +416,6 @@ export declare class KeyStoreClass extends JavaClass {
      * @return original return type: 'java.security.KeyStore'
      */
     static getInstanceSync(var0: string | null, var1: java_security_Provider | null): KeyStore | null;
-    /**
-     * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'char[]'
-     * @return original return type: 'java.security.KeyStore'
-     */
-    static getInstance(var0: java_io_File | null, var1: (string | null)[] | null): Promise<KeyStore | null>;
-    /**
-     * @param var0 original type: 'java.io.File'
-     * @param var1 original type: 'char[]'
-     * @return original return type: 'java.security.KeyStore'
-     */
-    static getInstanceSync(var0: java_io_File | null, var1: (string | null)[] | null): KeyStore | null;
 }
 declare const KeyStore_base: typeof KeyStoreClass;
 /**

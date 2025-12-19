@@ -3,8 +3,8 @@ import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Socket as java_net_Socket } from "./../../../java/net/Socket";
-import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { InputStream as java_io_InputStream } from "./../../../java/io/InputStream";
+import { Boolean as java_lang_Boolean } from "./../../../java/lang/Boolean";
 import { InetAddress as java_net_InetAddress } from "./../../../java/net/InetAddress";
 import { SocketFactory as javax_net_SocketFactory } from "./../SocketFactory";
 /**
@@ -31,6 +31,16 @@ export declare class SSLSocketFactoryClass extends JavaClass {
     getDefaultCipherSuitesSync(): (string | null)[] | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,15 +60,19 @@ export declare class SSLSocketFactoryClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.net.Socket'
+     * @param var1 original type: 'java.io.InputStream'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.net.Socket'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    createSocket(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): Promise<java_net_Socket | null>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.net.Socket'
+     * @param var1 original type: 'java.io.InputStream'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.net.Socket'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    createSocketSync(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): java_net_Socket | null;
     /**
      * @param var0 original type: 'java.net.Socket'
      * @param var1 original type: 'java.lang.String'
@@ -75,20 +89,6 @@ export declare class SSLSocketFactoryClass extends JavaClass {
      * @return original return type: 'java.net.Socket'
      */
     createSocketSync(var0: java_net_Socket | null, var1: string | null, var2: java_lang_Integer | number, var3: java_lang_Boolean | boolean): java_net_Socket | null;
-    /**
-     * @param var0 original type: 'java.net.Socket'
-     * @param var1 original type: 'java.io.InputStream'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.net.Socket'
-     */
-    createSocket(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): Promise<java_net_Socket | null>;
-    /**
-     * @param var0 original type: 'java.net.Socket'
-     * @param var1 original type: 'java.io.InputStream'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.net.Socket'
-     */
-    createSocketSync(var0: java_net_Socket | null, var1: java_io_InputStream | null, var2: java_lang_Boolean | boolean): java_net_Socket | null;
     /**
      * @param var0 original type: 'java.net.InetAddress'
      * @param var1 original type: 'int'

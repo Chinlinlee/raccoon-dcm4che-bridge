@@ -18,6 +18,16 @@ export declare class EventClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -36,16 +46,6 @@ export declare class EventClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'boolean'
      */
@@ -414,6 +414,19 @@ export declare class EventClass extends JavaClass {
     static readonly HOME: java_lang_Integer | number;
     /**
      * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.Object'
+     */
+    constructor(var0: BasicOrJavaType | null, var1: java_lang_Integer | number, var2: BasicOrJavaType | null);
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.awt.Event'
+     */
+    static newInstanceAsync(var0: BasicOrJavaType | null, var1: java_lang_Integer | number, var2: BasicOrJavaType | null): Promise<Event>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'long'
      * @param var2 original type: 'int'
      * @param var3 original type: 'int'
@@ -456,19 +469,6 @@ export declare class EventClass extends JavaClass {
      * @return original return type: 'java.awt.Event'
      */
     static newInstanceAsync(var0: BasicOrJavaType | null, var1: java_lang_Long | bigint | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number, var6: java_lang_Integer | number): Promise<Event>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.Object'
-     */
-    constructor(var0: BasicOrJavaType | null, var1: java_lang_Integer | number, var2: BasicOrJavaType | null);
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'java.awt.Event'
-     */
-    static newInstanceAsync(var0: BasicOrJavaType | null, var1: java_lang_Integer | number, var2: BasicOrJavaType | null): Promise<Event>;
 }
 declare const Event_base: typeof EventClass;
 /**

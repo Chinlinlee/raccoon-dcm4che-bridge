@@ -21,6 +21,16 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -39,16 +49,6 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -190,14 +190,6 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      */
     getParticipantObjectDetailSync(): java_util_List | null;
     /**
-     * @return original return type: 'byte[]'
-     */
-    getParticipantObjectQuery(): Promise<Buffer | null>;
-    /**
-     * @return original return type: 'byte[]'
-     */
-    getParticipantObjectQuerySync(): Buffer | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -207,6 +199,14 @@ export declare class ParticipantObjectIdentificationClass extends JavaClass {
      * @return original return type: 'void'
      */
     setParticipantObjectTypeCodeSync(var0: string | null): void;
+    /**
+     * @return original return type: 'byte[]'
+     */
+    getParticipantObjectQuery(): Promise<Buffer | null>;
+    /**
+     * @return original return type: 'byte[]'
+     */
+    getParticipantObjectQuerySync(): Buffer | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'

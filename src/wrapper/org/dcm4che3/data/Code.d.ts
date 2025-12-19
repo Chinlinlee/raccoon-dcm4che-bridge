@@ -20,6 +20,16 @@ export declare class CodeClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class CodeClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -151,6 +151,15 @@ export declare class CodeClass extends JavaClass {
     static newInstanceAsync(var0: org_dcm4che3_data_Attributes | null): Promise<Code>;
     /**
      * @param var0 original type: 'java.lang.String'
+     */
+    constructor(var0: string | null);
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.data.Code'
+     */
+    static newInstanceAsync(var0: string | null): Promise<Code>;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.String'
      * @param var3 original type: 'java.lang.String'
@@ -164,15 +173,6 @@ export declare class CodeClass extends JavaClass {
      * @return original return type: 'org.dcm4che3.data.Code'
      */
     static newInstanceAsync(var0: string | null, var1: string | null, var2: string | null, var3: string | null): Promise<Code>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     */
-    constructor(var0: string | null);
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.data.Code'
-     */
-    static newInstanceAsync(var0: string | null): Promise<Code>;
 }
 declare const Code_base: typeof CodeClass;
 /**

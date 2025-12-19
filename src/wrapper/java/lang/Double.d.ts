@@ -32,6 +32,16 @@ export declare class DoubleClass extends JavaClass {
     static compareSync(var0: DoubleClass | number, var1: DoubleClass | number): number;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -50,16 +60,6 @@ export declare class DoubleClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -223,6 +223,14 @@ export declare class DoubleClass extends JavaClass {
      */
     static isInfiniteSync(var0: DoubleClass | number): boolean;
     /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
      * @param var0 original type: 'double'
      * @return original return type: 'int'
      */
@@ -232,14 +240,6 @@ export declare class DoubleClass extends JavaClass {
      * @return original return type: 'int'
      */
     static hashCodeSync(var0: DoubleClass | number): number;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    hashCodeSync(): number;
     /**
      * @return original return type: 'short'
      */
@@ -396,6 +396,10 @@ export declare class DoubleClass extends JavaClass {
      * Original type: 'int'
      */
     static readonly MIN_EXPONENT: java_lang_Integer | number;
+    /**
+     * Original type: 'int'
+     */
+    static readonly PRECISION: java_lang_Integer | number;
     /**
      * @param var0 original type: 'double'
      */

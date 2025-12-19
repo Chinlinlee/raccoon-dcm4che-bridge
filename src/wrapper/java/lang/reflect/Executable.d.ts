@@ -5,9 +5,10 @@ import { Integer as java_lang_Integer } from "./../Integer";
 import { AnnotatedType as java_lang_reflect_AnnotatedType } from "./AnnotatedType";
 import { Type as java_lang_reflect_Type } from "./Type";
 import { Annotation as java_lang_annotation_Annotation } from "./../annotation/Annotation";
+import { Set as java_util_Set } from "./../../util/Set";
 import { TypeVariable as java_lang_reflect_TypeVariable } from "./TypeVariable";
-import { Boolean as java_lang_Boolean } from "./../Boolean";
 import { AccessibleObject as java_lang_reflect_AccessibleObject } from "./AccessibleObject";
+import { Boolean as java_lang_Boolean } from "./../Boolean";
 import { Parameter as java_lang_reflect_Parameter } from "./Parameter";
 /**
  * This class just defines types, you should import {@link Executable} instead of this.
@@ -23,6 +24,16 @@ export declare class ExecutableClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -43,16 +54,6 @@ export declare class ExecutableClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -144,6 +145,14 @@ export declare class ExecutableClass extends JavaClass {
      */
     getDeclaredAnnotationsSync(): (java_lang_annotation_Annotation | null)[] | null;
     /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlags(): Promise<java_util_Set | null>;
+    /**
+     * @return original return type: 'java.util.Set'
+     */
+    accessFlagsSync(): java_util_Set | null;
+    /**
      * @return original return type: 'java.lang.Class'
      */
     getDeclaringClass(): Promise<java_lang_Class | null>;
@@ -220,16 +229,6 @@ export declare class ExecutableClass extends JavaClass {
      */
     isAccessibleSync(): boolean;
     /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setAccessible(var0: java_lang_Boolean | boolean): Promise<void>;
-    /**
-     * @param var0 original type: 'boolean'
-     * @return original return type: 'void'
-     */
-    setAccessibleSync(var0: java_lang_Boolean | boolean): void;
-    /**
      * @param var0 original type: 'java.lang.reflect.AccessibleObject[]'
      * @param var1 original type: 'boolean'
      * @return original return type: 'void'
@@ -241,6 +240,16 @@ export declare class ExecutableClass extends JavaClass {
      * @return original return type: 'void'
      */
     static setAccessibleSync(var0: (java_lang_reflect_AccessibleObject | null)[] | null, var1: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setAccessible(var0: java_lang_Boolean | boolean): Promise<void>;
+    /**
+     * @param var0 original type: 'boolean'
+     * @return original return type: 'void'
+     */
+    setAccessibleSync(var0: java_lang_Boolean | boolean): void;
     /**
      * @return original return type: 'boolean'
      */

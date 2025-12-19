@@ -49,16 +49,6 @@ export declare class ImageReaderClass extends JavaClass {
     getMinIndexSync(): number;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
-     */
-    getImageMetadata(var0: java_lang_Integer | number): Promise<javax_imageio_metadata_IIOMetadata | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
-     */
-    getImageMetadataSync(var0: java_lang_Integer | number): javax_imageio_metadata_IIOMetadata | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.util.Set'
      * @return original return type: 'javax.imageio.metadata.IIOMetadata'
@@ -71,6 +61,16 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'javax.imageio.metadata.IIOMetadata'
      */
     getImageMetadataSync(var0: java_lang_Integer | number, var1: string | null, var2: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null): javax_imageio_metadata_IIOMetadata | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     */
+    getImageMetadata(var0: java_lang_Integer | number): Promise<javax_imageio_metadata_IIOMetadata | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     */
+    getImageMetadataSync(var0: java_lang_Integer | number): javax_imageio_metadata_IIOMetadata | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'javax.imageio.ImageReadParam'
@@ -187,16 +187,6 @@ export declare class ImageReaderClass extends JavaClass {
     canReadRasterSync(): boolean;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.awt.image.BufferedImage'
-     */
-    read(var0: java_lang_Integer | number): Promise<java_awt_image_BufferedImage | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.awt.image.BufferedImage'
-     */
-    readSync(var0: java_lang_Integer | number): java_awt_image_BufferedImage | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'javax.imageio.ImageReadParam'
      * @return original return type: 'java.awt.image.BufferedImage'
      */
@@ -208,13 +198,15 @@ export declare class ImageReaderClass extends JavaClass {
      */
     readSync(var0: java_lang_Integer | number, var1: javax_imageio_ImageReadParam | null): java_awt_image_BufferedImage | null;
     /**
-     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.awt.image.BufferedImage'
      */
-    getStreamMetadata(): Promise<javax_imageio_metadata_IIOMetadata | null>;
+    read(var0: java_lang_Integer | number): Promise<java_awt_image_BufferedImage | null>;
     /**
-     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.awt.image.BufferedImage'
      */
-    getStreamMetadataSync(): javax_imageio_metadata_IIOMetadata | null;
+    readSync(var0: java_lang_Integer | number): java_awt_image_BufferedImage | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.Set'
@@ -227,6 +219,14 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'javax.imageio.metadata.IIOMetadata'
      */
     getStreamMetadataSync(var0: string | null, var1: java_util_Set | JavaInterfaceProxy<java_util_SetInterface> | null): javax_imageio_metadata_IIOMetadata | null;
+    /**
+     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     */
+    getStreamMetadata(): Promise<javax_imageio_metadata_IIOMetadata | null>;
+    /**
+     * @return original return type: 'javax.imageio.metadata.IIOMetadata'
+     */
+    getStreamMetadataSync(): javax_imageio_metadata_IIOMetadata | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -343,6 +343,16 @@ export declare class ImageReaderClass extends JavaClass {
     getTileWidthSync(var0: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -361,16 +371,6 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'javax.imageio.event.IIOReadUpdateListener'
      * @return original return type: 'void'
@@ -626,6 +626,14 @@ export declare class ImageReaderClass extends JavaClass {
      */
     readerSupportsThumbnailsSync(): boolean;
     /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocale(): Promise<java_util_Locale | null>;
+    /**
+     * @return original return type: 'java.util.Locale'
+     */
+    getLocaleSync(): java_util_Locale | null;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.util.Iterator'
      */
@@ -645,14 +653,6 @@ export declare class ImageReaderClass extends JavaClass {
      * @return original return type: 'int'
      */
     getNumThumbnailsSync(var0: java_lang_Integer | number): number;
-    /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocale(): Promise<java_util_Locale | null>;
-    /**
-     * @return original return type: 'java.util.Locale'
-     */
-    getLocaleSync(): java_util_Locale | null;
 }
 declare const ImageReader_base: typeof ImageReaderClass;
 /**

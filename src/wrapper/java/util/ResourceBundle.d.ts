@@ -34,6 +34,16 @@ export declare class ResourceBundleClass extends JavaClass {
     getObjectSync(var0: string | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -52,16 +62,6 @@ export declare class ResourceBundleClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
@@ -89,14 +89,6 @@ export declare class ResourceBundleClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
-     * @return original return type: 'java.util.Enumeration'
-     */
-    getKeys(): Promise<java_util_Enumeration | null>;
-    /**
-     * @return original return type: 'java.util.Enumeration'
-     */
-    getKeysSync(): java_util_Enumeration | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.String'
      */
@@ -106,6 +98,14 @@ export declare class ResourceBundleClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     getStringSync(var0: string | null): string | null;
+    /**
+     * @return original return type: 'java.util.Enumeration'
+     */
+    getKeys(): Promise<java_util_Enumeration | null>;
+    /**
+     * @return original return type: 'java.util.Enumeration'
+     */
+    getKeysSync(): java_util_Enumeration | null;
     /**
      * @return original return type: 'void'
      */
@@ -124,6 +124,40 @@ export declare class ResourceBundleClass extends JavaClass {
      * @return original return type: 'void'
      */
     static clearCacheSync(var0: java_lang_ClassLoader | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.Locale'
+     * @return original return type: 'java.util.ResourceBundle'
+     */
+    static getBundle(var0: string | null, var1: java_util_Locale | null): Promise<ResourceBundle | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.Locale'
+     * @return original return type: 'java.util.ResourceBundle'
+     */
+    static getBundleSync(var0: string | null, var1: java_util_Locale | null): ResourceBundle | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.ResourceBundle$Control'
+     * @return original return type: 'java.util.ResourceBundle'
+     */
+    static getBundle(var0: string | null, var1: java_util_ResourceBundle$Control | null): Promise<ResourceBundle | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.util.ResourceBundle$Control'
+     * @return original return type: 'java.util.ResourceBundle'
+     */
+    static getBundleSync(var0: string | null, var1: java_util_ResourceBundle$Control | null): ResourceBundle | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.util.ResourceBundle'
+     */
+    static getBundle(var0: string | null): Promise<ResourceBundle | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.util.ResourceBundle'
+     */
+    static getBundleSync(var0: string | null): ResourceBundle | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.Locale'
@@ -156,50 +190,18 @@ export declare class ResourceBundleClass extends JavaClass {
     static getBundleSync(var0: string | null, var1: java_util_Locale | null, var2: java_lang_ClassLoader | null, var3: java_util_ResourceBundle$Control | null): ResourceBundle | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.ResourceBundle$Control'
+     * @param var1 original type: 'java.util.Locale'
+     * @param var2 original type: 'java.util.ResourceBundle$Control'
      * @return original return type: 'java.util.ResourceBundle'
      */
-    static getBundle(var0: string | null, var1: java_util_ResourceBundle$Control | null): Promise<ResourceBundle | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.ResourceBundle$Control'
-     * @return original return type: 'java.util.ResourceBundle'
-     */
-    static getBundleSync(var0: string | null, var1: java_util_ResourceBundle$Control | null): ResourceBundle | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.util.ResourceBundle'
-     */
-    static getBundle(var0: string | null): Promise<ResourceBundle | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.util.ResourceBundle'
-     */
-    static getBundleSync(var0: string | null): ResourceBundle | null;
+    static getBundle(var0: string | null, var1: java_util_Locale | null, var2: java_util_ResourceBundle$Control | null): Promise<ResourceBundle | null>;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.Locale'
+     * @param var2 original type: 'java.util.ResourceBundle$Control'
      * @return original return type: 'java.util.ResourceBundle'
      */
-    static getBundle(var0: string | null, var1: java_util_Locale | null): Promise<ResourceBundle | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.Locale'
-     * @return original return type: 'java.util.ResourceBundle'
-     */
-    static getBundleSync(var0: string | null, var1: java_util_Locale | null): ResourceBundle | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Module'
-     * @return original return type: 'java.util.ResourceBundle'
-     */
-    static getBundle(var0: string | null, var1: java_lang_Module | null): Promise<ResourceBundle | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Module'
-     * @return original return type: 'java.util.ResourceBundle'
-     */
-    static getBundleSync(var0: string | null, var1: java_lang_Module | null): ResourceBundle | null;
+    static getBundleSync(var0: string | null, var1: java_util_Locale | null, var2: java_util_ResourceBundle$Control | null): ResourceBundle | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.util.Locale'
@@ -216,18 +218,16 @@ export declare class ResourceBundleClass extends JavaClass {
     static getBundleSync(var0: string | null, var1: java_util_Locale | null, var2: java_lang_Module | null): ResourceBundle | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.Locale'
-     * @param var2 original type: 'java.util.ResourceBundle$Control'
+     * @param var1 original type: 'java.lang.Module'
      * @return original return type: 'java.util.ResourceBundle'
      */
-    static getBundle(var0: string | null, var1: java_util_Locale | null, var2: java_util_ResourceBundle$Control | null): Promise<ResourceBundle | null>;
+    static getBundle(var0: string | null, var1: java_lang_Module | null): Promise<ResourceBundle | null>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.util.Locale'
-     * @param var2 original type: 'java.util.ResourceBundle$Control'
+     * @param var1 original type: 'java.lang.Module'
      * @return original return type: 'java.util.ResourceBundle'
      */
-    static getBundleSync(var0: string | null, var1: java_util_Locale | null, var2: java_util_ResourceBundle$Control | null): ResourceBundle | null;
+    static getBundleSync(var0: string | null, var1: java_lang_Module | null): ResourceBundle | null;
     /**
      * @return original return type: 'void'
      */

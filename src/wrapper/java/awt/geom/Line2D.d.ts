@@ -2,8 +2,8 @@ import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../../lang/Class";
 import { Long as java_lang_Long } from "./../../lang/Long";
 import { Integer as java_lang_Integer } from "./../../lang/Integer";
-import { Double as java_lang_Double } from "./../../lang/Double";
 import { Point2D as java_awt_geom_Point2D } from "./Point2D";
+import { Double as java_lang_Double } from "./../../lang/Double";
 import { Rectangle2D as java_awt_geom_Rectangle2D } from "./Rectangle2D";
 import { Rectangle as java_awt_Rectangle } from "./../Rectangle";
 import { PathIterator as java_awt_geom_PathIterator } from "./PathIterator";
@@ -22,6 +22,16 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -43,15 +53,27 @@ export declare class Line2DClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'int'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    relativeCCW(var0: java_awt_geom_Point2D | null): Promise<number>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'int'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    relativeCCWSync(var0: java_awt_geom_Point2D | null): number;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'int'
+     */
+    relativeCCW(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<number>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'int'
+     */
+    relativeCCWSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -75,38 +97,6 @@ export declare class Line2DClass extends JavaClass {
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
-     * @return original return type: 'int'
-     */
-    relativeCCW(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<number>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'int'
-     */
-    relativeCCWSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'int'
-     */
-    relativeCCW(var0: java_awt_geom_Point2D | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'int'
-     */
-    relativeCCWSync(var0: java_awt_geom_Point2D | null): number;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    intersects(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Rectangle2D'
-     * @return original return type: 'boolean'
-     */
-    intersectsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
      * @param var2 original type: 'double'
      * @param var3 original type: 'double'
      * @return original return type: 'boolean'
@@ -120,6 +110,16 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     intersectsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    intersects(var0: java_awt_geom_Rectangle2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Rectangle2D'
+     * @return original return type: 'boolean'
+     */
+    intersectsSync(var0: java_awt_geom_Rectangle2D | null): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -171,6 +171,14 @@ export declare class Line2DClass extends JavaClass {
      */
     static ptLineDistSqSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number, var4: java_lang_Double | number, var5: java_lang_Double | number): number;
     /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    getBounds(): Promise<java_awt_Rectangle | null>;
+    /**
+     * @return original return type: 'java.awt.Rectangle'
+     */
+    getBoundsSync(): java_awt_Rectangle | null;
+    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @return original return type: 'double'
@@ -182,16 +190,6 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'double'
      */
     ptLineDistSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'double'
-     */
-    ptLineDist(var0: java_awt_geom_Point2D | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'double'
-     */
-    ptLineDistSync(var0: java_awt_geom_Point2D | null): number;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -213,13 +211,15 @@ export declare class Line2DClass extends JavaClass {
      */
     static ptLineDistSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number, var4: java_lang_Double | number, var5: java_lang_Double | number): number;
     /**
-     * @return original return type: 'java.awt.Rectangle'
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'double'
      */
-    getBounds(): Promise<java_awt_Rectangle | null>;
+    ptLineDist(var0: java_awt_geom_Point2D | null): Promise<number>;
     /**
-     * @return original return type: 'java.awt.Rectangle'
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'double'
      */
-    getBoundsSync(): java_awt_Rectangle | null;
+    ptLineDistSync(var0: java_awt_geom_Point2D | null): number;
     /**
      * @return original return type: 'void'
      */
@@ -323,6 +323,16 @@ export declare class Line2DClass extends JavaClass {
      */
     getP1Sync(): java_awt_geom_Point2D | null;
     /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'double'
+     */
+    ptSegDistSq(var0: java_awt_geom_Point2D | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'double'
+     */
+    ptSegDistSqSync(var0: java_awt_geom_Point2D | null): number;
+    /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
      * @return original return type: 'double'
@@ -334,16 +344,6 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'double'
      */
     ptSegDistSqSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'double'
-     */
-    ptSegDistSq(var0: java_awt_geom_Point2D | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'double'
-     */
-    ptSegDistSqSync(var0: java_awt_geom_Point2D | null): number;
     /**
      * @param var0 original type: 'double'
      * @param var1 original type: 'double'
@@ -364,54 +364,6 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'double'
      */
     static ptSegDistSqSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number, var4: java_lang_Double | number, var5: java_lang_Double | number): number;
-    /**
-     * @param var0 original type: 'java.awt.geom.Line2D'
-     * @return original return type: 'boolean'
-     */
-    intersectsLine(var0: Line2DClass | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Line2D'
-     * @return original return type: 'boolean'
-     */
-    intersectsLineSync(var0: Line2DClass | null): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    intersectsLine(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @param var3 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    intersectsLineSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Point2D'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_geom_Point2D | null): boolean;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
     /**
      * @param var0 original type: 'java.awt.geom.Rectangle2D'
      * @return original return type: 'boolean'
@@ -439,6 +391,54 @@ export declare class Line2DClass extends JavaClass {
      */
     containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
     /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_lang_Double | number, var1: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_geom_Point2D | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Point2D'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_geom_Point2D | null): boolean;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    intersectsLine(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @param var3 original type: 'double'
+     * @return original return type: 'boolean'
+     */
+    intersectsLineSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): boolean;
+    /**
+     * @param var0 original type: 'java.awt.geom.Line2D'
+     * @return original return type: 'boolean'
+     */
+    intersectsLine(var0: Line2DClass | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Line2D'
+     * @return original return type: 'boolean'
+     */
+    intersectsLineSync(var0: Line2DClass | null): boolean;
+    /**
      * @return original return type: 'double'
      */
     getX1(): Promise<number>;
@@ -446,18 +446,6 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'double'
      */
     getX1Sync(): number;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'double'
-     */
-    ptSegDist(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<number>;
-    /**
-     * @param var0 original type: 'double'
-     * @param var1 original type: 'double'
-     * @return original return type: 'double'
-     */
-    ptSegDistSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
     /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @return original return type: 'double'
@@ -489,6 +477,18 @@ export declare class Line2DClass extends JavaClass {
      */
     static ptSegDistSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number, var4: java_lang_Double | number, var5: java_lang_Double | number): number;
     /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'double'
+     */
+    ptSegDist(var0: java_lang_Double | number, var1: java_lang_Double | number): Promise<number>;
+    /**
+     * @param var0 original type: 'double'
+     * @param var1 original type: 'double'
+     * @return original return type: 'double'
+     */
+    ptSegDistSync(var0: java_lang_Double | number, var1: java_lang_Double | number): number;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -514,6 +514,16 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'java.awt.geom.Rectangle2D'
      */
     getBounds2DSync(): java_awt_geom_Rectangle2D | null;
+    /**
+     * @param var0 original type: 'java.awt.geom.Line2D'
+     * @return original return type: 'void'
+     */
+    setLine(var0: Line2DClass | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.geom.Line2D'
+     * @return original return type: 'void'
+     */
+    setLineSync(var0: Line2DClass | null): void;
     /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @param var1 original type: 'java.awt.geom.Point2D'
@@ -542,16 +552,6 @@ export declare class Line2DClass extends JavaClass {
      * @return original return type: 'void'
      */
     setLineSync(var0: java_lang_Double | number, var1: java_lang_Double | number, var2: java_lang_Double | number, var3: java_lang_Double | number): void;
-    /**
-     * @param var0 original type: 'java.awt.geom.Line2D'
-     * @return original return type: 'void'
-     */
-    setLine(var0: Line2DClass | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.geom.Line2D'
-     * @return original return type: 'void'
-     */
-    setLineSync(var0: Line2DClass | null): void;
 }
 declare const Line2D_base: typeof Line2DClass;
 /**

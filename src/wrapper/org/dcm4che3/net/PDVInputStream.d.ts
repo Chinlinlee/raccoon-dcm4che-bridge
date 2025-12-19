@@ -21,6 +21,16 @@ export declare class PDVInputStreamClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -40,15 +50,15 @@ export declare class PDVInputStreamClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'int'
      */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    read(var0: Buffer | null): Promise<number>;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
+     * @param var0 original type: 'byte[]'
+     * @return original return type: 'int'
      */
-    waitSync(var0: java_lang_Long | bigint | number): void;
+    readSync(var0: Buffer | null): number;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -63,16 +73,6 @@ export declare class PDVInputStreamClass extends JavaClass {
      * @return original return type: 'int'
      */
     readSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    read(var0: Buffer | null): Promise<number>;
-    /**
-     * @param var0 original type: 'byte[]'
-     * @return original return type: 'int'
-     */
-    readSync(var0: Buffer | null): number;
     /**
      * @return original return type: 'int'
      */
@@ -143,16 +143,6 @@ export declare class PDVInputStreamClass extends JavaClass {
     notifySync(): void;
     /**
      * @param var0 original type: 'java.io.OutputStream'
-     * @return original return type: 'void'
-     */
-    copyTo(var0: java_io_OutputStream | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
-     * @return original return type: 'void'
-     */
-    copyToSync(var0: java_io_OutputStream | null): void;
-    /**
-     * @param var0 original type: 'java.io.OutputStream'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -163,6 +153,16 @@ export declare class PDVInputStreamClass extends JavaClass {
      * @return original return type: 'void'
      */
     copyToSync(var0: java_io_OutputStream | null, var1: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @return original return type: 'void'
+     */
+    copyTo(var0: java_io_OutputStream | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.OutputStream'
+     * @return original return type: 'void'
+     */
+    copyToSync(var0: java_io_OutputStream | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.data.Attributes'
@@ -200,15 +200,13 @@ export declare class PDVInputStreamClass extends JavaClass {
      */
     readAllBytesSync(): Buffer | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
+     * @return original return type: 'void'
      */
-    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
+    reset(): Promise<void>;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'byte[]'
+     * @return original return type: 'void'
      */
-    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
+    resetSync(): void;
     /**
      * @param var0 original type: 'byte[]'
      * @param var1 original type: 'int'
@@ -224,13 +222,15 @@ export declare class PDVInputStreamClass extends JavaClass {
      */
     readNBytesSync(var0: Buffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): number;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
      */
-    reset(): Promise<void>;
+    readNBytes(var0: java_lang_Integer | number): Promise<Buffer | null>;
     /**
-     * @return original return type: 'void'
+     * @param var0 original type: 'int'
+     * @return original return type: 'byte[]'
      */
-    resetSync(): void;
+    readNBytesSync(var0: java_lang_Integer | number): Buffer | null;
     /**
      * @return original return type: 'long'
      */

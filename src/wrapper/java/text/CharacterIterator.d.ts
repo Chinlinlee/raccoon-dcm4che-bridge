@@ -47,6 +47,14 @@ export declare class CharacterIteratorClass extends JavaClass {
      */
     getIndexSync(): number;
     /**
+     * @return original return type: 'int'
+     */
+    getEndIndex(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getEndIndexSync(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
      */
@@ -56,14 +64,6 @@ export declare class CharacterIteratorClass extends JavaClass {
      * @return original return type: 'char'
      */
     setIndexSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getEndIndex(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getEndIndexSync(): number;
     /**
      * @return original return type: 'java.lang.Object'
      */
@@ -126,14 +126,14 @@ export interface CharacterIteratorInterface {
      */
     getIndex(): number;
     /**
+     * @return original return type: 'int'
+     */
+    getEndIndex(): number;
+    /**
      * @param var0 original type: 'int'
      * @return original return type: 'char'
      */
     setIndex(var0: java_lang_Integer | number): string | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getEndIndex(): number;
     /**
      * @return original return type: 'java.lang.Object'
      */

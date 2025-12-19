@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
-import { Rectangle as java_awt_Rectangle } from "./../../../java/awt/Rectangle";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
+import { Rectangle as java_awt_Rectangle } from "./../../../java/awt/Rectangle";
 import { TransferSyntaxType as org_dcm4che3_imageio_codec_TransferSyntaxType } from "./../imageio/codec/TransferSyntaxType";
 /**
  * This class just defines types, you should import {@link DicomJpegWriteParam} instead of this.
@@ -14,12 +14,12 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setNearLosslessError(var0: java_lang_Integer | number): Promise<void>;
+    setJxlDecodingSpeed(var0: java_lang_Integer | number): Promise<void>;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
      */
-    setNearLosslessErrorSync(var0: java_lang_Integer | number): void;
+    setJxlDecodingSpeedSync(var0: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -39,15 +39,15 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     getClassSync(): java_lang_Class;
     /**
-     * @param var0 original type: 'java.awt.Rectangle'
+     * @param var0 original type: 'long'
      * @return original return type: 'void'
      */
-    setSourceRegion(var0: java_awt_Rectangle | null): Promise<void>;
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
     /**
-     * @param var0 original type: 'java.awt.Rectangle'
+     * @param var0 original type: 'long'
      * @return original return type: 'void'
      */
-    setSourceRegionSync(var0: java_awt_Rectangle | null): void;
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -69,16 +69,6 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'int'
      */
     getNearLosslessError(): Promise<number>;
@@ -94,6 +84,14 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      * @return original return type: 'void'
      */
     notifyAllSync(): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getJxlEffort(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getJxlEffortSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -123,6 +121,60 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     notifySync(): void;
     /**
+     * @return original return type: 'int'
+     */
+    getCompressionRatioFactor(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getCompressionRatioFactorSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    hashCodeSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getJpegMode(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getJpegModeSync(): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.img.DicomJpegWriteParam'
+     */
+    static buildDicomImageWriteParam(var0: string | null): Promise<DicomJpegWriteParam | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'org.dcm4che3.img.DicomJpegWriteParam'
+     */
+    static buildDicomImageWriteParamSync(var0: string | null): DicomJpegWriteParam | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setNearLosslessError(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setNearLosslessErrorSync(var0: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'void'
+     */
+    setSourceRegion(var0: java_awt_Rectangle | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'void'
+     */
+    setSourceRegionSync(var0: java_awt_Rectangle | null): void;
+    /**
      * @return original return type: 'java.awt.Rectangle'
      */
     getSourceRegion(): Promise<java_awt_Rectangle | null>;
@@ -131,14 +183,6 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     getSourceRegionSync(): java_awt_Rectangle | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isCompressionLossless(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isCompressionLosslessSync(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getCompressionQuality(): Promise<number>;
@@ -146,6 +190,14 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      * @return original return type: 'int'
      */
     getCompressionQualitySync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCompressionLossless(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isCompressionLosslessSync(): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -165,14 +217,6 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     setCompressionQualitySync(var0: java_lang_Integer | number): void;
     /**
-     * @return original return type: 'int'
-     */
-    getCompressionRatioFactor(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getCompressionRatioFactorSync(): number;
-    /**
      * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
      */
     getType(): Promise<org_dcm4che3_imageio_codec_TransferSyntaxType | null>;
@@ -183,11 +227,11 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
     /**
      * @return original return type: 'int'
      */
-    hashCode(): Promise<number>;
+    getJxlDecodingSpeed(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    hashCodeSync(): number;
+    getJxlDecodingSpeedSync(): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -199,6 +243,16 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setJxlEffort(var0: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setJxlEffortSync(var0: java_lang_Integer | number): void;
+    /**
      * @return original return type: 'int'
      */
     getPointTransform(): Promise<number>;
@@ -206,24 +260,6 @@ export declare class DicomJpegWriteParamClass extends JavaClass {
      * @return original return type: 'int'
      */
     getPointTransformSync(): number;
-    /**
-     * @return original return type: 'int'
-     */
-    getJpegMode(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getJpegModeSync(): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.img.DicomJpegWriteParam'
-     */
-    static buildDicomImageWriteParam(var0: string | null): Promise<DicomJpegWriteParam | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'org.dcm4che3.img.DicomJpegWriteParam'
-     */
-    static buildDicomImageWriteParamSync(var0: string | null): DicomJpegWriteParam | null;
     /**
      * @return original return type: 'java.lang.String'
      */

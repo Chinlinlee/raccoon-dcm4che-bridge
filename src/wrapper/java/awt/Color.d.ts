@@ -27,6 +27,16 @@ export declare class ColorClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -45,16 +55,6 @@ export declare class ColorClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -186,14 +186,6 @@ export declare class ColorClass extends JavaClass {
      */
     getComponentsSync(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Float | number)[] | null): (number)[] | null;
     /**
-     * @return original return type: 'int'
-     */
-    getRGB(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getRGBSync(): number;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -224,6 +216,14 @@ export declare class ColorClass extends JavaClass {
      */
     static getHSBColorSync(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number): Color | null;
     /**
+     * @return original return type: 'int'
+     */
+    getRGB(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getRGBSync(): number;
+    /**
      * @return original return type: 'java.awt.Color'
      */
     brighter(): Promise<Color | null>;
@@ -231,18 +231,6 @@ export declare class ColorClass extends JavaClass {
      * @return original return type: 'java.awt.Color'
      */
     brighterSync(): Color | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.Color'
-     */
-    static getColor(var0: string | null, var1: java_lang_Integer | number): Promise<Color | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.Color'
-     */
-    static getColorSync(var0: string | null, var1: java_lang_Integer | number): Color | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.awt.Color'
@@ -255,6 +243,18 @@ export declare class ColorClass extends JavaClass {
      * @return original return type: 'java.awt.Color'
      */
     static getColorSync(var0: string | null, var1: ColorClass | null): Color | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.Color'
+     */
+    static getColor(var0: string | null, var1: java_lang_Integer | number): Promise<Color | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.Color'
+     */
+    static getColorSync(var0: string | null, var1: java_lang_Integer | number): Color | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.awt.Color'
@@ -280,14 +280,6 @@ export declare class ColorClass extends JavaClass {
      */
     static HSBtoRGBSync(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number): number;
     /**
-     * @return original return type: 'java.awt.color.ColorSpace'
-     */
-    getColorSpace(): Promise<java_awt_color_ColorSpace | null>;
-    /**
-     * @return original return type: 'java.awt.color.ColorSpace'
-     */
-    getColorSpaceSync(): java_awt_color_ColorSpace | null;
-    /**
      * @return original return type: 'int'
      */
     getBlue(): Promise<number>;
@@ -295,6 +287,14 @@ export declare class ColorClass extends JavaClass {
      * @return original return type: 'int'
      */
     getBlueSync(): number;
+    /**
+     * @return original return type: 'java.awt.color.ColorSpace'
+     */
+    getColorSpace(): Promise<java_awt_color_ColorSpace | null>;
+    /**
+     * @return original return type: 'java.awt.color.ColorSpace'
+     */
+    getColorSpaceSync(): java_awt_color_ColorSpace | null;
     /**
      * @param var0 original type: 'float[]'
      * @return original return type: 'float[]'
@@ -448,6 +448,21 @@ export declare class ColorClass extends JavaClass {
      */
     static readonly CYAN: ColorClass | null;
     /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @param var2 original type: 'float'
+     * @param var3 original type: 'float'
+     */
+    constructor(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number, var3: java_lang_Float | number);
+    /**
+     * @param var0 original type: 'float'
+     * @param var1 original type: 'float'
+     * @param var2 original type: 'float'
+     * @param var3 original type: 'float'
+     * @return original return type: 'java.awt.Color'
+     */
+    static newInstanceAsync(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number, var3: java_lang_Float | number): Promise<Color>;
+    /**
      * @param var0 original type: 'int'
      */
     constructor(var0: java_lang_Integer | number);
@@ -456,47 +471,6 @@ export declare class ColorClass extends JavaClass {
      * @return original return type: 'java.awt.Color'
      */
     static newInstanceAsync(var0: java_lang_Integer | number): Promise<Color>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.awt.Color'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<Color>;
-    /**
-     * @param var0 original type: 'java.awt.color.ColorSpace'
-     * @param var1 original type: 'float[]'
-     * @param var2 original type: 'float'
-     */
-    constructor(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Float | number)[] | null, var2: java_lang_Float | number);
-    /**
-     * @param var0 original type: 'java.awt.color.ColorSpace'
-     * @param var1 original type: 'float[]'
-     * @param var2 original type: 'float'
-     * @return original return type: 'java.awt.Color'
-     */
-    static newInstanceAsync(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Float | number)[] | null, var2: java_lang_Float | number): Promise<Color>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     */
-    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number);
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.awt.Color'
-     */
-    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<Color>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'boolean'
@@ -522,20 +496,46 @@ export declare class ColorClass extends JavaClass {
      */
     static newInstanceAsync(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number): Promise<Color>;
     /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
-     * @param var2 original type: 'float'
-     * @param var3 original type: 'float'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      */
-    constructor(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number, var3: java_lang_Float | number);
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number);
     /**
-     * @param var0 original type: 'float'
-     * @param var1 original type: 'float'
-     * @param var2 original type: 'float'
-     * @param var3 original type: 'float'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
      * @return original return type: 'java.awt.Color'
      */
-    static newInstanceAsync(var0: java_lang_Float | number, var1: java_lang_Float | number, var2: java_lang_Float | number, var3: java_lang_Float | number): Promise<Color>;
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<Color>;
+    /**
+     * @param var0 original type: 'java.awt.color.ColorSpace'
+     * @param var1 original type: 'float[]'
+     * @param var2 original type: 'float'
+     */
+    constructor(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Float | number)[] | null, var2: java_lang_Float | number);
+    /**
+     * @param var0 original type: 'java.awt.color.ColorSpace'
+     * @param var1 original type: 'float[]'
+     * @param var2 original type: 'float'
+     * @return original return type: 'java.awt.Color'
+     */
+    static newInstanceAsync(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Float | number)[] | null, var2: java_lang_Float | number): Promise<Color>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     */
+    constructor(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number);
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.awt.Color'
+     */
+    static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<Color>;
 }
 declare const Color_base: typeof ColorClass;
 /**

@@ -2,9 +2,9 @@ import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { PlanarImage as org_weasis_opencv_data_PlanarImage, PlanarImageInterface as org_weasis_opencv_data_PlanarImageInterface } from "./../../weasis/opencv/data/PlanarImage";
 import { ImageDescriptor as org_dcm4che3_img_stream_ImageDescriptor } from "./stream/ImageDescriptor";
 import { DicomImageReadParam as org_dcm4che3_img_DicomImageReadParam } from "./DicomImageReadParam";
+import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
-import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
 import { DicomImageAdapter as org_dcm4che3_img_DicomImageAdapter } from "./DicomImageAdapter";
 /**
  * This class just defines types, you should import {@link ImageRendering} instead of this.
@@ -16,16 +16,18 @@ export declare class ImageRenderingClass extends JavaClass {
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
      * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
+     * @param var3 original type: 'int'
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
-    static getRawRenderedImage(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null): Promise<org_weasis_opencv_data_PlanarImage | null>;
+    static getRawRenderedImage(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null, var3: java_lang_Integer | number): Promise<org_weasis_opencv_data_PlanarImage | null>;
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
      * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
+     * @param var3 original type: 'int'
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
-    static getRawRenderedImageSync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null): org_weasis_opencv_data_PlanarImage | null;
+    static getRawRenderedImageSync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null, var3: java_lang_Integer | number): org_weasis_opencv_data_PlanarImage | null;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -34,6 +36,16 @@ export declare class ImageRenderingClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -54,16 +66,6 @@ export declare class ImageRenderingClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
@@ -108,20 +110,6 @@ export declare class ImageRenderingClass extends JavaClass {
     notifyAllSync(): void;
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
-     * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
-     * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
-     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
-     */
-    static getVoiLutImage(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null): Promise<org_weasis_opencv_data_PlanarImage | null>;
-    /**
-     * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
-     * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
-     * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
-     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
-     */
-    static getVoiLutImageSync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null): org_weasis_opencv_data_PlanarImage | null;
-    /**
-     * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.DicomImageAdapter'
      * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
@@ -134,6 +122,22 @@ export declare class ImageRenderingClass extends JavaClass {
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
     static getVoiLutImageSync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_DicomImageAdapter | null, var2: org_dcm4che3_img_DicomImageReadParam | null): org_weasis_opencv_data_PlanarImage | null;
+    /**
+     * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
+     * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
+     * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
+     * @param var3 original type: 'int'
+     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
+     */
+    static getVoiLutImage(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null, var3: java_lang_Integer | number): Promise<org_weasis_opencv_data_PlanarImage | null>;
+    /**
+     * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
+     * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
+     * @param var2 original type: 'org.dcm4che3.img.DicomImageReadParam'
+     * @param var3 original type: 'int'
+     * @return original return type: 'org.weasis.opencv.data.PlanarImage'
+     */
+    static getVoiLutImageSync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: org_dcm4che3_img_DicomImageReadParam | null, var3: java_lang_Integer | number): org_weasis_opencv_data_PlanarImage | null;
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.DicomImageAdapter'
@@ -159,15 +163,17 @@ export declare class ImageRenderingClass extends JavaClass {
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
+     * @param var2 original type: 'int'
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
-    static getImageWithoutEmbeddedOverlay(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null): Promise<org_weasis_opencv_data_PlanarImage | null>;
+    static getImageWithoutEmbeddedOverlay(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: java_lang_Integer | number): Promise<org_weasis_opencv_data_PlanarImage | null>;
     /**
      * @param var0 original type: 'org.weasis.opencv.data.PlanarImage'
      * @param var1 original type: 'org.dcm4che3.img.stream.ImageDescriptor'
+     * @param var2 original type: 'int'
      * @return original return type: 'org.weasis.opencv.data.PlanarImage'
      */
-    static getImageWithoutEmbeddedOverlaySync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null): org_weasis_opencv_data_PlanarImage | null;
+    static getImageWithoutEmbeddedOverlaySync(var0: org_weasis_opencv_data_PlanarImage | JavaInterfaceProxy<org_weasis_opencv_data_PlanarImageInterface> | null, var1: org_dcm4che3_img_stream_ImageDescriptor | null, var2: java_lang_Integer | number): org_weasis_opencv_data_PlanarImage | null;
 }
 declare const ImageRendering_base: typeof ImageRenderingClass;
 /**

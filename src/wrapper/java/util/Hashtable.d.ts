@@ -26,6 +26,16 @@ export declare class HashtableClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -44,16 +54,6 @@ export declare class HashtableClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -105,18 +105,6 @@ export declare class HashtableClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replace(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
      */
@@ -129,6 +117,18 @@ export declare class HashtableClass extends JavaClass {
      */
     replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replace(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    replaceSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
      * @param var0 original type: 'java.util.function.BiFunction'
      * @return original return type: 'void'
      */
@@ -138,16 +138,6 @@ export declare class HashtableClass extends JavaClass {
      * @return original return type: 'void'
      */
     replaceAllSync(var0: java_util_function_BiFunction | JavaInterfaceProxy<java_util_function_BiFunctionInterface> | null): void;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    remove(var0: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
-    /**
-     * @param var0 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
-     */
-    removeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'
@@ -160,6 +150,16 @@ export declare class HashtableClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     removeSync(var0: BasicOrJavaType | null, var1: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    remove(var0: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    removeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.lang.Object'

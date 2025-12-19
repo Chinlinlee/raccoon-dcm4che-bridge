@@ -40,6 +40,16 @@ export declare class PointClass extends JavaClass {
     moveSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -58,16 +68,6 @@ export declare class PointClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @return original return type: 'double'
@@ -189,18 +189,6 @@ export declare class PointClass extends JavaClass {
      */
     getYSync(): number;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setLocation(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
-     */
-    setLocationSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
-    /**
      * @param var0 original type: 'java.awt.Point'
      * @return original return type: 'void'
      */
@@ -222,6 +210,18 @@ export declare class PointClass extends JavaClass {
      * @return original return type: 'void'
      */
     setLocationSync(var0: java_lang_Double | number, var1: java_lang_Double | number): void;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setLocation(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    setLocationSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.awt.geom.Point2D'
      * @return original return type: 'void'
@@ -266,20 +266,6 @@ export declare class PointClass extends JavaClass {
      * Original type: 'int'
      */
     y: java_lang_Integer | number;
-    constructor();
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    static newInstanceAsync(): Promise<Point>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     */
-    constructor(var0: PointClass | null);
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.Point'
-     */
-    static newInstanceAsync(var0: PointClass | null): Promise<Point>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -291,6 +277,20 @@ export declare class PointClass extends JavaClass {
      * @return original return type: 'java.awt.Point'
      */
     static newInstanceAsync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<Point>;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     */
+    constructor(var0: PointClass | null);
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.Point'
+     */
+    static newInstanceAsync(var0: PointClass | null): Promise<Point>;
+    constructor();
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    static newInstanceAsync(): Promise<Point>;
 }
 declare const Point_base: typeof PointClass;
 /**

@@ -22,6 +22,16 @@ export declare class ClipboardClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -40,16 +50,6 @@ export declare class ClipboardClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.lang.String'
      */
@@ -121,6 +121,14 @@ export declare class ClipboardClass extends JavaClass {
      */
     getAvailableDataFlavorsSync(): (java_awt_datatransfer_DataFlavor | null)[] | null;
     /**
+     * @return original return type: 'java.awt.datatransfer.FlavorListener[]'
+     */
+    getFlavorListeners(): Promise<(java_awt_datatransfer_FlavorListener | null)[] | null>;
+    /**
+     * @return original return type: 'java.awt.datatransfer.FlavorListener[]'
+     */
+    getFlavorListenersSync(): (java_awt_datatransfer_FlavorListener | null)[] | null;
+    /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'java.awt.datatransfer.Transferable'
      */
@@ -130,14 +138,6 @@ export declare class ClipboardClass extends JavaClass {
      * @return original return type: 'java.awt.datatransfer.Transferable'
      */
     getContentsSync(var0: BasicOrJavaType | null): java_awt_datatransfer_Transferable | null;
-    /**
-     * @return original return type: 'java.awt.datatransfer.FlavorListener[]'
-     */
-    getFlavorListeners(): Promise<(java_awt_datatransfer_FlavorListener | null)[] | null>;
-    /**
-     * @return original return type: 'java.awt.datatransfer.FlavorListener[]'
-     */
-    getFlavorListenersSync(): (java_awt_datatransfer_FlavorListener | null)[] | null;
     /**
      * @param var0 original type: 'java.awt.datatransfer.FlavorListener'
      * @return original return type: 'void'

@@ -21,20 +21,6 @@ export declare class LoggerClass extends JavaClass {
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    debugSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
      * @param var3 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
@@ -47,6 +33,20 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'void'
      */
     debugSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    debugSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -77,26 +77,16 @@ export declare class LoggerClass extends JavaClass {
     debugSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    debug(var0: string | null): Promise<void>;
+    debug(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    debugSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    debug(var0: string | null, var1: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    debugSync(var0: string | null, var1: BasicOrJavaType | null): void;
+    debugSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -112,17 +102,27 @@ export declare class LoggerClass extends JavaClass {
      */
     debugSync(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
-    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
+    debug(var0: string | null, var1: BasicOrJavaType | null): Promise<void>;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
-    debugSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
+    debugSync(var0: string | null, var1: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    debug(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    debugSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Throwable'
@@ -136,17 +136,17 @@ export declare class LoggerClass extends JavaClass {
      */
     debugSync(var0: string | null, var1: java_lang_Throwable | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    debug(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<void>;
+    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    debugSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    debugSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
     /**
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
@@ -172,6 +172,14 @@ export declare class LoggerClass extends JavaClass {
      */
     atInfoSync(): org_slf4j_spi_LoggingEventBuilder | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isWarnEnabled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isWarnEnabledSync(): boolean;
+    /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
      */
@@ -182,13 +190,47 @@ export declare class LoggerClass extends JavaClass {
      */
     isWarnEnabledSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @return original return type: 'void'
      */
-    isWarnEnabled(): Promise<boolean>;
+    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Promise<void>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @return original return type: 'void'
      */
-    isWarnEnabledSync(): boolean;
+    errorSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    error(var0: string | null, var1: java_lang_Throwable | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    errorSync(var0: string | null, var1: java_lang_Throwable | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    errorSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -240,59 +282,17 @@ export declare class LoggerClass extends JavaClass {
      */
     errorSync(var0: string | null): void;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    errorSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    errorSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
+    error(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<void>;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Throwable'
+     * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    error(var0: string | null, var1: java_lang_Throwable | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    errorSync(var0: string | null, var1: java_lang_Throwable | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    errorSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
+    errorSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -308,31 +308,29 @@ export declare class LoggerClass extends JavaClass {
      */
     errorSync(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    error(var0: string | null, var1: (BasicOrJavaType | null)[] | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
-     * @return original return type: 'void'
-     */
-    errorSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): Promise<void>;
+    errorSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): void;
+    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Throwable'
@@ -362,18 +360,6 @@ export declare class LoggerClass extends JavaClass {
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
@@ -385,6 +371,34 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'void'
      */
     warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'void'
+     */
+    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'void'
+     */
+    warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -402,20 +416,6 @@ export declare class LoggerClass extends JavaClass {
      */
     warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    warnSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -425,18 +425,6 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'void'
      */
     warnSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    warn(var0: string | null, var1: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    warnSync(var0: string | null, var1: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object[]'
@@ -449,6 +437,18 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'void'
      */
     warnSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    warn(var0: string | null, var1: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    warnSync(var0: string | null, var1: BasicOrJavaType | null): void;
     /**
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
@@ -474,6 +474,18 @@ export declare class LoggerClass extends JavaClass {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    trace(var0: string | null, var1: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    traceSync(var0: string | null, var1: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
@@ -487,28 +499,6 @@ export declare class LoggerClass extends JavaClass {
     traceSync(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    trace(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    traceSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    trace(var0: string | null, var1: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    traceSync(var0: string | null, var1: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
@@ -519,6 +509,54 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'void'
      */
     traceSync(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    trace(var0: string | null, var1: java_lang_Throwable | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    traceSync(var0: string | null, var1: java_lang_Throwable | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    trace(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    traceSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    traceSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): Promise<void>;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    traceSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -538,32 +576,6 @@ export declare class LoggerClass extends JavaClass {
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    traceSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    traceSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
@@ -576,18 +588,6 @@ export declare class LoggerClass extends JavaClass {
      */
     traceSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    trace(var0: string | null, var1: java_lang_Throwable | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    traceSync(var0: string | null, var1: java_lang_Throwable | null): void;
-    /**
      * @param var0 original type: 'org.slf4j.event.Level'
      * @return original return type: 'boolean'
      */
@@ -597,6 +597,14 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isEnabledForLevelSync(var0: org_slf4j_event_Level | null): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInfoEnabled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isInfoEnabledSync(): boolean;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
@@ -608,14 +616,6 @@ export declare class LoggerClass extends JavaClass {
      */
     isInfoEnabledSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
     /**
-     * @return original return type: 'boolean'
-     */
-    isInfoEnabled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isInfoEnabledSync(): boolean;
-    /**
      * @param var0 original type: 'org.slf4j.event.Level'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
@@ -625,14 +625,6 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
     makeLoggingEventBuilderSync(var0: org_slf4j_event_Level | null): org_slf4j_spi_LoggingEventBuilder | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isErrorEnabled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isErrorEnabledSync(): boolean;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
@@ -646,11 +638,11 @@ export declare class LoggerClass extends JavaClass {
     /**
      * @return original return type: 'boolean'
      */
-    isTraceEnabled(): Promise<boolean>;
+    isErrorEnabled(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
-    isTraceEnabledSync(): boolean;
+    isErrorEnabledSync(): boolean;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
@@ -661,6 +653,14 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     isTraceEnabledSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTraceEnabled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTraceEnabledSync(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -680,6 +680,14 @@ export declare class LoggerClass extends JavaClass {
      */
     isDebugEnabledSync(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
     /**
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    atDebug(): Promise<org_slf4j_spi_LoggingEventBuilder | null>;
+    /**
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    atDebugSync(): org_slf4j_spi_LoggingEventBuilder | null;
+    /**
      * @param var0 original type: 'org.slf4j.event.Level'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
@@ -689,14 +697,6 @@ export declare class LoggerClass extends JavaClass {
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
     atLevelSync(var0: org_slf4j_event_Level | null): org_slf4j_spi_LoggingEventBuilder | null;
-    /**
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    atDebug(): Promise<org_slf4j_spi_LoggingEventBuilder | null>;
-    /**
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    atDebugSync(): org_slf4j_spi_LoggingEventBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -852,17 +852,17 @@ export interface LoggerInterface {
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
      * @param var3 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
     debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -879,15 +879,10 @@ export interface LoggerInterface {
     debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    debug(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    debug(var0: string | null, var1: BasicOrJavaType | null): void;
+    debug(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -896,11 +891,16 @@ export interface LoggerInterface {
      */
     debug(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
-    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
+    debug(var0: string | null, var1: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    debug(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Throwable'
@@ -908,11 +908,11 @@ export interface LoggerInterface {
      */
     debug(var0: string | null, var1: java_lang_Throwable | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    debug(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    debug(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
     /**
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
@@ -926,14 +926,35 @@ export interface LoggerInterface {
      */
     atInfo?(): org_slf4j_spi_LoggingEventBuilder | null;
     /**
+     * @return original return type: 'boolean'
+     */
+    isWarnEnabled(): boolean;
+    /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
      */
     isWarnEnabled(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @param var3 original type: 'java.lang.Object'
+     * @return original return type: 'void'
      */
-    isWarnEnabled(): boolean;
+    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    error(var0: string | null, var1: java_lang_Throwable | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -960,32 +981,11 @@ export interface LoggerInterface {
      */
     error(var0: string | null): void;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
-    /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Throwable'
+     * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    error(var0: string | null, var1: java_lang_Throwable | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @param var3 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
+    error(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
@@ -994,18 +994,17 @@ export interface LoggerInterface {
      */
     error(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object[]'
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
-    error(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    error(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
-    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): void;
+    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Throwable'
@@ -1022,16 +1021,24 @@ export interface LoggerInterface {
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
     warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object[]'
+     * @return original return type: 'void'
+     */
+    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -1041,29 +1048,22 @@ export interface LoggerInterface {
      */
     warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null, var3: BasicOrJavaType | null): void;
     /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    warn(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: java_lang_Throwable | null): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     warn(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    warn(var0: string | null, var1: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
     warn(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    warn(var0: string | null, var1: BasicOrJavaType | null): void;
     /**
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
@@ -1078,27 +1078,46 @@ export interface LoggerInterface {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    trace(var0: string | null, var1: BasicOrJavaType | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Object'
      * @param var2 original type: 'java.lang.Object'
      * @return original return type: 'void'
      */
     trace(var0: string | null, var1: BasicOrJavaType | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    trace(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    trace(var0: string | null, var1: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
     trace(var0: string | null, var1: (BasicOrJavaType | null)[] | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.Throwable'
+     * @return original return type: 'void'
+     */
+    trace(var0: string | null, var1: java_lang_Throwable | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    trace(var0: string | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
+    /**
+     * @param var0 original type: 'org.slf4j.Marker'
+     * @param var1 original type: 'java.lang.String'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'void'
+     */
+    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
@@ -1110,52 +1129,29 @@ export interface LoggerInterface {
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @param var1 original type: 'java.lang.String'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'void'
-     */
-    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: BasicOrJavaType | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'org.slf4j.Marker'
-     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.Object[]'
      * @return original return type: 'void'
      */
     trace(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null, var1: string | null, var2: (BasicOrJavaType | null)[] | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.Throwable'
-     * @return original return type: 'void'
-     */
-    trace(var0: string | null, var1: java_lang_Throwable | null): void;
     /**
      * @param var0 original type: 'org.slf4j.event.Level'
      * @return original return type: 'boolean'
      */
     isEnabledForLevel?(var0: org_slf4j_event_Level | null): boolean;
     /**
+     * @return original return type: 'boolean'
+     */
+    isInfoEnabled(): boolean;
+    /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
      */
     isInfoEnabled(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
     /**
-     * @return original return type: 'boolean'
-     */
-    isInfoEnabled(): boolean;
-    /**
      * @param var0 original type: 'org.slf4j.event.Level'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
     makeLoggingEventBuilder?(var0: org_slf4j_event_Level | null): org_slf4j_spi_LoggingEventBuilder | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isErrorEnabled(): boolean;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
@@ -1164,12 +1160,16 @@ export interface LoggerInterface {
     /**
      * @return original return type: 'boolean'
      */
-    isTraceEnabled(): boolean;
+    isErrorEnabled(): boolean;
     /**
      * @param var0 original type: 'org.slf4j.Marker'
      * @return original return type: 'boolean'
      */
     isTraceEnabled(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isTraceEnabled(): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -1180,14 +1180,14 @@ export interface LoggerInterface {
      */
     isDebugEnabled(var0: org_slf4j_Marker | JavaInterfaceProxy<org_slf4j_MarkerInterface> | null): boolean;
     /**
+     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
+     */
+    atDebug?(): org_slf4j_spi_LoggingEventBuilder | null;
+    /**
      * @param var0 original type: 'org.slf4j.event.Level'
      * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
      */
     atLevel?(var0: org_slf4j_event_Level | null): org_slf4j_spi_LoggingEventBuilder | null;
-    /**
-     * @return original return type: 'org.slf4j.spi.LoggingEventBuilder'
-     */
-    atDebug?(): org_slf4j_spi_LoggingEventBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.Object'

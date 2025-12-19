@@ -19,6 +19,16 @@ export declare class ElementDictionaryClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -37,16 +47,6 @@ export declare class ElementDictionaryClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'org.dcm4che3.data.VR'
@@ -181,16 +181,6 @@ export declare class ElementDictionaryClass extends JavaClass {
     static getElementDictionarySync(var0: string | null): ElementDictionary | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    tagForKeyword(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    tagForKeywordSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'int'
      */
@@ -201,6 +191,16 @@ export declare class ElementDictionaryClass extends JavaClass {
      * @return original return type: 'int'
      */
     static tagForKeywordSync(var0: string | null, var1: string | null): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    tagForKeyword(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    tagForKeywordSync(var0: string | null): number;
 }
 declare const ElementDictionary_base: typeof ElementDictionaryClass;
 /**

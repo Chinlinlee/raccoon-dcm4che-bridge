@@ -35,6 +35,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -53,16 +63,6 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -109,6 +109,50 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     setCharAtSync(var0: java_lang_Integer | number, var1: string | null): void;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'char[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insert(var0: java_lang_Integer | number, var1: (string | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'char[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: (string | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.CharSequence'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insert(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'java.lang.CharSequence'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insert(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'boolean'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
@@ -145,44 +189,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     insertSync(var0: java_lang_Integer | number, var1: (string | null)[] | null): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Object'
+     * @param var1 original type: 'long'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
-    insert(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): Promise<AbstractStringBuilder | null>;
+    insert(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<AbstractStringBuilder | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.Object'
+     * @param var1 original type: 'long'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
-    insertSync(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'char[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: (string | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'char[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: (string | null)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): Promise<AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'boolean'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_Boolean | boolean): AbstractStringBuilder | null;
+    insertSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'float'
@@ -197,6 +213,18 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     insertSync(var0: java_lang_Integer | number, var1: java_lang_Float | number): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'char'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insert(var0: java_lang_Integer | number, var1: string | null): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'char'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    insertSync(var0: java_lang_Integer | number, var1: string | null): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @param var1 original type: 'double'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
@@ -207,34 +235,6 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
     insertSync(var0: java_lang_Integer | number, var1: java_lang_Double | number): AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): Promise<AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): AbstractStringBuilder | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.CharSequence'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insert(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'java.lang.CharSequence'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    insertSync(var0: java_lang_Integer | number, var1: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -249,16 +249,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     insertSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'char'
+     * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
-    insert(var0: java_lang_Integer | number, var1: string | null): Promise<AbstractStringBuilder | null>;
+    insert(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): Promise<AbstractStringBuilder | null>;
     /**
      * @param var0 original type: 'int'
-     * @param var1 original type: 'char'
+     * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
-    insertSync(var0: java_lang_Integer | number, var1: string | null): AbstractStringBuilder | null;
+    insertSync(var0: java_lang_Integer | number, var1: BasicOrJavaType | null): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -273,16 +273,6 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     deleteSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    substring(var0: java_lang_Integer | number): Promise<string | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.lang.String'
-     */
-    substringSync(var0: java_lang_Integer | number): string | null;
-    /**
-     * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.lang.String'
      */
@@ -293,6 +283,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'java.lang.String'
      */
     substringSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): string | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    substring(var0: java_lang_Integer | number): Promise<string | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.lang.String'
+     */
+    substringSync(var0: java_lang_Integer | number): string | null;
     /**
      * @return original return type: 'void'
      */
@@ -329,6 +329,30 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     hashCodeSync(): number;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeat(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeatSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeat(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.CharSequence'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    repeatSync(var0: java_lang_CharSequence | JavaInterfaceProxy<java_lang_CharSequenceInterface> | null, var1: java_lang_Integer | number): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'int'
      * @return original return type: 'int'
      */
     codePointBefore(var0: java_lang_Integer | number): Promise<number>;
@@ -337,16 +361,6 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'int'
      */
     codePointBeforeSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    indexOf(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    indexOfSync(var0: string | null): number;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
@@ -359,6 +373,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'int'
      */
     indexOfSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    indexOf(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    indexOfSync(var0: string | null): number;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -441,16 +465,6 @@ export declare class AbstractStringBuilderClass extends JavaClass {
     reverseSync(): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    lastIndexOf(var0: string | null): Promise<number>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'int'
-     */
-    lastIndexOfSync(var0: string | null): number;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
@@ -461,6 +475,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'int'
      */
     lastIndexOfSync(var0: string | null, var1: java_lang_Integer | number): number;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    lastIndexOf(var0: string | null): Promise<number>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'int'
+     */
+    lastIndexOfSync(var0: string | null): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'void'
@@ -560,16 +584,6 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      */
     appendSync(var0: BasicOrJavaType | null): AbstractStringBuilder | null;
     /**
-     * @param var0 original type: 'java.lang.StringBuffer'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    append(var0: java_lang_StringBuffer | null): Promise<AbstractStringBuilder | null>;
-    /**
-     * @param var0 original type: 'java.lang.StringBuffer'
-     * @return original return type: 'java.lang.AbstractStringBuilder'
-     */
-    appendSync(var0: java_lang_StringBuffer | null): AbstractStringBuilder | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
@@ -579,6 +593,16 @@ export declare class AbstractStringBuilderClass extends JavaClass {
      * @return original return type: 'java.lang.AbstractStringBuilder'
      */
     appendSync(var0: string | null): AbstractStringBuilder | null;
+    /**
+     * @param var0 original type: 'java.lang.StringBuffer'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    append(var0: java_lang_StringBuffer | null): Promise<AbstractStringBuilder | null>;
+    /**
+     * @param var0 original type: 'java.lang.StringBuffer'
+     * @return original return type: 'java.lang.AbstractStringBuilder'
+     */
+    appendSync(var0: java_lang_StringBuffer | null): AbstractStringBuilder | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.lang.AbstractStringBuilder'

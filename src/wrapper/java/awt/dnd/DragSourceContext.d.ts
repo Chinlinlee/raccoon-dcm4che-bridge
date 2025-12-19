@@ -55,6 +55,16 @@ export declare class DragSourceContextClass extends JavaClass {
     getTriggerSync(): java_awt_dnd_DragGestureEvent | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -73,16 +83,6 @@ export declare class DragSourceContextClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.awt.dnd.DragSourceDragEvent'
      * @return original return type: 'void'
@@ -130,14 +130,6 @@ export declare class DragSourceContextClass extends JavaClass {
      */
     transferablesFlavorsChangedSync(): void;
     /**
-     * @return original return type: 'int'
-     */
-    getSourceActions(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getSourceActionsSync(): number;
-    /**
      * @param var0 original type: 'java.awt.dnd.DragSourceListener'
      * @return original return type: 'void'
      */
@@ -147,6 +139,14 @@ export declare class DragSourceContextClass extends JavaClass {
      * @return original return type: 'void'
      */
     addDragSourceListenerSync(var0: java_awt_dnd_DragSourceListener | JavaInterfaceProxy<java_awt_dnd_DragSourceListenerInterface> | null): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getSourceActions(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getSourceActionsSync(): number;
     /**
      * @return original return type: 'void'
      */

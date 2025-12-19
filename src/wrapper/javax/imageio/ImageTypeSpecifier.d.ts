@@ -36,6 +36,16 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
     createBufferedImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_BufferedImage | null;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -54,16 +64,6 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */
@@ -107,6 +107,14 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @return original return type: 'int'
+     */
+    getNumBands(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getNumBandsSync(): number;
+    /**
      * @param var0 original type: 'java.awt.color.ColorSpace'
      * @param var1 original type: 'int[]'
      * @param var2 original type: 'int[]'
@@ -126,14 +134,6 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      * @return original return type: 'javax.imageio.ImageTypeSpecifier'
      */
     static createBandedSync(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Integer | number)[] | null, var2: (java_lang_Integer | number)[] | null, var3: java_lang_Integer | number, var4: java_lang_Boolean | boolean, var5: java_lang_Boolean | boolean): ImageTypeSpecifier | null;
-    /**
-     * @return original return type: 'int'
-     */
-    getNumBands(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getNumBandsSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'int'
@@ -213,6 +213,14 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      */
     static createInterleavedSync(var0: java_awt_color_ColorSpace | null, var1: (java_lang_Integer | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Boolean | boolean, var4: java_lang_Boolean | boolean): ImageTypeSpecifier | null;
     /**
+     * @return original return type: 'java.awt.image.SampleModel'
+     */
+    getSampleModel(): Promise<java_awt_image_SampleModel | null>;
+    /**
+     * @return original return type: 'java.awt.image.SampleModel'
+     */
+    getSampleModelSync(): java_awt_image_SampleModel | null;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'java.awt.image.SampleModel'
@@ -224,14 +232,6 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      * @return original return type: 'java.awt.image.SampleModel'
      */
     getSampleModelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_SampleModel | null;
-    /**
-     * @return original return type: 'java.awt.image.SampleModel'
-     */
-    getSampleModel(): Promise<java_awt_image_SampleModel | null>;
-    /**
-     * @return original return type: 'java.awt.image.SampleModel'
-     */
-    getSampleModelSync(): java_awt_image_SampleModel | null;
     /**
      * @return original return type: 'int'
      */
@@ -264,6 +264,20 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'boolean'
+     * @return original return type: 'javax.imageio.ImageTypeSpecifier'
+     */
+    static createGrayscale(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<ImageTypeSpecifier | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'javax.imageio.ImageTypeSpecifier'
+     */
+    static createGrayscaleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): ImageTypeSpecifier | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
      * @param var3 original type: 'boolean'
      * @return original return type: 'javax.imageio.ImageTypeSpecifier'
      */
@@ -277,19 +291,14 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      */
     static createGrayscaleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_lang_Boolean | boolean): ImageTypeSpecifier | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'javax.imageio.ImageTypeSpecifier'
+     * @param var0 original type: 'java.awt.image.RenderedImage'
      */
-    static createGrayscale(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): Promise<ImageTypeSpecifier | null>;
+    constructor(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null);
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
+     * @param var0 original type: 'java.awt.image.RenderedImage'
      * @return original return type: 'javax.imageio.ImageTypeSpecifier'
      */
-    static createGrayscaleSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean): ImageTypeSpecifier | null;
+    static newInstanceAsync(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null): Promise<ImageTypeSpecifier>;
     /**
      * @param var0 original type: 'java.awt.image.ColorModel'
      * @param var1 original type: 'java.awt.image.SampleModel'
@@ -301,15 +310,6 @@ export declare class ImageTypeSpecifierClass extends JavaClass {
      * @return original return type: 'javax.imageio.ImageTypeSpecifier'
      */
     static newInstanceAsync(var0: java_awt_image_ColorModel | null, var1: java_awt_image_SampleModel | null): Promise<ImageTypeSpecifier>;
-    /**
-     * @param var0 original type: 'java.awt.image.RenderedImage'
-     */
-    constructor(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null);
-    /**
-     * @param var0 original type: 'java.awt.image.RenderedImage'
-     * @return original return type: 'javax.imageio.ImageTypeSpecifier'
-     */
-    static newInstanceAsync(var0: java_awt_image_RenderedImage | JavaInterfaceProxy<java_awt_image_RenderedImageInterface> | null): Promise<ImageTypeSpecifier>;
 }
 declare const ImageTypeSpecifier_base: typeof ImageTypeSpecifierClass;
 /**

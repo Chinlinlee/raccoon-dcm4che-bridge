@@ -34,6 +34,16 @@ export declare class DisplayModeClass extends JavaClass {
     getHeightSync(): number;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -53,16 +63,6 @@ export declare class DisplayModeClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'int'
      */
     hashCode(): Promise<number>;
@@ -71,15 +71,13 @@ export declare class DisplayModeClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @param var0 original type: 'java.awt.DisplayMode'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    equals(var0: DisplayModeClass | null): Promise<boolean>;
+    getBitDepth(): Promise<number>;
     /**
-     * @param var0 original type: 'java.awt.DisplayMode'
-     * @return original return type: 'boolean'
+     * @return original return type: 'int'
      */
-    equalsSync(var0: DisplayModeClass | null): boolean;
+    getBitDepthSync(): number;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -91,13 +89,15 @@ export declare class DisplayModeClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'java.awt.DisplayMode'
+     * @return original return type: 'boolean'
      */
-    getBitDepth(): Promise<number>;
+    equals(var0: DisplayModeClass | null): Promise<boolean>;
     /**
-     * @return original return type: 'int'
+     * @param var0 original type: 'java.awt.DisplayMode'
+     * @return original return type: 'boolean'
      */
-    getBitDepthSync(): number;
+    equalsSync(var0: DisplayModeClass | null): boolean;
     /**
      * @return original return type: 'void'
      */

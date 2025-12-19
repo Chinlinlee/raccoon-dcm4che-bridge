@@ -19,6 +19,14 @@ export declare class DragSourceEventClass extends JavaClass {
      */
     getClassSync(): java_lang_Class;
     /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocation(): Promise<java_awt_Point | null>;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocationSync(): java_awt_Point | null;
+    /**
      * @return original return type: 'int'
      */
     getX(): Promise<number>;
@@ -27,13 +35,15 @@ export declare class DragSourceEventClass extends JavaClass {
      */
     getXSync(): number;
     /**
-     * @return original return type: 'java.awt.Point'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    getLocation(): Promise<java_awt_Point | null>;
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
     /**
-     * @return original return type: 'java.awt.Point'
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
      */
-    getLocationSync(): java_awt_Point | null;
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -54,16 +64,6 @@ export declare class DragSourceEventClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'int'
      */

@@ -21,6 +21,16 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -39,16 +49,6 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
@@ -108,14 +108,6 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      */
     compareToSync(var0: java_lang_Enum | null): number;
     /**
-     * @return original return type: 'int'
-     */
-    getPlanarConfiguration(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getPlanarConfigurationSync(): number;
-    /**
      * @return original return type: 'boolean'
      */
     canEncodeSigned(): Promise<boolean>;
@@ -131,6 +123,14 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      * @return original return type: 'int'
      */
     getMaxBitsStoredSync(): number;
+    /**
+     * @return original return type: 'int'
+     */
+    getPlanarConfiguration(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getPlanarConfigurationSync(): number;
     /**
      * @return original return type: 'java.util.Optional'
      */
@@ -166,16 +166,6 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      */
     static isLossyCompressionSync(var0: string | null): boolean;
     /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    adjustBitsStoredTo12(var0: org_dcm4che3_data_Attributes | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'org.dcm4che3.data.Attributes'
-     * @return original return type: 'boolean'
-     */
-    adjustBitsStoredTo12Sync(var0: org_dcm4che3_data_Attributes | null): boolean;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
@@ -185,6 +175,16 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     static isYBRCompressionSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    adjustBitsStoredTo12(var0: org_dcm4che3_data_Attributes | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'org.dcm4che3.data.Attributes'
+     * @return original return type: 'boolean'
+     */
+    adjustBitsStoredTo12Sync(var0: org_dcm4che3_data_Attributes | null): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -273,6 +273,10 @@ export declare class TransferSyntaxTypeClass extends JavaClass {
      * Original type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
      */
     static readonly JPIP: TransferSyntaxTypeClass | null;
+    /**
+     * Original type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
+     */
+    static readonly JPEG_XL: TransferSyntaxTypeClass | null;
     /**
      * Original type: 'org.dcm4che3.imageio.codec.TransferSyntaxType'
      */

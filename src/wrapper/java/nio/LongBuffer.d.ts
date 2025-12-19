@@ -20,6 +20,16 @@ export declare class LongBufferClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -38,16 +48,6 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.nio.LongBuffer'
      */
@@ -85,16 +85,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     compareToSync(var0: LongBufferClass | null): number;
     /**
-     * @param var0 original type: 'long[]'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    put(var0: (java_lang_Long | bigint | number)[] | null): Promise<LongBuffer | null>;
-    /**
-     * @param var0 original type: 'long[]'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    putSync(var0: (java_lang_Long | bigint | number)[] | null): LongBuffer | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'long[]'
      * @param var2 original type: 'int'
@@ -123,20 +113,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: (java_lang_Long | bigint | number)[] | null): LongBuffer | null;
     /**
-     * @param var0 original type: 'long[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    put(var0: (java_lang_Long | bigint | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<LongBuffer | null>;
-    /**
-     * @param var0 original type: 'long[]'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    putSync(var0: (java_lang_Long | bigint | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): LongBuffer | null;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'java.nio.LongBuffer'
      * @param var2 original type: 'int'
@@ -153,6 +129,16 @@ export declare class LongBufferClass extends JavaClass {
      */
     putSync(var0: java_lang_Integer | number, var1: LongBufferClass | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): LongBuffer | null;
     /**
+     * @param var0 original type: 'long[]'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    put(var0: (java_lang_Long | bigint | number)[] | null): Promise<LongBuffer | null>;
+    /**
+     * @param var0 original type: 'long[]'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    putSync(var0: (java_lang_Long | bigint | number)[] | null): LongBuffer | null;
+    /**
      * @param var0 original type: 'java.nio.LongBuffer'
      * @return original return type: 'java.nio.LongBuffer'
      */
@@ -162,6 +148,30 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.LongBuffer'
      */
     putSync(var0: LongBufferClass | null): LongBuffer | null;
+    /**
+     * @param var0 original type: 'long[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    put(var0: (java_lang_Long | bigint | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): Promise<LongBuffer | null>;
+    /**
+     * @param var0 original type: 'long[]'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    putSync(var0: (java_lang_Long | bigint | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): LongBuffer | null;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    put(var0: java_lang_Long | bigint | number): Promise<LongBuffer | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    putSync(var0: java_lang_Long | bigint | number): LongBuffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'long'
@@ -174,16 +184,6 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.LongBuffer'
      */
     putSync(var0: java_lang_Integer | number, var1: java_lang_Long | bigint | number): LongBuffer | null;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    put(var0: java_lang_Long | bigint | number): Promise<LongBuffer | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    putSync(var0: java_lang_Long | bigint | number): LongBuffer | null;
     /**
      * @return original return type: 'java.nio.LongBuffer'
      */
@@ -233,14 +233,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     arraySync(): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    slice(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    sliceSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.LongBuffer'
      */
     slice(): Promise<LongBuffer | null>;
@@ -248,6 +240,14 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.LongBuffer'
      */
     sliceSync(): LongBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    slice(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    sliceSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -281,14 +281,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     hashCodeSync(): number;
     /**
-     * @return original return type: 'long'
-     */
-    get(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    getSync(): number;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'long[]'
      * @return original return type: 'java.nio.LongBuffer'
@@ -310,22 +302,6 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'long'
      */
     getSync(var0: java_lang_Integer | number): number;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    get(var0: java_lang_Integer | number, var1: (java_lang_Long | bigint | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<LongBuffer | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'long[]'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    getSync(var0: java_lang_Integer | number, var1: (java_lang_Long | bigint | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): LongBuffer | null;
     /**
      * @param var0 original type: 'long[]'
      * @param var1 original type: 'int'
@@ -352,14 +328,28 @@ export declare class LongBufferClass extends JavaClass {
     getSync(var0: (java_lang_Long | bigint | number)[] | null): LongBuffer | null;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'long[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.LongBuffer'
      */
-    limit(var0: java_lang_Integer | number): Promise<LongBuffer | null>;
+    get(var0: java_lang_Integer | number, var1: (java_lang_Long | bigint | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<LongBuffer | null>;
     /**
      * @param var0 original type: 'int'
+     * @param var1 original type: 'long[]'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'java.nio.LongBuffer'
      */
-    limitSync(var0: java_lang_Integer | number): LongBuffer | null;
+    getSync(var0: java_lang_Integer | number, var1: (java_lang_Long | bigint | number)[] | null, var2: java_lang_Integer | number, var3: java_lang_Integer | number): LongBuffer | null;
+    /**
+     * @return original return type: 'long'
+     */
+    get(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    getSync(): number;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.Buffer'
@@ -370,6 +360,16 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.Buffer'
      */
     limitSync(var0: java_lang_Integer | number): java_nio_Buffer | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    limit(var0: java_lang_Integer | number): Promise<LongBuffer | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    limitSync(var0: java_lang_Integer | number): LongBuffer | null;
     /**
      * @return original return type: 'int'
      */
@@ -427,14 +427,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     hasRemainingSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clear(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    clearSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.LongBuffer'
      */
     clear(): Promise<LongBuffer | null>;
@@ -442,6 +434,14 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.LongBuffer'
      */
     clearSync(): LongBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clear(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    clearSync(): java_nio_Buffer | null;
     /**
      * @return original return type: 'java.nio.LongBuffer'
      */
@@ -467,14 +467,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     remainingSync(): number;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    rewind(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    rewindSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.LongBuffer'
      */
     rewind(): Promise<LongBuffer | null>;
@@ -482,6 +474,14 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.LongBuffer'
      */
     rewindSync(): LongBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    rewind(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    rewindSync(): java_nio_Buffer | null;
     /**
      * @param var0 original type: 'int'
      * @return original return type: 'java.nio.LongBuffer'
@@ -558,16 +558,6 @@ export declare class LongBufferClass extends JavaClass {
     positionSync(): number;
     /**
      * @param var0 original type: 'long[]'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    static wrap(var0: (java_lang_Long | bigint | number)[] | null): Promise<LongBuffer | null>;
-    /**
-     * @param var0 original type: 'long[]'
-     * @return original return type: 'java.nio.LongBuffer'
-     */
-    static wrapSync(var0: (java_lang_Long | bigint | number)[] | null): LongBuffer | null;
-    /**
-     * @param var0 original type: 'long[]'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @return original return type: 'java.nio.LongBuffer'
@@ -581,6 +571,16 @@ export declare class LongBufferClass extends JavaClass {
      */
     static wrapSync(var0: (java_lang_Long | bigint | number)[] | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): LongBuffer | null;
     /**
+     * @param var0 original type: 'long[]'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    static wrap(var0: (java_lang_Long | bigint | number)[] | null): Promise<LongBuffer | null>;
+    /**
+     * @param var0 original type: 'long[]'
+     * @return original return type: 'java.nio.LongBuffer'
+     */
+    static wrapSync(var0: (java_lang_Long | bigint | number)[] | null): LongBuffer | null;
+    /**
      * @return original return type: 'boolean'
      */
     isDirect(): Promise<boolean>;
@@ -589,14 +589,6 @@ export declare class LongBufferClass extends JavaClass {
      */
     isDirectSync(): boolean;
     /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    mark(): Promise<java_nio_Buffer | null>;
-    /**
-     * @return original return type: 'java.nio.Buffer'
-     */
-    markSync(): java_nio_Buffer | null;
-    /**
      * @return original return type: 'java.nio.LongBuffer'
      */
     mark(): Promise<LongBuffer | null>;
@@ -604,6 +596,14 @@ export declare class LongBufferClass extends JavaClass {
      * @return original return type: 'java.nio.LongBuffer'
      */
     markSync(): LongBuffer | null;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    mark(): Promise<java_nio_Buffer | null>;
+    /**
+     * @return original return type: 'java.nio.Buffer'
+     */
+    markSync(): java_nio_Buffer | null;
 }
 declare const LongBuffer_base: typeof LongBufferClass;
 /**

@@ -28,6 +28,16 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -46,16 +56,6 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @param var1 original type: 'long'
@@ -93,6 +93,14 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      */
     notifyAllSync(): void;
     /**
+     * @return original return type: 'java.nio.channels.FileLock'
+     */
+    tryLock(): Promise<java_nio_channels_FileLock | null>;
+    /**
+     * @return original return type: 'java.nio.channels.FileLock'
+     */
+    tryLockSync(): java_nio_channels_FileLock | null;
+    /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'long'
      * @param var2 original type: 'boolean'
@@ -106,14 +114,6 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      * @return original return type: 'java.nio.channels.FileLock'
      */
     tryLockSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Boolean | boolean): java_nio_channels_FileLock | null;
-    /**
-     * @return original return type: 'java.nio.channels.FileLock'
-     */
-    tryLock(): Promise<java_nio_channels_FileLock | null>;
-    /**
-     * @return original return type: 'java.nio.channels.FileLock'
-     */
-    tryLockSync(): java_nio_channels_FileLock | null;
     /**
      * @return original return type: 'void'
      */
@@ -131,6 +131,14 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      */
     isOpenSync(): boolean;
     /**
+     * @return original return type: 'long'
+     */
+    size(): Promise<number>;
+    /**
+     * @return original return type: 'long'
+     */
+    sizeSync(): number;
+    /**
      * @param var0 original type: 'long'
      * @return original return type: 'java.nio.channels.AsynchronousFileChannel'
      */
@@ -140,14 +148,6 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      * @return original return type: 'java.nio.channels.AsynchronousFileChannel'
      */
     truncateSync(var0: java_lang_Long | bigint | number): AsynchronousFileChannel | null;
-    /**
-     * @return original return type: 'long'
-     */
-    size(): Promise<number>;
-    /**
-     * @return original return type: 'long'
-     */
-    sizeSync(): number;
     /**
      * @return original return type: 'int'
      */
@@ -166,6 +166,20 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    lock(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Boolean | boolean): Promise<java_util_concurrent_Future | null>;
+    /**
+     * @param var0 original type: 'long'
+     * @param var1 original type: 'long'
+     * @param var2 original type: 'boolean'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    lockSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Boolean | boolean): java_util_concurrent_Future | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @param var1 original type: 'java.nio.channels.CompletionHandler'
@@ -205,20 +219,6 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      */
     lockSync(): java_util_concurrent_Future | null;
     /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    lock(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Boolean | boolean): Promise<java_util_concurrent_Future | null>;
-    /**
-     * @param var0 original type: 'long'
-     * @param var1 original type: 'long'
-     * @param var2 original type: 'boolean'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    lockSync(var0: java_lang_Long | bigint | number, var1: java_lang_Long | bigint | number, var2: java_lang_Boolean | boolean): java_util_concurrent_Future | null;
-    /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
      */
@@ -228,6 +228,18 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      * @return original return type: 'void'
      */
     forceSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    write(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): Promise<java_util_concurrent_Future | null>;
+    /**
+     * @param var0 original type: 'java.nio.ByteBuffer'
+     * @param var1 original type: 'long'
+     * @return original return type: 'java.util.concurrent.Future'
+     */
+    writeSync(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): java_util_concurrent_Future | null;
     /**
      * @param var0 original type: 'java.nio.ByteBuffer'
      * @param var1 original type: 'long'
@@ -244,18 +256,6 @@ export declare class AsynchronousFileChannelClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeSync(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number, var2: BasicOrJavaType | null, var3: java_nio_channels_CompletionHandler | JavaInterfaceProxy<java_nio_channels_CompletionHandlerInterface> | null): void;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    write(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): Promise<java_util_concurrent_Future | null>;
-    /**
-     * @param var0 original type: 'java.nio.ByteBuffer'
-     * @param var1 original type: 'long'
-     * @return original return type: 'java.util.concurrent.Future'
-     */
-    writeSync(var0: java_nio_ByteBuffer | null, var1: java_lang_Long | bigint | number): java_util_concurrent_Future | null;
     /**
      * @return original return type: 'void'
      */

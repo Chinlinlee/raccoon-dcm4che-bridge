@@ -1,8 +1,8 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { DicomInputStream as org_dcm4che3_io_DicomInputStream } from "./../io/DicomInputStream";
-import { Fragments as org_dcm4che3_data_Fragments } from "./../data/Fragments";
-import { Sequence as org_dcm4che3_data_Sequence } from "./../data/Sequence";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../data/Attributes";
+import { Sequence as org_dcm4che3_data_Sequence } from "./../data/Sequence";
+import { Fragments as org_dcm4che3_data_Fragments } from "./../data/Fragments";
 import { Class as java_lang_Class } from "./../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
@@ -17,16 +17,16 @@ import { JsonGenerator as jakarta_json_stream_JsonGenerator, JsonGeneratorInterf
 export declare class JSONWriterClass extends JavaClass {
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
-     * @param var1 original type: 'org.dcm4che3.data.Fragments'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'void'
      */
-    readValue(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Fragments | null): Promise<void>;
+    readValue(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Attributes | null): Promise<void>;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
-     * @param var1 original type: 'org.dcm4che3.data.Fragments'
+     * @param var1 original type: 'org.dcm4che3.data.Attributes'
      * @return original return type: 'void'
      */
-    readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Fragments | null): void;
+    readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Attributes | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
      * @param var1 original type: 'org.dcm4che3.data.Sequence'
@@ -41,16 +41,16 @@ export declare class JSONWriterClass extends JavaClass {
     readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Sequence | null): void;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Fragments'
      * @return original return type: 'void'
      */
-    readValue(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Attributes | null): Promise<void>;
+    readValue(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Fragments | null): Promise<void>;
     /**
      * @param var0 original type: 'org.dcm4che3.io.DicomInputStream'
-     * @param var1 original type: 'org.dcm4che3.data.Attributes'
+     * @param var1 original type: 'org.dcm4che3.data.Fragments'
      * @return original return type: 'void'
      */
-    readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Attributes | null): void;
+    readValueSync(var0: org_dcm4che3_io_DicomInputStream | null, var1: org_dcm4che3_data_Fragments | null): void;
     /**
      * @return original return type: 'java.lang.Class'
      */
@@ -59,6 +59,16 @@ export declare class JSONWriterClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -79,16 +89,6 @@ export declare class JSONWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */

@@ -39,16 +39,6 @@ export declare class XMLStreamWriterClass extends JavaClass {
     writeCommentSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getPrefix(var0: string | null): Promise<string | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getPrefixSync(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
     getProperty(var0: string | null): Promise<BasicOrJavaType | null>;
@@ -57,6 +47,16 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'java.lang.Object'
      */
     getPropertySync(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrefix(var0: string | null): Promise<string | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrefixSync(var0: string | null): string | null;
     /**
      * @param var0 original type: 'javax.xml.namespace.NamespaceContext'
      * @return original return type: 'void'
@@ -77,6 +77,18 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeDTDSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    writeEmptyElement(var0: string | null, var1: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    writeEmptyElementSync(var0: string | null, var1: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -101,18 +113,6 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeEmptyElementSync(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    writeEmptyElement(var0: string | null, var1: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    writeEmptyElementSync(var0: string | null, var1: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -159,6 +159,16 @@ export declare class XMLStreamWriterClass extends JavaClass {
     writeDefaultNamespaceSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    writeProcessingInstruction(var0: string | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    writeProcessingInstructionSync(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -169,16 +179,6 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeProcessingInstructionSync(var0: string | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    writeProcessingInstruction(var0: string | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    writeProcessingInstructionSync(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -220,14 +220,6 @@ export declare class XMLStreamWriterClass extends JavaClass {
      */
     writeCDataSync(var0: string | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    writeStartDocument(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    writeStartDocumentSync(): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -237,6 +229,14 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeStartDocumentSync(var0: string | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    writeStartDocument(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    writeStartDocumentSync(): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -249,6 +249,14 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeStartDocumentSync(var0: string | null, var1: string | null): void;
+    /**
+     * @return original return type: 'javax.xml.namespace.NamespaceContext'
+     */
+    getNamespaceContext(): Promise<javax_xml_namespace_NamespaceContext | null>;
+    /**
+     * @return original return type: 'javax.xml.namespace.NamespaceContext'
+     */
+    getNamespaceContextSync(): javax_xml_namespace_NamespaceContext | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -286,13 +294,13 @@ export declare class XMLStreamWriterClass extends JavaClass {
      */
     writeStartElementSync(var0: string | null, var1: string | null, var2: string | null): void;
     /**
-     * @return original return type: 'javax.xml.namespace.NamespaceContext'
+     * @return original return type: 'void'
      */
-    getNamespaceContext(): Promise<javax_xml_namespace_NamespaceContext | null>;
+    close(): Promise<void>;
     /**
-     * @return original return type: 'javax.xml.namespace.NamespaceContext'
+     * @return original return type: 'void'
      */
-    getNamespaceContextSync(): javax_xml_namespace_NamespaceContext | null;
+    closeSync(): void;
     /**
      * @return original return type: 'void'
      */
@@ -301,14 +309,6 @@ export declare class XMLStreamWriterClass extends JavaClass {
      * @return original return type: 'void'
      */
     writeEndElementSync(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    closeSync(): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
@@ -381,14 +381,14 @@ export interface XMLStreamWriterInterface {
     writeComment(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.lang.String'
-     */
-    getPrefix(var0: string | null): string | null;
-    /**
-     * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.lang.Object'
      */
     getProperty(var0: string | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.lang.String'
+     */
+    getPrefix(var0: string | null): string | null;
     /**
      * @param var0 original type: 'javax.xml.namespace.NamespaceContext'
      * @return original return type: 'void'
@@ -402,6 +402,12 @@ export interface XMLStreamWriterInterface {
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    writeEmptyElement(var0: string | null, var1: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.lang.String'
      * @param var2 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -411,12 +417,6 @@ export interface XMLStreamWriterInterface {
      * @return original return type: 'void'
      */
     writeEmptyElement(var0: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    writeEmptyElement(var0: string | null, var1: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -441,15 +441,15 @@ export interface XMLStreamWriterInterface {
     writeDefaultNamespace(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'void'
+     */
+    writeProcessingInstruction(var0: string | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     writeProcessingInstruction(var0: string | null, var1: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'void'
-     */
-    writeProcessingInstruction(var0: string | null): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -471,20 +471,24 @@ export interface XMLStreamWriterInterface {
      */
     writeCData(var0: string | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    writeStartDocument(): void;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     writeStartDocument(var0: string | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    writeStartDocument(): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
     writeStartDocument(var0: string | null, var1: string | null): void;
+    /**
+     * @return original return type: 'javax.xml.namespace.NamespaceContext'
+     */
+    getNamespaceContext(): javax_xml_namespace_NamespaceContext | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
@@ -504,17 +508,13 @@ export interface XMLStreamWriterInterface {
      */
     writeStartElement(var0: string | null, var1: string | null, var2: string | null): void;
     /**
-     * @return original return type: 'javax.xml.namespace.NamespaceContext'
+     * @return original return type: 'void'
      */
-    getNamespaceContext(): javax_xml_namespace_NamespaceContext | null;
+    close(): void;
     /**
      * @return original return type: 'void'
      */
     writeEndElement(): void;
-    /**
-     * @return original return type: 'void'
-     */
-    close(): void;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.lang.String'

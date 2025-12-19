@@ -28,16 +28,6 @@ export declare class PathClass extends JavaClass {
      */
     getNameSync(var0: java_lang_Integer | number): Path | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.nio.file.Path'
-     */
-    resolve(var0: string | null): Promise<Path | null>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.nio.file.Path'
-     */
-    resolveSync(var0: string | null): Path | null;
-    /**
      * @param var0 original type: 'java.nio.file.Path'
      * @return original return type: 'java.nio.file.Path'
      */
@@ -47,6 +37,16 @@ export declare class PathClass extends JavaClass {
      * @return original return type: 'java.nio.file.Path'
      */
     resolveSync(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): Path | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.nio.file.Path'
+     */
+    resolve(var0: string | null): Promise<Path | null>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.nio.file.Path'
+     */
+    resolveSync(var0: string | null): Path | null;
     /**
      * @param var0 original type: 'java.nio.file.Path'
      * @return original return type: 'java.nio.file.Path'
@@ -240,16 +240,6 @@ export declare class PathClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @return original return type: 'boolean'
-     */
-    endsWith(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.nio.file.Path'
-     * @return original return type: 'boolean'
-     */
-    endsWithSync(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): boolean;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'boolean'
      */
@@ -259,6 +249,16 @@ export declare class PathClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     endsWithSync(var0: string | null): boolean;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @return original return type: 'boolean'
+     */
+    endsWith(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.nio.file.Path'
+     * @return original return type: 'boolean'
+     */
+    endsWithSync(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): boolean;
     /**
      * @param var0 original type: 'java.nio.file.LinkOption[]'
      * @return original return type: 'java.nio.file.Path'
@@ -308,18 +308,6 @@ export declare class PathClass extends JavaClass {
     /**
      * @param var0 original type: 'java.nio.file.WatchService'
      * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
-     * @return original return type: 'java.nio.file.WatchKey'
-     */
-    register(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null): Promise<java_nio_file_WatchKey | null>;
-    /**
-     * @param var0 original type: 'java.nio.file.WatchService'
-     * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
-     * @return original return type: 'java.nio.file.WatchKey'
-     */
-    registerSync(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null): java_nio_file_WatchKey | null;
-    /**
-     * @param var0 original type: 'java.nio.file.WatchService'
-     * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
      * @param var2 original type: 'java.nio.file.WatchEvent$Modifier[]'
      * @return original return type: 'java.nio.file.WatchKey'
      */
@@ -331,6 +319,18 @@ export declare class PathClass extends JavaClass {
      * @return original return type: 'java.nio.file.WatchKey'
      */
     registerSync(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null, var2: (java_nio_file_WatchEvent$Modifier | JavaInterfaceProxy<java_nio_file_WatchEvent$ModifierInterface> | null)[] | null): java_nio_file_WatchKey | null;
+    /**
+     * @param var0 original type: 'java.nio.file.WatchService'
+     * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
+     * @return original return type: 'java.nio.file.WatchKey'
+     */
+    register(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null): Promise<java_nio_file_WatchKey | null>;
+    /**
+     * @param var0 original type: 'java.nio.file.WatchService'
+     * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
+     * @return original return type: 'java.nio.file.WatchKey'
+     */
+    registerSync(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null): java_nio_file_WatchKey | null;
 }
 /**
  * This interface just defines types for creating proxies,
@@ -350,17 +350,17 @@ export interface PathInterface {
      */
     getName(var0: java_lang_Integer | number): Path | null;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'java.nio.file.Path'
-     */
-    resolve?(var0: string | null): Path | null;
-    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @param var0 original type: 'java.nio.file.Path'
      * @return original return type: 'java.nio.file.Path'
      */
     resolve?(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): Path | null;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'java.nio.file.Path'
+     */
+    resolve?(var0: string | null): Path | null;
     /**
      * @param var0 original type: 'java.nio.file.Path'
      * @return original return type: 'java.nio.file.Path'
@@ -449,17 +449,17 @@ export interface PathInterface {
      */
     equals(var0: BasicOrJavaType | null): boolean;
     /**
+     * @param var0 original type: 'java.lang.String'
+     * @return original return type: 'boolean'
+     */
+    endsWith?(var0: string | null): boolean;
+    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @param var0 original type: 'java.nio.file.Path'
      * @return original return type: 'boolean'
      */
     endsWith?(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @return original return type: 'boolean'
-     */
-    endsWith?(var0: string | null): boolean;
     /**
      * @param var0 original type: 'java.nio.file.LinkOption[]'
      * @return original return type: 'java.nio.file.Path'
@@ -490,12 +490,6 @@ export interface PathInterface {
      */
     startsWith?(var0: PathClass | JavaInterfaceProxy<PathInterface> | null): boolean;
     /**
-     * @param var0 original type: 'java.nio.file.WatchService'
-     * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
-     * @return original return type: 'java.nio.file.WatchKey'
-     */
-    register?(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null): java_nio_file_WatchKey | null;
-    /**
      * **Note: Although this method is marked as optional, it actually must be implemented.**
      *
      * @param var0 original type: 'java.nio.file.WatchService'
@@ -504,6 +498,12 @@ export interface PathInterface {
      * @return original return type: 'java.nio.file.WatchKey'
      */
     register?(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null, var2: (java_nio_file_WatchEvent$Modifier | JavaInterfaceProxy<java_nio_file_WatchEvent$ModifierInterface> | null)[] | null): java_nio_file_WatchKey | null;
+    /**
+     * @param var0 original type: 'java.nio.file.WatchService'
+     * @param var1 original type: 'java.nio.file.WatchEvent$Kind[]'
+     * @return original return type: 'java.nio.file.WatchKey'
+     */
+    register?(var0: java_nio_file_WatchService | JavaInterfaceProxy<java_nio_file_WatchServiceInterface> | null, var1: (java_nio_file_WatchEvent$Kind | JavaInterfaceProxy<java_nio_file_WatchEvent$KindInterface> | null)[] | null): java_nio_file_WatchKey | null;
 }
 /**
  * Create a proxy for the {@link Path} interface.

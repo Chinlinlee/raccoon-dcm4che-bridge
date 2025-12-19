@@ -10,6 +10,14 @@ import { Integer as java_lang_Integer } from "./../../../java/lang/Integer";
  */
 export declare class ScalarClass extends JavaClass {
     /**
+     * @return original return type: 'boolean'
+     */
+    isReal(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isRealSync(): boolean;
+    /**
      * @param var0 original type: 'double'
      * @return original return type: 'org.opencv.core.Scalar'
      */
@@ -20,14 +28,6 @@ export declare class ScalarClass extends JavaClass {
      */
     static allSync(var0: java_lang_Double | number): Scalar | null;
     /**
-     * @return original return type: 'boolean'
-     */
-    isReal(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isRealSync(): boolean;
-    /**
      * @return original return type: 'java.lang.Class'
      */
     getClass(): Promise<java_lang_Class>;
@@ -35,6 +35,16 @@ export declare class ScalarClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -55,16 +65,6 @@ export declare class ScalarClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'double[]'
      * @return original return type: 'void'

@@ -25,6 +25,16 @@ export declare class RasterClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -43,16 +53,6 @@ export declare class RasterClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -430,6 +430,20 @@ export declare class RasterClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
+     * @param var2 original type: 'int[]'
+     * @return original return type: 'int[]'
+     */
+    getPixel(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Integer | number)[] | null): Promise<(number)[] | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int[]'
+     * @return original return type: 'int[]'
+     */
+    getPixelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Integer | number)[] | null): (number)[] | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @param var2 original type: 'float[]'
      * @return original return type: 'float[]'
      */
@@ -458,93 +472,15 @@ export declare class RasterClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'int[]'
-     * @return original return type: 'int[]'
+     * @return original return type: 'java.awt.image.WritableRaster'
      */
-    getPixel(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Integer | number)[] | null): Promise<(number)[] | null>;
+    createCompatibleWritableRaster(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_WritableRaster | null>;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'int[]'
-     * @return original return type: 'int[]'
-     */
-    getPixelSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: (java_lang_Integer | number)[] | null): (number)[] | null;
-    /**
-     * @param var0 original type: 'java.awt.image.DataBuffer'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'java.awt.Point'
      * @return original return type: 'java.awt.image.WritableRaster'
      */
-    static createPackedRaster(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @param var0 original type: 'java.awt.image.DataBuffer'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRasterSync(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_awt_Point | null): java_awt_image_WritableRaster | null;
-    /**
-     * @param var0 original type: 'java.awt.image.DataBuffer'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int[]'
-     * @param var5 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRaster(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: (java_lang_Integer | number)[] | null, var5: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @param var0 original type: 'java.awt.image.DataBuffer'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int[]'
-     * @param var5 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRasterSync(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: (java_lang_Integer | number)[] | null, var5: java_awt_Point | null): java_awt_image_WritableRaster | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int[]'
-     * @param var4 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRaster(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: (java_lang_Integer | number)[] | null, var4: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int[]'
-     * @param var4 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: (java_lang_Integer | number)[] | null, var4: java_awt_Point | null): java_awt_image_WritableRaster | null;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRaster(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createPackedRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Point | null): java_awt_image_WritableRaster | null;
+    createCompatibleWritableRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_WritableRaster | null;
     /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.WritableRaster'
@@ -572,18 +508,6 @@ export declare class RasterClass extends JavaClass {
      */
     createCompatibleWritableRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): java_awt_image_WritableRaster | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    createCompatibleWritableRaster(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    createCompatibleWritableRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_WritableRaster | null;
-    /**
      * @return original return type: 'java.awt.image.WritableRaster'
      */
     createCompatibleWritableRaster(): Promise<java_awt_image_WritableRaster | null>;
@@ -591,6 +515,82 @@ export declare class RasterClass extends JavaClass {
      * @return original return type: 'java.awt.image.WritableRaster'
      */
     createCompatibleWritableRasterSync(): java_awt_image_WritableRaster | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int[]'
+     * @param var4 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRaster(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: (java_lang_Integer | number)[] | null, var4: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int[]'
+     * @param var4 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: (java_lang_Integer | number)[] | null, var4: java_awt_Point | null): java_awt_image_WritableRaster | null;
+    /**
+     * @param var0 original type: 'java.awt.image.DataBuffer'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int[]'
+     * @param var5 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRaster(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: (java_lang_Integer | number)[] | null, var5: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
+    /**
+     * @param var0 original type: 'java.awt.image.DataBuffer'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int[]'
+     * @param var5 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRasterSync(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: (java_lang_Integer | number)[] | null, var5: java_awt_Point | null): java_awt_image_WritableRaster | null;
+    /**
+     * @param var0 original type: 'java.awt.image.DataBuffer'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRaster(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
+    /**
+     * @param var0 original type: 'java.awt.image.DataBuffer'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRasterSync(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_awt_Point | null): java_awt_image_WritableRaster | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRaster(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
+     */
+    static createPackedRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_awt_Point | null): java_awt_image_WritableRaster | null;
     /**
      * @return original return type: 'int'
      */
@@ -620,6 +620,20 @@ export declare class RasterClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    getDataElements(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'java.lang.Object'
+     * @return original return type: 'java.lang.Object'
+     */
+    getDataElementsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: BasicOrJavaType | null): BasicOrJavaType | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @param var2 original type: 'int'
      * @param var3 original type: 'int'
      * @param var4 original type: 'java.lang.Object'
@@ -636,19 +650,27 @@ export declare class RasterClass extends JavaClass {
      */
     getDataElementsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.awt.image.DataBuffer'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'int[]'
+     * @param var6 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
      */
-    getDataElements(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: BasicOrJavaType | null): Promise<BasicOrJavaType | null>;
+    static createInterleavedRaster(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: (java_lang_Integer | number)[] | null, var6: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
     /**
-     * @param var0 original type: 'int'
+     * @param var0 original type: 'java.awt.image.DataBuffer'
      * @param var1 original type: 'int'
-     * @param var2 original type: 'java.lang.Object'
-     * @return original return type: 'java.lang.Object'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
+     * @param var4 original type: 'int'
+     * @param var5 original type: 'int[]'
+     * @param var6 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.image.WritableRaster'
      */
-    getDataElementsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: BasicOrJavaType | null): BasicOrJavaType | null;
+    static createInterleavedRasterSync(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: (java_lang_Integer | number)[] | null, var6: java_awt_Point | null): java_awt_image_WritableRaster | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -689,28 +711,6 @@ export declare class RasterClass extends JavaClass {
      * @return original return type: 'java.awt.image.WritableRaster'
      */
     static createInterleavedRasterSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_awt_Point | null): java_awt_image_WritableRaster | null;
-    /**
-     * @param var0 original type: 'java.awt.image.DataBuffer'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'int[]'
-     * @param var6 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createInterleavedRaster(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: (java_lang_Integer | number)[] | null, var6: java_awt_Point | null): Promise<java_awt_image_WritableRaster | null>;
-    /**
-     * @param var0 original type: 'java.awt.image.DataBuffer'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @param var4 original type: 'int'
-     * @param var5 original type: 'int[]'
-     * @param var6 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.image.WritableRaster'
-     */
-    static createInterleavedRasterSync(var0: java_awt_image_DataBuffer | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: (java_lang_Integer | number)[] | null, var6: java_awt_Point | null): java_awt_image_WritableRaster | null;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'

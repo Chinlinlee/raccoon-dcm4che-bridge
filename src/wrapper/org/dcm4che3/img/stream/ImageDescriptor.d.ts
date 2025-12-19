@@ -2,10 +2,11 @@ import { JavaClass, BasicOrJavaType } from "java-bridge";
 import { Class as java_lang_Class } from "./../../../../java/lang/Class";
 import { Long as java_lang_Long } from "./../../../../java/lang/Long";
 import { Integer as java_lang_Integer } from "./../../../../java/lang/Integer";
+import { ModalityLutModule as org_dcm4che3_img_lut_ModalityLutModule } from "./../lut/ModalityLutModule";
 import { AnatomicRegion as org_weasis_dicom_ref_AnatomicRegion } from "./../../../weasis/dicom/ref/AnatomicRegion";
 import { VoiLutModule as org_dcm4che3_img_lut_VoiLutModule } from "./../lut/VoiLutModule";
+import { Core$MinMaxLocResult as org_opencv_core_Core$MinMaxLocResult } from "./../../../opencv/core/Core$MinMaxLocResult";
 import { PhotometricInterpretation as org_dcm4che3_image_PhotometricInterpretation } from "./../../image/PhotometricInterpretation";
-import { ModalityLutModule as org_dcm4che3_img_lut_ModalityLutModule } from "./../lut/ModalityLutModule";
 import { List as java_util_List } from "./../../../../java/util/List";
 import { Attributes as org_dcm4che3_data_Attributes } from "./../../data/Attributes";
 /**
@@ -22,6 +23,16 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'java.lang.Class'
      */
     getClassSync(): java_lang_Class;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -43,16 +54,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'boolean'
      */
     isSigned(): Promise<boolean>;
@@ -61,14 +62,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     isSignedSync(): boolean;
     /**
-     * @return original return type: 'boolean'
-     */
-    isFloatPixelData(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isFloatPixelDataSync(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getFrames(): Promise<number>;
@@ -76,6 +69,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'int'
      */
     getFramesSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isFloatPixelData(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isFloatPixelDataSync(): boolean;
     /**
      * @return original return type: 'void'
      */
@@ -92,6 +93,16 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'int'
      */
     getHighBitSync(): number;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.img.lut.ModalityLutModule'
+     */
+    getModalityLutForFrame(var0: java_lang_Integer | number): Promise<org_dcm4che3_img_lut_ModalityLutModule | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.img.lut.ModalityLutModule'
+     */
+    getModalityLutForFrameSync(var0: java_lang_Integer | number): org_dcm4che3_img_lut_ModalityLutModule | null;
     /**
      * @return original return type: 'org.weasis.dicom.ref.AnatomicRegion'
      */
@@ -125,6 +136,18 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getSopClassUIDSync(): string | null;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.img.lut.VoiLutModule'
+     * @return original return type: 'void'
+     */
+    setVoiLutForFrame(var0: java_lang_Integer | number, var1: org_dcm4che3_img_lut_VoiLutModule | null): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.img.lut.VoiLutModule'
+     * @return original return type: 'void'
+     */
+    setVoiLutForFrameSync(var0: java_lang_Integer | number, var1: org_dcm4che3_img_lut_VoiLutModule | null): void;
+    /**
      * @return original return type: 'void'
      */
     notify(): Promise<void>;
@@ -141,6 +164,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getColumnsSync(): number;
     /**
+     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     */
+    getVoiLUT(): Promise<org_dcm4che3_img_lut_VoiLutModule | null>;
+    /**
+     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     */
+    getVoiLUTSync(): org_dcm4che3_img_lut_VoiLutModule | null;
+    /**
      * @return original return type: 'boolean'
      */
     hasPaletteColorLookupTable(): Promise<boolean>;
@@ -149,13 +180,23 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     hasPaletteColorLookupTableSync(): boolean;
     /**
-     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
      */
-    getVoiLUT(): Promise<org_dcm4che3_img_lut_VoiLutModule | null>;
+    getMinMaxPixelValue(var0: java_lang_Integer | number): Promise<org_opencv_core_Core$MinMaxLocResult | null>;
     /**
-     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.opencv.core.Core$MinMaxLocResult'
      */
-    getVoiLUTSync(): org_dcm4che3_img_lut_VoiLutModule | null;
+    getMinMaxPixelValueSync(var0: java_lang_Integer | number): org_opencv_core_Core$MinMaxLocResult | null;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSeriesInstanceUID(): Promise<string | null>;
+    /**
+     * @return original return type: 'java.lang.String'
+     */
+    getSeriesInstanceUIDSync(): string | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -189,6 +230,30 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getBitsCompressedSync(): number;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.img.lut.ModalityLutModule'
+     * @return original return type: 'void'
+     */
+    setModalityLutForFrame(var0: java_lang_Integer | number, var1: org_dcm4che3_img_lut_ModalityLutModule | null): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.dcm4che3.img.lut.ModalityLutModule'
+     * @return original return type: 'void'
+     */
+    setModalityLutForFrameSync(var0: java_lang_Integer | number, var1: org_dcm4che3_img_lut_ModalityLutModule | null): void;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.opencv.core.Core$MinMaxLocResult'
+     * @return original return type: 'void'
+     */
+    setMinMaxPixelValue(var0: java_lang_Integer | number, var1: org_opencv_core_Core$MinMaxLocResult | null): Promise<void>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'org.opencv.core.Core$MinMaxLocResult'
+     * @return original return type: 'void'
+     */
+    setMinMaxPixelValueSync(var0: java_lang_Integer | number, var1: org_opencv_core_Core$MinMaxLocResult | null): void;
+    /**
      * @return original return type: 'java.lang.String'
      */
     getPixelPresentation(): Promise<string | null>;
@@ -205,6 +270,16 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getPhotometricInterpretationSync(): org_dcm4che3_image_PhotometricInterpretation | null;
     /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     */
+    getVoiLutForFrame(var0: java_lang_Integer | number): Promise<org_dcm4che3_img_lut_VoiLutModule | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'org.dcm4che3.img.lut.VoiLutModule'
+     */
+    getVoiLutForFrameSync(var0: java_lang_Integer | number): org_dcm4che3_img_lut_VoiLutModule | null;
+    /**
      * @return original return type: 'int'
      */
     getBitsStored(): Promise<number>;
@@ -213,14 +288,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     getBitsStoredSync(): number;
     /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframeWithEmbeddedOverlays(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMultiframeWithEmbeddedOverlaysSync(): boolean;
-    /**
      * @return original return type: 'int'
      */
     getBitsAllocated(): Promise<number>;
@@ -228,6 +295,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'int'
      */
     getBitsAllocatedSync(): number;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframeWithEmbeddedOverlays(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isMultiframeWithEmbeddedOverlaysSync(): boolean;
     /**
      * @return original return type: 'int'
      */
@@ -295,14 +370,6 @@ export declare class ImageDescriptorClass extends JavaClass {
      */
     equalsSync(var0: BasicOrJavaType | null): boolean;
     /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    getPixelPaddingRangeLimit(): Promise<number | null>;
-    /**
-     * @return original return type: 'java.lang.Integer'
-     */
-    getPixelPaddingRangeLimitSync(): number | null;
-    /**
      * @return original return type: 'java.util.List'
      */
     getEmbeddedOverlay(): Promise<java_util_List | null>;
@@ -310,6 +377,14 @@ export declare class ImageDescriptorClass extends JavaClass {
      * @return original return type: 'java.util.List'
      */
     getEmbeddedOverlaySync(): java_util_List | null;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    getPixelPaddingRangeLimit(): Promise<number | null>;
+    /**
+     * @return original return type: 'java.lang.Integer'
+     */
+    getPixelPaddingRangeLimitSync(): number | null;
     /**
      * @return original return type: 'int'
      */

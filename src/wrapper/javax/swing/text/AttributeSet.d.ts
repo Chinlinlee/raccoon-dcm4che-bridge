@@ -25,14 +25,6 @@ export declare class AttributeSetClass extends JavaClass {
      */
     getAttributeSync(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.util.Enumeration'
-     */
-    getAttributeNames(): Promise<java_util_Enumeration | null>;
-    /**
-     * @return original return type: 'java.util.Enumeration'
-     */
-    getAttributeNamesSync(): java_util_Enumeration | null;
-    /**
      * @param var0 original type: 'javax.swing.text.AttributeSet'
      * @return original return type: 'boolean'
      */
@@ -42,6 +34,14 @@ export declare class AttributeSetClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsAttributesSync(var0: AttributeSetClass | JavaInterfaceProxy<AttributeSetInterface> | null): boolean;
+    /**
+     * @return original return type: 'java.util.Enumeration'
+     */
+    getAttributeNames(): Promise<java_util_Enumeration | null>;
+    /**
+     * @return original return type: 'java.util.Enumeration'
+     */
+    getAttributeNamesSync(): java_util_Enumeration | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -121,14 +121,14 @@ export interface AttributeSetInterface {
      */
     getAttribute(var0: BasicOrJavaType | null): BasicOrJavaType | null;
     /**
-     * @return original return type: 'java.util.Enumeration'
-     */
-    getAttributeNames(): java_util_Enumeration | null;
-    /**
      * @param var0 original type: 'javax.swing.text.AttributeSet'
      * @return original return type: 'boolean'
      */
     containsAttributes(var0: AttributeSetClass | JavaInterfaceProxy<AttributeSetInterface> | null): boolean;
+    /**
+     * @return original return type: 'java.util.Enumeration'
+     */
+    getAttributeNames(): java_util_Enumeration | null;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'

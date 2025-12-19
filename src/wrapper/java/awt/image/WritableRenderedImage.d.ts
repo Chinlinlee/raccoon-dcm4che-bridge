@@ -155,6 +155,14 @@ export declare class WritableRenderedImageClass extends JavaClass {
      */
     getNumXTilesSync(): number;
     /**
+     * @return original return type: 'java.awt.image.Raster'
+     */
+    getData(): Promise<java_awt_image_Raster | null>;
+    /**
+     * @return original return type: 'java.awt.image.Raster'
+     */
+    getDataSync(): java_awt_image_Raster | null;
+    /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
      */
@@ -164,14 +172,6 @@ export declare class WritableRenderedImageClass extends JavaClass {
      * @return original return type: 'java.awt.image.Raster'
      */
     getDataSync(var0: java_awt_Rectangle | null): java_awt_image_Raster | null;
-    /**
-     * @return original return type: 'java.awt.image.Raster'
-     */
-    getData(): Promise<java_awt_image_Raster | null>;
-    /**
-     * @return original return type: 'java.awt.image.Raster'
-     */
-    getDataSync(): java_awt_image_Raster | null;
     /**
      * @return original return type: 'int'
      */
@@ -358,14 +358,14 @@ export interface WritableRenderedImageInterface {
      */
     getNumXTiles(): number;
     /**
+     * @return original return type: 'java.awt.image.Raster'
+     */
+    getData(): java_awt_image_Raster | null;
+    /**
      * @param var0 original type: 'java.awt.Rectangle'
      * @return original return type: 'java.awt.image.Raster'
      */
     getData(var0: java_awt_Rectangle | null): java_awt_image_Raster | null;
-    /**
-     * @return original return type: 'java.awt.image.Raster'
-     */
-    getData(): java_awt_image_Raster | null;
     /**
      * @return original return type: 'int'
      */

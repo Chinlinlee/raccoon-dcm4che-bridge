@@ -31,6 +31,16 @@ export declare class FocusEventClass extends JavaClass {
     getClassSync(): java_lang_Class;
     /**
      * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
+    /**
+     * @param var0 original type: 'long'
      * @param var1 original type: 'int'
      * @return original return type: 'void'
      */
@@ -49,16 +59,6 @@ export declare class FocusEventClass extends JavaClass {
      * @return original return type: 'void'
      */
     waitSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'void'
      */
@@ -284,6 +284,21 @@ export declare class FocusEventClass extends JavaClass {
      * @param var0 original type: 'java.awt.Component'
      * @param var1 original type: 'int'
      * @param var2 original type: 'boolean'
+     * @param var3 original type: 'java.awt.Component'
+     */
+    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_awt_Component | null);
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
+     * @param var3 original type: 'java.awt.Component'
+     * @return original return type: 'java.awt.event.FocusEvent'
+     */
+    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_awt_Component | null): Promise<FocusEvent>;
+    /**
+     * @param var0 original type: 'java.awt.Component'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'boolean'
      */
     constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean);
     /**
@@ -310,21 +325,6 @@ export declare class FocusEventClass extends JavaClass {
      * @return original return type: 'java.awt.event.FocusEvent'
      */
     static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_awt_Component | null, var4: java_awt_event_FocusEvent$Cause | null): Promise<FocusEvent>;
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'java.awt.Component'
-     */
-    constructor(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_awt_Component | null);
-    /**
-     * @param var0 original type: 'java.awt.Component'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'boolean'
-     * @param var3 original type: 'java.awt.Component'
-     * @return original return type: 'java.awt.event.FocusEvent'
-     */
-    static newInstanceAsync(var0: java_awt_Component | null, var1: java_lang_Integer | number, var2: java_lang_Boolean | boolean, var3: java_awt_Component | null): Promise<FocusEvent>;
 }
 declare const FocusEvent_base: typeof FocusEventClass;
 /**

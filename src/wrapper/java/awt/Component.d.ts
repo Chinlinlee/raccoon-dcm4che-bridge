@@ -1,7 +1,7 @@
 import { JavaClass, BasicOrJavaType, JavaInterfaceProxy } from "java-bridge";
 import { HierarchyBoundsListener as java_awt_event_HierarchyBoundsListener, HierarchyBoundsListenerInterface as java_awt_event_HierarchyBoundsListenerInterface } from "./event/HierarchyBoundsListener";
-import { Point as java_awt_Point } from "./Point";
 import { FocusEvent$Cause as java_awt_event_FocusEvent$Cause } from "./event/FocusEvent$Cause";
+import { Point as java_awt_Point } from "./Point";
 import { Graphics as java_awt_Graphics } from "./Graphics";
 import { InputMethodListener as java_awt_event_InputMethodListener, InputMethodListenerInterface as java_awt_event_InputMethodListenerInterface } from "./event/InputMethodListener";
 import { Event as java_awt_Event } from "./Event";
@@ -10,12 +10,12 @@ import { InputMethodRequests as java_awt_im_InputMethodRequests } from "./im/Inp
 import { Rectangle as java_awt_Rectangle } from "./Rectangle";
 import { Dimension as java_awt_Dimension } from "./Dimension";
 import { Boolean as java_lang_Boolean } from "./../lang/Boolean";
+import { AWTEvent as java_awt_AWTEvent } from "./AWTEvent";
+import { Float as java_lang_Float } from "./../lang/Float";
+import { Double as java_lang_Double } from "./../lang/Double";
+import { Byte as java_lang_Byte } from "./../lang/Byte";
 import { Long as java_lang_Long } from "./../lang/Long";
 import { Short as java_lang_Short } from "./../lang/Short";
-import { Byte as java_lang_Byte } from "./../lang/Byte";
-import { Double as java_lang_Double } from "./../lang/Double";
-import { Float as java_lang_Float } from "./../lang/Float";
-import { AWTEvent as java_awt_AWTEvent } from "./AWTEvent";
 import { MouseMotionListener as java_awt_event_MouseMotionListener, MouseMotionListenerInterface as java_awt_event_MouseMotionListenerInterface } from "./event/MouseMotionListener";
 import { ComponentOrientation as java_awt_ComponentOrientation } from "./ComponentOrientation";
 import { HierarchyListener as java_awt_event_HierarchyListener, HierarchyListenerInterface as java_awt_event_HierarchyListenerInterface } from "./event/HierarchyListener";
@@ -28,8 +28,8 @@ import { Set as java_util_Set, SetInterface as java_util_SetInterface } from "./
 import { Component$BaselineResizeBehavior as java_awt_Component$BaselineResizeBehavior } from "./Component$BaselineResizeBehavior";
 import { MouseWheelListener as java_awt_event_MouseWheelListener, MouseWheelListenerInterface as java_awt_event_MouseWheelListenerInterface } from "./event/MouseWheelListener";
 import { Container as java_awt_Container } from "./Container";
-import { PropertyChangeListener as java_beans_PropertyChangeListener, PropertyChangeListenerInterface as java_beans_PropertyChangeListenerInterface } from "./../beans/PropertyChangeListener";
 import { ColorModel as java_awt_image_ColorModel } from "./image/ColorModel";
+import { PropertyChangeListener as java_beans_PropertyChangeListener, PropertyChangeListenerInterface as java_beans_PropertyChangeListenerInterface } from "./../beans/PropertyChangeListener";
 import { Image as java_awt_Image } from "./Image";
 import { ImageObserver as java_awt_image_ImageObserver, ImageObserverInterface as java_awt_image_ImageObserverInterface } from "./image/ImageObserver";
 import { Shape as java_awt_Shape, ShapeInterface as java_awt_ShapeInterface } from "./Shape";
@@ -37,9 +37,9 @@ import { InputContext as java_awt_im_InputContext } from "./im/InputContext";
 import { MouseListener as java_awt_event_MouseListener, MouseListenerInterface as java_awt_event_MouseListenerInterface } from "./event/MouseListener";
 import { PopupMenu as java_awt_PopupMenu } from "./PopupMenu";
 import { KeyListener as java_awt_event_KeyListener, KeyListenerInterface as java_awt_event_KeyListenerInterface } from "./event/KeyListener";
+import { DropTarget as java_awt_dnd_DropTarget } from "./dnd/DropTarget";
 import { PrintStream as java_io_PrintStream } from "./../io/PrintStream";
 import { PrintWriter as java_io_PrintWriter } from "./../io/PrintWriter";
-import { DropTarget as java_awt_dnd_DropTarget } from "./dnd/DropTarget";
 import { Color as java_awt_Color } from "./Color";
 import { Cursor as java_awt_Cursor } from "./Cursor";
 import { GraphicsConfiguration as java_awt_GraphicsConfiguration } from "./GraphicsConfiguration";
@@ -66,24 +66,6 @@ export declare class ComponentClass extends JavaClass {
      */
     getHierarchyBoundsListenersSync(): (java_awt_event_HierarchyBoundsListener | null)[] | null;
     /**
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocation(): Promise<java_awt_Point | null>;
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocationSync(): java_awt_Point | null;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocation(var0: java_awt_Point | null): Promise<java_awt_Point | null>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocationSync(var0: java_awt_Point | null): java_awt_Point | null;
-    /**
      * @return original return type: 'boolean'
      */
     requestFocusInWindow(): Promise<boolean>;
@@ -101,6 +83,24 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     requestFocusInWindowSync(var0: java_awt_event_FocusEvent$Cause | null): boolean;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocation(var0: java_awt_Point | null): Promise<java_awt_Point | null>;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocationSync(var0: java_awt_Point | null): java_awt_Point | null;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocation(): Promise<java_awt_Point | null>;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocationSync(): java_awt_Point | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -250,6 +250,58 @@ export declare class ComponentClass extends JavaClass {
      */
     getAlignmentXSync(): number;
     /**
+     * @param var0 original type: 'java.awt.AWTEvent'
+     * @return original return type: 'void'
+     */
+    dispatchEvent(var0: java_awt_AWTEvent | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.AWTEvent'
+     * @return original return type: 'void'
+     */
+    dispatchEventSync(var0: java_awt_AWTEvent | null): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'float'
+     * @param var2 original type: 'float'
+     * @return original return type: 'void'
+     */
+    firePropertyChange(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'float'
+     * @param var2 original type: 'float'
+     * @return original return type: 'void'
+     */
+    firePropertyChangeSync(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @return original return type: 'void'
+     */
+    firePropertyChange(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'double'
+     * @param var2 original type: 'double'
+     * @return original return type: 'void'
+     */
+    firePropertyChangeSync(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): void;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'byte'
+     * @param var2 original type: 'byte'
+     * @return original return type: 'void'
+     */
+    firePropertyChange(var0: string | null, var1: java_lang_Byte | number, var2: java_lang_Byte | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'byte'
+     * @param var2 original type: 'byte'
+     * @return original return type: 'void'
+     */
+    firePropertyChangeSync(var0: string | null, var1: java_lang_Byte | number, var2: java_lang_Byte | number): void;
+    /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'long'
      * @param var2 original type: 'long'
@@ -291,58 +343,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     firePropertyChangeSync(var0: string | null, var1: string | null, var2: string | null): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'byte'
-     * @param var2 original type: 'byte'
-     * @return original return type: 'void'
-     */
-    firePropertyChange(var0: string | null, var1: java_lang_Byte | number, var2: java_lang_Byte | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'byte'
-     * @param var2 original type: 'byte'
-     * @return original return type: 'void'
-     */
-    firePropertyChangeSync(var0: string | null, var1: java_lang_Byte | number, var2: java_lang_Byte | number): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @return original return type: 'void'
-     */
-    firePropertyChange(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'double'
-     * @param var2 original type: 'double'
-     * @return original return type: 'void'
-     */
-    firePropertyChangeSync(var0: string | null, var1: java_lang_Double | number, var2: java_lang_Double | number): void;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'float'
-     * @param var2 original type: 'float'
-     * @return original return type: 'void'
-     */
-    firePropertyChange(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): Promise<void>;
-    /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'float'
-     * @param var2 original type: 'float'
-     * @return original return type: 'void'
-     */
-    firePropertyChangeSync(var0: string | null, var1: java_lang_Float | number, var2: java_lang_Float | number): void;
-    /**
-     * @param var0 original type: 'java.awt.AWTEvent'
-     * @return original return type: 'void'
-     */
-    dispatchEvent(var0: java_awt_AWTEvent | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.AWTEvent'
-     * @return original return type: 'void'
-     */
-    dispatchEventSync(var0: java_awt_AWTEvent | null): void;
     /**
      * @param var0 original type: 'java.awt.event.MouseMotionListener'
      * @return original return type: 'void'
@@ -434,6 +434,16 @@ export declare class ComponentClass extends JavaClass {
      */
     setEnabledSync(var0: java_lang_Boolean | boolean): void;
     /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'boolean'
+     */
+    contains(var0: java_awt_Point | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Point'
+     * @return original return type: 'boolean'
+     */
+    containsSync(var0: java_awt_Point | null): boolean;
+    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @return original return type: 'boolean'
@@ -445,16 +455,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     containsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'boolean'
-     */
-    contains(var0: java_awt_Point | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Point'
-     * @return original return type: 'boolean'
-     */
-    containsSync(var0: java_awt_Point | null): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -471,22 +471,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'java.awt.Dimension'
      */
     sizeSync(): java_awt_Dimension | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isEnabled(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isEnabledSync(): boolean;
-    /**
-     * @return original return type: 'java.awt.Dimension'
-     */
-    minimumSize(): Promise<java_awt_Dimension | null>;
-    /**
-     * @return original return type: 'java.awt.Dimension'
-     */
-    minimumSizeSync(): java_awt_Dimension | null;
     /**
      * @param var0 original type: 'java.awt.Event'
      * @param var1 original type: 'int'
@@ -512,6 +496,22 @@ export declare class ComponentClass extends JavaClass {
      */
     enableInputMethodsSync(var0: java_lang_Boolean | boolean): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isEnabled(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isEnabledSync(): boolean;
+    /**
+     * @return original return type: 'java.awt.Dimension'
+     */
+    minimumSize(): Promise<java_awt_Dimension | null>;
+    /**
+     * @return original return type: 'java.awt.Dimension'
+     */
+    minimumSizeSync(): java_awt_Dimension | null;
+    /**
      * @return original return type: 'java.awt.Rectangle'
      */
     bounds(): Promise<java_awt_Rectangle | null>;
@@ -520,6 +520,16 @@ export declare class ComponentClass extends JavaClass {
      */
     boundsSync(): java_awt_Rectangle | null;
     /**
+     * @param var0 original type: 'java.awt.event.ComponentListener'
+     * @return original return type: 'void'
+     */
+    addComponentListener(var0: java_awt_event_ComponentListener | JavaInterfaceProxy<java_awt_event_ComponentListenerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.event.ComponentListener'
+     * @return original return type: 'void'
+     */
+    addComponentListenerSync(var0: java_awt_event_ComponentListener | JavaInterfaceProxy<java_awt_event_ComponentListenerInterface> | null): void;
+    /**
      * @return original return type: 'void'
      */
     repaint(): Promise<void>;
@@ -527,32 +537,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     repaintSync(): void;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    repaint(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    repaintSync(var0: java_lang_Long | bigint | number): void;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'void'
-     */
-    repaint(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<void>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @param var2 original type: 'int'
-     * @param var3 original type: 'int'
-     * @return original return type: 'void'
-     */
-    repaintSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -572,15 +556,31 @@ export declare class ComponentClass extends JavaClass {
      */
     repaintSync(var0: java_lang_Long | bigint | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number): void;
     /**
-     * @param var0 original type: 'java.awt.event.ComponentListener'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'void'
      */
-    addComponentListener(var0: java_awt_event_ComponentListener | JavaInterfaceProxy<java_awt_event_ComponentListenerInterface> | null): Promise<void>;
+    repaint(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): Promise<void>;
     /**
-     * @param var0 original type: 'java.awt.event.ComponentListener'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @param var2 original type: 'int'
+     * @param var3 original type: 'int'
      * @return original return type: 'void'
      */
-    addComponentListenerSync(var0: java_awt_event_ComponentListener | JavaInterfaceProxy<java_awt_event_ComponentListenerInterface> | null): void;
+    repaintSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    repaint(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    repaintSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @return original return type: 'java.awt.event.MouseMotionListener[]'
      */
@@ -608,16 +608,6 @@ export declare class ComponentClass extends JavaClass {
      */
     transferFocusSync(): void;
     /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.EventListener[]'
-     */
-    getListeners(var0: java_lang_Class | null): Promise<(java_util_EventListener | null)[] | null>;
-    /**
-     * @param var0 original type: 'java.lang.Class'
-     * @return original return type: 'java.util.EventListener[]'
-     */
-    getListenersSync(var0: java_lang_Class | null): (java_util_EventListener | null)[] | null;
-    /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'void'
      */
@@ -628,6 +618,16 @@ export declare class ComponentClass extends JavaClass {
      */
     setNameSync(var0: string | null): void;
     /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.EventListener[]'
+     */
+    getListeners(var0: java_lang_Class | null): Promise<(java_util_EventListener | null)[] | null>;
+    /**
+     * @param var0 original type: 'java.lang.Class'
+     * @return original return type: 'java.util.EventListener[]'
+     */
+    getListenersSync(var0: java_lang_Class | null): (java_util_EventListener | null)[] | null;
+    /**
      * @param var0 original type: 'java.awt.event.InputMethodListener'
      * @return original return type: 'void'
      */
@@ -637,6 +637,16 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeInputMethodListenerSync(var0: java_awt_event_InputMethodListener | JavaInterfaceProxy<java_awt_event_InputMethodListenerInterface> | null): void;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    wait(var0: java_lang_Long | bigint | number): Promise<void>;
+    /**
+     * @param var0 original type: 'long'
+     * @return original return type: 'void'
+     */
+    waitSync(var0: java_lang_Long | bigint | number): void;
     /**
      * @param var0 original type: 'long'
      * @param var1 original type: 'int'
@@ -658,16 +668,6 @@ export declare class ComponentClass extends JavaClass {
      */
     waitSync(): void;
     /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    wait(var0: java_lang_Long | bigint | number): Promise<void>;
-    /**
-     * @param var0 original type: 'long'
-     * @return original return type: 'void'
-     */
-    waitSync(var0: java_lang_Long | bigint | number): void;
-    /**
      * @return original return type: 'java.awt.Dimension'
      */
     getMaximumSize(): Promise<java_awt_Dimension | null>;
@@ -675,14 +675,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'java.awt.Dimension'
      */
     getMaximumSizeSync(): java_awt_Dimension | null;
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocationOnScreen(): Promise<java_awt_Point | null>;
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    getLocationOnScreenSync(): java_awt_Point | null;
     /**
      * @param var0 original type: 'java.awt.event.HierarchyListener'
      * @return original return type: 'void'
@@ -693,6 +685,14 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeHierarchyListenerSync(var0: java_awt_event_HierarchyListener | JavaInterfaceProxy<java_awt_event_HierarchyListenerInterface> | null): void;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocationOnScreen(): Promise<java_awt_Point | null>;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    getLocationOnScreenSync(): java_awt_Point | null;
     /**
      * @param var0 original type: 'java.awt.Event'
      * @param var1 original type: 'int'
@@ -822,6 +822,14 @@ export declare class ComponentClass extends JavaClass {
      */
     validateSync(): void;
     /**
+     * @return original return type: 'boolean'
+     */
+    isDoubleBuffered(): Promise<boolean>;
+    /**
+     * @return original return type: 'boolean'
+     */
+    isDoubleBufferedSync(): boolean;
+    /**
      * @return original return type: 'java.awt.Container'
      */
     getParent(): Promise<java_awt_Container | null>;
@@ -832,11 +840,19 @@ export declare class ComponentClass extends JavaClass {
     /**
      * @return original return type: 'boolean'
      */
-    isDoubleBuffered(): Promise<boolean>;
+    isMinimumSizeSet(): Promise<boolean>;
     /**
      * @return original return type: 'boolean'
      */
-    isDoubleBufferedSync(): boolean;
+    isMinimumSizeSetSync(): boolean;
+    /**
+     * @return original return type: 'java.awt.image.ColorModel'
+     */
+    getColorModel(): Promise<java_awt_image_ColorModel | null>;
+    /**
+     * @return original return type: 'java.awt.image.ColorModel'
+     */
+    getColorModelSync(): java_awt_image_ColorModel | null;
     /**
      * @param var0 original type: 'java.lang.String'
      * @return original return type: 'java.beans.PropertyChangeListener[]'
@@ -855,22 +871,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'java.beans.PropertyChangeListener[]'
      */
     getPropertyChangeListenersSync(): (java_beans_PropertyChangeListener | null)[] | null;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMinimumSizeSet(): Promise<boolean>;
-    /**
-     * @return original return type: 'boolean'
-     */
-    isMinimumSizeSetSync(): boolean;
-    /**
-     * @return original return type: 'java.awt.image.ColorModel'
-     */
-    getColorModel(): Promise<java_awt_image_ColorModel | null>;
-    /**
-     * @return original return type: 'java.awt.image.ColorModel'
-     */
-    getColorModelSync(): java_awt_image_ColorModel | null;
     /**
      * @param var0 original type: 'java.awt.ComponentOrientation'
      * @return original return type: 'void'
@@ -898,16 +898,6 @@ export declare class ComponentClass extends JavaClass {
      */
     getFocusTraversalKeysEnabledSync(): boolean;
     /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'void'
-     */
-    setBounds(var0: java_awt_Rectangle | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.Rectangle'
-     * @return original return type: 'void'
-     */
-    setBoundsSync(var0: java_awt_Rectangle | null): void;
-    /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -923,6 +913,16 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     setBoundsSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number): void;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'void'
+     */
+    setBounds(var0: java_awt_Rectangle | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Rectangle'
+     * @return original return type: 'void'
+     */
+    setBoundsSync(var0: java_awt_Rectangle | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -956,6 +956,16 @@ export declare class ComponentClass extends JavaClass {
      */
     disableSync(): void;
     /**
+     * @param var0 original type: 'java.awt.event.InputMethodListener'
+     * @return original return type: 'void'
+     */
+    addInputMethodListener(var0: java_awt_event_InputMethodListener | JavaInterfaceProxy<java_awt_event_InputMethodListenerInterface> | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.event.InputMethodListener'
+     * @return original return type: 'void'
+     */
+    addInputMethodListenerSync(var0: java_awt_event_InputMethodListener | JavaInterfaceProxy<java_awt_event_InputMethodListenerInterface> | null): void;
+    /**
      * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'java.awt.image.ImageObserver'
      * @return original return type: 'boolean'
@@ -983,16 +993,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     prepareImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): boolean;
-    /**
-     * @param var0 original type: 'java.awt.event.InputMethodListener'
-     * @return original return type: 'void'
-     */
-    addInputMethodListener(var0: java_awt_event_InputMethodListener | JavaInterfaceProxy<java_awt_event_InputMethodListenerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.event.InputMethodListener'
-     * @return original return type: 'void'
-     */
-    addInputMethodListenerSync(var0: java_awt_event_InputMethodListener | JavaInterfaceProxy<java_awt_event_InputMethodListenerInterface> | null): void;
     /**
      * @param var0 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -1066,24 +1066,6 @@ export declare class ComponentClass extends JavaClass {
      */
     insideSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): boolean;
     /**
-     * @return original return type: 'java.awt.im.InputContext'
-     */
-    getInputContext(): Promise<java_awt_im_InputContext | null>;
-    /**
-     * @return original return type: 'java.awt.im.InputContext'
-     */
-    getInputContextSync(): java_awt_im_InputContext | null;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.Set'
-     */
-    getFocusTraversalKeys(var0: java_lang_Integer | number): Promise<java_util_Set | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'java.util.Set'
-     */
-    getFocusTraversalKeysSync(var0: java_lang_Integer | number): java_util_Set | null;
-    /**
      * @param var0 original type: 'java.awt.Event'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -1105,6 +1087,24 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     nextFocusSync(): void;
+    /**
+     * @return original return type: 'java.awt.im.InputContext'
+     */
+    getInputContext(): Promise<java_awt_im_InputContext | null>;
+    /**
+     * @return original return type: 'java.awt.im.InputContext'
+     */
+    getInputContextSync(): java_awt_im_InputContext | null;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.Set'
+     */
+    getFocusTraversalKeys(var0: java_lang_Integer | number): Promise<java_util_Set | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'java.util.Set'
+     */
+    getFocusTraversalKeysSync(var0: java_lang_Integer | number): java_util_Set | null;
     /**
      * @return original return type: 'boolean'
      */
@@ -1158,14 +1158,6 @@ export declare class ComponentClass extends JavaClass {
      */
     mouseDragSync(var0: java_awt_Event | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): boolean;
     /**
-     * @return original return type: 'java.awt.Dimension'
-     */
-    preferredSize(): Promise<java_awt_Dimension | null>;
-    /**
-     * @return original return type: 'java.awt.Dimension'
-     */
-    preferredSizeSync(): java_awt_Dimension | null;
-    /**
      * @return original return type: 'java.awt.event.MouseWheelListener[]'
      */
     getMouseWheelListeners(): Promise<(java_awt_event_MouseWheelListener | null)[] | null>;
@@ -1173,6 +1165,14 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'java.awt.event.MouseWheelListener[]'
      */
     getMouseWheelListenersSync(): (java_awt_event_MouseWheelListener | null)[] | null;
+    /**
+     * @return original return type: 'java.awt.Dimension'
+     */
+    preferredSize(): Promise<java_awt_Dimension | null>;
+    /**
+     * @return original return type: 'java.awt.Dimension'
+     */
+    preferredSizeSync(): java_awt_Dimension | null;
     /**
      * @return original return type: 'java.awt.event.MouseListener[]'
      */
@@ -1192,14 +1192,6 @@ export declare class ComponentClass extends JavaClass {
      */
     setFontSync(var0: java_awt_Font | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    doLayout(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    doLayoutSync(): void;
-    /**
      * @param var0 original type: 'java.awt.event.MouseMotionListener'
      * @return original return type: 'void'
      */
@@ -1210,15 +1202,13 @@ export declare class ComponentClass extends JavaClass {
      */
     removeMouseMotionListenerSync(var0: java_awt_event_MouseMotionListener | JavaInterfaceProxy<java_awt_event_MouseMotionListenerInterface> | null): void;
     /**
-     * @param var0 original type: 'java.awt.PopupMenu'
      * @return original return type: 'void'
      */
-    add(var0: java_awt_PopupMenu | null): Promise<void>;
+    doLayout(): Promise<void>;
     /**
-     * @param var0 original type: 'java.awt.PopupMenu'
      * @return original return type: 'void'
      */
-    addSync(var0: java_awt_PopupMenu | null): void;
+    doLayoutSync(): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -1229,6 +1219,16 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     setVisibleSync(var0: java_lang_Boolean | boolean): void;
+    /**
+     * @param var0 original type: 'java.awt.PopupMenu'
+     * @return original return type: 'void'
+     */
+    add(var0: java_awt_PopupMenu | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.PopupMenu'
+     * @return original return type: 'void'
+     */
+    addSync(var0: java_awt_PopupMenu | null): void;
     /**
      * @param var0 original type: 'java.awt.event.KeyListener'
      * @return original return type: 'void'
@@ -1248,27 +1248,25 @@ export declare class ComponentClass extends JavaClass {
      */
     isVisibleSync(): boolean;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @param var0 original type: 'java.awt.dnd.DropTarget'
      * @return original return type: 'void'
      */
-    removePropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
+    setDropTarget(var0: java_awt_dnd_DropTarget | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @param var0 original type: 'java.awt.dnd.DropTarget'
      * @return original return type: 'void'
      */
-    removePropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
+    setDropTargetSync(var0: java_awt_dnd_DropTarget | null): void;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.beans.PropertyChangeListener'
+     * @param var0 original type: 'java.io.PrintStream'
      * @return original return type: 'void'
      */
-    removePropertyChangeListener(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
+    list(var0: java_io_PrintStream | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.lang.String'
-     * @param var1 original type: 'java.beans.PropertyChangeListener'
+     * @param var0 original type: 'java.io.PrintStream'
      * @return original return type: 'void'
      */
-    removePropertyChangeListenerSync(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
+    listSync(var0: java_io_PrintStream | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -1277,6 +1275,18 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     listSync(): void;
+    /**
+     * @param var0 original type: 'java.io.PrintWriter'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    list(var0: java_io_PrintWriter | null, var1: java_lang_Integer | number): Promise<void>;
+    /**
+     * @param var0 original type: 'java.io.PrintWriter'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
+     */
+    listSync(var0: java_io_PrintWriter | null, var1: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.io.PrintStream'
      * @param var1 original type: 'int'
@@ -1300,37 +1310,27 @@ export declare class ComponentClass extends JavaClass {
      */
     listSync(var0: java_io_PrintWriter | null): void;
     /**
-     * @param var0 original type: 'java.io.PrintWriter'
-     * @param var1 original type: 'int'
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
      */
-    list(var0: java_io_PrintWriter | null, var1: java_lang_Integer | number): Promise<void>;
+    removePropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.io.PrintWriter'
-     * @param var1 original type: 'int'
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
      */
-    listSync(var0: java_io_PrintWriter | null, var1: java_lang_Integer | number): void;
+    removePropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
-     * @param var0 original type: 'java.io.PrintStream'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
      */
-    list(var0: java_io_PrintStream | null): Promise<void>;
+    removePropertyChangeListener(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.io.PrintStream'
+     * @param var0 original type: 'java.lang.String'
+     * @param var1 original type: 'java.beans.PropertyChangeListener'
      * @return original return type: 'void'
      */
-    listSync(var0: java_io_PrintStream | null): void;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DropTarget'
-     * @return original return type: 'void'
-     */
-    setDropTarget(var0: java_awt_dnd_DropTarget | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.dnd.DropTarget'
-     * @return original return type: 'void'
-     */
-    setDropTargetSync(var0: java_awt_dnd_DropTarget | null): void;
+    removePropertyChangeListenerSync(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
      * @param var0 original type: 'java.awt.Event'
      * @return original return type: 'void'
@@ -1432,14 +1432,6 @@ export declare class ComponentClass extends JavaClass {
      */
     removeComponentListenerSync(var0: java_awt_event_ComponentListener | JavaInterfaceProxy<java_awt_event_ComponentListenerInterface> | null): void;
     /**
-     * @return original return type: 'void'
-     */
-    requestFocus(): Promise<void>;
-    /**
-     * @return original return type: 'void'
-     */
-    requestFocusSync(): void;
-    /**
      * @param var0 original type: 'java.awt.event.FocusEvent$Cause'
      * @return original return type: 'void'
      */
@@ -1449,6 +1441,14 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     requestFocusSync(var0: java_awt_event_FocusEvent$Cause | null): void;
+    /**
+     * @return original return type: 'void'
+     */
+    requestFocus(): Promise<void>;
+    /**
+     * @return original return type: 'void'
+     */
+    requestFocusSync(): void;
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
@@ -1462,16 +1462,6 @@ export declare class ComponentClass extends JavaClass {
      */
     locateSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Component | null;
     /**
-     * @param var0 original type: 'java.awt.Event'
-     * @return original return type: 'boolean'
-     */
-    handleEvent(var0: java_awt_Event | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Event'
-     * @return original return type: 'boolean'
-     */
-    handleEventSync(var0: java_awt_Event | null): boolean;
-    /**
      * @param var0 original type: 'java.awt.event.FocusListener'
      * @return original return type: 'void'
      */
@@ -1481,6 +1471,16 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     addFocusListenerSync(var0: java_awt_event_FocusListener | JavaInterfaceProxy<java_awt_event_FocusListenerInterface> | null): void;
+    /**
+     * @param var0 original type: 'java.awt.Event'
+     * @return original return type: 'boolean'
+     */
+    handleEvent(var0: java_awt_Event | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Event'
+     * @return original return type: 'boolean'
+     */
+    handleEventSync(var0: java_awt_Event | null): boolean;
     /**
      * @return original return type: 'boolean'
      */
@@ -1548,16 +1548,6 @@ export declare class ComponentClass extends JavaClass {
      */
     updateSync(var0: java_awt_Graphics | null): void;
     /**
-     * @param var0 original type: 'java.awt.Container'
-     * @return original return type: 'boolean'
-     */
-    isFocusCycleRoot(var0: java_awt_Container | null): Promise<boolean>;
-    /**
-     * @param var0 original type: 'java.awt.Container'
-     * @return original return type: 'boolean'
-     */
-    isFocusCycleRootSync(var0: java_awt_Container | null): boolean;
-    /**
      * @param var0 original type: 'java.awt.Dimension'
      * @return original return type: 'void'
      */
@@ -1567,6 +1557,16 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     setMaximumSizeSync(var0: java_awt_Dimension | null): void;
+    /**
+     * @param var0 original type: 'java.awt.Container'
+     * @return original return type: 'boolean'
+     */
+    isFocusCycleRoot(var0: java_awt_Container | null): Promise<boolean>;
+    /**
+     * @param var0 original type: 'java.awt.Container'
+     * @return original return type: 'boolean'
+     */
+    isFocusCycleRootSync(var0: java_awt_Container | null): boolean;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -1588,6 +1588,16 @@ export declare class ComponentClass extends JavaClass {
      */
     setBackgroundSync(var0: java_awt_Color | null): void;
     /**
+     * @param var0 original type: 'java.awt.Graphics'
+     * @return original return type: 'void'
+     */
+    printAll(var0: java_awt_Graphics | null): Promise<void>;
+    /**
+     * @param var0 original type: 'java.awt.Graphics'
+     * @return original return type: 'void'
+     */
+    printAllSync(var0: java_awt_Graphics | null): void;
+    /**
      * @param var0 original type: 'java.awt.MenuComponent'
      * @return original return type: 'void'
      */
@@ -1598,15 +1608,23 @@ export declare class ComponentClass extends JavaClass {
      */
     removeSync(var0: java_awt_MenuComponent | null): void;
     /**
-     * @param var0 original type: 'java.awt.Graphics'
+     * @param var0 original type: 'java.awt.event.MouseWheelListener'
      * @return original return type: 'void'
      */
-    printAll(var0: java_awt_Graphics | null): Promise<void>;
+    addMouseWheelListener(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): Promise<void>;
     /**
-     * @param var0 original type: 'java.awt.Graphics'
+     * @param var0 original type: 'java.awt.event.MouseWheelListener'
      * @return original return type: 'void'
      */
-    printAllSync(var0: java_awt_Graphics | null): void;
+    addMouseWheelListenerSync(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): void;
+    /**
+     * @return original return type: 'java.awt.Toolkit'
+     */
+    getToolkit(): Promise<java_awt_Toolkit | null>;
+    /**
+     * @return original return type: 'java.awt.Toolkit'
+     */
+    getToolkitSync(): java_awt_Toolkit | null;
     /**
      * @param var0 original type: 'java.awt.Image'
      * @param var1 original type: 'int'
@@ -1627,24 +1645,6 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     imageUpdateSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_lang_Integer | number, var4: java_lang_Integer | number, var5: java_lang_Integer | number): boolean;
-    /**
-     * @return original return type: 'java.awt.Toolkit'
-     */
-    getToolkit(): Promise<java_awt_Toolkit | null>;
-    /**
-     * @return original return type: 'java.awt.Toolkit'
-     */
-    getToolkitSync(): java_awt_Toolkit | null;
-    /**
-     * @param var0 original type: 'java.awt.event.MouseWheelListener'
-     * @return original return type: 'void'
-     */
-    addMouseWheelListener(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): Promise<void>;
-    /**
-     * @param var0 original type: 'java.awt.event.MouseWheelListener'
-     * @return original return type: 'void'
-     */
-    addMouseWheelListenerSync(var0: java_awt_event_MouseWheelListener | JavaInterfaceProxy<java_awt_event_MouseWheelListenerInterface> | null): void;
     /**
      * @return original return type: 'void'
      */
@@ -1682,17 +1682,13 @@ export declare class ComponentClass extends JavaClass {
      */
     checkImageSync(var0: java_awt_Image | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number, var3: java_awt_image_ImageObserver | JavaInterfaceProxy<java_awt_image_ImageObserverInterface> | null): number;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    setSize(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
+    isFontSet(): Promise<boolean>;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    setSizeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
+    isFontSetSync(): boolean;
     /**
      * @param var0 original type: 'java.awt.Dimension'
      * @return original return type: 'void'
@@ -1704,13 +1700,17 @@ export declare class ComponentClass extends JavaClass {
      */
     setSizeSync(var0: java_awt_Dimension | null): void;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
      */
-    isFontSet(): Promise<boolean>;
+    setSize(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<void>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'void'
      */
-    isFontSetSync(): boolean;
+    setSizeSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): void;
     /**
      * @param var0 original type: 'java.awt.event.KeyListener'
      * @return original return type: 'void'
@@ -1768,15 +1768,13 @@ export declare class ComponentClass extends JavaClass {
      */
     getGraphicsSync(): java_awt_Graphics | null;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    addPropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
+    isMaximumSizeSet(): Promise<boolean>;
     /**
-     * @param var0 original type: 'java.beans.PropertyChangeListener'
-     * @return original return type: 'void'
+     * @return original return type: 'boolean'
      */
-    addPropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
+    isMaximumSizeSetSync(): boolean;
     /**
      * @param var0 original type: 'java.lang.String'
      * @param var1 original type: 'java.beans.PropertyChangeListener'
@@ -1790,13 +1788,15 @@ export declare class ComponentClass extends JavaClass {
      */
     addPropertyChangeListenerSync(var0: string | null, var1: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @return original return type: 'void'
      */
-    isMaximumSizeSet(): Promise<boolean>;
+    addPropertyChangeListener(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): Promise<void>;
     /**
-     * @return original return type: 'boolean'
+     * @param var0 original type: 'java.beans.PropertyChangeListener'
+     * @return original return type: 'void'
      */
-    isMaximumSizeSetSync(): boolean;
+    addPropertyChangeListenerSync(var0: java_beans_PropertyChangeListener | JavaInterfaceProxy<java_beans_PropertyChangeListenerInterface> | null): void;
     /**
      * @param var0 original type: 'boolean'
      * @return original return type: 'void'
@@ -1868,16 +1868,6 @@ export declare class ComponentClass extends JavaClass {
      */
     createImageSync(var0: java_awt_image_ImageProducer | JavaInterfaceProxy<java_awt_image_ImageProducerInterface> | null): java_awt_Image | null;
     /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    areFocusTraversalKeysSet(var0: java_lang_Integer | number): Promise<boolean>;
-    /**
-     * @param var0 original type: 'int'
-     * @return original return type: 'boolean'
-     */
-    areFocusTraversalKeysSetSync(var0: java_lang_Integer | number): boolean;
-    /**
      * @param var0 original type: 'java.awt.Event'
      * @param var1 original type: 'int'
      * @param var2 original type: 'int'
@@ -1891,6 +1881,16 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     mouseMoveSync(var0: java_awt_Event | null, var1: java_lang_Integer | number, var2: java_lang_Integer | number): boolean;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    areFocusTraversalKeysSet(var0: java_lang_Integer | number): Promise<boolean>;
+    /**
+     * @param var0 original type: 'int'
+     * @return original return type: 'boolean'
+     */
+    areFocusTraversalKeysSetSync(var0: java_lang_Integer | number): boolean;
     /**
      * @return original return type: 'java.awt.event.KeyListener[]'
      */
@@ -1942,13 +1942,17 @@ export declare class ComponentClass extends JavaClass {
      */
     isFocusOwnerSync(): boolean;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    getX(): Promise<number>;
+    getBaseline(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<number>;
     /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    getXSync(): number;
+    getBaselineSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
     /**
      * @param var0 original type: 'java.awt.Graphics'
      * @return original return type: 'void'
@@ -1978,25 +1982,13 @@ export declare class ComponentClass extends JavaClass {
      */
     getSizeSync(var0: java_awt_Dimension | null): java_awt_Dimension | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
      * @return original return type: 'int'
      */
-    getBaseline(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<number>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'int'
-     */
-    getBaselineSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): number;
+    getX(): Promise<number>;
     /**
      * @return original return type: 'int'
      */
-    getY(): Promise<number>;
-    /**
-     * @return original return type: 'int'
-     */
-    getYSync(): number;
+    getXSync(): number;
     /**
      * @param var0 original type: 'java.awt.event.HierarchyBoundsListener'
      * @return original return type: 'void'
@@ -2007,6 +1999,14 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'void'
      */
     removeHierarchyBoundsListenerSync(var0: java_awt_event_HierarchyBoundsListener | JavaInterfaceProxy<java_awt_event_HierarchyBoundsListenerInterface> | null): void;
+    /**
+     * @return original return type: 'int'
+     */
+    getY(): Promise<number>;
+    /**
+     * @return original return type: 'int'
+     */
+    getYSync(): number;
     /**
      * @return original return type: 'java.awt.event.FocusListener[]'
      */
@@ -2040,6 +2040,18 @@ export declare class ComponentClass extends JavaClass {
     /**
      * @param var0 original type: 'int'
      * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.image.VolatileImage'
+     */
+    createVolatileImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_VolatileImage | null>;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
+     * @return original return type: 'java.awt.image.VolatileImage'
+     */
+    createVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_VolatileImage | null;
+    /**
+     * @param var0 original type: 'int'
+     * @param var1 original type: 'int'
      * @param var2 original type: 'java.awt.ImageCapabilities'
      * @return original return type: 'java.awt.image.VolatileImage'
      */
@@ -2052,26 +2064,6 @@ export declare class ComponentClass extends JavaClass {
      */
     createVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number, var2: java_awt_ImageCapabilities | null): java_awt_image_VolatileImage | null;
     /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.VolatileImage'
-     */
-    createVolatileImage(var0: java_lang_Integer | number, var1: java_lang_Integer | number): Promise<java_awt_image_VolatileImage | null>;
-    /**
-     * @param var0 original type: 'int'
-     * @param var1 original type: 'int'
-     * @return original return type: 'java.awt.image.VolatileImage'
-     */
-    createVolatileImageSync(var0: java_lang_Integer | number, var1: java_lang_Integer | number): java_awt_image_VolatileImage | null;
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    location(): Promise<java_awt_Point | null>;
-    /**
-     * @return original return type: 'java.awt.Point'
-     */
-    locationSync(): java_awt_Point | null;
-    /**
      * @param var0 original type: 'java.awt.Event'
      * @param var1 original type: 'java.lang.Object'
      * @return original return type: 'boolean'
@@ -2083,6 +2075,14 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'boolean'
      */
     lostFocusSync(var0: java_awt_Event | null, var1: BasicOrJavaType | null): boolean;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    location(): Promise<java_awt_Point | null>;
+    /**
+     * @return original return type: 'java.awt.Point'
+     */
+    locationSync(): java_awt_Point | null;
     /**
      * @param var0 original type: 'java.awt.event.MouseListener'
      * @return original return type: 'void'
@@ -2114,14 +2114,6 @@ export declare class ComponentClass extends JavaClass {
      */
     getDropTargetSync(): java_awt_dnd_DropTarget | null;
     /**
-     * @return original return type: 'java.awt.Color'
-     */
-    getBackground(): Promise<java_awt_Color | null>;
-    /**
-     * @return original return type: 'java.awt.Color'
-     */
-    getBackgroundSync(): java_awt_Color | null;
-    /**
      * @return original return type: 'java.util.Locale'
      */
     getLocale(): Promise<java_util_Locale | null>;
@@ -2129,6 +2121,14 @@ export declare class ComponentClass extends JavaClass {
      * @return original return type: 'java.util.Locale'
      */
     getLocaleSync(): java_util_Locale | null;
+    /**
+     * @return original return type: 'java.awt.Color'
+     */
+    getBackground(): Promise<java_awt_Color | null>;
+    /**
+     * @return original return type: 'java.awt.Color'
+     */
+    getBackgroundSync(): java_awt_Color | null;
     /**
      * @param var0 original type: 'java.awt.event.MouseListener'
      * @return original return type: 'void'
